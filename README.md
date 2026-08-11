@@ -1,0 +1,138 @@
+# medsemiotics
+
+Contenido escrito de **Powersemiotics**: los módulos educativos, autoevaluaciones,
+presentaciones e infografías de medicina, separados del sitio corporativo.
+
+Se publica en <https://powersemiotics.com/medsemiotics/>.
+
+La raíz de `powersemiotics.com` vive en otro repositorio
+([PowerSemiotics](https://github.com/alcyedmundo281/PowerSemiotics)) y es solo la
+presentación corporativa de una página. Este repositorio contiene todo lo demás.
+
+## Publicación
+
+GitHub Pages sirve la rama por defecto desde la raíz del repositorio. El sitio queda
+bajo el subdirectorio `/medsemiotics/` del dominio, que es propiedad del repositorio
+raíz.
+
+- El `CNAME` **no** va aquí: lo declara el repositorio raíz, que es quien posee el
+  dominio apex. Este repositorio depende de que aquel siga publicando
+  `powersemiotics.com`.
+- `.nojekyll` está presente para que Pages sirva los archivos tal cual, sin pasarlos
+  por Jekyll.
+- No hay paso de build en el despliegue: el HTML, el CSS compilado y los bundles de
+  las sub-aplicaciones están versionados y se sirven directamente.
+
+## Contenido
+
+Seis áreas temáticas. Cada una tiene una página índice en la raíz que enlaza sus
+módulos, y un directorio con las páginas.
+
+| Área | Índice | Páginas |
+|---|---|---|
+| Medicina y Datos | `medicina_y_datos.html` | `medicina_y_datos/` — 19 |
+| Neurología | `neurologia.html` | `neurologia/` — 22 |
+| Gastroenterología | `gastroenterologia.html` | `gastroenterologia/` — 21 |
+| Farmacoterapia Racional | `farmacoterapia_racional.html` | `farmacoterapia_racional/` — 18 |
+| Inmunología Clínica | `inmunologia_clinica.html` | `inmunologia/` — 5 |
+| Medicina e Implementación | `medicina_e_implementacion.html` | `medicina_e_implementacion/` — 4 |
+
+Además hay páginas de contenido en la raíz que no cuelgan de ningún área:
+
+- `gastroenterologia-autoevaluacion.html` — Autoevaluación: ERGE
+- `neurologia-autoevaluacion.html` — Autoevaluación de Neurología
+- `medicamentos_cronicos.html` — Repositorio de Medicamentos Crónicos
+- `medicamentos_oncologicos.html` — Repositorio de Medicamentos Oncológicos
+- `trastornos-movimiento-1.html` — Trastornos del movimiento (versión de raíz)
+
+### Sub-aplicaciones
+
+Tres módulos incluyen un proyecto React/Vite con su propio `package.json`. El build
+compilado está versionado; no hace falta compilar nada para publicar.
+
+- **`gastroenterologia/pancreatitis_reactor/`** — código fuente. Lo publicado es
+  `gastroenterologia/pancreatitis_aguda/index.html`, que carga su propio
+  `assets/index-*.js` y `assets/index-*.css`. El `index.html` del directorio
+  `pancreatitis_reactor` es solo la entrada del servidor de desarrollo de Vite.
+- **`neurologia/examen-neurologico/`** — código fuente y `dist/`. Quien consume el
+  build es `neurologia/examen-neurologico-parte-1.html`, que carga
+  `examen-neurologico/dist/assets/`. El `index.html` de la raíz del proyecto es la
+  entrada de desarrollo.
+- **`medicina_y_datos/estadisticos_descubiertos/`** — el `index.html` publicado es
+  una página estática autónoma (Tailwind por CDN) y es lo que enlaza
+  `medicina_y_datos.html`. Los seis bundles de `assets/index-*.js` (~4 MB) son
+  salida de build antigua y hoy no los referencia nada.
+
+### Assets
+
+`assets/` es compartido por todas las áreas: la hoja de estilos compilada, el logo,
+las imágenes y los PDF descargables de los módulos.
+
+## Estilos
+
+`assets/tailwind.css` es un archivo **generado**. No se edita a mano.
+
+La fuente es `assets/styles.css` (las tres directivas `@tailwind`) y la
+configuración es `assets/tailwind.config.js`. Para regenerarlo tras cambiar clases
+de Tailwind en cualquier página:
+
+```bash
+npm run build:css
+```
+
+Que equivale a:
+
+```bash
+npx tailwindcss -c assets/tailwind.config.js -i assets/styles.css -o assets/tailwind.css
+```
+
+El `content` de la configuración recorre `./*.html` y `./**/*.html`, así que cualquier
+página nueva del repositorio entra automáticamente en el barrido.
+
+## Supabase
+
+Tres páginas guardan resultados de evaluaciones en Supabase mediante la clave
+*publishable* (anónima), incrustada en el HTML del cliente:
+
+- `gastroenterologia/reflujo-gastroesofagico.html` → tabla `evaluaciones_erge`
+- `neurologia/acv.html` → tablas `nihss_evaluations` y `student_responses`
+- `gastroenterologia/trastornos-estomacales.html` → inicializa el cliente pero no
+  lo usa
+
+`supabase/schema.sql` contiene la definición de `evaluaciones_erge` con RLS activado
+y una política de inserción anónima. Las tablas `nihss_evaluations` y
+`student_responses` que usa `acv.html` **todavía no están declaradas** en ese
+esquema.
+
+## Desarrollo
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Servidor estático local para previsualizar:
+
+```bash
+npm start
+```
+
+Formatear HTML y JavaScript:
+
+```bash
+npm run format
+```
+
+Lint de JavaScript:
+
+```bash
+npm run lint
+```
+
+## Convenciones de nombres
+
+El árbol mezcla hoy `snake_case`, `kebab-case` y `PascalCase_Con_Guiones`. La
+convención objetivo es **kebab-case** en minúsculas para directorios y archivos, pero
+la unificación está pendiente: renombrar cambia URLs publicadas y exige
+redirecciones.
