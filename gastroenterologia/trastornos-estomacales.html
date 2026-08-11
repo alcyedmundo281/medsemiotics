@@ -29,9 +29,6 @@
     <!-- Lucide Icons React -->
     <script src="https://unpkg.com/lucide-react@0.263.1/dist/umd/lucide-react.js"></script>
 
-    <!-- Supabase Client -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
     <!-- Tailwind Configuration -->
     <script id="tailwind-config">
         tailwind.config = {
@@ -624,20 +621,6 @@
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
-    </script>
-
-    <script>
-        var supabaseClient = null;
-        var SUPABASE_URL_VAL = 'https://dyfjawopnbkjrjsnhbyn.supabase.co';
-        var SUPABASE_KEY_VAL = 'sb_publishable_9fyCTrHL9ArHojgrTMSX1A_UlwZSOCa';
-
-        try {
-            if (typeof window.supabase !== 'undefined') {
-                supabaseClient = window.supabase.createClient(SUPABASE_URL_VAL, SUPABASE_KEY_VAL);
-            }
-        } catch (e) {
-            console.error("Error init Supabase", e);
-        }
     </script>
 </body>
 

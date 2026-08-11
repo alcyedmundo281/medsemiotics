@@ -89,20 +89,16 @@ npx tailwindcss -c assets/tailwind.config.js -i assets/styles.css -o assets/tail
 El `content` de la configuración recorre `./*.html` y `./**/*.html`, así que cualquier
 página nueva del repositorio entra automáticamente en el barrido.
 
-## Supabase
+## Sin backend
 
-Tres páginas guardan resultados de evaluaciones en Supabase mediante la clave
-*publishable* (anónima), incrustada en el HTML del cliente:
+El sitio es autosustentable: HTML, CSS y JavaScript estáticos, sin ningún servicio
+que pueda darse de baja y llevarse funcionalidad por delante. No hay base de datos,
+no hay autenticación y no hay claves de API.
 
-- `gastroenterologia/reflujo-gastroesofagico.html` → tabla `evaluaciones_erge`
-- `neurologia/acv.html` → tablas `nihss_evaluations` y `student_responses`
-- `gastroenterologia/trastornos-estomacales.html` → inicializa el cliente pero no
-  lo usa
-
-`supabase/schema.sql` contiene la definición de `evaluaciones_erge` con RLS activado
-y una política de inserción anónima. Las tablas `nihss_evaluations` y
-`student_responses` que usa `acv.html` **todavía no están declaradas** en ese
-esquema.
+Las evaluaciones se corrigen en el navegador y muestran el resultado en la propia
+página. Para conservarlo, cada una ofrece descarga en JSON y CSV —generada con
+`Blob` y `URL.createObjectURL`, sin salir del equipo— y una hoja de impresión. No se
+pide nombre ni correo en ningún formulario, y nada se guarda entre sesiones.
 
 ## Desarrollo
 
