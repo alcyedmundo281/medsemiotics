@@ -130,7 +130,8 @@ Instalar dependencias:
 npm install
 ```
 
-Servidor estático local para previsualizar:
+Servidor estático local, que monta el sitio bajo `/medsemiotics/` igual que en
+producción:
 
 ```bash
 npm start
@@ -147,6 +148,11 @@ Lint de JavaScript:
 ```bash
 npm run lint
 ```
+
+## Herramientas
+
+`tools/` contiene el compilador de los módulos React y el servidor local. Nada de
+ahí forma parte del sitio publicado; ver [tools/README.md](tools/README.md).
 
 ## Convenciones de nombres
 

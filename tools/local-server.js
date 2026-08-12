@@ -7,7 +7,8 @@ const path = require('path');
 // ese mismo prefijo para que las rutas se comporten igual que en producción.
 const port = process.env.PORT || 3000;
 const basePath = process.env.BASE_PATH || '/medsemiotics';
-const baseDir = path.resolve(__dirname);
+// El servidor vive en tools/, pero sirve la raiz del repositorio.
+const baseDir = path.resolve(__dirname, '..');
 
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
