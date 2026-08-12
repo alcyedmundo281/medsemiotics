@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Los 6 hubs y el índice usan estas dos clases desde siempre, pero nadie las
+     definía: vivían sueltas en el <style> de algunas páginas de contenido y en
+     ninguna parte para los hubs. Aquí quedan disponibles para todo el sitio. */
+  .gradient-text {
+    background: linear-gradient(135deg, #8b3dff 0%, #ff4081 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+}

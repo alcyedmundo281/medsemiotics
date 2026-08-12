@@ -1,6 +1,18 @@
 module.exports = {
   darkMode: "class",
-  content: ["./*.html", "./**/*.html"],
+  // Directorios reales de contenido. Se evita "./**/*.html" porque arrastraba
+  // node_modules y los dist/ de las sub-apps Vite.
+  content: [
+    "./*.html",
+    "./farmacoterapia_racional/**/*.html",
+    "./gastroenterologia/**/*.html",
+    "./inmunologia/**/*.html",
+    "./medicina_e_implementacion/**/*.html",
+    "./medicina_y_datos/**/*.html",
+    "./neurologia/**/*.html",
+    "!./**/node_modules/**",
+    "!./**/dist/**",
+  ],
   theme: {
     extend: {
       colors: {

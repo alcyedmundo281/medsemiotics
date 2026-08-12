@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <!-- Patrón de rombos tenue, tileable en 24x24. Sustituye a la textura
+       "diagmonds-light" que se servía desde transparenttextures.com. -->
+  <g fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="1">
+    <path d="M12 0 L24 12 L12 24 L0 12 Z" />
+    <path d="M0 0 L12 12 L0 24" />
+    <path d="M24 0 L12 12 L24 24" />
+  </g>
+</svg>
