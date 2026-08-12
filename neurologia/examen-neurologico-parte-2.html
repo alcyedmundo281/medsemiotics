@@ -1246,18 +1246,8 @@
           ],
         },
         {
-          id: 'guia-interactiva',
-          number: '07',
-          icon: 'fa-compass-drafting',
-          title: 'Guía interactiva',
-          intro:
-            'Consulta la guía desplegable con checklists imprimibles. Puedes refrescarla sin salir de la página.',
-          type: 'guide',
-          url: 'https://script.google.com/macros/s/AKfycbycyUCZNCgbrKE9tGdKOsvfDnYFkxSJbE0811P7bXwVoRwktwTdUr4Uarw4f-Eg9sbhtQ/exec',
-        },
-        {
           id: 'bibliografia',
-          number: '08',
+          number: '07',
           icon: 'fa-book',
           title: 'Bibliografía mínima',
           intro:
@@ -1501,32 +1491,6 @@
         return fragment;
       }
 
-      function renderGuide(module) {
-        const wrapper = createElement(
-          `<div class="module-body">
-            <div class="status-pill" aria-live="polite">Guía embebida desde Google Apps Script.</div>
-            <div class="module-actions">
-              <button class="btn btn-secondary" type="button">
-                <i class="fa-solid fa-arrow-rotate-right" aria-hidden="true"></i>
-                Refrescar guía
-              </button>
-              <a class="btn btn-primary" href="${module.url}" target="_blank" rel="noopener">
-                <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
-                Abrir en una nueva pestaña
-              </a>
-            </div>
-            <div style="border: 1px solid var(--outline); border-radius: 20px; overflow: hidden; min-height: 360px; background: rgba(15, 23, 42, 0.02)">
-              <iframe src="${module.url}" title="Guía interactiva" loading="lazy" style="width: 100%; height: 360px; border: 0"></iframe>
-            </div>
-          </div>`,
-        );
-        const iframe = wrapper.querySelector('iframe');
-        wrapper.querySelector('button').addEventListener('click', () => {
-          iframe.src = module.url;
-        });
-        return wrapper;
-      }
-
       function renderList(resources) {
         return createElement(
           `<div class="module-body">
@@ -1640,9 +1604,6 @@
             break;
           case 'quiz':
             content = renderQuiz(module);
-            break;
-          case 'guide':
-            content = renderGuide(module);
             break;
           case 'list':
             content = renderList(module.resources);

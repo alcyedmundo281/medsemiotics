@@ -153,6 +153,66 @@
           width: 100%;
         }
       }
+
+      /* Hoja de impresión: la evaluación impresa es el entregable, ya que no se
+         envía a ningún servidor. */
+      @media print {
+        header,
+        nav,
+        footer,
+        aside,
+        .no-print,
+        .sidebar,
+        #statusBox {
+          display: none !important;
+        }
+
+        html,
+        body {
+          background: #fff !important;
+          color: #000 !important;
+          font-size: 11pt;
+        }
+
+        main,
+        #autoevaluacion {
+          padding: 0 !important;
+          margin: 0 !important;
+          max-width: none !important;
+          box-shadow: none !important;
+          border: 0 !important;
+        }
+
+        /* Solo interesa imprimir la evaluación, no el material teórico. */
+        main > div > section:not(#autoevaluacion) {
+          display: none !important;
+        }
+
+        .form-card {
+          page-break-inside: avoid;
+          break-inside: avoid;
+          border: 1px solid #999 !important;
+          background: #fff !important;
+          box-shadow: none !important;
+        }
+
+        /* Un textarea vacío no imprime nada: se expande para que la respuesta
+           escrita salga completa en papel. */
+        textarea {
+          border: 1px solid #999 !important;
+          background: #fff !important;
+          color: #000 !important;
+          height: auto !important;
+          min-height: 5rem;
+          resize: none;
+          overflow: visible !important;
+          white-space: pre-wrap;
+        }
+
+        @page {
+          margin: 1.5cm;
+        }
+      }
     </style>
   </head>
   <body
@@ -2525,30 +2585,16 @@
                   Examen Neurológico - Parte 2
                 </h3>
                 <p class="mt-2 text-sm text-white dark:text-gray-300">
-                  Próximamente disponible. Regístrese para recibir la
-                  notificación de lanzamiento.
+                  Pares craneales VII-XII, sistema motor y sistema sensitivo,
+                  con casos y autoevaluación.
                 </p>
-                <form class="mt-4 space-y-3">
-                  <div>
-                    <label for="email" class="sr-only"
-                      >Correo electrónico</label
-                    >
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="tu@correo.com"
-                      class="w-full px-4 py-2 rounded-full text-slate-900 bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-slate-900 bg-white dark:bg-primary rounded-full hover:bg-slate-200 dark:hover:bg-blue-700"
-                  >
-                    <span class="material-symbols-outlined">notifications</span>
-                    Quiero recibir novedades
-                  </button>
-                </form>
+                <a
+                  href="examen-neurologico-parte-2.html"
+                  class="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-slate-900 bg-white dark:bg-primary rounded-full hover:bg-slate-200 dark:hover:bg-blue-700"
+                >
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                  Ir a la Parte 2
+                </a>
               </div>
             </div>
             <div
@@ -2781,19 +2827,11 @@
               <!-- Formulario -->
               <form id="neurologiaForm" class="space-y-6">
 
-                  <!-- Datos de Identificación -->
-                  <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
-                      <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 uppercase tracking-wider">Correo Electrónico Institucional</label>
-                      <input type="email" name="email" required
-                             class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
-                             placeholder="ejemplo@universidad.edu">
-                  </div>
-
                   <!-- Pregunta 1: Glasgow -->
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">1. Diferencia funcional en la Escala de Glasgow</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">¿Qué diferencia clínica existe entre un puntaje motor de 5 y 6? ¿Qué procesos corticales están involucrados en "localizar" vs "obedecer"?</p>
-                      <textarea name="glasgow" rows="4" required minlength="50"
+                      <textarea name="glasgow" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Escribe tu respuesta aquí..."></textarea>
                   </div>
@@ -2802,7 +2840,7 @@
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">2. Vía Visual (Nervio Óptico II)</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">Compara una lesión en el quiasma óptico vs. una en la cintilla óptica. Describe el defecto de campo visual resultante en cada caso.</p>
-                      <textarea name="nc_ii" rows="4" required minlength="50"
+                      <textarea name="nc_ii" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                   </div>
 
@@ -2810,7 +2848,7 @@
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">3. Nervio Troclear (NC IV)</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">Explica por qué un paciente con parálisis del IV par sufre diplopía vertical al bajar escaleras o leer.</p>
-                      <textarea name="nc_iv" rows="4" required minlength="50"
+                      <textarea name="nc_iv" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                   </div>
 
@@ -2818,7 +2856,7 @@
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">4. Parálisis Facial (NC VII)</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">Describe la diferencia semiológica entre una parálisis facial central y una periférica respecto al músculo frontal.</p>
-                      <textarea name="nc_vii" rows="4" required minlength="50"
+                      <textarea name="nc_vii" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                   </div>
 
@@ -2826,7 +2864,7 @@
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">5. Escala de Fuerza MRC</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">¿Cómo distinguirías técnicamente un grado 3/5 de un 4/5 en la escala de Medical Research Council?</p>
-                      <textarea name="motor_mrc" rows="4" required minlength="50"
+                      <textarea name="motor_mrc" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                   </div>
 
@@ -2834,7 +2872,7 @@
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">6. Sensibilidad Profunda vs Superficial</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">Si un paciente pierde la propiocepción y vibración pero conserva el dolor, ¿qué vía está afectada y cuál está íntegra?</p>
-                      <textarea name="sensitivo" rows="4" required minlength="50"
+                      <textarea name="sensitivo" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                   </div>
 
@@ -2842,20 +2880,32 @@
                   <div class="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 form-card">
                       <label class="block text-lg font-medium text-gray-800 dark:text-white mb-3">7. Metacognición: El Punto Ciego</label>
                       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">Basado en el experimento del punto ciego, ¿cómo integra el cerebro la información faltante en el examen clínico diario?</p>
-                      <textarea name="reflexion" rows="4" required minlength="75"
+                      <textarea name="reflexion" rows="4"
                                 class="w-full p-3 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                   </div>
 
-                  <!-- Botón de Envío -->
-                  <div class="py-4">
+                  <!-- Acciones: la evaluación no se envía a ningún servidor -->
+                  <div class="py-4 grid sm:grid-cols-3 gap-3 no-print">
                       <button type="submit" id="submitBtn"
-                              class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-colors shadow-md flex justify-center items-center gap-3">
-                          <span>Enviar Evaluación Final</span>
+                              class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-colors shadow-md flex justify-center items-center gap-2">
+                          <span>Descargar JSON</span>
+                      </button>
+                      <button type="button" id="downloadCsvBtn"
+                              class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-colors shadow-md flex justify-center items-center gap-2">
+                          <span>Descargar CSV</span>
+                      </button>
+                      <button type="button" id="printBtn"
+                              class="w-full bg-white dark:bg-gray-800 border-2 border-primary text-primary font-bold py-4 px-6 rounded-lg transition-colors shadow-sm flex justify-center items-center gap-2">
+                          <span>Imprimir</span>
                       </button>
                   </div>
 
                   <!-- Mensajes de Estado -->
                   <div id="statusBox" class="hidden p-4 rounded-lg text-center font-medium"></div>
+                  <p class="text-xs text-center text-gray-500 dark:text-gray-400 no-print">
+                      Tus respuestas se quedan en este navegador. Descarga el archivo o imprime la hoja para
+                      conservarlas y entregarlas por el medio que te indique tu docente.
+                  </p>
               </form>
           </div>
           </section>
@@ -2903,51 +2953,135 @@
       });
     </script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbycyUCZNCgbrKE9tGdKOsvfDnYFkxSJbE0811P7bXwVoRwktwTdUr4Uarw4f-Eg9sbhtQ/exec';
+      // La evaluación no se envía a ningún servidor: se corrige y se entrega en
+      // local. Las respuestas viven en el formulario hasta que se recarga.
       const form = document.getElementById('neurologiaForm');
-      const btn = document.getElementById('submitBtn');
       const statusBox = document.getElementById('statusBox');
 
-      form.addEventListener('submit', e => {
-          e.preventDefault();
+      const PREGUNTAS = [
+        { campo: 'glasgow', titulo: '1. Diferencia funcional en la Escala de Glasgow', minimo: 50 },
+        { campo: 'nc_ii', titulo: '2. Vía Visual (Nervio Óptico II)', minimo: 50 },
+        { campo: 'nc_iv', titulo: '3. Nervio Troclear (NC IV)', minimo: 50 },
+        { campo: 'nc_vii', titulo: '4. Parálisis Facial (NC VII)', minimo: 50 },
+        { campo: 'motor_mrc', titulo: '5. Escala de Fuerza MRC', minimo: 50 },
+        { campo: 'sensitivo', titulo: '6. Sensibilidad Profunda vs Superficial', minimo: 50 },
+        { campo: 'reflexion', titulo: '7. Metacognición: El Punto Ciego', minimo: 75 },
+      ];
 
-          // UI State
-          btn.disabled = true;
-          btn.innerHTML = `
-              <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              <span>Procesando envío...</span>
-          `;
+      function recogerRespuestas() {
+        const datos = new FormData(form);
+        return PREGUNTAS.map((p) => {
+          const texto = (datos.get(p.campo) || '').toString().trim();
+          return {
+            campo: p.campo,
+            pregunta: p.titulo,
+            respuesta: texto,
+            caracteres: texto.length,
+            minimo_requerido: p.minimo,
+            cumple_minimo: texto.length >= p.minimo,
+          };
+        });
+      }
 
-          statusBox.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
-          statusBox.classList.add('bg-blue-50', 'text-blue-700');
-          statusBox.innerText = "Enviando tus respuestas al registro del curso...";
+      function mostrarEstado(mensaje, tono) {
+        statusBox.classList.remove(
+          'hidden', 'bg-red-100', 'text-red-700',
+          'bg-green-100', 'text-green-700', 'bg-blue-50', 'text-blue-700',
+        );
+        if (tono === 'ok') {
+          statusBox.classList.add('bg-green-100', 'text-green-700');
+        } else {
+          statusBox.classList.add('bg-red-100', 'text-red-700');
+        }
+        statusBox.innerHTML = mensaje;
+      }
 
-          // Send Data
-          fetch(scriptURL, {
-              method: 'POST',
-              body: new FormData(form),
-              mode: 'no-cors' // Google Apps Script requiere no-cors o redirección manual
-          })
-          .then(() => {
-              statusBox.classList.replace('bg-blue-50', 'bg-green-100');
-              statusBox.classList.replace('text-blue-700', 'text-green-700');
-              statusBox.innerHTML = "<strong>¡Éxito!</strong> Tus respuestas han sido recibidas. Puedes volver a Google Classroom.";
-              form.reset();
-              btn.innerHTML = "<span>Enviado Correctamente</span>";
-              btn.classList.replace('bg-blue-600', 'bg-green-600');
-          })
-          .catch(error => {
-              console.error('Error:', error);
-              statusBox.classList.replace('bg-blue-50', 'bg-red-100');
-              statusBox.classList.replace('text-blue-700', 'text-red-700');
-              statusBox.innerText = "Error en el envío. Por favor, verifica tu conexión o intenta de nuevo.";
-              btn.disabled = false;
-              btn.innerText = "Reintentar Envío";
+      function descargarBlob(contenido, nombre, mime) {
+        const blob = new Blob([contenido], { type: mime });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = nombre;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      function marcaTiempo() {
+        return new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+      }
+
+      function celdaCsv(valor) {
+        return '"' + String(valor).replace(/"/g, '""') + '"';
+      }
+
+      // Solo bloquea si no hay nada escrito; los mínimos se informan, no impiden
+      // guardar el borrador.
+      function validar(respuestas) {
+        const vacias = respuestas.filter((r) => r.caracteres === 0);
+        if (vacias.length === respuestas.length) {
+          mostrarEstado('Responde al menos una pregunta antes de descargar.', 'error');
+          return false;
+        }
+        const cortas = respuestas.filter((r) => r.caracteres > 0 && !r.cumple_minimo);
+        if (cortas.length > 0) {
+          mostrarEstado(
+            '<strong>Archivo descargado.</strong> Aviso: ' + cortas.length +
+            ' respuesta(s) no llegan a la extensión mínima sugerida por la rúbrica.',
+            'ok',
+          );
+        }
+        return true;
+      }
+
+      function exportar(formato) {
+        const respuestas = recogerRespuestas();
+        if (!validar(respuestas)) return;
+
+        const paquete = {
+          evaluacion: 'Evaluación Práctica: Examen Neurológico (Parte 1)',
+          fecha: new Date().toISOString(),
+          preguntas_respondidas: respuestas.filter((r) => r.caracteres > 0).length,
+          total_preguntas: respuestas.length,
+          respuestas: respuestas,
+        };
+
+        if (formato === 'json') {
+          descargarBlob(
+            JSON.stringify(paquete, null, 2),
+            `examen-neurologico-p1-${marcaTiempo()}.json`,
+            'application/json',
+          );
+        } else {
+          const filas = [['campo', 'pregunta', 'respuesta', 'caracteres', 'minimo_requerido', 'cumple_minimo']];
+          respuestas.forEach((r) => {
+            filas.push([r.campo, r.pregunta, r.respuesta, r.caracteres, r.minimo_requerido, r.cumple_minimo ? 'si' : 'no']);
           });
+          filas.push([]);
+          filas.push(['evaluacion', paquete.evaluacion]);
+          filas.push(['fecha', paquete.fecha]);
+          const csv = '﻿' + filas.map((f) => f.map(celdaCsv).join(',')).join('\r\n');
+          descargarBlob(csv, `examen-neurologico-p1-${marcaTiempo()}.csv`, 'text/csv;charset=utf-8');
+        }
+
+        if (statusBox.classList.contains('hidden') || !statusBox.innerHTML) {
+          mostrarEstado('<strong>Archivo descargado.</strong> Revisa la carpeta de descargas de tu navegador.', 'ok');
+        }
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        statusBox.innerHTML = '';
+        exportar('json');
       });
+
+      document.getElementById('downloadCsvBtn').addEventListener('click', () => {
+        statusBox.innerHTML = '';
+        exportar('csv');
+      });
+
+      document.getElementById('printBtn').addEventListener('click', () => window.print());
   </script>
   </body>
 </html>
