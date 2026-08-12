@@ -4,12 +4,13 @@
   "private": true,
   "description": "Contenido escrito de Powersemiotics, publicado en powersemiotics.com/medsemiotics/",
   "scripts": {
-    "build": "npm run build --workspace medicina_y_datos/estadisticos_descubiertos",
+    "build": "npm run build:css && npm run build:js",
     "build:css": "tailwindcss -c assets/tailwind.config.js -i assets/styles.css -o assets/tailwind.css",
     "start": "node local-server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{js,html}\""
+    "format": "prettier --write \"**/*.{js,html}\"",
+    "build:js": "node build-js.mjs"
   },
   "workspaces": [
     "medicina_y_datos/estadisticos_descubiertos"
@@ -21,6 +22,10 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.37.0",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
+    "esbuild": "^0.28.2",
     "eslint": "^8.57.1",
     "globals": "^16.4.0",
     "prettier": "^3.6.2",

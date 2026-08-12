@@ -10,38 +10,8 @@
   <link href="assets/fonts/fonts.css"
     rel="stylesheet" />
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="assets/tailwind.css" rel="stylesheet" />
 
-  <!-- Tailwind Configuration -->
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#8B3DFF", // PowerSemiotics Purple
-            "secondary": "#FF4081",
-            "background-light": "#f6f7f8",
-            "background-dark": "#101922",
-            "surface-light": "#ffffff",
-            "surface-dark": "#1a242d",
-            "border-light": "#e2e8f0",
-            "border-dark": "#2d3748",
-          },
-          fontFamily: {
-            "display": ["Lexend", "sans-serif"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.5rem",
-            "lg": "0.75rem",
-            "xl": "1rem",
-            "full": "9999px"
-          },
-        },
-      },
-    }
-  </script>
 
   <style>
     .gradient-text {
@@ -104,7 +74,7 @@
 </head>
 
 <body
-  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-200">
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-lexend transition-colors duration-200">
 
   <!-- Top Navigation -->
   <header

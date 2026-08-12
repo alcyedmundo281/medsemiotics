@@ -12,28 +12,7 @@
       href="../assets/fonts/fonts.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Outfit', 'sans-serif'],
-            },
-            colors: {
-              primary: {
-                DEFAULT: '#6366f1',
-                hover: '#4f46e5',
-              },
-              success: '#10b981',
-              warning: '#f59e0b',
-              danger: '#ef4444',
-            },
-          },
-        },
-      };
-    </script>
+    <link href="../assets/tailwind.css" rel="stylesheet" />
     <style>
       .glow-active {
         filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6));
@@ -65,7 +44,7 @@
       }
     </style>
   </head>
-  <body class="bg-slate-950 text-slate-100 font-sans min-h-screen antialiased flex flex-col">
+  <body class="font-inter bg-slate-950 text-slate-100 font-inter min-h-screen antialiased flex flex-col">
     <!-- Header -->
     <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-6 py-4">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
@@ -74,7 +53,7 @@
             <i class="fas fa-arrow-left"></i>
           </a>
           <div>
-            <h1 class="text-xl md:text-2xl font-display font-bold text-white tracking-tight">Fundamentos de Gastroenterología</h1>
+            <h1 class="text-xl md:text-2xl font-outfit font-bold text-white tracking-tight">Fundamentos de Gastroenterología</h1>
             <p class="text-xs text-slate-400">Misión TGI • Facultad de Ciencias Médicas UCE</p>
           </div>
         </div>
@@ -85,7 +64,7 @@
 
           <div id="badge-anatomy" class="flex items-center gap-1.5 opacity-40 grayscale transition-all duration-500" title="Insignia Explorador Anatómico">
             <div class="w-8 h-8 rounded-lg bg-emerald-950/50 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-md">
-              <i class="fas fa-child-anatomy text-sm"></i>
+              <i class="fas fa-child-reaching text-sm"></i>
             </div>
             <span class="text-[10px] font-bold text-emerald-400 hidden lg:inline">ANATOMÍA</span>
           </div>
@@ -162,7 +141,7 @@
 
           <button id="tab-btn-anatomy" onclick="switchTab('anatomy')" class="w-full text-left px-4 py-3 rounded-xl flex items-center justify-between text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 font-medium transition-all">
             <span class="flex items-center gap-3">
-              <i class="fas fa-child-anatomy text-sm text-emerald-400"></i>
+              <i class="fas fa-child-reaching text-sm text-emerald-400"></i>
               <span>1. Lab Anatómico</span>
             </span>
             <span id="nav-badge-anatomy" class="text-[9px] bg-slate-950 text-slate-500 px-2 py-0.5 rounded font-mono">BLOQ</span>
@@ -201,7 +180,7 @@
         <div id="tab-content-intro" class="space-y-6">
           <div class="border-b border-slate-800 pb-4">
             <span class="text-xs bg-indigo-950 text-indigo-400 border border-indigo-900 px-2.5 py-0.5 rounded-full font-bold">INTRODUCCIÓN</span>
-            <h2 class="text-2xl md:text-3xl font-display font-extrabold text-white mt-2">Bienvenido, Médico en Formación</h2>
+            <h2 class="text-2xl md:text-3xl font-outfit font-extrabold text-white mt-2">Bienvenido, Médico en Formación</h2>
             <p class="text-slate-400 mt-1">El Desafío Clínico del Tracto Gastrointestinal Superior.</p>
           </div>
 
@@ -245,7 +224,7 @@
           <div class="border-b border-slate-800 pb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
               <span class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-900 px-2.5 py-0.5 rounded-full font-bold">MISIÓN 1</span>
-              <h2 class="text-2xl md:text-3xl font-display font-extrabold text-white mt-2">Laboratorio Anatómico Superior</h2>
+              <h2 class="text-2xl md:text-3xl font-outfit font-extrabold text-white mt-2">Laboratorio Anatómico Superior</h2>
             </div>
             <div id="anatomy-badge-status" class="hidden text-xs bg-emerald-900/30 text-emerald-400 border border-emerald-500/20 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5">
               <i class="fas fa-check-circle"></i> INSIGNIA GANADA: EXPLORADOR ANATÓMICO
@@ -274,7 +253,7 @@
               <div id="scanner-prompt-box" class="bg-slate-950 border border-slate-800 p-4 rounded-xl flex items-center justify-between">
                 <div>
                   <p class="text-xs text-indigo-400 uppercase font-bold tracking-wider">Localice la estructura:</p>
-                  <p id="scanner-target-name" class="text-xl font-display font-extrabold text-white mt-1">Estómago</p>
+                  <p id="scanner-target-name" class="text-xl font-outfit font-extrabold text-white mt-1">Estómago</p>
                 </div>
                 <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-500" id="scanner-prompt-icon">
                   <i class="fas fa-crosshairs animate-pulse text-indigo-400"></i>
@@ -406,7 +385,7 @@
           <div class="border-b border-slate-800 pb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
               <span class="text-xs bg-amber-950 text-amber-400 border border-amber-900 px-2.5 py-0.5 rounded-full font-bold">MISIÓN 2</span>
-              <h2 class="text-2xl md:text-3xl font-display font-extrabold text-white mt-2">La Fábrica Química (Fisiología)</h2>
+              <h2 class="text-2xl md:text-3xl font-outfit font-extrabold text-white mt-2">La Fábrica Química (Fisiología)</h2>
             </div>
             <div id="physiology-badge-status" class="hidden text-xs bg-amber-900/30 text-amber-400 border border-amber-500/20 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5">
               <i class="fas fa-check-circle"></i> INSIGNIA GANADA: MAESTRO ENZIMÁTICO
@@ -505,7 +484,7 @@
           <div class="border-b border-slate-800 pb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
               <span class="text-xs bg-cyan-950 text-cyan-400 border border-cyan-900 px-2.5 py-0.5 rounded-full font-bold">MISIÓN 3</span>
-              <h2 class="text-2xl md:text-3xl font-display font-extrabold text-white mt-2">El Ecosistema Oculto (Microbiota)</h2>
+              <h2 class="text-2xl md:text-3xl font-outfit font-extrabold text-white mt-2">El Ecosistema Oculto (Microbiota)</h2>
             </div>
             <div id="microbiota-badge-status" class="hidden text-xs bg-cyan-900/30 text-cyan-400 border border-cyan-500/20 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5">
               <i class="fas fa-check-circle"></i> INSIGNIA GANADA: GUARDIÁN DEL BIOMA
@@ -524,7 +503,7 @@
 
               <!-- Diversity ring gauge -->
               <div class="flex flex-col items-center justify-center p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-                <span id="microbiome-diversity-num" class="text-3xl font-display font-extrabold text-cyan-400">75%</span>
+                <span id="microbiome-diversity-num" class="text-3xl font-outfit font-extrabold text-cyan-400">75%</span>
                 <span class="text-[10px] text-slate-500 uppercase tracking-wider font-bold mt-1">Diversidad General</span>
               </div>
             </div>
@@ -619,7 +598,7 @@
         <div id="tab-content-evaluation" class="hidden space-y-6">
           <div class="border-b border-slate-800 pb-4">
             <span class="text-xs bg-rose-950 text-rose-400 border border-rose-900 px-2.5 py-0.5 rounded-full font-bold">EVALUACIÓN FORMATIVA</span>
-            <h2 class="text-2xl md:text-3xl font-display font-extrabold text-white mt-2">Criterios de Evaluación y Syllabus UCE</h2>
+            <h2 class="text-2xl md:text-3xl font-outfit font-extrabold text-white mt-2">Criterios de Evaluación y Syllabus UCE</h2>
           </div>
 
           <!-- Academic Content Accordion -->

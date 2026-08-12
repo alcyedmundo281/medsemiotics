@@ -10,39 +10,8 @@
     <link href="../assets/fonts/fonts.css"
         rel="stylesheet" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
+    <link href="../assets/tailwind.css" rel="stylesheet" />
 
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#8B5CF6",
-                        "primary-hover": "#7C3AED",
-                        "secondary": "#EC4899",
-                        "danger": "#e11d48",
-                        "warning": "#f59e0b",
-                        "success": "#10b981",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#0F172A",
-                        "card-light": "#ffffff",
-                        "card-dark": "#1E293B",
-                        "text-primary-light": "#1E293B",
-                        "text-primary-dark": "#F8FAFC",
-                        "text-secondary-light": "#64748B",
-                        "text-secondary-dark": "#94A3B8",
-                    },
-                    fontFamily: {
-                        "display": ["Lexend", "sans-serif"],
-                        "serif": ["'DM Serif Display'", "serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
 
     <style>
         .brain-area {
@@ -193,7 +162,7 @@
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark min-h-screen flex flex-col transition-colors duration-300">
+    class="bg-background-light dark:bg-background-dark font-lexend text-text-primary-light dark:text-text-primary-dark min-h-screen flex flex-col transition-colors duration-300">
 
     <!-- Header Section -->
     <header
@@ -204,7 +173,7 @@
                     <span class="material-symbols-outlined text-2xl">neurology</span>
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold leading-tight font-serif tracking-wide">ACV Unified Dashboard</h2>
+                    <h2 class="text-xl font-bold leading-tight font-dmserif tracking-wide">ACV Unified Dashboard</h2>
                     <p
                         class="text-[10px] text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-widest font-bold">
                         Guías AHA/ASA 2024 • Powersemiotics</p>
@@ -240,7 +209,7 @@
                 <div class="absolute top-0 left-0 w-full h-1 bg-primary/20 pointer-events-none scan-line"></div>
 
                 <div class="mb-6">
-                    <h3 class="font-serif text-3xl text-gray-900 dark:text-white mb-2">Mapeo <span
+                    <h3 class="font-dmserif text-3xl text-gray-900 dark:text-white mb-2">Mapeo <span
                             class="gradient-text">Neuro-Vascular</span></h3>
                     <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark font-medium">Selecciona el
                         territorio vascular para cargar un caso clínico.</p>

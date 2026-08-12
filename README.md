@@ -21,7 +21,9 @@ raíz.
 - `.nojekyll` está presente para que Pages sirva los archivos tal cual, sin pasarlos
   por Jekyll.
 - No hay paso de build en el despliegue: el HTML, el CSS compilado y los bundles de
-  las sub-aplicaciones están versionados y se sirven directamente.
+  JavaScript están versionados y se sirven directamente.
+- No se carga nada desde ningún CDN: fuentes, iconos, React y las librerías de
+  terceros están alojadas en `assets/`.
 
 ## Contenido
 
@@ -59,7 +61,7 @@ compilado está versionado; no hace falta compilar nada para publicar.
   `examen-neurologico/dist/assets/`. El `index.html` de la raíz del proyecto es la
   entrada de desarrollo.
 - **`medicina_y_datos/estadisticos_descubiertos/`** — el `index.html` publicado es
-  una página estática autónoma (Tailwind por CDN) y es lo que enlaza
+  una página estática autónoma y es lo que enlaza
   `medicina_y_datos.html`. Los seis bundles de `assets/index-*.js` (~4 MB) son
   salida de build antigua y hoy no los referencia nada.
 
@@ -86,8 +88,9 @@ Que equivale a:
 npx tailwindcss -c assets/tailwind.config.js -i assets/styles.css -o assets/tailwind.css
 ```
 
-El `content` de la configuración recorre `./*.html` y `./**/*.html`, así que cualquier
-página nueva del repositorio entra automáticamente en el barrido.
+El `content` recorre los directorios reales de contenido y los `.jsx` de los módulos
+interactivos, excluyendo `node_modules` y los `dist/` de las sub-apps Vite. Los
+`.bundle.js` no se escanean: las clases viven en el `.jsx` fuente.
 
 ## Sin backend
 
@@ -99,6 +102,25 @@ Las evaluaciones se corrigen en el navegador y muestran el resultado en la propi
 página. Para conservarlo, cada una ofrece descarga en JSON y CSV —generada con
 `Blob` y `URL.createObjectURL`, sin salir del equipo— y una hoja de impresión. No se
 pide nombre ni correo en ningún formulario, y nada se guarda entre sesiones.
+
+## Módulos interactivos (React)
+
+Ocho páginas incluyen un módulo interactivo en React. El JSX vive en un archivo
+`.jsx` hermano de la página y es **la fuente**; el navegador solo recibe el
+`.bundle.js` compilado. Babel ya no interviene en tiempo de ejecución.
+
+```bash
+npm run build:js
+```
+
+React y ReactDOM 18.3.1 se sirven desde `assets/vendor/react/` como globales UMD,
+así que el bundle los deja como externos.
+
+Para regenerar CSS y JS de una vez:
+
+```bash
+npm run build
+```
 
 ## Desarrollo
 

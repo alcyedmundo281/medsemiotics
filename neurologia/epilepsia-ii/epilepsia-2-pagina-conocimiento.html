@@ -9,21 +9,8 @@
   <link
     href="../../assets/fonts/fonts.css"
     rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../assets/tailwind.css" rel="stylesheet" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { slate: { 950: '#020617' } },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
 
   <style>
     /* Efecto de brillo en bordes */
@@ -38,7 +25,7 @@
   </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 min-h-screen selection:bg-cyan-500 selection:text-white pb-20">
+<body class="font-jakarta bg-slate-950 text-slate-200 min-h-screen selection:bg-cyan-500 selection:text-white pb-20">
 
   <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800 mb-12">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -52,7 +39,7 @@
       </a>
       <div class="flex items-center gap-3">
         <span
-          class="text-xs font-mono text-cyan-500 bg-cyan-950/30 border border-cyan-500/20 px-2 py-1 rounded uppercase tracking-wider">Cheat
+          class="text-xs font-jetbrains text-cyan-500 bg-cyan-950/30 border border-cyan-500/20 px-2 py-1 rounded uppercase tracking-wider">Cheat
           Sheet</span>
         <span class="text-white font-bold hidden md:block">Protocolos de Urgencia</span>
       </div>
@@ -93,7 +80,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 glow-border transition-all">
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-blue-400">FASE 1: Estabilización</h3>
-              <span class="bg-blue-500/10 text-blue-400 text-xs font-mono font-bold px-2 py-1 rounded">0 - 5 min</span>
+              <span class="bg-blue-500/10 text-blue-400 text-xs font-jetbrains font-bold px-2 py-1 rounded">0 - 5 min</span>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
               <ul class="space-y-3 text-slate-300">
@@ -124,25 +111,25 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 glow-border transition-all">
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-green-400">FASE 2: Primera Línea (Benzos)</h3>
-              <span class="bg-green-500/10 text-green-400 text-xs font-mono font-bold px-2 py-1 rounded">5 - 20
+              <span class="bg-green-500/10 text-green-400 text-xs font-jetbrains font-bold px-2 py-1 rounded">5 - 20
                 min</span>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
               <div class="bg-slate-950 p-4 rounded-xl border border-slate-700">
                 <div class="text-white font-bold mb-1">Lorazepam IV</div>
-                <div class="text-green-400 font-mono text-sm font-bold">0.1 mg/kg</div>
+                <div class="text-green-400 font-jetbrains text-sm font-bold">0.1 mg/kg</div>
                 <div class="text-xs text-slate-500 mt-1">Máx: 4 mg/dosis</div>
                 <div class="text-[10px] text-slate-600 mt-1 uppercase tracking-wide">Elección</div>
               </div>
               <div class="bg-slate-950 p-4 rounded-xl border border-slate-700">
                 <div class="text-white font-bold mb-1">Diazepam IV</div>
-                <div class="text-green-400 font-mono text-sm font-bold">0.15 mg/kg</div>
+                <div class="text-green-400 font-jetbrains text-sm font-bold">0.15 mg/kg</div>
                 <div class="text-xs text-slate-500 mt-1">Máx: 10 mg/dosis</div>
               </div>
               <div class="bg-red-900/10 p-4 rounded-xl border border-red-500/30">
                 <div class="text-red-300 font-bold mb-1 text-sm">¿Sin Acceso IV?</div>
                 <div class="text-white font-bold">Midazolam IM</div>
-                <div class="text-red-400 font-mono text-sm font-bold">10 mg</div>
+                <div class="text-red-400 font-jetbrains text-sm font-bold">10 mg</div>
                 <div class="text-xs text-red-300/70 mt-1">(Pacientes > 40kg)</div>
               </div>
             </div>
@@ -157,7 +144,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 glow-border transition-all">
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-yellow-400">FASE 3: Segunda Línea (Refractario)</h3>
-              <span class="bg-yellow-500/10 text-yellow-400 text-xs font-mono font-bold px-2 py-1 rounded">20 - 40
+              <span class="bg-yellow-500/10 text-yellow-400 text-xs font-jetbrains font-bold px-2 py-1 rounded">20 - 40
                 min</span>
             </div>
             <p class="text-slate-400 text-sm mb-4">Si las benzodiacepinas fallan, iniciar <strong>UNA</strong> de las
@@ -175,17 +162,17 @@
                 <tbody class="text-sm">
                   <tr class="border-b border-slate-800/50">
                     <td class="py-3 font-bold text-white">Ácido Valproico</td>
-                    <td class="py-3 font-mono text-yellow-400">40 mg/kg</td>
+                    <td class="py-3 font-jetbrains text-yellow-400">40 mg/kg</td>
                     <td class="py-3 text-slate-400">Hepatopatía</td>
                   </tr>
                   <tr class="border-b border-slate-800/50">
                     <td class="py-3 font-bold text-white">Levetiracetam</td>
-                    <td class="py-3 font-mono text-yellow-400">60 mg/kg</td>
+                    <td class="py-3 font-jetbrains text-yellow-400">60 mg/kg</td>
                     <td class="py-3 text-slate-400">Ajuste renal</td>
                   </tr>
                   <tr>
                     <td class="py-3 font-bold text-white">Fenitoína</td>
-                    <td class="py-3 font-mono text-yellow-400">20 mg/kg</td>
+                    <td class="py-3 font-jetbrains text-yellow-400">20 mg/kg</td>
                     <td class="py-3 text-red-400 font-bold flex items-center gap-1">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -208,7 +195,7 @@
           <div class="bg-gradient-to-br from-red-950/30 to-slate-900 border border-red-500/30 rounded-2xl p-6 md:p-8">
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-red-400">FASE 4: Status Refractario</h3>
-              <span class="bg-red-500/10 text-red-400 text-xs font-mono font-bold px-2 py-1 rounded">> 40 min</span>
+              <span class="bg-red-500/10 text-red-400 text-xs font-jetbrains font-bold px-2 py-1 rounded">> 40 min</span>
             </div>
             <div class="flex items-center gap-4">
               <div class="bg-red-500/20 p-3 rounded-lg text-red-400">

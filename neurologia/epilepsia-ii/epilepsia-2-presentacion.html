@@ -8,7 +8,7 @@
 
   <link href="../../assets/fonts/fonts.css"
     rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../assets/tailwind.css" rel="stylesheet" />
 
   <style>
     body {
@@ -41,19 +41,10 @@
     }
   </style>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { slate: { 950: '#020617' } }
-        }
-      }
-    }
-  </script>
 </head>
 
 <body
-  class="bg-slate-950 text-slate-200 h-screen w-screen flex flex-col overflow-hidden relative selection:bg-cyan-500 selection:text-white">
+  class="font-jakarta bg-slate-950 text-slate-200 h-screen w-screen flex flex-col overflow-hidden relative selection:bg-cyan-500 selection:text-white">
 
   <div class="fixed inset-0 pointer-events-none -z-10">
     <div class="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-cyan-900/10 rounded-full blur-[120px]"></div>
