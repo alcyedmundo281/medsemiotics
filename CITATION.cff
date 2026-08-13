@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Si utiliza este material, por favor cítelo como se indica."
+title: "medsemiotics"
+abstract: >-
+  Plataforma de educación médica en español: módulos interactivos, casos
+  clínicos y material de autoevaluación sobre razonamiento clínico,
+  medicina basada en datos, farmacoterapia racional, gastroenterología,
+  neurología, inmunología clínica y ciencia de la implementación.
+  Publicada como sitio estático autosuficiente, sin dependencias de
+  servicios externos.
+type: software
+authors:
+  - family-names: "Torres Guerrero"
+    given-names: "Alcy Edmundo"
+    orcid: "https://orcid.org/0000-0002-9742-375X"
+    affiliation: "Hospital de Especialidades Carlos Andrade Marín; Universidad Central del Ecuador"
+repository-code: "https://github.com/alcyedmundo281/medsemiotics"
+url: "https://powersemiotics.com/medsemiotics/"
+license: CC-BY-SA-4.0
+keywords:
+  - educación médica
+  - medical education
+  - POCUS
+  - point-of-care ultrasound
+  - semiótica clínica
+  - clinical semiotics
+  - razonamiento clínico
+  - clinical reasoning
+  - farmacoterapia racional
+  - rational pharmacotherapy
+  - recursos educativos abiertos
+  - open educational resources

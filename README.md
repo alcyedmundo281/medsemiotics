@@ -160,3 +160,16 @@ El árbol mezcla hoy `snake_case`, `kebab-case` y `PascalCase_Con_Guiones`. La
 convención objetivo es **kebab-case** en minúsculas para directorios y archivos, pero
 la unificación está pendiente: renombrar cambia URLs publicadas y exige
 redirecciones.
+
+## Licencia y cita
+
+El contenido se publica bajo [Creative Commons Atribución-CompartirIgual 4.0
+Internacional](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
+(CC BY-SA 4.0). El texto completo está en [LICENSE](LICENSE).
+
+Puede reutilizarlo y adaptarlo, incluso con fines comerciales, siempre que dé
+crédito y distribuya lo derivado bajo la misma licencia.
+
+Para citar el trabajo, use los metadatos de [CITATION.cff](CITATION.cff); GitHub
+genera desde ahí la cita en APA y BibTeX. `.zenodo.json` describe el depósito que
+Zenodo crea en cada publicación etiquetada.

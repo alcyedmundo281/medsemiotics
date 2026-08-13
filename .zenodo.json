@@ -1,0 +1,42 @@
+{
+  "title": "medsemiotics",
+  "description": "<p>Plataforma de educaci&oacute;n m&eacute;dica en espa&ntilde;ol: m&oacute;dulos interactivos, casos cl&iacute;nicos y material de autoevaluaci&oacute;n sobre razonamiento cl&iacute;nico, medicina basada en datos, farmacoterapia racional, gastroenterolog&iacute;a, neurolog&iacute;a, inmunolog&iacute;a cl&iacute;nica y ciencia de la implementaci&oacute;n.</p><p>Re&uacute;ne 101 p&aacute;ginas publicadas en seis &aacute;reas tem&aacute;ticas, con simuladores cl&iacute;nicos, autoevaluaciones corregidas en el navegador y documentos descargables. Est&aacute; construida como sitio est&aacute;tico autosuficiente: sin base de datos, sin autenticaci&oacute;n, sin claves de API y sin dependencias de CDN, de modo que su funcionamiento no depende de ning&uacute;n servicio externo que pueda desaparecer.</p><p>Publicada en <a href=\"https://powersemiotics.com/medsemiotics/\">powersemiotics.com/medsemiotics</a>.</p>",
+  "upload_type": "software",
+  "language": "spa",
+  "access_right": "open",
+  "license": "cc-by-sa-4.0",
+  "creators": [
+    {
+      "name": "Torres Guerrero, Alcy Edmundo",
+      "orcid": "0000-0002-9742-375X",
+      "affiliation": "Hospital de Especialidades Carlos Andrade Marín; Universidad Central del Ecuador"
+    }
+  ],
+  "keywords": [
+    "educación médica",
+    "medical education",
+    "POCUS",
+    "point-of-care ultrasound",
+    "semiótica clínica",
+    "clinical semiotics",
+    "razonamiento clínico",
+    "clinical reasoning",
+    "farmacoterapia racional",
+    "rational pharmacotherapy",
+    "recursos educativos abiertos",
+    "open educational resources"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://powersemiotics.com/medsemiotics/",
+      "relation": "isIdenticalTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/alcyedmundo281/medsemiotics",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
