@@ -3274,13 +3274,30 @@ df.plot.scatter(x='imc', y='pres_sis')`);
         },
       ];
 
+      // Las misiones declaran el lenguaje con su nombre visible ('Python'),
+      // mientras que langMeta y las pestañas usan claves cortas ('py').
+      const LANG_KEYS = {
+        r: 'r',
+        python: 'py',
+        py: 'py',
+        sql: 'sql',
+        latex: 'tex',
+        tex: 'tex',
+        bash: 'bash',
+        shell: 'bash',
+      };
+
+      function langKey(name) {
+        return LANG_KEYS[String(name).toLowerCase()] || 'r';
+      }
+
       function renderMissions() {
         const grid = document.getElementById('missionGrid');
         grid.innerHTML = '';
         missions.forEach((m) => {
           const card = document.createElement('div');
           card.className = 'mission-card';
-          const color = langMeta[m.lang.toLowerCase()].color;
+          const color = langMeta[langKey(m.lang)].color;
           card.innerHTML = `
       <div class="mission-header" onclick="toggleMission(${m.num})">
         <div>
@@ -3291,7 +3308,7 @@ df.plot.scatter(x='imc', y='pres_sis')`);
       </div>
       <div class="mission-body" id="mission-body-${m.num}">
         <p class="mission-desc">${esc(m.desc)}</p>
-        <pre class="mission-code">${highlightCode(m.code, m.lang.toLowerCase())}</pre>
+        <pre class="mission-code">${highlightCode(m.code, langKey(m.lang))}</pre>
         <button class="btn-load-mission" onclick="loadMissionCode(${m.num})">Cargar código</button>
       </div>
     `;
@@ -3313,7 +3330,7 @@ df.plot.scatter(x='imc', y='pres_sis')`);
       function loadMissionCode(num) {
         const m = missions.find((x) => x.num === num);
         if (m) {
-          switchLang(m.lang.toLowerCase());
+          switchLang(langKey(m.lang));
           document.getElementById('codeEditor').value = m.code;
           appendLine(`\n# Misión ${m.num} cargada: ${m.name}`, 't-comment');
           appendLine(
