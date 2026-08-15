@@ -9,6 +9,12 @@ La raíz de `powersemiotics.com` vive en otro repositorio
 ([PowerSemiotics](https://github.com/alcyedmundo281/PowerSemiotics)) y es solo la
 presentación corporativa de una página. Este repositorio contiene todo lo demás.
 
+El contenido clínico de POCUS evolucionó a un proyecto independiente:
+[Biosemiotics](https://www.biosemiotics.net/), cuya fuente se mantiene en el
+repositorio [biosemiotics](https://github.com/alcyedmundo281/biosemiotics). En
+Medsemiotics permanece únicamente el análisis de implementación de POCUS en el
+sistema sanitario.
+
 ## Publicación
 
 GitHub Pages sirve la rama por defecto desde la raíz del repositorio. El sitio queda
@@ -30,13 +36,17 @@ raíz.
 Seis áreas temáticas. Cada una tiene una página índice en la raíz que enlaza sus
 módulos, y un directorio con las páginas.
 
-| Área | Índice | Páginas |
-|---|---|---|
-| Medicina y Datos | `medicina_y_datos.html` | `medicina_y_datos/` — 19 |
-| Neurología | `neurologia.html` | `neurologia/` — 22 |
-| Gastroenterología | `gastroenterologia.html` | `gastroenterologia/` — 21 |
-| Farmacoterapia Racional | `farmacoterapia_racional.html` | `farmacoterapia_racional/` — 18 |
-| Inmunología Clínica | `inmunologia_clinica.html` | `inmunologia/` — 5 |
+La trazabilidad de la migración desde el Google Site histórico se mantiene en
+[`MIGRATION.md`](MIGRATION.md); ese registro evita volver a publicar temas ya
+consolidados y documenta los contenidos pendientes de recuperación.
+
+| Área                      | Índice                           | Páginas                          |
+| ------------------------- | -------------------------------- | -------------------------------- |
+| Medicina y Datos          | `medicina_y_datos.html`          | `medicina_y_datos/` — 19         |
+| Neurología                | `neurologia.html`                | `neurologia/` — 22               |
+| Gastroenterología         | `gastroenterologia.html`         | `gastroenterologia/` — 21        |
+| Farmacoterapia Racional   | `farmacoterapia_racional.html`   | `farmacoterapia_racional/` — 18  |
+| Inmunología Clínica       | `inmunologia_clinica.html`       | `inmunologia/` — 5               |
 | Medicina e Implementación | `medicina_e_implementacion.html` | `medicina_e_implementacion/` — 4 |
 
 Además hay páginas de contenido en la raíz que no cuelgan de ningún área:
