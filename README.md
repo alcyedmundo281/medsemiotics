@@ -42,9 +42,9 @@ consolidados y documenta los contenidos pendientes de recuperación.
 
 | Área                      | Índice                           | Páginas                          |
 | ------------------------- | -------------------------------- | -------------------------------- |
-| Medicina y Datos          | `medicina_y_datos.html`          | `medicina_y_datos/` — 19         |
+| Medicina y Datos          | `medicina_y_datos.html`          | `medicina_y_datos/` — 20         |
 | Neurología                | `neurologia.html`                | `neurologia/` — 22               |
-| Gastroenterología         | `gastroenterologia.html`         | `gastroenterologia/` — 21        |
+| Gastroenterología         | `gastroenterologia.html`         | `gastroenterologia/` — 23        |
 | Farmacoterapia Racional   | `farmacoterapia_racional.html`   | `farmacoterapia_racional/` — 18  |
 | Inmunología Clínica       | `inmunologia_clinica.html`       | `inmunologia/` — 5               |
 | Medicina e Implementación | `medicina_e_implementacion.html` | `medicina_e_implementacion/` — 4 |
