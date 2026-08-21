@@ -1,0 +1,112 @@
+---
+id: "HM6005-01"
+slug: "derrame-pleural-exudado-criterios-light-colesterol"
+title: "Derrame pleural: Criterios de Light vs. Colesterol pleural en la discriminación de exudados"
+subtitle: "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos."
+date: "2026-08-21"
+author: "Dr. Alcy Torres"
+category: "neumologia"
+category_label: "Neumología y Medicina Interna"
+tags: ["neumologia", "pleura", "laboratorio", "criterios-light", "medicina-interna"]
+reading_time: "6 min"
+difficulty: "Intermedio"
+grounding:
+  condicion_id: "HM:6005"
+  condicion_nombre: "Derrame pleural exudativo"
+  concepto_id: "HM:3008"
+  concepto_nombre: "Colesterol pleural elevado (>55 mg/dL)"
+  sensibilidad: 0.85
+  especificidad: 0.98
+  lr_positivo: 15.0
+  lr_negativo: 0.15
+  poblacion: "Adultos sometidos a toracocentesis diagnóstica por derrame pleural"
+  referencia_id: "pmid:24938565"
+  referencia_cita: "Wilcox ME, Chong CA, Stanbrook MB, Tricco AC, Wong C, Faughnan ME. Does this patient have an exudative pleural effusion? The Rational Clinical Examination Systematic Review. JAMA. 2014;311(23):2422-31."
+  doi: "10.1001/jama.2014.5552"
+  pmid: "24938565"
+
+triada:
+  significante: "Líquido pleural obtenido por toracocentesis con colesterol pleural > 55 mg/dL, o relación LDH pleural/sérica > 0.6, o proteínas pleurales/séricas > 0.5."
+  significado: "Aumento patológico de la permeabilidad capilar pleural o disrupción linfática local por inflamación, neoplasia o infección."
+  decision: "Los Criterios de Light tradicionales ofrecen alta sensibilidad (98%) pero clasifican erróneamente hasta un 25% de trasudados tratados con diuréticos como exudados; la medición del colesterol pleural (>55 mg/dL) y el gradiente albúmina sérica-pleural (>1.2 g/dL) resuelven la discrepancia."
+
+autoevaluacion:
+  - id: "q1"
+    pregunta: "Un paciente con insuficiencia cardíaca descompensada y tratamiento intensivo con furosemida presenta derrame pleural derecho. La toracocentesis muestra relación proteínas pleural/suero de 0.53 (criterio de Light positivo para exudado), pero el gradiente de albúmina suero-líquido pleural es de 1.4 g/dL (> 1.2 g/dL). ¿Cuál es la interpretación diagnóstica según JAMA (PMID: 24938565)?"
+    opciones:
+      - texto: "Es un pseudoirritativo / falso exudado inducido por la concentración diurética; el gradiente de albúmina >1.2 g/dL confirma que la etiología de base es un trasudado por insuficiencia cardíaca."
+        correcta: true
+        feedback: "¡Correcto! El uso de diuréticos concentra las proteínas del líquido pleural produciendo falsos exudados por Light. Un gradiente albúmina sérica - albúmina pleural > 1.2 g/dL reclasifica correctamente el derrame como trasudado cardíaco."
+      - texto: "Confirma empiema bacteriano y exige colocar tubo de drenaje pleural de inmediato."
+        correcta: false
+        feedback: "Incorrecto. No hay clínica infecciosa y el gradiente de albúmina demuestra que es origen hemodinámico."
+      - texto: "Descarta cualquier patología cardíaca."
+        correcta: false
+        feedback: "Incorrecto. Es un fenómeno clásico en pacientes con IC tratados con diuréticos."
+
+  - id: "q2"
+    pregunta: "¿Qué ventaja diagnóstica ofrece el colesterol pleural > 55 mg/dL frente a los criterios de Light convencionales?"
+    opciones:
+      - texto: "Mayor especificidad para exudado con un LR+ superior a 10-15 en la mayoría de las series analizadas, sin requerir extracción sanguínea simultánea."
+        correcta: true
+        feedback: "¡Exacto! El colesterol en líquido pleural > 55 mg/dL es altamente específico para patología pleural activa exudativa y no se altera tan fácilmente por la volemia."
+      - texto: "Permite diagnosticar precozmente hipercolesterolemia familiar tipo II."
+        correcta: false
+        feedback: "Incorrecto. Los lípidos pleurales reflejan permeabilidad de la membrana y degradación celular local, no dislipidemias hereditarias."
+---
+
+## La bifurcación inicial: ¿Trasudado o Exudado?
+
+Ante cualquier paciente con derrame pleural significativo, la toracocentesis diagnóstica persigue un objetivo fundamental: **clasificar el líquido en trasudado (causa sistémica como insuficiencia cardíaca o cirrosis) o exudado (patología pleural local como neumonía, cáncer o tuberculosis)**.
+
+---
+
+## Criterios de Light y el reto de los Falsos Exudados
+
+La revisión sistemática de 48 estudios publicada en *JAMA* (2014) sintetizó la evidencia diagnóstica:
+
+### Criterios Clásicos de Light (Requieren al menos 1 positivo):
+1. Relación proteínas pleurales / séricas $> 0.5$.
+2. Relación LDH pleural / sérica $> 0.6$.
+3. LDH pleural $> 2/3$ del límite superior normal sérico.
+- **Sensibilidad:** 97.5% (LR− **0.04**, ideal para descartar exudado).
+- **Especificidad:** Solo 70–80% (frecuentes falsos positivos en pacientes bajo diuréticos).
+
+### Pruebas de Rescate y Alta Especificidad:
+- **Colesterol en líquido pleural $> 55\text{ mg/dL}$:** LR+ entre **7.1 y 15.0** (excelente confirmación).
+- **Gradiente albúmina sérica - pleural $> 1.2\text{ g/dL}$:** Reclasifica el 85% de los falsos exudados como trasudados cardíacos verdaderos.
+
+```
+                    [ Análisis de Líquido Pleural ]
+                                   │
+              ┌────────────────────┴────────────────────┐
+              ▼                                         ▼
+     Criterios de Light NEGATIVOS               Criterios de Light POSITIVOS
+            (LR- ≈ 0.04)                                (Sens. ~98%)
+              │                                         │
+     Trasudado Confirmado                       ¿Paciente bajo diuréticos?
+  (Insuficiencia cardíaca, cirrosis)                    │
+                                            ┌───────────┴───────────┐
+                                            ▼                       ▼
+                                           SÍ                       NO
+                                   Medir Gradiente Albúmina     Exudado Verdadero
+                                    o Colesterol Pleural       (Estudiar cáncer,
+                                  (>1.2 g/dL = Trasudado)      infección o TBC)
+```
+
+---
+
+## Evidencia Cuantitativa y Fuentes
+
+Parámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):
+
+- **Sensibilidad de los Criterios de Light combinados:** 0.98 (98%)
+- **Cociente de Verosimilitud Negativo (Light negativo):** 0.04 [Wilcox et al., JAMA 2014]
+- **Cociente de Verosimilitud Positivo del Colesterol Pleural (>55 mg/dL):** 7.1 – 15.0 [Wilcox et al., JAMA 2014]
+- **Población evaluada:** Adultos sometidos a punción pleural diagnóstica.
+
+---
+
+## Conclusión Semiótica
+
+Los Criterios de Light son una magnífica prueba de **cribado (alta sensibilidad, LR− 0.04)**. Si son negativos, el exudado queda descartado; si son positivos en un paciente con insuficiencia cardíaca, el colesterol pleural o el gradiente de albúmina evitan estudios invasivos innecesarios.

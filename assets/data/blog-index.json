@@ -1,5 +1,51 @@
 [
   {
+    "id": "HM6003-01",
+    "slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
+    "title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
+    "subtitle": "De la exploración de la cadena cervical posterior al frotis de sangre periférica según la evidencia de JAMA.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "tags": [
+      "infecciosas",
+      "mononucleosis",
+      "hematologia",
+      "pediatria",
+      "semiologia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6003 · PMID:27115266",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "De la exploración de la cadena cervical posterior al frotis de sangre periférica según la evidencia de JAMA."
+  },
+  {
+    "id": "HM6005-01",
+    "slug": "derrame-pleural-exudado-criterios-light-colesterol",
+    "title": "Derrame pleural: Criterios de Light vs. Colesterol pleural en la discriminación de exudados",
+    "subtitle": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "neumologia",
+    "category_label": "Neumología y Medicina Interna",
+    "tags": [
+      "neumologia",
+      "pleura",
+      "laboratorio",
+      "criterios-light",
+      "medicina-interna"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6005 · PMID:24938565",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos."
+  },
+  {
     "id": "HM6006-01",
     "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
     "title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
@@ -88,6 +134,29 @@
     "has_quiz": true,
     "quiz_count": 2,
     "excerpt": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos."
+  },
+  {
+    "id": "HM6010-01",
+    "slug": "sincope-cardiaco-vs-vasovagal-anamnesis",
+    "title": "Síncope en urgencias: Cómo diferenciar el origen arrítmico del síncope vasovagal",
+    "subtitle": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "cardiologia",
+    "category_label": "Cardiología y Urgencias",
+    "tags": [
+      "cardiologia",
+      "urgencias",
+      "sincope",
+      "arritmias",
+      "semiologia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6010 · PMID:31237649",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination."
   },
   {
     "id": "HM6015-01",
