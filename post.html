@@ -99,20 +99,20 @@
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
         </svg>
-        Cargando caso clínico y grounding...
+        Cargando caso clínico...
       </div>
 
       <!-- Post Content (rendered dynamically) -->
       <article id="postBody" class="hidden">
-        <!-- Grounding Provenance Banner -->
+        <!-- Medical Evidence Banner -->
         <div class="mb-8 p-4 bg-purple-50/70 border border-purple-200/80 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
           <div class="flex items-center gap-2">
             <span class="flex h-2 w-2 relative">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-600"></span>
             </span>
-            <span class="font-bold text-purple-900">Grounding Verificado:</span>
-            <span class="font-mono text-purple-800" id="groundingCodes">HM:6004 · HM:3006</span>
+            <span class="font-bold text-purple-900">Evidencia Médica:</span>
+            <span class="text-purple-800" id="clinicalEvidenceLabel">Revisión Sistemática</span>
           </div>
           <div class="flex items-center gap-3 text-purple-700">
             <a id="pubmedLink" href="#" target="_blank" rel="noopener" class="font-semibold hover:underline inline-flex items-center gap-1">
@@ -252,7 +252,7 @@
 
         <!-- Verified Reference Citation Footer -->
         <footer class="p-6 bg-stone-100 border border-stone-200 rounded-2xl text-xs text-stone-600">
-          <h4 class="font-bold text-stone-900 mb-2 uppercase tracking-wider">Referencia Verificada (Grounding PubMed):</h4>
+          <h4 class="font-bold text-stone-900 mb-2 uppercase tracking-wider">Referencia Bibliográfica:</h4>
           <p id="refCitation" class="leading-relaxed mb-3">
             Cargando referencia...
           </p>
@@ -303,9 +303,9 @@
         document.getElementById('headerCategoryBadge').textContent = currentPost.category_label || currentPost.category;
         document.getElementById('headerReadingTime').textContent = currentPost.reading_time || '5 min';
 
-        // Grounding badges
+        // Evidence and references
         const g = currentPost.grounding || {};
-        document.getElementById('groundingCodes').textContent = `${g.condicion_id || ''} · ${g.concepto_id || ''}`;
+        document.getElementById('clinicalEvidenceLabel').textContent = g.poblacion || 'Evidencia clínica en adultos';
         if (g.pmid) {
           document.getElementById('pubmedLink').href = `https://pubmed.ncbi.nlm.nih.gov/${g.pmid}/`;
           document.getElementById('refPmidSpan').textContent = `PMID: ${g.pmid}`;
@@ -314,7 +314,7 @@
           document.getElementById('doiLink').href = `https://doi.org/${g.doi}`;
           document.getElementById('refDoiSpan').textContent = `DOI: ${g.doi}`;
         }
-        document.getElementById('refCitation').textContent = g.referencia_cita || 'Referencia verificada en medsemiotics-db.';
+        document.getElementById('refCitation').textContent = g.referencia_cita || 'Referencia verificada en la literatura médica indexada.';
 
         // Titles & Metas
         document.getElementById('postTitle').textContent = currentPost.title;

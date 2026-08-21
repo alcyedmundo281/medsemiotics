@@ -53,16 +53,15 @@
     <main class="flex-1 max-w-6xl mx-auto px-6 py-12 w-full">
       <!-- Hero / Editorial Manifest (Estilo Ghost & biosemiotics.net) -->
       <section class="max-w-3xl mb-12">
-        <div class="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-purple-700 mb-3 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full">
-          <span>● Grounding Estricto</span>
-          <span class="text-stone-300">|</span>
-          <span>medsemiotics-db</span>
+        <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-purple-700 mb-3 bg-purple-50 border border-purple-200/80 px-3 py-1 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-purple-600"></span>
+          <span>Medicina Basada en Evidencia · Razonamiento Diagnóstico</span>
         </div>
         <h1 class="text-4xl md:text-5xl font-extrabold text-stone-950 tracking-tight leading-tight mb-4">
           Semiótica Clínica y Razonamiento Diagnóstico
         </h1>
         <p class="text-lg md:text-xl text-stone-600 leading-relaxed">
-          Un signo, una decisión, una evidencia comprobada. Casos clínicos interactivos, discriminación bayesiana con Likelihood Ratios reales y autoevaluación gamificada con referencias PMID y DOI verificadas.
+          Un signo, una decisión, una evidencia comprobada. Casos clínicos interactivos, discriminación bayesiana con cocientes de verosimilitud y autoevaluación gamificada con literatura médica verificada.
         </p>
       </section>
 
@@ -128,8 +127,8 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-stone-200 mt-auto py-8">
       <div class="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
-        <p>© 2026 Powersemiotics. Contenido clínico verificado con respaldo en <a href="https://github.com/alcyedmundo281/medsemiotics-db" class="text-purple-700 hover:underline font-semibold" target="_blank" rel="noopener">medsemiotics-db</a>.</p>
-        <p>Citas verificadas con PubMed & CrossRef · Cero alucinación clínica.</p>
+        <p>© 2026 Powersemiotics. Contenido clínico y didáctico para profesionales de la salud.</p>
+        <p>Referencias verificadas en PubMed & CrossRef.</p>
       </div>
     </footer>
 
@@ -174,7 +173,6 @@
           const matchSearch = !searchVal || 
             post.title.toLowerCase().includes(searchVal) ||
             post.subtitle.toLowerCase().includes(searchVal) ||
-            post.grounding_badge.toLowerCase().includes(searchVal) ||
             (post.tags && post.tags.some(t => t.toLowerCase().includes(searchVal)));
           return matchCat && matchSearch;
         });
@@ -193,11 +191,8 @@
               <div>
                 <!-- Top Badges -->
                 <div class="flex items-center justify-between gap-2 mb-4 text-xs">
-                  <span class="inline-flex items-center gap-1 font-mono font-semibold text-purple-700 bg-purple-50 border border-purple-200/70 px-2 py-0.5 rounded">
-                    <svg class="w-3 h-3 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                    </svg>
-                    ${post.grounding_badge}
+                  <span class="inline-flex items-center gap-1 font-semibold text-purple-800 bg-purple-50 border border-purple-200/80 px-2.5 py-0.5 rounded-full">
+                    ${post.category_label || 'Clínica'}
                   </span>
                   <span class="text-stone-400 font-medium">${post.reading_time}</span>
                 </div>

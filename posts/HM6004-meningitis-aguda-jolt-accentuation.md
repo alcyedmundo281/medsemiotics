@@ -92,15 +92,15 @@ Ante este escenario, la maniobra descrita por Uchihara y Tsukagoshi (popularizad
 
 ---
 
-## Grounding y Evidencia Verificada
+## Evidencia Cuantitativa y Fuentes
 
-Los parámetros cuantitativos de este tema provienen del registro **`HM:6004`** y **`HM:3006`** en `medsemiotics-db`:
+Parámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):
 
 - **Sensibilidad:** 1.00 (100%)
 - **Especificidad:** 0.54 (54%)
-- **LR Positivo (+):** 2.20 [Fuente: `pmid:10411200`]
-- **LR Negativo (-):** 0.00 [Fuente: `pmid:10411200`]
-- **Población diana:** Pacientes adultos evaluados en urgencias con presencia confirmada de fiebre y cefalea.
+- **Cociente de Verosimilitud Positivo (LR+):** 2.20 [Attia et al., JAMA 1999]
+- **Cociente de Verosimilitud Negativo (LR-):** 0.00 [Attia et al., JAMA 1999]
+- **Población evaluada:** Pacientes adultos en urgencias con presencia confirmada de fiebre y cefalea aguda.
 
 ---
 
