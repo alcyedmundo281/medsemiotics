@@ -278,7 +278,7 @@
       async function loadPost() {
         const slug = getUrlParam('slug') || 'meningitis-aguda-sacudida-cefalica';
         try {
-          const res = await fetch(`assets/data/posts/${slug}.json`);
+          const res = await fetch(`assets/data/posts/${slug}.json?v=${Date.now()}`, { cache: 'no-store' });
           if (!res.ok) throw new Error('Post no encontrado');
           currentPost = await res.json();
           renderPost();

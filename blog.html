@@ -127,7 +127,7 @@
 
       async function initBlog() {
         try {
-          const res = await fetch('assets/data/blog-index.json');
+          const res = await fetch(`assets/data/blog-index.json?v=${Date.now()}`, { cache: 'no-store' });
           if (!res.ok) throw new Error('No se pudo cargar el índice');
           allPosts = await res.json();
           buildCategoryFilters();
