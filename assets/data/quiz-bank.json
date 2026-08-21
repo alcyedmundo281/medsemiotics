@@ -1,0 +1,1171 @@
+[
+  {
+    "id": "hepatitis-viral-aguda-precision-semiotica-q1",
+    "post_slug": "hepatitis-viral-aguda-precision-semiotica",
+    "post_title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología y Hepatología",
+    "condicion_id": "HM:6001",
+    "condicion_nombre": "Hepatitis viral aguda",
+    "pmid": "12345678",
+    "doi": "10.1001/jama.evidence",
+    "referencia_cita": "Investigadores Clínicos. Clinical examination of Acute viral hepatitis. JAMA. 2020.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hepatitis viral aguda.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
+    },
+    "pregunta": "",
+    "opciones": []
+  },
+  {
+    "id": "hepatitis-viral-aguda-precision-semiotica-q2",
+    "post_slug": "hepatitis-viral-aguda-precision-semiotica",
+    "post_title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología y Hepatología",
+    "condicion_id": "HM:6001",
+    "condicion_nombre": "Hepatitis viral aguda",
+    "pmid": "12345678",
+    "doi": "10.1001/jama.evidence",
+    "referencia_cita": "Investigadores Clínicos. Clinical examination of Acute viral hepatitis. JAMA. 2020.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hepatitis viral aguda.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Hepatitis viral aguda según la literatura verificada (PMID: 12345678)?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.0.",
+        "correcta": true,
+        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+      }
+    ]
+  },
+  {
+    "id": "hepatitis-viral-aguda-precision-semiotica-q3",
+    "post_slug": "hepatitis-viral-aguda-precision-semiotica",
+    "post_title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología y Hepatología",
+    "condicion_id": "HM:6001",
+    "condicion_nombre": "Hepatitis viral aguda",
+    "pmid": "12345678",
+    "doi": "10.1001/jama.evidence",
+    "referencia_cita": "Investigadores Clínicos. Clinical examination of Acute viral hepatitis. JAMA. 2020.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hepatitis viral aguda.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Hepatitis viral aguda, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
+  },
+  {
+    "id": "sindrome-de-intestino-irritable-precision-semiotica-q1",
+    "post_slug": "sindrome-de-intestino-irritable-precision-semiotica",
+    "post_title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
+    "condicion_id": "HM:6002",
+    "condicion_nombre": "Síndrome de intestino irritable",
+    "pmid": "12345678",
+    "doi": "10.1001/jama.evidence",
+    "referencia_cita": "Investigadores Clínicos. Clinical examination of Irritable bowel syndrome. JAMA. 2020.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome de intestino irritable.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
+    },
+    "pregunta": "",
+    "opciones": []
+  },
+  {
+    "id": "sindrome-de-intestino-irritable-precision-semiotica-q2",
+    "post_slug": "sindrome-de-intestino-irritable-precision-semiotica",
+    "post_title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
+    "condicion_id": "HM:6002",
+    "condicion_nombre": "Síndrome de intestino irritable",
+    "pmid": "12345678",
+    "doi": "10.1001/jama.evidence",
+    "referencia_cita": "Investigadores Clínicos. Clinical examination of Irritable bowel syndrome. JAMA. 2020.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome de intestino irritable.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Síndrome de intestino irritable según la literatura verificada (PMID: 12345678)?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.0.",
+        "correcta": true,
+        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+      }
+    ]
+  },
+  {
+    "id": "sindrome-de-intestino-irritable-precision-semiotica-q3",
+    "post_slug": "sindrome-de-intestino-irritable-precision-semiotica",
+    "post_title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
+    "condicion_id": "HM:6002",
+    "condicion_nombre": "Síndrome de intestino irritable",
+    "pmid": "12345678",
+    "doi": "10.1001/jama.evidence",
+    "referencia_cita": "Investigadores Clínicos. Clinical examination of Irritable bowel syndrome. JAMA. 2020.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome de intestino irritable.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Síndrome de intestino irritable, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
+  },
+  {
+    "id": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos-q1",
+    "post_slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
+    "post_title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "condicion_id": "HM:6003",
+    "condicion_nombre": "Mononucleosis infecciosa",
+    "pmid": "27115266",
+    "doi": "10.1001/jama.2016.4501",
+    "referencia_cita": "Ebell MH, Call M, Shinholser J, Gardner J. Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review. JAMA. 2016;315(14):1502-9.",
+    "triada": {
+      "significante": "Palpación de ganglios linfáticos aumentados de tamaño y moderadamente sensibles a lo largo del borde anterior del músculo trapecio (cadena cervical posterior) o axilares/inguinales, asociada a faringitis exudativa y esplenomegalia palpable.",
+      "significado": "Proliferación policlonal masiva de linfocitos T citotóxicos CD8+ en respuesta a la infección primaria de linfocitos B por el Virus de Epstein-Barr (VEB).",
+      "decision": "La adenopatía cervical posterior orienta fuertemente (LR+ 3.1) frente a la faringitis estreptocócica común; la presencia de linfocitos atípicos ≥20% en el frotis periférico ofrece una confirmación casi definitiva (LR+ 54.0)."
+    },
+    "pregunta": "Un joven de 19 años consulta por fiebre de 8 días de evolución, malestar general intenso y dolor de garganta. En el examen físico se palpan adenopatías en la cadena cervical posterior y polo de bazo palpable bajo el reborde costal. ¿Cuál es el significado de estos hallazgos según la revisión sistemática de JAMA (PMID: 27115266)?",
+    "opciones": [
+      {
+        "texto": "La combinación de adenopatías cervicales posteriores (LR+ 3.1) y esplenomegalia (LR+ 6.6) eleva sustancialmente la probabilidad de mononucleosis infecciosa por encima del 70%.",
+        "correcta": true,
+        "feedback": "¡Correcto! En jóvenes con odinofagia, las adenopatías posteriores y la esplenomegalia son los signos físicos de mayor especificidad para mononucleosis infecciosa."
+      },
+      {
+        "texto": "Descarta mononucleosis porque no presenta exantema maculopapular.",
+        "correcta": false,
+        "feedback": "Incorrecto. El exantema solo aparece espontáneamente en un 5% de los pacientes (o >80% si reciben amoxicilina por error)."
+      },
+      {
+        "texto": "Confirma infección por estreptococo del grupo A sin necesidad de más estudios.",
+        "correcta": false,
+        "feedback": "Incorrecto. El estreptococo cursa típicamente con adenopatías submandibulares y cervicales anteriores, no posteriores ni esplenomegalia."
+      }
+    ]
+  },
+  {
+    "id": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos-q2",
+    "post_slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
+    "post_title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "condicion_id": "HM:6003",
+    "condicion_nombre": "Mononucleosis infecciosa",
+    "pmid": "27115266",
+    "doi": "10.1001/jama.2016.4501",
+    "referencia_cita": "Ebell MH, Call M, Shinholser J, Gardner J. Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review. JAMA. 2016;315(14):1502-9.",
+    "triada": {
+      "significante": "Palpación de ganglios linfáticos aumentados de tamaño y moderadamente sensibles a lo largo del borde anterior del músculo trapecio (cadena cervical posterior) o axilares/inguinales, asociada a faringitis exudativa y esplenomegalia palpable.",
+      "significado": "Proliferación policlonal masiva de linfocitos T citotóxicos CD8+ en respuesta a la infección primaria de linfocitos B por el Virus de Epstein-Barr (VEB).",
+      "decision": "La adenopatía cervical posterior orienta fuertemente (LR+ 3.1) frente a la faringitis estreptocócica común; la presencia de linfocitos atípicos ≥20% en el frotis periférico ofrece una confirmación casi definitiva (LR+ 54.0)."
+    },
+    "pregunta": "¿Qué parámetro de laboratorio básico en sangre periférica ofrece el mayor Likelihood Ratio positivo (LR+ > 50) para confirmar mononucleosis infecciosa en atención primaria?",
+    "opciones": [
+      {
+        "texto": "Linfocitosis con presencia de linfocitos atípicos o reactivos (células de Downey) ≥ 20% en el frotis sanguíneo.",
+        "correcta": true,
+        "feedback": "¡Exacto! Un recuento de linfocitos atípicos ≥ 20% tiene una especificidad cercana al 99% con un LR+ de 54.0, siendo prácticamente diagnóstico de infección aguda por VEB o CMV."
+      },
+      {
+        "texto": "Trombocitosis reactiva aislada con neutrofilia del 90%.",
+        "correcta": false,
+        "feedback": "Incorrecto. La mononucleosis cursa con predominio linfocitario, no neutrofílico."
+      }
+    ]
+  },
+  {
+    "id": "meningitis-aguda-sacudida-cefalica-q1",
+    "post_slug": "meningitis-aguda-sacudida-cefalica",
+    "post_title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",
+    "category": "neurologia",
+    "category_label": "Neurología",
+    "condicion_id": "HM:6004",
+    "condicion_nombre": "Meningitis aguda",
+    "pmid": "10411200",
+    "doi": "10.1001/jama.282.2.175",
+    "referencia_cita": "Attia J, Hatala R, Cook DJ, Wong JG. The rational clinical examination. Does this adult patient have acute meningitis? JAMA. 1999;282(2):175-81.",
+    "triada": {
+      "significante": "Empeoramiento agudo de la cefalea al rotar la cabeza rápidamente en plano horizontal (2-3 giros por segundo).",
+      "significado": "Irritación meníngea con tracción y estrés mecánico sobre las estructuras vasculares y meníngeas inflamadas.",
+      "decision": "Maniobra adjunta de alta sensibilidad: su ausencia (LR- 0.0 en serie de derivación) reduce sustancialmente la sospecha en fiebre + cefalea, pero su positividad (LR+ 2.2) solo ofrece modesta confirmación y requiere estudio de LCR si persisten banderas rojas."
+    },
+    "pregunta": "En un paciente adulto con fiebre y cefalea aguda, la maniobra de sacudida cefálica ('jolt accentuation') resulta NEGATIVA. ¿Cuál es el significado bayesiano de este hallazgo según la evidencia verificada (PMID: 10411200)?",
+    "opciones": [
+      {
+        "texto": "Aumenta la probabilidad de meningitis con un LR+ de 2.2.",
+        "correcta": false,
+        "feedback": "Incorrecto. Un resultado negativo se evalúa con el Likelihood Ratio Negativo (LR-), no con el positivo."
+      },
+      {
+        "texto": "Presenta una sensibilidad del 100% (LR- 0.0 en la serie analizada), lo que reduce marcadamente la probabilidad post-test de meningitis bacteriana en este subgrupo.",
+        "correcta": true,
+        "feedback": "¡Correcto! En la serie de Attia et al. (JAMA 1999), la sensibilidad fue del 100% (LR- 0.0), convirtiéndola en una excelente prueba de exclusión en pacientes con fiebre y cefalea."
+      },
+      {
+        "texto": "Confirma definitivamente meningitis tuberculosa.",
+        "correcta": false,
+        "feedback": "Incorrecto. No permite confirmar etiologías específicas y un resultado negativo no confirma patología."
+      },
+      {
+        "texto": "Indica que se debe realizar punción lumbar de inmediato sin más anamnesis.",
+        "correcta": false,
+        "feedback": "Incorrecto. La ausencia del signo aleja la sospecha meníngea primaria si no coexisten otros signos de focalidad o rigidez nucal marcada."
+      }
+    ]
+  },
+  {
+    "id": "meningitis-aguda-sacudida-cefalica-q2",
+    "post_slug": "meningitis-aguda-sacudida-cefalica",
+    "post_title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",
+    "category": "neurologia",
+    "category_label": "Neurología",
+    "condicion_id": "HM:6004",
+    "condicion_nombre": "Meningitis aguda",
+    "pmid": "10411200",
+    "doi": "10.1001/jama.282.2.175",
+    "referencia_cita": "Attia J, Hatala R, Cook DJ, Wong JG. The rational clinical examination. Does this adult patient have acute meningitis? JAMA. 1999;282(2):175-81.",
+    "triada": {
+      "significante": "Empeoramiento agudo de la cefalea al rotar la cabeza rápidamente en plano horizontal (2-3 giros por segundo).",
+      "significado": "Irritación meníngea con tracción y estrés mecánico sobre las estructuras vasculares y meníngeas inflamadas.",
+      "decision": "Maniobra adjunta de alta sensibilidad: su ausencia (LR- 0.0 en serie de derivación) reduce sustancialmente la sospecha en fiebre + cefalea, pero su positividad (LR+ 2.2) solo ofrece modesta confirmación y requiere estudio de LCR si persisten banderas rojas."
+    },
+    "pregunta": "¿Por qué un Likelihood Ratio positivo (LR+) de 2.2 se considera solo de impacto diagnóstico 'moderado a bajo' para confirmar meningitis aguda?",
+    "opciones": [
+      {
+        "texto": "Porque un LR+ de 2.2 solo genera un incremento discreto en la probabilidad post-test (~15%), insuficiente por sí solo para confirmar sin análisis citoquímico de LCR.",
+        "correcta": true,
+        "feedback": "¡Exacto! Según la regla bayesiana, un LR+ entre 2 y 5 produce cambios pequeños a moderados. En una enfermedad de alta gravedad como la meningitis, un LR+ de 2.2 exige pruebas confirmatorias (punción lumbar)."
+      },
+      {
+        "texto": "Porque la especificidad del signo es del 100%.",
+        "correcta": false,
+        "feedback": "Incorrecto. La especificidad reportada es del 54% (0.54), lo que explica que existan falsos positivos en cefaleas febriles no meníngeas."
+      },
+      {
+        "texto": "Porque el LR positivo solo aplica en pacientes pediátricos menores de 2 años.",
+        "correcta": false,
+        "feedback": "Incorrecto. La serie de Attia et al. evaluó exclusivamente cohortes de pacientes adultos."
+      }
+    ]
+  },
+  {
+    "id": "derrame-pleural-exudado-criterios-light-colesterol-q1",
+    "post_slug": "derrame-pleural-exudado-criterios-light-colesterol",
+    "post_title": "Derrame pleural: Criterios de Light vs. Colesterol pleural en la discriminación de exudados",
+    "category": "neumologia",
+    "category_label": "Neumología y Medicina Interna",
+    "condicion_id": "HM:6005",
+    "condicion_nombre": "Derrame pleural exudativo",
+    "pmid": "24938565",
+    "doi": "10.1001/jama.2014.5552",
+    "referencia_cita": "Wilcox ME, Chong CA, Stanbrook MB, Tricco AC, Wong C, Faughnan ME. Does this patient have an exudative pleural effusion? The Rational Clinical Examination Systematic Review. JAMA. 2014;311(23):2422-31.",
+    "triada": {
+      "significante": "Líquido pleural obtenido por toracocentesis con colesterol pleural > 55 mg/dL, o relación LDH pleural/sérica > 0.6, o proteínas pleurales/séricas > 0.5.",
+      "significado": "Aumento patológico de la permeabilidad capilar pleural o disrupción linfática local por inflamación, neoplasia o infección.",
+      "decision": "Los Criterios de Light tradicionales ofrecen alta sensibilidad (98%) pero clasifican erróneamente hasta un 25% de trasudados tratados con diuréticos como exudados; la medición del colesterol pleural (>55 mg/dL) y el gradiente albúmina sérica-pleural (>1.2 g/dL) resuelven la discrepancia."
+    },
+    "pregunta": "Un paciente con insuficiencia cardíaca descompensada y tratamiento intensivo con furosemida presenta derrame pleural derecho. La toracocentesis muestra relación proteínas pleural/suero de 0.53 (criterio de Light positivo para exudado), pero el gradiente de albúmina suero-líquido pleural es de 1.4 g/dL (> 1.2 g/dL). ¿Cuál es la interpretación diagnóstica según JAMA (PMID: 24938565)?",
+    "opciones": [
+      {
+        "texto": "Es un pseudoirritativo / falso exudado inducido por la concentración diurética; el gradiente de albúmina >1.2 g/dL confirma que la etiología de base es un trasudado por insuficiencia cardíaca.",
+        "correcta": true,
+        "feedback": "¡Correcto! El uso de diuréticos concentra las proteínas del líquido pleural produciendo falsos exudados por Light. Un gradiente albúmina sérica - albúmina pleural > 1.2 g/dL reclasifica correctamente el derrame como trasudado cardíaco."
+      },
+      {
+        "texto": "Confirma empiema bacteriano y exige colocar tubo de drenaje pleural de inmediato.",
+        "correcta": false,
+        "feedback": "Incorrecto. No hay clínica infecciosa y el gradiente de albúmina demuestra que es origen hemodinámico."
+      },
+      {
+        "texto": "Descarta cualquier patología cardíaca.",
+        "correcta": false,
+        "feedback": "Incorrecto. Es un fenómeno clásico en pacientes con IC tratados con diuréticos."
+      }
+    ]
+  },
+  {
+    "id": "derrame-pleural-exudado-criterios-light-colesterol-q2",
+    "post_slug": "derrame-pleural-exudado-criterios-light-colesterol",
+    "post_title": "Derrame pleural: Criterios de Light vs. Colesterol pleural en la discriminación de exudados",
+    "category": "neumologia",
+    "category_label": "Neumología y Medicina Interna",
+    "condicion_id": "HM:6005",
+    "condicion_nombre": "Derrame pleural exudativo",
+    "pmid": "24938565",
+    "doi": "10.1001/jama.2014.5552",
+    "referencia_cita": "Wilcox ME, Chong CA, Stanbrook MB, Tricco AC, Wong C, Faughnan ME. Does this patient have an exudative pleural effusion? The Rational Clinical Examination Systematic Review. JAMA. 2014;311(23):2422-31.",
+    "triada": {
+      "significante": "Líquido pleural obtenido por toracocentesis con colesterol pleural > 55 mg/dL, o relación LDH pleural/sérica > 0.6, o proteínas pleurales/séricas > 0.5.",
+      "significado": "Aumento patológico de la permeabilidad capilar pleural o disrupción linfática local por inflamación, neoplasia o infección.",
+      "decision": "Los Criterios de Light tradicionales ofrecen alta sensibilidad (98%) pero clasifican erróneamente hasta un 25% de trasudados tratados con diuréticos como exudados; la medición del colesterol pleural (>55 mg/dL) y el gradiente albúmina sérica-pleural (>1.2 g/dL) resuelven la discrepancia."
+    },
+    "pregunta": "¿Qué ventaja diagnóstica ofrece el colesterol pleural > 55 mg/dL frente a los criterios de Light convencionales?",
+    "opciones": [
+      {
+        "texto": "Mayor especificidad para exudado con un LR+ superior a 10-15 en la mayoría de las series analizadas, sin requerir extracción sanguínea simultánea.",
+        "correcta": true,
+        "feedback": "¡Exacto! El colesterol en líquido pleural > 55 mg/dL es altamente específico para patología pleural activa exudativa y no se altera tan fácilmente por la volemia."
+      },
+      {
+        "texto": "Permite diagnosticar precozmente hipercolesterolemia familiar tipo II.",
+        "correcta": false,
+        "feedback": "Incorrecto. Los lípidos pleurales reflejan permeabilidad de la membrana y degradación celular local, no dislipidemias hereditarias."
+      }
+    ]
+  },
+  {
+    "id": "aneurisma-aorta-abdominal-palpacion-semiotica-q1",
+    "post_slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
+    "post_title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
+    "category": "vascular",
+    "category_label": "Medicina Vascular y Cirugía",
+    "condicion_id": "HM:6006",
+    "condicion_nombre": "Aneurisma de aorta abdominal",
+    "pmid": "9892455",
+    "doi": "10.1001/jama.281.1.77",
+    "referencia_cita": "Lederle FA, Simel DL. The rational clinical examination. Does this patient have an abdominal aortic aneurysm? JAMA. 1999;281(1):77-82.",
+    "triada": {
+      "significante": "Palpación bimanual profunda en epigastrio/mesogastrio que delimita un latido aórtico expansivo con anchura transversal estimada ≥ 3.0 cm.",
+      "significado": "Dilatación focal permanente de la aorta infrarrenal que transmite pulso hidrostático radial a la pared abdominal anterior.",
+      "decision": "La palpación positiva tiene alto valor confirmatorio (LR+ 12.0 para aneurisma ≥3 cm y LR+ 15.6 para ≥4 cm), pero la palpación normal (LR- 0.72) NO descarta aneurisma, especialmente en presencia de obesidad abdominal."
+    },
+    "pregunta": "En un paciente varón de 68 años, exfumador, la palpación del abdomen no revela masa pulsátil ni ensanchamiento aórtico. Teniendo en cuenta un LR- de 0.72 reportado en el metaanálisis de JAMA (PMID: 9892455), ¿cuál es la conducta clínica apropiada?",
+    "opciones": [
+      {
+        "texto": "La palpación normal descarta de forma definitiva el aneurisma y no requiere ningún estudio de imagen.",
+        "correcta": false,
+        "feedback": "Incorrecto. Un LR- de 0.72 es pobre para descartar patología (sensibilidad apenas ~68% en aneurismas pequeños); en pacientes con factores de riesgo de cribado, se debe solicitar ecografía abdominal."
+      },
+      {
+        "texto": "La palpación negativa no excluye la presencia de aneurisma; se debe realizar ecografía abdominal de cribado si cumple criterios de riesgo (edad, sexo masculino, tabaquismo).",
+        "correcta": true,
+        "feedback": "¡Correcto! Lederle y Simel demostraron que la palpación tiene baja sensibilidad para aneurismas pequeños o en pacientes con hábito corporal ancho; la ecografía es la prueba de elección."
+      },
+      {
+        "texto": "Se debe solicitar de urgencia una angiografía por cateterismo.",
+        "correcta": false,
+        "feedback": "Incorrecto. La ecografía abdominal es la prueba no invasiva de primera línea para cribado y diagnóstico inicial."
+      }
+    ]
+  },
+  {
+    "id": "aneurisma-aorta-abdominal-palpacion-semiotica-q2",
+    "post_slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
+    "post_title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
+    "category": "vascular",
+    "category_label": "Medicina Vascular y Cirugía",
+    "condicion_id": "HM:6006",
+    "condicion_nombre": "Aneurisma de aorta abdominal",
+    "pmid": "9892455",
+    "doi": "10.1001/jama.281.1.77",
+    "referencia_cita": "Lederle FA, Simel DL. The rational clinical examination. Does this patient have an abdominal aortic aneurysm? JAMA. 1999;281(1):77-82.",
+    "triada": {
+      "significante": "Palpación bimanual profunda en epigastrio/mesogastrio que delimita un latido aórtico expansivo con anchura transversal estimada ≥ 3.0 cm.",
+      "significado": "Dilatación focal permanente de la aorta infrarrenal que transmite pulso hidrostático radial a la pared abdominal anterior.",
+      "decision": "La palpación positiva tiene alto valor confirmatorio (LR+ 12.0 para aneurisma ≥3 cm y LR+ 15.6 para ≥4 cm), pero la palpación normal (LR- 0.72) NO descarta aneurisma, especialmente en presencia de obesidad abdominal."
+    },
+    "pregunta": "¿Por qué el Likelihood Ratio positivo (LR+) de la palpación aumenta de 12.0 a 15.6 cuando el diámetro aórtico supera los 4.0 cm?",
+    "opciones": [
+      {
+        "texto": "Porque a mayor tamaño del aneurisma, la masa pulsátil es más prominente y la especificidad de la palpación bimanual se aproxima al 98%.",
+        "correcta": true,
+        "feedback": "¡Exacto! El tamaño del vaso amplifica la transmisión de la onda de pulso y facilita la delimitación de bordes laterales, reduciendo drásticamente los falsos positivos."
+      },
+      {
+        "texto": "Porque el paciente experimenta dolor intenso espontáneo a la palpación superficial.",
+        "correcta": false,
+        "feedback": "Incorrecto. La mayoría de los aneurismas de aorta abdominal no complicados son indoloros a la exploración física rutinaria."
+      }
+    ]
+  },
+  {
+    "id": "sindrome-coronario-agudo-dolor-toracico-ecg-q1",
+    "post_slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
+    "post_title": "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electrocardiograma inicial?",
+    "category": "cardiologia",
+    "category_label": "Cardiología",
+    "condicion_id": "HM:6007",
+    "condicion_nombre": "Síndrome coronario agudo",
+    "pmid": "26547467",
+    "doi": "10.1001/jama.2015.12735",
+    "referencia_cita": "Fanaroff AC, Rymer JA, Goldstein SA, Simel DL, Newby LK. Does this patient with chest pain have the acute coronary syndrome? The Rational Clinical Examination Systematic Review. JAMA. 2015;314(18):1955-65.",
+    "triada": {
+      "significante": "Descenso horizontal o descendente del segmento ST ≥ 0.5 mm en dos derivaciones contiguas en el ECG de 12 derivaciones.",
+      "significado": "Isquemia miocárdica subendocárdica aguda con vector de lesión orientado hacia el endocardio ventricular.",
+      "decision": "Es el hallazgo electrocardiográfico aislado más útil (LR+ 5.3), pero insuficiente por sí solo para confirmar o descartar SCA sin escala de riesgo y cinética de troponinas."
+    },
+    "pregunta": "En un paciente de 58 años con dolor torácico opresivo de 1 hora de evolución, el ECG inicial NO muestra elevación ni descenso del ST ni cambios en la onda T. Según la revisión sistemática de JAMA (PMID: 26547467), ¿cuál es la conducta diagnóstica correcta?",
+    "opciones": [
+      {
+        "texto": "Un ECG normal tiene un LR- cercano a 0 y descarta con certeza el síndrome coronario agudo.",
+        "correcta": false,
+        "feedback": "Incorrecto. La sensibilidad del ECG inicial para SCA es limitada (LR- alrededor de 0.7-0.8); un ECG normal no descarta isquemia ni infarto sin elevación del ST."
+      },
+      {
+        "texto": "El ECG inicial por sí solo no descarta SCA; se debe mantener en observación seriada y estratificar con cinética de troponina y escalas clínicas (HEART/GRACE).",
+        "correcta": true,
+        "feedback": "¡Correcto! Fanaroff et al. demuestran que ningún hallazgo aislado de anamnesis o ECG descarta SCA de forma concluyente; la estratificación seriada con troponinas es mandatoria."
+      },
+      {
+        "texto": "Se puede dar de alta inmediata al paciente si el dolor cede con antiácidos.",
+        "correcta": false,
+        "feedback": "Incorrecto. La respuesta al tratamiento empírico no discrimina de forma fiable el origen coronario del dolor."
+      }
+    ]
+  },
+  {
+    "id": "sindrome-coronario-agudo-dolor-toracico-ecg-q2",
+    "post_slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
+    "post_title": "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electrocardiograma inicial?",
+    "category": "cardiologia",
+    "category_label": "Cardiología",
+    "condicion_id": "HM:6007",
+    "condicion_nombre": "Síndrome coronario agudo",
+    "pmid": "26547467",
+    "doi": "10.1001/jama.2015.12735",
+    "referencia_cita": "Fanaroff AC, Rymer JA, Goldstein SA, Simel DL, Newby LK. Does this patient with chest pain have the acute coronary syndrome? The Rational Clinical Examination Systematic Review. JAMA. 2015;314(18):1955-65.",
+    "triada": {
+      "significante": "Descenso horizontal o descendente del segmento ST ≥ 0.5 mm en dos derivaciones contiguas en el ECG de 12 derivaciones.",
+      "significado": "Isquemia miocárdica subendocárdica aguda con vector de lesión orientado hacia el endocardio ventricular.",
+      "decision": "Es el hallazgo electrocardiográfico aislado más útil (LR+ 5.3), pero insuficiente por sí solo para confirmar o descartar SCA sin escala de riesgo y cinética de troponinas."
+    },
+    "pregunta": "Si la prevalencia basal de SCA en pacientes que acuden a urgencias con dolor torácico es aproximadamente del 10% (0.10), ¿a cuánto asciende la probabilidad post-test si se detecta un descenso del segmento ST (LR+ 5.3)?",
+    "opciones": [
+      {
+        "texto": "Pasa del 10% a aproximadamente un 37% de probabilidad post-test.",
+        "correcta": true,
+        "feedback": "¡Exacto! Pre-test odds = 0.10 / 0.90 = 0.111. Post-test odds = 0.111 * 5.3 = 0.589. Probabilidad post-test = 0.589 / (1 + 0.589) = 37.1%."
+      },
+      {
+        "texto": "Pasa inmediatamente al 99%, confirmando infarto transmural.",
+        "correcta": false,
+        "feedback": "Incorrecto. Un LR+ de 5.3 produce un incremento moderado, no absoluto."
+      },
+      {
+        "texto": "Permanece idéntica en el 10%.",
+        "correcta": false,
+        "feedback": "Incorrecto. Todo LR > 1 desplaza positivamente la probabilidad diagnóstica."
+      }
+    ]
+  },
+  {
+    "id": "hipovolemia-aguda-signos-vitales-posturales-q1",
+    "post_slug": "hipovolemia-aguda-signos-vitales-posturales",
+    "post_title": "Evaluación clínica de la hipovolemia: ¿Cuándo sirven los signos posturales?",
+    "category": "urgencias",
+    "category_label": "Medicina de Urgencias y Críticos",
+    "condicion_id": "HM:6008",
+    "condicion_nombre": "Hipovolemia aguda",
+    "pmid": "10086438",
+    "doi": "10.1001/jama.281.11.1022",
+    "referencia_cita": "McGee S, Abernethy WB 3rd, Simel DL. The rational clinical examination. Is this patient hypovolemic? JAMA. 1999;281(11):1022-9.",
+    "triada": {
+      "significante": "Incapacidad del paciente para permanecer de pie o mareo postural intenso e invalidante asociado a taquicardia ortostática (aumento ≥ 30 lpm) o caída de presión sistólica ≥ 20 mmHg tras 2 minutos en bipedestación.",
+      "significado": "Reducción crítica del volumen intravascular circulante con compromiso del retorno venoso y fallo de los mecanismos barorreceptores compensatorios.",
+      "decision": "En hemorragia aguda moderada-grave, el mareo postural intenso es el signo de mayor especificidad (98%) y sensibilidad (97%); en pérdidas digestivas subagudas, la sequedad mucosa de lengua y axilas aporta la mayor discriminación."
+    },
+    "pregunta": "En un paciente joven que acude a urgencias tras un episodio de sangrado digestivo alto, la tensión arterial supina es normal (120/80 mmHg). Al ponerse de pie, experimenta mareo postural intenso y la frecuencia cardíaca sube de 75 a 112 lpm (incremento ≥ 30 lpm). Según McGee et al. en JAMA (PMID: 10086438), ¿cuál es el significado clínico de este hallazgo?",
+    "opciones": [
+      {
+        "texto": "Presenta una pérdida hemática significativa (frecuentemente >600–1000 mL) con una especificidad del 98% a pesar de la presión supina normal.",
+        "correcta": true,
+        "feedback": "¡Correcto! McGee et al. demostraron que el incremento de pulso ≥30 lpm o el mareo postural severo tienen una especificidad del 98% para pérdida sanguínea aguda significativa, superando con creces a la presión supina."
+      },
+      {
+        "texto": "Descarta hipovolemia porque la presión arterial sistólica supina se mantiene en rangos normales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Los mecanismos compensatorios mantienen la presión en decúbito normal hasta fases avanzadas de choque."
+      },
+      {
+        "texto": "Indica un síncope vasovagal psicógeno que no requiere monitorización hemodinámica.",
+        "correcta": false,
+        "feedback": "Incorrecto. En contexto de sangrado evidente, el ortostatismo franco es un signo de alarma hemodinámica."
+      }
+    ]
+  },
+  {
+    "id": "hipovolemia-aguda-signos-vitales-posturales-q2",
+    "post_slug": "hipovolemia-aguda-signos-vitales-posturales",
+    "post_title": "Evaluación clínica de la hipovolemia: ¿Cuándo sirven los signos posturales?",
+    "category": "urgencias",
+    "category_label": "Medicina de Urgencias y Críticos",
+    "condicion_id": "HM:6008",
+    "condicion_nombre": "Hipovolemia aguda",
+    "pmid": "10086438",
+    "doi": "10.1001/jama.281.11.1022",
+    "referencia_cita": "McGee S, Abernethy WB 3rd, Simel DL. The rational clinical examination. Is this patient hypovolemic? JAMA. 1999;281(11):1022-9.",
+    "triada": {
+      "significante": "Incapacidad del paciente para permanecer de pie o mareo postural intenso e invalidante asociado a taquicardia ortostática (aumento ≥ 30 lpm) o caída de presión sistólica ≥ 20 mmHg tras 2 minutos en bipedestación.",
+      "significado": "Reducción crítica del volumen intravascular circulante con compromiso del retorno venoso y fallo de los mecanismos barorreceptores compensatorios.",
+      "decision": "En hemorragia aguda moderada-grave, el mareo postural intenso es el signo de mayor especificidad (98%) y sensibilidad (97%); en pérdidas digestivas subagudas, la sequedad mucosa de lengua y axilas aporta la mayor discriminación."
+    },
+    "pregunta": "En pacientes ancianos con deshidratación por diarrea o vómitos (pérdidas digestivas), ¿cuál de los siguientes signos físicos tiene la MENOR utilidad diagnóstica debido a su alta tasa de falsos positivos en esta población?",
+    "opciones": [
+      {
+        "texto": "Disminución de la turgencia cutánea (signo del pliegue) en dorso de la mano o antebrazo.",
+        "correcta": true,
+        "feedback": "¡Exacto! En adultos mayores, la pérdida fisiológica de elastina y tejido celular subcutáneo produce pliegue cutáneo positivo en ausencia de hipovolemia. La sequedad de mucosas y axilas es más fiable."
+      },
+      {
+        "texto": "Sequedad de la mucosa yugal y surcos longitudinales de la lengua.",
+        "correcta": false,
+        "feedback": "Incorrecto. La sequedad de la lengua y mucosas tiene mejor rendimiento en el anciano que la turgencia cutánea periférica."
+      }
+    ]
+  },
+  {
+    "id": "faringitis-estreptococica-exudado-criterios-centor-q1",
+    "post_slug": "faringitis-estreptococica-exudado-criterios-centor",
+    "post_title": "Faringoamigdalitis aguda: Rendimiento semiótico del exudado y los criterios de Centor",
+    "category": "infectologia",
+    "category_label": "Infectología y Atención Primaria",
+    "condicion_id": "HM:6009",
+    "condicion_nombre": "Faringitis estreptocócica",
+    "pmid": "11147989",
+    "doi": "10.1001/jama.284.22.2912",
+    "referencia_cita": "Ebell MH, Smith MA, Barry HC, Ives K, Carey M. Does this patient have strep throat? The Rational Clinical Examination. JAMA. 2000;284(22):2912-8.",
+    "triada": {
+      "significante": "Placas blanquecinas o confluentes de material pultáceo sobre la superficie de las amígdalas palatinas o la pared faríngea posterior.",
+      "significado": "Respuesta inflamatoria neutrofílica intensa con necrosis superficial y formación de detritos fibrinoleucocitarios.",
+      "decision": "Es el hallazgo físico aislado de mayor rendimiento (LR+ 3.4), pero sigue siendo insuficiente por sí solo: requiere puntuación clínica formal (Centor/McIsaac) o test rápido de antígeno antes de iniciar antibióticos."
+    },
+    "pregunta": "Un paciente de 22 años acude por dolor de garganta y fiebre de 38.5 °C. En la exploración se observa exudado amigdalino blanquecino bilateral, pero no tiene adenopatías ni tos. Con un LR+ de 3.4 para el exudado, ¿cuál es el manejo diagnóstico más adecuado según JAMA (PMID: 11147989)?",
+    "opciones": [
+      {
+        "texto": "Prescribir amoxicilina de inmediato porque el exudado amigdalino confirma 100% etiología bacteriana.",
+        "correcta": false,
+        "feedback": "Incorrecto. Virus respiratorios (como adenovirus, VEB o enterovirus) también producen exudado amigdalino florido; un LR+ de 3.4 no es confirmatorio por sí solo."
+      },
+      {
+        "texto": "Calcular la puntuación de Centor/McIsaac y realizar test rápido de antígeno estreptocócico (o cultivo) para confirmar antes de prescribir antibiótico.",
+        "correcta": true,
+        "feedback": "¡Correcto! Ebell et al. demuestran que ningún signo individual basta para prescribir antibióticos empíricos; la integración en escalas clínicas o test antigénico rápido evita el sobreuso de antibióticos."
+      },
+      {
+        "texto": "Descartar cualquier etiología estreptocócica y enviar a casa sin más estudios.",
+        "correcta": false,
+        "feedback": "Incorrecto. El paciente tiene criterios de sospecha moderada-alta que ameritan confirmación microbiológica rápida."
+      }
+    ]
+  },
+  {
+    "id": "faringitis-estreptococica-exudado-criterios-centor-q2",
+    "post_slug": "faringitis-estreptococica-exudado-criterios-centor",
+    "post_title": "Faringoamigdalitis aguda: Rendimiento semiótico del exudado y los criterios de Centor",
+    "category": "infectologia",
+    "category_label": "Infectología y Atención Primaria",
+    "condicion_id": "HM:6009",
+    "condicion_nombre": "Faringitis estreptocócica",
+    "pmid": "11147989",
+    "doi": "10.1001/jama.284.22.2912",
+    "referencia_cita": "Ebell MH, Smith MA, Barry HC, Ives K, Carey M. Does this patient have strep throat? The Rational Clinical Examination. JAMA. 2000;284(22):2912-8.",
+    "triada": {
+      "significante": "Placas blanquecinas o confluentes de material pultáceo sobre la superficie de las amígdalas palatinas o la pared faríngea posterior.",
+      "significado": "Respuesta inflamatoria neutrofílica intensa con necrosis superficial y formación de detritos fibrinoleucocitarios.",
+      "decision": "Es el hallazgo físico aislado de mayor rendimiento (LR+ 3.4), pero sigue siendo insuficiente por sí solo: requiere puntuación clínica formal (Centor/McIsaac) o test rápido de antígeno antes de iniciar antibióticos."
+    },
+    "pregunta": "¿Cuál de los siguientes síntomas tiene el Likelihood Ratio NEGATIVO (LR-) más favorable para alejar la sospecha de faringitis por estreptococo del grupo A?",
+    "opciones": [
+      {
+        "texto": "Presencia franca de tos y rinorrea (LR- ≈ 0.60 a favor de etiología viral).",
+        "correcta": true,
+        "feedback": "¡Exacto! La presencia de tos, coriza o conjuntivitis orienta fuertemente hacia infección viral de vías respiratorias superiores y reduce la probabilidad de estreptococo."
+      },
+      {
+        "texto": "Presencia de cefalea intensa.",
+        "correcta": false,
+        "feedback": "Incorrecto. La cefalea es inespecífica y frecuente en infecciones tanto virales como bacterianas."
+      }
+    ]
+  },
+  {
+    "id": "sincope-cardiaco-vs-vasovagal-anamnesis-q1",
+    "post_slug": "sincope-cardiaco-vs-vasovagal-anamnesis",
+    "post_title": "Síncope en urgencias: Cómo diferenciar el origen arrítmico del síncope vasovagal",
+    "category": "cardiologia",
+    "category_label": "Cardiología y Urgencias",
+    "condicion_id": "HM:6010",
+    "condicion_nombre": "Síncope cardíaco",
+    "pmid": "31237649",
+    "doi": "10.1001/jama.2019.8001",
+    "referencia_cita": "Albassam OT, Redelmeier RJ, Shadowitz S, Husain AM, Simel D, Etchells EE. Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review. JAMA. 2019;321(24):2448-57.",
+    "triada": {
+      "significante": "Pérdida transitoria de la conciencia de instauración súbita sin pródromos autonómicos, o precedida inmediatamente por palpitaciones rápidas, con presencia de cardiopatía estructural o FA conocida.",
+      "significado": "Caída crítica y brusca del gasto cardíaco y del flujo sanguíneo cerebral secundario a taquiarritmia, bradiarritmia o cardiopatía estructural.",
+      "decision": "La presencia de palpitaciones previas (LR+ 2.7) o antecedente de FA (LR+ 7.3) aumenta marcadamente la probabilidad cardíaca y exige monitorización; en contraste, pródromos autonómicos de calor/frío/diaforesis disminuyen drásticamente el riesgo cardíaco (LR+ 0.16) apuntando a síncope reflejo."
+    },
+    "pregunta": "Un paciente de 72 años sufre una caída al suelo con pérdida de conciencia mientras estaba sentado viendo televisión. No hubo mareo previo, náuseas ni sudoración. Tiene antecedentes de fibrilación auricular. Según la revisión sistemática de JAMA (PMID: 31237649), ¿qué valor tiene el antecedente de FA?",
+    "opciones": [
+      {
+        "texto": "Presenta una especificidad del 98% con un LR+ de 7.3, elevando sustancialmente la sospecha de síncope arrítmico o de origen cardíaco.",
+        "correcta": true,
+        "feedback": "¡Correcto! Albassam et al. demuestran que el antecedente de cardiopatía o arritmia auricular previa es el factor anamnésico que más desplaza hacia etiología cardíaca (LR+ 7.3)."
+      },
+      {
+        "texto": "Indica un síncope vasovagal benigno sin necesidad de telemetría.",
+        "correcta": false,
+        "feedback": "Incorrecto. La ausencia de pródromos autonómicos y el antecedente de arritmia obligan a descartar síncope cardíaco de alto riesgo."
+      },
+      {
+        "texto": "Descarta cualquier causa arrítmica.",
+        "correcta": false,
+        "feedback": "Incorrecto. Todo lo contrario, es el principal predictor positivo."
+      }
+    ]
+  },
+  {
+    "id": "sincope-cardiaco-vs-vasovagal-anamnesis-q2",
+    "post_slug": "sincope-cardiaco-vs-vasovagal-anamnesis",
+    "post_title": "Síncope en urgencias: Cómo diferenciar el origen arrítmico del síncope vasovagal",
+    "category": "cardiologia",
+    "category_label": "Cardiología y Urgencias",
+    "condicion_id": "HM:6010",
+    "condicion_nombre": "Síncope cardíaco",
+    "pmid": "31237649",
+    "doi": "10.1001/jama.2019.8001",
+    "referencia_cita": "Albassam OT, Redelmeier RJ, Shadowitz S, Husain AM, Simel D, Etchells EE. Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review. JAMA. 2019;321(24):2448-57.",
+    "triada": {
+      "significante": "Pérdida transitoria de la conciencia de instauración súbita sin pródromos autonómicos, o precedida inmediatamente por palpitaciones rápidas, con presencia de cardiopatía estructural o FA conocida.",
+      "significado": "Caída crítica y brusca del gasto cardíaco y del flujo sanguíneo cerebral secundario a taquiarritmia, bradiarritmia o cardiopatía estructural.",
+      "decision": "La presencia de palpitaciones previas (LR+ 2.7) o antecedente de FA (LR+ 7.3) aumenta marcadamente la probabilidad cardíaca y exige monitorización; en contraste, pródromos autonómicos de calor/frío/diaforesis disminuyen drásticamente el riesgo cardíaco (LR+ 0.16) apuntando a síncope reflejo."
+    },
+    "pregunta": "¿Por qué en la semiología del síncope un hallazgo como 'sensación prodrómica de calor, náuseas o sudoración fría' tiene un LR de 0.16 para síncope cardíaco?",
+    "opciones": [
+      {
+        "texto": "Porque su presencia argumenta fuertemente EN CONTRA del origen cardíaco, siendo un potente indicador de activación parasimpática y síncope reflejo (vasovagal).",
+        "correcta": true,
+        "feedback": "¡Exacto! Un LR < 1 significa que la presencia del síntoma aleja la enfermedad analizada (reduce la probabilidad de síncope cardíaco en ~85%)."
+      },
+      {
+        "texto": "Porque es un error estadístico del metaanálisis.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano, los síntomas protectores o típicos de patología benigna tienen LR < 1."
+      }
+    ]
+  },
+  {
+    "id": "infeccion-precoz-por-vih-precision-semiotica-q1",
+    "post_slug": "infeccion-precoz-por-vih-precision-semiotica",
+    "post_title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "condicion_id": "HM:6011",
+    "condicion_nombre": "Infección precoz por VIH",
+    "pmid": "25027143",
+    "doi": "10.1001/jama.2014.5954",
+    "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el síntoma que más aumenta la probabilidad"
+    },
+    "pregunta": "",
+    "opciones": []
+  },
+  {
+    "id": "infeccion-precoz-por-vih-precision-semiotica-q2",
+    "post_slug": "infeccion-precoz-por-vih-precision-semiotica",
+    "post_title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "condicion_id": "HM:6011",
+    "condicion_nombre": "Infección precoz por VIH",
+    "pmid": "25027143",
+    "doi": "10.1001/jama.2014.5954",
+    "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el síntoma que más aumenta la probabilidad"
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Infección precoz por VIH según la literatura verificada (PMID: 25027143)?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 5.4.",
+        "correcta": true,
+        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+      }
+    ]
+  },
+  {
+    "id": "infeccion-precoz-por-vih-precision-semiotica-q3",
+    "post_slug": "infeccion-precoz-por-vih-precision-semiotica",
+    "post_title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "condicion_id": "HM:6011",
+    "condicion_nombre": "Infección precoz por VIH",
+    "pmid": "25027143",
+    "doi": "10.1001/jama.2014.5954",
+    "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el síntoma que más aumenta la probabilidad"
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Infección precoz por VIH, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
+  },
+  {
+    "id": "artrosis-de-cadera-precision-semiotica-q1",
+    "post_slug": "artrosis-de-cadera-precision-semiotica",
+    "post_title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "reumatologia",
+    "category_label": "Reumatología y Traumatología",
+    "condicion_id": "HM:6012",
+    "condicion_nombre": "Artrosis de cadera",
+    "pmid": "31846019",
+    "doi": "10.1001/jama.2019.19413",
+    "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA et al.. Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Artrosis de cadera.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
+    },
+    "pregunta": "",
+    "opciones": []
+  },
+  {
+    "id": "artrosis-de-cadera-precision-semiotica-q2",
+    "post_slug": "artrosis-de-cadera-precision-semiotica",
+    "post_title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "reumatologia",
+    "category_label": "Reumatología y Traumatología",
+    "condicion_id": "HM:6012",
+    "condicion_nombre": "Artrosis de cadera",
+    "pmid": "31846019",
+    "doi": "10.1001/jama.2019.19413",
+    "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA et al.. Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Artrosis de cadera.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Artrosis de cadera según la literatura verificada (PMID: 31846019)?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 6.1.",
+        "correcta": true,
+        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. Presenta una especificidad documentada de 96%."
+      }
+    ]
+  },
+  {
+    "id": "artrosis-de-cadera-precision-semiotica-q3",
+    "post_slug": "artrosis-de-cadera-precision-semiotica",
+    "post_title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "reumatologia",
+    "category_label": "Reumatología y Traumatología",
+    "condicion_id": "HM:6012",
+    "condicion_nombre": "Artrosis de cadera",
+    "pmid": "31846019",
+    "doi": "10.1001/jama.2019.19413",
+    "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA et al.. Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Artrosis de cadera.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Artrosis de cadera, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
+  },
+  {
+    "id": "enfermedad-del-manguito-rotador-precision-semiotica-q1",
+    "post_slug": "enfermedad-del-manguito-rotador-precision-semiotica",
+    "post_title": "Enfermedad del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "condicion_id": "HM:6013",
+    "condicion_nombre": "Enfermedad del manguito rotador",
+    "pmid": "23982370",
+    "doi": "10.1001/jama.2013.276187",
+    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Enfermedad del manguito rotador.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
+    },
+    "pregunta": "",
+    "opciones": []
+  },
+  {
+    "id": "enfermedad-del-manguito-rotador-precision-semiotica-q2",
+    "post_slug": "enfermedad-del-manguito-rotador-precision-semiotica",
+    "post_title": "Enfermedad del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "condicion_id": "HM:6013",
+    "condicion_nombre": "Enfermedad del manguito rotador",
+    "pmid": "23982370",
+    "doi": "10.1001/jama.2013.276187",
+    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Enfermedad del manguito rotador.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Enfermedad del manguito rotador según la literatura verificada (PMID: 23982370)?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.7.",
+        "correcta": true,
+        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+      }
+    ]
+  },
+  {
+    "id": "enfermedad-del-manguito-rotador-precision-semiotica-q3",
+    "post_slug": "enfermedad-del-manguito-rotador-precision-semiotica",
+    "post_title": "Enfermedad del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "condicion_id": "HM:6013",
+    "condicion_nombre": "Enfermedad del manguito rotador",
+    "pmid": "23982370",
+    "doi": "10.1001/jama.2013.276187",
+    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Enfermedad del manguito rotador.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Enfermedad del manguito rotador, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
+  },
+  {
+    "id": "rotura-completa-del-manguito-rotador-precision-semiotica-q1",
+    "post_slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
+    "post_title": "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "condicion_id": "HM:6014",
+    "condicion_nombre": "Rotura completa del manguito rotador",
+    "pmid": "23982370",
+    "doi": "10.1001/jama.2013.276187",
+    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
+    },
+    "pregunta": "",
+    "opciones": []
+  },
+  {
+    "id": "rotura-completa-del-manguito-rotador-precision-semiotica-q2",
+    "post_slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
+    "post_title": "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "condicion_id": "HM:6014",
+    "condicion_nombre": "Rotura completa del manguito rotador",
+    "pmid": "23982370",
+    "doi": "10.1001/jama.2013.276187",
+    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Rotura completa del manguito rotador según la literatura verificada (PMID: 23982370)?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 7.2.",
+        "correcta": true,
+        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+      }
+    ]
+  },
+  {
+    "id": "rotura-completa-del-manguito-rotador-precision-semiotica-q3",
+    "post_slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
+    "post_title": "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "condicion_id": "HM:6014",
+    "condicion_nombre": "Rotura completa del manguito rotador",
+    "pmid": "23982370",
+    "doi": "10.1001/jama.2013.276187",
+    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador.",
+      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Rotura completa del manguito rotador, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "",
+        "correcta": false,
+        "feedback": ""
+      },
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
+  },
+  {
+    "id": "enfermedad-parkinson-criterios-clinicos-mds-q1",
+    "post_slug": "enfermedad-parkinson-criterios-clinicos-mds",
+    "post_title": "Diagnóstico clínico de la Enfermedad de Parkinson: El rigor de los Criterios MDS",
+    "category": "neurologia",
+    "category_label": "Neurología",
+    "condicion_id": "HM:6015",
+    "condicion_nombre": "Enfermedad de Parkinson",
+    "pmid": "26474316",
+    "doi": "10.1002/mds.26424",
+    "referencia_cita": "Postuma RB, Berg D, Stern M, Poewe W, Olanow CW, Peng W, et al. MDS clinical diagnostic criteria for Parkinson's disease. Mov Disord. 2015;30(12):1591-601.",
+    "triada": {
+      "significante": "Bradicinesia caracterizada por lentitud de movimiento combinada con decremento progresivo en velocidad y amplitud durante maniobras repetitivas (finger tapping), asociada a temblor de reposo de 4-6 Hz o rigidez en rueda dentada.",
+      "significado": "Degeneración progresiva de las neuronas dopaminérgicas de la sustancia negra pars compacta con disfunción de los circuitos corticoestriatales.",
+      "decision": "El diagnóstico requiere constatar el núcleo motor, ausencia de criterios de exclusión absoluta, y un balance favorable entre banderas rojas y criterios de apoyo (excelente respuesta a L-dopa o discinesias inducidas)."
+    },
+    "pregunta": "Según los criterios diagnósticos clínicos oficiales de la MDS 2015 (PMID: 26474316), ¿cuál es el signo semiológico OBLIGATORIO que debe estar presente de forma ineludible para definir parkinsonismo motor?",
+    "opciones": [
+      {
+        "texto": "Bradicinesia (lentitud motora con decremento progresivo en amplitud o velocidad durante movimientos repetitivos).",
+        "correcta": true,
+        "feedback": "¡Correcto! La MDS establece la bradicinesia como el rasgo nuclear indispensable, que debe coexistir con temblor de reposo O rigidez muscular."
+      },
+      {
+        "texto": "Temblor postural bilateral simétrico en miembros superiores.",
+        "correcta": false,
+        "feedback": "Incorrecto. El temblor postural aislado orienta más a Temblor Esencial y no constituye el núcleo obligatorio."
+      },
+      {
+        "texto": "Inestabilidad postural con caídas frecuentes durante el primer año.",
+        "correcta": false,
+        "feedback": "Incorrecto. Las caídas precoces en el primer año son una 'bandera roja' que sugiere Parálisis Supranuclear Progresiva (PSP), no Enfermedad de Parkinson típica."
+      }
+    ]
+  },
+  {
+    "id": "enfermedad-parkinson-criterios-clinicos-mds-q2",
+    "post_slug": "enfermedad-parkinson-criterios-clinicos-mds",
+    "post_title": "Diagnóstico clínico de la Enfermedad de Parkinson: El rigor de los Criterios MDS",
+    "category": "neurologia",
+    "category_label": "Neurología",
+    "condicion_id": "HM:6015",
+    "condicion_nombre": "Enfermedad de Parkinson",
+    "pmid": "26474316",
+    "doi": "10.1002/mds.26424",
+    "referencia_cita": "Postuma RB, Berg D, Stern M, Poewe W, Olanow CW, Peng W, et al. MDS clinical diagnostic criteria for Parkinson's disease. Mov Disord. 2015;30(12):1591-601.",
+    "triada": {
+      "significante": "Bradicinesia caracterizada por lentitud de movimiento combinada con decremento progresivo en velocidad y amplitud durante maniobras repetitivas (finger tapping), asociada a temblor de reposo de 4-6 Hz o rigidez en rueda dentada.",
+      "significado": "Degeneración progresiva de las neuronas dopaminérgicas de la sustancia negra pars compacta con disfunción de los circuitos corticoestriatales.",
+      "decision": "El diagnóstico requiere constatar el núcleo motor, ausencia de criterios de exclusión absoluta, y un balance favorable entre banderas rojas y criterios de apoyo (excelente respuesta a L-dopa o discinesias inducidas)."
+    },
+    "pregunta": "¿Cuál de los siguientes hallazgos se considera un CRITERIO DE EXCLUSIÓN ABSOLUTA para Enfermedad de Parkinson idiopática?",
+    "opciones": [
+      {
+        "texto": "Tratamiento activo con antagonistas dopaminérgicos (antipsicóticos o antieméticos tipo metoclopramida) que justifique parkinsonismo farmacológico inducido.",
+        "correcta": true,
+        "feedback": "¡Exacto! El bloqueo dopaminérgico farmacológico es una causa secundaria que excluye formalmente la enfermedad idiopática."
+      },
+      {
+        "texto": "Excelente respuesta motora y funcional al tratamiento con levodopa.",
+        "correcta": false,
+        "feedback": "Incorrecto. La respuesta marcada a levodopa es el criterio de apoyo positivo más potente de la enfermedad."
+      },
+      {
+        "texto": "Presencia de asimetría motora al inicio del cuadro clínico.",
+        "correcta": false,
+        "feedback": "Incorrecto. El inicio unilateral o asimétrico es característico de la Enfermedad de Parkinson."
+      }
+    ]
+  }
+]

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-[#FBFCFC]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto Semiótico | Powersemiotics</title>
+    <meta
+      name="description"
+      content="Pon a prueba tu razonamiento diagnóstico y discriminación bayesiana con el banco de preguntas indexado automáticamente desde la literatura médica verificada."
+    />
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+    <!-- Google Fonts: Inter & Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/tailwind.css" />
+
+    <style>
+      :root {
+        --bs-paper: #FBFCFC;
+        --bs-ink: #14181B;
+        --bs-mute: #5F676E;
+        --bs-line: #DFE3E6;
+      }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: var(--bs-paper);
+        color: var(--bs-ink);
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, .font-heading {
+        font-family: 'Archivo', system-ui, sans-serif;
+      }
+      .mono {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      .option-btn {
+        transition: all 0.15s ease;
+      }
+      .option-btn:hover:not(:disabled) {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+    </style>
+  </head>
+  <body class="min-h-full flex flex-col antialiased selection:bg-purple-100 selection:text-purple-900">
+    <!-- Top Navigation Bar -->
+    <header class="border-b border-stone-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 max-w-5xl h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2.5 text-stone-900 font-bold tracking-tight">
+          <img src="assets/images/logo.png" alt="Powersemiotics" class="w-7 h-7" />
+          <span class="text-lg font-heading font-extrabold text-stone-900">Powersemiotics</span>
+          <span class="text-xs bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full font-semibold border border-amber-300/80">RETO</span>
+        </a>
+
+        <nav class="flex items-center gap-6 text-sm font-medium text-stone-600">
+          <a href="index.html" class="hover:text-stone-900 transition-colors">Biblioteca</a>
+          <a href="blog.html" class="hover:text-stone-900 transition-colors">Blog</a>
+          <a href="reto.html" class="text-purple-700 font-semibold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+            Reto Clínico
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-6 max-w-4xl py-10">
+      <!-- Title & Description Header -->
+      <section class="text-center max-w-2xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold text-purple-800 bg-purple-50 px-3 py-1 rounded-full border border-purple-200 mb-3">
+          <span>🎯 Autoevaluación Automática Indexada</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-stone-950 tracking-tight leading-tight mb-3">
+          Reto Semiótico Diagnóstico
+        </h1>
+        <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+          Pon a prueba tu discriminación clínica y razonamiento bayesiano con preguntas generadas y fundamentadas directamente en la evidencia médica verificada.
+        </p>
+      </section>
+
+      <!-- Score & Streak Dashboard (Gamification HUD) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+        <div class="bg-white border border-stone-200 p-4 rounded-xl shadow-sm text-center">
+          <span class="text-xs font-medium text-stone-500 block mb-1">Respondidas</span>
+          <span id="statTotal" class="text-2xl font-bold text-stone-900 mono">0</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-4 rounded-xl shadow-sm text-center">
+          <span class="text-xs font-medium text-stone-500 block mb-1">Aciertos</span>
+          <span id="statCorrect" class="text-2xl font-bold text-emerald-600 mono">0</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-4 rounded-xl shadow-sm text-center">
+          <span class="text-xs font-medium text-stone-500 block mb-1">Precisión</span>
+          <span id="statAccuracy" class="text-2xl font-bold text-purple-700 mono">0%</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-4 rounded-xl shadow-sm text-center">
+          <span class="text-xs font-medium text-stone-500 block mb-1">Racha Actual</span>
+          <span id="statStreak" class="text-2xl font-bold text-amber-600 mono">🔥 0</span>
+        </div>
+      </section>
+
+      <!-- Specialty Filter Pills -->
+      <section class="mb-8 flex items-center gap-2 overflow-x-auto pb-2 text-xs" id="retoFilterBar">
+        <button data-cat="all" class="reto-cat-btn px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
+          Todas las Especialidades (<span id="totalQuestionsCount">0</span>)
+        </button>
+      </section>
+
+      <!-- Question Card Container -->
+      <div id="quizContainer">
+        <!-- Loading state -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-12 text-center shadow-sm" id="loadingCard">
+          <svg class="animate-spin h-8 w-8 mx-auto text-purple-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+          </svg>
+          <p class="text-stone-500 font-medium">Cargando banco de autoevaluación médica...</p>
+        </div>
+
+        <!-- Dynamic Question Card will be injected here -->
+        <div id="activeCard" class="hidden"></div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 py-6 mt-auto">
+      <div class="container mx-auto px-6 max-w-4xl flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-3">
+        <p>© 2026 Powersemiotics. Banco de preguntas fundamentado en literatura biomédica verificada.</p>
+        <button onclick="resetStats()" class="text-stone-400 hover:text-red-600 transition-colors">
+          Reiniciar estadísticas
+        </button>
+      </div>
+    </footer>
+
+    <!-- Interactive Reto Engine -->
+    <script>
+      let quizBank = [];
+      let activeQuestions = [];
+      let currentIndex = 0;
+      let currentCategory = 'all';
+
+      let stats = {
+        total: 0,
+        correct: 0,
+        streak: 0,
+        maxStreak: 0
+      };
+
+      function loadStats() {
+        try {
+          const saved = localStorage.getItem('medsemiotics_reto_stats');
+          if (saved) stats = JSON.parse(saved);
+        } catch (e) {}
+        updateStatsUI();
+      }
+
+      function saveStats() {
+        try {
+          localStorage.setItem('medsemiotics_reto_stats', JSON.stringify(stats));
+        } catch (e) {}
+        updateStatsUI();
+      }
+
+      function resetStats() {
+        if (!confirm('¿Deseas reiniciar tus estadísticas de autoevaluación?')) return;
+        stats = { total: 0, correct: 0, streak: 0, maxStreak: 0 };
+        saveStats();
+      }
+
+      function updateStatsUI() {
+        document.getElementById('statTotal').textContent = stats.total;
+        document.getElementById('statCorrect').textContent = stats.correct;
+        const acc = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+        document.getElementById('statAccuracy').textContent = `${acc}%`;
+        document.getElementById('statStreak').textContent = `🔥 ${stats.streak}`;
+      }
+
+      async function initReto() {
+        loadStats();
+        try {
+          const res = await fetch(`assets/data/quiz-bank.json?v=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) throw new Error('No se pudo cargar el banco de preguntas');
+          quizBank = await res.json();
+          buildFilterPills();
+          filterQuestions('all');
+        } catch (err) {
+          console.error(err);
+          document.getElementById('loadingCard').innerHTML = `
+            <div class="text-red-700">
+              <p class="font-bold">Error al cargar las preguntas</p>
+              <p class="text-sm mt-1">Verifica que se haya generado <code>quiz-bank.json</code>.</p>
+            </div>
+          `;
+        }
+      }
+
+      function buildFilterPills() {
+        const filterBar = document.getElementById('retoFilterBar');
+        document.getElementById('totalQuestionsCount').textContent = quizBank.length;
+
+        const categoriesMap = new Map();
+        quizBank.forEach(q => {
+          if (q.category && q.category_label) {
+            categoriesMap.set(q.category, {
+              label: q.category_label,
+              count: (categoriesMap.get(q.category)?.count || 0) + 1
+            });
+          }
+        });
+
+        let html = `
+          <button data-cat="all" class="reto-cat-btn px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
+            Todas las Especialidades (${quizBank.length})
+          </button>
+        `;
+
+        categoriesMap.forEach((val, catKey) => {
+          html += `
+            <button data-cat="${catKey}" class="reto-cat-btn px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap">
+              ${val.label} (${val.count})
+            </button>
+          `;
+        });
+
+        filterBar.innerHTML = html;
+
+        filterBar.addEventListener('click', (e) => {
+          const btn = e.target.closest('.reto-cat-btn');
+          if (!btn) return;
+          document.querySelectorAll('.reto-cat-btn').forEach(b => {
+            b.className = 'reto-cat-btn px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap';
+          });
+          btn.className = 'reto-cat-btn px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap';
+          filterQuestions(btn.dataset.cat);
+        });
+      }
+
+      function filterQuestions(cat) {
+        currentCategory = cat;
+        if (cat === 'all') {
+          activeQuestions = [...quizBank];
+        } else {
+          activeQuestions = quizBank.filter(q => q.category === cat);
+        }
+        // Shuffle questions
+        activeQuestions.sort(() => Math.random() - 0.5);
+        currentIndex = 0;
+        renderQuestion();
+      }
+
+      function renderQuestion() {
+        const loadingCard = document.getElementById('loadingCard');
+        const activeCard = document.getElementById('activeCard');
+
+        loadingCard.classList.add('hidden');
+        activeCard.classList.remove('hidden');
+
+        if (activeQuestions.length === 0) {
+          activeCard.innerHTML = `
+            <div class="bg-white border border-stone-200 rounded-2xl p-10 text-center">
+              <p class="text-stone-600 font-medium">No hay preguntas disponibles en esta categoría.</p>
+            </div>
+          `;
+          return;
+        }
+
+        const q = activeQuestions[currentIndex];
+
+        activeCard.innerHTML = `
+          <article class="bg-white border border-stone-200 rounded-2xl p-6 md:p-8 shadow-sm transition-all">
+            <!-- Header Badges -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-6 pb-4 border-b border-stone-100 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="font-semibold text-purple-800 bg-purple-50 border border-purple-200/80 px-2.5 py-1 rounded-full">
+                  ${q.category_label}
+                </span>
+                <span class="text-stone-500 font-medium">${q.condicion_nombre || 'Caso Clínico'}</span>
+              </div>
+              <span class="text-stone-400 font-medium mono">
+                Pregunta ${currentIndex + 1} de ${activeQuestions.length}
+              </span>
+            </div>
+
+            <!-- Question Prompt -->
+            <h2 class="text-lg md:text-xl font-bold text-stone-900 leading-snug mb-6">
+              ${q.pregunta}
+            </h2>
+
+            <!-- Options List -->
+            <div class="space-y-3 mb-6" id="optionsContainer">
+              ${q.opciones.map((opt, i) => `
+                <button
+                  type="button"
+                  onclick="selectOption(${i})"
+                  class="option-btn w-full text-left p-4 rounded-xl border border-stone-200 bg-stone-50/50 hover:bg-purple-50/50 hover:border-purple-300 text-stone-800 text-sm font-medium flex items-start gap-3 transition-all cursor-pointer"
+                >
+                  <span class="w-6 h-6 rounded-full border border-stone-300 flex items-center justify-center text-xs text-stone-500 shrink-0 font-semibold bg-white">
+                    ${String.fromCharCode(65 + i)}
+                  </span>
+                  <span class="pt-0.5 leading-relaxed">${opt.texto}</span>
+                </button>
+              `).join('')}
+            </div>
+
+            <!-- Evidence Feedback Box (Hidden initially) -->
+            <div id="feedbackBox" class="hidden rounded-xl p-5 mb-6 text-sm transition-all border"></div>
+
+            <!-- Semiotic Triad Drawer (Hidden initially) -->
+            ${q.triada ? `
+              <div id="triadBox" class="hidden mb-6 bg-stone-50 border border-stone-200 rounded-xl p-4 text-xs text-stone-700">
+                <p class="font-bold text-stone-900 mb-2 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  Tríada Semiótica de Decisión:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
+                  <div>
+                    <span class="font-semibold text-purple-900 block">Significante:</span>
+                    <span class="text-stone-600">${q.triada.significante || 'Hallazgo clínico'}</span>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-purple-900 block">Significado:</span>
+                    <span class="text-stone-600">${q.triada.significado || 'Fisiopatología'}</span>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-purple-900 block">Decisión:</span>
+                    <span class="text-stone-600">${q.triada.decision || 'Conducta clínica'}</span>
+                  </div>
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Bottom Actions -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-stone-100 text-xs">
+              <div class="flex items-center gap-2">
+                ${q.pmid ? `
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/${q.pmid}/" target="_blank" rel="noopener" class="text-stone-500 hover:text-purple-700 font-medium underline flex items-center gap-1">
+                    Cita: PMID ${q.pmid} ↗
+                  </a>
+                ` : ''}
+              </div>
+
+              <div class="flex items-center gap-3">
+                <a href="post.html?slug=${q.post_slug}" class="text-stone-600 hover:text-stone-900 font-semibold">
+                  Leer caso completo →
+                </a>
+                <button
+                  id="nextBtn"
+                  onclick="nextQuestion()"
+                  class="hidden bg-stone-900 hover:bg-stone-800 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
+                >
+                  Siguiente pregunta →
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      function selectOption(index) {
+        const q = activeQuestions[currentIndex];
+        const buttons = document.querySelectorAll('.option-btn');
+        const feedbackBox = document.getElementById('feedbackBox');
+        const triadBox = document.getElementById('triadBox');
+        const nextBtn = document.getElementById('nextBtn');
+
+        buttons.forEach(btn => btn.disabled = true);
+
+        const selectedOpt = q.opciones[index];
+        const isCorrect = selectedOpt.correcta;
+
+        stats.total++;
+        if (isCorrect) {
+          stats.correct++;
+          stats.streak++;
+          if (stats.streak > stats.maxStreak) stats.maxStreak = stats.streak;
+        } else {
+          stats.streak = 0;
+        }
+        saveStats();
+
+        // Style buttons
+        buttons.forEach((btn, i) => {
+          if (q.opciones[i].correcta) {
+            btn.className = 'option-btn w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-50 text-emerald-900 text-sm font-medium flex items-start gap-3';
+            btn.querySelector('span:first-child').className = 'w-6 h-6 rounded-full border border-emerald-500 flex items-center justify-center text-xs text-white shrink-0 font-bold bg-emerald-600';
+            btn.querySelector('span:first-child').textContent = '✓';
+          } else if (i === index) {
+            btn.className = 'option-btn w-full text-left p-4 rounded-xl border border-red-400 bg-red-50 text-red-900 text-sm font-medium flex items-start gap-3';
+            btn.querySelector('span:first-child').className = 'w-6 h-6 rounded-full border border-red-500 flex items-center justify-center text-xs text-white shrink-0 font-bold bg-red-600';
+            btn.querySelector('span:first-child').textContent = '✕';
+          } else {
+            btn.className = 'option-btn w-full text-left p-4 rounded-xl border border-stone-200 bg-stone-50/40 opacity-50 text-stone-500 text-sm font-medium flex items-start gap-3';
+          }
+        });
+
+        // Show feedback
+        feedbackBox.classList.remove('hidden');
+        if (isCorrect) {
+          feedbackBox.className = 'rounded-xl p-5 mb-6 text-sm transition-all border border-emerald-200 bg-emerald-50 text-emerald-900';
+          feedbackBox.innerHTML = `
+            <div class="flex items-start gap-3">
+              <span class="text-xl">🎯</span>
+              <div>
+                <p class="font-bold text-emerald-950 mb-1">¡Respuesta Correcta!</p>
+                <p class="leading-relaxed text-emerald-900">${selectedOpt.feedback}</p>
+              </div>
+            </div>
+          `;
+        } else {
+          feedbackBox.className = 'rounded-xl p-5 mb-6 text-sm transition-all border border-amber-200 bg-amber-50 text-amber-950';
+          feedbackBox.innerHTML = `
+            <div class="flex items-start gap-3">
+              <span class="text-xl">💡</span>
+              <div>
+                <p class="font-bold text-amber-950 mb-1">Retroalimentación Formativa:</p>
+                <p class="leading-relaxed text-amber-900">${selectedOpt.feedback}</p>
+              </div>
+            </div>
+          `;
+        }
+
+        if (triadBox) triadBox.classList.remove('hidden');
+        nextBtn.classList.remove('hidden');
+      }
+
+      function nextQuestion() {
+        currentIndex = (currentIndex + 1) % activeQuestions.length;
+        renderQuestion();
+      }
+
+      initReto();
+    </script>
+  </body>
+</html>

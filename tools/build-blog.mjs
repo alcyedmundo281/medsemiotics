@@ -247,6 +247,33 @@ function buildBlog() {
   // Sort reverse chronological
   postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  // Extract unified Question Bank (Quiz Bank)
+  const quizBank = [];
+  for (const file of files) {
+    const filePath = path.join(postsDir, file);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const { data } = parseFrontmatter(content);
+    if (data.autoevaluacion && Array.isArray(data.autoevaluacion)) {
+      data.autoevaluacion.forEach((q, idx) => {
+        quizBank.push({
+          id: `${data.slug}-q${idx + 1}`,
+          post_slug: data.slug,
+          post_title: data.title,
+          category: data.category || 'general',
+          category_label: data.category_label || 'Clínica',
+          condicion_id: data.grounding ? data.grounding.condicion_id : null,
+          condicion_nombre: data.grounding ? data.grounding.condicion_nombre : data.title,
+          pmid: data.grounding ? data.grounding.pmid : null,
+          doi: data.grounding ? data.grounding.doi : null,
+          referencia_cita: data.grounding ? data.grounding.referencia_cita : null,
+          triada: data.triada || null,
+          pregunta: q.pregunta,
+          opciones: q.opciones
+        });
+      });
+    }
+  }
+
   // Save index
   fs.writeFileSync(
     path.join(outputDataDir, 'blog-index.json'),
@@ -254,8 +281,16 @@ function buildBlog() {
     'utf-8'
   );
 
+  // Save Quiz Bank
+  fs.writeFileSync(
+    path.join(outputDataDir, 'quiz-bank.json'),
+    JSON.stringify(quizBank, null, 2),
+    'utf-8'
+  );
+
   console.log(`✓ Blog procesado exitosamente: ${postsIndex.length} tema(s) generado(s).`);
-  console.log(`✓ Índice guardado en: assets/data/blog-index.json`);
+  console.log(`✓ Banco de Autoevaluación generado: ${quizBank.length} pregunta(s) indexada(s).`);
+  console.log(`✓ Índices guardados en: assets/data/blog-index.json y quiz-bank.json`);
 }
 
 buildBlog();
