@@ -4,8 +4,9 @@
   "private": true,
   "description": "Contenido escrito de Powersemiotics, publicado en powersemiotics.com/medsemiotics/",
   "scripts": {
-    "build": "npm run build:css && npm run build:js",
+    "build": "npm run build:css && npm run build:js && npm run build:blog",
     "build:css": "tailwindcss -c assets/tailwind.config.js -i assets/styles.css -o assets/tailwind.css",
+    "build:blog": "node tools/build-blog.mjs",
     "start": "node tools/local-server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",

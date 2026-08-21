@@ -1,0 +1,24 @@
+[
+  {
+    "id": "HM6004-01",
+    "slug": "meningitis-aguda-sacudida-cefalica",
+    "title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",
+    "subtitle": "Análisis semiótico y discriminación bayesiana del jolt accentuation sign en el paciente con fiebre y cefalea.",
+    "date": "2026-08-20",
+    "author": "Dr. Alcy Torres",
+    "category": "neurologia",
+    "category_label": "Neurología",
+    "tags": [
+      "meningitis",
+      "cefalea",
+      "semiótica",
+      "urgencias"
+    ],
+    "reading_time": "5 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6004 · PMID:10411200",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Análisis semiótico y discriminación bayesiana del jolt accentuation sign en el paciente con fiebre y cefalea."
+  }
+]
