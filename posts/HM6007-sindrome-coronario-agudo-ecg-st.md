@@ -1,0 +1,110 @@
+---
+id: "HM6007-01"
+slug: "sindrome-coronario-agudo-dolor-toracico-ecg"
+title: "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electrocardiograma inicial?"
+subtitle: "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles."
+date: "2026-08-21"
+author: "Dr. Alcy Torres"
+category: "medicina_y_datos"
+category_label: "Medicina y Datos"
+tags: ["cardiologia", "urgencias", "electrocardiograma", "probabilidad"]
+reading_time: "6 min"
+difficulty: "Intermedio"
+grounding:
+  condicion_id: "HM:6007"
+  condicion_nombre: "Síndrome coronario agudo"
+  concepto_id: "HM:3015"
+  concepto_nombre: "Descenso del segmento ST"
+  sensibilidad: 0.28
+  especificidad: 0.95
+  lr_positivo: 5.3
+  lr_negativo: 0.76
+  poblacion: "Adultos evaluados en el servicio de urgencias por dolor torácico agudo"
+  referencia_id: "pmid:26547467"
+  referencia_cita: "Fanaroff AC, Rymer JA, Goldstein SA, Simel DL, Newby LK. Does this patient with chest pain have the acute coronary syndrome? The Rational Clinical Examination Systematic Review. JAMA. 2015;314(18):1955-65."
+  doi: "10.1001/jama.2015.12735"
+  pmid: "26547467"
+
+triada:
+  significante: "Descenso horizontal o descendente del segmento ST ≥ 0.5 mm en dos derivaciones contiguas en el ECG de 12 derivaciones."
+  significado: "Isquemia miocárdica subendocárdica aguda con vector de lesión orientado hacia el endocardio ventricular."
+  decision: "Es el hallazgo electrocardiográfico aislado más útil (LR+ 5.3), pero insuficiente por sí solo para confirmar o descartar SCA sin escala de riesgo y cinética de troponinas."
+
+autoevaluacion:
+  - id: "q1"
+    pregunta: "En un paciente de 58 años con dolor torácico opresivo de 1 hora de evolución, el ECG inicial NO muestra elevación ni descenso del ST ni cambios en la onda T. Según la revisión sistemática de JAMA (PMID: 26547467), ¿cuál es la conducta diagnóstica correcta?"
+    opciones:
+      - texto: "Un ECG normal tiene un LR- cercano a 0 y descarta con certeza el síndrome coronario agudo."
+        correcta: false
+        feedback: "Incorrecto. La sensibilidad del ECG inicial para SCA es limitada (LR- alrededor de 0.7-0.8); un ECG normal no descarta isquemia ni infarto sin elevación del ST."
+      - texto: "El ECG inicial por sí solo no descarta SCA; se debe mantener en observación seriada y estratificar con cinética de troponina y escalas clínicas (HEART/GRACE)."
+        correcta: true
+        feedback: "¡Correcto! Fanaroff et al. demuestran que ningún hallazgo aislado de anamnesis o ECG descarta SCA de forma concluyente; la estratificación seriada con troponinas es mandatoria."
+      - texto: "Se puede dar de alta inmediata al paciente si el dolor cede con antiácidos."
+        correcta: false
+        feedback: "Incorrecto. La respuesta al tratamiento empírico no discrimina de forma fiable el origen coronario del dolor."
+
+  - id: "q2"
+    pregunta: "Si la prevalencia basal de SCA en pacientes que acuden a urgencias con dolor torácico es aproximadamente del 10% (0.10), ¿a cuánto asciende la probabilidad post-test si se detecta un descenso del segmento ST (LR+ 5.3)?"
+    opciones:
+      - texto: "Pasa del 10% a aproximadamente un 37% de probabilidad post-test."
+        correcta: true
+        feedback: "¡Exacto! Pre-test odds = 0.10 / 0.90 = 0.111. Post-test odds = 0.111 * 5.3 = 0.589. Probabilidad post-test = 0.589 / (1 + 0.589) = 37.1%."
+      - texto: "Pasa inmediatamente al 99%, confirmando infarto transmural."
+        correcta: false
+        feedback: "Incorrecto. Un LR+ de 5.3 produce un incremento moderado, no absoluto."
+      - texto: "Permanece idéntica en el 10%."
+        correcta: false
+        feedback: "Incorrecto. Todo LR > 1 desplaza positivamente la probabilidad diagnóstica."
+---
+
+## El reto diagnóstico del dolor torácico en urgencias
+
+Aproximadamente el **10%** de los pacientes adultos que consultan al servicio de urgencias por dolor torácico agudo tienen finalmente un diagnóstico de **Síndrome Coronario Agudo (SCA)**. La gran mayoría presenta causas no coronarias (patología musculoesquelética, gastroesofágica o pericárdica).
+
+El médico se enfrenta a dos errores críticos:
+1. **Falso negativo:** Enviar a casa a un paciente con infarto en curso o angina inestable de alto riesgo.
+2. **Falso positivo:** Ingresos innecesarios y procedimientos invasivos en pacientes con dolor torácico no isquémico.
+
+---
+
+## Rendimiento de los Hallazgos Clínicos e Isquemia ECG
+
+La revisión sistemática de 58 estudios prospectivos de la serie *The Rational Clinical Examination* (JAMA 2015) evaluó la precisión diagnóstica de los signos y pruebas iniciales:
+
+- **Descenso del segmento ST:** Especificidad del 95% con un **LR+ de 5.3** (IC95% 2.1–8.6).
+- **Cualquier signo de isquemia en ECG:** Especificidad del 91% con un **LR+ de 3.6** (IC95% 1.6–5.7).
+- **Irradiación a ambos brazos o hombros:** Es el síntoma anamnésico de mayor rendimiento, pero con un LR+ modesto de ~2.6.
+
+```
+                  [ Dolor Torácico Agudo en Urgencias ]
+                            (Prevalencia ~10%)
+                                    │
+                  ┌─────────────────┴─────────────────┐
+                  ▼                                   ▼
+        Descenso ST en ECG                  ECG Inicial sin cambios
+            (LR+ = 5.3)                           (LR- ≈ 0.76)
+                  │                                   │
+      Probabilidad sube a ~37%             Probabilidad baja a ~7.8%
+     (Alta sospecha; requiere             (Insuficiente para alta;
+      antiisquémicos y monitor)            requiere troponina seriada)
+```
+
+---
+
+## Evidencia Cuantitativa y Fuentes
+
+Parámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):
+
+- **Prevalencia basal en urgencias:** 0.10 (10%)
+- **Sensibilidad del Descenso ST:** 0.28 (28%)
+- **Especificidad del Descenso ST:** 0.95 (95%)
+- **Cociente de Verosimilitud Positivo (LR+):** 5.30 [Fanaroff et al., JAMA 2015]
+- **Cociente de Verosimilitud Negativo (LR-):** 0.76 [Fanaroff et al., JAMA 2015]
+- **Población evaluada:** Adultos atendidos en servicios de urgencias por dolor torácico no traumático.
+
+---
+
+## Conclusión Semiótica
+
+El electrocardiograma inicial es indispensable pero **insuficiente por sí solo**. Su fuerza reside en acelerar conductas cuando es francamente patológico (LR+ 5.3), pero nunca autoriza el alta temprana cuando resulta normal.

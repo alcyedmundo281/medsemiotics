@@ -1,5 +1,116 @@
 [
   {
+    "id": "HM6006-01",
+    "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
+    "title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
+    "subtitle": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
+    "tags": [
+      "aorta",
+      "palpacion",
+      "screening",
+      "ecografia"
+    ],
+    "reading_time": "5 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6006 · PMID:9892455",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible."
+  },
+  {
+    "id": "HM6007-01",
+    "slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
+    "title": "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electrocardiograma inicial?",
+    "subtitle": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_y_datos",
+    "category_label": "Medicina y Datos",
+    "tags": [
+      "cardiologia",
+      "urgencias",
+      "electrocardiograma",
+      "probabilidad"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6007 · PMID:26547467",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles."
+  },
+  {
+    "id": "HM6008-01",
+    "slug": "hipovolemia-aguda-signos-vitales-posturales",
+    "title": "Evaluación clínica de la hipovolemia: ¿Cuándo sirven los signos posturales?",
+    "subtitle": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_y_datos",
+    "category_label": "Medicina y Datos",
+    "tags": [
+      "urgencias",
+      "hemodinamia",
+      "hipovolemia",
+      "semiologia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6008 · PMID:10086438",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination."
+  },
+  {
+    "id": "HM6009-01",
+    "slug": "faringitis-estreptococica-exudado-criterios-centor",
+    "title": "Faringoamigdalitis aguda: Rendimiento semiótico del exudado y los criterios de Centor",
+    "subtitle": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "farmacoterapia",
+    "category_label": "Farmacoterapia",
+    "tags": [
+      "infecciosas",
+      "faringitis",
+      "antibioticos",
+      "centor",
+      "urgencias"
+    ],
+    "reading_time": "5 min",
+    "difficulty": "Básico",
+    "grounding_badge": "HM:6009 · PMID:11147989",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos."
+  },
+  {
+    "id": "HM6015-01",
+    "slug": "enfermedad-parkinson-criterios-clinicos-mds",
+    "title": "Diagnóstico clínico de la Enfermedad de Parkinson: El rigor de los Criterios MDS",
+    "subtitle": "Del parkinsonismo motor nuclear a la búsqueda sistemática de banderas rojas y criterios de apoyo.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "neurologia",
+    "category_label": "Neurología",
+    "tags": [
+      "neurologia",
+      "parkinson",
+      "semiologia",
+      "movimientos-anormales"
+    ],
+    "reading_time": "7 min",
+    "difficulty": "Avanzado",
+    "grounding_badge": "HM:6015 · PMID:26474316",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "excerpt": "Del parkinsonismo motor nuclear a la búsqueda sistemática de banderas rojas y criterios de apoyo."
+  },
+  {
     "id": "HM6004-01",
     "slug": "meningitis-aguda-sacudida-cefalica",
     "title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",

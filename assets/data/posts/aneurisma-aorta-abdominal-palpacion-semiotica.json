@@ -1,0 +1,82 @@
+{
+  "id": "HM6006-01",
+  "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
+  "title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
+  "subtitle": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "gastroenterologia",
+  "category_label": "Gastroenterología",
+  "tags": [
+    "aorta",
+    "palpacion",
+    "screening",
+    "ecografia"
+  ],
+  "reading_time": "5 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6006 · PMID:9892455",
+  "has_quiz": true,
+  "quiz_count": 2,
+  "excerpt": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
+  "grounding": {
+    "condicion_id": "HM:6006",
+    "condicion_nombre": "Aneurisma de aorta abdominal",
+    "concepto_id": "HM:3012",
+    "concepto_nombre": "Pulsación aórtica ensanchada a la palpación",
+    "sensibilidad": 0.68,
+    "especificidad": 0.95,
+    "lr_positivo": 12,
+    "lr_negativo": 0.72,
+    "poblacion": "Adultos evaluados en cribado o consulta general sin diagnóstico vascular previo",
+    "referencia_id": "pmid:9892455",
+    "referencia_cita": "Lederle FA, Simel DL. The rational clinical examination. Does this patient have an abdominal aortic aneurysm? JAMA. 1999;281(1):77-82.",
+    "doi": "10.1001/jama.281.1.77",
+    "pmid": "9892455"
+  },
+  "triada": {
+    "significante": "Palpación bimanual profunda en epigastrio/mesogastrio que delimita un latido aórtico expansivo con anchura transversal estimada ≥ 3.0 cm.",
+    "significado": "Dilatación focal permanente de la aorta infrarrenal que transmite pulso hidrostático radial a la pared abdominal anterior.",
+    "decision": "La palpación positiva tiene alto valor confirmatorio (LR+ 12.0 para aneurisma ≥3 cm y LR+ 15.6 para ≥4 cm), pero la palpación normal (LR- 0.72) NO descarta aneurisma, especialmente en presencia de obesidad abdominal."
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "En un paciente varón de 68 años, exfumador, la palpación del abdomen no revela masa pulsátil ni ensanchamiento aórtico. Teniendo en cuenta un LR- de 0.72 reportado en el metaanálisis de JAMA (PMID: 9892455), ¿cuál es la conducta clínica apropiada?",
+      "opciones": [
+        {
+          "texto": "La palpación normal descarta de forma definitiva el aneurisma y no requiere ningún estudio de imagen.",
+          "correcta": false,
+          "feedback": "Incorrecto. Un LR- de 0.72 es pobre para descartar patología (sensibilidad apenas ~68% en aneurismas pequeños); en pacientes con factores de riesgo de cribado, se debe solicitar ecografía abdominal."
+        },
+        {
+          "texto": "La palpación negativa no excluye la presencia de aneurisma; se debe realizar ecografía abdominal de cribado si cumple criterios de riesgo (edad, sexo masculino, tabaquismo).",
+          "correcta": true,
+          "feedback": "¡Correcto! Lederle y Simel demostraron que la palpación tiene baja sensibilidad para aneurismas pequeños o en pacientes con hábito corporal ancho; la ecografía es la prueba de elección."
+        },
+        {
+          "texto": "Se debe solicitar de urgencia una angiografía por cateterismo.",
+          "correcta": false,
+          "feedback": "Incorrecto. La ecografía abdominal es la prueba no invasiva de primera línea para cribado y diagnóstico inicial."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Por qué el Likelihood Ratio positivo (LR+) de la palpación aumenta de 12.0 a 15.6 cuando el diámetro aórtico supera los 4.0 cm?",
+      "opciones": [
+        {
+          "texto": "Porque a mayor tamaño del aneurisma, la masa pulsátil es más prominente y la especificidad de la palpación bimanual se aproxima al 98%.",
+          "correcta": true,
+          "feedback": "¡Exacto! El tamaño del vaso amplifica la transmisión de la onda de pulso y facilita la delimitación de bordes laterales, reduciendo drásticamente los falsos positivos."
+        },
+        {
+          "texto": "Porque el paciente experimenta dolor intenso espontáneo a la palpación superficial.",
+          "correcta": false,
+          "feedback": "Incorrecto. La mayoría de los aneurismas de aorta abdominal no complicados son indoloros a la exploración física rutinaria."
+        }
+      ]
+    }
+  ],
+  "body": "## El aneurisma aórtico como patología silente\n\nEl **Aneurisma de Aorta Abdominal (AAA)** suele cursar de forma asintomática hasta el momento crítico de la rotura o fisuración aguda. Por esta razón, la detección precoz en la consulta de medicina interna, atención primaria y geriatría es vital para programar el seguimiento o la reparación electiva.\n\n---\n\n## Semiología de la Palpación Aórtica\n\nLa técnica correcta exige:\n1. Paciente en decúbito supino con caderas flexionadas para relajar la musculatura abdominal.\n2. Palpación bimanual profunda en la línea media supraumbilical, ubicando los dedos índice y pulgar a ambos lados del pulso aórtico.\n3. Estimación de la **anchura transversal** del pulso para diferenciar el latido normal anteroposterior del latido expansivo lateral.\n\n```\n                    [ Examen Físico Abdominal ]\n                                │\n                ┌───────────────┴───────────────┐\n                ▼                               ▼\n      Pulsación ensanchada             Palpación aórtica normal\n        (LR+ = 12.0)                         (LR- = 0.72)\n                │                               │\n    Alta probabilidad de AAA.         Insuficiente para excluir.\n    Confirmar diámetro y anatomía      En pacientes de riesgo,\n    mediante ecografía abdominal.      proceder a ecografía de cribado.\n```\n\n---\n\n## Evidencia Cuantitativa y Fuentes\n\nParámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):\n\n- **Sensibilidad para AAA ≥ 3.0 cm:** 0.68 (68%)\n- **Especificidad para AAA ≥ 3.0 cm:** 0.95 (95%)\n- **Cociente de Verosimilitud Positivo (LR+ ≥3 cm):** 12.0 [Lederle & Simel, JAMA 1999]\n- **Cociente de Verosimilitud Positivo (LR+ ≥4 cm):** 15.6 [Lederle & Simel, JAMA 1999]\n- **Cociente de Verosimilitud Negativo (LR-):** 0.72 [Lederle & Simel, JAMA 1999]\n- **Población evaluada:** Adultos evaluados en cribado o consulta ambulatoria.\n\n---\n\n## Conclusión Semiótica\n\nLa palpación de una pulsación ensanchada es una prueba altamente **específica (LR+ 12.0)**: cuando se palpa con claridad, el diagnóstico es prácticamente seguro. Sin embargo, su **ausencia no excluye la enfermedad (LR- 0.72)**, lo que reafirma a la ecografía como la prueba de cribado definitiva."
+}
