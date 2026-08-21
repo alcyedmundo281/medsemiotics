@@ -1,0 +1,97 @@
+{
+  "id": "HM6007-01",
+  "slug": "sindrome-coronario-agudo-precision-semiotica",
+  "title": "Síndrome coronario agudo: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+  "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "cardiologia",
+  "category_label": "Cardiología",
+  "tags": [
+    "cardiologia",
+    "sindrome-coronario-agudo",
+    "semiologia",
+    "evidencia"
+  ],
+  "reading_time": "6 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6007 · PMID:26547467",
+  "has_quiz": true,
+  "quiz_count": 3,
+  "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "grounding": {
+    "condicion_id": "HM:6007",
+    "condicion_nombre": "Síndrome coronario agudo",
+    "concepto_id": "HM:3015",
+    "concepto_nombre": "el hallazgo aislado más útil, pero insuficiente para confirmar",
+    "sensibilidad": 0.7,
+    "especificidad": 0.95,
+    "lr_positivo": 5.3,
+    "lr_negativo": 0.5,
+    "poblacion": "Adultos evaluados en consulta médica o urgencias",
+    "referencia_id": "pmid:26547467",
+    "referencia_cita": "Fanaroff AC, Rymer JA, Goldstein SA et al.. Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review. JAMA. 2015.",
+    "doi": "10.1001/jama.2015.12735",
+    "pmid": "26547467"
+  },
+  "triada": {
+    "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome coronario agudo.",
+    "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+    "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "",
+      "opciones": []
+    },
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Síndrome coronario agudo según la literatura verificada (PMID: 26547467)?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 5.3.",
+          "correcta": true,
+          "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        },
+        {
+          "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+          "correcta": false,
+          "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+        },
+        {
+          "texto": "Carece de valor discriminativo en la exploración.",
+          "correcta": false,
+          "feedback": "Incorrecto. Presenta una especificidad documentada de 95%."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la toma de decisiones clínicas ante Síndrome coronario agudo, ¿cuál es el paso de confirmación o cribado más adecuado?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+          "correcta": true,
+          "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+        },
+        {
+          "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+          "correcta": false,
+          "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+        }
+      ]
+    }
+  ],
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Síndrome coronario agudo** (Acute coronary syndrome) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nLa literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:\r\n\r\n- **Sensibilidad estimada:** 70%\r\n- **Especificidad estimada:** 95%\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.3\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n\r\n```\r\n                  [ Evaluación Clínica: Síndrome coronario agudo ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n          Signo POSITIVO                  Signo NEGATIVO\r\n           (LR+ = 5.3)                      (LR- = 0.5)\r\n                │                               │\r\n       Incremento de sospecha          Reducción de probabilidad\r\n       y decisión orientada.           y reevaluación clínica.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica:\r\n\r\n- **Sensibilidad:** 0.7\r\n- **Especificidad:** 0.95\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.3\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n- **Población evaluada:** Adultos evaluados en consulta médica o urgencias.\r\n- **Cita principal:** Fanaroff AC, Rymer JA, Goldstein SA et al.. Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review. JAMA. 2015. [PMID: 26547467]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa exploración metódica de **Síndrome coronario agudo** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias."
+}

@@ -7,6 +7,8 @@
     "build": "npm run build:css && npm run build:js && npm run build:blog",
     "build:css": "tailwindcss -c assets/tailwind.config.js -i assets/styles.css -o assets/tailwind.css",
     "build:blog": "node tools/build-blog.mjs",
+    "topics:sync": "python tools/generate_topic.py --sync-all",
+    "topics:list": "python tools/generate_topic.py --list",
     "start": "node tools/local-server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",

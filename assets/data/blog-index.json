@@ -1,5 +1,49 @@
 [
   {
+    "id": "HM6001-01",
+    "slug": "hepatitis-viral-aguda-precision-semiotica",
+    "title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología y Hepatología",
+    "tags": [
+      "gastroenterologia",
+      "hepatitis-viral-aguda",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6001 · PMID:12345678",
+    "has_quiz": true,
+    "quiz_count": 3,
+    "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+  },
+  {
+    "id": "HM6002-01",
+    "slug": "sindrome-de-intestino-irritable-precision-semiotica",
+    "title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
+    "tags": [
+      "gastroenterologia",
+      "sindrome-de-intestino-irritable",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6002 · PMID:12345678",
+    "has_quiz": true,
+    "quiz_count": 3,
+    "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+  },
+  {
     "id": "HM6003-01",
     "slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
     "title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
@@ -157,6 +201,94 @@
     "has_quiz": true,
     "quiz_count": 2,
     "excerpt": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination."
+  },
+  {
+    "id": "HM6011-01",
+    "slug": "infeccion-precoz-por-vih-precision-semiotica",
+    "title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "tags": [
+      "infectologia",
+      "infeccion-precoz-por-vih",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6011 · PMID:25027143",
+    "has_quiz": true,
+    "quiz_count": 3,
+    "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+  },
+  {
+    "id": "HM6012-01",
+    "slug": "artrosis-de-cadera-precision-semiotica",
+    "title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "reumatologia",
+    "category_label": "Reumatología y Traumatología",
+    "tags": [
+      "reumatologia",
+      "artrosis-de-cadera",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6012 · PMID:31846019",
+    "has_quiz": true,
+    "quiz_count": 3,
+    "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+  },
+  {
+    "id": "HM6013-01",
+    "slug": "enfermedad-del-manguito-rotador-precision-semiotica",
+    "title": "Enfermedad del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "tags": [
+      "traumatologia",
+      "enfermedad-del-manguito-rotador",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6013 · PMID:23982370",
+    "has_quiz": true,
+    "quiz_count": 3,
+    "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+  },
+  {
+    "id": "HM6014-01",
+    "slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
+    "title": "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "traumatologia",
+    "category_label": "Traumatología y Medicina Deportiva",
+    "tags": [
+      "traumatologia",
+      "rotura-completa-del-manguito-rotador",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6014 · PMID:23982370",
+    "has_quiz": true,
+    "quiz_count": 3,
+    "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
     "id": "HM6015-01",

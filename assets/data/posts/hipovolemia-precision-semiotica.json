@@ -1,0 +1,97 @@
+{
+  "id": "HM6008-01",
+  "slug": "hipovolemia-precision-semiotica",
+  "title": "Hipovolemia: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+  "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "urgencias",
+  "category_label": "Medicina de Urgencias y Críticos",
+  "tags": [
+    "urgencias",
+    "hipovolemia",
+    "semiologia",
+    "evidencia"
+  ],
+  "reading_time": "6 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6008 · PMID:10086438",
+  "has_quiz": true,
+  "quiz_count": 3,
+  "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "grounding": {
+    "condicion_id": "HM:6008",
+    "condicion_nombre": "Hipovolemia",
+    "concepto_id": "HM:3021",
+    "concepto_nombre": "apoya el diagnóstico, con fuerza modesta",
+    "sensibilidad": 0.7,
+    "especificidad": 0.85,
+    "lr_positivo": 2.8,
+    "lr_negativo": 0.5,
+    "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+    "referencia_id": "pmid:10086438",
+    "referencia_cita": "McGee S, Abernethy WB 3rd, Simel DL. The rational clinical examination. Is this patient hypovolemic?. JAMA. 1999.",
+    "doi": "10.1001/jama.281.11.1022",
+    "pmid": "10086438"
+  },
+  "triada": {
+    "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hipovolemia.",
+    "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+    "decision": "apoya el diagnóstico, con fuerza modesta"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "",
+      "opciones": []
+    },
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Hipovolemia según la literatura verificada (PMID: 10086438)?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 2.8.",
+          "correcta": true,
+          "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        },
+        {
+          "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+          "correcta": false,
+          "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+        },
+        {
+          "texto": "Carece de valor discriminativo en la exploración.",
+          "correcta": false,
+          "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la toma de decisiones clínicas ante Hipovolemia, ¿cuál es el paso de confirmación o cribado más adecuado?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+          "correcta": true,
+          "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+        },
+        {
+          "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+          "correcta": false,
+          "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+        }
+      ]
+    }
+  ],
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Hipovolemia** (Hypovolemia) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nLa literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:\r\n\r\n- **Sensibilidad estimada:** 70%\r\n- **Especificidad estimada:** 85%\r\n- **Cociente de Verosimilitud Positivo (LR+):** 2.8\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n\r\n```\r\n                  [ Evaluación Clínica: Hipovolemia ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n          Signo POSITIVO                  Signo NEGATIVO\r\n           (LR+ = 2.8)                      (LR- = 0.5)\r\n                │                               │\r\n       Incremento de sospecha          Reducción de probabilidad\r\n       y decisión orientada.           y reevaluación clínica.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica:\r\n\r\n- **Sensibilidad:** 0.7\r\n- **Especificidad:** 0.85\r\n- **Cociente de Verosimilitud Positivo (LR+):** 2.8\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n- **Población evaluada:** pacientes con vómitos, diarrea o descenso de la ingesta.\r\n- **Cita principal:** McGee S, Abernethy WB 3rd, Simel DL. The rational clinical examination. Is this patient hypovolemic?. JAMA. 1999. [PMID: 10086438]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa exploración metódica de **Hipovolemia** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias."
+}

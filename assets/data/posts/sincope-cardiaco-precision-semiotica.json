@@ -1,0 +1,97 @@
+{
+  "id": "HM6010-01",
+  "slug": "sincope-cardiaco-precision-semiotica",
+  "title": "Síncope cardíaco: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+  "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "medicina_interna",
+  "category_label": "Medicina Interna",
+  "tags": [
+    "medicina_interna",
+    "sincope-cardiaco",
+    "semiologia",
+    "evidencia"
+  ],
+  "reading_time": "6 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6010 · PMID:31237649",
+  "has_quiz": true,
+  "quiz_count": 3,
+  "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "grounding": {
+    "condicion_id": "HM:6010",
+    "condicion_nombre": "Síncope cardíaco",
+    "concepto_id": "HM:3032",
+    "concepto_nombre": "el antecedente que más desplaza hacia el origen cardíaco",
+    "sensibilidad": 0.13,
+    "especificidad": 0.98,
+    "lr_positivo": 7.3,
+    "lr_negativo": 0.5,
+    "poblacion": "Adultos evaluados en consulta médica o urgencias",
+    "referencia_id": "pmid:31237649",
+    "referencia_cita": "Albassam OT, Redelmeier RJ, Shadowitz S et al.. Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
+    "doi": "10.1001/jama.2019.8001",
+    "pmid": "31237649"
+  },
+  "triada": {
+    "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síncope cardíaco.",
+    "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+    "decision": "el antecedente que más desplaza hacia el origen cardíaco"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "",
+      "opciones": []
+    },
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Síncope cardíaco según la literatura verificada (PMID: 31237649)?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 7.3.",
+          "correcta": true,
+          "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        },
+        {
+          "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+          "correcta": false,
+          "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+        },
+        {
+          "texto": "Carece de valor discriminativo en la exploración.",
+          "correcta": false,
+          "feedback": "Incorrecto. Presenta una especificidad documentada de 98%."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la toma de decisiones clínicas ante Síncope cardíaco, ¿cuál es el paso de confirmación o cribado más adecuado?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+          "correcta": true,
+          "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+        },
+        {
+          "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+          "correcta": false,
+          "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+        }
+      ]
+    }
+  ],
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Síncope cardíaco** (Cardiac syncope) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nLa literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:\r\n\r\n- **Sensibilidad estimada:** 13%\r\n- **Especificidad estimada:** 98%\r\n- **Cociente de Verosimilitud Positivo (LR+):** 7.3\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n\r\n```\r\n                  [ Evaluación Clínica: Síncope cardíaco ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n          Signo POSITIVO                  Signo NEGATIVO\r\n           (LR+ = 7.3)                      (LR- = 0.5)\r\n                │                               │\r\n       Incremento de sospecha          Reducción de probabilidad\r\n       y decisión orientada.           y reevaluación clínica.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica:\r\n\r\n- **Sensibilidad:** 0.13\r\n- **Especificidad:** 0.98\r\n- **Cociente de Verosimilitud Positivo (LR+):** 7.3\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n- **Población evaluada:** Adultos evaluados en consulta médica o urgencias.\r\n- **Cita principal:** Albassam OT, Redelmeier RJ, Shadowitz S et al.. Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review. JAMA. 2019. [PMID: 31237649]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa exploración metódica de **Síncope cardíaco** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias."
+}

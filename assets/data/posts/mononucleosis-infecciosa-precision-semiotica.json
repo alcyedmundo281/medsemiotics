@@ -1,0 +1,97 @@
+{
+  "id": "HM6003-01",
+  "slug": "mononucleosis-infecciosa-precision-semiotica",
+  "title": "Mononucleosis infecciosa: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+  "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "infectologia",
+  "category_label": "Infectología y Medicina Interna",
+  "tags": [
+    "infectologia",
+    "mononucleosis-infecciosa",
+    "semiologia",
+    "evidencia"
+  ],
+  "reading_time": "6 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6003 · PMID:27115266",
+  "has_quiz": true,
+  "quiz_count": 3,
+  "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "grounding": {
+    "condicion_id": "HM:6003",
+    "condicion_nombre": "Mononucleosis infecciosa",
+    "concepto_id": "HM:3001",
+    "concepto_nombre": "aumenta la probabilidad; por sí sola no confirma",
+    "sensibilidad": 0.7,
+    "especificidad": 0.87,
+    "lr_positivo": 3.1,
+    "lr_negativo": 0.5,
+    "poblacion": "Adultos evaluados en consulta médica o urgencias",
+    "referencia_id": "pmid:27115266",
+    "referencia_cita": "Ebell MH, Call M, Shinholser J et al.. Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review. JAMA. 2016.",
+    "doi": "10.1001/jama.2016.2111",
+    "pmid": "27115266"
+  },
+  "triada": {
+    "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Mononucleosis infecciosa.",
+    "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+    "decision": "aumenta la probabilidad; por sí sola no confirma"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "",
+      "opciones": []
+    },
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Mononucleosis infecciosa según la literatura verificada (PMID: 27115266)?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.1.",
+          "correcta": true,
+          "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        },
+        {
+          "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+          "correcta": false,
+          "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+        },
+        {
+          "texto": "Carece de valor discriminativo en la exploración.",
+          "correcta": false,
+          "feedback": "Incorrecto. Presenta una especificidad documentada de 87%."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la toma de decisiones clínicas ante Mononucleosis infecciosa, ¿cuál es el paso de confirmación o cribado más adecuado?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+          "correcta": true,
+          "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+        },
+        {
+          "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+          "correcta": false,
+          "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+        }
+      ]
+    }
+  ],
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Mononucleosis infecciosa** (Infectious mononucleosis) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nLa literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:\r\n\r\n- **Sensibilidad estimada:** 70%\r\n- **Especificidad estimada:** 87%\r\n- **Cociente de Verosimilitud Positivo (LR+):** 3.1\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n\r\n```\r\n                  [ Evaluación Clínica: Mononucleosis infecciosa ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n          Signo POSITIVO                  Signo NEGATIVO\r\n           (LR+ = 3.1)                      (LR- = 0.5)\r\n                │                               │\r\n       Incremento de sospecha          Reducción de probabilidad\r\n       y decisión orientada.           y reevaluación clínica.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica:\r\n\r\n- **Sensibilidad:** 0.7\r\n- **Especificidad:** 0.87\r\n- **Cociente de Verosimilitud Positivo (LR+):** 3.1\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n- **Población evaluada:** Adultos evaluados en consulta médica o urgencias.\r\n- **Cita principal:** Ebell MH, Call M, Shinholser J et al.. Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review. JAMA. 2016. [PMID: 27115266]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa exploración metódica de **Mononucleosis infecciosa** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias."
+}

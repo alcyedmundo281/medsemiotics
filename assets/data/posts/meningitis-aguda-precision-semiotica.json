@@ -1,0 +1,97 @@
+{
+  "id": "HM6004-01",
+  "slug": "meningitis-aguda-precision-semiotica",
+  "title": "Meningitis aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+  "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "neurologia",
+  "category_label": "Neurología",
+  "tags": [
+    "neurologia",
+    "meningitis-aguda",
+    "semiologia",
+    "evidencia"
+  ],
+  "reading_time": "6 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6004 · PMID:10411200",
+  "has_quiz": true,
+  "quiz_count": 3,
+  "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "grounding": {
+    "condicion_id": "HM:6004",
+    "condicion_nombre": "Meningitis aguda",
+    "concepto_id": "HM:3006",
+    "concepto_nombre": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda",
+    "sensibilidad": 1,
+    "especificidad": 0.54,
+    "lr_positivo": 2.2,
+    "lr_negativo": 0,
+    "poblacion": "Adultos evaluados en consulta médica o urgencias",
+    "referencia_id": "pmid:10411200",
+    "referencia_cita": "Attia J, Hatala R, Cook DJ et al.. The rational clinical examination. Does this adult patient have acute meningitis?. JAMA. 1999.",
+    "doi": "10.1001/jama.282.2.175",
+    "pmid": "10411200"
+  },
+  "triada": {
+    "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Meningitis aguda.",
+    "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
+    "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "",
+      "opciones": []
+    },
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Meningitis aguda según la literatura verificada (PMID: 10411200)?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 2.2.",
+          "correcta": true,
+          "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        },
+        {
+          "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+          "correcta": false,
+          "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+        },
+        {
+          "texto": "Carece de valor discriminativo en la exploración.",
+          "correcta": false,
+          "feedback": "Incorrecto. Presenta una especificidad documentada de 54%."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la toma de decisiones clínicas ante Meningitis aguda, ¿cuál es el paso de confirmación o cribado más adecuado?",
+      "opciones": [
+        {
+          "texto": "",
+          "correcta": false,
+          "feedback": ""
+        },
+        {
+          "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+          "correcta": true,
+          "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+        },
+        {
+          "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+          "correcta": false,
+          "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+        }
+      ]
+    }
+  ],
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Meningitis aguda** (Acute meningitis) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nLa literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:\r\n\r\n- **Sensibilidad estimada:** 100%\r\n- **Especificidad estimada:** 54%\r\n- **Cociente de Verosimilitud Positivo (LR+):** 2.2\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.0\r\n\r\n```\r\n                  [ Evaluación Clínica: Meningitis aguda ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n          Signo POSITIVO                  Signo NEGATIVO\r\n           (LR+ = 2.2)                      (LR- = 0.0)\r\n                │                               │\r\n       Incremento de sospecha          Reducción de probabilidad\r\n       y decisión orientada.           y reevaluación clínica.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica:\r\n\r\n- **Sensibilidad:** 1.0\r\n- **Especificidad:** 0.54\r\n- **Cociente de Verosimilitud Positivo (LR+):** 2.2\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.0\r\n- **Población evaluada:** Adultos evaluados en consulta médica o urgencias.\r\n- **Cita principal:** Attia J, Hatala R, Cook DJ et al.. The rational clinical examination. Does this adult patient have acute meningitis?. JAMA. 1999. [PMID: 10411200]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa exploración metódica de **Meningitis aguda** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias."
+}
