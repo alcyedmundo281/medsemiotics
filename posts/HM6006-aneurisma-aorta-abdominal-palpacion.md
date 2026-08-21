@@ -5,9 +5,9 @@ title: "Aneurisma de aorta abdominal: La precisión real de la palpación abdomi
 subtitle: "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible."
 date: "2026-08-21"
 author: "Dr. Alcy Torres"
-category: "gastroenterologia"
-category_label: "Gastroenterología"
-tags: ["aorta", "palpacion", "screening", "ecografia"]
+category: "vascular"
+category_label: "Medicina Vascular y Cirugía"
+tags: ["aorta", "palpacion", "screening", "ecografia", "medicina-interna"]
 reading_time: "5 min"
 difficulty: "Intermedio"
 grounding:

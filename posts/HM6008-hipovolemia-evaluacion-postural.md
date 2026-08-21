@@ -5,9 +5,9 @@ title: "Evaluación clínica de la hipovolemia: ¿Cuándo sirven los signos post
 subtitle: "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination."
 date: "2026-08-21"
 author: "Dr. Alcy Torres"
-category: "medicina_y_datos"
-category_label: "Medicina y Datos"
-tags: ["urgencias", "hemodinamia", "hipovolemia", "semiologia"]
+category: "urgencias"
+category_label: "Medicina de Urgencias y Críticos"
+tags: ["hemodinamia", "hipovolemia", "shock", "semiologia"]
 reading_time: "6 min"
 difficulty: "Intermedio"
 grounding:

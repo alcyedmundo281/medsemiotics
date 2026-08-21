@@ -5,9 +5,9 @@ title: "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electr
 subtitle: "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles."
 date: "2026-08-21"
 author: "Dr. Alcy Torres"
-category: "medicina_y_datos"
-category_label: "Medicina y Datos"
-tags: ["cardiologia", "urgencias", "electrocardiograma", "probabilidad"]
+category: "cardiologia"
+category_label: "Cardiología"
+tags: ["urgencias", "electrocardiograma", "isquemia", "probabilidad"]
 reading_time: "6 min"
 difficulty: "Intermedio"
 grounding:

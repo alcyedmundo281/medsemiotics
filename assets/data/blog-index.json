@@ -6,13 +6,14 @@
     "subtitle": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología",
+    "category": "vascular",
+    "category_label": "Medicina Vascular y Cirugía",
     "tags": [
       "aorta",
       "palpacion",
       "screening",
-      "ecografia"
+      "ecografia",
+      "medicina-interna"
     ],
     "reading_time": "5 min",
     "difficulty": "Intermedio",
@@ -28,12 +29,12 @@
     "subtitle": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
-    "category": "medicina_y_datos",
-    "category_label": "Medicina y Datos",
+    "category": "cardiologia",
+    "category_label": "Cardiología",
     "tags": [
-      "cardiologia",
       "urgencias",
       "electrocardiograma",
+      "isquemia",
       "probabilidad"
     ],
     "reading_time": "6 min",
@@ -50,12 +51,12 @@
     "subtitle": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
-    "category": "medicina_y_datos",
-    "category_label": "Medicina y Datos",
+    "category": "urgencias",
+    "category_label": "Medicina de Urgencias y Críticos",
     "tags": [
-      "urgencias",
       "hemodinamia",
       "hipovolemia",
+      "shock",
       "semiologia"
     ],
     "reading_time": "6 min",
@@ -72,8 +73,8 @@
     "subtitle": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
-    "category": "farmacoterapia",
-    "category_label": "Farmacoterapia",
+    "category": "infectologia",
+    "category_label": "Infectología y Atención Primaria",
     "tags": [
       "infecciosas",
       "faringitis",

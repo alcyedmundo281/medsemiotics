@@ -5,8 +5,8 @@ title: "Faringoamigdalitis aguda: Rendimiento semiótico del exudado y los crite
 subtitle: "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos."
 date: "2026-08-21"
 author: "Dr. Alcy Torres"
-category: "farmacoterapia"
-category_label: "Farmacoterapia"
+category: "infectologia"
+category_label: "Infectología y Atención Primaria"
 tags: ["infecciosas", "faringitis", "antibioticos", "centor", "urgencias"]
 reading_time: "5 min"
 difficulty: "Básico"

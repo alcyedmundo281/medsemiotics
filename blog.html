@@ -67,22 +67,10 @@
 
       <!-- Controls: Search & Category Pills -->
       <section class="mb-10 flex flex-col md:flex-row gap-4 md:items-center justify-between border-y border-stone-200 py-4">
-        <!-- Category Filter Pills -->
+        <!-- Category Filter Pills (Dynamically populated) -->
         <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 text-sm" id="categoryFilters">
           <button data-cat="all" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm">
-            Todos
-          </button>
-          <button data-cat="neurologia" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200">
-            Neurología
-          </button>
-          <button data-cat="gastroenterologia" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200">
-            Gastroenterología
-          </button>
-          <button data-cat="medicina_y_datos" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200">
-            Medicina y Datos
-          </button>
-          <button data-cat="farmacoterapia" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200">
-            Farmacoterapia
+            Todas las Especialidades
           </button>
         </div>
 
@@ -142,6 +130,7 @@
           const res = await fetch('assets/data/blog-index.json');
           if (!res.ok) throw new Error('No se pudo cargar el índice');
           allPosts = await res.json();
+          buildCategoryFilters();
           renderPosts();
         } catch (err) {
           console.error(err);
@@ -152,6 +141,32 @@
             </div>
           `;
         }
+      }
+
+      function buildCategoryFilters() {
+        const catContainer = document.getElementById('categoryFilters');
+        const categoriesMap = new Map();
+        allPosts.forEach(p => {
+          if (p.category && p.category_label) {
+            categoriesMap.set(p.category, p.category_label);
+          }
+        });
+
+        let html = `
+          <button data-cat="all" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
+            Todas las Especialidades
+          </button>
+        `;
+
+        categoriesMap.forEach((label, catKey) => {
+          html += `
+            <button data-cat="${catKey}" class="cat-pill px-3.5 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap">
+              ${label}
+            </button>
+          `;
+        });
+
+        catContainer.innerHTML = html;
       }
 
       function getCompletedState(slug) {
