@@ -18,6 +18,10 @@
   "grounding_badge": "HM:6013 · PMID:23982370",
   "has_quiz": true,
   "quiz_count": 3,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rotator_cuff_injury.svg/960px-Rotator_cuff_injury.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image_source": "https://commons.wikimedia.org/wiki/File%3ARotator%20cuff%20injury.svg",
+  "image_license": "CC BY-SA 4.0",
+  "image_title": "Rotator cuff injury.svg",
   "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
   "grounding": {
     "condicion_id": "HM:6013",

@@ -205,10 +205,21 @@
         grid.innerHTML = filtered.map(post => {
           const isCompleted = getCompletedState(post.slug);
           return `
-            <article class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-purple-300 card-hover flex flex-col justify-between group">
+            <article class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-purple-300 card-hover flex flex-col justify-between group overflow-hidden">
               <div>
+                ${post.featured_image ? `
+                  <a href="post.html?slug=${post.slug}" class="block mb-4 -mx-6 -mt-6 h-44 overflow-hidden bg-stone-100 relative border-b border-stone-100">
+                    <img src="${post.featured_image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                    ${post.image_license ? `
+                      <span class="absolute bottom-2 right-2 bg-stone-900/80 text-[10px] font-mono text-white px-2 py-0.5 rounded backdrop-blur-sm">
+                        ${post.image_license}
+                      </span>
+                    ` : ''}
+                  </a>
+                ` : ''}
+
                 <!-- Top Badges -->
-                <div class="flex items-center justify-between gap-2 mb-4 text-xs">
+                <div class="flex items-center justify-between gap-2 mb-3 text-xs">
                   <span class="inline-flex items-center gap-1 font-semibold text-purple-800 bg-purple-50 border border-purple-200/80 px-2.5 py-0.5 rounded-full">
                     ${post.category_label || 'Clínica'}
                   </span>
@@ -216,7 +227,7 @@
                 </div>
 
                 <!-- Title & Subtitle -->
-                <h2 class="text-xl font-bold text-stone-900 group-hover:text-purple-700 transition-colors leading-snug mb-3">
+                <h2 class="text-lg font-bold text-stone-900 group-hover:text-purple-700 transition-colors leading-snug mb-2">
                   <a href="post.html?slug=${post.slug}" class="focus:outline-none">
                     ${post.title}
                   </a>

@@ -138,14 +138,29 @@
           <p id="postSubtitle" class="text-lg sm:text-xl text-stone-600 leading-relaxed mb-6 font-normal">
             Subtítulo descriptivo
           </p>
-          <div class="flex items-center gap-4 text-xs sm:text-sm text-stone-500 pb-6 border-b border-stone-200">
-            <span id="postAuthor" class="font-semibold text-stone-900">Dr. Alcy Torres</span>
-            <span>•</span>
-            <time id="postDate">2026-08-20</time>
-            <span>•</span>
-            <span id="postDifficulty" class="px-2 py-0.5 rounded bg-stone-100 font-medium">Intermedio</span>
+          <div class="flex items-center justify-between text-sm text-stone-500 py-4 border-y border-stone-200">
+            <div class="flex items-center gap-2">
+              <span class="font-medium text-stone-900" id="postAuthor">Dr. Alcy Torres</span>
+              <span>•</span>
+              <time id="postDate" class="text-stone-500">Fecha</time>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-mono" id="postDifficulty">Intermedio</span>
+            </div>
           </div>
         </header>
+
+        <!-- Featured Clinical Image (Wikimedia Commons) -->
+        <figure id="featuredImageWrapper" class="mb-10 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-sm hidden">
+          <img id="postFeaturedImage" src="" alt="" class="w-full max-h-[440px] object-cover" />
+          <figcaption class="p-3 bg-stone-50 text-xs text-stone-500 flex flex-wrap items-center justify-between gap-2 border-t border-stone-200">
+            <span id="postImageTitle" class="font-medium text-stone-700">Ilustración clínica</span>
+            <span class="flex items-center gap-2">
+              <span id="postImageLicense" class="font-mono bg-stone-200 text-stone-700 px-2 py-0.5 rounded text-[11px]">Licencia</span>
+              <a id="postImageSource" href="#" target="_blank" rel="noopener" class="text-purple-700 hover:underline">Wikimedia Commons ↗</a>
+            </span>
+          </figcaption>
+        </figure>
 
         <!-- Semiotic Triad Visual Component -->
         <section class="mb-12 bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm">
@@ -325,6 +340,21 @@
         document.getElementById('postAuthor').textContent = currentPost.author || 'Dr. Alcy Torres';
         document.getElementById('postDate').textContent = currentPost.date || '';
         document.getElementById('postDifficulty').textContent = currentPost.difficulty || 'Intermedio';
+
+        // Featured Image
+        const imgWrapper = document.getElementById('featuredImageWrapper');
+        if (currentPost.featured_image) {
+          imgWrapper.classList.remove('hidden');
+          document.getElementById('postFeaturedImage').src = currentPost.featured_image;
+          document.getElementById('postFeaturedImage').alt = currentPost.title;
+          document.getElementById('postImageTitle').textContent = currentPost.image_title || currentPost.title;
+          document.getElementById('postImageLicense').textContent = currentPost.image_license || 'CC';
+          if (currentPost.image_source) {
+            document.getElementById('postImageSource').href = currentPost.image_source;
+          }
+        } else {
+          imgWrapper.classList.add('hidden');
+        }
 
         // Triada
         const t = currentPost.triada || {};

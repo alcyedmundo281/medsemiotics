@@ -18,6 +18,10 @@
   "grounding_badge": "HM:6001 · PMID:12345678",
   "has_quiz": true,
   "quiz_count": 3,
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
   "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
   "grounding": {
     "condicion_id": "HM:6001",

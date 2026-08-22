@@ -18,6 +18,10 @@
   "grounding_badge": "HM:6004 · PMID:10411200",
   "has_quiz": true,
   "quiz_count": 2,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Kernig%27s_sign_cerebrospinal_meningitis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image_source": "https://commons.wikimedia.org/wiki/File%3AKernig%27s%20sign%20cerebrospinal%20meningitis.jpg",
+  "image_license": "Public domain",
+  "image_title": "Kernig's sign cerebrospinal meningitis.jpg",
   "excerpt": "Análisis semiótico y discriminación bayesiana del jolt accentuation sign en el paciente con fiebre y cefalea.",
   "grounding": {
     "condicion_id": "HM:6004",

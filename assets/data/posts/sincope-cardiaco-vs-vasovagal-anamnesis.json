@@ -19,6 +19,10 @@
   "grounding_badge": "HM:6010 · PMID:31237649",
   "has_quiz": true,
   "quiz_count": 2,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Atrial_Fibrillation_in_two_leads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "image_source": "https://commons.wikimedia.org/wiki/File%3AAtrial%20Fibrillation%20in%20two%20leads.jpg",
+  "image_license": "CC BY-SA 4.0",
+  "image_title": "Atrial Fibrillation in two leads.jpg",
   "excerpt": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination.",
   "grounding": {
     "condicion_id": "HM:6010",

@@ -19,6 +19,10 @@
     "grounding_badge": "HM:6001 · PMID:12345678",
     "has_quiz": true,
     "quiz_count": 3,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
     "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
@@ -41,6 +45,10 @@
     "grounding_badge": "HM:6002 · PMID:12345678",
     "has_quiz": true,
     "quiz_count": 3,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Causes_of_irritable_bowel_syndrome_%28bar_charts%29.png/960px-Causes_of_irritable_bowel_syndrome_%28bar_charts%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3ACauses%20of%20irritable%20bowel%20syndrome%20%28bar%20charts%29.png",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Causes of irritable bowel syndrome (bar charts).png",
     "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
@@ -64,6 +72,10 @@
     "grounding_badge": "HM:6003 · PMID:27115266",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Atypical_lymphocytes_2.jpg/960px-Atypical_lymphocytes_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AAtypical%20lymphocytes%202.jpg",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Atypical lymphocytes 2.jpg",
     "excerpt": "De la exploración de la cadena cervical posterior al frotis de sangre periférica según la evidencia de JAMA."
   },
   {
@@ -87,6 +99,10 @@
     "grounding_badge": "HM:6005 · PMID:24938565",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg/960px-Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AChest%20radiograph%20of%20a%20lung%20with%20Kerley%20B%20lines.jpg",
+    "image_license": "CC0",
+    "image_title": "Chest radiograph of a lung with Kerley B lines.jpg",
     "excerpt": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos."
   },
   {
@@ -110,6 +126,10 @@
     "grounding_badge": "HM:6006 · PMID:9892455",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg/960px-Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AContrast-enhanced%20CT%20scan%20demonstrating%20abdominal%20aortic%20aneurysm.jpg",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Contrast-enhanced CT scan demonstrating abdominal aortic aneurysm.jpg",
     "excerpt": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible."
   },
   {
@@ -132,6 +152,10 @@
     "grounding_badge": "HM:6007 · PMID:26547467",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/8/89/ST_segment_elevation_and_depression.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AST%20segment%20elevation%20and%20depression.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "ST segment elevation and depression.jpg",
     "excerpt": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles."
   },
   {
@@ -154,6 +178,10 @@
     "grounding_badge": "HM:6008 · PMID:10086438",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg/960px-Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3ABlood%20pressure%20measurement%20using%20an%20aneroid%20sphygmomanometer.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Blood pressure measurement using an aneroid sphygmomanometer.jpg",
     "excerpt": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination."
   },
   {
@@ -177,6 +205,10 @@
     "grounding_badge": "HM:6009 · PMID:11147989",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Pharyngitis%2C_COVID-19.jpg/960px-Pharyngitis%2C_COVID-19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3APharyngitis%2C%20COVID-19.jpg",
+    "image_license": "CC0",
+    "image_title": "Pharyngitis, COVID-19.jpg",
     "excerpt": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos."
   },
   {
@@ -200,6 +232,10 @@
     "grounding_badge": "HM:6010 · PMID:31237649",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Atrial_Fibrillation_in_two_leads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AAtrial%20Fibrillation%20in%20two%20leads.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Atrial Fibrillation in two leads.jpg",
     "excerpt": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination."
   },
   {
@@ -222,6 +258,10 @@
     "grounding_badge": "HM:6011 · PMID:25027143",
     "has_quiz": true,
     "quiz_count": 3,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/HI-Virus_Replication_Cycle_%285057022555%29.jpg/960px-HI-Virus_Replication_Cycle_%285057022555%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AHI-Virus%20Replication%20Cycle%20%285057022555%29.jpg",
+    "image_license": "CC BY 2.0",
+    "image_title": "HI-Virus Replication Cycle (5057022555).jpg",
     "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
@@ -244,6 +284,10 @@
     "grounding_badge": "HM:6012 · PMID:31846019",
     "has_quiz": true,
     "quiz_count": 3,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hip_joint_pain.svg/960px-Hip_joint_pain.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AHip%20joint%20pain.svg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Hip joint pain.svg",
     "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
@@ -266,6 +310,10 @@
     "grounding_badge": "HM:6013 · PMID:23982370",
     "has_quiz": true,
     "quiz_count": 3,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rotator_cuff_injury.svg/960px-Rotator_cuff_injury.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3ARotator%20cuff%20injury.svg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Rotator cuff injury.svg",
     "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
@@ -288,6 +336,10 @@
     "grounding_badge": "HM:6014 · PMID:23982370",
     "has_quiz": true,
     "quiz_count": 3,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/MRI._Subacromial_impingement..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AMRI.%20Subacromial%20impingement..jpg",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "MRI. Subacromial impingement..jpg",
     "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
   },
   {
@@ -310,6 +362,10 @@
     "grounding_badge": "HM:6015 · PMID:26474316",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Paralysis_agitans_%281893%2C_after_St._Leger%29.jpg/960px-Paralysis_agitans_%281893%2C_after_St._Leger%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AParalysis%20agitans%20%281893%2C%20after%20St.%20Leger%29.jpg",
+    "image_license": "Public domain",
+    "image_title": "Paralysis agitans (1893, after St. Leger).jpg",
     "excerpt": "Del parkinsonismo motor nuclear a la búsqueda sistemática de banderas rojas y criterios de apoyo."
   },
   {
@@ -332,6 +388,10 @@
     "grounding_badge": "HM:6004 · PMID:10411200",
     "has_quiz": true,
     "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Kernig%27s_sign_cerebrospinal_meningitis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AKernig%27s%20sign%20cerebrospinal%20meningitis.jpg",
+    "image_license": "Public domain",
+    "image_title": "Kernig's sign cerebrospinal meningitis.jpg",
     "excerpt": "Análisis semiótico y discriminación bayesiana del jolt accentuation sign en el paciente con fiebre y cefalea."
   }
 ]

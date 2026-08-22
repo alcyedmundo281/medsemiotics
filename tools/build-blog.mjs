@@ -195,10 +195,23 @@ function buildBlog() {
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
   const postsIndex = [];
 
+  // Load verified Wikimedia Commons images
+  let topicImages = {};
+  const imagesJsonPath = path.join(outputDataDir, 'topic-images.json');
+  if (fs.existsSync(imagesJsonPath)) {
+    try {
+      topicImages = JSON.parse(fs.readFileSync(imagesJsonPath, 'utf-8'));
+    } catch (e) {}
+  }
+
   for (const file of files) {
     const filePath = path.join(postsDir, file);
     const content = fs.readFileSync(filePath, 'utf-8');
     const { data, content: markdownBody } = parseFrontmatter(content);
+
+    // Match image from topicImages
+    const condKey = data.grounding && data.grounding.condicion_id ? data.grounding.condicion_id.replace(':', '') : file.split('-')[0];
+    const imgData = topicImages[condKey] || null;
 
     // Strict Grounding Validation
     if (!data.grounding || !data.grounding.condicion_id) {
@@ -223,6 +236,10 @@ function buildBlog() {
       grounding_badge: data.grounding ? `${data.grounding.condicion_id} · PMID:${data.grounding.pmid || ''}` : 'Verificado',
       has_quiz: Boolean(data.autoevaluacion && data.autoevaluacion.length > 0),
       quiz_count: data.autoevaluacion ? data.autoevaluacion.length : 0,
+      featured_image: data.image || (imgData ? (imgData.thumb || imgData.url) : null),
+      image_source: imgData ? imgData.source : null,
+      image_license: imgData ? imgData.license : null,
+      image_title: imgData ? imgData.title.replace('File:', '') : null,
       excerpt: data.subtitle || markdownBody.slice(0, 160).replace(/[#*`_]/g, '') + '...'
     };
 

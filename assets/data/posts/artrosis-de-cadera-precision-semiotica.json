@@ -18,6 +18,10 @@
   "grounding_badge": "HM:6012 · PMID:31846019",
   "has_quiz": true,
   "quiz_count": 3,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hip_joint_pain.svg/960px-Hip_joint_pain.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image_source": "https://commons.wikimedia.org/wiki/File%3AHip%20joint%20pain.svg",
+  "image_license": "CC BY-SA 4.0",
+  "image_title": "Hip joint pain.svg",
   "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
   "grounding": {
     "condicion_id": "HM:6012",
