@@ -2,7 +2,7 @@
   "id": "HM6011-01",
   "slug": "infeccion-precoz-por-vih-precision-semiotica",
   "title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-  "subtitle": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "subtitle": "Análisis bayesiano de úlceras genitales y su impacto en la toma de decisiones clínicas.",
   "date": "2026-08-21",
   "author": "Dr. Alcy Torres",
   "category": "infectologia",
@@ -17,51 +17,39 @@
   "difficulty": "Intermedio",
   "grounding_badge": "HM:6011 · PMID:25027143",
   "has_quiz": true,
-  "quiz_count": 3,
+  "quiz_count": 2,
   "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/HI-Virus_Replication_Cycle_%285057022555%29.jpg/960px-HI-Virus_Replication_Cycle_%285057022555%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "image_source": "https://commons.wikimedia.org/wiki/File%3AHI-Virus%20Replication%20Cycle%20%285057022555%29.jpg",
   "image_license": "CC BY 2.0",
   "image_title": "HI-Virus Replication Cycle (5057022555).jpg",
-  "excerpt": "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia.",
+  "excerpt": "Análisis bayesiano de úlceras genitales y su impacto en la toma de decisiones clínicas.",
   "grounding": {
     "condicion_id": "HM:6011",
     "condicion_nombre": "Infección precoz por VIH",
     "concepto_id": "HM:3039",
-    "concepto_nombre": "el síntoma que más aumenta la probabilidad",
-    "sensibilidad": 0.7,
-    "especificidad": 0.85,
+    "concepto_nombre": "Úlceras genitales",
     "lr_positivo": 5.4,
-    "lr_negativo": 0.5,
-    "poblacion": "Adultos evaluados en consulta médica o urgencias",
+    "lr_negativo": null,
+    "poblacion": "no especificada en la fuente citada",
     "referencia_id": "pmid:25027143",
     "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
     "doi": "10.1001/jama.2014.5954",
     "pmid": "25027143"
   },
   "triada": {
-    "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
-    "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-    "decision": "el síntoma que más aumenta la probabilidad"
+    "significante": "Úlceras genitales, evaluado en: no especificada en la fuente citada.",
+    "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+    "decision": "Úlceras genitales — el síntoma que más aumenta la probabilidad"
   },
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "",
-      "opciones": []
-    },
-    {
-      "id": "q1",
-      "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Infección precoz por VIH según la literatura verificada (PMID: 25027143)?",
+      "pregunta": "¿Cuál es el valor diagnóstico de úlceras genitales en Infección precoz por VIH según la literatura verificada (PMID: 25027143)?",
       "opciones": [
         {
-          "texto": "",
-          "correcta": false,
-          "feedback": ""
-        },
-        {
-          "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 5.4.",
+          "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 5.4, verificado contra la fuente citada.",
           "correcta": true,
-          "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+          "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
         },
         {
           "texto": "Descarta en un 100% la patología independientemente de otros signos.",
@@ -71,7 +59,7 @@
         {
           "texto": "Carece de valor discriminativo en la exploración.",
           "correcta": false,
-          "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
+          "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
         }
       ]
     },
@@ -79,11 +67,6 @@
       "id": "q2",
       "pregunta": "En la toma de decisiones clínicas ante Infección precoz por VIH, ¿cuál es el paso de confirmación o cribado más adecuado?",
       "opciones": [
-        {
-          "texto": "",
-          "correcta": false,
-          "feedback": ""
-        },
         {
           "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
           "correcta": true,
@@ -97,5 +80,5 @@
       ]
     }
   ],
-  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Infección precoz por VIH** (Early HIV infection) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nLa literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:\r\n\r\n- **Sensibilidad estimada:** 70%\r\n- **Especificidad estimada:** 85%\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.4\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n\r\n```\r\n                  [ Evaluación Clínica: Infección precoz por VIH ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n          Signo POSITIVO                  Signo NEGATIVO\r\n           (LR+ = 5.4)                      (LR- = 0.5)\r\n                │                               │\r\n       Incremento de sospecha          Reducción de probabilidad\r\n       y decisión orientada.           y reevaluación clínica.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica:\r\n\r\n- **Sensibilidad:** 0.7\r\n- **Especificidad:** 0.85\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.4\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.5\r\n- **Población evaluada:** Adultos evaluados en consulta médica o urgencias.\r\n- **Cita principal:** Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014. [PMID: 25027143]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa exploración metódica de **Infección precoz por VIH** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias."
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Infección precoz por VIH** (Early HIV infection) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n> **¿Qué es un cociente de verosimilitud (LR)?** Indica cuánto cambia la probabilidad de una enfermedad cuando un hallazgo está presente (LR+) o ausente (LR-). Como regla práctica (McGee S. *Simplifying likelihood ratios*. J Gen Intern Med. 2002), un LR+ ≥ 10 o un LR- ≤ 0.1 suele bastar por sí solo para confirmar o descartar; valores entre 0.5 y 2 apenas cambian la sospecha clínica.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nEl hallazgo con mejor rendimiento documentado para **Infección precoz por VIH** es **Úlceras genitales**. La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros:\r\n\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.4 — cambia moderadamente la probabilidad: evidencia útil\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\n- **Hallazgo evaluado:** Úlceras genitales\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.4 — cambia moderadamente la probabilidad: evidencia útil\r\n- **Población evaluada:** no especificada en la fuente citada.\r\n- **Cita principal:** Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014. [PMID: 25027143]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nÚlceras genitales — el síntoma que más aumenta la probabilidad"
 }

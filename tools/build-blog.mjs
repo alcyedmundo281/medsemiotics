@@ -142,7 +142,7 @@ function parseAutoevaluacionBlock(yamlText) {
   if (!autoMatch) return [];
   const raw = autoMatch[1];
   const items = [];
-  const questionBlocks = raw.split(/\n\s*-\s*id:\s*/).filter(Boolean);
+  const questionBlocks = raw.split(/\n\s*-\s*id:\s*/).filter(s => s.trim());
 
   let fallbackIdx = 1;
   for (const qb of questionBlocks) {
@@ -158,7 +158,7 @@ function parseAutoevaluacionBlock(yamlText) {
 
     const opcMatch = qb.match(/opciones:([\s\S]*?)$/);
     if (opcMatch) {
-      const opcBlocks = opcMatch[1].split(/\n\s*-\s*texto:\s*/).filter(Boolean);
+      const opcBlocks = opcMatch[1].split(/\n\s*-\s*texto:\s*/).filter(s => s.trim());
       for (const ob of opcBlocks) {
         const txtMatch = ob.match(/^["']?([\s\S]*?)["']?(?=\n\s*correcta:|$)/);
         const corrMatch = ob.match(/correcta:\s*(true|false)/);

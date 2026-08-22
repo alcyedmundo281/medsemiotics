@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Motor de Generación y Publicación de Temas Clínicos para MedSemiotics.
+"""Motor de Generación y Publicación de Temas Clínicos para MedSemiotics.
 ---------------------------------------------------------------------
 Conecta directamente con medsemiotics-db (GitHub / local), extrae entidades
 validadas (conceptos, condiciones, referencias) y genera publicaciones
@@ -11,6 +10,11 @@ Uso:
   python tools/generate_topic.py --condition HM6011
   python tools/generate_topic.py --condition HM6012
   python tools/generate_topic.py --sync-all
+
+Regla que este script no rompe: si una condición no tiene ningún signo con
+estado_lr: medido y referencia resoluble, NO se genera un post con números de
+relleno. Se informa y se omite. Un post con un cociente y un PMID inventados
+es peor que no tener post.
 """
 
 import argparse
@@ -65,6 +69,40 @@ SPECIALTY_MAP = {
     "cadera": ("reumatologia", "Reumatología y Traumatología"),
     "manguito": ("traumatologia", "Traumatología y Medicina Deportiva"),
 }
+
+# Bandas de interpretación de McGee S. Simplifying likelihood ratios.
+# J Gen Intern Med. 2002;17(8):646-9. Es una convención general de lectura,
+# no un dato de la condición: se cita aparte y nunca sustituye al LR con ref.
+LR_POS_BANDS = [
+    (10, "cambia mucho la probabilidad: suele bastar por sí solo para confirmar"),
+    (5, "cambia moderadamente la probabilidad: evidencia útil"),
+    (2, "cambia poco la probabilidad: evidencia débil"),
+    (0, "prácticamente no cambia la probabilidad"),
+]
+LR_NEG_BANDS = [
+    (0.1, "cambia mucho la probabilidad: suele bastar por sí solo para descartar"),
+    (0.2, "cambia moderadamente la probabilidad"),
+    (0.5, "cambia poco la probabilidad"),
+    (float("inf"), "prácticamente no cambia la probabilidad"),
+]
+
+
+def interpret_lr_positive(lr):
+    if not isinstance(lr, (int, float)):
+        return None
+    for umbral, texto in LR_POS_BANDS:
+        if lr >= umbral:
+            return texto
+    return LR_POS_BANDS[-1][1]
+
+
+def interpret_lr_negative(lr):
+    if not isinstance(lr, (int, float)):
+        return None
+    for umbral, texto in LR_NEG_BANDS:
+        if lr <= umbral:
+            return texto
+    return LR_NEG_BANDS[-1][1]
 
 
 def fetch_url_text(url: str) -> str:
@@ -126,6 +164,51 @@ def fetch_reference_yaml(ref_id: str) -> dict:
         return {}
 
 
+_CONCEPT_LIST_CACHE = None
+_CONCEPT_CACHE = {}
+
+
+def list_remote_concepts():
+    """Obtiene la lista de conceptos disponibles en medsemiotics-db. Cacheado
+    en memoria porque --sync-all resuelve decenas de conceptos por corrida."""
+    global _CONCEPT_LIST_CACHE
+    if _CONCEPT_LIST_CACHE is not None:
+        return _CONCEPT_LIST_CACHE
+    url = f"{DB_API_CONTENTS}/conceptos"
+    try:
+        items = fetch_url_json(url)
+        _CONCEPT_LIST_CACHE = sorted(item["name"] for item in items if item["name"].endswith(".yaml"))
+    except Exception as e:
+        print(f"[!] Error al listar conceptos remotos: {e}")
+        _CONCEPT_LIST_CACHE = []
+    return _CONCEPT_LIST_CACHE
+
+
+def fetch_concept_yaml(concepto_id: str) -> dict:
+    """Resuelve un ID de concepto (ej. 'HM:3039') a su registro real en
+    conceptos/*.yaml. Sin esto, el post solo tiene el ID en bruto y ninguna
+    forma de nombrar el hallazgo del que habla."""
+    if not concepto_id:
+        return {}
+    if concepto_id in _CONCEPT_CACHE:
+        return _CONCEPT_CACHE[concepto_id]
+    clean_id = concepto_id.replace(":", "").replace(" ", "").lower()
+    conceptos = list_remote_concepts()
+    match = next((c for c in conceptos if c.lower().startswith(clean_id + "-")), None)
+    data = {}
+    if match:
+        url = f"{DB_RAW_BASE}/conceptos/{match}"
+        try:
+            raw = fetch_url_text(url)
+            data = yaml.safe_load(raw) or {}
+        except Exception as e:
+            print(f"[!] Advertencia: no se pudo cargar concepto {concepto_id}: {e}")
+    else:
+        print(f"[!] Advertencia: concepto {concepto_id} no encontrado en medsemiotics-db")
+    _CONCEPT_CACHE[concepto_id] = data
+    return data
+
+
 def determine_specialty(term: str, signs: list) -> tuple:
     """Asigna la especialidad médica real según el término y signos."""
     text_to_check = (term + " " + " ".join([str(s) for s in signs])).lower()
@@ -148,58 +231,142 @@ def generate_slug(text: str) -> str:
     return re.sub(r"[-\s]+", "-", text).strip("-")
 
 
-def create_post_markdown(cond_data: dict, filename: str) -> str:
-    """Genera el contenido Markdown completo con Frontmatter enriquecido."""
+def select_main_sign(signs: list):
+    """Elige el signo más discriminativo entre los medidos con LR y ref
+    resoluble. Nunca devuelve un signo sin LR real: la condición puede no
+    tener ninguno todavía, y en ese caso no hay post que generar."""
+    candidates = []
+    for s in signs:
+        if not isinstance(s, dict) or s.get("estado_lr") != "medido":
+            continue
+        lr_pos_block = s.get("lr_positivo") or {}
+        lr_neg_block = s.get("lr_negativo") or {}
+        lr_pos = lr_pos_block.get("valor")
+        lr_neg = lr_neg_block.get("valor")
+        ref = lr_pos_block.get("ref") or lr_neg_block.get("ref")
+        if not ref or (lr_pos is None and lr_neg is None):
+            continue
+        strength = 0
+        if isinstance(lr_pos, (int, float)):
+            strength = max(strength, lr_pos)
+        if isinstance(lr_neg, (int, float)) and lr_neg > 0:
+            strength = max(strength, 1 / lr_neg)
+        candidates.append((strength, s))
+    if not candidates:
+        return None
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    return candidates[0][1]
+
+
+def create_post_markdown(cond_data: dict, filename: str):
+    """Genera el contenido Markdown completo con Frontmatter enriquecido.
+
+    Devuelve (None, None, motivo) si la condición no tiene una base
+    verificable para un post cuantitativo: eso no es un error a silenciar
+    con valores de relleno, es información para quien decide qué publicar.
+    """
     cond_id = cond_data.get("id", "HM:XXXX")
     term = cond_data.get("termino", "Condición Clínica")
     term_en = cond_data.get("termino_en", "")
     signs = cond_data.get("signos", []) or []
 
-    # Extraer el signo principal medido
-    main_sign = None
-    ref_data = {}
-    for s in signs:
-        if isinstance(s, dict) and s.get("estado_lr") == "medido":
-            main_sign = s
-            ref_key = s.get("lr_positivo", {}).get("ref") or s.get("lr_negativo", {}).get("ref")
-            if ref_key:
-                ref_data = fetch_reference_yaml(ref_key)
-            break
+    main_sign = select_main_sign(signs)
+    if main_sign is None:
+        return None, None, (
+            "sin signos con estado_lr: medido y referencia resoluble — "
+            "no hay cociente verificado sobre el que construir el post"
+        )
 
-    if not main_sign and signs and isinstance(signs[0], dict):
-        main_sign = signs[0]
+    lr_pos_block = main_sign.get("lr_positivo") or {}
+    lr_neg_block = main_sign.get("lr_negativo") or {}
+    lr_pos = lr_pos_block.get("valor")
+    lr_neg = lr_neg_block.get("valor")
+    ref_key = lr_pos_block.get("ref") or lr_neg_block.get("ref")
 
-    # Datos cuantitativos con fallback estricto
-    lr_pos = main_sign.get("lr_positivo", {}).get("valor", 3.0) if main_sign else 3.0
-    lr_neg = main_sign.get("lr_negativo", {}).get("valor", 0.5) if main_sign else 0.5
-    sens = main_sign.get("sensibilidad", 0.70) if main_sign else 0.70
-    spec = main_sign.get("especificidad", 0.85) if main_sign else 0.85
-    concept_id = main_sign.get("concepto", "HM:3000") if main_sign else "HM:3000"
-    poblacion = main_sign.get("poblacion", "Adultos evaluados en consulta médica o urgencias") if main_sign else "Adultos evaluados en consulta médica"
+    ref_data = fetch_reference_yaml(ref_key)
+    pmid = (ref_data.get("identificadores") or {}).get("pmid") or ref_data.get("pmid")
+    if not ref_data or not pmid:
+        return None, None, f"la referencia {ref_key} no resolvió contra medsemiotics-db"
 
-    # Referencias
-    pmid = ref_data.get("identificadores", {}).get("pmid") or ref_data.get("pmid") or "12345678"
-    doi = ref_data.get("identificadores", {}).get("doi") or ref_data.get("doi") or "10.1001/jama.evidence"
-    authors = ref_data.get("autores", ["Investigadores Clínicos"])
+    concept_data = fetch_concept_yaml(main_sign.get("concepto"))
+    concept_termino = concept_data.get("termino") or main_sign.get("concepto") or "hallazgo no identificado"
+    concept_termino_en = concept_data.get("termino_en") or ""
+
+    # Sensibilidad/especificidad: solo si la condición las publica. Un
+    # número de relleno aquí es indistinguible de uno verificado para
+    # quien lee, así que se omite en vez de inventarse.
+    sens = main_sign.get("sensibilidad")
+    spec = main_sign.get("especificidad")
+
+    poblacion = main_sign.get("poblacion")
+    if not poblacion:
+        base = cond_data.get("probabilidad_base")
+        if isinstance(base, dict):
+            poblacion = base.get("poblacion")
+    poblacion = poblacion or "no especificada en la fuente citada"
+
+    doi = (ref_data.get("identificadores") or {}).get("doi") or ref_data.get("doi") or ""
+    authors = ref_data.get("autores") or ["Investigadores Clínicos"]
     author_str = ", ".join(authors[:3]) + (" et al." if len(authors) > 3 else "")
-    journal = ref_data.get("publicacion", "JAMA")
-    year = ref_data.get("anio", 2020)
-    title_ref = ref_data.get("titulo", f"Clinical examination of {term_en or term}")
+    journal = ref_data.get("publicacion", "")
+    year = ref_data.get("anio", "")
+    title_ref = ref_data.get("titulo", "")
     citation = f"{author_str}. {title_ref}. {journal}. {year}."
 
     category, category_label = determine_specialty(term, signs)
     slug = f"{generate_slug(term)}-precision-semiotica"
     post_id = cond_id.replace(":", "") + "-01"
 
-    # Plantilla de Triada y Decisión
-    sign_name = main_sign.get("decision", f"Hallazgo clínico en {term}") if main_sign else f"Manifestación de {term}"
-    decision_text = main_sign.get("decision", f"Evaluación semiótica orientadora (LR+ {lr_pos}); correlacionar con contexto clínico integral.") if main_sign else "Evaluación clínica integral."
+    # Interpretación de magnitud (McGee 2002), no del estudio: se etiqueta
+    # como tal en el propio texto para no mezclarla con el dato verificado.
+    interp_pos = interpret_lr_positive(lr_pos)
+    interp_neg = interpret_lr_negative(lr_neg)
+
+    decision_bits = []
+    if main_sign.get("decision"):
+        decision_bits.append(main_sign["decision"].strip())
+    else:
+        if interp_pos:
+            decision_bits.append(f"si está presente, {interp_pos} (LR+ {lr_pos})")
+        if interp_neg:
+            decision_bits.append(f"si está ausente, {interp_neg} (LR- {lr_neg})")
+    decision_text = f"{concept_termino} — " + "; ".join(decision_bits) if decision_bits else concept_termino
+
+    significado = main_sign.get("advertencia") or (
+        "La fuente no describe el mecanismo fisiopatológico de este hallazgo; "
+        "su valor aquí es estadístico (cociente de verosimilitud), no explicativo."
+    )
+
+    significante = f"{concept_termino}"
+    if concept_termino_en:
+        significante += f" ({concept_termino_en})"
+    significante += f", evaluado en: {poblacion}."
+
+    lr_pos_str = f"{lr_pos}" if lr_pos is not None else "no medido"
+    lr_neg_str = f"{lr_neg}" if lr_neg is not None else "no medido"
+
+    sens_line = f'\n  sensibilidad: {sens}' if sens is not None else ""
+    spec_line = f'\n  especificidad: {spec}' if spec is not None else ""
+
+    # Cuerpo: bullets de rendimiento solo con lo que la fuente publica.
+    sens_bullet = f"- **Sensibilidad estimada:** {int(sens * 100)}%\n" if isinstance(sens, (int, float)) else ""
+    spec_bullet = f"- **Especificidad estimada:** {int(spec * 100)}%\n" if isinstance(spec, (int, float)) else ""
+    lr_pos_bullet = f"- **Cociente de Verosimilitud Positivo (LR+):** {lr_pos_str}" + (f" — {interp_pos}" if interp_pos else "") + "\n" if lr_pos is not None else ""
+    lr_neg_bullet = f"- **Cociente de Verosimilitud Negativo (LR-):** {lr_neg_str}" + (f" — {interp_neg}" if interp_neg else "") + "\n" if lr_neg is not None else ""
+
+    # Pregunta 1 del quiz: opción sobre especificidad solo si hay una cifra real.
+    if isinstance(spec, (int, float)):
+        q1_wrong_feedback = f"Incorrecto. Presenta una especificidad documentada de {int(spec * 100)}%."
+    else:
+        q1_wrong_feedback = "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+
+    lr_pos_for_q1 = f"{lr_pos}" if lr_pos is not None else lr_neg_str
 
     content = f"""---
 id: "{post_id}"
 slug: "{slug}"
 title: "{term}: Precisión diagnóstica y rendimiento de los hallazgos semiológicos"
-subtitle: "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+subtitle: "Análisis bayesiano de {concept_termino.lower()} y su impacto en la toma de decisiones clínicas."
 date: "2026-08-21"
 author: "Dr. Alcy Torres"
 category: "{category}"
@@ -210,12 +377,10 @@ difficulty: "Intermedio"
 grounding:
   condicion_id: "{cond_id}"
   condicion_nombre: "{term}"
-  concepto_id: "{concept_id}"
-  concepto_nombre: "{sign_name}"
-  sensibilidad: {sens}
-  especificidad: {spec}
-  lr_positivo: {lr_pos}
-  lr_negativo: {lr_neg}
+  concepto_id: "{main_sign.get('concepto', 'HM:0000')}"
+  concepto_nombre: "{concept_termino}"{sens_line}{spec_line}
+  lr_positivo: {lr_pos if lr_pos is not None else 'null'}
+  lr_negativo: {lr_neg if lr_neg is not None else 'null'}
   poblacion: "{poblacion}"
   referencia_id: "pmid:{pmid}"
   referencia_cita: "{citation}"
@@ -223,23 +388,23 @@ grounding:
   pmid: "{pmid}"
 
 triada:
-  significante: "Manifestación física y hallazgo exploratorio cardinal evaluado en {term}."
-  significado: "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular."
+  significante: "{significante}"
+  significado: "{significado}"
   decision: "{decision_text}"
 
 autoevaluacion:
   - id: "q1"
-    pregunta: "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en {term} según la literatura verificada (PMID: {pmid})?"
+    pregunta: "¿Cuál es el valor diagnóstico de {concept_termino.lower()} en {term} según la literatura verificada (PMID: {pmid})?"
     opciones:
-      - texto: "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de {lr_pos}."
+      - texto: "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de {lr_pos_for_q1}, verificado contra la fuente citada."
         correcta: true
-        feedback: "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        feedback: "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
       - texto: "Descarta en un 100% la patología independientemente de otros signos."
         correcta: false
         feedback: "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
       - texto: "Carece de valor discriminativo en la exploración."
         correcta: false
-        feedback: "Incorrecto. Presenta una especificidad documentada de {int(spec*100)}%."
+        feedback: "{q1_wrong_feedback}"
 
   - id: "q2"
     pregunta: "En la toma de decisiones clínicas ante {term}, ¿cuál es el paso de confirmación o cribado más adecuado?"
@@ -256,49 +421,30 @@ autoevaluacion:
 
 El abordaje diagnóstico de **{term}** ({term_en}) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.
 
+> **¿Qué es un cociente de verosimilitud (LR)?** Indica cuánto cambia la probabilidad de una enfermedad cuando un hallazgo está presente (LR+) o ausente (LR-). Como regla práctica (McGee S. *Simplifying likelihood ratios*. J Gen Intern Med. 2002), un LR+ ≥ 10 o un LR- ≤ 0.1 suele bastar por sí solo para confirmar o descartar; valores entre 0.5 y 2 apenas cambian la sospecha clínica.
+
 ---
 
 ## Semiología y Rendimiento Diagnóstico
 
-La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:
+El hallazgo con mejor rendimiento documentado para **{term}** es **{concept_termino}**. La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros:
 
-- **Sensibilidad estimada:** {int(sens*100)}%
-- **Especificidad estimada:** {int(spec*100)}%
-- **Cociente de Verosimilitud Positivo (LR+):** {lr_pos}
-- **Cociente de Verosimilitud Negativo (LR-):** {lr_neg}
-
-```
-                  [ Evaluación Clínica: {term} ]
-                                │
-                ┌───────────────┴───────────────┐
-                ▼                               ▼
-          Signo POSITIVO                  Signo NEGATIVO
-           (LR+ = {lr_pos})                      (LR- = {lr_neg})
-                │                               │
-       Incremento de sospecha          Reducción de probabilidad
-       y decisión orientada.           y reevaluación clínica.
-```
-
+{sens_bullet}{spec_bullet}{lr_pos_bullet}{lr_neg_bullet}
 ---
 
 ## Evidencia Cuantitativa y Fuentes
 
-Parámetros diagnósticos validados en la literatura médica:
-
-- **Sensibilidad:** {sens}
-- **Especificidad:** {spec}
-- **Cociente de Verosimilitud Positivo (LR+):** {lr_pos}
-- **Cociente de Verosimilitud Negativo (LR-):** {lr_neg}
-- **Población evaluada:** {poblacion}.
+- **Hallazgo evaluado:** {concept_termino}
+{sens_bullet}{spec_bullet}{lr_pos_bullet}{lr_neg_bullet}- **Población evaluada:** {poblacion}.
 - **Cita principal:** {citation} [PMID: {pmid}]
 
 ---
 
 ## Conclusión Semiótica
 
-La exploración metódica de **{term}** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias.
+{decision_text}
 """
-    return content, slug
+    return content, slug, None
 
 
 def run_build_pipeline():
@@ -333,7 +479,11 @@ def main():
     if args.condition:
         print(f"\n[+] Descargando y procesando: {args.condition}...")
         cond_data, filename = fetch_condition_yaml(args.condition)
-        content, slug = create_post_markdown(cond_data, filename)
+        content, slug, motivo = create_post_markdown(cond_data, filename)
+
+        if content is None:
+            print(f"[!] No se generó post para {args.condition}: {motivo}")
+            return
 
         out_path = POSTS_DIR / f"{filename.replace('.yaml', '')}.md"
         out_path.write_text(content, encoding="utf-8")
@@ -347,6 +497,7 @@ def main():
         existing_files = [p.name for p in POSTS_DIR.glob("*.md")]
 
         count = 0
+        skipped = []
         for c in conds:
             base_name = c.replace(".yaml", "")
             prefix = base_name.split("-")[0]  # ej. HM6001
@@ -357,7 +508,11 @@ def main():
             print(f"  + Generando: {base_name}...")
             try:
                 cond_data, filename = fetch_condition_yaml(c)
-                content, slug = create_post_markdown(cond_data, filename)
+                content, slug, motivo = create_post_markdown(cond_data, filename)
+                if content is None:
+                    print(f"    [!] Omitido: {motivo}")
+                    skipped.append((base_name, motivo))
+                    continue
                 out_path = POSTS_DIR / f"{base_name}.md"
                 out_path.write_text(content, encoding="utf-8")
                 count += 1
@@ -365,6 +520,10 @@ def main():
                 print(f"    [!] Error al generar {c}: {e}")
 
         print(f"\n[OK] Sincronización completada. Se generaron {count} nuevos temas.")
+        if skipped:
+            print(f"[i] {len(skipped)} condición(es) omitida(s) por falta de LR verificado:")
+            for name, motivo in skipped:
+                print(f"    - {name}: {motivo}")
         run_build_pipeline()
         return
 

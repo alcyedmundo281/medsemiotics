@@ -2,7 +2,7 @@
 id: "HM6014-01"
 slug: "rotura-completa-del-manguito-rotador-precision-semiotica"
 title: "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos"
-subtitle: "Análisis bayesiano de los signos clínicos característicos y toma de decisiones basada en evidencia."
+subtitle: "Análisis bayesiano de signo de lag de rotación interna y su impacto en la toma de decisiones clínicas."
 date: "2026-08-21"
 author: "Dr. Alcy Torres"
 category: "traumatologia"
@@ -13,36 +13,34 @@ difficulty: "Intermedio"
 grounding:
   condicion_id: "HM:6014"
   condicion_nombre: "Rotura completa del manguito rotador"
-  concepto_id: "HM:3056"
-  concepto_nombre: "el cociente más alto para la rotura completa, con intervalo muy ancho"
-  sensibilidad: 0.7
-  especificidad: 0.85
-  lr_positivo: 7.2
-  lr_negativo: 0.5
-  poblacion: "Adultos evaluados en consulta médica o urgencias"
+  concepto_id: "HM:3057"
+  concepto_nombre: "Signo de lag de rotación interna"
+  lr_positivo: 5.6
+  lr_negativo: 0.04
+  poblacion: "no especificada en la fuente citada"
   referencia_id: "pmid:23982370"
   referencia_cita: "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013."
   doi: "10.1001/jama.2013.276187"
   pmid: "23982370"
 
 triada:
-  significante: "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador."
-  significado: "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular."
-  decision: "el cociente más alto para la rotura completa, con intervalo muy ancho"
+  significante: "Signo de lag de rotación interna, evaluado en: no especificada en la fuente citada."
+  significado: "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo."
+  decision: "Signo de lag de rotación interna — sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
 
 autoevaluacion:
   - id: "q1"
-    pregunta: "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Rotura completa del manguito rotador según la literatura verificada (PMID: 23982370)?"
+    pregunta: "¿Cuál es el valor diagnóstico de signo de lag de rotación interna en Rotura completa del manguito rotador según la literatura verificada (PMID: 23982370)?"
     opciones:
-      - texto: "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 7.2."
+      - texto: "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 5.6, verificado contra la fuente citada."
         correcta: true
-        feedback: "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        feedback: "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
       - texto: "Descarta en un 100% la patología independientemente de otros signos."
         correcta: false
         feedback: "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
       - texto: "Carece de valor discriminativo en la exploración."
         correcta: false
-        feedback: "Incorrecto. Presenta una especificidad documentada de 85%."
+        feedback: "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
 
   - id: "q2"
     pregunta: "En la toma de decisiones clínicas ante Rotura completa del manguito rotador, ¿cuál es el paso de confirmación o cribado más adecuado?"
@@ -59,44 +57,29 @@ autoevaluacion:
 
 El abordaje diagnóstico de **Rotura completa del manguito rotador** (Full-thickness rotator cuff tear) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.
 
+> **¿Qué es un cociente de verosimilitud (LR)?** Indica cuánto cambia la probabilidad de una enfermedad cuando un hallazgo está presente (LR+) o ausente (LR-). Como regla práctica (McGee S. *Simplifying likelihood ratios*. J Gen Intern Med. 2002), un LR+ ≥ 10 o un LR- ≤ 0.1 suele bastar por sí solo para confirmar o descartar; valores entre 0.5 y 2 apenas cambian la sospecha clínica.
+
 ---
 
 ## Semiología y Rendimiento Diagnóstico
 
-La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros de rendimiento para los hallazgos principales:
+El hallazgo con mejor rendimiento documentado para **Rotura completa del manguito rotador** es **Signo de lag de rotación interna**. La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros:
 
-- **Sensibilidad estimada:** 70%
-- **Especificidad estimada:** 85%
-- **Cociente de Verosimilitud Positivo (LR+):** 7.2
-- **Cociente de Verosimilitud Negativo (LR-):** 0.5
-
-```
-                  [ Evaluación Clínica: Rotura completa del manguito rotador ]
-                                │
-                ┌───────────────┴───────────────┐
-                ▼                               ▼
-          Signo POSITIVO                  Signo NEGATIVO
-           (LR+ = 7.2)                      (LR- = 0.5)
-                │                               │
-       Incremento de sospecha          Reducción de probabilidad
-       y decisión orientada.           y reevaluación clínica.
-```
+- **Cociente de Verosimilitud Positivo (LR+):** 5.6 — cambia moderadamente la probabilidad: evidencia útil
+- **Cociente de Verosimilitud Negativo (LR-):** 0.04 — cambia mucho la probabilidad: suele bastar por sí solo para descartar
 
 ---
 
 ## Evidencia Cuantitativa y Fuentes
 
-Parámetros diagnósticos validados en la literatura médica:
-
-- **Sensibilidad:** 0.7
-- **Especificidad:** 0.85
-- **Cociente de Verosimilitud Positivo (LR+):** 7.2
-- **Cociente de Verosimilitud Negativo (LR-):** 0.5
-- **Población evaluada:** Adultos evaluados en consulta médica o urgencias.
+- **Hallazgo evaluado:** Signo de lag de rotación interna
+- **Cociente de Verosimilitud Positivo (LR+):** 5.6 — cambia moderadamente la probabilidad: evidencia útil
+- **Cociente de Verosimilitud Negativo (LR-):** 0.04 — cambia mucho la probabilidad: suele bastar por sí solo para descartar
+- **Población evaluada:** no especificada en la fuente citada.
 - **Cita principal:** Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013. [PMID: 23982370]
 
 ---
 
 ## Conclusión Semiótica
 
-La exploración metódica de **Rotura completa del manguito rotador** permite modular la incertidumbre diagnóstica y optimizar la solicitud de pruebas complementarias, reduciendo costes y evitando intervenciones innecesarias.
+Signo de lag de rotación interna — sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta.

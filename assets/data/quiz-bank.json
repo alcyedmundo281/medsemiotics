@@ -1,193 +1,5 @@
 [
   {
-    "id": "hepatitis-viral-aguda-precision-semiotica-q1",
-    "post_slug": "hepatitis-viral-aguda-precision-semiotica",
-    "post_title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología y Hepatología",
-    "condicion_id": "HM:6001",
-    "condicion_nombre": "Hepatitis viral aguda",
-    "pmid": "12345678",
-    "doi": "10.1001/jama.evidence",
-    "referencia_cita": "Investigadores Clínicos. Clinical examination of Acute viral hepatitis. JAMA. 2020.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hepatitis viral aguda.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
-    },
-    "pregunta": "",
-    "opciones": []
-  },
-  {
-    "id": "hepatitis-viral-aguda-precision-semiotica-q2",
-    "post_slug": "hepatitis-viral-aguda-precision-semiotica",
-    "post_title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología y Hepatología",
-    "condicion_id": "HM:6001",
-    "condicion_nombre": "Hepatitis viral aguda",
-    "pmid": "12345678",
-    "doi": "10.1001/jama.evidence",
-    "referencia_cita": "Investigadores Clínicos. Clinical examination of Acute viral hepatitis. JAMA. 2020.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hepatitis viral aguda.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
-    },
-    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Hepatitis viral aguda según la literatura verificada (PMID: 12345678)?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.0.",
-        "correcta": true,
-        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
-      },
-      {
-        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
-        "correcta": false,
-        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
-      },
-      {
-        "texto": "Carece de valor discriminativo en la exploración.",
-        "correcta": false,
-        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
-      }
-    ]
-  },
-  {
-    "id": "hepatitis-viral-aguda-precision-semiotica-q3",
-    "post_slug": "hepatitis-viral-aguda-precision-semiotica",
-    "post_title": "Hepatitis viral aguda: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología y Hepatología",
-    "condicion_id": "HM:6001",
-    "condicion_nombre": "Hepatitis viral aguda",
-    "pmid": "12345678",
-    "doi": "10.1001/jama.evidence",
-    "referencia_cita": "Investigadores Clínicos. Clinical examination of Acute viral hepatitis. JAMA. 2020.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Hepatitis viral aguda.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
-    },
-    "pregunta": "En la toma de decisiones clínicas ante Hepatitis viral aguda, ¿cuál es el paso de confirmación o cribado más adecuado?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
-        "correcta": true,
-        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
-      },
-      {
-        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
-        "correcta": false,
-        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
-      }
-    ]
-  },
-  {
-    "id": "sindrome-de-intestino-irritable-precision-semiotica-q1",
-    "post_slug": "sindrome-de-intestino-irritable-precision-semiotica",
-    "post_title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología",
-    "condicion_id": "HM:6002",
-    "condicion_nombre": "Síndrome de intestino irritable",
-    "pmid": "12345678",
-    "doi": "10.1001/jama.evidence",
-    "referencia_cita": "Investigadores Clínicos. Clinical examination of Irritable bowel syndrome. JAMA. 2020.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome de intestino irritable.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
-    },
-    "pregunta": "",
-    "opciones": []
-  },
-  {
-    "id": "sindrome-de-intestino-irritable-precision-semiotica-q2",
-    "post_slug": "sindrome-de-intestino-irritable-precision-semiotica",
-    "post_title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología",
-    "condicion_id": "HM:6002",
-    "condicion_nombre": "Síndrome de intestino irritable",
-    "pmid": "12345678",
-    "doi": "10.1001/jama.evidence",
-    "referencia_cita": "Investigadores Clínicos. Clinical examination of Irritable bowel syndrome. JAMA. 2020.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome de intestino irritable.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
-    },
-    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Síndrome de intestino irritable según la literatura verificada (PMID: 12345678)?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.0.",
-        "correcta": true,
-        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
-      },
-      {
-        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
-        "correcta": false,
-        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
-      },
-      {
-        "texto": "Carece de valor discriminativo en la exploración.",
-        "correcta": false,
-        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
-      }
-    ]
-  },
-  {
-    "id": "sindrome-de-intestino-irritable-precision-semiotica-q3",
-    "post_slug": "sindrome-de-intestino-irritable-precision-semiotica",
-    "post_title": "Síndrome de intestino irritable: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "gastroenterologia",
-    "category_label": "Gastroenterología",
-    "condicion_id": "HM:6002",
-    "condicion_nombre": "Síndrome de intestino irritable",
-    "pmid": "12345678",
-    "doi": "10.1001/jama.evidence",
-    "referencia_cita": "Investigadores Clínicos. Clinical examination of Irritable bowel syndrome. JAMA. 2020.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Síndrome de intestino irritable.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "Evaluación semiótica orientadora (LR+ 3.0); correlacionar con contexto clínico integral."
-    },
-    "pregunta": "En la toma de decisiones clínicas ante Síndrome de intestino irritable, ¿cuál es el paso de confirmación o cribado más adecuado?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
-        "correcta": true,
-        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
-      },
-      {
-        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
-        "correcta": false,
-        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
-      }
-    ]
-  },
-  {
     "id": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos-q1",
     "post_slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
     "post_title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
@@ -734,12 +546,28 @@
     "doi": "10.1001/jama.2014.5954",
     "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el síntoma que más aumenta la probabilidad"
+      "significante": "Úlceras genitales, evaluado en: no especificada en la fuente citada.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Úlceras genitales — el síntoma que más aumenta la probabilidad"
     },
-    "pregunta": "",
-    "opciones": []
+    "pregunta": "¿Cuál es el valor diagnóstico de úlceras genitales en Infección precoz por VIH según la literatura verificada (PMID: 25027143)?",
+    "opciones": [
+      {
+        "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 5.4, verificado contra la fuente citada.",
+        "correcta": true,
+        "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+      }
+    ]
   },
   {
     "id": "infeccion-precoz-por-vih-precision-semiotica-q2",
@@ -753,57 +581,12 @@
     "doi": "10.1001/jama.2014.5954",
     "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el síntoma que más aumenta la probabilidad"
-    },
-    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Infección precoz por VIH según la literatura verificada (PMID: 25027143)?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 5.4.",
-        "correcta": true,
-        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
-      },
-      {
-        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
-        "correcta": false,
-        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
-      },
-      {
-        "texto": "Carece de valor discriminativo en la exploración.",
-        "correcta": false,
-        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
-      }
-    ]
-  },
-  {
-    "id": "infeccion-precoz-por-vih-precision-semiotica-q3",
-    "post_slug": "infeccion-precoz-por-vih-precision-semiotica",
-    "post_title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "infectologia",
-    "category_label": "Infectología y Medicina Interna",
-    "condicion_id": "HM:6011",
-    "condicion_nombre": "Infección precoz por VIH",
-    "pmid": "25027143",
-    "doi": "10.1001/jama.2014.5954",
-    "referencia_cita": "Wood E, Kerr T, Rowell G et al.. Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA. 2014.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Infección precoz por VIH.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el síntoma que más aumenta la probabilidad"
+      "significante": "Úlceras genitales, evaluado en: no especificada en la fuente citada.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Úlceras genitales — el síntoma que más aumenta la probabilidad"
     },
     "pregunta": "En la toma de decisiones clínicas ante Infección precoz por VIH, ¿cuál es el paso de confirmación o cribado más adecuado?",
     "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
       {
         "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
         "correcta": true,
@@ -828,40 +611,16 @@
     "doi": "10.1001/jama.2019.19413",
     "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA et al.. Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Artrosis de cadera.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
+      "significante": "Dolor posterior de cadera al ponerse en cuclillas, evaluado en: pacientes que consultan en atención primaria por dolor de cadera o inguinal.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Dolor posterior de cadera al ponerse en cuclillas — el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
     },
-    "pregunta": "",
-    "opciones": []
-  },
-  {
-    "id": "artrosis-de-cadera-precision-semiotica-q2",
-    "post_slug": "artrosis-de-cadera-precision-semiotica",
-    "post_title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "reumatologia",
-    "category_label": "Reumatología y Traumatología",
-    "condicion_id": "HM:6012",
-    "condicion_nombre": "Artrosis de cadera",
-    "pmid": "31846019",
-    "doi": "10.1001/jama.2019.19413",
-    "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA et al.. Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Artrosis de cadera.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
-    },
-    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Artrosis de cadera según la literatura verificada (PMID: 31846019)?",
+    "pregunta": "¿Cuál es el valor diagnóstico de dolor posterior de cadera al ponerse en cuclillas en Artrosis de cadera según la literatura verificada (PMID: 31846019)?",
     "opciones": [
       {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 6.1.",
+        "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 6.1, verificado contra la fuente citada.",
         "correcta": true,
-        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
+        "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
       },
       {
         "texto": "Descarta en un 100% la patología independientemente de otros signos.",
@@ -876,7 +635,7 @@
     ]
   },
   {
-    "id": "artrosis-de-cadera-precision-semiotica-q3",
+    "id": "artrosis-de-cadera-precision-semiotica-q2",
     "post_slug": "artrosis-de-cadera-precision-semiotica",
     "post_title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
     "category": "reumatologia",
@@ -887,17 +646,12 @@
     "doi": "10.1001/jama.2019.19413",
     "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA et al.. Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA. 2019.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Artrosis de cadera.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
+      "significante": "Dolor posterior de cadera al ponerse en cuclillas, evaluado en: pacientes que consultan en atención primaria por dolor de cadera o inguinal.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Dolor posterior de cadera al ponerse en cuclillas — el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
     },
     "pregunta": "En la toma de decisiones clínicas ante Artrosis de cadera, ¿cuál es el paso de confirmación o cribado más adecuado?",
     "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
       {
         "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
         "correcta": true,
@@ -922,12 +676,28 @@
     "doi": "10.1001/jama.2013.276187",
     "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Enfermedad del manguito rotador.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
+      "significante": "Arco doloroso, evaluado en: pacientes derivados a especialista por dolor de hombro, en los estudios de calidad nivel 1-2.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Arco doloroso — la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
     },
-    "pregunta": "",
-    "opciones": []
+    "pregunta": "¿Cuál es el valor diagnóstico de arco doloroso en Enfermedad del manguito rotador según la literatura verificada (PMID: 23982370)?",
+    "opciones": [
+      {
+        "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 3.7, verificado contra la fuente citada.",
+        "correcta": true,
+        "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+      }
+    ]
   },
   {
     "id": "enfermedad-del-manguito-rotador-precision-semiotica-q2",
@@ -941,57 +711,12 @@
     "doi": "10.1001/jama.2013.276187",
     "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Enfermedad del manguito rotador.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
-    },
-    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Enfermedad del manguito rotador según la literatura verificada (PMID: 23982370)?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 3.7.",
-        "correcta": true,
-        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
-      },
-      {
-        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
-        "correcta": false,
-        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
-      },
-      {
-        "texto": "Carece de valor discriminativo en la exploración.",
-        "correcta": false,
-        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
-      }
-    ]
-  },
-  {
-    "id": "enfermedad-del-manguito-rotador-precision-semiotica-q3",
-    "post_slug": "enfermedad-del-manguito-rotador-precision-semiotica",
-    "post_title": "Enfermedad del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "traumatologia",
-    "category_label": "Traumatología y Medicina Deportiva",
-    "condicion_id": "HM:6013",
-    "condicion_nombre": "Enfermedad del manguito rotador",
-    "pmid": "23982370",
-    "doi": "10.1001/jama.2013.276187",
-    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Enfermedad del manguito rotador.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
+      "significante": "Arco doloroso, evaluado en: pacientes derivados a especialista por dolor de hombro, en los estudios de calidad nivel 1-2.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Arco doloroso — la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
     },
     "pregunta": "En la toma de decisiones clínicas ante Enfermedad del manguito rotador, ¿cuál es el paso de confirmación o cribado más adecuado?",
     "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
       {
         "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
         "correcta": true,
@@ -1016,12 +741,28 @@
     "doi": "10.1001/jama.2013.276187",
     "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
+      "significante": "Signo de lag de rotación interna, evaluado en: no especificada en la fuente citada.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Signo de lag de rotación interna — sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
     },
-    "pregunta": "",
-    "opciones": []
+    "pregunta": "¿Cuál es el valor diagnóstico de signo de lag de rotación interna en Rotura completa del manguito rotador según la literatura verificada (PMID: 23982370)?",
+    "opciones": [
+      {
+        "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 5.6, verificado contra la fuente citada.",
+        "correcta": true,
+        "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+      }
+    ]
   },
   {
     "id": "rotura-completa-del-manguito-rotador-precision-semiotica-q2",
@@ -1035,57 +776,12 @@
     "doi": "10.1001/jama.2013.276187",
     "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
     "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
-    },
-    "pregunta": "¿Cuál es el valor diagnóstico del hallazgo exploratorio principal en Rotura completa del manguito rotador según la literatura verificada (PMID: 23982370)?",
-    "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
-      {
-        "texto": "Aumenta la probabilidad clínica con un Cociente de Verosimilitud Positivo (LR+) de 7.2.",
-        "correcta": true,
-        "feedback": "¡Correcto! Los datos cuantitativos validados demuestran que este hallazgo desplaza significativamente la sospecha diagnóstica post-test."
-      },
-      {
-        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
-        "correcta": false,
-        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
-      },
-      {
-        "texto": "Carece de valor discriminativo en la exploración.",
-        "correcta": false,
-        "feedback": "Incorrecto. Presenta una especificidad documentada de 85%."
-      }
-    ]
-  },
-  {
-    "id": "rotura-completa-del-manguito-rotador-precision-semiotica-q3",
-    "post_slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
-    "post_title": "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "category": "traumatologia",
-    "category_label": "Traumatología y Medicina Deportiva",
-    "condicion_id": "HM:6014",
-    "condicion_nombre": "Rotura completa del manguito rotador",
-    "pmid": "23982370",
-    "doi": "10.1001/jama.2013.276187",
-    "referencia_cita": "Hermans J, Luime JJ, Meuffels DE et al.. Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA. 2013.",
-    "triada": {
-      "significante": "Manifestación física y hallazgo exploratorio cardinal evaluado en Rotura completa del manguito rotador.",
-      "significado": "Mecanismo fisiopatológico subyacente que altera la homeostasis tisular y vascular.",
-      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
+      "significante": "Signo de lag de rotación interna, evaluado en: no especificada en la fuente citada.",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Signo de lag de rotación interna — sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
     },
     "pregunta": "En la toma de decisiones clínicas ante Rotura completa del manguito rotador, ¿cuál es el paso de confirmación o cribado más adecuado?",
     "opciones": [
-      {
-        "texto": "",
-        "correcta": false,
-        "feedback": ""
-      },
       {
         "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
         "correcta": true,
