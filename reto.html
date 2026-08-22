@@ -181,12 +181,32 @@
         document.getElementById('statStreak').textContent = `🔥 ${stats.streak}`;
       }
 
+      // Read URL query params
+      function getUrlParam(name) {
+        return new URLSearchParams(window.location.search).get(name);
+      }
+
+      let signoSlug = null; // set if arriving from a post via ?signo=
+
       async function initReto() {
         loadStats();
+        signoSlug = getUrlParam('signo');
         try {
           const res = await fetch(`assets/data/quiz-bank.json?v=${Date.now()}`, { cache: 'no-store' });
           if (!res.ok) throw new Error('No se pudo cargar el banco de preguntas');
           quizBank = await res.json();
+
+          // If ?signo= present, filter to that topic and show contextual banner
+          if (signoSlug) {
+            const topicQuestions = quizBank.filter(q => q.post_slug === signoSlug);
+            if (topicQuestions.length > 0) {
+              const topicTitle = topicQuestions[0].post_title || signoSlug;
+              showSignoBanner(topicTitle, signoSlug);
+              // Override quizBank to only this topic's questions
+              quizBank = topicQuestions;
+            }
+          }
+
           buildFilterPills();
           filterQuestions('all');
         } catch (err) {
@@ -198,6 +218,28 @@
             </div>
           `;
         }
+      }
+
+      function showSignoBanner(title, slug) {
+        const banner = document.createElement('div');
+        banner.className = 'mb-6 p-4 bg-purple-50/80 border border-purple-200 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm';
+        banner.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-600"></span>
+            </span>
+            <span class="font-bold text-purple-900">Autoevaluación de:</span>
+            <span class="text-purple-800 font-medium">${title}</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs">
+            <a href="post.html?slug=${slug}" class="text-purple-700 hover:underline font-semibold">← Volver al caso clínico</a>
+            <span class="text-purple-300">|</span>
+            <a href="reto.html" class="text-stone-600 hover:text-stone-900 font-medium">Ver todas las preguntas</a>
+          </div>
+        `;
+        const main = document.querySelector('main');
+        main.insertBefore(banner, main.children[1]); // after the title section
       }
 
       function buildFilterPills() {

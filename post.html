@@ -247,24 +247,31 @@
           </div>
         </section>
 
-        <!-- Gamified Self-Assessment Section -->
-        <section id="quizSection" class="mb-14 bg-white border-2 border-purple-200 rounded-2xl p-6 sm:p-8 shadow-sm">
-          <div class="flex items-center justify-between mb-6 pb-4 border-b border-stone-100">
+        <!-- Autoevaluación — linked to Reto Clínico -->
+        <section id="quizSection" class="mb-14 bg-gradient-to-br from-purple-50/80 to-white border-2 border-purple-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded">Gamificación & Evidencia</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100 px-2.5 py-1 rounded">Gamificación & Evidencia</span>
               <h3 class="text-2xl font-extrabold text-stone-900 mt-2">Autoevaluación Interactiva</h3>
             </div>
             <div id="quizScoreBadge" class="hidden text-xs font-bold px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800">
-              ¡Completado! +10 Puntos
+              ¡Completado! ✓
             </div>
           </div>
 
-          <p class="text-sm text-stone-600 mb-8">
-            Pon a prueba tu razonamiento clínico con preguntas basadas estrictamente en la evidencia verificada. Recibirás retroalimentación inmediata fundamentada en la literatura.
+          <p class="text-sm text-stone-600 mb-6 leading-relaxed">
+            Pon a prueba tu razonamiento clínico con preguntas generadas automáticamente desde el banco de autoevaluación indexado. Recibirás retroalimentación inmediata fundamentada en la literatura médica verificada.
           </p>
 
-          <div id="questionsContainer" class="space-y-8">
-            <!-- Questions injected via JS -->
+          <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a id="retoLink" href="reto.html" class="inline-flex items-center gap-2.5 bg-stone-900 hover:bg-purple-800 text-white font-bold px-6 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg text-sm group">
+              <span class="text-lg group-hover:scale-110 transition-transform">🎯</span>
+              Iniciar Autoevaluación
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <span id="quizQuestionCount" class="text-xs text-stone-500 font-medium"></span>
           </div>
         </section>
 
@@ -286,7 +293,6 @@
     <!-- App Engine Script -->
     <script>
       let currentPost = null;
-      let userAnswers = {};
 
       function getUrlParam(name) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -312,7 +318,7 @@
         }
       }
 
-      function renderPost() {
+      async function renderPost() {
         document.getElementById('loadingBox').classList.add('hidden');
         document.getElementById('postBody').classList.remove('hidden');
 
@@ -375,8 +381,32 @@
         // Markdown Body
         document.getElementById('markdownBody').innerHTML = parseSimpleMarkdown(currentPost.body || '');
 
-        // Quiz
-        renderQuiz(currentPost.autoevaluacion || [], currentPost.slug);
+        // Link autoevaluation to Reto Clínico with ?signo=slug
+        const slug = getUrlParam('slug');
+        document.getElementById('retoLink').href = `reto.html?signo=${slug}`;
+
+        // Fetch quiz bank to show question count and completion state
+        try {
+          const qbRes = await fetch(`assets/data/quiz-bank.json?v=${Date.now()}`, { cache: 'no-store' });
+          if (qbRes.ok) {
+            const qb = await qbRes.json();
+            const topicQs = qb.filter(q => q.post_slug === slug && q.pregunta && q.pregunta.length > 5);
+            if (topicQs.length > 0) {
+              document.getElementById('quizQuestionCount').textContent = `${topicQs.length} pregunta${topicQs.length > 1 ? 's' : ''} disponible${topicQs.length > 1 ? 's' : ''} para este tema`;
+              document.getElementById('quizSection').classList.remove('hidden');
+            } else {
+              document.getElementById('quizSection').classList.add('hidden');
+            }
+          }
+        } catch (e) {
+          // Silently fail — just hide the quiz section
+          document.getElementById('quizSection').classList.add('hidden');
+        }
+
+        // Check completion badge
+        if (localStorage.getItem(`medsemiotics_quiz_${slug}`) === 'completed') {
+          document.getElementById('quizScoreBadge').classList.remove('hidden');
+        }
       }
 
       function setupCalculator(lrPos, lrNeg) {
@@ -407,92 +437,7 @@
         update();
       }
 
-      function renderQuiz(questions, slug) {
-        const container = document.getElementById('questionsContainer');
-        if (!questions || questions.length === 0) {
-          document.getElementById('quizSection').classList.add('hidden');
-          return;
-        }
 
-        const isPreviouslyCompleted = localStorage.getItem(`medsemiotics_quiz_${slug}`) === 'completed';
-        if (isPreviouslyCompleted) {
-          document.getElementById('quizScoreBadge').classList.remove('hidden');
-        }
-
-        container.innerHTML = questions.map((q, qIndex) => `
-          <div class="p-6 bg-stone-50 border border-stone-200 rounded-xl" id="questionBox_${q.id}">
-            <p class="font-bold text-stone-900 text-base mb-4 flex items-start gap-2">
-              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-700 text-white text-xs flex items-center justify-center font-mono">${qIndex + 1}</span>
-              <span>${q.pregunta}</span>
-            </p>
-            <div class="space-y-3">
-              ${q.opciones.map((opc, opcIndex) => `
-                <button
-                  type="button"
-                  data-qid="${q.id}"
-                  data-opcindex="${opcIndex}"
-                  class="quiz-option-btn w-full text-left p-3.5 rounded-lg border border-stone-200 bg-white hover:border-purple-300 text-sm font-medium transition-all flex items-start gap-3"
-                >
-                  <span class="w-4 h-4 rounded-full border border-stone-300 mt-0.5 flex-shrink-0 option-indicator"></span>
-                  <span class="text-stone-800">${opc.texto}</span>
-                </button>
-              `).join('')}
-            </div>
-            <div id="feedback_${q.id}" class="hidden mt-4 p-4 rounded-lg text-xs leading-relaxed"></div>
-          </div>
-        `).join('');
-
-        // Quiz Click Handlers
-        container.querySelectorAll('.quiz-option-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const qid = btn.dataset.qid;
-            const opcIndex = Number(btn.dataset.opcindex);
-            handleAnswer(qid, opcIndex, questions, slug);
-          });
-        });
-      }
-
-      function handleAnswer(qid, opcIndex, questions, slug) {
-        const q = questions.find(item => item.id === qid);
-        if (!q) return;
-
-        const selectedOpc = q.opciones[opcIndex];
-        const qBox = document.getElementById(`questionBox_${qid}`);
-        const fbBox = document.getElementById(`feedback_${qid}`);
-
-        // Disable options in this question
-        qBox.querySelectorAll('.quiz-option-btn').forEach((b, idx) => {
-          b.disabled = true;
-          b.classList.remove('hover:border-purple-300', 'bg-white');
-          if (q.opciones[idx].correcta) {
-            b.classList.add('bg-emerald-50', 'border-emerald-300', 'text-emerald-950');
-            b.querySelector('.option-indicator').classList.add('bg-emerald-600', 'border-emerald-600');
-          } else if (idx === opcIndex) {
-            b.classList.add('bg-red-50', 'border-red-300', 'text-red-950');
-            b.querySelector('.option-indicator').classList.add('bg-red-500', 'border-red-500');
-          } else {
-            b.classList.add('opacity-50');
-          }
-        });
-
-        // Show feedback
-        fbBox.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-900', 'border-emerald-200', 'bg-red-50', 'text-red-900', 'border-red-200');
-        if (selectedOpc.correcta) {
-          fbBox.classList.add('bg-emerald-50', 'text-emerald-900', 'border', 'border-emerald-200');
-          fbBox.innerHTML = `<strong>✓ Correcto:</strong> ${selectedOpc.feedback}`;
-          userAnswers[qid] = true;
-        } else {
-          fbBox.classList.add('bg-red-50', 'text-red-900', 'border', 'border-red-200');
-          fbBox.innerHTML = `<strong>✕ Incorrecto:</strong> ${selectedOpc.feedback}`;
-          userAnswers[qid] = false;
-        }
-
-        // Check if all questions are answered
-        if (Object.keys(userAnswers).length === questions.length) {
-          localStorage.setItem(`medsemiotics_quiz_${slug}`, 'completed');
-          document.getElementById('quizScoreBadge').classList.remove('hidden');
-        }
-      }
 
       function parseSimpleMarkdown(md) {
         if (!md) return '';
