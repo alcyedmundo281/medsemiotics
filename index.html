@@ -1,49 +1,60 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="h-full bg-stone-50">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biblioteca Médica - Powersemiotics</title>
+    <title>Powersemiotics | Semiótica Clínica, Razonamiento y Biblioteca Médica</title>
     <link rel="canonical" href="https://powersemiotics.com/medsemiotics/" />
     <meta
       name="description"
-      content="Biblioteca de módulos educativos de Powersemiotics: medicina y datos, neurología, gastroenterología, farmacoterapia racional, inmunología clínica e implementación."
+      content="Portal principal de Powersemiotics: blog clínico interactivo, razonamiento diagnóstico bayesiano, semiología cuantitativa y biblioteca curricular estructurada."
     />
 
+    <link href="assets/fonts/fonts.css" rel="stylesheet" />
     <link href="assets/tailwind.css" rel="stylesheet" />
     <style>
-      /* Definidas aquí, no en tailwind.css, porque son utilidades propias del
-         proyecto y no clases generadas por Tailwind. */
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
       .gradient-text {
         background: linear-gradient(135deg, #8b3dff 0%, #ff4081 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
-      .card-hover-effect {
-        transition: all 0.3s ease;
+      .card-hover {
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       }
-
-      .card-hover-effect:hover {
-        transform: translateY(-5px);
+      .card-hover:hover {
+        transform: translateY(-3px);
       }
-
-      .section-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        stroke: url(#brand-gradient);
-        stroke-width: 1.75;
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
+      /* Custom scrollbar for lateral navigation */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #e7e5e4;
+        border-radius: 9999px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #d6d3d1;
+      }
+      /* Details accordion arrow rotation */
+      details[open] summary svg.chevron-arrow {
+        transform: rotate(90deg);
+      }
+      .chevron-arrow {
+        transition: transform 0.2s ease;
       }
     </style>
   </head>
 
-  <body class="font-sans bg-gray-50 text-gray-800">
+  <body class="bg-stone-50 text-stone-900 antialiased min-h-full flex flex-col selection:bg-purple-100 selection:text-purple-900">
     <!-- Degradado de marca reutilizado por los iconos SVG -->
-    <svg width="0" height="0" aria-hidden="true" focusable="false">
+    <svg width="0" height="0" class="hidden" aria-hidden="true" focusable="false">
       <defs>
         <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="#8B3DFF" />
@@ -52,349 +63,693 @@
       </defs>
     </svg>
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-      <nav
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <a href="index.html" class="flex items-center space-x-2">
-          <img
-            src="assets/images/logo.png"
-            alt="Logo de Powersemiotics"
-            class="h-8 w-8"
-          />
-          <span class="text-2xl font-bold gradient-text">Biblioteca Médica</span>
-        </a>
-        <div class="flex items-center gap-6">
-          <a
-            href="blog.html"
-            class="text-gray-700 hover:text-indigo-600 font-semibold transition-colors flex items-center gap-1.5"
+    <!-- Top Header -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-stone-200 sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        
+        <!-- Brand & Mobile Sidebar Toggle -->
+        <div class="flex items-center gap-3">
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            class="lg:hidden p-2 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-purple-600"
+            aria-label="Abrir menú de lecturas anteriores"
           >
-            <svg class="w-4 h-4 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
             </svg>
-            Blog
+          </button>
+
+          <a href="index.html" class="flex items-center space-x-2.5">
+            <img src="assets/images/logo.png" alt="Logo de Powersemiotics" class="h-8 w-8" />
+            <span class="text-xl font-bold tracking-tight gradient-text">Powersemiotics</span>
+            <span class="hidden sm:inline text-xs font-semibold uppercase tracking-wider bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full border border-purple-200">
+              MedSemiotics Hub
+            </span>
           </a>
+        </div>
+
+        <!-- Global Navigation & Reto Launcher -->
+        <div class="flex items-center gap-3 sm:gap-6 text-sm font-medium">
           <a
             href="reto.html"
-            class="text-purple-700 hover:text-purple-900 font-semibold transition-colors flex items-center gap-1.5"
+            class="text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300/80 px-3 py-1.5 rounded-full font-semibold transition-colors flex items-center gap-1.5 shadow-sm text-xs sm:text-sm"
           >
-            <svg class="w-4 h-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-            Reto Clínico
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span>Reto Clínico</span>
           </a>
+
           <a
             href="https://powersemiotics.com/"
-            class="text-indigo-800 font-semibold hover:text-indigo-600 transition-colors"
-            >Powersemiotics</a
+            class="text-stone-600 hover:text-purple-700 font-semibold transition-colors hidden md:inline"
+            target="_blank"
+            rel="noopener"
           >
+            Powersemiotics.com ↗
+          </a>
+
+          <a
+            href="https://www.biosemiotics.net/"
+            class="text-cyan-700 hover:text-cyan-900 font-semibold transition-colors hidden md:inline"
+            target="_blank"
+            rel="noopener"
+          >
+            Biosemiotics ↗
+          </a>
         </div>
-      </nav>
+      </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
-      <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Biblioteca Médica
-        </h1>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Módulos educativos interactivos, presentaciones y material de consulta
-          para la práctica clínica y la enseñanza de la medicina. Seis áreas
-          temáticas y un repositorio de recursos abiertos.
-        </p>
+    <!-- Mobile Drawer for Lateral Navigation -->
+    <div id="mobileDrawer" class="fixed inset-0 z-50 bg-stone-900/50 backdrop-blur-sm hidden lg:hidden transition-opacity">
+      <div class="fixed inset-y-0 left-0 max-w-xs w-full bg-white shadow-2xl p-6 overflow-y-auto custom-scrollbar flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-stone-200 mb-6">
+            <div class="flex items-center gap-2">
+              <img src="assets/images/logo.png" alt="Logo" class="h-6 w-6" />
+              <span class="font-bold text-stone-900 text-base">Lecturas y Módulos</span>
+            </div>
+            <button id="closeDrawerBtn" class="p-1.5 rounded-lg text-stone-500 hover:bg-stone-100">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <!-- Injected Sidebar Content for Mobile -->
+          <div id="mobileNavContent" class="space-y-4"></div>
+        </div>
+        <div class="pt-6 border-t border-stone-200 text-xs text-stone-500">
+          <p>© 2026 Powersemiotics</p>
+        </div>
       </div>
+    </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-8 max-w-7xl mx-auto">
-        Áreas temáticas
-      </h2>
+    <!-- Main Workspace Container (3 Columns Layout) -->
+    <div class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- LEFT SIDEBAR: LECTURAS ANTERIORES Y CURRÍCULO TEMÁTICO -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 custom-scrollbar">
+          <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm" id="desktopNavContent">
+            
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-stone-100">
+              <div class="flex items-center gap-2">
+                <span class="text-lg">📚</span>
+                <h2 class="text-sm font-bold uppercase tracking-wider text-stone-900">
+                  Lecturas Anteriores
+                </h2>
+              </div>
+              <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-stone-100 text-stone-600">
+                6 Áreas
+              </span>
+            </div>
 
-      <div
-        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <a
-          href="medicina_y_datos.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 3v18h18" />
-              <path d="m7 15 4-5 3 3 5-7" />
-            </svg>
+            <p class="text-xs text-stone-500 mb-4 leading-relaxed">
+              Módulos educativos, cursos temáticos y guías curriculares previas organizadas por especialidad.
+            </p>
+
+            <!-- Categorized Accordions -->
+            <div class="space-y-3 text-sm">
+
+              <!-- Área 1: Medicina y Datos -->
+              <details class="group border border-stone-200/80 rounded-xl p-3 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-800 list-none select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="text-indigo-600">📊</span>
+                    <span>Medicina y Datos</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[10px] font-mono text-indigo-700 bg-indigo-50 border border-indigo-200/80 px-1.5 py-0.5 rounded">19 mód.</span>
+                    <svg class="w-4 h-4 text-stone-400 chevron-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </summary>
+                <div class="mt-3 pt-3 border-t border-stone-200/60 pl-2 space-y-1.5 text-xs text-stone-600">
+                  <a href="medicina_y_datos.html" class="block font-semibold text-indigo-700 hover:underline">→ Ver índice general del área</a>
+                  <a href="medicina_y_datos/razonamiento_clinico/index.html" class="block hover:text-stone-900">• Razonamiento Clínico e IA</a>
+                  <a href="medicina_y_datos/cuantificando_incertidumbre/index.html" class="block hover:text-stone-900">• Cuantificando la Incertidumbre</a>
+                  <a href="medicina_y_datos/sesgos_de_la_mente.html" class="block hover:text-stone-900">• Sesgos de la Mente & Heurísticas</a>
+                  <a href="medicina_y_datos/inferencia-causal.html" class="block hover:text-stone-900">• Inferencia Causal en Medicina</a>
+                  <a href="medicina_y_datos/fundamentos-semioticos.html" class="block hover:text-stone-900">• Fundamentos Semióticos</a>
+                  <a href="medicina_y_datos/estadisticos_descubiertos/index.html" class="block hover:text-stone-900">• Estadísticos Descubiertos</a>
+                </div>
+              </details>
+
+              <!-- Área 2: Neurología -->
+              <details class="group border border-stone-200/80 rounded-xl p-3 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-800 list-none select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="text-purple-600">🧠</span>
+                    <span>Neurología</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[10px] font-mono text-purple-700 bg-purple-50 border border-purple-200/80 px-1.5 py-0.5 rounded">22 mód.</span>
+                    <svg class="w-4 h-4 text-stone-400 chevron-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </summary>
+                <div class="mt-3 pt-3 border-t border-stone-200/60 pl-2 space-y-1.5 text-xs text-stone-600">
+                  <a href="neurologia.html" class="block font-semibold text-purple-700 hover:underline">→ Ver índice general del área</a>
+                  <a href="neurologia/examen-neurologico-parte-1.html" class="block hover:text-stone-900">• Examen Neurológico I</a>
+                  <a href="neurologia/examen-neurologico-parte-2.html" class="block hover:text-stone-900">• Examen Neurológico II</a>
+                  <a href="neurologia/acv-isquemico.html" class="block hover:text-stone-900">• Protocolo ACV Isquémico (NeuroQuest)</a>
+                  <a href="neurologia/acv.html" class="block hover:text-stone-900">• ACV Unified Dashboard</a>
+                  <a href="neurologia/cefaleas/index.html" class="block hover:text-stone-900">• Cefaleas Primarias</a>
+                  <a href="neurologia/epilepsia-ii/index.html" class="block hover:text-stone-900">• Epilepsias & Masterclass</a>
+                  <a href="neurologia/trastornos-movimiento-1.html" class="block hover:text-stone-900">• Parkinson y Trastornos Mov. I</a>
+                  <a href="neurologia/trastornos-movimiento-2.html" class="block hover:text-stone-900">• Trastornos del Movimiento II</a>
+                  <a href="neurologia/neuropatias.html" class="block hover:text-stone-900">• Neuropatías Periféricas</a>
+                  <a href="neurologia/enfermedades_desmielinizantes.html" class="block hover:text-stone-900">• Enfermedades Desmielinizantes</a>
+                  <a href="neurologia/neuromusculares.html" class="block hover:text-stone-900">• Enfermedades Neuromusculares</a>
+                </div>
+              </details>
+
+              <!-- Área 3: Gastroenterología -->
+              <details class="group border border-stone-200/80 rounded-xl p-3 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-800 list-none select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="text-rose-600">🔬</span>
+                    <span>Gastroenterología</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[10px] font-mono text-rose-700 bg-rose-50 border border-rose-200/80 px-1.5 py-0.5 rounded">21 mód.</span>
+                    <svg class="w-4 h-4 text-stone-400 chevron-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </summary>
+                <div class="mt-3 pt-3 border-t border-stone-200/60 pl-2 space-y-1.5 text-xs text-stone-600">
+                  <a href="gastroenterologia.html" class="block font-semibold text-rose-700 hover:underline">→ Ver índice general del área</a>
+                  <a href="gastroenterologia/fundamentos-de-gastroenterologia.html" class="block hover:text-stone-900">• Fundamentos de Gastroenterología</a>
+                  <a href="gastroenterologia/pruebas-diagnosticas.html" class="block hover:text-stone-900">• Pruebas Diagnósticas Digestivas</a>
+                  <a href="gastroenterologia/hemorragia-GI.html" class="block hover:text-stone-900">• Hemorragia Digestiva</a>
+                  <a href="gastroenterologia/colitis-ulcerosa.html" class="block hover:text-stone-900">• Colitis Ulcerosa</a>
+                  <a href="gastroenterologia/enfermedad_hepatica_i/index.html" class="block hover:text-stone-900">• Enfermedad Hepática I & II</a>
+                  <a href="gastroenterologia/pancreatitis_aguda/index.html" class="block hover:text-stone-900">• Pancreatitis Aguda (Reactor)</a>
+                  <a href="gastroenterologia/trastornos-estomacales.html" class="block hover:text-stone-900">• Trastornos Estomacales & H. pylori</a>
+                </div>
+              </details>
+
+              <!-- Área 4: Farmacoterapia Racional -->
+              <details class="group border border-stone-200/80 rounded-xl p-3 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-800 list-none select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-600">💊</span>
+                    <span>Farmacoterapia</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[10px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">18 mód.</span>
+                    <svg class="w-4 h-4 text-stone-400 chevron-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </summary>
+                <div class="mt-3 pt-3 border-t border-stone-200/60 pl-2 space-y-1.5 text-xs text-stone-600">
+                  <a href="farmacoterapia_racional.html" class="block font-semibold text-emerald-700 hover:underline">→ Ver índice general del área</a>
+                  <a href="farmacoterapia_racional/espondilitis_anquilosante/index.html" class="block hover:text-stone-900">• Espondilitis Anquilosante</a>
+                  <a href="farmacoterapia_racional/psoriasis_artritis_psoriasica/index.html" class="block hover:text-stone-900">• Psoriasis y Artritis Psoriásica</a>
+                  <a href="medicamentos_cronicos.html" class="block hover:text-stone-900">• Repositorio: Medicamentos Crónicos</a>
+                  <a href="medicamentos_oncologicos.html" class="block hover:text-stone-900">• Repositorio: Medicamentos Oncológicos</a>
+                </div>
+              </details>
+
+              <!-- Área 5: Inmunología Clínica -->
+              <details class="group border border-stone-200/80 rounded-xl p-3 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-800 list-none select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="text-amber-600">🛡️</span>
+                    <span>Inmunología</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[10px] font-mono text-amber-700 bg-amber-50 border border-amber-200/80 px-1.5 py-0.5 rounded">5 mód.</span>
+                    <svg class="w-4 h-4 text-stone-400 chevron-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </summary>
+                <div class="mt-3 pt-3 border-t border-stone-200/60 pl-2 space-y-1.5 text-xs text-stone-600">
+                  <a href="inmunologia_clinica.html" class="block font-semibold text-amber-700 hover:underline">→ Ver índice general del área</a>
+                  <a href="inmunologia/alergias-alimentarias.html" class="block hover:text-stone-900">• Alergias Alimentarias</a>
+                  <a href="inmunologia/hipersensibilidad-farmacos.html" class="block hover:text-stone-900">• Hipersensibilidad a Fármacos</a>
+                  <a href="inmunologia/vacunas.html" class="block hover:text-stone-900">• Vacunas e Inmunización</a>
+                  <a href="inmunologia/laboratorio-inmunologia.html" class="block hover:text-stone-900">• Laboratorio de Inmunología</a>
+                  <a href="inmunologia/inmunologia-trasplante.html" class="block hover:text-stone-900">• Inmunología del Trasplante</a>
+                </div>
+              </details>
+
+              <!-- Área 6: Medicina e Implementación -->
+              <details class="group border border-stone-200/80 rounded-xl p-3 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-stone-800 list-none select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="text-teal-600">⚙️</span>
+                    <span>Implementación</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[10px] font-mono text-teal-700 bg-teal-50 border border-teal-200/80 px-1.5 py-0.5 rounded">4 mód.</span>
+                    <svg class="w-4 h-4 text-stone-400 chevron-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </summary>
+                <div class="mt-3 pt-3 border-t border-stone-200/60 pl-2 space-y-1.5 text-xs text-stone-600">
+                  <a href="medicina_e_implementacion.html" class="block font-semibold text-teal-700 hover:underline">→ Ver índice general del área</a>
+                  <a href="medicina_e_implementacion/implementacion_no_reforma/index.html" class="block hover:text-stone-900">• Implementación de la No Reforma</a>
+                  <a href="medicina_e_implementacion/medicina_precision_ecuador.html" class="block hover:text-stone-900">• Monografía: Medicina de Precisión</a>
+                  <a href="medicina_e_implementacion/parentalidad-salud.html" class="block hover:text-stone-900">• Parentalidad, Poder y Equidad</a>
+                  <a href="medicina_e_implementacion/POCUS-implementacion.html" class="block hover:text-stone-900">• Implementación de POCUS</a>
+                </div>
+              </details>
+
+            </div>
           </div>
-          <h3 class="text-2xl font-bold text-gray-800">Medicina y Datos</h3>
-          <p class="text-gray-600 text-md mt-2">
-            La intersección de la ciencia de datos, la inteligencia artificial y
-            la práctica clínica: razonamiento diagnóstico, inferencia causal,
-            probabilidad e incertidumbre.
-          </p>
-          <p class="text-sm font-semibold text-indigo-700 mt-4">19 módulos</p>
-        </a>
+        </aside>
 
-        <a
-          href="neurologia.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2Z"
+        <!-- MAIN CENTRAL CANVAS: BLOG CLÍNICO, BÚSQUEDA Y CASOS ACTIVOS -->
+        <main class="col-span-1 lg:col-span-6 w-full">
+          
+          <!-- Editorial Hero & Manifest -->
+          <section class="bg-white border border-stone-200 rounded-3xl p-6 sm:p-8 shadow-sm mb-8 relative overflow-hidden">
+            <div class="absolute -right-8 -top-8 w-40 h-40 bg-purple-50 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-purple-700 mb-3 bg-purple-50 border border-purple-200/80 px-3 py-1 rounded-full">
+              <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+              <span>Medicina Basada en Evidencia · Razonamiento Diagnóstico</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-stone-950 tracking-tight leading-tight mb-3">
+              Semiótica Clínica y Razonamiento Diagnóstico
+            </h1>
+            
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-4">
+              Un signo, una decisión, una evidencia comprobada. Casos clínicos interactivos, discriminación bayesiana con cocientes de verosimilitud (LR) y autoevaluación gamificada con literatura médica verificada.
+            </p>
+
+            <!-- Quick Metrics Pills -->
+            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-stone-100 text-xs font-medium text-stone-600">
+              <div class="flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg border border-stone-200/60">
+                <span class="font-bold text-purple-700" id="statCasesCount">15+</span> Casos Verificados
+              </div>
+              <div class="flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg border border-stone-200/60">
+                <span class="font-bold text-amber-700" id="statQuizCount">36+</span> Preguntas de Reto
+              </div>
+              <div class="flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg border border-stone-200/60">
+                <span class="font-bold text-emerald-700">100%</span> Grounding PubMed / DOI
+              </div>
+            </div>
+          </section>
+
+          <!-- Controls: Search & Category Filter Pills -->
+          <section class="bg-white border border-stone-200 rounded-2xl p-4 sm:p-5 shadow-sm mb-8 space-y-4">
+            
+            <!-- Search Box -->
+            <div class="relative w-full">
+              <svg class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar por signo clínico, patología, cociente LR o PMID..."
+                class="w-full pl-10 pr-10 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-white focus:border-transparent transition-all shadow-inner"
               />
-              <path
-                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2Z"
-              />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">Neurología</h3>
-          <p class="text-gray-600 text-md mt-2">
-            Diagnóstico y manejo de las principales patologías neurológicas:
-            examen neurológico, ACV, epilepsias, cefaleas, neuropatías y
-            trastornos del movimiento.
-          </p>
-          <p class="text-sm font-semibold text-indigo-700 mt-4">22 módulos</p>
-        </a>
+              <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 text-xs">
+                ✕
+              </button>
+            </div>
 
-        <a
-          href="gastroenterologia.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M7 3v5a5 5 0 0 0 5 5 4 4 0 0 1 4 4v4"
-              />
-              <path d="M4 3v5a8 8 0 0 0 8 8" />
-              <circle cx="16" cy="21" r="1" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">Gastroenterología</h3>
-          <p class="text-gray-600 text-md mt-2">
-            Diagnóstico y manejo de las principales patologías digestivas:
-            enfermedad hepática, pancreatitis, colitis ulcerosa, ERGE,
-            hemorragia digestiva y <em>H. pylori</em>.
-          </p>
-          <p class="text-sm font-semibold text-indigo-700 mt-4">21 módulos</p>
-        </a>
+            <!-- Category Filter Pills (Dynamically populated) -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs custom-scrollbar" id="categoryFilters">
+              <button data-cat="all" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
+                Todas las Especialidades
+              </button>
+            </div>
+          </section>
 
-        <a
-          href="farmacoterapia_racional.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="m10.5 20.5-7-7a4.95 4.95 0 0 1 7-7l7 7a4.95 4.95 0 0 1-7 7Z"
-              />
-              <path d="m8.5 8.5 7 7" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Farmacoterapia Racional
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Maximizar la eficacia y minimizar el riesgo. Fichas de fármacos y
-            análisis farmacoeconómicos con un enfoque basado en datos para la
-            selección y el uso de medicamentos.
-          </p>
-          <p class="text-sm font-semibold text-indigo-700 mt-4">18 módulos</p>
-        </a>
+          <!-- Dynamic Posts Grid -->
+          <section id="postsGrid" class="space-y-6">
+            <!-- Loading Indicator -->
+            <div class="bg-white border border-stone-200 rounded-2xl p-12 text-center text-stone-400 shadow-sm">
+              <svg class="animate-spin h-7 w-7 mx-auto text-purple-600 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+              </svg>
+              <p class="text-sm font-medium text-stone-600">Cargando índice clínico verificado...</p>
+            </div>
+          </section>
 
-        <a
-          href="inmunologia_clinica.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"
-              />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
+          <!-- Empty State -->
+          <div id="noResults" class="hidden bg-white border border-stone-200 rounded-2xl p-12 text-center shadow-sm">
+            <div class="w-14 h-14 bg-stone-100 text-stone-400 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-stone-900">No se encontraron temas</h3>
+            <p class="text-stone-500 text-xs sm:text-sm mt-1 mb-4">Prueba con otros términos de búsqueda o selecciona otra especialidad.</p>
+            <button onclick="resetFilters()" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-800 transition-colors">
+              Restablecer filtros
+            </button>
           </div>
-          <h3 class="text-2xl font-bold text-gray-800">Inmunología Clínica</h3>
-          <p class="text-gray-600 text-md mt-2">
-            Mecanismos del sistema inmunitario, desde la hipersensibilidad hasta
-            la inmunopatología avanzada: alergias, vacunas, trasplante y
-            laboratorio.
-          </p>
-          <p class="text-sm font-semibold text-indigo-700 mt-4">5 módulos</p>
-        </a>
 
-        <a
-          href="medicina_e_implementacion.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2v4" />
-              <path d="M12 18v4" />
-              <path d="M4.93 4.93l2.83 2.83" />
-              <path d="M16.24 16.24l2.83 2.83" />
-              <path d="M2 12h4" />
-              <path d="M18 12h4" />
-              <circle cx="12" cy="12" r="4" />
-            </svg>
+        </main>
+
+        <!-- RIGHT SIDEBAR: HERRAMIENTAS, AUTOEVALUACIONES Y RECURSOS -->
+        <aside class="col-span-1 lg:col-span-3 space-y-6">
+          
+          <!-- Reto Clínico Card -->
+          <div class="bg-gradient-to-br from-amber-500/10 via-purple-500/5 to-white border border-amber-300/80 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">🎯</span>
+              <h2 class="text-sm font-bold text-stone-950 uppercase tracking-wide">
+                Reto Clínico Interactivo
+              </h2>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed mb-4">
+              Pon a prueba tu discriminación diagnóstica con nuestro banco de preguntas extraído de la evidencia médica.
+            </p>
+            <a
+              href="reto.html"
+              class="block w-full py-2.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-center text-xs shadow-sm transition-colors"
+            >
+              Iniciar Reto Semiótico →
+            </a>
           </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Medicina e Implementación
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Cerrar la brecha entre la evidencia y la práctica: métodos y
-            estrategias para que las innovaciones científicas se traduzcan en
-            beneficios reales para los pacientes.
-          </p>
-          <p class="text-sm font-semibold text-indigo-700 mt-4">4 módulos</p>
-        </a>
+
+          <!-- Autoevaluaciones Directas -->
+          <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center gap-2 pb-3 mb-3 border-b border-stone-100">
+              <span class="text-lg">📝</span>
+              <h2 class="text-sm font-bold text-stone-900 uppercase tracking-wide">
+                Autoevaluaciones
+              </h2>
+            </div>
+            <div class="space-y-2 text-xs">
+              <a
+                href="gastroenterologia-autoevaluacion.html"
+                class="block p-3 rounded-xl border border-stone-100 hover:border-purple-200 bg-stone-50/50 hover:bg-purple-50/30 transition-colors group"
+              >
+                <div class="font-semibold text-stone-900 group-hover:text-purple-700">Autoevaluación: ERGE</div>
+                <div class="text-stone-500 text-[11px] mt-0.5">Enfermedad por reflujo gastroesofágico</div>
+              </a>
+              <a
+                href="neurologia-autoevaluacion.html"
+                class="block p-3 rounded-xl border border-stone-100 hover:border-purple-200 bg-stone-50/50 hover:bg-purple-50/30 transition-colors group"
+              >
+                <div class="font-semibold text-stone-900 group-hover:text-purple-700">Autoevaluación: Neurología</div>
+                <div class="text-stone-500 text-[11px] mt-0.5">Diagnóstico y exploración neurológica</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Repositorios de Medicamentos -->
+          <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex items-center gap-2 pb-3 mb-3 border-b border-stone-100">
+              <span class="text-lg">💊</span>
+              <h2 class="text-sm font-bold text-stone-900 uppercase tracking-wide">
+                Repositorios de Fármacos
+              </h2>
+            </div>
+            <div class="space-y-2 text-xs">
+              <a
+                href="medicamentos_cronicos.html"
+                class="block p-3 rounded-xl border border-stone-100 hover:border-emerald-200 bg-stone-50/50 hover:bg-emerald-50/30 transition-colors group"
+              >
+                <div class="font-semibold text-stone-900 group-hover:text-emerald-700">Medicamentos Crónicos</div>
+                <div class="text-stone-500 text-[11px] mt-0.5">Fichas de evaluación y farmacoeconomía</div>
+              </a>
+              <a
+                href="medicamentos_oncologicos.html"
+                class="block p-3 rounded-xl border border-stone-100 hover:border-emerald-200 bg-stone-50/50 hover:bg-emerald-50/30 transition-colors group"
+              >
+                <div class="font-semibold text-stone-900 group-hover:text-emerald-700">Medicamentos Oncológicos</div>
+                <div class="text-stone-500 text-[11px] mt-0.5">Terapias biológicas e inmunooncología</div>
+              </a>
+              <a
+                href="trastornos-movimiento-1.html"
+                class="block p-3 rounded-xl border border-stone-100 hover:border-purple-200 bg-stone-50/50 hover:bg-purple-50/30 transition-colors group"
+              >
+                <div class="font-semibold text-stone-900 group-hover:text-purple-700">Trastornos del Movimiento I</div>
+                <div class="text-stone-500 text-[11px] mt-0.5">Ficha rápida de la Enf. de Parkinson</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Metadatos de Rigor y Licencia -->
+          <div class="bg-stone-100/70 border border-stone-200 rounded-2xl p-4 text-[11px] text-stone-500 space-y-2">
+            <div class="font-semibold text-stone-700 flex items-center gap-1.5">
+              <span>🔬 Rigor & Metodología</span>
+            </div>
+            <p class="leading-relaxed">
+              Evidencia clínica fundamentada en PubMed, CrossRef y pautas diagnósticas internacionales.
+            </p>
+            <p class="pt-2 border-t border-stone-200/60">
+              Contenido bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener" class="font-semibold text-purple-700 hover:underline">CC BY-SA 4.0</a>.
+            </p>
+          </div>
+
+        </aside>
+
       </div>
+    </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-3 mt-20 max-w-7xl mx-auto">
-        Autoevaluaciones
-      </h2>
-      <p class="text-gray-600 mb-8 max-w-7xl mx-auto">
-        Cuestionarios que se corrigen en tu navegador. El resultado se muestra en
-        la página y puedes descargarlo o imprimirlo; no se envía ni se guarda
-        nada.
-      </p>
-
-      <div
-        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <a
-          href="gastroenterologia-autoevaluacion.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"
-              />
-              <path d="M14 2v6h6" />
-              <path d="m9 15 2 2 4-4" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Autoevaluación: ERGE
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Cuestionario sobre enfermedad por reflujo gastroesofágico.
-          </p>
-        </a>
-
-        <a
-          href="neurologia-autoevaluacion.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"
-              />
-              <path d="M14 2v6h6" />
-              <path d="m9 15 2 2 4-4" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Autoevaluación: Neurología
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Cuestionario general de diagnóstico y manejo neurológico.
-          </p>
-        </a>
-      </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-3 mt-20 max-w-7xl mx-auto">
-        Repositorios de medicamentos
-      </h2>
-      <p class="text-gray-600 mb-8 max-w-7xl mx-auto">
-        Fichas de consulta rápida organizadas por indicación.
-      </p>
-
-      <div
-        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <a
-          href="medicamentos_cronicos.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="8" width="18" height="12" rx="2" />
-              <path d="M12 12v4" />
-              <path d="M10 14h4" />
-              <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Medicamentos Crónicos
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Repositorio de fármacos para el manejo de enfermedades crónicas.
-          </p>
-        </a>
-
-        <a
-          href="medicamentos_oncologicos.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="8" width="18" height="12" rx="2" />
-              <path d="M12 12v4" />
-              <path d="M10 14h4" />
-              <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Medicamentos Oncológicos
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Repositorio de terapias oncológicas e inmunoterapia.
-          </p>
-        </a>
-
-        <a
-          href="trastornos-movimiento-1.html"
-          class="block w-full bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 group card-hover-effect"
-        >
-          <div class="flex items-center mb-4">
-            <svg class="section-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="4" r="2" />
-              <path d="m9 20 3-6 3 6" />
-              <path d="M6 10h12" />
-              <path d="M12 6v8" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Trastornos del Movimiento I
-          </h3>
-          <p class="text-gray-600 text-md mt-2">
-            Resumen de la Enfermedad de Parkinson. Versión breve; la extendida
-            está en
-            <span class="text-indigo-700 font-semibold">Neurología</span>.
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <footer class="bg-white mt-20">
-      <div class="container mx-auto px-6 py-6 text-center text-gray-500">
-        <p>
-          <a
-            href="https://powersemiotics.com/"
-            class="font-semibold text-indigo-700 hover:text-indigo-500 transition-colors"
-            >Powersemiotics</a
-          >
-        </p>
-        <p class="mt-2">&copy; 2025 Alcy Edmundo Torres Guerrero.</p>
-        <p class="mt-2 text-sm">
-          Contenido bajo licencia
-          <a
-            rel="license"
-            href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"
-            class="font-semibold text-indigo-700 hover:text-indigo-500 transition-colors"
-            >Creative Commons Atribución-CompartirIgual 4.0</a
-          >.
-        </p>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 mt-auto py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <div class="flex items-center space-x-2">
+          <img src="assets/images/logo.png" alt="Logo" class="h-5 w-5" />
+          <span class="font-semibold text-stone-700">Powersemiotics</span>
+          <span>· © 2026 Alcy Edmundo Torres Guerrero.</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://powersemiotics.com/" class="hover:text-stone-900 transition-colors">Ecosistema Principal</a>
+          <a href="https://www.biosemiotics.net/" class="hover:text-stone-900 transition-colors">Biosemiotics (POCUS)</a>
+        </div>
       </div>
     </footer>
+
+    <!-- Client-Side Engine for Post Indexing, Filtering & Search -->
+    <script>
+      let allPosts = [];
+      let activeCategory = 'all';
+
+      async function initHub() {
+        try {
+          const res = await fetch(`assets/data/blog-index.json?v=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) throw new Error('No se pudo cargar el índice');
+          allPosts = await res.json();
+          
+          // Update counts
+          const countEl = document.getElementById('statCasesCount');
+          if (countEl) countEl.innerText = `${allPosts.length}`;
+
+          buildCategoryFilters();
+          renderPosts();
+          setupMobileDrawer();
+        } catch (err) {
+          console.error(err);
+          document.getElementById('postsGrid').innerHTML = `
+            <div class="bg-red-50 border border-red-200 text-red-700 p-6 rounded-2xl text-center">
+              <p class="font-bold">Error al cargar el índice del blog</p>
+              <p class="text-xs mt-1">Asegúrate de haber ejecutado <code>npm run build</code>.</p>
+            </div>
+          `;
+        }
+      }
+
+      function buildCategoryFilters() {
+        const catContainer = document.getElementById('categoryFilters');
+        const categoriesMap = new Map();
+        allPosts.forEach(p => {
+          if (p.category && p.category_label) {
+            categoriesMap.set(p.category, p.category_label);
+          }
+        });
+
+        let html = `
+          <button data-cat="all" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
+            Todas las Especialidades
+          </button>
+        `;
+
+        categoriesMap.forEach((label, catKey) => {
+          html += `
+            <button data-cat="${catKey}" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap">
+              ${label}
+            </button>
+          `;
+        });
+
+        catContainer.innerHTML = html;
+      }
+
+      function getCompletedState(slug) {
+        try {
+          const state = localStorage.getItem(`medsemiotics_quiz_${slug}`);
+          return state === 'completed';
+        } catch (e) {
+          return false;
+        }
+      }
+
+      function renderPosts() {
+        const grid = document.getElementById('postsGrid');
+        const noResults = document.getElementById('noResults');
+        const searchInput = document.getElementById('searchInput');
+        const clearBtn = document.getElementById('clearSearchBtn');
+        const searchVal = searchInput.value.toLowerCase().trim();
+
+        if (searchVal) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+
+        const filtered = allPosts.filter(post => {
+          const matchCat = activeCategory === 'all' || (post.category && post.category.toLowerCase() === activeCategory.toLowerCase());
+          const matchSearch = !searchVal || 
+            (post.title && post.title.toLowerCase().includes(searchVal)) ||
+            (post.subtitle && post.subtitle.toLowerCase().includes(searchVal)) ||
+            (post.grounding_badge && post.grounding_badge.toLowerCase().includes(searchVal)) ||
+            (post.tags && post.tags.some(t => t.toLowerCase().includes(searchVal)));
+          return matchCat && matchSearch;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          noResults.classList.remove('hidden');
+          return;
+        }
+
+        noResults.classList.add('hidden');
+        grid.innerHTML = filtered.map(post => {
+          const isCompleted = getCompletedState(post.slug);
+          return `
+            <article class="bg-white border border-stone-200 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md hover:border-purple-300 card-hover flex flex-col justify-between group overflow-hidden">
+              <div>
+                ${post.featured_image ? `
+                  <a href="post.html?slug=${post.slug}" class="block mb-4 -mx-5 -mt-5 sm:-mx-6 sm:-mt-6 h-48 overflow-hidden bg-stone-100 relative border-b border-stone-100">
+                    <img src="${post.featured_image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                    ${post.image_license ? `
+                      <span class="absolute bottom-2 right-2 bg-stone-900/80 text-[10px] font-mono text-white px-2 py-0.5 rounded backdrop-blur-sm">
+                        ${post.image_license}
+                      </span>
+                    ` : ''}
+                  </a>
+                ` : ''}
+
+                <!-- Top Badges -->
+                <div class="flex items-center justify-between gap-2 mb-2.5 text-xs">
+                  <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center gap-1 font-semibold text-purple-800 bg-purple-50 border border-purple-200/80 px-2.5 py-0.5 rounded-full">
+                      ${post.category_label || 'Clínica'}
+                    </span>
+                    ${post.grounding_badge ? `
+                      <span class="font-mono text-[10px] text-stone-500 bg-stone-100 px-2 py-0.5 rounded">
+                        ${post.grounding_badge}
+                      </span>
+                    ` : ''}
+                  </div>
+                  <span class="text-stone-400 font-medium text-[11px]">${post.reading_time || '5 min'}</span>
+                </div>
+
+                <!-- Title & Subtitle -->
+                <h2 class="text-lg sm:text-xl font-bold text-stone-900 group-hover:text-purple-700 transition-colors leading-snug mb-2">
+                  <a href="post.html?slug=${post.slug}" class="focus:outline-none">
+                    ${post.title}
+                  </a>
+                </h2>
+
+                <p class="text-stone-600 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-3 mb-4">
+                  ${post.excerpt || post.subtitle || ''}
+                </p>
+              </div>
+
+              <!-- Card Bottom Metas -->
+              <div class="pt-3.5 border-t border-stone-100 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  ${post.has_quiz ? `
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-medium ${
+                      isCompleted 
+                        ? 'bg-emerald-100 text-emerald-800' 
+                        : 'bg-amber-50 text-amber-800 border border-amber-200'
+                    }">
+                      ${isCompleted ? '✓ Autoevaluación superada' : '🎯 Autoevaluación (' + post.quiz_count + ')'}
+                    </span>
+                  ` : ''}
+                </div>
+                <a href="post.html?slug=${post.slug}" class="font-semibold text-purple-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                  Estudiar caso →
+                </a>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function resetFilters() {
+        document.getElementById('searchInput').value = '';
+        activeCategory = 'all';
+        document.querySelectorAll('.cat-pill').forEach(b => {
+          if (b.dataset.cat === 'all') {
+            b.className = 'cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap';
+          } else {
+            b.className = 'cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap';
+          }
+        });
+        renderPosts();
+      }
+
+      // Event listeners for Category Pills
+      document.getElementById('categoryFilters').addEventListener('click', (e) => {
+        const btn = e.target.closest('.cat-pill');
+        if (!btn) return;
+        document.querySelectorAll('.cat-pill').forEach(b => {
+          b.className = 'cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap';
+        });
+        btn.className = 'cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap';
+        activeCategory = btn.dataset.cat;
+        renderPosts();
+      });
+
+      // Search listeners
+      document.getElementById('searchInput').addEventListener('input', () => {
+        renderPosts();
+      });
+      document.getElementById('clearSearchBtn').addEventListener('click', () => {
+        document.getElementById('searchInput').value = '';
+        renderPosts();
+      });
+
+      // Mobile Drawer setup
+      function setupMobileDrawer() {
+        const drawer = document.getElementById('mobileDrawer');
+        const openBtn = document.getElementById('mobileMenuBtn');
+        const closeBtn = document.getElementById('closeDrawerBtn');
+        const mobileContent = document.getElementById('mobileNavContent');
+        const desktopContent = document.getElementById('desktopNavContent');
+
+        if (desktopContent && mobileContent) {
+          mobileContent.innerHTML = desktopContent.innerHTML;
+        }
+
+        openBtn.addEventListener('click', () => {
+          drawer.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+          drawer.classList.add('hidden');
+        });
+
+        drawer.addEventListener('click', (e) => {
+          if (e.target === drawer) {
+            drawer.classList.add('hidden');
+          }
+        });
+      }
+
+      initHub();
+    </script>
   </body>
 </html>

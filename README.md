@@ -31,14 +31,14 @@ raíz.
 - No se carga nada desde ningún CDN: fuentes, iconos, React y las librerías de
   terceros están alojadas en `assets/`.
 
-## Contenido
+## Estructura del Sitio y Contenido
 
-Seis áreas temáticas. Cada una tiene una página índice en la raíz que enlaza sus
-módulos, y un directorio con las páginas.
+El portal principal (`index.html`) está diseñado como una aplicación de 3 zonas:
+1. **Canvas Principal (Centro)**: El Blog Clínico e Interactivo con casos fundamentados en evidencia, discriminación bayesiana con cocientes de verosimilitud (LR), buscador en tiempo real y filtrado por especialidad.
+2. **Panel Lateral Izquierdo (Lecturas Anteriores)**: Navegación estructurada en acordeones para las 6 áreas temáticas curriculares previas.
+3. **Panel Lateral Derecho (Herramientas y Recursos)**: Acceso directo al Reto Clínico (`reto.html`), autoevaluaciones específicas y repositorios de medicamentos.
 
-La trazabilidad de la migración desde el Google Site histórico se mantiene en
-[`MIGRATION.md`](MIGRATION.md); ese registro evita volver a publicar temas ya
-consolidados y documenta los contenidos pendientes de recuperación.
+### Áreas Curriculares (Lecturas Anteriores)
 
 | Área                      | Índice                           | Páginas                          |
 | ------------------------- | -------------------------------- | -------------------------------- |
@@ -49,8 +49,9 @@ consolidados y documenta los contenidos pendientes de recuperación.
 | Inmunología Clínica       | `inmunologia_clinica.html`       | `inmunologia/` — 5               |
 | Medicina e Implementación | `medicina_e_implementacion.html` | `medicina_e_implementacion/` — 4 |
 
-Además hay páginas de contenido en la raíz que no cuelgan de ningún área:
+Además cuenta con herramientas de autoevaluación y repositorios rápidos:
 
+- `reto.html` — Reto Clínico (banco de autoevaluación dinámico indexado)
 - `gastroenterologia-autoevaluacion.html` — Autoevaluación: ERGE
 - `neurologia-autoevaluacion.html` — Autoevaluación de Neurología
 - `medicamentos_cronicos.html` — Repositorio de Medicamentos Crónicos
