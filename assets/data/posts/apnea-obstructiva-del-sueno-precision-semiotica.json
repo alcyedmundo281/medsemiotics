@@ -1,0 +1,84 @@
+{
+  "id": "HM6018-01",
+  "slug": "apnea-obstructiva-del-sueno-precision-semiotica",
+  "title": "Apnea obstructiva del sueño: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+  "subtitle": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas.",
+  "date": "2026-08-21",
+  "author": "Dr. Alcy Torres",
+  "category": "medicina_interna",
+  "category_label": "Medicina Interna",
+  "tags": [
+    "medicina_interna",
+    "apnea-obstructiva-del-sueno",
+    "semiologia",
+    "evidencia"
+  ],
+  "reading_time": "6 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6018 · PMID:23989984",
+  "has_quiz": true,
+  "quiz_count": 2,
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "excerpt": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas.",
+  "grounding": {
+    "condicion_id": "HM:6018",
+    "condicion_nombre": "Apnea obstructiva del sueño",
+    "concepto_id": "HM:3072",
+    "concepto_nombre": "Ahogo o jadeo nocturno",
+    "lr_positivo": 3.3,
+    "lr_negativo": null,
+    "poblacion": "2%-14% en cribado comunitario, 21%-90% en pacientes derivados a evaluación del sueño; varía además con el umbral de IAH usado (≥5/h: 14%; ≥15/h: 6%; ≥5/h con síntomas: 2%-4%)",
+    "referencia_id": "pmid:23989984",
+    "referencia_cita": "Myers KA, Mrkobrada M, Simel DL. Does this patient have obstructive sleep apnea?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "doi": "10.1001/jama.2013.276185",
+    "pmid": "23989984"
+  },
+  "triada": {
+    "significante": "Ahogo o jadeo nocturno (Nocturnal choking or gasping), evaluado en: 2%-14% en cribado comunitario, 21%-90% en pacientes derivados a evaluación del sueño; varía además con el umbral de IAH usado (≥5/h: 14%; ≥15/h: 6%; ≥5/h con síntomas: 2%-4%).",
+    "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+    "decision": "Ahogo o jadeo nocturno — la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es el valor diagnóstico de ahogo o jadeo nocturno en Apnea obstructiva del sueño según la literatura verificada (PMID: 23989984)?",
+      "opciones": [
+        {
+          "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 3.3, verificado contra la fuente citada.",
+          "correcta": true,
+          "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+        },
+        {
+          "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+          "correcta": false,
+          "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+        },
+        {
+          "texto": "Carece de valor discriminativo en la exploración.",
+          "correcta": false,
+          "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la toma de decisiones clínicas ante Apnea obstructiva del sueño, ¿cuál es el paso de confirmación o cribado más adecuado?",
+      "opciones": [
+        {
+          "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+          "correcta": true,
+          "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+        },
+        {
+          "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+          "correcta": false,
+          "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+        }
+      ]
+    }
+  ],
+  "body": "## Introducción y Relevancia Clínica\r\n\r\nEl abordaje diagnóstico de **Apnea obstructiva del sueño** (Obstructive sleep apnea) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.\r\n\r\n> **¿Qué es un cociente de verosimilitud (LR)?** Indica cuánto cambia la probabilidad de una enfermedad cuando un hallazgo está presente (LR+) o ausente (LR-). Como regla práctica (McGee S. *Simplifying likelihood ratios*. J Gen Intern Med. 2002), un LR+ ≥ 10 o un LR- ≤ 0.1 suele bastar por sí solo para confirmar o descartar; valores entre 0.5 y 2 apenas cambian la sospecha clínica.\r\n\r\n---\r\n\r\n## Semiología y Rendimiento Diagnóstico\r\n\r\nEl hallazgo con mejor rendimiento documentado para **Apnea obstructiva del sueño** es **Ahogo o jadeo nocturno**. La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros:\r\n\r\n- **Cociente de Verosimilitud Positivo (LR+):** 3.3 — cambia poco la probabilidad: evidencia débil\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\n- **Hallazgo evaluado:** Ahogo o jadeo nocturno\r\n- **Cociente de Verosimilitud Positivo (LR+):** 3.3 — cambia poco la probabilidad: evidencia débil\r\n- **Población evaluada:** 2%-14% en cribado comunitario, 21%-90% en pacientes derivados a evaluación del sueño; varía además con el umbral de IAH usado (≥5/h: 14%; ≥15/h: 6%; ≥5/h con síntomas: 2%-4%).\r\n- **Cita principal:** Myers KA, Mrkobrada M, Simel DL. Does this patient have obstructive sleep apnea?: The Rational Clinical Examination systematic review. JAMA. 2013. [PMID: 23989984]\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nAhogo o jadeo nocturno — la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
+}

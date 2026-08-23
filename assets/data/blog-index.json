@@ -369,6 +369,32 @@
     "excerpt": "Análisis bayesiano de otitis media concomitante y su impacto en la toma de decisiones clínicas."
   },
   {
+    "id": "HM6018-01",
+    "slug": "apnea-obstructiva-del-sueno-precision-semiotica",
+    "title": "Apnea obstructiva del sueño: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "apnea-obstructiva-del-sueno",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6018 · PMID:23989984",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas."
+  },
+  {
     "id": "HM6004-01",
     "slug": "meningitis-aguda-sacudida-cefalica",
     "title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",

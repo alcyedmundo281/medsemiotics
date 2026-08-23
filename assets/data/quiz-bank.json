@@ -993,5 +993,70 @@
         "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
       }
     ]
+  },
+  {
+    "id": "apnea-obstructiva-del-sueno-precision-semiotica-q1",
+    "post_slug": "apnea-obstructiva-del-sueno-precision-semiotica",
+    "post_title": "Apnea obstructiva del sueño: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6018",
+    "condicion_nombre": "Apnea obstructiva del sueño",
+    "pmid": "23989984",
+    "doi": "10.1001/jama.2013.276185",
+    "referencia_cita": "Myers KA, Mrkobrada M, Simel DL. Does this patient have obstructive sleep apnea?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Ahogo o jadeo nocturno (Nocturnal choking or gasping), evaluado en: 2%-14% en cribado comunitario, 21%-90% en pacientes derivados a evaluación del sueño; varía además con el umbral de IAH usado (≥5/h: 14%; ≥15/h: 6%; ≥5/h con síntomas: 2%-4%).",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Ahogo o jadeo nocturno — la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico de ahogo o jadeo nocturno en Apnea obstructiva del sueño según la literatura verificada (PMID: 23989984)?",
+    "opciones": [
+      {
+        "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 3.3, verificado contra la fuente citada.",
+        "correcta": true,
+        "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+      }
+    ]
+  },
+  {
+    "id": "apnea-obstructiva-del-sueno-precision-semiotica-q2",
+    "post_slug": "apnea-obstructiva-del-sueno-precision-semiotica",
+    "post_title": "Apnea obstructiva del sueño: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6018",
+    "condicion_nombre": "Apnea obstructiva del sueño",
+    "pmid": "23989984",
+    "doi": "10.1001/jama.2013.276185",
+    "referencia_cita": "Myers KA, Mrkobrada M, Simel DL. Does this patient have obstructive sleep apnea?: The Rational Clinical Examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Ahogo o jadeo nocturno (Nocturnal choking or gasping), evaluado en: 2%-14% en cribado comunitario, 21%-90% en pacientes derivados a evaluación del sueño; varía además con el umbral de IAH usado (≥5/h: 14%; ≥15/h: 6%; ≥5/h con síntomas: 2%-4%).",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Ahogo o jadeo nocturno — la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Apnea obstructiva del sueño, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
   }
 ]
