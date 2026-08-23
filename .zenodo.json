@@ -13,6 +13,11 @@
       "affiliation": "Hospital de Especialidades Carlos Andrade Marín; Universidad Central del Ecuador"
     }
   ],
+  "communities": [
+    {
+      "identifier": "powersemiotics"
+    }
+  ],
   "keywords": [
     "educación médica",
     "medical education",

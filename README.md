@@ -1,6 +1,9 @@
 # medsemiotics
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22069642.svg)](https://doi.org/10.5281/zenodo.22069642)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22069641.svg)](https://doi.org/10.5281/zenodo.22069641)
+
+DOI de concepto: cita siempre la última versión. La v1.0.0 quedó fija en
+[10.5281/zenodo.22069642](https://doi.org/10.5281/zenodo.22069642).
 
 Contenido escrito de **Powersemiotics**: los módulos educativos, autoevaluaciones,
 presentaciones e infografías de medicina, separados del sitio corporativo.
