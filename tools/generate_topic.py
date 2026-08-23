@@ -330,9 +330,20 @@ def create_post_markdown(cond_data: dict, filename: str):
             decision_bits.append(f"si está presente, {interp_pos} (LR+ {lr_pos})")
         if interp_neg:
             decision_bits.append(f"si está ausente, {interp_neg} (LR- {lr_neg})")
+    # La advertencia es una salvedad sobre el USO del cociente (precisión,
+    # límites), no una explicación fisiopatológica: va pegada a la decisión
+    # clínica, nunca al panel de "significado" (ver más abajo).
+    if main_sign.get("advertencia"):
+        decision_bits.append("Advertencia: " + main_sign["advertencia"].strip())
     decision_text = f"{concept_termino} — " + "; ".join(decision_bits) if decision_bits else concept_termino
 
-    significado = main_sign.get("advertencia") or (
+    # El "significado" es la interpretación fisiopatológica del hallazgo, y
+    # los conceptos del índice todavía no la traen (campo `significado` en
+    # blanco, pendiente de migrar desde biosemiotics). Ninguna otra prosa del
+    # índice sustituye eso sin mentir sobre lo que dice: `advertencia` es una
+    # salvedad estadística, no una explicación de mecanismo, así que aquí
+    # siempre queda la nota honesta en vez de un campo mal etiquetado.
+    significado = (
         "La fuente no describe el mecanismo fisiopatológico de este hallazgo; "
         "su valor aquí es estadístico (cociente de verosimilitud), no explicativo."
     )

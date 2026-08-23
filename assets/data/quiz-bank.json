@@ -863,5 +863,70 @@
         "feedback": "Incorrecto. El inicio unilateral o asimétrico es característico de la Enfermedad de Parkinson."
       }
     ]
+  },
+  {
+    "id": "embarazo-ectopico-precision-semiotica-q1",
+    "post_slug": "embarazo-ectopico-precision-semiotica",
+    "post_title": "Embarazo ectópico: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6016",
+    "condicion_nombre": "Embarazo ectópico",
+    "pmid": "23613077",
+    "doi": "10.1001/jama.2013.3914",
+    "referencia_cita": "Crochet JR, Bastian LA, Chireau MV. Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Masa anexial sin gestación intrauterina en ecografía transvaginal (Adnexal mass with no intrauterine pregnancy on transvaginal sonography), evaluado en: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Masa anexial sin gestación intrauterina en ecografía transvaginal — el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto; Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
+    },
+    "pregunta": "¿Cuál es el valor diagnóstico de masa anexial sin gestación intrauterina en ecografía transvaginal en Embarazo ectópico según la literatura verificada (PMID: 23613077)?",
+    "opciones": [
+      {
+        "texto": "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 111, verificado contra la fuente citada.",
+        "correcta": true,
+        "feedback": "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+      },
+      {
+        "texto": "Descarta en un 100% la patología independientemente de otros signos.",
+        "correcta": false,
+        "feedback": "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      },
+      {
+        "texto": "Carece de valor discriminativo en la exploración.",
+        "correcta": false,
+        "feedback": "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+      }
+    ]
+  },
+  {
+    "id": "embarazo-ectopico-precision-semiotica-q2",
+    "post_slug": "embarazo-ectopico-precision-semiotica",
+    "post_title": "Embarazo ectópico: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6016",
+    "condicion_nombre": "Embarazo ectópico",
+    "pmid": "23613077",
+    "doi": "10.1001/jama.2013.3914",
+    "referencia_cita": "Crochet JR, Bastian LA, Chireau MV. Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA. 2013.",
+    "triada": {
+      "significante": "Masa anexial sin gestación intrauterina en ecografía transvaginal (Adnexal mass with no intrauterine pregnancy on transvaginal sonography), evaluado en: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
+      "significado": "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo.",
+      "decision": "Masa anexial sin gestación intrauterina en ecografía transvaginal — el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto; Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
+    },
+    "pregunta": "En la toma de decisiones clínicas ante Embarazo ectópico, ¿cuál es el paso de confirmación o cribado más adecuado?",
+    "opciones": [
+      {
+        "texto": "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo.",
+        "correcta": true,
+        "feedback": "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      },
+      {
+        "texto": "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales.",
+        "correcta": false,
+        "feedback": "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+      }
+    ]
   }
 ]

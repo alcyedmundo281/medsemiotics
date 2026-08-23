@@ -1,0 +1,83 @@
+---
+id: "HM6016-01"
+slug: "embarazo-ectopico-precision-semiotica"
+title: "Embarazo ectópico: Precisión diagnóstica y rendimiento de los hallazgos semiológicos"
+subtitle: "Análisis bayesiano de masa anexial sin gestación intrauterina en ecografía transvaginal y su impacto en la toma de decisiones clínicas."
+date: "2026-08-21"
+author: "Dr. Alcy Torres"
+category: "medicina_interna"
+category_label: "Medicina Interna"
+tags: ["medicina_interna", "embarazo-ectopico", "semiologia", "evidencia"]
+reading_time: "6 min"
+difficulty: "Intermedio"
+grounding:
+  condicion_id: "HM:6016"
+  condicion_nombre: "Embarazo ectópico"
+  concepto_id: "HM:3064"
+  concepto_nombre: "Masa anexial sin gestación intrauterina en ecografía transvaginal"
+  lr_positivo: 111
+  lr_negativo: null
+  poblacion: "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)"
+  referencia_id: "pmid:23613077"
+  referencia_cita: "Crochet JR, Bastian LA, Chireau MV. Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA. 2013."
+  doi: "10.1001/jama.2013.3914"
+  pmid: "23613077"
+
+triada:
+  significante: "Masa anexial sin gestación intrauterina en ecografía transvaginal (Adnexal mass with no intrauterine pregnancy on transvaginal sonography), evaluado en: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)."
+  significado: "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo."
+  decision: "Masa anexial sin gestación intrauterina en ecografía transvaginal — el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto; Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
+
+autoevaluacion:
+  - id: "q1"
+    pregunta: "¿Cuál es el valor diagnóstico de masa anexial sin gestación intrauterina en ecografía transvaginal en Embarazo ectópico según la literatura verificada (PMID: 23613077)?"
+    opciones:
+      - texto: "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 111, verificado contra la fuente citada."
+        correcta: true
+        feedback: "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
+      - texto: "Descarta en un 100% la patología independientemente de otros signos."
+        correcta: false
+        feedback: "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
+      - texto: "Carece de valor discriminativo en la exploración."
+        correcta: false
+        feedback: "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
+
+  - id: "q2"
+    pregunta: "En la toma de decisiones clínicas ante Embarazo ectópico, ¿cuál es el paso de confirmación o cribado más adecuado?"
+    opciones:
+      - texto: "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo."
+        correcta: true
+        feedback: "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
+      - texto: "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales."
+        correcta: false
+        feedback: "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+---
+
+## Introducción y Relevancia Clínica
+
+El abordaje diagnóstico de **Embarazo ectópico** (Ectopic pregnancy) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.
+
+> **¿Qué es un cociente de verosimilitud (LR)?** Indica cuánto cambia la probabilidad de una enfermedad cuando un hallazgo está presente (LR+) o ausente (LR-). Como regla práctica (McGee S. *Simplifying likelihood ratios*. J Gen Intern Med. 2002), un LR+ ≥ 10 o un LR- ≤ 0.1 suele bastar por sí solo para confirmar o descartar; valores entre 0.5 y 2 apenas cambian la sospecha clínica.
+
+---
+
+## Semiología y Rendimiento Diagnóstico
+
+El hallazgo con mejor rendimiento documentado para **Embarazo ectópico** es **Masa anexial sin gestación intrauterina en ecografía transvaginal**. La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros:
+
+- **Cociente de Verosimilitud Positivo (LR+):** 111 — cambia mucho la probabilidad: suele bastar por sí solo para confirmar
+
+---
+
+## Evidencia Cuantitativa y Fuentes
+
+- **Hallazgo evaluado:** Masa anexial sin gestación intrauterina en ecografía transvaginal
+- **Cociente de Verosimilitud Positivo (LR+):** 111 — cambia mucho la probabilidad: suele bastar por sí solo para confirmar
+- **Población evaluada:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).
+- **Cita principal:** Crochet JR, Bastian LA, Chireau MV. Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA. 2013. [PMID: 23613077]
+
+---
+
+## Conclusión Semiótica
+
+Masa anexial sin gestación intrauterina en ecografía transvaginal — el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto; Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene
