@@ -343,6 +343,32 @@
     "excerpt": "Análisis bayesiano de masa anexial sin gestación intrauterina en ecografía transvaginal y su impacto en la toma de decisiones clínicas."
   },
   {
+    "id": "HM6017-01",
+    "slug": "conjuntivitis-bacteriana-precision-semiotica",
+    "title": "Conjuntivitis bacteriana: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
+    "subtitle": "Análisis bayesiano de otitis media concomitante y su impacto en la toma de decisiones clínicas.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "conjuntivitis-bacteriana",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6017 · PMID:35699701",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Análisis bayesiano de otitis media concomitante y su impacto en la toma de decisiones clínicas."
+  },
+  {
     "id": "HM6004-01",
     "slug": "meningitis-aguda-sacudida-cefalica",
     "title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",
