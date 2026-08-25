@@ -1,5 +1,33 @@
 [
   {
+    "id": "HM6019-01",
+    "slug": "luxacion-cadera-lactante-barlow-ortolani",
+    "title": "Luxación y displasia de cadera en el lactante: Precisión de las maniobras de Barlow y Ortolani",
+    "subtitle": "Análisis bayesiano de la exploración física neonatal frente al estándar ecográfico de Graf según la evidencia de JAMA.",
+    "date": "2026-08-22",
+    "author": "Dr. Alcy Torres",
+    "category": "pediatria",
+    "category_label": "Pediatría y Ortopedia",
+    "tags": [
+      "pediatria",
+      "ortopedia",
+      "displasia-cadera",
+      "recien-nacido",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6019 · PMID:38619828",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ultrasound_measuring_the_developmental_dysplasia_of_right_hip.jpg/960px-Ultrasound_measuring_the_developmental_dysplasia_of_right_hip.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Ultrasound_measuring_the_developmental_dysplasia_of_right_hip.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Ultrasound measuring the developmental dysplasia of right hip.jpg",
+    "excerpt": "Las maniobras de Barlow y Ortolani son altamente específicas para confirmar la luxación de cadera (LR+ 52), pero su sensibilidad del 46% exige vigilancia clínica continua y ecografía de apoyo."
+  },
+  {
     "id": "HM6003-01",
     "slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
     "title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",

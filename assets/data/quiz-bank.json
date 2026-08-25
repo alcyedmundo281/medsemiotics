@@ -1,5 +1,70 @@
 [
   {
+    "id": "luxacion-cadera-lactante-barlow-ortolani-q1",
+    "post_slug": "luxacion-cadera-lactante-barlow-ortolani",
+    "post_title": "Luxación y displasia de cadera en el lactante: Precisión de las maniobras de Barlow y Ortolani",
+    "category": "pediatria",
+    "category_label": "Pediatría y Ortopedia",
+    "condicion_id": "HM:6019",
+    "condicion_nombre": "Luxación de cadera en el lactante",
+    "pmid": "38619828",
+    "doi": "10.1001/jama.2024.2404",
+    "referencia_cita": "Tidwell JE, et al. Does This Infant Have a Dislocated Hip?: The Rational Clinical Examination Systematic Review. JAMA. 2024;331(18):1576-1585.",
+    "triada": {
+      "significante": "Maniobras de Barlow y Ortolani positivas (provocación de luxación y reducción palpable).",
+      "significado": "Inestabilidad articular por displasia acetabular o laxitud neonatal.",
+      "decision": "Alta especificidad (99.1%) y LR+ de 52 para confirmar; sensibilidad del 46% (LR- 0.55) que no descarta si es negativa."
+    },
+    "pregunta": "En un lactante de 1 mes de vida, ¿cuál es el rendimiento de las maniobras de Barlow y Ortolani según la evidencia de JAMA (PMID: 38619828)?",
+    "opciones": [
+      {
+        "texto": "Poseen una alta especificidad (99.1%) y LR+ de 52 para confirmar inestabilidad, pero su sensibilidad es del 46%, por lo que una exploración negativa no excluye displasia.",
+        "correcta": true,
+        "feedback": "¡Correcto! El LR+ de 52 confirma fuertemente el diagnóstico, pero la sensibilidad del 46% (LR- 0.55) demuestra que más de la mitad de las displasias no presentan inestabilidad palpable en el examen inicial."
+      },
+      {
+        "texto": "Un examen físico negativo con Barlow y Ortolani normales descarta en un 100% la displasia de cadera.",
+        "correcta": false,
+        "feedback": "Incorrecto. Con una sensibilidad de solo 46% (LR- 0.55), la ausencia de signos palpables no descarta la patología."
+      },
+      {
+        "texto": "El chasquido articular benigno (click) tiene un LR+ de 52 y equivale a una maniobra de Ortolani positiva.",
+        "correcta": false,
+        "feedback": "Incorrecto. El click o chasquido tiene un LR+ de 1.6 (no discriminativo)."
+      }
+    ]
+  },
+  {
+    "id": "luxacion-cadera-lactante-barlow-ortolani-q2",
+    "post_slug": "luxacion-cadera-lactante-barlow-ortolani",
+    "post_title": "Luxación y displasia de cadera en el lactante: Precisión de las maniobras de Barlow y Ortolani",
+    "category": "pediatria",
+    "category_label": "Pediatría y Ortopedia",
+    "condicion_id": "HM:6019",
+    "condicion_nombre": "Luxación de cadera en el lactante",
+    "pmid": "38619828",
+    "doi": "10.1001/jama.2024.2404",
+    "referencia_cita": "Tidwell JE, et al. Does This Infant Have a Dislocated Hip?: The Rational Clinical Examination Systematic Review. JAMA. 2024;331(18):1576-1585.",
+    "triada": {
+      "significante": "Chasquido o click articular aislado en la exploración de cadera.",
+      "significado": "Resalte de ligamentos periarticulares o fascia sin luxación articular franca.",
+      "decision": "Hallazgo inespecífico con LR+ de 1.6 (el intervalo cruza el 1.0) sin valor diagnóstico discriminativo."
+    },
+    "pregunta": "¿Qué valor diagnóstico aporta la detección de un chasquido o click articular aislado en la cadera de un lactante menor de 3 meses?",
+    "opciones": [
+      {
+        "texto": "Es un hallazgo inespecífico con LR+ de 1.6 (intervalo que abarca el neutro) sin utilidad diagnóstica discriminativa para luxación o displasia.",
+        "correcta": true,
+        "feedback": "¡Correcto! La revisión de JAMA demostró que los chasquidos provienen de estructuras blandas periarticulares y no diferencian caderas sanas de displásicas."
+      },
+      {
+        "texto": "Indica luxación congénita completa irreductible y requiere inmovilización inmediata en yeso.",
+        "correcta": false,
+        "feedback": "Incorrecto. Los clicks aislados son predominantemente benignos."
+      }
+    ]
+  },
+  {
     "id": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos-q1",
     "post_slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
     "post_title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
