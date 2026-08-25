@@ -1,5 +1,70 @@
 [
   {
+    "id": "intubacion-dificil-mallampati-mordida-labio-q1",
+    "post_slug": "intubacion-dificil-mallampati-mordida-labio",
+    "post_title": "Vía aérea difícil: Rendimiento del test de mordida del labio superior y la escala de Mallampati",
+    "category": "anestesiologia",
+    "category_label": "Anestesiología y Cuidados Críticos",
+    "condicion_id": "HM:6020",
+    "condicion_nombre": "Intubación difícil",
+    "pmid": "30721300",
+    "doi": "10.1001/jama.2018.21413",
+    "referencia_cita": "Detsky ME, et al. Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review. JAMA. 2019;321(5):493-503.",
+    "triada": {
+      "significante": "Incapacidad de los incisivos inferiores para alcanzar la línea bermellón del labio superior durante la protrusión mandibular forzada (Test de mordida del labio superior clase 3), asociada a Mallampati clase 3/4 o distancia tiromentoniana reducida.",
+      "significado": "Limitación del rango de movimiento temporomandibular y subluxación anterior, restringiendo la alineación de los ejes oral, faríngeo y laríngeo durante la laringoscopia directa.",
+      "decision": "Test de mordida del labio superior clase 3: el hallazgo individual que más eleva la probabilidad (LR+ 14, especificidad 96%), subiendo el riesgo basal del 10% a más del 60%. Impone preparar videolaringoscopio o fibrobroncoscopio flexible. Advertencia: NINGÚN signo clínico negativo permite descartar intubación difícil (LR- ~0.50-0.70)."
+    },
+    "pregunta": "¿Cuál es el hallazgo físico individual con mayor rendimiento diagnóstico para confirmar una intubación endotraqueal difícil según JAMA (PMID: 30721300)?",
+    "opciones": [
+      {
+        "texto": "El test de mordida del labio superior (Upper Lip Bite Test) clase 3, con un LR+ de 14 y una especificidad del 96%.",
+        "correcta": true,
+        "feedback": "¡Correcto! La incapacidad de morder el labio superior por encima de la línea del bermellón es el predictor anatómico individual más específico (LR+ 14), superando al test de Mallampati aislado (LR+ 4.1)."
+      },
+      {
+        "texto": "La escala de Mallampati modificada clase 1 o 2.",
+        "correcta": false,
+        "feedback": "Incorrecto. Mallampati 1 y 2 son patrones normales que no aumentan la probabilidad de intubación difícil."
+      },
+      {
+        "texto": "Cualquier hallazgo físico normal descarta la vía aérea difícil con un LR- menor a 0.05.",
+        "correcta": false,
+        "feedback": "Incorrecto. Una de las conclusiones centrales de JAMA es que ningún hallazgo clínico permite excluir de forma fiable una intubación difícil (los LR- rondan 0.50-0.70)."
+      }
+    ]
+  },
+  {
+    "id": "intubacion-dificil-mallampati-mordida-labio-q2",
+    "post_slug": "intubacion-dificil-mallampati-mordida-labio",
+    "post_title": "Vía aérea difícil: Rendimiento del test de mordida del labio superior y la escala de Mallampati",
+    "category": "anestesiologia",
+    "category_label": "Anestesiología y Cuidados Críticos",
+    "condicion_id": "HM:6020",
+    "condicion_nombre": "Intubación difícil",
+    "pmid": "30721300",
+    "doi": "10.1001/jama.2018.21413",
+    "referencia_cita": "Detsky ME, et al. Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review. JAMA. 2019;321(5):493-503.",
+    "triada": {
+      "significante": "Incapacidad de los incisivos inferiores para alcanzar la línea bermellón del labio superior durante la protrusión mandibular forzada (Test de mordida del labio superior clase 3), asociada a Mallampati clase 3/4 o distancia tiromentoniana reducida.",
+      "significado": "Limitación del rango de movimiento temporomandibular y subluxación anterior, restringiendo la alineación de los ejes oral, faríngeo y laríngeo durante la laringoscopia directa.",
+      "decision": "Test de mordida del labio superior clase 3: el hallazgo individual que más eleva la probabilidad (LR+ 14, especificidad 96%), subiendo el riesgo basal del 10% a más del 60%. Impone preparar videolaringoscopio o fibrobroncoscopio flexible. Advertencia: NINGÚN signo clínico negativo permite descartar intubación difícil (LR- ~0.50-0.70)."
+    },
+    "pregunta": "Un paciente presenta un test de Mallampati clase 3 previo a una cirugía electiva (incidencia basal 10%). ¿Cuál es la interpretación bayesiana de este hallazgo?",
+    "opciones": [
+      {
+        "texto": "Posee un LR+ de 4.1 (especificidad 87%), elevando la probabilidad de intubación difícil a aproximadamente 31%, lo que aconseja disponer de dispositivos de rescate.",
+        "correcta": true,
+        "feedback": "¡Correcto! Con un LR+ de 4.1, Mallampati 3/4 multiplica por cuatro la probabilidad pretest, requiriendo preparación del carro de vía aérea difícil."
+      },
+      {
+        "texto": "Es un hallazgo patognomónico que obliga a realizar siempre una traqueostomía de entrada.",
+        "correcta": false,
+        "feedback": "Incorrecto. Un LR+ de 4.1 aumenta la sospecha y exige videolaringoscopía o técnicas avanzadas, no una traqueostomía quirúrgica primaria."
+      }
+    ]
+  },
+  {
     "id": "luxacion-cadera-lactante-barlow-ortolani-q1",
     "post_slug": "luxacion-cadera-lactante-barlow-ortolani",
     "post_title": "Luxación y displasia de cadera en el lactante: Precisión de las maniobras de Barlow y Ortolani",

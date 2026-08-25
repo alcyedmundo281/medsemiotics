@@ -1,5 +1,33 @@
 [
   {
+    "id": "HM6020-01",
+    "slug": "intubacion-dificil-mallampati-mordida-labio",
+    "title": "Vía aérea difícil: Rendimiento del test de mordida del labio superior y la escala de Mallampati",
+    "subtitle": "Análisis bayesiano de los predictores físicos preoperatorios de intubación difícil según la evidencia de JAMA.",
+    "date": "2026-08-22",
+    "author": "Dr. Alcy Torres",
+    "category": "anestesiologia",
+    "category_label": "Anestesiología y Cuidados Críticos",
+    "tags": [
+      "anestesiologia",
+      "via-aerea",
+      "intubacion",
+      "urgencias",
+      "semiologia",
+      "evidencia"
+    ],
+    "reading_time": "6 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6020 · PMID:30721300",
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mallampati.svg/960px-Mallampati.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Mallampati.svg",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Mallampati.svg",
+    "excerpt": "El test de mordida del labio superior clase 3 es el hallazgo físico con mayor fuerza confirmatoria de intubación difícil (LR+ 14), pero ningún hallazgo permite excluir de forma fiable una vía aérea dificultosa."
+  },
+  {
     "id": "HM6019-01",
     "slug": "luxacion-cadera-lactante-barlow-ortolani",
     "title": "Luxación y displasia de cadera en el lactante: Precisión de las maniobras de Barlow y Ortolani",
