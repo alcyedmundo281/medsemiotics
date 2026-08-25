@@ -591,6 +591,8 @@
     <script>
       let allPosts = [];
       let activeCategory = 'all';
+      let activeEvidence = 'all';
+      let activeDifficulty = 'all';
 
       async function initHub() {
         try {
@@ -615,10 +617,6 @@
           `;
         }
       }
-
-      let activeCategory = 'all';
-      let activeEvidence = 'all';
-      let activeDifficulty = 'all';
 
       function buildCategoryFilters() {
         const catContainer = document.getElementById('categoryFilters');
