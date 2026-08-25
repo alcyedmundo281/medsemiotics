@@ -1,5 +1,70 @@
 [
   {
+    "id": "trastorno-consumo-alcohol-audit-audit-c-q1",
+    "post_slug": "trastorno-consumo-alcohol-audit-audit-c",
+    "post_title": "Trastorno por consumo de alcohol: Precisión del cuestionario AUDIT según criterios DSM-5",
+    "category": "psiquiatria",
+    "category_label": "Psiquiatría y Atención Primaria",
+    "condicion_id": "HM:6021",
+    "condicion_nombre": "Trastorno por consumo de alcohol",
+    "pmid": "38592385",
+    "doi": "10.1001/jama.2024.3101",
+    "referencia_cita": "Keyes KM, et al. Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review. JAMA. 2024;331(14):1218-1229.",
+    "triada": {
+      "significante": "Puntuación ≥ 8 en el cuestionario de 10 ítems AUDIT (Alcohol Use Disorders Identification Test), o consumo de riesgo en AUDIT-C (≥4 en hombres, ≥3 en mujeres), explorando frecuencia, dosis en bebidas estándar y consecuencias adversas.",
+      "significado": "Patrón desadaptativo de consumo de alcohol que genera deterioro o malestar clínicamente significativo, pérdida de control y tolerancia/dependencia según los criterios del DSM-5.",
+      "decision": "AUDIT ≥ 8: confirma alta probabilidad de trastorno por consumo de alcohol con un LR+ de 6.5 global (LR+ 6.9 en mujeres y LR+ 3.8 en hombres), requiriendo intervención conductual breve o derivación especializada. Una puntuación < 8 reduce significativamente la probabilidad (LR- 0.33)."
+    },
+    "pregunta": "¿Cuál es la precisión diagnóstica del cuestionario AUDIT (corte ≥ 8) para identificar trastorno por consumo de alcohol según los criterios del DSM-5 en la revisión sistemática de JAMA (PMID: 38592385)?",
+    "opciones": [
+      {
+        "texto": "Un AUDIT ≥ 8 aumenta la probabilidad con un LR+ de 6.5 global, mostrando mayor rendimiento confirmatorio en mujeres (LR+ 6.9) que en hombres (LR+ 3.8); un puntaje < 8 la reduce (LR- 0.33).",
+        "correcta": true,
+        "feedback": "¡Correcto! La evidencia metaanalítica de JAMA demostró que el AUDIT es muy eficaz para confirmar el trastorno (LR+ 6.5), con una discriminación aún más marcada en mujeres debido a los umbrales de toxicidad y patrones de consumo."
+      },
+      {
+        "texto": "El AUDIT no tiene utilidad diagnóstica frente al DSM-5 y solo debe usarse el cuestionario CAGE de 4 preguntas.",
+        "correcta": false,
+        "feedback": "Incorrecto. El AUDIT es el instrumento de referencia avalado por la OMS y alineado con los criterios multidimensionales del DSM-5."
+      },
+      {
+        "texto": "Un AUDIT < 8 descarta en el 100% cualquier consumo perjudicial de alcohol.",
+        "correcta": false,
+        "feedback": "Incorrecto. Un AUDIT < 8 reduce la probabilidad (LR- 0.33), pero en poblaciones específicas o consumo episódico intensivo (binge drinking) requiere valoración clínica individual."
+      }
+    ]
+  },
+  {
+    "id": "trastorno-consumo-alcohol-audit-audit-c-q2",
+    "post_slug": "trastorno-consumo-alcohol-audit-audit-c",
+    "post_title": "Trastorno por consumo de alcohol: Precisión del cuestionario AUDIT según criterios DSM-5",
+    "category": "psiquiatria",
+    "category_label": "Psiquiatría y Atención Primaria",
+    "condicion_id": "HM:6021",
+    "condicion_nombre": "Trastorno por consumo de alcohol",
+    "pmid": "38592385",
+    "doi": "10.1001/jama.2024.3101",
+    "referencia_cita": "Keyes KM, et al. Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review. JAMA. 2024;331(14):1218-1229.",
+    "triada": {
+      "significante": "Puntuación ≥ 8 en el cuestionario de 10 ítems AUDIT (Alcohol Use Disorders Identification Test), o consumo de riesgo en AUDIT-C (≥4 en hombres, ≥3 en mujeres), explorando frecuencia, dosis en bebidas estándar y consecuencias adversas.",
+      "significado": "Patrón desadaptativo de consumo de alcohol que genera deterioro o malestar clínicamente significativo, pérdida de control y tolerancia/dependencia según los criterios del DSM-5.",
+      "decision": "AUDIT ≥ 8: confirma alta probabilidad de trastorno por consumo de alcohol con un LR+ de 6.5 global (LR+ 6.9 en mujeres y LR+ 3.8 en hombres), requiriendo intervención conductual breve o derivación especializada. Una puntuación < 8 reduce significativamente la probabilidad (LR- 0.33)."
+    },
+    "pregunta": "En el cribado de mujeres en las primeras 48 horas postparto, ¿cuál es el comportamiento diagnóstico del AUDIT y de las herramientas TWEAK/T-ACE según JAMA?",
+    "opciones": [
+      {
+        "texto": "Un AUDIT ≥ 4 confirma alta probabilidad (LR+ 6.4), mientras que un TWEAK o T-ACE < 2 descarta prácticamente el trastorno con un LR- de 0.05.",
+        "correcta": true,
+        "feedback": "¡Correcto! En el puerperio inmediato, un umbral reducido de AUDIT (≥4) mantiene una alta especificidad (LR+ 6.4), mientras que TWEAK y T-ACE < 2 ofrecen un poder de exclusión casi perfecto (LR- 0.05)."
+      },
+      {
+        "texto": "Las herramientas de cribado de alcohol están contraindicadas durante el postparto y la lactancia.",
+        "correcta": false,
+        "feedback": "Incorrecto. El cribado sistemático en el postparto es prioritario para proteger el binomio madre-hijo."
+      }
+    ]
+  },
+  {
     "id": "intubacion-dificil-mallampati-mordida-labio-q1",
     "post_slug": "intubacion-dificil-mallampati-mordida-labio",
     "post_title": "Vía aérea difícil: Rendimiento del test de mordida del labio superior y la escala de Mallampati",
