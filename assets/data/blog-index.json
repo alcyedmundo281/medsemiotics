@@ -336,10 +336,10 @@
     "grounding_badge": "HM:6016 · PMID:23613077",
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": null,
-    "image_source": null,
-    "image_license": null,
-    "image_title": null,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Ectopic_pregnancy.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Ectopic_pregnancy.JPG",
+    "image_license": "Public domain",
+    "image_title": "Ectopic pregnancy.JPG",
     "excerpt": "Análisis bayesiano de masa anexial sin gestación intrauterina en ecografía transvaginal y su impacto en la toma de decisiones clínicas."
   },
   {
@@ -362,10 +362,10 @@
     "grounding_badge": "HM:6017 · PMID:35699701",
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": null,
-    "image_source": null,
-    "image_license": null,
-    "image_title": null,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Swollen_eye_with_conjunctivitis.jpg/960px-Swollen_eye_with_conjunctivitis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Swollen_eye_with_conjunctivitis.jpg",
+    "image_license": "CC BY 3.0",
+    "image_title": "Swollen eye with conjunctivitis.jpg",
     "excerpt": "Análisis bayesiano de otitis media concomitante y su impacto en la toma de decisiones clínicas."
   },
   {
@@ -388,10 +388,10 @@
     "grounding_badge": "HM:6018 · PMID:23989984",
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": null,
-    "image_source": null,
-    "image_license": null,
-    "image_title": null,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Obstruction_ventilation_apn%C3%A9e_sommeil.svg/960px-Obstruction_ventilation_apn%C3%A9e_sommeil.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Obstruction_ventilation_apn%C3%A9e_sommeil.svg",
+    "image_license": "Public domain",
+    "image_title": "Obstruction ventilation apnée sommeil.svg",
     "excerpt": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas."
   },
   {
