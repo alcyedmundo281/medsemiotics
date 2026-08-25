@@ -360,7 +360,7 @@
             </div>
           </section>
 
-          <!-- Controls: Search & Category Filter Pills -->
+          <!-- Controls: Search & Multi-facet Metadata Filter Bar (Filtros por Metadatos del Atlas) -->
           <section class="bg-white border border-stone-200 rounded-2xl p-4 sm:p-5 shadow-sm mb-8 space-y-4">
             
             <!-- Search Box -->
@@ -371,7 +371,7 @@
               <input
                 type="text"
                 id="searchInput"
-                placeholder="Buscar por signo clínico, patología, cociente LR o PMID..."
+                placeholder="Buscar signo clínico, órgano, patología, cociente LR, PMID..."
                 class="w-full pl-10 pr-10 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:bg-white focus:border-transparent transition-all shadow-inner"
               />
               <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600 text-xs">
@@ -379,10 +379,68 @@
               </button>
             </div>
 
-            <!-- Category Filter Pills (Dynamically populated) -->
-            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs custom-scrollbar" id="categoryFilters">
-              <button data-cat="all" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
-                Todas las Especialidades
+            <!-- Faceta 1: Especialidad / Sistema -->
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-500">
+                <span>Especialidad / Sistema</span>
+                <span id="statFilterResults" class="text-purple-700 font-semibold lowercase"></span>
+              </div>
+              <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs custom-scrollbar" id="categoryFilters">
+                <button data-cat="all" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
+                  Todas
+                </button>
+              </div>
+            </div>
+
+            <!-- Facetas 2 y 3: Poder Bayesiano y Dificultad/Reto -->
+            <div class="pt-3 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <!-- Poder Bayesiano / Rol Diagnóstico -->
+              <div class="space-y-1.5">
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-400">Poder Bayesiano / Evidencia</div>
+                <div class="flex flex-wrap gap-1.5" id="evidenceFilters">
+                  <button data-evidence="all" class="ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-900 text-white text-[11px]">
+                    Todos
+                  </button>
+                  <button data-evidence="confirmatorio" class="ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]">
+                    Confirmatorio (LR+ alto)
+                  </button>
+                  <button data-evidence="descarte" class="ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]">
+                    Descarte (LR- bajo)
+                  </button>
+                  <button data-evidence="escala" class="ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]">
+                    Escalas / Tests
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dificultad / Autoevaluación -->
+              <div class="space-y-1.5">
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-400">Dificultad y Reto Clínico</div>
+                <div class="flex flex-wrap gap-1.5" id="difficultyFilters">
+                  <button data-diff="all" class="diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-900 text-white text-[11px]">
+                    Todas
+                  </button>
+                  <button data-diff="Básico" class="diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]">
+                    Básico
+                  </button>
+                  <button data-diff="Intermedio" class="diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]">
+                    Intermedio
+                  </button>
+                  <button data-diff="Avanzado" class="diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]">
+                    Avanzado
+                  </button>
+                  <button data-diff="quiz" class="diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-amber-50 text-amber-800 border border-amber-200/80 hover:bg-amber-100 text-[11px]">
+                    🎯 Con Reto
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Filters Summary & Reset Bar -->
+            <div id="filterSummaryBar" class="hidden pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500">
+              <span id="resultsCountText">Mostrando todos los temas</span>
+              <button onclick="resetFilters()" class="text-purple-700 hover:text-purple-900 font-semibold text-xs flex items-center gap-1">
+                <span>↺ Restablecer filtros</span>
               </button>
             </div>
           </section>
@@ -558,25 +616,31 @@
         }
       }
 
+      let activeCategory = 'all';
+      let activeEvidence = 'all';
+      let activeDifficulty = 'all';
+
       function buildCategoryFilters() {
         const catContainer = document.getElementById('categoryFilters');
         const categoriesMap = new Map();
+        
         allPosts.forEach(p => {
           if (p.category && p.category_label) {
-            categoriesMap.set(p.category, p.category_label);
+            categoriesMap.set(p.category, (categoriesMap.get(p.category) || { label: p.category_label, count: 0 }));
+            categoriesMap.get(p.category).count += 1;
           }
         });
 
         let html = `
           <button data-cat="all" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap">
-            Todas las Especialidades
+            Todas (${allPosts.length})
           </button>
         `;
 
-        categoriesMap.forEach((label, catKey) => {
+        categoriesMap.forEach((info, catKey) => {
           html += `
             <button data-cat="${catKey}" class="cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap">
-              ${label}
+              ${info.label} (${info.count})
             </button>
           `;
         });
@@ -599,6 +663,9 @@
         const searchInput = document.getElementById('searchInput');
         const clearBtn = document.getElementById('clearSearchBtn');
         const searchVal = searchInput.value.toLowerCase().trim();
+        const statResults = document.getElementById('statFilterResults');
+        const filterSummary = document.getElementById('filterSummaryBar');
+        const resultsCountText = document.getElementById('resultsCountText');
 
         if (searchVal) {
           clearBtn.classList.remove('hidden');
@@ -606,15 +673,63 @@
           clearBtn.classList.add('hidden');
         }
 
+        const isFiltered = activeCategory !== 'all' || activeEvidence !== 'all' || activeDifficulty !== 'all' || searchVal !== '';
+
         const filtered = allPosts.filter(post => {
+          // 1. Especialidad / Categoría
           const matchCat = activeCategory === 'all' || (post.category && post.category.toLowerCase() === activeCategory.toLowerCase());
+
+          // 2. Poder Bayesiano / Evidencia
+          let matchEvidence = true;
+          if (activeEvidence === 'confirmatorio') {
+            // Signos con LR+ >= 5 o afirmaciones confirmatorias
+            const lrPos = post.grounding?.lr_positivo;
+            matchEvidence = (lrPos && (typeof lrPos === 'number' ? lrPos >= 5 : true)) ||
+              (post.excerpt && post.excerpt.includes('LR+')) ||
+              (post.grounding_badge && post.grounding_badge.includes('HM:'));
+          } else if (activeEvidence === 'descarte') {
+            // Signos con LR- <= 0.4
+            const lrNeg = post.grounding?.lr_negativo;
+            matchEvidence = lrNeg !== null && lrNeg !== undefined && (typeof lrNeg === 'number' ? lrNeg <= 0.4 : true);
+          } else if (activeEvidence === 'escala') {
+            // Escalas, cuestionarios, scores
+            matchEvidence = (post.tags && post.tags.some(t => ['audit', 'escala', 'score', 'cuestionario', 'criterios'].includes(t.toLowerCase()))) ||
+              (post.title && (post.title.toLowerCase().includes('escala') || post.title.toLowerCase().includes('score') || post.title.toLowerCase().includes('audit') || post.title.toLowerCase().includes('test') || post.title.toLowerCase().includes('maniobra')));
+          }
+
+          // 3. Dificultad / Autoevaluación
+          let matchDiff = true;
+          if (activeDifficulty === 'quiz') {
+            matchDiff = post.has_quiz === true;
+          } else if (activeDifficulty !== 'all') {
+            matchDiff = post.difficulty && post.difficulty.toLowerCase() === activeDifficulty.toLowerCase();
+          }
+
+          // 4. Búsqueda por texto (título, subtítulo, abstract, badge, tags, grounded terms)
           const matchSearch = !searchVal || 
             (post.title && post.title.toLowerCase().includes(searchVal)) ||
             (post.subtitle && post.subtitle.toLowerCase().includes(searchVal)) ||
+            (post.excerpt && post.excerpt.toLowerCase().includes(searchVal)) ||
             (post.grounding_badge && post.grounding_badge.toLowerCase().includes(searchVal)) ||
             (post.tags && post.tags.some(t => t.toLowerCase().includes(searchVal)));
-          return matchCat && matchSearch;
+
+          return matchCat && matchEvidence && matchDiff && matchSearch;
         });
+
+        // Actualizar contadores y badges
+        if (statResults) {
+          statResults.textContent = `${filtered.length} de ${allPosts.length} temas`;
+        }
+        if (filterSummary) {
+          if (isFiltered) {
+            filterSummary.classList.remove('hidden');
+            if (resultsCountText) {
+              resultsCountText.textContent = `Mostrando ${filtered.length} de ${allPosts.length} temas filtrados`;
+            }
+          } else {
+            filterSummary.classList.add('hidden');
+          }
+        }
 
         if (filtered.length === 0) {
           grid.innerHTML = '';
@@ -691,6 +806,10 @@
       function resetFilters() {
         document.getElementById('searchInput').value = '';
         activeCategory = 'all';
+        activeEvidence = 'all';
+        activeDifficulty = 'all';
+
+        // Restablecer estilos de botones de Especialidad
         document.querySelectorAll('.cat-pill').forEach(b => {
           if (b.dataset.cat === 'all') {
             b.className = 'cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-900 text-white shadow-sm whitespace-nowrap';
@@ -698,10 +817,31 @@
             b.className = 'cat-pill px-3 py-1.5 rounded-full font-medium transition-colors bg-stone-100 text-stone-700 hover:bg-stone-200 whitespace-nowrap';
           }
         });
+
+        // Restablecer estilos de botones de Evidencia
+        document.querySelectorAll('.ev-pill').forEach(b => {
+          if (b.dataset.evidence === 'all') {
+            b.className = 'ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-900 text-white text-[11px]';
+          } else {
+            b.className = 'ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]';
+          }
+        });
+
+        // Restablecer estilos de botones de Dificultad
+        document.querySelectorAll('.diff-pill').forEach(b => {
+          if (b.dataset.diff === 'all') {
+            b.className = 'diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-900 text-white text-[11px]';
+          } else if (b.dataset.diff === 'quiz') {
+            b.className = 'diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-amber-50 text-amber-800 border border-amber-200/80 hover:bg-amber-100 text-[11px]';
+          } else {
+            b.className = 'diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]';
+          }
+        });
+
         renderPosts();
       }
 
-      // Event listeners for Category Pills
+      // Event listeners para Categorías / Especialidades
       document.getElementById('categoryFilters').addEventListener('click', (e) => {
         const btn = e.target.closest('.cat-pill');
         if (!btn) return;
@@ -713,7 +853,35 @@
         renderPosts();
       });
 
-      // Search listeners
+      // Event listeners para Evidencia / Poder Bayesiano
+      document.getElementById('evidenceFilters').addEventListener('click', (e) => {
+        const btn = e.target.closest('.ev-pill');
+        if (!btn) return;
+        document.querySelectorAll('.ev-pill').forEach(b => {
+          b.className = 'ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]';
+        });
+        btn.className = 'ev-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-900 text-white text-[11px]';
+        activeEvidence = btn.dataset.evidence;
+        renderPosts();
+      });
+
+      // Event listeners para Dificultad y Reto
+      document.getElementById('difficultyFilters').addEventListener('click', (e) => {
+        const btn = e.target.closest('.diff-pill');
+        if (!btn) return;
+        document.querySelectorAll('.diff-pill').forEach(b => {
+          if (b.dataset.diff === 'quiz') {
+            b.className = 'diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-amber-50 text-amber-800 border border-amber-200/80 hover:bg-amber-100 text-[11px]';
+          } else {
+            b.className = 'diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-100 text-stone-600 hover:bg-stone-200 text-[11px]';
+          }
+        });
+        btn.className = 'diff-pill px-2.5 py-1 rounded-lg font-medium transition-colors bg-stone-900 text-white text-[11px]';
+        activeDifficulty = btn.dataset.diff;
+        renderPosts();
+      });
+
+      // Event listeners de Búsqueda
       document.getElementById('searchInput').addEventListener('input', () => {
         renderPosts();
       });
@@ -722,7 +890,7 @@
         renderPosts();
       });
 
-      // Mobile Drawer setup
+      // Setup del Mobile Drawer
       function setupMobileDrawer() {
         const drawer = document.getElementById('mobileDrawer');
         const openBtn = document.getElementById('mobileMenuBtn');
