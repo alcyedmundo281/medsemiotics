@@ -50,7 +50,7 @@ El portal principal (`index.html`) está diseñado como una aplicación de 3 zon
 | Medicina y Datos          | `medicina_y_datos.html`          | `medicina_y_datos/` — 20         |
 | Neurología                | `neurologia.html`                | `neurologia/` — 22               |
 | Gastroenterología         | `gastroenterologia.html`         | `gastroenterologia/` — 23        |
-| Farmacoterapia Racional   | `farmacoterapia_racional.html`   | `farmacoterapia_racional/` — 18  |
+| Farmacoterapia (Farmacosemiotics) | `farmacosemiotics/` (Portal autónomo) | `https://powersemiotics.com/farmacosemiotics/` — 18 |
 | Inmunología Clínica       | `inmunologia_clinica.html`       | `inmunologia/` — 5               |
 | Medicina e Implementación | `medicina_e_implementacion.html` | `medicina_e_implementacion/` — 4 |
 
