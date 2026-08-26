@@ -61,7 +61,7 @@ Además cuenta con herramientas de autoevaluación y repositorios rápidos:
 - `neurologia-autoevaluacion.html` — Autoevaluación de Neurología
 - `medicamentos_cronicos.html` — Repositorio de Medicamentos Crónicos
 - `medicamentos_oncologicos.html` — Repositorio de Medicamentos Oncológicos
-- `trastornos-movimiento-1.html` — Trastornos del movimiento (versión de raíz)
+- `neurologia/trastornos-movimiento-1.html` — Atlas interactivo de Trastornos del Movimiento I
 
 ### Sub-aplicaciones
 
