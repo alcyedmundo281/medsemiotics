@@ -1,83 +1,291 @@
 ---
-id: "HM6016-01"
-slug: "embarazo-ectopico-precision-semiotica"
-title: "Embarazo ectópico: Precisión diagnóstica y rendimiento de los hallazgos semiológicos"
-subtitle: "Análisis bayesiano de masa anexial sin gestación intrauterina en ecografía transvaginal y su impacto en la toma de decisiones clínicas."
-date: "2026-08-21"
-author: "Dr. Alcy Torres"
-category: "medicina_interna"
-category_label: "Medicina Interna"
-tags: ["medicina_interna", "embarazo-ectopico", "semiologia", "evidencia"]
-reading_time: "6 min"
-difficulty: "Intermedio"
+id: HM6016-01
+slug: embarazo-ectopico-precision-semiotica
+title: 'Embarazo ectópico: hallazgos y evidencia clínica'
+subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
+date: '2026-08-21'
+author: Dr. Alcy Torres
+category: medicina_interna
+category_label: Medicina Interna
+tags:
+- embarazo-ectopico
+- medicina_interna
+- semiologia
+reading_time: 8 min
+difficulty: Intermedio
+fuente:
+  repositorio: alcyedmundo281/medsemiotics-db
+  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
+  condicion: condiciones/HM6016-embarazo-ectopico.yaml
+  archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml: 26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15
+    conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml: 201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f
+    conceptos/HM3066-dolor-a-la-movilizacion-cervical.yaml: 2c27db232894c6a15ba314df23163c9b9684b3dbd1340f2fa398bda7648b81be
+    conceptos/HM3067-masa-anexial-en-la-exploracion-bimanual.yaml: 1a1bb1e23bd7e565387065099cfdcd1af8160e58117a524eb84f4847d21255ef
+    conceptos/HM3068-dolor-a-la-palpacion-anexial.yaml: cfacb53553472ff10929397fb4b333684a4110ec83e44a02b807a2742dcc1161
+    conceptos/HM3069-sangrado-vaginal-en-la-gestacion-precoz.yaml: a7c6df28b077ba236b0c2784d246ad30c7e10e5bc9eae7d10725927d836273ee
+    condiciones/HM6016-embarazo-ectopico.yaml: dbb752230c0f4a1145368812d0694ad3aa10d99465f17ea03f151db071c5106d
+    referencias/pmid-23613077.yaml: 8611f28321a818a1dd3195b5ddfc92a6f3f8af796cb75285e456be3693232cc1
 grounding:
-  condicion_id: "HM:6016"
-  condicion_nombre: "Embarazo ectópico"
-  concepto_id: "HM:3064"
-  concepto_nombre: "Masa anexial sin gestación intrauterina en ecografía transvaginal"
+  condicion_id: HM:6016
+  condicion_nombre: Embarazo ectópico
+  concepto_id: HM:3064
+  concepto_nombre: Masa anexial sin gestación intrauterina en ecografía transvaginal
+  estado_lr: medido
   lr_positivo: 111
   lr_negativo: null
-  poblacion: "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)"
-  referencia_id: "pmid:23613077"
-  referencia_cita: "Crochet JR, Bastian LA, Chireau MV. Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA. 2013."
-  doi: "10.1001/jama.2013.3914"
-  pmid: "23613077"
-
+  lr_positivo_rango: null
+  lr_negativo_rango: null
+  poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+  referencia_id: pmid:23613077
+  referencia_cita: 'Crochet JR, Bastian LA, Chireau MV Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review JAMA 2013'
+  pmid: '23613077'
+  doi: 10.1001/jama.2013.3914
 triada:
-  significante: "Masa anexial sin gestación intrauterina en ecografía transvaginal (Adnexal mass with no intrauterine pregnancy on transvaginal sonography), evaluado en: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)."
-  significado: "La fuente no describe el mecanismo fisiopatológico de este hallazgo; su valor aquí es estadístico (cociente de verosimilitud), no explicativo."
-  decision: "Masa anexial sin gestación intrauterina en ecografía transvaginal — el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto; Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
-
+  significante: Masa anexial sin gestación intrauterina en ecografía transvaginal
+  significado: El mecanismo fisiopatológico no está documentado en esta fuente.
+  decision: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto
+evidencia:
+- concepto: HM:3064
+  rol: imagen
+  estado_lr: medido
+  poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+  lr_positivo: &id001
+    valor: 111
+    ic95:
+    - 12
+    - 1028
+    ref: pmid:23613077
+  decision: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto
+  advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene
+- concepto: HM:3065
+  rol: imagen
+  estado_lr: medido
+  poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+  lr_negativo: &id002
+    valor: 0.12
+    ic95:
+    - 0.03
+    - 0.55
+    ref: pmid:23613077
+    nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo
+  decision: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí
+- concepto: HM:3066
+  rol: prueba_especifica
+  estado_lr: medido
+  poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1435)
+  lr_positivo:
+    valor: 4.9
+    ic95:
+    - 1.7
+    - 14
+    ref: pmid:23613077
+- concepto: HM:3067
+  rol: apoyo
+  estado_lr: medido
+  poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1378)
+  lr_positivo:
+    valor: 2.4
+    ic95:
+    - 1.6
+    - 3.7
+    ref: pmid:23613077
+  decision: 'la misma masa vista en la ecografía vale 111 y palpada vale 2.4. No es incoherencia: son dos pruebas distintas sobre el mismo órgano'
+- concepto: HM:3068
+  rol: apoyo
+  estado_lr: medido
+  poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1435)
+  lr_positivo:
+    valor: 1.9
+    ic95:
+    - 1.0
+    - 3.5
+    ref: pmid:23613077
+  advertencia: 'el extremo inferior del intervalo toca 1.0: compatible con no aportar nada'
+- concepto: HM:0201
+  rol: manifestacion
+  estado_lr: no_medido
+  ref: pmid:23613077
+  motivo: 'es criterio de entrada del estudio, así que dentro de esa población no hay contraste que medir. La fuente sí acota la anamnesis entera: ningún componente pasa de un LR+ de 1.5'
+- concepto: HM:3069
+  rol: manifestacion
+  estado_lr: no_medido
+  ref: pmid:23613077
+  motivo: 'el otro criterio de entrada, con la misma acotación: ningún componente de la anamnesis alcanza un LR+ de 1.5'
 autoevaluacion:
-  - id: "q1"
-    pregunta: "¿Cuál es el valor diagnóstico de masa anexial sin gestación intrauterina en ecografía transvaginal en Embarazo ectópico según la literatura verificada (PMID: 23613077)?"
-    opciones:
-      - texto: "Aumenta o reduce la probabilidad clínica con un cociente de verosimilitud de 111, verificado contra la fuente citada."
-        correcta: true
-        feedback: "¡Correcto! El cociente proviene de la fuente citada, no de una estimación genérica."
-      - texto: "Descarta en un 100% la patología independientemente de otros signos."
-        correcta: false
-        feedback: "Incorrecto. En razonamiento bayesiano clínico, ningún signo aislado produce certeza absoluta sin análisis contextual."
-      - texto: "Carece de valor discriminativo en la exploración."
-        correcta: false
-        feedback: "Incorrecto. El hallazgo sí tiene valor discriminativo, documentado mediante su cociente de verosimilitud verificado."
-
-  - id: "q2"
-    pregunta: "En la toma de decisiones clínicas ante Embarazo ectópico, ¿cuál es el paso de confirmación o cribado más adecuado?"
-    opciones:
-      - texto: "Integrar el rendimiento de la exploración física con la estimación pre-test y solicitar pruebas dirigidas según estratificación de riesgo."
-        correcta: true
-        feedback: "¡Exacto! La medicina basada en evidencia exige combinar la semiología con escalas diagnósticas y estudios complementarios pertinentes."
-      - texto: "Indicar tratamiento invasivo inmediato sin evaluar diagnósticos diferenciales."
-        correcta: false
-        feedback: "Incorrecto. Se deben descartar patologías concomitantes o secundarias."
+- id: q1
+  pregunta: 'En Embarazo ectópico, ¿cuál es el resultado documentado del LR positivo para «Masa anexial sin gestación intrauterina en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).'
+  concepto_id: HM:3064
+  referencia_id: pmid:23613077
+  pmid: '23613077'
+  doi: 10.1001/jama.2013.3914
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6016
+    concepto_id: HM:3064
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+    motivo: null
+    decision: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto
+    advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene
+  opciones:
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 111. LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene.'
+  - texto: 'LR positivo: 111.'
+    correcta: true
+    feedback: 'LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene.'
+  - texto: El valor 111 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene.'
+- id: q2
+  pregunta: 'En Embarazo ectópico, ¿cuál es el resultado documentado del LR negativo para «Anomalía anexial en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).'
+  concepto_id: HM:3065
+  referencia_id: pmid:23613077
+  pmid: '23613077'
+  doi: 10.1001/jama.2013.3914
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6016
+    concepto_id: HM:3065
+    estado_lr: medido
+    campo: lr_negativo
+    dato: *id002
+    poblacion: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+    motivo: null
+    decision: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí
+    advertencia: null
+  opciones:
+  - texto: 'LR negativo: 0.12.'
+    correcta: true
+    feedback: 'LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí.'
+  - texto: El valor 0.12 corresponde al LR positivo y no al LR negativo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR negativo: 0.12. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí.'
 ---
 
-## Introducción y Relevancia Clínica
+# Embarazo ectópico
 
-El abordaje diagnóstico de **Embarazo ectópico** (Ectopic pregnancy) requiere un examen clínico estructurado capaz de discriminar rápidamente la probabilidad de la enfermedad frente a otros síndromes clínicos frecuentes.
+Hallazgos, cocientes documentados y límites de la evidencia.
 
-> **¿Qué es un cociente de verosimilitud (LR)?** Indica cuánto cambia la probabilidad de una enfermedad cuando un hallazgo está presente (LR+) o ausente (LR-). Como regla práctica (McGee S. *Simplifying likelihood ratios*. J Gen Intern Med. 2002), un LR+ ≥ 10 o un LR- ≤ 0.1 suele bastar por sí solo para confirmar o descartar; valores entre 0.5 y 2 apenas cambian la sospecha clínica.
+## Nombre en inglés
 
----
+Ectopic pregnancy
 
-## Semiología y Rendimiento Diagnóstico
+## Sinónimos
 
-El hallazgo con mejor rendimiento documentado para **Embarazo ectópico** es **Masa anexial sin gestación intrauterina en ecografía transvaginal**. La literatura médica basada en evidencia cuantitativa describe los siguientes parámetros:
+gestación ectópica
 
-- **Cociente de Verosimilitud Positivo (LR+):** 111 — cambia mucho la probabilidad: suele bastar por sí solo para confirmar
+embarazo extrauterino
 
----
+embarazo tubárico
 
-## Evidencia Cuantitativa y Fuentes
+## Códigos
 
-- **Hallazgo evaluado:** Masa anexial sin gestación intrauterina en ecografía transvaginal
-- **Cociente de Verosimilitud Positivo (LR+):** 111 — cambia mucho la probabilidad: suele bastar por sí solo para confirmar
-- **Población evaluada:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).
-- **Cita principal:** Crochet JR, Bastian LA, Chireau MV. Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA. 2013. [PMID: 23613077]
+Snomed: No documentado.; Cie10: No documentado.
 
----
+## Hallazgos clínicos
 
-## Conclusión Semiótica
+### Masa anexial sin gestación intrauterina en ecografía transvaginal (HM:3064)
 
-Masa anexial sin gestación intrauterina en ecografía transvaginal — el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto; Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene
+**Rol:** Imagen
+
+**Estado del LR:** LR medido
+
+**Población:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+
+**LR positivo:** Valor: 111; IC del 95 %: 12 / 1028; Referencia: pmid:23613077
+
+**Decisión:** el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto
+
+**Advertencia:** el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene
+
+### Anomalía anexial en ecografía transvaginal (HM:3065)
+
+**Rol:** Imagen
+
+**Estado del LR:** LR medido
+
+**Población:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)
+
+**LR negativo:** Valor: 0.12; IC del 95 %: 0.03 / 0.55; Referencia: pmid:23613077; Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo
+
+**Decisión:** la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí
+
+### Dolor a la movilización cervical (HM:3066)
+
+**Rol:** Prueba específica
+
+**Estado del LR:** LR medido
+
+**Población:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1435)
+
+**LR positivo:** Valor: 4.9; IC del 95 %: 1.7 / 14; Referencia: pmid:23613077
+
+### Masa anexial en la exploración bimanual (HM:3067)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR medido
+
+**Población:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1378)
+
+**LR positivo:** Valor: 2.4; IC del 95 %: 1.6 / 3.7; Referencia: pmid:23613077
+
+**Decisión:** la misma masa vista en la ecografía vale 111 y palpada vale 2.4. No es incoherencia: son dos pruebas distintas sobre el mismo órgano
+
+### Dolor a la palpación anexial (HM:3068)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR medido
+
+**Población:** gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1435)
+
+**LR positivo:** Valor: 1.9; IC del 95 %: 1.0 / 3.5; Referencia: pmid:23613077
+
+**Advertencia:** el extremo inferior del intervalo toca 1.0: compatible con no aportar nada
+
+### Dolor abdominal (HM:0201)
+
+**Rol:** Manifestación
+
+**Estado del LR:** LR no medido
+
+**Referencia:** pmid:23613077
+
+**Motivo:** es criterio de entrada del estudio, así que dentro de esa población no hay contraste que medir. La fuente sí acota la anamnesis entera: ningún componente pasa de un LR+ de 1.5
+
+### Sangrado vaginal en la gestación precoz (HM:3069)
+
+**Rol:** Manifestación
+
+**Estado del LR:** LR no medido
+
+**Referencia:** pmid:23613077
+
+**Motivo:** el otro criterio de entrada, con la misma acotación: ningún componente de la anamnesis alcanza un LR+ de 1.5
+
+## Aspectos pendientes de documentación
+
+La hCG sérica cuantitativa no entra como arista. La fuente es explícita en que los estudios existentes NO establecen un valor único diagnóstico de ectópico, y un umbral inventado aquí sería exactamente lo que este repositorio no admite. Entrará cuando haya una fuente que lo mida, y probablemente como tramos y no como cifra suelta.
+
+La cinética de la hCG seriada tampoco entra, y aquí ni siquiera hay afirmación de la fuente en que apoyarse: el abstract se pronuncia sobre un valor aislado, no sobre el patrón de ascenso. Requiere otra fuente.
+
+## Conclusión de la fuente
+
+La ecografía transvaginal es la mejor prueba diagnóstica aislada para evaluar a una mujer con sospecha de embarazo ectópico. La presencia de dolor abdominal o sangrado vaginal en la gestación precoz debe llevar a solicitar una ecografía transvaginal y una hCG sérica cuantitativa.
+
+## Referencias y procedencia
+
+**pmid:23613077:** Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA, 2013. DOI: 10.1001/jama.2013.3914.
+
+Fuente clínica: medsemiotics-db, condición HM:6016.

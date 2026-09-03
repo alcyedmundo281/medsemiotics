@@ -1,91 +1,243 @@
 {
   "id": "HM6007-01",
   "slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
-  "title": "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electrocardiograma inicial?",
-  "subtitle": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles.",
+  "title": "Síndrome coronario agudo: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "author": "Dr. Alcy Torres",
   "category": "cardiologia",
   "category_label": "Cardiología",
   "tags": [
-    "urgencias",
-    "electrocardiograma",
-    "isquemia",
-    "probabilidad"
+    "cardiologia",
+    "criterios",
+    "semiologia",
+    "sindrome-coronario-agudo"
   ],
-  "reading_time": "6 min",
+  "reading_time": "8 min",
   "difficulty": "Intermedio",
   "grounding_badge": "HM:6007 · PMID:26547467",
+  "grounding": {
+    "condicion_id": "HM:6007",
+    "condicion_nombre": "Síndrome coronario agudo",
+    "concepto_id": "HM:3015",
+    "concepto_nombre": "Descenso del segmento ST",
+    "estado_lr": "medido",
+    "lr_positivo": 5.3,
+    "lr_negativo": null,
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": null,
+    "referencia_id": "pmid:26547467",
+    "referencia_cita": "Fanaroff AC, Rymer JA, Goldstein SA, Simel DL, Newby LK Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review JAMA 2015",
+    "pmid": "26547467",
+    "doi": "10.1001/jama.2015.12735",
+    "especificidad": 0.95
+  },
+  "evidencia": [
+    {
+      "concepto": "HM:3015",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.95,
+      "lr_positivo": {
+        "valor": 5.3,
+        "ic95": [
+          2.1,
+          8.6
+        ],
+        "ref": "pmid:26547467"
+      },
+      "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar"
+    },
+    {
+      "concepto": "HM:3016",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.91,
+      "lr_positivo": {
+        "valor": 3.6,
+        "ic95": [
+          1.6,
+          5.7
+        ],
+        "ref": "pmid:26547467"
+      },
+      "decision": "categoría más amplia que el descenso del ST y con menos peso"
+    },
+    {
+      "concepto": "HM:3017",
+      "rol": "apoyo",
+      "estado_lr": "medido",
+      "especificidad": 0.96,
+      "lr_positivo": {
+        "valor": 3.1,
+        "ic95": [
+          2,
+          4.7
+        ],
+        "ref": "pmid:26547467"
+      },
+      "decision": "antecedente, no hallazgo actual; desplaza poco"
+    },
+    {
+      "concepto": "HM:3018",
+      "rol": "apoyo",
+      "estado_lr": "medido",
+      "especificidad": 0.97,
+      "lr_positivo": {
+        "valor": 2.7,
+        "ic95": [
+          1.5,
+          4.8
+        ],
+        "ref": "pmid:26547467"
+      },
+      "decision": "factor de riesgo con cociente propio, modesto"
+    },
+    {
+      "concepto": "HM:3014",
+      "rol": "apoyo",
+      "estado_lr": "medido",
+      "especificidad": 0.96,
+      "lr_positivo": {
+        "valor": 2.6,
+        "ic95": [
+          1.8,
+          3.7
+        ],
+        "ref": "pmid:26547467"
+      },
+      "decision": "alta especificidad pero cociente bajo: cuando aparece apoya, y su ausencia no dice nada"
+    },
+    {
+      "concepto": "HM:0206",
+      "rol": "manifestacion",
+      "estado_lr": "no_medible",
+      "motivo": "es el motivo de consulta que define la población estudiada, no una prueba dentro de ella"
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "doi": "10.5281/zenodo.22064424",
+    "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
+    "archivos": {
+      "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+      "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+      "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
+      "conceptos/HM3015-descenso-segmento-st.yaml": "c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24",
+      "conceptos/HM3016-isquemia-en-ecg.yaml": "1e5a608a8d553e5255f2956ed1c7be9f99a61607806f545899aa8e1cd6f14611",
+      "conceptos/HM3017-prueba-esfuerzo-previa-anormal.yaml": "a3d131df7f6e8dbb4a6b9d80be9ad2538dba12105c56314080566c77cb4a0d27",
+      "conceptos/HM3018-enfermedad-arterial-periferica.yaml": "44920bd7d7d1b70253977858e7924075e688fdfd7bdca5c8e53f9db62bcfca01",
+      "condiciones/HM6007-sindrome-coronario-agudo.yaml": "c6a257121f0d7e4755e662b68f56bb2f21d12babd0a8f21870d0c5e826ed0feb",
+      "referencias/pmid-26547467.yaml": "fee2183becb69467acb2e26ec76404b1a9aae18c1272b85d9f36adeb16ffe831"
+    }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
+  },
   "has_quiz": true,
   "quiz_count": 2,
   "featured_image": "https://upload.wikimedia.org/wikipedia/commons/8/89/ST_segment_elevation_and_depression.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "image_source": "https://commons.wikimedia.org/wiki/File%3AST%20segment%20elevation%20and%20depression.jpg",
   "image_license": "CC BY-SA 4.0",
   "image_title": "ST segment elevation and depression.jpg",
-  "excerpt": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles.",
-  "grounding": {
-    "condicion_id": "HM:6007",
-    "condicion_nombre": "Síndrome coronario agudo",
-    "concepto_id": "HM:3015",
-    "concepto_nombre": "Descenso del segmento ST",
-    "sensibilidad": 0.28,
-    "especificidad": 0.95,
-    "lr_positivo": 5.3,
-    "lr_negativo": 0.76,
-    "poblacion": "Adultos evaluados en el servicio de urgencias por dolor torácico agudo",
-    "referencia_id": "pmid:26547467",
-    "referencia_cita": "Fanaroff AC, Rymer JA, Goldstein SA, Simel DL, Newby LK. Does this patient with chest pain have the acute coronary syndrome? The Rational Clinical Examination Systematic Review. JAMA. 2015;314(18):1955-65.",
-    "doi": "10.1001/jama.2015.12735",
-    "pmid": "26547467"
-  },
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
-    "significante": "Descenso horizontal o descendente del segmento ST ≥ 0.5 mm en dos derivaciones contiguas en el ECG de 12 derivaciones.",
-    "significado": "Isquemia miocárdica subendocárdica aguda con vector de lesión orientado hacia el endocardio ventricular.",
-    "decision": "Es el hallazgo electrocardiográfico aislado más útil (LR+ 5.3), pero insuficiente por sí solo para confirmar o descartar SCA sin escala de riesgo y cinética de troponinas."
+    "significante": "Descenso del segmento ST",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar"
   },
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "En un paciente de 58 años con dolor torácico opresivo de 1 hora de evolución, el ECG inicial NO muestra elevación ni descenso del ST ni cambios en la onda T. Según la revisión sistemática de JAMA (PMID: 26547467), ¿cuál es la conducta diagnóstica correcta?",
+      "pregunta": "En Síndrome coronario agudo, ¿cuál es el resultado documentado del LR positivo para «Descenso del segmento ST»?",
+      "concepto_id": "HM:3015",
+      "referencia_id": "pmid:26547467",
+      "pmid": "26547467",
+      "doi": "10.1001/jama.2015.12735",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6007",
+        "concepto_id": "HM:3015",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 5.3,
+          "ic95": [
+            2.1,
+            8.6
+          ],
+          "ref": "pmid:26547467"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Un ECG normal tiene un LR- cercano a 0 y descarta con certeza el síndrome coronario agudo.",
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Incorrecto. La sensibilidad del ECG inicial para SCA es limitada (LR- alrededor de 0.7-0.8); un ECG normal no descarta isquemia ni infarto sin elevación del ST."
+          "feedback": "Sí hay una medición documentada: LR positivo: 5.3. LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar."
         },
         {
-          "texto": "El ECG inicial por sí solo no descarta SCA; se debe mantener en observación seriada y estratificar con cinética de troponina y escalas clínicas (HEART/GRACE).",
+          "texto": "LR positivo: 5.3.",
           "correcta": true,
-          "feedback": "¡Correcto! Fanaroff et al. demuestran que ningún hallazgo aislado de anamnesis o ECG descarta SCA de forma concluyente; la estratificación seriada con troponinas es mandatoria."
+          "feedback": "LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar."
         },
         {
-          "texto": "Se puede dar de alta inmediata al paciente si el dolor cede con antiácidos.",
+          "texto": "El valor 5.3 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "Incorrecto. La respuesta al tratamiento empírico no discrimina de forma fiable el origen coronario del dolor."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "Si la prevalencia basal de SCA en pacientes que acuden a urgencias con dolor torácico es aproximadamente del 10% (0.10), ¿a cuánto asciende la probabilidad post-test si se detecta un descenso del segmento ST (LR+ 5.3)?",
+      "pregunta": "En Síndrome coronario agudo, ¿cuál es el resultado documentado del LR positivo para «Signos de isquemia en el electrocardiograma»?",
+      "concepto_id": "HM:3016",
+      "referencia_id": "pmid:26547467",
+      "pmid": "26547467",
+      "doi": "10.1001/jama.2015.12735",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6007",
+        "concepto_id": "HM:3016",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 3.6,
+          "ic95": [
+            1.6,
+            5.7
+          ],
+          "ref": "pmid:26547467"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "categoría más amplia que el descenso del ST y con menos peso",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Pasa del 10% a aproximadamente un 37% de probabilidad post-test.",
+          "texto": "LR positivo: 3.6.",
           "correcta": true,
-          "feedback": "¡Exacto! Pre-test odds = 0.10 / 0.90 = 0.111. Post-test odds = 0.111 * 5.3 = 0.589. Probabilidad post-test = 0.589 / (1 + 0.589) = 37.1%."
+          "feedback": "LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso."
         },
         {
-          "texto": "Pasa inmediatamente al 99%, confirmando infarto transmural.",
+          "texto": "El valor 3.6 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "Incorrecto. Un LR+ de 5.3 produce un incremento moderado, no absoluto."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso."
         },
         {
-          "texto": "Permanece idéntica en el 10%.",
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Incorrecto. Todo LR > 1 desplaza positivamente la probabilidad diagnóstica."
+          "feedback": "Sí hay una medición documentada: LR positivo: 3.6. LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso."
         }
       ]
     }
   ],
-  "body": "## El reto diagnóstico del dolor torácico en urgencias\r\n\r\nAproximadamente el **10%** de los pacientes adultos que consultan al servicio de urgencias por dolor torácico agudo tienen finalmente un diagnóstico de **Síndrome Coronario Agudo (SCA)**. La gran mayoría presenta causas no coronarias (patología musculoesquelética, gastroesofágica o pericárdica).\r\n\r\nEl médico se enfrenta a dos errores críticos:\r\n1. **Falso negativo:** Enviar a casa a un paciente con infarto en curso o angina inestable de alto riesgo.\r\n2. **Falso positivo:** Ingresos innecesarios y procedimientos invasivos en pacientes con dolor torácico no isquémico.\r\n\r\n---\r\n\r\n## Rendimiento de los Hallazgos Clínicos e Isquemia ECG\r\n\r\nLa revisión sistemática de 58 estudios prospectivos de la serie *The Rational Clinical Examination* (JAMA 2015) evaluó la precisión diagnóstica de los signos y pruebas iniciales:\r\n\r\n- **Descenso del segmento ST:** Especificidad del 95% con un **LR+ de 5.3** (IC95% 2.1–8.6).\r\n- **Cualquier signo de isquemia en ECG:** Especificidad del 91% con un **LR+ de 3.6** (IC95% 1.6–5.7).\r\n- **Irradiación a ambos brazos o hombros:** Es el síntoma anamnésico de mayor rendimiento, pero con un LR+ modesto de ~2.6.\r\n\r\n```\r\n                  [ Dolor Torácico Agudo en Urgencias ]\r\n                            (Prevalencia ~10%)\r\n                                    │\r\n                  ┌─────────────────┴─────────────────┐\r\n                  ▼                                   ▼\r\n        Descenso ST en ECG                  ECG Inicial sin cambios\r\n            (LR+ = 5.3)                           (LR- ≈ 0.76)\r\n                  │                                   │\r\n      Probabilidad sube a ~37%             Probabilidad baja a ~7.8%\r\n     (Alta sospecha; requiere             (Insuficiente para alta;\r\n      antiisquémicos y monitor)            requiere troponina seriada)\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):\r\n\r\n- **Prevalencia basal en urgencias:** 0.10 (10%)\r\n- **Sensibilidad del Descenso ST:** 0.28 (28%)\r\n- **Especificidad del Descenso ST:** 0.95 (95%)\r\n- **Cociente de Verosimilitud Positivo (LR+):** 5.30 [Fanaroff et al., JAMA 2015]\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.76 [Fanaroff et al., JAMA 2015]\r\n- **Población evaluada:** Adultos atendidos en servicios de urgencias por dolor torácico no traumático.\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nEl electrocardiograma inicial es indispensable pero **insuficiente por sí solo**. Su fuerza reside en acelerar conductas cuando es francamente patológico (LR+ 5.3), pero nunca autoriza el alta temprana cuando resulta normal."
+  "body": "# Síndrome coronario agudo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAcute coronary syndrome\n\n## Sinónimos\n\nSCA\n\nangina inestable e infarto\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.1; Población: pacientes que acuden a urgencias con dolor torácico agudo; Referencia: pmid:26547467\n\n## Hallazgos clínicos\n\n### Descenso del segmento ST (HM:3015)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.95\n\n**LR positivo:** Valor: 5.3; IC del 95 %: 2.1 / 8.6; Referencia: pmid:26547467\n\n**Decisión:** el hallazgo aislado más útil, pero insuficiente para confirmar\n\n### Signos de isquemia en el electrocardiograma (HM:3016)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.91\n\n**LR positivo:** Valor: 3.6; IC del 95 %: 1.6 / 5.7; Referencia: pmid:26547467\n\n**Decisión:** categoría más amplia que el descenso del ST y con menos peso\n\n### Prueba de esfuerzo previa anormal (HM:3017)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.96\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 2.0 / 4.7; Referencia: pmid:26547467\n\n**Decisión:** antecedente, no hallazgo actual; desplaza poco\n\n### Enfermedad arterial periférica (HM:3018)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.97\n\n**LR positivo:** Valor: 2.7; IC del 95 %: 1.5 / 4.8; Referencia: pmid:26547467\n\n**Decisión:** factor de riesgo con cociente propio, modesto\n\n### Dolor torácico irradiado a ambos brazos (HM:3014)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.96\n\n**LR positivo:** Valor: 2.6; IC del 95 %: 1.8 / 3.7; Referencia: pmid:26547467\n\n**Decisión:** alta especificidad pero cociente bajo: cuando aparece apoya, y su ausencia no dice nada\n\n### Dolor torácico (HM:0206)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es el motivo de consulta que define la población estudiada, no una prueba dentro de ella\n\n## Escalas\n\nNombre: HEART; Componentes declarados: anamnesis, electrocardiograma, edad, factores de riesgo y primera troponina; Tramos: Rango documentado: 7 a 10 (riesgo alto); LR positivo: 13; IC del 95 %: 7.0 / 24; Referencia: pmid:26547467 / Rango documentado: 0 a 3 (riesgo bajo); LR negativo: 0.2; IC del 95 %: 0.13 / 0.3; Referencia: pmid:26547467; Decisión: el instrumento más potente en ambos sentidos: confirma en el tramo alto y descarta en el bajo\n\nNombre: TIMI; Tramos: Rango documentado: 5 a 7 (riesgo alto); LR positivo: 6.8; IC del 95 %: 5.2 / 8.9; Referencia: pmid:26547467 / Rango documentado: 0 a 1 (riesgo bajo); LR negativo: 0.31; IC del 95 %: 0.23 / 0.43; Referencia: pmid:26547467\n\nNombre: Algoritmo de la Heart Foundation of Australia y la Cardiac Society of Australia and New Zealand; Tramos: Rango documentado: riesgo bajo a intermedio; LR negativo: 0.24; IC del 95 %: 0.19 / 0.31; Referencia: pmid:26547467\n\n## Conclusión de la fuente\n\nEntre los pacientes con sospecha de SCA en urgencias, la anamnesis, la exploración física y el electrocardiograma por sí solos no confirmaron ni excluyeron el diagnóstico. Las escalas HEART o TIMI, que incorporan la primera troponina, aportaron más información diagnóstica.\n\n## Referencias y procedencia\n\n**pmid:26547467:** Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review. JAMA, 2015. DOI: 10.1001/jama.2015.12735.\n\nFuente clínica: medsemiotics-db, condición HM:6007."
 }

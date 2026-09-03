@@ -647,15 +647,12 @@
           // 2. Poder Bayesiano / Evidencia
           let matchEvidence = true;
           if (activeEvidence === 'confirmatorio') {
-            // Signos con LR+ >= 5 o afirmaciones confirmatorias
-            const lrPos = post.grounding?.lr_positivo;
-            matchEvidence = (lrPos && (typeof lrPos === 'number' ? lrPos >= 5 : true)) ||
-              (post.excerpt && post.excerpt.includes('LR+')) ||
-              (post.grounding_badge && post.grounding_badge.includes('HM:'));
+            matchEvidence = (post.evidencia || []).some(sign => sign.estado_lr === 'medido' &&
+              typeof sign.lr_positivo?.valor === 'number' && sign.lr_positivo.valor >= 5);
           } else if (activeEvidence === 'descarte') {
             // Signos con LR- <= 0.4
-            const lrNeg = post.grounding?.lr_negativo;
-            matchEvidence = lrNeg !== null && lrNeg !== undefined && (typeof lrNeg === 'number' ? lrNeg <= 0.4 : true);
+            matchEvidence = (post.evidencia || []).some(sign => sign.estado_lr === 'medido' &&
+              typeof sign.lr_negativo?.valor === 'number' && sign.lr_negativo.valor <= 0.4);
           } else if (activeEvidence === 'escala') {
             // Escalas, cuestionarios, scores
             matchEvidence = (post.tags && post.tags.some(t => ['audit', 'escala', 'score', 'cuestionario', 'criterios'].includes(t.toLowerCase()))) ||

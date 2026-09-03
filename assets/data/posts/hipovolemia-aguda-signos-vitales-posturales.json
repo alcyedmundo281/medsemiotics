@@ -1,86 +1,277 @@
 {
   "id": "HM6008-01",
   "slug": "hipovolemia-aguda-signos-vitales-posturales",
-  "title": "Evaluación clínica de la hipovolemia: ¿Cuándo sirven los signos posturales?",
-  "subtitle": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination.",
+  "title": "Hipovolemia: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "author": "Dr. Alcy Torres",
   "category": "urgencias",
   "category_label": "Medicina de Urgencias y Críticos",
   "tags": [
-    "hemodinamia",
     "hipovolemia",
-    "shock",
-    "semiologia"
+    "semiologia",
+    "urgencias"
   ],
-  "reading_time": "6 min",
+  "reading_time": "8 min",
   "difficulty": "Intermedio",
   "grounding_badge": "HM:6008 · PMID:10086438",
+  "grounding": {
+    "condicion_id": "HM:6008",
+    "condicion_nombre": "Hipovolemia",
+    "concepto_id": "HM:3021",
+    "concepto_nombre": "Axila seca",
+    "estado_lr": "medido",
+    "lr_positivo": 2.8,
+    "lr_negativo": null,
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+    "referencia_id": "pmid:10086438",
+    "referencia_cita": "McGee S, Abernethy WB 3rd, Simel DL The rational clinical examination. Is this patient hypovolemic? JAMA 1999",
+    "pmid": "10086438",
+    "doi": "10.1001/jama.281.11.1022"
+  },
+  "evidencia": [
+    {
+      "concepto": "HM:3019",
+      "rol": "prueba_especifica",
+      "estado_lr": "no_medido",
+      "poblacion": "adultos con sospecha de pérdida sanguínea",
+      "especificidad": 0.98,
+      "ic95_especificidad": [
+        0.97,
+        0.99
+      ],
+      "sensibilidad_por_gravedad": [
+        {
+          "perdida": "moderada",
+          "sensibilidad": 0.22,
+          "ic95": [
+            0.06,
+            0.48
+          ],
+          "ref": "pmid:10086438"
+        },
+        {
+          "perdida": "grande",
+          "sensibilidad": 0.97,
+          "ic95": [
+            0.91,
+            1
+          ],
+          "ref": "pmid:10086438"
+        }
+      ],
+      "motivo": "la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado.",
+      "nota": "la fuente lo evalúa junto con el incremento postural del pulso como un solo hallazgo compuesto: basta con que esté presente uno de los dos.",
+      "decision": "su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada"
+    },
+    {
+      "concepto": "HM:3020",
+      "rol": "prueba_especifica",
+      "estado_lr": "no_medido",
+      "poblacion": "adultos con sospecha de pérdida sanguínea",
+      "especificidad": 0.98,
+      "ic95_especificidad": [
+        0.97,
+        0.99
+      ],
+      "motivo": "componente del hallazgo compuesto con el mareo postural intenso; la fuente no publica cociente aislado",
+      "ref": "pmid:10086438"
+    },
+    {
+      "concepto": "HM:0109",
+      "rol": "apoyo",
+      "estado_lr": "no_medido",
+      "poblacion": "adultos con sospecha de pérdida sanguínea",
+      "sensibilidad": 0.33,
+      "ic95_sensibilidad": [
+        0.21,
+        0.47
+      ],
+      "ref": "pmid:10086438",
+      "motivo": "la fuente publica sensibilidad sin especificidad",
+      "advertencia": "la hipotensión en decúbito y la taquicardia FALTAN con frecuencia incluso tras perder 1150 mL. Su ausencia no tranquiliza."
+    },
+    {
+      "concepto": "HM:3021",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+      "lr_positivo": {
+        "valor": 2.8,
+        "ic95": [
+          1.4,
+          5.4
+        ],
+        "ref": "pmid:10086438"
+      },
+      "decision": "apoya el diagnóstico, con fuerza modesta"
+    },
+    {
+      "concepto": "HM:3022",
+      "rol": "prueba_sensible",
+      "estado_lr": "medido",
+      "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+      "lr_negativo": {
+        "valor": 0.3,
+        "ic95": [
+          0.1,
+          0.6
+        ],
+        "ref": "pmid:10086438"
+      },
+      "decision": "su PRESENCIA argumenta en contra de la hipovolemia. Es el hallazgo invertido: lo que ayuda es encontrarlo, no echarlo en falta."
+    },
+    {
+      "concepto": "HM:3023",
+      "rol": "prueba_sensible",
+      "estado_lr": "medido",
+      "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+      "lr_negativo": {
+        "valor": 0.3,
+        "ic95": [
+          0.1,
+          0.6
+        ],
+        "ref": "pmid:10086438"
+      },
+      "decision": "igual que las mucosas húmedas, su presencia argumenta en contra"
+    },
+    {
+      "concepto": "HM:3024",
+      "rol": "apoyo",
+      "estado_lr": "sin_efecto",
+      "poblacion": "adultos",
+      "motivo": "la fuente concluye que no tiene valor diagnóstico demostrado en adultos",
+      "ref": "pmid:10086438"
+    },
+    {
+      "concepto": "HM:3025",
+      "rol": "apoyo",
+      "estado_lr": "sin_efecto",
+      "poblacion": "adultos",
+      "motivo": "la fuente concluye que no tiene valor diagnóstico demostrado en adultos",
+      "ref": "pmid:10086438"
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "doi": "10.5281/zenodo.22064424",
+    "condicion": "condiciones/HM6008-hipovolemia.yaml",
+    "archivos": {
+      "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+      "conceptos/HM0109-hipotension-arterial.yaml": "cd9dbafb92f3d3716704d2a295ea2ce5fcf4f22d97358dbd1b9c44a8f0ea69f5",
+      "conceptos/HM3019-mareo-postural-intenso.yaml": "7e119a6b7791169797291abac826a63b6117a0e7ff5c33ec27b0f18ac811938a",
+      "conceptos/HM3020-incremento-postural-del-pulso.yaml": "9ae6d79e5bc0201bf89204bc06c2824a565d8a1ff2b2433c64e5326f11d4db40",
+      "conceptos/HM3021-axila-seca.yaml": "a0e492588458e16f639ca2acc73bb0f7f66135ca013584ebb650670365cca0be",
+      "conceptos/HM3022-mucosas-humedas.yaml": "d5284e5e61c586e8e65c53a078acd5730e412a47c516ad344ea96b956035533c",
+      "conceptos/HM3023-lengua-sin-surcos.yaml": "decc68cdb2fe02a5054c683e556a871ebd6dac53df6296564ca02187212733fe",
+      "conceptos/HM3024-relleno-capilar-prolongado.yaml": "647c5f4a82265f763418f74807a155f0e30670423b924cca188582dd017568ce",
+      "conceptos/HM3025-turgencia-cutanea-disminuida.yaml": "cacb1862872bbc6670f0e6576b796837289f8c1b42740224ed31d21bab9ab1d4",
+      "condiciones/HM6008-hipovolemia.yaml": "46d0a8360a8a324654ea420239ab9f2348ab5223c33df7c90ad6deeaa9302fba",
+      "referencias/pmid-10086438.yaml": "b63336db28ca997d4e2c31dc9518c172e2261fd09055c3902a5ff7236d038cd0"
+    }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
+  },
   "has_quiz": true,
   "quiz_count": 2,
   "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg/960px-Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "image_source": "https://commons.wikimedia.org/wiki/File%3ABlood%20pressure%20measurement%20using%20an%20aneroid%20sphygmomanometer.jpg",
   "image_license": "CC BY-SA 4.0",
   "image_title": "Blood pressure measurement using an aneroid sphygmomanometer.jpg",
-  "excerpt": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination.",
-  "grounding": {
-    "condicion_id": "HM:6008",
-    "condicion_nombre": "Hipovolemia aguda",
-    "concepto_id": "HM:3019",
-    "concepto_nombre": "Mareo postural intenso e hipotensión ortostática",
-    "sensibilidad": 0.97,
-    "especificidad": 0.98,
-    "lr_positivo": 48.5,
-    "lr_negativo": 0.03,
-    "poblacion": "Adultos con sospecha de pérdida sanguínea aguda grave (>600 mL)",
-    "referencia_id": "pmid:10086438",
-    "referencia_cita": "McGee S, Abernethy WB 3rd, Simel DL. The rational clinical examination. Is this patient hypovolemic? JAMA. 1999;281(11):1022-9.",
-    "doi": "10.1001/jama.281.11.1022",
-    "pmid": "10086438"
-  },
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
-    "significante": "Incapacidad del paciente para permanecer de pie o mareo postural intenso e invalidante asociado a taquicardia ortostática (aumento ≥ 30 lpm) o caída de presión sistólica ≥ 20 mmHg tras 2 minutos en bipedestación.",
-    "significado": "Reducción crítica del volumen intravascular circulante con compromiso del retorno venoso y fallo de los mecanismos barorreceptores compensatorios.",
-    "decision": "En hemorragia aguda moderada-grave, el mareo postural intenso es el signo de mayor especificidad (98%) y sensibilidad (97%); en pérdidas digestivas subagudas, la sequedad mucosa de lengua y axilas aporta la mayor discriminación."
+    "significante": "Axila seca",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "apoya el diagnóstico, con fuerza modesta"
   },
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "En un paciente joven que acude a urgencias tras un episodio de sangrado digestivo alto, la tensión arterial supina es normal (120/80 mmHg). Al ponerse de pie, experimenta mareo postural intenso y la frecuencia cardíaca sube de 75 a 112 lpm (incremento ≥ 30 lpm). Según McGee et al. en JAMA (PMID: 10086438), ¿cuál es el significado clínico de este hallazgo?",
+      "pregunta": "En Hipovolemia, ¿cuál es el resultado documentado del LR positivo para «Axila seca»? Población: pacientes con vómitos, diarrea o descenso de la ingesta.",
+      "concepto_id": "HM:3021",
+      "referencia_id": "pmid:10086438",
+      "pmid": "10086438",
+      "doi": "10.1001/jama.281.11.1022",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6008",
+        "concepto_id": "HM:3021",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 2.8,
+          "ic95": [
+            1.4,
+            5.4
+          ],
+          "ref": "pmid:10086438"
+        },
+        "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+        "motivo": null,
+        "decision": "apoya el diagnóstico, con fuerza modesta",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Presenta una pérdida hemática significativa (frecuentemente >600–1000 mL) con una especificidad del 98% a pesar de la presión supina normal.",
+          "texto": "LR positivo: 2.8.",
           "correcta": true,
-          "feedback": "¡Correcto! McGee et al. demostraron que el incremento de pulso ≥30 lpm o el mareo postural severo tienen una especificidad del 98% para pérdida sanguínea aguda significativa, superando con creces a la presión supina."
+          "feedback": "LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
         },
         {
-          "texto": "Descarta hipovolemia porque la presión arterial sistólica supina se mantiene en rangos normales.",
+          "texto": "El valor 2.8 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "Incorrecto. Los mecanismos compensatorios mantienen la presión en decúbito normal hasta fases avanzadas de choque."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
         },
         {
-          "texto": "Indica un síncope vasovagal psicógeno que no requiere monitorización hemodinámica.",
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Incorrecto. En contexto de sangrado evidente, el ortostatismo franco es un signo de alarma hemodinámica."
+          "feedback": "Sí hay una medición documentada: LR positivo: 2.8. LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "En pacientes ancianos con deshidratación por diarrea o vómitos (pérdidas digestivas), ¿cuál de los siguientes signos físicos tiene la MENOR utilidad diagnóstica debido a su alta tasa de falsos positivos en esta población?",
+      "pregunta": "En Hipovolemia, ¿qué estado de la evidencia corresponde a «Mareo postural intenso» según la fuente?",
+      "concepto_id": "HM:3019",
+      "referencia_id": null,
+      "pmid": null,
+      "doi": null,
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6008",
+        "concepto_id": "HM:3019",
+        "estado_lr": "no_medido",
+        "campo": null,
+        "dato": null,
+        "poblacion": "adultos con sospecha de pérdida sanguínea",
+        "motivo": "la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado.",
+        "decision": "su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Disminución de la turgencia cutánea (signo del pliegue) en dorso de la mano o antebrazo.",
-          "correcta": true,
-          "feedback": "¡Exacto! En adultos mayores, la pérdida fisiológica de elastina y tejido celular subcutáneo produce pliegue cutáneo positivo en ausencia de hipovolemia. La sequedad de mucosas y axilas es más fiable."
+          "texto": "LR no medible",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
         },
         {
-          "texto": "Sequedad de la mucosa yugal y surcos longitudinales de la lengua.",
+          "texto": "Sin efecto discriminativo",
           "correcta": false,
-          "feedback": "Incorrecto. La sequedad de la lengua y mucosas tiene mejor rendimiento en el anciano que la turgencia cutánea periférica."
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
+        },
+        {
+          "texto": "LR no medido",
+          "correcta": true,
+          "feedback": "LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
         }
       ]
     }
   ],
-  "body": "## El peligro de subestimar la depleción de volumen\r\n\r\nLa hipovolemia aguda es una de las emergencias clínicas más engañosas. En pacientes jóvenes y previamente sanos, los mecanismos vasomotores compensatorios (taquicardia y vasoconstricción periférica) pueden sostener una presión arterial supina completamente normal hasta haber perdido más del **20% al 30% del volumen sanguíneo**.\r\n\r\n---\r\n\r\n## Dos Poblaciones, Dos Enfoques Semióticos\r\n\r\nLa revisión sistemática de la serie *The Rational Clinical Examination* (JAMA 1999) advierte una regla de oro: **no mezclar las poblaciones**.\r\n\r\n### 1. Pérdida Sanguínea Aguda (Hemorragia)\r\n- **Signo cardinal:** Mareo postural severo o incremento del pulso $\\ge 30\\text{ lpm}$ al ponerse de pie.\r\n- **Rendimiento:** Especificidad del **98%** (IC95% 97–99%) y sensibilidad del **97%** en pérdidas $>1000\\text{ mL}$.\r\n\r\n### 2. Pérdidas Digestivas Subagudas (Vómitos, Diarrea, Golpe de Calor)\r\n- **Signos cardinales:** Sequedad de mucosas orales, sequedad en la bóveda axilar y ojos hundidos.\r\n- **Precaución:** La turgencia cutánea periférica en ancianos es poco fiable por pérdida senil de elasticidad dérmica.\r\n\r\n```\r\n                    [ Sospecha de Hipovolemia Aguda ]\r\n                                   │\r\n              ┌────────────────────┴────────────────────┐\r\n              ▼                                         ▼\r\n     Pérdida Hemática Aguda                   Pérdidas Digestivas\r\n   (Sangrado digestivo / trauma)              (Diarrea / vómitos)\r\n              │                                         │\r\n    Evaluar Ortostatismo                      Evaluar Mucosas y Axilas\r\n   (ΔFC ≥ 30 lpm o mareo severo)             (Lengua seca, axila seca)\r\n   Especificidad 98% en pérdidas >600 mL     Mejor discriminación en geriatría\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):\r\n\r\n- **Sensibilidad en pérdida sanguínea grande (>1000 mL):** 0.97 (97%)\r\n- **Especificidad del mareo postural severo / ΔFC ≥ 30 lpm:** 0.98 (98%)\r\n- **Cociente de Verosimilitud Positivo derivado:** ~48.5 [McGee et al., JAMA 1999]\r\n- **Cociente de Verosimilitud Negativo en grandes pérdidas:** ~0.03 [McGee et al., JAMA 1999]\r\n- **Población evaluada:** Adultos con pérdidas sanguíneas cuantificadas y pacientes con depleción hídrica en urgencias.\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nNunca confíes en una **tensión arterial supina normal**. El examen de signos vitales posturales es el detector precoz más sensible y específico de hemorragia aguda en el paciente consciente."
+  "body": "# Hipovolemia\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nHypovolemia\n\n## Sinónimos\n\ndepleción de volumen\n\nhipovolemia aguda\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Mareo postural intenso (HM:3019)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR no medido\n\n**Población:** adultos con sospecha de pérdida sanguínea\n\n**Especificidad:** 0.98\n\n**Ic95 especificidad:** 0.97 / 0.99\n\n**Sensibilidad por gravedad:** Perdida: moderada; Sensibilidad: 0.22; IC del 95 %: 0.06 / 0.48; Referencia: pmid:10086438 / Perdida: grande; Sensibilidad: 0.97; IC del 95 %: 0.91 / 1.0; Referencia: pmid:10086438\n\n**Motivo:** la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado.\n\n**Nota:** la fuente lo evalúa junto con el incremento postural del pulso como un solo hallazgo compuesto: basta con que esté presente uno de los dos.\n\n**Decisión:** su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada\n\n### Incremento postural del pulso (HM:3020)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR no medido\n\n**Población:** adultos con sospecha de pérdida sanguínea\n\n**Especificidad:** 0.98\n\n**Ic95 especificidad:** 0.97 / 0.99\n\n**Motivo:** componente del hallazgo compuesto con el mareo postural intenso; la fuente no publica cociente aislado\n\n**Referencia:** pmid:10086438\n\n### Hipotensión arterial (HM:0109)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Población:** adultos con sospecha de pérdida sanguínea\n\n**Sensibilidad:** 0.33\n\n**Ic95 sensibilidad:** 0.21 / 0.47\n\n**Referencia:** pmid:10086438\n\n**Motivo:** la fuente publica sensibilidad sin especificidad\n\n**Advertencia:** la hipotensión en decúbito y la taquicardia FALTAN con frecuencia incluso tras perder 1150 mL. Su ausencia no tranquiliza.\n\n### Axila seca (HM:3021)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** pacientes con vómitos, diarrea o descenso de la ingesta\n\n**LR positivo:** Valor: 2.8; IC del 95 %: 1.4 / 5.4; Referencia: pmid:10086438\n\n**Decisión:** apoya el diagnóstico, con fuerza modesta\n\n### Mucosas húmedas (HM:3022)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Población:** pacientes con vómitos, diarrea o descenso de la ingesta\n\n**LR negativo:** Valor: 0.3; IC del 95 %: 0.1 / 0.6; Referencia: pmid:10086438\n\n**Decisión:** su PRESENCIA argumenta en contra de la hipovolemia. Es el hallazgo invertido: lo que ayuda es encontrarlo, no echarlo en falta.\n\n### Lengua sin surcos longitudinales (HM:3023)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Población:** pacientes con vómitos, diarrea o descenso de la ingesta\n\n**LR negativo:** Valor: 0.3; IC del 95 %: 0.1 / 0.6; Referencia: pmid:10086438\n\n**Decisión:** igual que las mucosas húmedas, su presencia argumenta en contra\n\n### Relleno capilar prolongado (HM:3024)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** Sin efecto discriminativo\n\n**Población:** adultos\n\n**Motivo:** la fuente concluye que no tiene valor diagnóstico demostrado en adultos\n\n**Referencia:** pmid:10086438\n\n### Turgencia cutánea disminuida (HM:3025)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** Sin efecto discriminativo\n\n**Población:** adultos\n\n**Motivo:** la fuente concluye que no tiene valor diagnóstico demostrado en adultos\n\n**Referencia:** pmid:10086438\n\n## Conclusión de la fuente\n\nPara diagnosticar hipovolemia por pérdida sanguínea hace falta un incremento postural del pulso de 30 latidos por minuto o más, o un mareo postural intenso, aunque ambos faltan a menudo tras pérdidas moderadas. En pacientes con vómitos, diarrea o descenso de la ingesta pocos hallazgos han demostrado utilidad, y conviene medir electrolitos, urea y creatinina cuando se necesita certeza diagnóstica.\n\n## Referencias y procedencia\n\n**pmid:10086438:** The rational clinical examination. Is this patient hypovolemic?. JAMA, 1999. DOI: 10.1001/jama.281.11.1022.\n\nFuente clínica: medsemiotics-db, condición HM:6008."
 }

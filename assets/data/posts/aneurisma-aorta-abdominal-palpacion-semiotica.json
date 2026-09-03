@@ -1,87 +1,185 @@
 {
   "id": "HM6006-01",
   "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
-  "title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
-  "subtitle": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
+  "title": "Aneurisma de aorta abdominal: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "author": "Dr. Alcy Torres",
   "category": "vascular",
   "category_label": "Medicina Vascular y Cirugía",
   "tags": [
-    "aorta",
-    "palpacion",
-    "screening",
-    "ecografia",
-    "medicina-interna"
+    "aneurisma-de-aorta-abdominal",
+    "semiologia",
+    "vascular"
   ],
-  "reading_time": "5 min",
+  "reading_time": "8 min",
   "difficulty": "Intermedio",
   "grounding_badge": "HM:6006 · PMID:9892455",
-  "has_quiz": true,
-  "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg/960px-Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "image_source": "https://commons.wikimedia.org/wiki/File%3AContrast-enhanced%20CT%20scan%20demonstrating%20abdominal%20aortic%20aneurysm.jpg",
-  "image_license": "CC BY-SA 3.0",
-  "image_title": "Contrast-enhanced CT scan demonstrating abdominal aortic aneurysm.jpg",
-  "excerpt": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
   "grounding": {
     "condicion_id": "HM:6006",
     "condicion_nombre": "Aneurisma de aorta abdominal",
     "concepto_id": "HM:3012",
     "concepto_nombre": "Pulsación aórtica ensanchada a la palpación",
-    "sensibilidad": 0.68,
-    "especificidad": 0.95,
+    "estado_lr": "medido",
     "lr_positivo": 12,
     "lr_negativo": 0.72,
-    "poblacion": "Adultos evaluados en cribado o consulta general sin diagnóstico vascular previo",
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": null,
     "referencia_id": "pmid:9892455",
-    "referencia_cita": "Lederle FA, Simel DL. The rational clinical examination. Does this patient have an abdominal aortic aneurysm? JAMA. 1999;281(1):77-82.",
-    "doi": "10.1001/jama.281.1.77",
-    "pmid": "9892455"
+    "referencia_cita": "Lederle FA, Simel DL The rational clinical examination. Does this patient have abdominal aortic aneurysm? JAMA 1999",
+    "pmid": "9892455",
+    "doi": "10.1001/jama.281.1.77"
   },
-  "triada": {
-    "significante": "Palpación bimanual profunda en epigastrio/mesogastrio que delimita un latido aórtico expansivo con anchura transversal estimada ≥ 3.0 cm.",
-    "significado": "Dilatación focal permanente de la aorta infrarrenal que transmite pulso hidrostático radial a la pared abdominal anterior.",
-    "decision": "La palpación positiva tiene alto valor confirmatorio (LR+ 12.0 para aneurisma ≥3 cm y LR+ 15.6 para ≥4 cm), pero la palpación normal (LR- 0.72) NO descarta aneurisma, especialmente en presencia de obesidad abdominal."
-  },
-  "autoevaluacion": [
+  "evidencia": [
     {
-      "id": "q1",
-      "pregunta": "En un paciente varón de 68 años, exfumador, la palpación del abdomen no revela masa pulsátil ni ensanchamiento aórtico. Teniendo en cuenta un LR- de 0.72 reportado en el metaanálisis de JAMA (PMID: 9892455), ¿cuál es la conducta clínica apropiada?",
-      "opciones": [
+      "concepto": "HM:3012",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 12,
+        "ic95": [
+          7.4,
+          19.5
+        ],
+        "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+        "ref": "pmid:9892455"
+      },
+      "lr_negativo": {
+        "valor": 0.72,
+        "ic95": [
+          0.65,
+          0.81
+        ],
+        "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+        "ref": "pmid:9892455"
+      },
+      "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta",
+      "advertencia": "no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.",
+      "tramos": [
         {
-          "texto": "La palpación normal descarta de forma definitiva el aneurisma y no requiere ningún estudio de imagen.",
-          "correcta": false,
-          "feedback": "Incorrecto. Un LR- de 0.72 es pobre para descartar patología (sensibilidad apenas ~68% en aneurismas pequeños); en pacientes con factores de riesgo de cribado, se debe solicitar ecografía abdominal."
+          "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+          "lr_positivo": 12,
+          "ic95": [
+            7.4,
+            19.5
+          ],
+          "lr_negativo": 0.72,
+          "ic95_negativo": [
+            0.65,
+            0.81
+          ],
+          "ref": "pmid:9892455"
         },
         {
-          "texto": "La palpación negativa no excluye la presencia de aneurisma; se debe realizar ecografía abdominal de cribado si cumple criterios de riesgo (edad, sexo masculino, tabaquismo).",
-          "correcta": true,
-          "feedback": "¡Correcto! Lederle y Simel demostraron que la palpación tiene baja sensibilidad para aneurismas pequeños o en pacientes con hábito corporal ancho; la ecografía es la prueba de elección."
-        },
-        {
-          "texto": "Se debe solicitar de urgencia una angiografía por cateterismo.",
-          "correcta": false,
-          "feedback": "Incorrecto. La ecografía abdominal es la prueba no invasiva de primera línea para cribado y diagnóstico inicial."
+          "umbral_condicion": "aneurisma de 4.0 cm o mayor",
+          "lr_positivo": 15.6,
+          "ic95": [
+            8.6,
+            28.5
+          ],
+          "lr_negativo": 0.51,
+          "ic95_negativo": [
+            0.38,
+            0.67
+          ],
+          "ref": "pmid:9892455"
         }
-      ]
-    },
-    {
-      "id": "q2",
-      "pregunta": "¿Por qué el Likelihood Ratio positivo (LR+) de la palpación aumenta de 12.0 a 15.6 cuando el diámetro aórtico supera los 4.0 cm?",
-      "opciones": [
+      ],
+      "sensibilidad_por_diametro": [
         {
-          "texto": "Porque a mayor tamaño del aneurisma, la masa pulsátil es más prominente y la especificidad de la palpación bimanual se aproxima al 98%.",
-          "correcta": true,
-          "feedback": "¡Exacto! El tamaño del vaso amplifica la transmisión de la onda de pulso y facilita la delimitación de bordes laterales, reduciendo drásticamente los falsos positivos."
+          "diametro": "3.0 a 3.9 cm",
+          "sensibilidad": 0.29,
+          "ref": "pmid:9892455"
         },
         {
-          "texto": "Porque el paciente experimenta dolor intenso espontáneo a la palpación superficial.",
-          "correcta": false,
-          "feedback": "Incorrecto. La mayoría de los aneurismas de aorta abdominal no complicados son indoloros a la exploración física rutinaria."
+          "diametro": "4.0 a 4.9 cm",
+          "sensibilidad": 0.5,
+          "ref": "pmid:9892455"
+        },
+        {
+          "diametro": "5.0 cm o mayor",
+          "sensibilidad": 0.76,
+          "ref": "pmid:9892455"
         }
       ]
     }
   ],
-  "body": "## El aneurisma aórtico como patología silente\r\n\r\nEl **Aneurisma de Aorta Abdominal (AAA)** suele cursar de forma asintomática hasta el momento crítico de la rotura o fisuración aguda. Por esta razón, la detección precoz en la consulta de medicina interna, atención primaria y geriatría es vital para programar el seguimiento o la reparación electiva.\r\n\r\n---\r\n\r\n## Semiología de la Palpación Aórtica\r\n\r\nLa técnica correcta exige:\r\n1. Paciente en decúbito supino con caderas flexionadas para relajar la musculatura abdominal.\r\n2. Palpación bimanual profunda en la línea media supraumbilical, ubicando los dedos índice y pulgar a ambos lados del pulso aórtico.\r\n3. Estimación de la **anchura transversal** del pulso para diferenciar el latido normal anteroposterior del latido expansivo lateral.\r\n\r\n```\r\n                    [ Examen Físico Abdominal ]\r\n                                │\r\n                ┌───────────────┴───────────────┐\r\n                ▼                               ▼\r\n      Pulsación ensanchada             Palpación aórtica normal\r\n        (LR+ = 12.0)                         (LR- = 0.72)\r\n                │                               │\r\n    Alta probabilidad de AAA.         Insuficiente para excluir.\r\n    Confirmar diámetro y anatomía      En pacientes de riesgo,\r\n    mediante ecografía abdominal.      proceder a ecografía de cribado.\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):\r\n\r\n- **Sensibilidad para AAA ≥ 3.0 cm:** 0.68 (68%)\r\n- **Especificidad para AAA ≥ 3.0 cm:** 0.95 (95%)\r\n- **Cociente de Verosimilitud Positivo (LR+ ≥3 cm):** 12.0 [Lederle & Simel, JAMA 1999]\r\n- **Cociente de Verosimilitud Positivo (LR+ ≥4 cm):** 15.6 [Lederle & Simel, JAMA 1999]\r\n- **Cociente de Verosimilitud Negativo (LR-):** 0.72 [Lederle & Simel, JAMA 1999]\r\n- **Población evaluada:** Adultos evaluados en cribado o consulta ambulatoria.\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLa palpación de una pulsación ensanchada es una prueba altamente **específica (LR+ 12.0)**: cuando se palpa con claridad, el diagnóstico es prácticamente seguro. Sin embargo, su **ausencia no excluye la enfermedad (LR- 0.72)**, lo que reafirma a la ecografía como la prueba de cribado definitiva."
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "doi": "10.5281/zenodo.22064424",
+    "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
+    "archivos": {
+      "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+      "conceptos/HM3012-pulsacion-aortica-ensanchada.yaml": "54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35",
+      "conceptos/HM3013-obesidad-abdominal.yaml": "ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54",
+      "condiciones/HM6006-aneurisma-aorta-abdominal.yaml": "9cec6260cfe5eea995f9e1ed8f1cddf95e7dc5734e645a439483e7e774717138",
+      "referencias/pmid-9892455.yaml": "781f7d38a1ffdb9e732d07f96d7d375d0b690cc6f5ddd1324d87d3070f981905"
+    }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
+  },
+  "has_quiz": true,
+  "quiz_count": 1,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg/960px-Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "image_source": "https://commons.wikimedia.org/wiki/File%3AContrast-enhanced%20CT%20scan%20demonstrating%20abdominal%20aortic%20aneurysm.jpg",
+  "image_license": "CC BY-SA 3.0",
+  "image_title": "Contrast-enhanced CT scan demonstrating abdominal aortic aneurysm.jpg",
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "triada": {
+    "significante": "Pulsación aórtica ensanchada a la palpación",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "En Aneurisma de aorta abdominal, ¿cuál es el resultado documentado del LR positivo para «Pulsación aórtica ensanchada a la palpación»?",
+      "concepto_id": "HM:3012",
+      "referencia_id": "pmid:9892455",
+      "pmid": "9892455",
+      "doi": "10.1001/jama.281.1.77",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6006",
+        "concepto_id": "HM:3012",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 12,
+          "ic95": [
+            7.4,
+            19.5
+          ],
+          "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+          "ref": "pmid:9892455"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta",
+        "advertencia": "no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+      },
+      "opciones": [
+        {
+          "texto": "El valor 12.0 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 12.0. LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+        },
+        {
+          "texto": "LR positivo: 12.0.",
+          "correcta": true,
+          "feedback": "LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+        }
+      ]
+    }
+  ],
+  "body": "# Aneurisma de aorta abdominal\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAbdominal aortic aneurysm\n\n## Sinónimos\n\nAAA\n\naneurisma aórtico abdominal\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Pulsación aórtica ensanchada a la palpación (HM:3012)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 12.0; IC del 95 %: 7.4 / 19.5; Umbral condicion: aneurisma de 3.0 cm o mayor; Referencia: pmid:9892455\n\n**LR negativo:** Valor: 0.72; IC del 95 %: 0.65 / 0.81; Umbral condicion: aneurisma de 3.0 cm o mayor; Referencia: pmid:9892455\n\n**Decisión:** la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta\n\n**Advertencia:** no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.\n\n**Tramos:** Umbral condicion: aneurisma de 3.0 cm o mayor; LR positivo: 12.0; IC del 95 %: 7.4 / 19.5; LR negativo: 0.72; Ic95 negativo: 0.65 / 0.81; Referencia: pmid:9892455 / Umbral condicion: aneurisma de 4.0 cm o mayor; LR positivo: 15.6; IC del 95 %: 8.6 / 28.5; LR negativo: 0.51; Ic95 negativo: 0.38 / 0.67; Referencia: pmid:9892455\n\n**Sensibilidad por diametro:** Diametro: 3.0 a 3.9 cm; Sensibilidad: 0.29; Referencia: pmid:9892455 / Diametro: 4.0 a 4.9 cm; Sensibilidad: 0.5; Referencia: pmid:9892455 / Diametro: 5.0 cm o mayor; Sensibilidad: 0.76; Referencia: pmid:9892455\n\n## Modificadores\n\n### Obesidad abdominal (HM:3013)\n\n**Efecto:** reduce la sensibilidad de la palpación\n\n**Referencia:** pmid:9892455\n\n**Nota:** la fuente lo respalda con datos limitados\n\n## Notas de uso\n\nValor predictivo positivo de la palpación para aneurisma de 3.0 cm o mayor en estas series: 43%.\n\nNo se ha descrito que la palpación precipite la rotura.\n\n## Referencias y procedencia\n\n**pmid:9892455:** The rational clinical examination. Does this patient have abdominal aortic aneurysm?. JAMA, 1999. DOI: 10.1001/jama.281.1.77.\n\nFuente clínica: medsemiotics-db, condición HM:6006."
 }

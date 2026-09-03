@@ -1,3 +1,4 @@
+import yaml from 'js-yaml';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,187 +10,38 @@ const rootDir = path.resolve(__dirname, '..');
 const postsDir = path.join(rootDir, 'posts');
 const outputDataDir = path.join(rootDir, 'assets', 'data');
 const outputPostsDir = path.join(outputDataDir, 'posts');
+const checkOnly = process.argv.includes('--check');
+const pendingOutputs = new Map();
+const publicationCitation = yaml.load(fs.readFileSync(path.join(rootDir, 'CITATION.cff'), 'utf8'));
+if (!publicationCitation.doi) throw new Error('Medsemiotics no declara su DOI en CITATION.cff');
+
+function emitJson(filename, data) {
+  pendingOutputs.set(filename, JSON.stringify(data, null, 2) + '\n');
+}
 
 // Ensure output directories exist
-if (!fs.existsSync(outputDataDir)) {
+if (!checkOnly && !fs.existsSync(outputDataDir)) {
   fs.mkdirSync(outputDataDir, { recursive: true });
 }
-if (!fs.existsSync(outputPostsDir)) {
+if (!checkOnly && !fs.existsSync(outputPostsDir)) {
   fs.mkdirSync(outputPostsDir, { recursive: true });
 }
 
 function parseFrontmatter(fileContent) {
-  const frontmatterRegex = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n([\s\S]*))?$/;
-  const match = fileContent.match(frontmatterRegex);
-
-  if (!match) {
-    return { data: {}, content: fileContent };
+  const match = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n([\s\S]*))?$/);
+  if (!match) throw new Error('Artículo sin metadatos YAML');
+  const data = yaml.load(match[1]);
+  if (!data?.grounding?.condicion_id || !data?.fuente?.revision) {
+    throw new Error('Artículo sin procedencia de medsemiotics-db: ejecutar topics:sync');
   }
-
-  const yamlBlock = match[1];
-  const body = match[2] || '';
-
-  // Simple and robust parser for our YAML structure
-  const data = parseSimpleYaml(yamlBlock);
-  return { data, content: body.trim() };
+  return { data, content: (match[2] || '').trim() };
 }
-
-function parseSimpleYaml(yamlText) {
-  const result = {};
-  const lines = yamlText.split(/\r?\n/);
-  let currentKey = null;
-  let currentArray = null;
-  let currentObject = null;
-  let inNestedObj = false;
-
-  for (let i = 0; i < lines.length; i++) {
-    const rawLine = lines[i];
-    if (!rawLine.trim() || rawLine.trim().startsWith('#')) continue;
-
-    const indent = rawLine.search(/\S/);
-    const line = rawLine.trim();
-
-    // Top-level key: value
-    if (indent === 0) {
-      inNestedObj = false;
-      currentObject = null;
-      currentArray = null;
-
-      const colonIdx = line.indexOf(':');
-      if (colonIdx !== -1) {
-        const key = line.slice(0, colonIdx).trim();
-        const value = line.slice(colonIdx + 1).trim();
-
-        if (value === '') {
-          currentKey = key;
-          // Determine if next line is array or object
-          const nextLine = lines.slice(i + 1).find(l => l.trim() && !l.trim().startsWith('#'));
-          if (nextLine && nextLine.trim().startsWith('-')) {
-            currentArray = [];
-            result[key] = currentArray;
-          } else {
-            currentObject = {};
-            result[key] = currentObject;
-            inNestedObj = true;
-          }
-        } else if (value.startsWith('[') && value.endsWith(']')) {
-          result[key] = value.slice(1, -1).split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
-        } else {
-          result[key] = cleanVal(value);
-        }
-      }
-    } else if (inNestedObj && currentObject && indent >= 2) {
-      if (line.startsWith('- ')) {
-        // Nested array inside object or autoevaluacion
-      } else {
-        const colonIdx = line.indexOf(':');
-        if (colonIdx !== -1) {
-          const key = line.slice(0, colonIdx).trim();
-          const value = line.slice(colonIdx + 1).trim();
-          currentObject[key] = cleanVal(value);
-        }
-      }
-    }
-  }
-
-  // Handle advanced blocks like autoevaluacion cleanly
-  if (yamlText.includes('autoevaluacion:')) {
-    result.autoevaluacion = parseAutoevaluacionBlock(yamlText);
-  }
-  if (yamlText.includes('triada:')) {
-    result.triada = parseTriadaBlock(yamlText);
-  }
-  if (yamlText.includes('grounding:')) {
-    result.grounding = parseGroundingBlock(yamlText);
-  }
-
-  return result;
-}
-
-function parseTriadaBlock(yamlText) {
-  const triadaMatch = yamlText.match(/triada:([\s\S]*?)(?=\n[a-z_]+:|$)/);
-  if (!triadaMatch) return {};
-  const block = triadaMatch[1];
-  const res = {};
-  const sigMatch = block.match(/significante:\s*["']?([\s\S]*?)["']?(?=\n\s*[a-z_]+:|$)/);
-  const meanMatch = block.match(/significado:\s*["']?([\s\S]*?)["']?(?=\n\s*[a-z_]+:|$)/);
-  const decMatch = block.match(/decision:\s*["']?([\s\S]*?)["']?(?=\n\s*[a-z_]+:|$)/);
-  if (sigMatch) res.significante = sigMatch[1].trim().replace(/^["']|["']$/g, '');
-  if (meanMatch) res.significado = meanMatch[1].trim().replace(/^["']|["']$/g, '');
-  if (decMatch) res.decision = decMatch[1].trim().replace(/^["']|["']$/g, '');
-  return res;
-}
-
-function parseGroundingBlock(yamlText) {
-  const match = yamlText.match(/grounding:([\s\S]*?)(?=\n[a-z_]+:|$)/);
-  if (!match) return {};
-  const block = match[1];
-  const res = {};
-  const lines = block.split(/\r?\n/);
-  for (const line of lines) {
-    const colonIdx = line.indexOf(':');
-    if (colonIdx !== -1) {
-      const k = line.slice(0, colonIdx).trim();
-      const v = line.slice(colonIdx + 1).trim();
-      if (k && v) res[k] = cleanVal(v);
-    }
-  }
-  return res;
-}
-
-function parseAutoevaluacionBlock(yamlText) {
-  const autoMatch = yamlText.match(/autoevaluacion:([\s\S]*?)(?=\n[a-z_]+:|$)/);
-  if (!autoMatch) return [];
-  const raw = autoMatch[1];
-  const items = [];
-  const questionBlocks = raw.split(/\n\s*-\s*id:\s*/).filter(s => s.trim());
-
-  let fallbackIdx = 1;
-  for (const qb of questionBlocks) {
-    const q = { id: `q${fallbackIdx++}`, pregunta: '', opciones: [] };
-    const firstLineEnd = qb.indexOf('\n');
-    if (firstLineEnd !== -1) {
-      const idPart = qb.slice(0, firstLineEnd).trim().replace(/^["']|["']$/g, '');
-      if (idPart) q.id = idPart;
-    }
-
-    const pregMatch = qb.match(/pregunta:\s*["']?([\s\S]*?)["']?(?=\n\s*opciones:|$)/);
-    if (pregMatch) q.pregunta = pregMatch[1].trim().replace(/^["']|["']$/g, '');
-
-    const opcMatch = qb.match(/opciones:([\s\S]*?)$/);
-    if (opcMatch) {
-      const opcBlocks = opcMatch[1].split(/\n\s*-\s*texto:\s*/).filter(s => s.trim());
-      for (const ob of opcBlocks) {
-        const txtMatch = ob.match(/^["']?([\s\S]*?)["']?(?=\n\s*correcta:|$)/);
-        const corrMatch = ob.match(/correcta:\s*(true|false)/);
-        const feedMatch = ob.match(/feedback:\s*["']?([\s\S]*?)["']?$/);
-        q.opciones.push({
-          texto: txtMatch ? txtMatch[1].trim().replace(/^["']|["']$/g, '') : '',
-          correcta: corrMatch ? corrMatch[1] === 'true' : false,
-          feedback: feedMatch ? feedMatch[1].trim().replace(/^["']|["']$/g, '') : ''
-        });
-      }
-    }
-    items.push(q);
-  }
-  return items;
-}
-
-function cleanVal(v) {
-  if (v === 'true') return true;
-  if (v === 'false') return false;
-  if (v === 'null') return null;
-  if (/^-?\d+(\.\d+)?$/.test(v)) return Number(v);
-  return v.replace(/^["']|["']$/g, '').trim();
-}
-
 // Build index & posts
 function buildBlog() {
   console.log('--- Construyendo Índice del Blog MedSemiotics ---');
   if (!fs.existsSync(postsDir)) {
     console.log('No se encontró la carpeta posts/. Creando...');
-    fs.mkdirSync(postsDir, { recursive: true });
-    return;
+    throw new Error('No existe posts/: ejecutar topics:sync');
   }
 
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
@@ -213,12 +65,11 @@ function buildBlog() {
     const condKey = data.grounding && data.grounding.condicion_id ? data.grounding.condicion_id.replace(':', '') : file.split('-')[0];
     const imgData = topicImages[condKey] || null;
 
-    // Strict Grounding Validation
-    if (!data.grounding || !data.grounding.condicion_id) {
-      console.warn(`[ALERTA GROUNDING] El post ${file} no tiene condicion_id asignado en 'grounding'.`);
-    }
-    if (!data.grounding || (!data.grounding.pmid && !data.grounding.doi && !data.grounding.referencia_id)) {
-      console.warn(`[ALERTA GROUNDING] El post ${file} no tiene referencia verificada (PMID/DOI).`);
+    const hasScalarLR = ['lr_positivo', 'lr_negativo'].some(
+      key => typeof data.grounding[key] === 'number' && Number.isFinite(data.grounding[key]),
+    );
+    if (hasScalarLR && (data.grounding.estado_lr !== 'medido' || !data.grounding.referencia_id)) {
+      throw new Error(`${file}: LR sin estado medido y referencia.`);
     }
 
     const postSummary = {
@@ -233,7 +84,11 @@ function buildBlog() {
       tags: data.tags || [],
       reading_time: data.reading_time || '5 min',
       difficulty: data.difficulty || 'Intermedio',
-      grounding_badge: data.grounding ? `${data.grounding.condicion_id} · PMID:${data.grounding.pmid || ''}` : 'Verificado',
+      grounding_badge: `${data.grounding.condicion_id} · ${data.grounding.pmid ? 'PMID:' + data.grounding.pmid : 'Sin LR medidos'}`,
+      grounding: data.grounding,
+      evidencia: data.evidencia || [],
+      fuente: data.fuente,
+      publicacion: { titulo: publicationCitation.title, doi: publicationCitation.doi },
       has_quiz: Boolean(data.autoevaluacion && data.autoevaluacion.length > 0),
       quiz_count: data.autoevaluacion ? data.autoevaluacion.length : 0,
       featured_image: data.image || (imgData ? (imgData.thumb || imgData.url) : null),
@@ -254,10 +109,9 @@ function buildBlog() {
     postsIndex.push(postSummary);
 
     // Save individual full post JSON for fast client reading
-    fs.writeFileSync(
+    emitJson(
       path.join(outputPostsDir, `${postSummary.slug}.json`),
-      JSON.stringify(fullPost, null, 2),
-      'utf-8'
+      fullPost,
     );
   }
 
@@ -280,9 +134,13 @@ function buildBlog() {
           category_label: data.category_label || 'Clínica',
           condicion_id: data.grounding ? data.grounding.condicion_id : null,
           condicion_nombre: data.grounding ? data.grounding.condicion_nombre : data.title,
-          pmid: data.grounding ? data.grounding.pmid : null,
-          doi: data.grounding ? data.grounding.doi : null,
-          referencia_cita: data.grounding ? data.grounding.referencia_cita : null,
+          concepto_id: q.concepto_id,
+          evidencia: q.evidencia,
+          fuente_doi: q.fuente_doi,
+          referencia_id: q.referencia_id,
+          pmid: q.pmid || null,
+          doi: q.doi || null,
+          referencia_cita: q.referencia_id === data.grounding.referencia_id ? data.grounding.referencia_cita : null,
           triada: data.triada || null,
           pregunta: q.pregunta,
           opciones: q.opciones
@@ -292,18 +150,40 @@ function buildBlog() {
   }
 
   // Save index
-  fs.writeFileSync(
+  emitJson(
     path.join(outputDataDir, 'blog-index.json'),
-    JSON.stringify(postsIndex, null, 2),
-    'utf-8'
+    postsIndex,
   );
 
   // Save Quiz Bank
-  fs.writeFileSync(
+  emitJson(
     path.join(outputDataDir, 'quiz-bank.json'),
-    JSON.stringify(quizBank, null, 2),
-    'utf-8'
+    quizBank,
   );
+
+  emitJson(path.join(outputDataDir, 'condition-posts.json'), postsIndex.map(p => ({
+    condicion_id: p.grounding.condicion_id,
+    archivo: p.fuente.condicion,
+    slug: p.slug,
+    url: `https://powersemiotics.com/medsemiotics/post.html?slug=${p.slug}`,
+  })).sort((a, b) => a.condicion_id.localeCompare(b.condicion_id)));
+  const sitemapPath = path.join(rootDir, 'sitemap.xml');
+  const sitemap = fs.readFileSync(sitemapPath, 'utf8');
+  const blogUrls = '<!-- BLOG-START -->\n' + postsIndex.map(p =>
+    `  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=${p.slug}</loc></url>`,
+  ).sort().join('\n') + '\n<!-- BLOG-END -->';
+  const updatedSitemap = sitemap.includes('<!-- BLOG-START -->')
+    ? sitemap.replace(/<!-- BLOG-START -->[\s\S]*?<!-- BLOG-END -->/, blogUrls)
+    : sitemap.replace('</urlset>', blogUrls + '\n</urlset>');
+  pendingOutputs.set(sitemapPath, updatedSitemap);
+  const stale = [];
+  for (const [filename, text] of pendingOutputs) {
+    if (!fs.existsSync(filename) || fs.readFileSync(filename, 'utf8') !== text) {
+      if (checkOnly) stale.push(path.relative(rootDir, filename));
+      else fs.writeFileSync(filename, text, 'utf8');
+    }
+  }
+  if (stale.length) throw new Error('JSON desactualizados: ' + stale.join(', '));
 
   console.log(`✓ Blog procesado exitosamente: ${postsIndex.length} tema(s) generado(s).`);
   console.log(`✓ Banco de Autoevaluación generado: ${quizBank.length} pregunta(s) indexada(s).`);

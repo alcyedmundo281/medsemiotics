@@ -1,508 +1,2935 @@
 [
   {
-    "id": "HM6021-01",
-    "slug": "trastorno-consumo-alcohol-audit-audit-c",
-    "title": "Trastorno por consumo de alcohol: Precisión del cuestionario AUDIT según criterios DSM-5",
-    "subtitle": "Evaluación bayesiana del cribado en atención primaria, diferencias por sexo y despistaje postparto según JAMA.",
-    "date": "2026-08-22",
+    "id": "HM6001-01",
+    "slug": "hepatitis-viral-aguda-precision-semiotica",
+    "title": "Hepatitis viral aguda: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
+    "date": "2026-09-02",
     "author": "Dr. Alcy Torres",
-    "category": "psiquiatria",
-    "category_label": "Psiquiatría y Atención Primaria",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
     "tags": [
-      "psiquiatria",
-      "adicciones",
-      "alcoholismo",
-      "atencion-primaria",
-      "audit",
-      "semiologia",
-      "evidencia"
+      "gastroenterologia",
+      "hepatitis-viral-aguda",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
-    "grounding_badge": "HM:6021 · PMID:38592385",
+    "grounding_badge": "HM:6001 · Sin LR medidos",
+    "grounding": {
+      "condicion_id": "HM:6001",
+      "condicion_nombre": "Hepatitis viral aguda",
+      "concepto_id": "HM:0305",
+      "concepto_nombre": "Ictericia",
+      "estado_lr": "no_medible",
+      "lr_positivo": null,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": null,
+      "referencia_cita": null,
+      "pmid": null,
+      "doi": null
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:0305",
+        "rol": "manifestacion",
+        "estado_lr": "no_medible",
+        "motivo": "forma parte de la definición de caso; sesgo de incorporación"
+      },
+      {
+        "concepto": "HM:0306",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0307",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0733",
+        "rol": "prueba_sensible",
+        "estado_lr": "no_medible",
+        "motivo": "forma parte de la definición de caso; sesgo de incorporación"
+      },
+      {
+        "concepto": "HM:0745",
+        "rol": "apoyo",
+        "estado_lr": "no_medible",
+        "motivo": "forma parte de la definición de caso; sesgo de incorporación"
+      },
+      {
+        "concepto": "HM:0203",
+        "rol": "apoyo",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0602",
+        "rol": "apoyo",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0101",
+        "rol": "apoyo",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0801",
+        "rol": "apoyo",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0802",
+        "rol": "apoyo",
+        "estado_lr": "no_medido"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
+        "conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml": "c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f",
+        "conceptos/HM0305-ictericia.yaml": "87323a0b278fc5c8d70ae931a46478eccb092cec8330f28434d136003b6ad270",
+        "conceptos/HM0306-coluria.yaml": "103fe65f0cbe26bc6e06f186234246227b04cde241b8ec4625ff30ddfe01ef2e",
+        "conceptos/HM0307-acolia.yaml": "d753e6cbaa96116d92baa7836ec987a3eec9284280c8199b688051df744e6aef",
+        "conceptos/HM0602-hepatomegalia.yaml": "51c18ec466026b08b337817e2c5b004960c0f3862e814e6d629ec27d375618aa",
+        "conceptos/HM0733-elevacion-de-transaminasas.yaml": "57ca69d57c386aea3a46015b76181a5ff05fdae4adfe53f0b16c52abb4e3762e",
+        "conceptos/HM0745-hiperbilirrubinemia.yaml": "ea9070ab1927760a0d4257c84bd763673fe29378372f3ac7bdf3028761480e92",
+        "conceptos/HM0801-astenia.yaml": "95bc981acd8d63bc1c693bd3ba572e4e714a900777e0d933281d82d22bcaa097",
+        "conceptos/HM0802-anorexia.yaml": "41f5d159539277ac7fb97cdefeefb66395ea5f70741a4d577bb22efed5940bba",
+        "condiciones/HM6001-hepatitis-viral-aguda.yaml": "5289dc6268987469b2bfd8fa5ebae8fa70066f1bfc491f518e4106cbe979b225"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/NIH_standard_drink_comparison-es.png/960px-NIH_standard_drink_comparison-es.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File:NIH_standard_drink_comparison-es.png",
-    "image_license": "CC BY-SA 4.0",
-    "image_title": "NIH standard drink comparison-es.png",
-    "excerpt": "El cuestionario AUDIT con puntuación ≥ 8 eleva de forma contundente la probabilidad de trastorno por consumo de alcohol según el DSM-5 (LR+ 6.5 global; LR+ 6.9 en mujeres y LR+ 3.8 en hombres)."
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos."
+  },
+  {
+    "id": "HM6002-01",
+    "slug": "sindrome-de-intestino-irritable-precision-semiotica",
+    "title": "Síndrome de intestino irritable: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
+    "date": "2026-09-02",
+    "author": "Dr. Alcy Torres",
+    "category": "gastroenterologia",
+    "category_label": "Gastroenterología",
+    "tags": [
+      "gastroenterologia",
+      "semiologia",
+      "sindrome-de-intestino-irritable"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6002 · PMID:15082584",
+    "grounding": {
+      "condicion_id": "HM:6002",
+      "condicion_nombre": "Síndrome de intestino irritable",
+      "concepto_id": "HM:0201",
+      "concepto_nombre": "Dolor abdominal",
+      "estado_lr": "no_medido",
+      "lr_positivo": null,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:15082584",
+      "referencia_cita": "Hammer J, Eslick GD, Howell SC, Altiparmak E, Talley NJ Diagnostic yield of alarm features in irritable bowel syndrome and functional dyspepsia Gut 2004",
+      "pmid": "15082584",
+      "doi": "10.1136/gut.2003.021857"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:0201",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0303",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido"
+      },
+      {
+        "concepto": "HM:0304",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6002-sindrome-intestino-irritable.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
+        "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
+        "conceptos/HM0303-diarrea.yaml": "0d5ca16fa30e66c063ee51a787ddae512941d0600d783e12fbd847482a224ced",
+        "conceptos/HM0304-estrenimiento.yaml": "144e3ac249c42c3c2b9a726e28a4fc596afc88b32b7266ad8906ed7fd157899f",
+        "conceptos/HM0310-melena.yaml": "56ea476133e21be467cd68f7bb9a8a9b3f9a7623d63fbf3e4e37810fe2d87081",
+        "conceptos/HM0711-anemia.yaml": "33c2de9e06e96c38c950b2cdc270e1acd8a60d7953e04b9c6224303f28628410",
+        "conceptos/HM0803-perdida-de-peso.yaml": "78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e",
+        "conceptos/HM3060-hematoquecia.yaml": "3859f875c15207194d1bc498152f293a810c21faeb51c3ae1ce78ba459cbd338",
+        "condiciones/HM6002-sindrome-intestino-irritable.yaml": "de99a8c5755f450792d575897902bde932154119c4318ee30d916dbec0bd11f5",
+        "referencias/pmid-15082584.yaml": "bed79febe6875717f56dda071ab3d22da080c14d2f6552a0c7803e9eb9dc4a27",
+        "referencias/pmid-20697190.yaml": "5acfa5ff915443623dc06031e8065400f6ab0f27d72e95e35e365d825b88b3ad"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Causes_of_irritable_bowel_syndrome_%28bar_charts%29.png/960px-Causes_of_irritable_bowel_syndrome_%28bar_charts%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3ACauses%20of%20irritable%20bowel%20syndrome%20%28bar%20charts%29.png",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Causes of irritable bowel syndrome (bar charts).png",
+    "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos."
+  },
+  {
+    "id": "HM6019-01",
+    "slug": "luxacion-cadera-lactante-barlow-ortolani",
+    "title": "Luxación de cadera en el lactante: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-22",
+    "author": "Dr. Alcy Torres",
+    "category": "pediatria",
+    "category_label": "Pediatría y Ortopedia",
+    "tags": [
+      "luxacion-de-cadera-en-el-lactante",
+      "pediatria",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6019 · PMID:38619828",
+    "grounding": {
+      "condicion_id": "HM:6019",
+      "condicion_nombre": "Luxación de cadera en el lactante",
+      "concepto_id": "HM:3075",
+      "concepto_nombre": "Maniobras de Barlow y Ortolani positivas",
+      "estado_lr": "medido",
+      "lr_positivo": 52,
+      "lr_negativo": 0.55,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios)",
+      "referencia_id": "pmid:38619828",
+      "referencia_cita": "Singh A, Wade RG, Metcalfe D, Perry DC Does This Infant Have a Dislocated Hip?: The Rational Clinical Examination Systematic Review JAMA 2024",
+      "pmid": "38619828",
+      "doi": "10.1001/jama.2024.2404",
+      "sensibilidad": 0.46,
+      "especificidad": 0.991
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3075",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.46,
+        "especificidad": 0.991,
+        "poblacion": "lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios)",
+        "lr_positivo": {
+          "valor": 52,
+          "ic95": [
+            21,
+            127
+          ],
+          "ref": "pmid:38619828"
+        },
+        "lr_negativo": {
+          "valor": 0.55,
+          "ic95": [
+            0.37,
+            0.82
+          ],
+          "ref": "pmid:38619828"
+        },
+        "decision": "Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
+      },
+      {
+        "concepto": "HM:3076",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.13,
+        "especificidad": 0.97,
+        "poblacion": "lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios)",
+        "lr_positivo": {
+          "valor": 3.6,
+          "ic95": [
+            0.72,
+            18
+          ],
+          "ref": "pmid:38619828"
+        },
+        "lr_negativo": {
+          "valor": 0.91,
+          "ic95": [
+            0.76,
+            1.1
+          ],
+          "ref": "pmid:38619828"
+        },
+        "decision": "Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
+      },
+      {
+        "concepto": "HM:3077",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.13,
+        "especificidad": 0.92,
+        "poblacion": "lactantes de 3 meses o menores (n = 13 096 caderas en 1 estudio)",
+        "lr_positivo": {
+          "valor": 1.6,
+          "ic95": [
+            0.91,
+            2.8
+          ],
+          "ref": "pmid:38619828"
+        },
+        "lr_negativo": {
+          "valor": 0.95,
+          "ic95": [
+            0.88,
+            1
+          ],
+          "ref": "pmid:38619828"
+        },
+        "decision": "Chasquido o click articular aislado: hallazgo inespecífico sin valor discriminativo para luxación o displasia (el intervalo cruza el neutro)."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6019-luxacion-cadera-lactante.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3075-maniobras-de-barlow-y-ortolani.yaml": "43c819ea911471811bf4a17ff48eea18f4e84b64b57238a996fc999ddc4bca43",
+        "conceptos/HM3076-limitacion-abduccion-cadera-lactante.yaml": "9573e001bae058b99488d56515e007eb920038be62889c2e83e4a37b2caca157",
+        "conceptos/HM3077-chasquido-articular-cadera-lactante.yaml": "ca91e3bf119a83bd0546f000c7203a50cd7595f1e4921202d0cc03b9d63bfa33",
+        "condiciones/HM6019-luxacion-cadera-lactante.yaml": "ffc5b922cd1ebe05a5ece1a2636d498516bf11a4153e28981d3c8c4b1eb2aea0",
+        "referencias/pmid-38619828.yaml": "4d7ba894e0678354a11cec41782b767ceebd056d308c1ff8edde131894a71268"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6020-01",
     "slug": "intubacion-dificil-mallampati-mordida-labio",
-    "title": "Vía aérea difícil: Rendimiento del test de mordida del labio superior y la escala de Mallampati",
-    "subtitle": "Análisis bayesiano de los predictores físicos preoperatorios de intubación difícil según la evidencia de JAMA.",
+    "title": "Intubación difícil: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-22",
     "author": "Dr. Alcy Torres",
     "category": "anestesiologia",
     "category_label": "Anestesiología y Cuidados Críticos",
     "tags": [
       "anestesiologia",
-      "via-aerea",
-      "intubacion",
-      "urgencias",
-      "semiologia",
-      "evidencia"
+      "intubacion-dificil",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6020 · PMID:30721300",
+    "grounding": {
+      "condicion_id": "HM:6020",
+      "condicion_nombre": "Intubación difícil",
+      "concepto_id": "HM:3078",
+      "concepto_nombre": "Test de mordida del labio superior clase 3",
+      "estado_lr": "medido",
+      "lr_positivo": 14,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "pacientes quirúrgicos adultos (n = 33 559)",
+      "referencia_id": "pmid:30721300",
+      "referencia_cita": "Detsky ME, Jivraj N, Adhikari NK, Friedrich JO, Pinto R, Simel DL, Wijeysundera DN, Scales DC Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review JAMA 2019",
+      "pmid": "30721300",
+      "doi": "10.1001/jama.2018.21413",
+      "especificidad": 0.96
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3078",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.96,
+        "poblacion": "pacientes quirúrgicos adultos (n = 33 559)",
+        "lr_positivo": {
+          "valor": 14,
+          "ic95": [
+            8.9,
+            22
+          ],
+          "ref": "pmid:30721300"
+        },
+        "decision": "Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
+      },
+      {
+        "concepto": "HM:3079",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.97,
+        "poblacion": "pacientes quirúrgicos adultos",
+        "lr_positivo": {
+          "valor": 6.4,
+          "ic95": [
+            4.1,
+            10
+          ],
+          "ref": "pmid:30721300"
+        },
+        "decision": "Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4."
+      },
+      {
+        "concepto": "HM:3080",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.98,
+        "poblacion": "pacientes quirúrgicos adultos",
+        "lr_positivo": {
+          "valor": 6,
+          "ic95": [
+            3.1,
+            11
+          ],
+          "ref": "pmid:30721300"
+        },
+        "decision": "Retrognatia (mandíbula <9 cm): especificidad del 98% con LR+ 6.0."
+      },
+      {
+        "concepto": "HM:3082",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.95,
+        "poblacion": "pacientes quirúrgicos adultos",
+        "lr_positivo": {
+          "valor": 9.1,
+          "ic95": [
+            5.1,
+            16
+          ],
+          "ref": "pmid:30721300"
+        },
+        "decision": "Score de Wilson de riesgo aumentado: combinación de 5 factores anatómicos con LR+ 9.1 y especificidad del 95%."
+      },
+      {
+        "concepto": "HM:3081",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.87,
+        "poblacion": "pacientes quirúrgicos adultos",
+        "lr_positivo": {
+          "valor": 4.1,
+          "ic95": [
+            3,
+            5.6
+          ],
+          "ref": "pmid:30721300"
+        },
+        "decision": "Escala de Mallampati modificada (clase 3 o 4): el test más difundido; aporta un LR+ de 4.1 pero con especificidad moderada (87%)."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6020-intubacion-dificil.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3078-test-mordida-labio-superior-clase-3.yaml": "bf284c373f4ef74131492f0264af906aec28dcc1891e19f7776d424495a11f1b",
+        "conceptos/HM3079-distancia-hiodomentoniana-corta.yaml": "6afcfa37fd303843404cf8c9c6853885f52b3ec85a76b5c63f471ac54511f141",
+        "conceptos/HM3080-retrognatia.yaml": "e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b",
+        "conceptos/HM3081-mallampati-clase-3-o-4.yaml": "366c0d1c97f6fa6e8742157e005d8058c19a3df9b131b41cdef47fd1360ae170",
+        "conceptos/HM3082-score-de-wilson.yaml": "a6c034805fc5b741f39efffe0d2d933c1737147705c7fb53b518bd8b3e34ffa0",
+        "condiciones/HM6020-intubacion-dificil.yaml": "ff9a4c558137006cb089f056c8f5bf3a48d9ec9bd951225ca5502a571b871704",
+        "referencias/pmid-30721300.yaml": "33f42c72248a77f200f42a1f7fe909b8428f6945ea78ad9bab90f2ac3ed168b5"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mallampati.svg/960px-Mallampati.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Mallampati.svg",
-    "image_license": "CC BY-SA 3.0",
-    "image_title": "Mallampati.svg",
-    "excerpt": "El test de mordida del labio superior clase 3 es el hallazgo físico con mayor fuerza confirmatoria de intubación difícil (LR+ 14), pero ningún hallazgo permite excluir de forma fiable una vía aérea dificultosa."
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
-    "id": "HM6019-01",
-    "slug": "luxacion-cadera-lactante-barlow-ortolani",
-    "title": "Luxación y displasia de cadera en el lactante: Precisión de las maniobras de Barlow y Ortolani",
-    "subtitle": "Análisis bayesiano de la exploración física neonatal frente al estándar ecográfico de Graf según la evidencia de JAMA.",
+    "id": "HM6021-01",
+    "slug": "trastorno-consumo-alcohol-audit-audit-c",
+    "title": "Trastorno por consumo de alcohol: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-22",
     "author": "Dr. Alcy Torres",
-    "category": "pediatria",
-    "category_label": "Pediatría y Ortopedia",
+    "category": "psiquiatria",
+    "category_label": "Psiquiatría y Atención Primaria",
     "tags": [
-      "pediatria",
-      "ortopedia",
-      "displasia-cadera",
-      "recien-nacido",
+      "psiquiatria",
       "semiologia",
-      "evidencia"
+      "trastorno-por-consumo-de-alcohol"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
-    "grounding_badge": "HM:6019 · PMID:38619828",
+    "grounding_badge": "HM:6021 · PMID:38592385",
+    "grounding": {
+      "condicion_id": "HM:6021",
+      "condicion_nombre": "Trastorno por consumo de alcohol",
+      "concepto_id": "HM:3083",
+      "concepto_nombre": "Cuestionario AUDIT con puntuación ≥ 8",
+      "estado_lr": "medido",
+      "lr_positivo": 6.5,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)",
+      "referencia_id": "pmid:38592385",
+      "referencia_cita": "Wood E, Pan J, Cui Z, Bach P, Dennis B, Nolan S, Socias ME Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review JAMA 2024",
+      "pmid": "38592385",
+      "doi": "10.1001/jama.2024.3101"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3083",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "poblacion": "adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)",
+        "lr_positivo": {
+          "valor": 6.5,
+          "ic95": [
+            3.9,
+            11
+          ],
+          "ref": "pmid:38592385",
+          "nota": "en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5)"
+        },
+        "decision": "AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
+      },
+      {
+        "concepto": "HM:3085",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "poblacion": "adultos evaluados con AUDIT",
+        "lr_negativo": {
+          "valor": 0.33,
+          "ic95": [
+            0.2,
+            0.52
+          ],
+          "ref": "pmid:38592385"
+        },
+        "decision": "AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres."
+      },
+      {
+        "concepto": "HM:3084",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "poblacion": "adultos en atención primaria",
+        "lr_positivo": {
+          "rango": [
+            1.8,
+            2
+          ],
+          "ref": "pmid:38592385",
+          "nota": "hombres LR+ 1.8 (IC 95%: 1.5-2.2); mujeres LR+ 2.0 (IC 95%: 1.8-2.3)"
+        },
+        "decision": "AUDIT-C positivo (hombres ≥4, mujeres ≥3): útil para detectar consumo excesivo de riesgo rápido, pero modesto para confirmar trastorno por consumo formal (LR+ ~1.9)."
+      },
+      {
+        "concepto": "HM:3086",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "poblacion": "mujeres puérperas evaluadas en las primeras 48 horas postparto",
+        "lr_positivo": {
+          "valor": 6.4,
+          "ic95": [
+            5.1,
+            8
+          ],
+          "ref": "pmid:38592385"
+        },
+        "decision": "AUDIT ≥ 4 en postparto: identifica eficazmente a puérperas con alta probabilidad de trastorno por consumo de alcohol (LR+ 6.4)."
+      },
+      {
+        "concepto": "HM:3087",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "poblacion": "mujeres puérperas evaluadas en las primeras 48 horas postparto",
+        "lr_negativo": {
+          "valor": 0.05,
+          "ic95": [
+            0.01,
+            0.2
+          ],
+          "ref": "pmid:38592385"
+        },
+        "decision": "TWEAK o T-ACE < 2 en postparto: excelente poder de exclusión (LR- 0.05), descartando prácticamente el trastorno en esta población."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml": "4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35",
+        "conceptos/HM3084-cuestionario-audit-c-positivo.yaml": "60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37",
+        "conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml": "2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406",
+        "conceptos/HM3086-audit-postparto-puntuacion-4-o-mas.yaml": "aaa992fc60e316a7203b23e37ff2d8e6f109ad56e0310cde66ad69fb875a0294",
+        "conceptos/HM3087-tweak-t-ace-menor-2-postparto.yaml": "4b778da7722fe4d93254cea0e7d90d584d874ef12c531adbc35472dc7c1f0433",
+        "condiciones/HM6021-trastorno-consumo-alcohol.yaml": "db7898f5af71fc0ce7cd96fc246f82f46220189956ef6bff8cea50dc2201e4df",
+        "referencias/pmid-38592385.yaml": "58bb53d39a0494342209a56cbc96e0c66000e96f4e960a6d0b9793ae0a7f7882"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ultrasound_measuring_the_developmental_dysplasia_of_right_hip.jpg/960px-Ultrasound_measuring_the_developmental_dysplasia_of_right_hip.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Ultrasound_measuring_the_developmental_dysplasia_of_right_hip.jpg",
-    "image_license": "CC BY-SA 4.0",
-    "image_title": "Ultrasound measuring the developmental dysplasia of right hip.jpg",
-    "excerpt": "Las maniobras de Barlow y Ortolani son altamente específicas para confirmar la luxación de cadera (LR+ 52), pero su sensibilidad del 46% exige vigilancia clínica continua y ecografía de apoyo."
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6003-01",
     "slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
-    "title": "Mononucleosis infecciosa en jóvenes: Precisión diagnóstica de las adenopatías y la linfocitosis atípica",
-    "subtitle": "De la exploración de la cadena cervical posterior al frotis de sangre periférica según la evidencia de JAMA.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "infectologia",
-    "category_label": "Infectología y Medicina Interna",
-    "tags": [
-      "infecciosas",
-      "mononucleosis",
-      "hematologia",
-      "pediatria",
-      "semiologia"
-    ],
-    "reading_time": "6 min",
-    "difficulty": "Intermedio",
-    "grounding_badge": "HM:6003 · PMID:27115266",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Atypical_lymphocytes_2.jpg/960px-Atypical_lymphocytes_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3AAtypical%20lymphocytes%202.jpg",
-    "image_license": "CC BY-SA 3.0",
-    "image_title": "Atypical lymphocytes 2.jpg",
-    "excerpt": "De la exploración de la cadena cervical posterior al frotis de sangre periférica según la evidencia de JAMA."
-  },
-  {
-    "id": "HM6005-01",
-    "slug": "derrame-pleural-exudado-criterios-light-colesterol",
-    "title": "Derrame pleural: Criterios de Light vs. Colesterol pleural en la discriminación de exudados",
-    "subtitle": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "neumologia",
-    "category_label": "Neumología y Medicina Interna",
-    "tags": [
-      "neumologia",
-      "pleura",
-      "laboratorio",
-      "criterios-light",
-      "medicina-interna"
-    ],
-    "reading_time": "6 min",
-    "difficulty": "Intermedio",
-    "grounding_badge": "HM:6005 · PMID:24938565",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg/960px-Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3AChest%20radiograph%20of%20a%20lung%20with%20Kerley%20B%20lines.jpg",
-    "image_license": "CC0",
-    "image_title": "Chest radiograph of a lung with Kerley B lines.jpg",
-    "excerpt": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos."
-  },
-  {
-    "id": "HM6006-01",
-    "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
-    "title": "Aneurisma de aorta abdominal: La precisión real de la palpación abdominal",
-    "subtitle": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "vascular",
-    "category_label": "Medicina Vascular y Cirugía",
-    "tags": [
-      "aorta",
-      "palpacion",
-      "screening",
-      "ecografia",
-      "medicina-interna"
-    ],
-    "reading_time": "5 min",
-    "difficulty": "Intermedio",
-    "grounding_badge": "HM:6006 · PMID:9892455",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg/960px-Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3AContrast-enhanced%20CT%20scan%20demonstrating%20abdominal%20aortic%20aneurysm.jpg",
-    "image_license": "CC BY-SA 3.0",
-    "image_title": "Contrast-enhanced CT scan demonstrating abdominal aortic aneurysm.jpg",
-    "excerpt": "Análisis bayesiano de la masa pulsátil ensanchada y por qué la ecografía sigue siendo el estándar insustituible."
-  },
-  {
-    "id": "HM6007-01",
-    "slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
-    "title": "Dolor torácico agudo en urgencias: ¿Cuánto aporta realmente el electrocardiograma inicial?",
-    "subtitle": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "cardiologia",
-    "category_label": "Cardiología",
-    "tags": [
-      "urgencias",
-      "electrocardiograma",
-      "isquemia",
-      "probabilidad"
-    ],
-    "reading_time": "6 min",
-    "difficulty": "Intermedio",
-    "grounding_badge": "HM:6007 · PMID:26547467",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/8/89/ST_segment_elevation_and_depression.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3AST%20segment%20elevation%20and%20depression.jpg",
-    "image_license": "CC BY-SA 4.0",
-    "image_title": "ST segment elevation and depression.jpg",
-    "excerpt": "Discriminación bayesiana del descenso del segmento ST y el papel de la estratificación con troponinas ultrasensibles."
-  },
-  {
-    "id": "HM6008-01",
-    "slug": "hipovolemia-aguda-signos-vitales-posturales",
-    "title": "Evaluación clínica de la hipovolemia: ¿Cuándo sirven los signos posturales?",
-    "subtitle": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "urgencias",
-    "category_label": "Medicina de Urgencias y Críticos",
-    "tags": [
-      "hemodinamia",
-      "hipovolemia",
-      "shock",
-      "semiologia"
-    ],
-    "reading_time": "6 min",
-    "difficulty": "Intermedio",
-    "grounding_badge": "HM:6008 · PMID:10086438",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg/960px-Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3ABlood%20pressure%20measurement%20using%20an%20aneroid%20sphygmomanometer.jpg",
-    "image_license": "CC BY-SA 4.0",
-    "image_title": "Blood pressure measurement using an aneroid sphygmomanometer.jpg",
-    "excerpt": "Diferenciación semiótica entre hemorragia aguda y deshidratación digestiva según el Rational Clinical Examination."
-  },
-  {
-    "id": "HM6009-01",
-    "slug": "faringitis-estreptococica-exudado-criterios-centor",
-    "title": "Faringoamigdalitis aguda: Rendimiento semiótico del exudado y los criterios de Centor",
-    "subtitle": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "infectologia",
-    "category_label": "Infectología y Atención Primaria",
-    "tags": [
-      "infecciosas",
-      "faringitis",
-      "antibioticos",
-      "centor",
-      "urgencias"
-    ],
-    "reading_time": "5 min",
-    "difficulty": "Básico",
-    "grounding_badge": "HM:6009 · PMID:11147989",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Pharyngitis%2C_COVID-19.jpg/960px-Pharyngitis%2C_COVID-19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3APharyngitis%2C%20COVID-19.jpg",
-    "image_license": "CC0",
-    "image_title": "Pharyngitis, COVID-19.jpg",
-    "excerpt": "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos."
-  },
-  {
-    "id": "HM6010-01",
-    "slug": "sincope-cardiaco-vs-vasovagal-anamnesis",
-    "title": "Síncope en urgencias: Cómo diferenciar el origen arrítmico del síncope vasovagal",
-    "subtitle": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination.",
-    "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
-    "category": "cardiologia",
-    "category_label": "Cardiología y Urgencias",
-    "tags": [
-      "cardiologia",
-      "urgencias",
-      "sincope",
-      "arritmias",
-      "semiologia"
-    ],
-    "reading_time": "6 min",
-    "difficulty": "Intermedio",
-    "grounding_badge": "HM:6010 · PMID:31237649",
-    "has_quiz": true,
-    "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Atrial_Fibrillation_in_two_leads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "image_source": "https://commons.wikimedia.org/wiki/File%3AAtrial%20Fibrillation%20in%20two%20leads.jpg",
-    "image_license": "CC BY-SA 4.0",
-    "image_title": "Atrial Fibrillation in two leads.jpg",
-    "excerpt": "Análisis bayesiano de los pródromos neurovegetativos y la cianosis según la serie Rational Clinical Examination."
-  },
-  {
-    "id": "HM6011-01",
-    "slug": "infeccion-precoz-por-vih-precision-semiotica",
-    "title": "Infección precoz por VIH: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de úlceras genitales y su impacto en la toma de decisiones clínicas.",
+    "title": "Mononucleosis infecciosa: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "infectologia",
     "category_label": "Infectología y Medicina Interna",
     "tags": [
       "infectologia",
-      "infeccion-precoz-por-vih",
-      "semiologia",
-      "evidencia"
+      "mononucleosis-infecciosa",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6003 · PMID:27115266",
+    "grounding": {
+      "condicion_id": "HM:6003",
+      "condicion_nombre": "Mononucleosis infecciosa",
+      "concepto_id": "HM:3001",
+      "concepto_nombre": "Adenopatía cervical posterior",
+      "estado_lr": "medido",
+      "lr_positivo": 3.1,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:27115266",
+      "referencia_cita": "Ebell MH, Call M, Shinholser J, Gardner J Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review JAMA 2016",
+      "pmid": "27115266",
+      "doi": "10.1001/jama.2016.2111",
+      "especificidad": 0.87
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3001",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.87,
+        "lr_positivo": {
+          "valor": 3.1,
+          "ic95": [
+            1.6,
+            5.9
+          ],
+          "ref": "pmid:27115266"
+        },
+        "decision": "aumenta la probabilidad; por sí sola no confirma"
+      },
+      {
+        "concepto": "HM:3002",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            3,
+            3.1
+          ],
+          "ref": "pmid:27115266",
+          "nota": "rango entre estudios; la fuente no da estimación resumida"
+        },
+        "decision": "aumenta la probabilidad de forma similar a la cervical posterior"
+      },
+      {
+        "concepto": "HM:3003",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.95,
+        "lr_positivo": {
+          "valor": 5.3,
+          "ic95": [
+            2.1,
+            13
+          ],
+          "ref": "pmid:27115266"
+        },
+        "decision": "el hallazgo exploratorio que más aumenta la probabilidad"
+      },
+      {
+        "concepto": "HM:0603",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            1.9,
+            6.6
+          ],
+          "ref": "pmid:27115266",
+          "nota": "rango entre estudios, con especificidad de 0.71 a 0.99. La amplitud refleja lo mucho que depende del explorador."
+        },
+        "decision": "apoya el diagnóstico y condiciona el consejo de evitar deporte de contacto"
+      },
+      {
+        "concepto": "HM:0607",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "sensibilidad": 0.91,
+        "lr_negativo": {
+          "rango": [
+            0.23,
+            0.44
+          ],
+          "ref": "pmid:27115266",
+          "nota": "la fuente lo expresa como el LR positivo de la AUSENCIA de adenopatías, que es el cociente negativo del hallazgo."
+        },
+        "decision": "su ausencia reduce la probabilidad; es el hallazgo que más descarta"
+      },
+      {
+        "concepto": "HM:0211",
+        "rol": "manifestacion",
+        "estado_lr": "sin_efecto",
+        "sensibilidad": 0.81,
+        "motivo": "«symptoms are of limited value»: sensible (0.81-0.83) pero inespecífico. La fuente no publica cociente porque no discrimina."
+      },
+      {
+        "concepto": "HM:0801",
+        "rol": "manifestacion",
+        "estado_lr": "sin_efecto",
+        "motivo": "sensible (0.81-0.83) pero inespecífico; la fuente no publica cociente"
+      },
+      {
+        "concepto": "HM:3004",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 11.4,
+          "ic95": [
+            2.7,
+            35
+          ],
+          "umbral": "linfocitos atípicos ≥ 10%",
+          "ref": "pmid:27115266"
+        },
+        "decision": "a partir del 10% ya desplaza la probabilidad con fuerza",
+        "tramos": [
+          {
+            "umbral": "linfocitos atípicos ≥ 10%",
+            "lr_positivo": 11.4,
+            "ic95": [
+              2.7,
+              35
+            ],
+            "ref": "pmid:27115266"
+          },
+          {
+            "umbral": "linfocitos atípicos ≥ 20%",
+            "lr_positivo": 26,
+            "ic95": [
+              9.6,
+              68
+            ],
+            "ref": "pmid:27115266"
+          },
+          {
+            "umbral": "linfocitos atípicos ≥ 40%",
+            "lr_positivo": 50,
+            "ic95": [
+              38,
+              64
+            ],
+            "ref": "pmid:27115266"
+          },
+          {
+            "umbral": "linfocitos > 50% y atípicos > 10%",
+            "lr_positivo": 54,
+            "ic95": [
+              8.4,
+              189
+            ],
+            "especificidad": 0.99,
+            "ref": "pmid:27115266"
+          }
+        ]
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0211-odinofagia.yaml": "cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f",
+        "conceptos/HM0603-esplenomegalia.yaml": "91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5",
+        "conceptos/HM0607-adenopatias.yaml": "f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561",
+        "conceptos/HM0801-astenia.yaml": "95bc981acd8d63bc1c693bd3ba572e4e714a900777e0d933281d82d22bcaa097",
+        "conceptos/HM3001-adenopatia-cervical-posterior.yaml": "771bd6d4c7525ad532de18c2977bb2420d1abba7ed1f0f5d2c57444eb6f7467f",
+        "conceptos/HM3002-adenopatia-inguinal-o-axilar.yaml": "ed55476401fe6508e8147f39abd6c52d6ef52ed15a2eb21037d33892a19b7283",
+        "conceptos/HM3003-petequias-en-paladar.yaml": "64eecce570f47b537bf1f3a38f89bfefe8f6ec6d2babe3acbccb65e82935e5ad",
+        "conceptos/HM3004-linfocitosis-atipica.yaml": "1e115e6db2ec1f26c0a14a915b5490531f21ae8de6938767a68809d9cc32b1ea",
+        "condiciones/HM6003-mononucleosis-infecciosa.yaml": "a09354b3a9d4e54f2ae83ceddb09caf69b8f76f4f155ef031223ada310a90371",
+        "referencias/pmid-27115266.yaml": "668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Atypical_lymphocytes_2.jpg/960px-Atypical_lymphocytes_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AAtypical%20lymphocytes%202.jpg",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Atypical lymphocytes 2.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6005-01",
+    "slug": "derrame-pleural-exudado-criterios-light-colesterol",
+    "title": "Derrame pleural exudativo: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "neumologia",
+    "category_label": "Neumología y Medicina Interna",
+    "tags": [
+      "derrame-pleural-exudativo",
+      "neumologia",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6005 · PMID:24938565",
+    "grounding": {
+      "condicion_id": "HM:6005",
+      "condicion_nombre": "Derrame pleural exudativo",
+      "concepto_id": "HM:3009",
+      "concepto_nombre": "LDH elevada en líquido pleural",
+      "estado_lr": "medido",
+      "lr_positivo": 18,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:24938565",
+      "referencia_cita": "Wilcox ME, Chong CA, Stanbrook MB, Tricco AC, Wong C, Straus SE Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review JAMA 2014",
+      "pmid": "24938565",
+      "doi": "10.1001/jama.2014.5552"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3008",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            7.1,
+            250
+          ],
+          "umbral": "colesterol pleural > 55 mg/dL",
+          "ref": "pmid:24938565",
+          "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+        },
+        "decision": "el indicador aislado más potente para clasificar el derrame"
+      },
+      {
+        "concepto": "HM:3009",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 18,
+          "ic95": [
+            6.8,
+            46
+          ],
+          "umbral": "LDH pleural > 200 U/L",
+          "ref": "pmid:24938565"
+        },
+        "decision": "confirma exudado con un intervalo estrecho y reproducible"
+      },
+      {
+        "concepto": "HM:3010",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 14,
+          "ic95": [
+            5.5,
+            38
+          ],
+          "umbral": "cociente > 0.3",
+          "ref": "pmid:24938565"
+        },
+        "decision": "alternativa al colesterol absoluto cuando se dispone del sérico"
+      },
+      {
+        "concepto": "HM:3011",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_negativo": {
+          "valor": 0.04,
+          "ic95": [
+            0.02,
+            0.11
+          ],
+          "umbral": "ausencia de los tres criterios",
+          "ref": "pmid:24938565"
+        },
+        "decision": "su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado"
+      },
+      {
+        "concepto": "HM:3007",
+        "rol": "manifestacion",
+        "estado_lr": "no_medible",
+        "motivo": "es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3007-derrame-pleural.yaml": "a0ff591f0ccbe7b4ce56d06f14b904174cc9be542c879da32ea43688912c76c3",
+        "conceptos/HM3008-colesterol-pleural-elevado.yaml": "54f1e2a139a84af23e9dac062e42c6a2b79a150d87d9657452f6860ecb5d13e6",
+        "conceptos/HM3009-ldh-pleural-elevada.yaml": "b2afdd29ba8d0e1489ef7ec4578124f9479c4586db527cf66e5f8fc8df6287d2",
+        "conceptos/HM3010-cociente-colesterol-pleural-suero.yaml": "43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180",
+        "conceptos/HM3011-criterios-de-light.yaml": "7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f",
+        "condiciones/HM6005-derrame-pleural-exudativo.yaml": "be323c90b632013bda6e773b21184abc9afb8f77d920168ca036ee2b17c18d44",
+        "referencias/pmid-24938565.yaml": "e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg/960px-Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AChest%20radiograph%20of%20a%20lung%20with%20Kerley%20B%20lines.jpg",
+    "image_license": "CC0",
+    "image_title": "Chest radiograph of a lung with Kerley B lines.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6006-01",
+    "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
+    "title": "Aneurisma de aorta abdominal: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "vascular",
+    "category_label": "Medicina Vascular y Cirugía",
+    "tags": [
+      "aneurisma-de-aorta-abdominal",
+      "semiologia",
+      "vascular"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6006 · PMID:9892455",
+    "grounding": {
+      "condicion_id": "HM:6006",
+      "condicion_nombre": "Aneurisma de aorta abdominal",
+      "concepto_id": "HM:3012",
+      "concepto_nombre": "Pulsación aórtica ensanchada a la palpación",
+      "estado_lr": "medido",
+      "lr_positivo": 12,
+      "lr_negativo": 0.72,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:9892455",
+      "referencia_cita": "Lederle FA, Simel DL The rational clinical examination. Does this patient have abdominal aortic aneurysm? JAMA 1999",
+      "pmid": "9892455",
+      "doi": "10.1001/jama.281.1.77"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3012",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 12,
+          "ic95": [
+            7.4,
+            19.5
+          ],
+          "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+          "ref": "pmid:9892455"
+        },
+        "lr_negativo": {
+          "valor": 0.72,
+          "ic95": [
+            0.65,
+            0.81
+          ],
+          "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+          "ref": "pmid:9892455"
+        },
+        "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta",
+        "advertencia": "no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.",
+        "tramos": [
+          {
+            "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+            "lr_positivo": 12,
+            "ic95": [
+              7.4,
+              19.5
+            ],
+            "lr_negativo": 0.72,
+            "ic95_negativo": [
+              0.65,
+              0.81
+            ],
+            "ref": "pmid:9892455"
+          },
+          {
+            "umbral_condicion": "aneurisma de 4.0 cm o mayor",
+            "lr_positivo": 15.6,
+            "ic95": [
+              8.6,
+              28.5
+            ],
+            "lr_negativo": 0.51,
+            "ic95_negativo": [
+              0.38,
+              0.67
+            ],
+            "ref": "pmid:9892455"
+          }
+        ],
+        "sensibilidad_por_diametro": [
+          {
+            "diametro": "3.0 a 3.9 cm",
+            "sensibilidad": 0.29,
+            "ref": "pmid:9892455"
+          },
+          {
+            "diametro": "4.0 a 4.9 cm",
+            "sensibilidad": 0.5,
+            "ref": "pmid:9892455"
+          },
+          {
+            "diametro": "5.0 cm o mayor",
+            "sensibilidad": 0.76,
+            "ref": "pmid:9892455"
+          }
+        ]
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3012-pulsacion-aortica-ensanchada.yaml": "54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35",
+        "conceptos/HM3013-obesidad-abdominal.yaml": "ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54",
+        "condiciones/HM6006-aneurisma-aorta-abdominal.yaml": "9cec6260cfe5eea995f9e1ed8f1cddf95e7dc5734e645a439483e7e774717138",
+        "referencias/pmid-9892455.yaml": "781f7d38a1ffdb9e732d07f96d7d375d0b690cc6f5ddd1324d87d3070f981905"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 1,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg/960px-Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AContrast-enhanced%20CT%20scan%20demonstrating%20abdominal%20aortic%20aneurysm.jpg",
+    "image_license": "CC BY-SA 3.0",
+    "image_title": "Contrast-enhanced CT scan demonstrating abdominal aortic aneurysm.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6007-01",
+    "slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
+    "title": "Síndrome coronario agudo: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "cardiologia",
+    "category_label": "Cardiología",
+    "tags": [
+      "cardiologia",
+      "criterios",
+      "semiologia",
+      "sindrome-coronario-agudo"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6007 · PMID:26547467",
+    "grounding": {
+      "condicion_id": "HM:6007",
+      "condicion_nombre": "Síndrome coronario agudo",
+      "concepto_id": "HM:3015",
+      "concepto_nombre": "Descenso del segmento ST",
+      "estado_lr": "medido",
+      "lr_positivo": 5.3,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:26547467",
+      "referencia_cita": "Fanaroff AC, Rymer JA, Goldstein SA, Simel DL, Newby LK Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review JAMA 2015",
+      "pmid": "26547467",
+      "doi": "10.1001/jama.2015.12735",
+      "especificidad": 0.95
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3015",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.95,
+        "lr_positivo": {
+          "valor": 5.3,
+          "ic95": [
+            2.1,
+            8.6
+          ],
+          "ref": "pmid:26547467"
+        },
+        "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar"
+      },
+      {
+        "concepto": "HM:3016",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "especificidad": 0.91,
+        "lr_positivo": {
+          "valor": 3.6,
+          "ic95": [
+            1.6,
+            5.7
+          ],
+          "ref": "pmid:26547467"
+        },
+        "decision": "categoría más amplia que el descenso del ST y con menos peso"
+      },
+      {
+        "concepto": "HM:3017",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "especificidad": 0.96,
+        "lr_positivo": {
+          "valor": 3.1,
+          "ic95": [
+            2,
+            4.7
+          ],
+          "ref": "pmid:26547467"
+        },
+        "decision": "antecedente, no hallazgo actual; desplaza poco"
+      },
+      {
+        "concepto": "HM:3018",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "especificidad": 0.97,
+        "lr_positivo": {
+          "valor": 2.7,
+          "ic95": [
+            1.5,
+            4.8
+          ],
+          "ref": "pmid:26547467"
+        },
+        "decision": "factor de riesgo con cociente propio, modesto"
+      },
+      {
+        "concepto": "HM:3014",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "especificidad": 0.96,
+        "lr_positivo": {
+          "valor": 2.6,
+          "ic95": [
+            1.8,
+            3.7
+          ],
+          "ref": "pmid:26547467"
+        },
+        "decision": "alta especificidad pero cociente bajo: cuando aparece apoya, y su ausencia no dice nada"
+      },
+      {
+        "concepto": "HM:0206",
+        "rol": "manifestacion",
+        "estado_lr": "no_medible",
+        "motivo": "es el motivo de consulta que define la población estudiada, no una prueba dentro de ella"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+        "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
+        "conceptos/HM3015-descenso-segmento-st.yaml": "c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24",
+        "conceptos/HM3016-isquemia-en-ecg.yaml": "1e5a608a8d553e5255f2956ed1c7be9f99a61607806f545899aa8e1cd6f14611",
+        "conceptos/HM3017-prueba-esfuerzo-previa-anormal.yaml": "a3d131df7f6e8dbb4a6b9d80be9ad2538dba12105c56314080566c77cb4a0d27",
+        "conceptos/HM3018-enfermedad-arterial-periferica.yaml": "44920bd7d7d1b70253977858e7924075e688fdfd7bdca5c8e53f9db62bcfca01",
+        "condiciones/HM6007-sindrome-coronario-agudo.yaml": "c6a257121f0d7e4755e662b68f56bb2f21d12babd0a8f21870d0c5e826ed0feb",
+        "referencias/pmid-26547467.yaml": "fee2183becb69467acb2e26ec76404b1a9aae18c1272b85d9f36adeb16ffe831"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/8/89/ST_segment_elevation_and_depression.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AST%20segment%20elevation%20and%20depression.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "ST segment elevation and depression.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6008-01",
+    "slug": "hipovolemia-aguda-signos-vitales-posturales",
+    "title": "Hipovolemia: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "urgencias",
+    "category_label": "Medicina de Urgencias y Críticos",
+    "tags": [
+      "hipovolemia",
+      "semiologia",
+      "urgencias"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6008 · PMID:10086438",
+    "grounding": {
+      "condicion_id": "HM:6008",
+      "condicion_nombre": "Hipovolemia",
+      "concepto_id": "HM:3021",
+      "concepto_nombre": "Axila seca",
+      "estado_lr": "medido",
+      "lr_positivo": 2.8,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+      "referencia_id": "pmid:10086438",
+      "referencia_cita": "McGee S, Abernethy WB 3rd, Simel DL The rational clinical examination. Is this patient hypovolemic? JAMA 1999",
+      "pmid": "10086438",
+      "doi": "10.1001/jama.281.11.1022"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3019",
+        "rol": "prueba_especifica",
+        "estado_lr": "no_medido",
+        "poblacion": "adultos con sospecha de pérdida sanguínea",
+        "especificidad": 0.98,
+        "ic95_especificidad": [
+          0.97,
+          0.99
+        ],
+        "sensibilidad_por_gravedad": [
+          {
+            "perdida": "moderada",
+            "sensibilidad": 0.22,
+            "ic95": [
+              0.06,
+              0.48
+            ],
+            "ref": "pmid:10086438"
+          },
+          {
+            "perdida": "grande",
+            "sensibilidad": 0.97,
+            "ic95": [
+              0.91,
+              1
+            ],
+            "ref": "pmid:10086438"
+          }
+        ],
+        "motivo": "la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado.",
+        "nota": "la fuente lo evalúa junto con el incremento postural del pulso como un solo hallazgo compuesto: basta con que esté presente uno de los dos.",
+        "decision": "su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada"
+      },
+      {
+        "concepto": "HM:3020",
+        "rol": "prueba_especifica",
+        "estado_lr": "no_medido",
+        "poblacion": "adultos con sospecha de pérdida sanguínea",
+        "especificidad": 0.98,
+        "ic95_especificidad": [
+          0.97,
+          0.99
+        ],
+        "motivo": "componente del hallazgo compuesto con el mareo postural intenso; la fuente no publica cociente aislado",
+        "ref": "pmid:10086438"
+      },
+      {
+        "concepto": "HM:0109",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "poblacion": "adultos con sospecha de pérdida sanguínea",
+        "sensibilidad": 0.33,
+        "ic95_sensibilidad": [
+          0.21,
+          0.47
+        ],
+        "ref": "pmid:10086438",
+        "motivo": "la fuente publica sensibilidad sin especificidad",
+        "advertencia": "la hipotensión en decúbito y la taquicardia FALTAN con frecuencia incluso tras perder 1150 mL. Su ausencia no tranquiliza."
+      },
+      {
+        "concepto": "HM:3021",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+        "lr_positivo": {
+          "valor": 2.8,
+          "ic95": [
+            1.4,
+            5.4
+          ],
+          "ref": "pmid:10086438"
+        },
+        "decision": "apoya el diagnóstico, con fuerza modesta"
+      },
+      {
+        "concepto": "HM:3022",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+        "lr_negativo": {
+          "valor": 0.3,
+          "ic95": [
+            0.1,
+            0.6
+          ],
+          "ref": "pmid:10086438"
+        },
+        "decision": "su PRESENCIA argumenta en contra de la hipovolemia. Es el hallazgo invertido: lo que ayuda es encontrarlo, no echarlo en falta."
+      },
+      {
+        "concepto": "HM:3023",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+        "lr_negativo": {
+          "valor": 0.3,
+          "ic95": [
+            0.1,
+            0.6
+          ],
+          "ref": "pmid:10086438"
+        },
+        "decision": "igual que las mucosas húmedas, su presencia argumenta en contra"
+      },
+      {
+        "concepto": "HM:3024",
+        "rol": "apoyo",
+        "estado_lr": "sin_efecto",
+        "poblacion": "adultos",
+        "motivo": "la fuente concluye que no tiene valor diagnóstico demostrado en adultos",
+        "ref": "pmid:10086438"
+      },
+      {
+        "concepto": "HM:3025",
+        "rol": "apoyo",
+        "estado_lr": "sin_efecto",
+        "poblacion": "adultos",
+        "motivo": "la fuente concluye que no tiene valor diagnóstico demostrado en adultos",
+        "ref": "pmid:10086438"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6008-hipovolemia.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0109-hipotension-arterial.yaml": "cd9dbafb92f3d3716704d2a295ea2ce5fcf4f22d97358dbd1b9c44a8f0ea69f5",
+        "conceptos/HM3019-mareo-postural-intenso.yaml": "7e119a6b7791169797291abac826a63b6117a0e7ff5c33ec27b0f18ac811938a",
+        "conceptos/HM3020-incremento-postural-del-pulso.yaml": "9ae6d79e5bc0201bf89204bc06c2824a565d8a1ff2b2433c64e5326f11d4db40",
+        "conceptos/HM3021-axila-seca.yaml": "a0e492588458e16f639ca2acc73bb0f7f66135ca013584ebb650670365cca0be",
+        "conceptos/HM3022-mucosas-humedas.yaml": "d5284e5e61c586e8e65c53a078acd5730e412a47c516ad344ea96b956035533c",
+        "conceptos/HM3023-lengua-sin-surcos.yaml": "decc68cdb2fe02a5054c683e556a871ebd6dac53df6296564ca02187212733fe",
+        "conceptos/HM3024-relleno-capilar-prolongado.yaml": "647c5f4a82265f763418f74807a155f0e30670423b924cca188582dd017568ce",
+        "conceptos/HM3025-turgencia-cutanea-disminuida.yaml": "cacb1862872bbc6670f0e6576b796837289f8c1b42740224ed31d21bab9ab1d4",
+        "condiciones/HM6008-hipovolemia.yaml": "46d0a8360a8a324654ea420239ab9f2348ab5223c33df7c90ad6deeaa9302fba",
+        "referencias/pmid-10086438.yaml": "b63336db28ca997d4e2c31dc9518c172e2261fd09055c3902a5ff7236d038cd0"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg/960px-Blood_pressure_measurement_using_an_aneroid_sphygmomanometer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3ABlood%20pressure%20measurement%20using%20an%20aneroid%20sphygmomanometer.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Blood pressure measurement using an aneroid sphygmomanometer.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6009-01",
+    "slug": "faringitis-estreptococica-exudado-criterios-centor",
+    "title": "Faringitis estreptocócica: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "infectologia",
+    "category_label": "Infectología y Atención Primaria",
+    "tags": [
+      "criterios",
+      "faringitis-estreptococica",
+      "infectologia",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Básico",
+    "grounding_badge": "HM:6009 · PMID:11147989",
+    "grounding": {
+      "condicion_id": "HM:6009",
+      "condicion_nombre": "Faringitis estreptocócica",
+      "concepto_id": "HM:3026",
+      "concepto_nombre": "Exudado amigdalino",
+      "estado_lr": "medido",
+      "lr_positivo": 3.4,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:11147989",
+      "referencia_cita": "Ebell MH, Smith MA, Barry HC, Ives K, Carey M The rational clinical examination. Does this patient have strep throat? JAMA 2000",
+      "pmid": "11147989",
+      "doi": "10.1001/jama.284.22.2912"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3026",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.4,
+          "ref": "pmid:11147989",
+          "nota": "la fuente no publica intervalo de confianza en el abstract"
+        },
+        "decision": "el hallazgo aislado más útil, y aun así insuficiente por sí solo"
+      },
+      {
+        "concepto": "HM:3027",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.1,
+          "ref": "pmid:11147989",
+          "nota": "la fuente no publica intervalo de confianza en el abstract"
+        },
+        "decision": "apoya menos que el exudado amigdalino, del que se distingue"
+      },
+      {
+        "concepto": "HM:3028",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 1.9,
+          "ref": "pmid:11147989",
+          "nota": "exposición en las dos semanas previas; sin intervalo en el abstract"
+        },
+        "decision": "dato de anamnesis con peso escaso"
+      },
+      {
+        "concepto": "HM:3029",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_negativo": {
+          "valor": 0.6,
+          "ref": "pmid:11147989",
+          "nota": "la fuente no publica intervalo de confianza en el abstract"
+        },
+        "decision": "su ausencia es lo que más reduce la probabilidad, y aun así la deja en más de la mitad de la previa"
+      },
+      {
+        "concepto": "HM:3030",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_negativo": {
+          "valor": 0.63,
+          "ref": "pmid:11147989",
+          "nota": "la fuente no publica intervalo de confianza en el abstract"
+        },
+        "decision": "su ausencia reduce poco la probabilidad"
+      },
+      {
+        "concepto": "HM:0211",
+        "rol": "manifestacion",
+        "estado_lr": "no_medible",
+        "motivo": "es el motivo de consulta que define la población estudiada, no una prueba dentro de ella"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6009-faringitis-estreptococica.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0211-odinofagia.yaml": "cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f",
+        "conceptos/HM3026-exudado-amigdalino.yaml": "2035d19d7697ad00e8860ba5bf2e4be6d4c17b557a6f8ab8b8c966ae088e8b43",
+        "conceptos/HM3027-exudado-faringeo.yaml": "06a0f094562bd1a1b9c9ec09d5dc2c2ca5b963c627c82897dd1f93ac6dca0c50",
+        "conceptos/HM3028-exposicion-estreptococo.yaml": "26edc47823c8d5fa6dc3268a3bdcc36f8470f2fe973db587f023d6ac3ccaff21",
+        "conceptos/HM3029-adenopatia-cervical-anterior-dolorosa.yaml": "c126e8e1eee16e645ed035c25ba116ac1aa29d60638b8b8dae0a98875240574a",
+        "conceptos/HM3030-hipertrofia-amigdalina.yaml": "c5638d1545cdfaeeec3fa4b95fd6b0b104c48be33b947131f4e3b8e8dc4198eb",
+        "condiciones/HM6009-faringitis-estreptococica.yaml": "3d245901b5953adc1bc2bb4fabfb95e3855fa4b1d5009751cfbe62f421bc4ef7",
+        "referencias/pmid-11147989.yaml": "f6aca870e75ab118eba2a41950cb38d56cabbcb69b65ba4e5eadc1f671edafc8"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Pharyngitis%2C_COVID-19.jpg/960px-Pharyngitis%2C_COVID-19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3APharyngitis%2C%20COVID-19.jpg",
+    "image_license": "CC0",
+    "image_title": "Pharyngitis, COVID-19.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6010-01",
+    "slug": "sincope-cardiaco-vs-vasovagal-anamnesis",
+    "title": "Síncope cardíaco: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "cardiologia",
+    "category_label": "Cardiología y Urgencias",
+    "tags": [
+      "cardiologia",
+      "criterios",
+      "semiologia",
+      "sincope-cardiaco"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6010 · PMID:31237649",
+    "grounding": {
+      "condicion_id": "HM:6010",
+      "condicion_nombre": "Síncope cardíaco",
+      "concepto_id": "HM:3032",
+      "concepto_nombre": "Fibrilación o flutter auricular",
+      "estado_lr": "medido",
+      "lr_positivo": 7.3,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:31237649",
+      "referencia_cita": "Albassam OT, Redelmeier RJ, Shadowitz S, Husain AM, Simel D, Etchells EE Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review JAMA 2019",
+      "pmid": "31237649",
+      "doi": "10.1001/jama.2019.8001",
+      "sensibilidad": 0.13,
+      "especificidad": 0.98
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3032",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.13,
+        "ic95_sensibilidad": [
+          0.06,
+          0.2
+        ],
+        "especificidad": 0.98,
+        "ic95_especificidad": [
+          0.96,
+          1
+        ],
+        "lr_positivo": {
+          "valor": 7.3,
+          "ic95": [
+            2.4,
+            22
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "el antecedente que más desplaza hacia el origen cardíaco"
+      },
+      {
+        "concepto": "HM:3034",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.08,
+        "ic95_sensibilidad": [
+          0.02,
+          0.14
+        ],
+        "especificidad": 0.99,
+        "ic95_especificidad": [
+          0.98,
+          1
+        ],
+        "lr_positivo": {
+          "valor": 6.2,
+          "ic95": [
+            1.6,
+            24
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio."
+      },
+      {
+        "concepto": "HM:3033",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            3.3,
+            4.8
+          ],
+          "ref": "pmid:31237649",
+          "nota": "rango entre 2 estudios; sensibilidad 0.35-0.51, especificidad 0.84-0.93"
+        },
+        "decision": "antecedente que apoya con fuerza moderada"
+      },
+      {
+        "concepto": "HM:3031",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "sensibilidad": 0.91,
+        "ic95_sensibilidad": [
+          0.85,
+          0.97
+        ],
+        "especificidad": 0.72,
+        "ic95_especificidad": [
+          0.66,
+          0.78
+        ],
+        "lr_positivo": {
+          "valor": 3.3,
+          "ic95": [
+            2.6,
+            4.1
+          ],
+          "ref": "pmid:31237649"
+        },
+        "lr_negativo": {
+          "valor": 0.13,
+          "ic95": [
+            0.06,
+            0.25
+          ],
+          "ref": "pmid:31237649",
+          "nota": "la fuente lo expresa como el cociente de la edad menor de 35 años, que es el negativo de este hallazgo"
+        },
+        "decision": "el dato más útil para DESCARTAR: un primer síncope antes de los 35 prácticamente excluye el origen cardíaco"
+      },
+      {
+        "concepto": "HM:3035",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.02,
+        "especificidad": 0.76,
+        "lr_positivo": {
+          "valor": 0.09,
+          "ic95": [
+            0.02,
+            0.38
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "su presencia aleja del origen cardíaco y orienta a vasovagal"
+      },
+      {
+        "concepto": "HM:3036",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.02,
+        "especificidad": 0.89,
+        "lr_positivo": {
+          "valor": 0.16,
+          "ic95": [
+            0.06,
+            0.64
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "pródromo vegetativo; su presencia aleja del origen cardíaco"
+      },
+      {
+        "concepto": "HM:0207",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.03,
+        "especificidad": 0.8,
+        "lr_positivo": {
+          "valor": 0.17,
+          "ic95": [
+            0.06,
+            0.55
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "su presencia aleja del origen cardíaco"
+      },
+      {
+        "concepto": "HM:3037",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.03,
+        "especificidad": 0.83,
+        "lr_positivo": {
+          "valor": 0.21,
+          "ic95": [
+            0.06,
+            0.65
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "su presencia aleja del origen cardíaco"
+      },
+      {
+        "concepto": "HM:3038",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.05,
+        "especificidad": 0.82,
+        "lr_positivo": {
+          "valor": 0.25,
+          "ic95": [
+            0.09,
+            0.69
+          ],
+          "ref": "pmid:31237649"
+        },
+        "decision": "su presencia aleja del origen cardíaco"
+      },
+      {
+        "concepto": "HM:0505",
+        "rol": "manifestacion",
+        "estado_lr": "no_medible",
+        "motivo": "es el motivo de consulta que define la población estudiada; la pregunta no es si hubo síncope sino si fue cardíaco"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6010-sincope-cardiaco.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0207-cefalea.yaml": "3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c",
+        "conceptos/HM0505-sincope.yaml": "c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c",
+        "conceptos/HM3031-primer-sincope-desde-los-35.yaml": "3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa",
+        "conceptos/HM3032-fibrilacion-o-flutter-auricular.yaml": "2877f7e08d60a0632a58fd5f30ad58846ee9222b099d0582f37588246c12f0c6",
+        "conceptos/HM3033-cardiopatia-estructural-grave.yaml": "03e8e3289317f111216fc2e7f84145729dace21f7ada8a9d719e50f834e10edb",
+        "conceptos/HM3034-cianosis-durante-el-episodio.yaml": "4c4ed4f0596f03a7636d29c887532df450900a4a513ebc87e454787bc7129d65",
+        "conceptos/HM3035-cambio-de-humor-prodromico.yaml": "d9854dc1996b0424d1811e769778e35dc2937b364f521d11f33862d666c5d928",
+        "conceptos/HM3036-sensacion-de-frio.yaml": "dba095414da8b845a5b9633a999b5abc1d0a300ca84372afa7e71767b2e3a672",
+        "conceptos/HM3037-cambio-de-humor-tras-sincope.yaml": "b9b67d523e646f9ac5cdb1485cfc695850606465d39f8757457b1c781a565716",
+        "conceptos/HM3038-amnesia-de-la-conducta-previa.yaml": "14e2e16f8fe44a282a932e1cd7320655aefa24fac8713585af88f90926dab65f",
+        "condiciones/HM6010-sincope-cardiaco.yaml": "44d25df093a428884d0ed09d208d86e4a6f154d48a6259c6bca1e2257492d664",
+        "referencias/pmid-31237649.yaml": "b8a3d22701b7aceb50254216ad315c9c7235424e0bba5bd261e1621a976c75bb"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Atrial_Fibrillation_in_two_leads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "image_source": "https://commons.wikimedia.org/wiki/File%3AAtrial%20Fibrillation%20in%20two%20leads.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_title": "Atrial Fibrillation in two leads.jpg",
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6011-01",
+    "slug": "infeccion-precoz-por-vih-precision-semiotica",
+    "title": "Infección precoz por VIH: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-08-21",
+    "author": "Dr. Alcy Torres",
+    "category": "infectologia",
+    "category_label": "Infectología y Medicina Interna",
+    "tags": [
+      "criterios",
+      "infeccion-precoz-por-vih",
+      "infectologia",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6011 · PMID:25027143",
+    "grounding": {
+      "condicion_id": "HM:6011",
+      "condicion_nombre": "Infección precoz por VIH",
+      "concepto_id": "HM:3039",
+      "concepto_nombre": "Úlceras genitales",
+      "estado_lr": "medido",
+      "lr_positivo": 5.4,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:25027143",
+      "referencia_cita": "Wood E, Kerr T, Rowell G, Montaner JS, Phillips P, Korthuis PT, Simel DL Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review JAMA 2014",
+      "pmid": "25027143",
+      "doi": "10.1001/jama.2014.5954"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3039",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.4,
+          "ic95": [
+            2.5,
+            12
+          ],
+          "ref": "pmid:25027143"
+        },
+        "decision": "el síntoma que más aumenta la probabilidad"
+      },
+      {
+        "concepto": "HM:0803",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.7,
+          "ic95": [
+            2.1,
+            7.2
+          ],
+          "ref": "pmid:25027143"
+        }
+      },
+      {
+        "concepto": "HM:0302",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.6,
+          "ic95": [
+            2.5,
+            8
+          ],
+          "ref": "pmid:25027143"
+        }
+      },
+      {
+        "concepto": "HM:3040",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.6,
+          "ic95": [
+            1.3,
+            8
+          ],
+          "ref": "pmid:25027143"
+        },
+        "decision": "nótese que el síntoma referido pesa MÁS que el signo hallado en la exploración, que tiene LR 3.1"
+      },
+      {
+        "concepto": "HM:0101",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_negativo": {
+          "valor": 0.74,
+          "ic95": [
+            0.64,
+            0.84
+          ],
+          "ref": "pmid:25027143"
+        },
+        "decision": "su ausencia reduce la probabilidad muy poco; no sirve para descartar"
+      },
+      {
+        "concepto": "HM:0607",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.1,
+          "ic95": [
+            1,
+            5.2
+          ],
+          "ref": "pmid:25027143"
+        },
+        "lr_negativo": {
+          "valor": 0.7,
+          "ic95": [
+            0.49,
+            0.92
+          ],
+          "ref": "pmid:25027143"
+        },
+        "decision": "el signo exploratorio más útil, y aun así modesto. El extremo inferior de su intervalo toca 1.0, es decir, es compatible con no aportar nada."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6011-infeccion-precoz-por-vih.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
+        "conceptos/HM0302-vomitos.yaml": "c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9",
+        "conceptos/HM0607-adenopatias.yaml": "f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561",
+        "conceptos/HM0803-perdida-de-peso.yaml": "78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e",
+        "conceptos/HM3039-ulceras-genitales.yaml": "8d597fccd98b8a83f14956f25483e0c0d5b2e10c73bb1dc3c849e10160f1245a",
+        "conceptos/HM3040-adenopatias-referidas.yaml": "ac43dcc86eab8dbe3ebbe9334eedf4bf57ba830257d2b3f5cfa6f008634e7643",
+        "condiciones/HM6011-infeccion-precoz-por-vih.yaml": "da3f12b7d2d61192612c0bc2de23c0f8bb38cf47d7f94c19d50712de89160d80",
+        "referencias/pmid-25027143.yaml": "9b6cbb935f7a83c37d6ec407afb0d65294b8b4cc753e02096259ca180ee189f0"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
     "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/HI-Virus_Replication_Cycle_%285057022555%29.jpg/960px-HI-Virus_Replication_Cycle_%285057022555%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "image_source": "https://commons.wikimedia.org/wiki/File%3AHI-Virus%20Replication%20Cycle%20%285057022555%29.jpg",
     "image_license": "CC BY 2.0",
     "image_title": "HI-Virus Replication Cycle (5057022555).jpg",
-    "excerpt": "Análisis bayesiano de úlceras genitales y su impacto en la toma de decisiones clínicas."
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6012-01",
     "slug": "artrosis-de-cadera-precision-semiotica",
-    "title": "Artrosis de cadera: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de dolor posterior de cadera al ponerse en cuclillas y su impacto en la toma de decisiones clínicas.",
+    "title": "Artrosis de cadera: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "reumatologia",
     "category_label": "Reumatología y Traumatología",
     "tags": [
-      "reumatologia",
       "artrosis-de-cadera",
-      "semiologia",
-      "evidencia"
+      "reumatologia",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6012 · PMID:31846019",
+    "grounding": {
+      "condicion_id": "HM:6012",
+      "condicion_nombre": "Artrosis de cadera",
+      "concepto_id": "HM:3041",
+      "concepto_nombre": "Dolor posterior de cadera al ponerse en cuclillas",
+      "estado_lr": "medido",
+      "lr_positivo": 6.1,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:31846019",
+      "referencia_cita": "Metcalfe D, Perry DC, Claireaux HA, Simel DL, Zogg CK, Costa ML Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review JAMA 2019",
+      "pmid": "31846019",
+      "doi": "10.1001/jama.2019.19413",
+      "sensibilidad": 0.24,
+      "especificidad": 0.96
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3041",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.24,
+        "especificidad": 0.96,
+        "lr_positivo": {
+          "valor": 6.1,
+          "ic95": [
+            1.3,
+            29
+          ],
+          "ref": "pmid:31846019"
+        },
+        "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
+      },
+      {
+        "concepto": "HM:3042",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.33,
+        "especificidad": 0.94,
+        "lr_positivo": {
+          "valor": 5.7,
+          "ic95": [
+            1.6,
+            20
+          ],
+          "ref": "pmid:31846019"
+        }
+      },
+      {
+        "concepto": "HM:3043",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.44,
+        "especificidad": 0.9,
+        "lr_positivo": {
+          "valor": 4.5,
+          "ic95": [
+            2.4,
+            8.4
+          ],
+          "ref": "pmid:31846019"
+        },
+        "decision": "intervalo más estrecho que los anteriores; en la práctica, más fiable pese a un cociente algo menor"
+      },
+      {
+        "concepto": "HM:3044",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "sensibilidad": 0.8,
+        "especificidad": 0.81,
+        "lr_positivo": {
+          "valor": 4.2,
+          "ic95": [
+            3,
+            6
+          ],
+          "ref": "pmid:31846019"
+        },
+        "lr_negativo": {
+          "valor": 0.25,
+          "ic95": [
+            0.11,
+            0.54
+          ],
+          "ref": "pmid:31846019",
+          "nota": "la fuente lo expresa como el valor de encontrar una aducción pasiva NORMAL, que es el cociente negativo de este hallazgo"
+        },
+        "decision": "el hallazgo más equilibrado y el único que sirve en los dos sentidos: su presencia apoya y su normalidad es lo que mejor descarta"
+      },
+      {
+        "concepto": "HM:3045",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "sensibilidad": 0.66,
+        "especificidad": 0.79,
+        "lr_positivo": {
+          "valor": 3.2,
+          "ic95": [
+            1.7,
+            6
+          ],
+          "ref": "pmid:31846019"
+        }
+      },
+      {
+        "concepto": "HM:3046",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.1,
+          "ic95": [
+            1.1,
+            3.8
+          ],
+          "ref": "pmid:31846019",
+          "nota": "la fuente agrupa tres datos de anamnesis con idéntico cociente de 2.1; el intervalo citado es el más ancho de los tres"
+        }
+      },
+      {
+        "concepto": "HM:3047",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.1,
+          "ic95": [
+            1.1,
+            3.8
+          ],
+          "ref": "pmid:31846019",
+          "nota": "mismo cociente agrupado que el dolor al subir escaleras"
+        }
+      },
+      {
+        "concepto": "HM:3048",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.1,
+          "ic95": [
+            1.1,
+            3.8
+          ],
+          "ref": "pmid:31846019",
+          "nota": "mismo cociente agrupado que el dolor al subir escaleras"
+        }
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6012-artrosis-de-cadera.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3041-dolor-posterior-en-cuclillas.yaml": "96fcce3b26f280f51628c1f17a08a4de45b992674fe7e6746399e714583693b4",
+        "conceptos/HM3042-dolor-inguinal-abduccion-aduccion.yaml": "b7d701d16997b0d6ed38d9ee16dc7d0ef4d7ea5423ad7e64119f985fc7b7ec6a",
+        "conceptos/HM3043-debilidad-de-abductores.yaml": "5cc8943c630898ae3f35af6571edeed0a3ebbca0b288bf67987360aa999d3e4b",
+        "conceptos/HM3044-aduccion-pasiva-disminuida.yaml": "f265a1f9aae2ef994c1ce9b55cb39240024556da7e32dec99556ae1a8aa85ac3",
+        "conceptos/HM3045-rotacion-interna-disminuida.yaml": "0d919631287eedd020362b01e0e2c3b0296c53fba4d9dc4ccb971336298e34f6",
+        "conceptos/HM3046-dolor-al-subir-escaleras.yaml": "c9c8d30f103eb8269ba4ec296e05d48cb4cc76b3d7c8a9543fb5c401b30dd93c",
+        "conceptos/HM3047-antecedente-familiar-artrosis.yaml": "a5e15a81a91308ef0b8f243c45cbafc5e6562c79e3330ae1c08156f3179027e9",
+        "conceptos/HM3048-antecedente-artrosis-de-rodilla.yaml": "7abf91d1caa9856fe7c58d7235b8616dca566f8f5dbc7fbe57a96722daed4b61",
+        "condiciones/HM6012-artrosis-de-cadera.yaml": "031ae0b9a25da2de810bca47feea7a8eb76b360d03bd06b25df92b4f11010ea8",
+        "referencias/pmid-31846019.yaml": "b01d3c39fe0f1808b637635828f325109795ca8975031303f200957a7c2e53f7"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
     "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hip_joint_pain.svg/960px-Hip_joint_pain.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "image_source": "https://commons.wikimedia.org/wiki/File%3AHip%20joint%20pain.svg",
     "image_license": "CC BY-SA 4.0",
     "image_title": "Hip joint pain.svg",
-    "excerpt": "Análisis bayesiano de dolor posterior de cadera al ponerse en cuclillas y su impacto en la toma de decisiones clínicas."
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6013-01",
     "slug": "enfermedad-del-manguito-rotador-precision-semiotica",
-    "title": "Enfermedad del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de arco doloroso y su impacto en la toma de decisiones clínicas.",
+    "title": "Enfermedad del manguito rotador: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "traumatologia",
     "category_label": "Traumatología y Medicina Deportiva",
     "tags": [
-      "traumatologia",
       "enfermedad-del-manguito-rotador",
       "semiologia",
-      "evidencia"
+      "traumatologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6013 · PMID:23982370",
+    "grounding": {
+      "condicion_id": "HM:6013",
+      "condicion_nombre": "Enfermedad del manguito rotador",
+      "concepto_id": "HM:3055",
+      "concepto_nombre": "Arco doloroso",
+      "estado_lr": "medido",
+      "lr_positivo": 3.7,
+      "lr_negativo": 0.36,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:23982370",
+      "referencia_cita": "Hermans J, Luime JJ, Meuffels DE, Reijman M, Simel DL, Bierma-Zeinstra SM Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review JAMA 2013",
+      "pmid": "23982370",
+      "doi": "10.1001/jama.2013.276187"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3055",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.7,
+          "ic95": [
+            1.9,
+            7
+          ],
+          "ref": "pmid:23982370"
+        },
+        "lr_negativo": {
+          "valor": 0.36,
+          "ic95": [
+            0.23,
+            0.54
+          ],
+          "ref": "pmid:23982370"
+        },
+        "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
+      },
+      {
+        "concepto": "HM:3058",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.3,
+          "ic95": [
+            1,
+            11
+          ],
+          "ref": "pmid:23982370"
+        },
+        "decision": "puede ayudar a identificar la enfermedad, pero su intervalo toca 1.0: es compatible con no aportar nada"
+      },
+      {
+        "concepto": "HM:3059",
+        "rol": "manifestacion",
+        "estado_lr": "no_medible",
+        "motivo": "es el motivo de consulta que define la población estudiada, no una prueba dentro de ella"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3055-arco-doloroso.yaml": "3548cc14bec9a5d961bcdddcdcc82ccad1ccf929916776673aa2aca3cc9f28b3",
+        "conceptos/HM3058-drop-arm.yaml": "27f9b42dcac851d3c59294207f5ee6cf42d3205bdffb08da8c5e854c801ddb1c",
+        "conceptos/HM3059-dolor-de-hombro.yaml": "99c4073545b37133cd7e218ead1bfbe7ea6d4d11b970fd95c2aa91bb8696fcff",
+        "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml": "20562fb16c0d1d17104d710f6b21f8da0bbd8782cb5e9ddf99af3f81f4ef9f52",
+        "referencias/pmid-23982370.yaml": "a069ef6d93f543653e62805872e4ffaf929021cd19668bcb2eb3b5413613c18b"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
     "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rotator_cuff_injury.svg/960px-Rotator_cuff_injury.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "image_source": "https://commons.wikimedia.org/wiki/File%3ARotator%20cuff%20injury.svg",
     "image_license": "CC BY-SA 4.0",
     "image_title": "Rotator cuff injury.svg",
-    "excerpt": "Análisis bayesiano de arco doloroso y su impacto en la toma de decisiones clínicas."
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6014-01",
     "slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
-    "title": "Rotura completa del manguito rotador: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de signo de lag de rotación interna y su impacto en la toma de decisiones clínicas.",
+    "title": "Rotura completa del manguito rotador: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "traumatologia",
     "category_label": "Traumatología y Medicina Deportiva",
     "tags": [
-      "traumatologia",
       "rotura-completa-del-manguito-rotador",
       "semiologia",
-      "evidencia"
+      "traumatologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6014 · PMID:23982370",
+    "grounding": {
+      "condicion_id": "HM:6014",
+      "condicion_nombre": "Rotura completa del manguito rotador",
+      "concepto_id": "HM:3057",
+      "concepto_nombre": "Signo de lag de rotación interna",
+      "estado_lr": "medido",
+      "lr_positivo": 5.6,
+      "lr_negativo": 0.04,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:23982370",
+      "referencia_cita": "Hermans J, Luime JJ, Meuffels DE, Reijman M, Simel DL, Bierma-Zeinstra SM Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review JAMA 2013",
+      "pmid": "23982370",
+      "doi": "10.1001/jama.2013.276187"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3056",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 7.2,
+          "ic95": [
+            1.7,
+            31
+          ],
+          "ref": "pmid:23982370"
+        },
+        "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho"
+      },
+      {
+        "concepto": "HM:3057",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.6,
+          "ic95": [
+            2.6,
+            12
+          ],
+          "ref": "pmid:23982370"
+        },
+        "lr_negativo": {
+          "valor": 0.04,
+          "ic95": [
+            0,
+            0.58
+          ],
+          "ref": "pmid:23982370"
+        },
+        "decision": "sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3056-lag-rotacion-externa.yaml": "89f1056f9840213b12973fd986960c9acce2cd4e1659313609b9f348683f8464",
+        "conceptos/HM3057-lag-rotacion-interna.yaml": "af8fb988476f76fe41cf62414d3d78eb79c6c92ae5e378f150ac4ec2cf6b5bed",
+        "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml": "948a520a9c00092a5e3a1fd4b58e9745c3cd733f976167157f29f89c4437c6d0",
+        "referencias/pmid-23982370.yaml": "a069ef6d93f543653e62805872e4ffaf929021cd19668bcb2eb3b5413613c18b"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
     "featured_image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/MRI._Subacromial_impingement..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "image_source": "https://commons.wikimedia.org/wiki/File%3AMRI.%20Subacromial%20impingement..jpg",
     "image_license": "CC BY-SA 3.0",
     "image_title": "MRI. Subacromial impingement..jpg",
-    "excerpt": "Análisis bayesiano de signo de lag de rotación interna y su impacto en la toma de decisiones clínicas."
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6015-01",
     "slug": "enfermedad-parkinson-criterios-clinicos-mds",
-    "title": "Diagnóstico clínico de la Enfermedad de Parkinson: El rigor de los Criterios MDS",
-    "subtitle": "Del parkinsonismo motor nuclear a la búsqueda sistemática de banderas rojas y criterios de apoyo.",
+    "title": "Enfermedad de Parkinson: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "neurologia",
     "category_label": "Neurología",
     "tags": [
+      "criterios",
+      "enfermedad-de-parkinson",
       "neurologia",
-      "parkinson",
-      "semiologia",
-      "movimientos-anormales"
+      "semiologia"
     ],
-    "reading_time": "7 min",
+    "reading_time": "8 min",
     "difficulty": "Avanzado",
     "grounding_badge": "HM:6015 · PMID:26474316",
+    "grounding": {
+      "condicion_id": "HM:6015",
+      "condicion_nombre": "Enfermedad de Parkinson",
+      "concepto_id": "HM:3061",
+      "concepto_nombre": "Bradicinesia",
+      "estado_lr": "no_medible",
+      "lr_positivo": null,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:26474316",
+      "referencia_cita": "Postuma RB, Berg D, Stern M, Poewe W, Olanow CW, Oertel W, Obeso J, Marek K, Litvan I, Lang AE, Halliday G, Goetz CG, Gasser T, Dubois B, Chan P, Bloem BR, Adler CH, Deuschl G MDS clinical diagnostic criteria for Parkinson's disease Mov Disord 2015",
+      "pmid": "26474316",
+      "doi": "10.1002/mds.26424"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3061",
+        "rol": "manifestacion",
+        "efecto": "apoya",
+        "estado_lr": "no_medible",
+        "motivo": "forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación"
+      },
+      {
+        "concepto": "HM:3062",
+        "rol": "manifestacion",
+        "efecto": "apoya",
+        "estado_lr": "no_medible",
+        "motivo": "componente del núcleo; sesgo de incorporación"
+      },
+      {
+        "concepto": "HM:3063",
+        "rol": "manifestacion",
+        "efecto": "apoya",
+        "estado_lr": "no_medible",
+        "motivo": "componente del núcleo; sesgo de incorporación"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6015-enfermedad-de-parkinson.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3061-bradicinesia.yaml": "623f4a414f90755471fd23933757b9118848638e618f5a63fa01a4ab626182a0",
+        "conceptos/HM3062-temblor-de-reposo.yaml": "b181c4353fd0a2b46cc1bb9b46e240e468ab0e4de27f1aeedf8d081851671027",
+        "conceptos/HM3063-rigidez-parkinsoniana.yaml": "97ec764a6867749d77971a91cde2028ec1cb43e13d7504e12308094528a43de5",
+        "condiciones/HM6002-sindrome-intestino-irritable.yaml": "de99a8c5755f450792d575897902bde932154119c4318ee30d916dbec0bd11f5",
+        "condiciones/HM6015-enfermedad-de-parkinson.yaml": "da6f3cf1eb93f27411eda8f603aac72d4a94af776a79c05e94afffd30ee5768c",
+        "referencias/pmid-26474316.yaml": "409c161aa7d66ee82f74cac52519280375172cc5fe2c388633ab2b80dbbf38dc"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
     "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Paralysis_agitans_%281893%2C_after_St._Leger%29.jpg/960px-Paralysis_agitans_%281893%2C_after_St._Leger%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "image_source": "https://commons.wikimedia.org/wiki/File%3AParalysis%20agitans%20%281893%2C%20after%20St.%20Leger%29.jpg",
     "image_license": "Public domain",
     "image_title": "Paralysis agitans (1893, after St. Leger).jpg",
-    "excerpt": "Del parkinsonismo motor nuclear a la búsqueda sistemática de banderas rojas y criterios de apoyo."
+    "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos."
   },
   {
     "id": "HM6016-01",
     "slug": "embarazo-ectopico-precision-semiotica",
-    "title": "Embarazo ectópico: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de masa anexial sin gestación intrauterina en ecografía transvaginal y su impacto en la toma de decisiones clínicas.",
+    "title": "Embarazo ectópico: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "tags": [
-      "medicina_interna",
       "embarazo-ectopico",
-      "semiologia",
-      "evidencia"
+      "medicina_interna",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6016 · PMID:23613077",
+    "grounding": {
+      "condicion_id": "HM:6016",
+      "condicion_nombre": "Embarazo ectópico",
+      "concepto_id": "HM:3064",
+      "concepto_nombre": "Masa anexial sin gestación intrauterina en ecografía transvaginal",
+      "estado_lr": "medido",
+      "lr_positivo": 111,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+      "referencia_id": "pmid:23613077",
+      "referencia_cita": "Crochet JR, Bastian LA, Chireau MV Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review JAMA 2013",
+      "pmid": "23613077",
+      "doi": "10.1001/jama.2013.3914"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3064",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+        "lr_positivo": {
+          "valor": 111,
+          "ic95": [
+            12,
+            1028
+          ],
+          "ref": "pmid:23613077"
+        },
+        "decision": "el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto",
+        "advertencia": "el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
+      },
+      {
+        "concepto": "HM:3065",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+        "lr_negativo": {
+          "valor": 0.12,
+          "ic95": [
+            0.03,
+            0.55
+          ],
+          "ref": "pmid:23613077",
+          "nota": "la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo"
+        },
+        "decision": "la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí"
+      },
+      {
+        "concepto": "HM:3066",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1435)",
+        "lr_positivo": {
+          "valor": 4.9,
+          "ic95": [
+            1.7,
+            14
+          ],
+          "ref": "pmid:23613077"
+        }
+      },
+      {
+        "concepto": "HM:3067",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1378)",
+        "lr_positivo": {
+          "valor": 2.4,
+          "ic95": [
+            1.6,
+            3.7
+          ],
+          "ref": "pmid:23613077"
+        },
+        "decision": "la misma masa vista en la ecografía vale 111 y palpada vale 2.4. No es incoherencia: son dos pruebas distintas sobre el mismo órgano"
+      },
+      {
+        "concepto": "HM:3068",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 1435)",
+        "lr_positivo": {
+          "valor": 1.9,
+          "ic95": [
+            1,
+            3.5
+          ],
+          "ref": "pmid:23613077"
+        },
+        "advertencia": "el extremo inferior del intervalo toca 1.0: compatible con no aportar nada"
+      },
+      {
+        "concepto": "HM:0201",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido",
+        "ref": "pmid:23613077",
+        "motivo": "es criterio de entrada del estudio, así que dentro de esa población no hay contraste que medir. La fuente sí acota la anamnesis entera: ningún componente pasa de un LR+ de 1.5"
+      },
+      {
+        "concepto": "HM:3069",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido",
+        "ref": "pmid:23613077",
+        "motivo": "el otro criterio de entrada, con la misma acotación: ningún componente de la anamnesis alcanza un LR+ de 1.5"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6016-embarazo-ectopico.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
+        "conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml": "26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15",
+        "conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml": "201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f",
+        "conceptos/HM3066-dolor-a-la-movilizacion-cervical.yaml": "2c27db232894c6a15ba314df23163c9b9684b3dbd1340f2fa398bda7648b81be",
+        "conceptos/HM3067-masa-anexial-en-la-exploracion-bimanual.yaml": "1a1bb1e23bd7e565387065099cfdcd1af8160e58117a524eb84f4847d21255ef",
+        "conceptos/HM3068-dolor-a-la-palpacion-anexial.yaml": "cfacb53553472ff10929397fb4b333684a4110ec83e44a02b807a2742dcc1161",
+        "conceptos/HM3069-sangrado-vaginal-en-la-gestacion-precoz.yaml": "a7c6df28b077ba236b0c2784d246ad30c7e10e5bc9eae7d10725927d836273ee",
+        "condiciones/HM6016-embarazo-ectopico.yaml": "dbb752230c0f4a1145368812d0694ad3aa10d99465f17ea03f151db071c5106d",
+        "referencias/pmid-23613077.yaml": "8611f28321a818a1dd3195b5ddfc92a6f3f8af796cb75285e456be3693232cc1"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Ectopic_pregnancy.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Ectopic_pregnancy.JPG",
-    "image_license": "Public domain",
-    "image_title": "Ectopic pregnancy.JPG",
-    "excerpt": "Análisis bayesiano de masa anexial sin gestación intrauterina en ecografía transvaginal y su impacto en la toma de decisiones clínicas."
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6017-01",
     "slug": "conjuntivitis-bacteriana-precision-semiotica",
-    "title": "Conjuntivitis bacteriana: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de otitis media concomitante y su impacto en la toma de decisiones clínicas.",
+    "title": "Conjuntivitis bacteriana: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "tags": [
-      "medicina_interna",
       "conjuntivitis-bacteriana",
-      "semiologia",
-      "evidencia"
+      "medicina_interna",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6017 · PMID:35699701",
+    "grounding": {
+      "condicion_id": "HM:6017",
+      "condicion_nombre": "Conjuntivitis bacteriana",
+      "concepto_id": "HM:3071",
+      "concepto_nombre": "Otitis media concomitante",
+      "estado_lr": "medido",
+      "lr_positivo": 2.5,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:35699701",
+      "referencia_cita": "Johnson D, Liu D, Simel D Does This Patient With Acute Infectious Conjunctivitis Have a Bacterial Infection?: The Rational Clinical Examination Systematic Review JAMA 2022",
+      "pmid": "35699701",
+      "doi": "10.1001/jama.2022.7687",
+      "sensibilidad": 0.24,
+      "especificidad": 0.91
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3070",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.76,
+        "ic95_sensibilidad": [
+          0.6,
+          0.87
+        ],
+        "especificidad": 0.66,
+        "ic95_especificidad": [
+          0.58,
+          0.73
+        ],
+        "lr_positivo": {
+          "valor": 2.1,
+          "ic95": [
+            1.7,
+            2.6
+          ],
+          "ref": "pmid:35699701"
+        },
+        "decision": "el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico"
+      },
+      {
+        "concepto": "HM:3071",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "sensibilidad": 0.24,
+        "ic95_sensibilidad": [
+          0.2,
+          0.29
+        ],
+        "especificidad": 0.91,
+        "ic95_especificidad": [
+          0.85,
+          0.94
+        ],
+        "lr_positivo": {
+          "valor": 2.5,
+          "ic95": [
+            1.5,
+            4.4
+          ],
+          "ref": "pmid:35699701"
+        },
+        "decision": "el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6017-conjuntivitis-bacteriana.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3070-secrecion-ocular-mucopurulenta.yaml": "3bfe58e42533a195ed4c5a0364a3b97703e1146d74d2b98a0189e021bdc4a1e5",
+        "conceptos/HM3071-otitis-media-concomitante.yaml": "0a18de104fa683c09fea5b0e07a9c02ba15220367b82e53dd95ad80fe21fa86b",
+        "condiciones/HM6017-conjuntivitis-bacteriana.yaml": "249ba11c9a4bcd8c2d644056c2ce1178c1e4ba7fad6a298f600044bb240a6c4a",
+        "referencias/pmid-35699701.yaml": "d9348ef1222256bb8266c2fcc4df081baad7956845719fe8c927731c65599454"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Swollen_eye_with_conjunctivitis.jpg/960px-Swollen_eye_with_conjunctivitis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Swollen_eye_with_conjunctivitis.jpg",
-    "image_license": "CC BY 3.0",
-    "image_title": "Swollen eye with conjunctivitis.jpg",
-    "excerpt": "Análisis bayesiano de otitis media concomitante y su impacto en la toma de decisiones clínicas."
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6018-01",
     "slug": "apnea-obstructiva-del-sueno-precision-semiotica",
-    "title": "Apnea obstructiva del sueño: Precisión diagnóstica y rendimiento de los hallazgos semiológicos",
-    "subtitle": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas.",
+    "title": "Apnea obstructiva del sueño: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "tags": [
-      "medicina_interna",
       "apnea-obstructiva-del-sueno",
-      "semiologia",
-      "evidencia"
+      "medicina_interna",
+      "semiologia"
     ],
-    "reading_time": "6 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6018 · PMID:23989984",
+    "grounding": {
+      "condicion_id": "HM:6018",
+      "condicion_nombre": "Apnea obstructiva del sueño",
+      "concepto_id": "HM:3072",
+      "concepto_nombre": "Ahogo o jadeo nocturno",
+      "estado_lr": "medido",
+      "lr_positivo": 3.3,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:23989984",
+      "referencia_cita": "Myers KA, Mrkobrada M, Simel DL Does this patient have obstructive sleep apnea?: The Rational Clinical Examination systematic review JAMA 2013",
+      "pmid": "23989984",
+      "doi": "10.1001/jama.2013.276185"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3072",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.3,
+          "ic95": [
+            2.1,
+            4.6
+          ],
+          "umbral_condicion": "IAH ≥10/h",
+          "ref": "pmid:23989984"
+        },
+        "decision": "la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
+      },
+      {
+        "concepto": "HM:3073",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 1.1,
+          "ic95": [
+            1,
+            1.1
+          ],
+          "ref": "pmid:23989984"
+        },
+        "decision": "frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo",
+        "advertencia": "un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM3072-ahogo-o-jadeo-nocturno.yaml": "bb978561f85d04ea3c3d96596aed38b1fccd27c88a0c6855cef56cdc1d111d92",
+        "conceptos/HM3073-ronquido.yaml": "7b20f9582eab041322e5a8b9209a4bd214bb831c3476d25c74ffa78bec5d4f5b",
+        "conceptos/HM3074-indice-de-masa-corporal-bajo.yaml": "55a3f9877aee395d377f92bd9235307ef18d9a02c85c6345d8529b2256949caa",
+        "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml": "1cf4cd6512f8168487b509b4c743cb9f7dcec67eec9581cbd642e8213c950d82",
+        "referencias/pmid-23989984.yaml": "adade58f82c42307bf63354293d2c8ce4a392f3f9cc3e4e5291fec62b652fad0"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Obstruction_ventilation_apn%C3%A9e_sommeil.svg/960px-Obstruction_ventilation_apn%C3%A9e_sommeil.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Obstruction_ventilation_apn%C3%A9e_sommeil.svg",
-    "image_license": "Public domain",
-    "image_title": "Obstruction ventilation apnée sommeil.svg",
-    "excerpt": "Análisis bayesiano de ahogo o jadeo nocturno y su impacto en la toma de decisiones clínicas."
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
     "id": "HM6004-01",
     "slug": "meningitis-aguda-sacudida-cefalica",
-    "title": "Meningitis aguda en adultos: ¿Qué valor real tiene la acentuación de la cefalea con la sacudida cefálica?",
-    "subtitle": "Análisis semiótico y discriminación bayesiana del jolt accentuation sign en el paciente con fiebre y cefalea.",
+    "title": "Meningitis aguda: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-20",
     "author": "Dr. Alcy Torres",
     "category": "neurologia",
     "category_label": "Neurología",
     "tags": [
-      "meningitis",
-      "cefalea",
-      "semiótica",
-      "urgencias"
+      "criterios",
+      "meningitis-aguda",
+      "neurologia",
+      "semiologia"
     ],
-    "reading_time": "5 min",
+    "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6004 · PMID:10411200",
+    "grounding": {
+      "condicion_id": "HM:6004",
+      "condicion_nombre": "Meningitis aguda",
+      "concepto_id": "HM:3006",
+      "concepto_nombre": "Acentuación de la cefalea con la sacudida cefálica",
+      "estado_lr": "medido",
+      "lr_positivo": 2.2,
+      "lr_negativo": 0,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:10411200",
+      "referencia_cita": "Attia J, Hatala R, Cook DJ, Wong JG The rational clinical examination. Does this adult patient have acute meningitis? JAMA 1999",
+      "pmid": "10411200",
+      "doi": "10.1001/jama.282.2.175",
+      "sensibilidad": 1,
+      "especificidad": 0.54
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3006",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "sensibilidad": 1,
+        "especificidad": 0.54,
+        "lr_positivo": {
+          "valor": 2.2,
+          "ref": "pmid:10411200",
+          "poblacion": "pacientes que ya presentan fiebre y cefalea"
+        },
+        "lr_negativo": {
+          "valor": 0,
+          "ref": "pmid:10411200",
+          "poblacion": "pacientes que ya presentan fiebre y cefalea",
+          "nota": "un LR− de 0 procede de una sensibilidad del 100% en la serie estudiada. Tratarlo como certeza absoluta sería un error de lectura: es el resultado de una muestra, no una imposibilidad."
+        },
+        "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda"
+      },
+      {
+        "concepto": "HM:0207",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido",
+        "sensibilidad": 0.5,
+        "ic95_sensibilidad": [
+          0.32,
+          0.68
+        ],
+        "motivo": "la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract"
+      },
+      {
+        "concepto": "HM:0301",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido",
+        "sensibilidad": 0.3,
+        "ic95_sensibilidad": [
+          0.22,
+          0.38
+        ],
+        "motivo": "sensibilidad agrupada sin especificidad; LR no calculable"
+      },
+      {
+        "concepto": "HM:0302",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido",
+        "sensibilidad": 0.3,
+        "ic95_sensibilidad": [
+          0.22,
+          0.38
+        ],
+        "motivo": "la fuente agrupa náuseas y vómitos en una sola estimación"
+      },
+      {
+        "concepto": "HM:0101",
+        "rol": "prueba_sensible",
+        "estado_lr": "no_medido",
+        "motivo": "forma parte de la tríada fiebre + rigidez de nuca + alteración del estado mental, cuya presencia de al menos uno tiene sensibilidad del 99-100%. La fuente no desglosa el cociente de cada componente por separado."
+      },
+      {
+        "concepto": "HM:3005",
+        "rol": "prueba_sensible",
+        "estado_lr": "no_medido",
+        "motivo": "componente de la tríada; la fuente no publica su cociente aislado"
+      },
+      {
+        "concepto": "HM:0501",
+        "rol": "prueba_sensible",
+        "estado_lr": "no_medido",
+        "motivo": "componente de la tríada; la fuente no publica su cociente aislado"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6004-meningitis-aguda.yaml",
+      "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
+        "conceptos/HM0207-cefalea.yaml": "3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c",
+        "conceptos/HM0301-nauseas.yaml": "e678ffbd65c8ecbae1afe311de0693dc240bff7d676879838347df44fa30556a",
+        "conceptos/HM0302-vomitos.yaml": "c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9",
+        "conceptos/HM0501-alteracion-del-nivel-de-conciencia.yaml": "c3d0515c056d2458152b77498e02ec985a7f67d31c63bec961722da48ac6d980",
+        "conceptos/HM3005-rigidez-de-nuca.yaml": "acf2a79e35697ca46f2a084ef549f5345ad4d40e9014474088cb2f897f43e9c7",
+        "conceptos/HM3006-acentuacion-cefalea-sacudida.yaml": "b7e237eb2e3f5ead09a07aff8832f8b79afc05a258a7649cc778aba725441a12",
+        "condiciones/HM6004-meningitis-aguda.yaml": "094b0b47f35478cc7db439647a545a988f3804088f1bfbc0df379019c3efb45a",
+        "referencias/pmid-10411200.yaml": "8b029e69cf573d005a0416d103199e091dfd7156895fad9de3768aebf43a5eab"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
     "has_quiz": true,
     "quiz_count": 2,
     "featured_image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Kernig%27s_sign_cerebrospinal_meningitis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "image_source": "https://commons.wikimedia.org/wiki/File%3AKernig%27s%20sign%20cerebrospinal%20meningitis.jpg",
     "image_license": "Public domain",
     "image_title": "Kernig's sign cerebrospinal meningitis.jpg",
-    "excerpt": "Análisis semiótico y discriminación bayesiana del jolt accentuation sign en el paciente con fiebre y cefalea."
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   }
 ]

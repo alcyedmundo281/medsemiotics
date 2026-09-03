@@ -1,105 +1,249 @@
 ---
-id: "HM6009-01"
-slug: "faringitis-estreptococica-exudado-criterios-centor"
-title: "Faringoamigdalitis aguda: Rendimiento semiótico del exudado y los criterios de Centor"
-subtitle: "Por qué ningún hallazgo aislado confirma ni descarta la infección por EbhGA y cómo optimizar el uso racional de antibióticos."
-date: "2026-08-21"
-author: "Dr. Alcy Torres"
-category: "infectologia"
-category_label: "Infectología y Atención Primaria"
-tags: ["infecciosas", "faringitis", "antibioticos", "centor", "urgencias"]
-reading_time: "5 min"
-difficulty: "Básico"
+id: HM6009-01
+slug: faringitis-estreptococica-exudado-criterios-centor
+title: 'Faringitis estreptocócica: hallazgos y evidencia clínica'
+subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
+date: '2026-08-21'
+author: Dr. Alcy Torres
+category: infectologia
+category_label: Infectología y Atención Primaria
+tags:
+- criterios
+- faringitis-estreptococica
+- infectologia
+- semiologia
+reading_time: 8 min
+difficulty: Básico
+fuente:
+  repositorio: alcyedmundo281/medsemiotics-db
+  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
+  condicion: condiciones/HM6009-faringitis-estreptococica.yaml
+  archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    conceptos/HM0211-odinofagia.yaml: cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f
+    conceptos/HM3026-exudado-amigdalino.yaml: 2035d19d7697ad00e8860ba5bf2e4be6d4c17b557a6f8ab8b8c966ae088e8b43
+    conceptos/HM3027-exudado-faringeo.yaml: 06a0f094562bd1a1b9c9ec09d5dc2c2ca5b963c627c82897dd1f93ac6dca0c50
+    conceptos/HM3028-exposicion-estreptococo.yaml: 26edc47823c8d5fa6dc3268a3bdcc36f8470f2fe973db587f023d6ac3ccaff21
+    conceptos/HM3029-adenopatia-cervical-anterior-dolorosa.yaml: c126e8e1eee16e645ed035c25ba116ac1aa29d60638b8b8dae0a98875240574a
+    conceptos/HM3030-hipertrofia-amigdalina.yaml: c5638d1545cdfaeeec3fa4b95fd6b0b104c48be33b947131f4e3b8e8dc4198eb
+    condiciones/HM6009-faringitis-estreptococica.yaml: 3d245901b5953adc1bc2bb4fabfb95e3855fa4b1d5009751cfbe62f421bc4ef7
+    referencias/pmid-11147989.yaml: f6aca870e75ab118eba2a41950cb38d56cabbcb69b65ba4e5eadc1f671edafc8
 grounding:
-  condicion_id: "HM:6009"
-  condicion_nombre: "Faringitis estreptocócica"
-  concepto_id: "HM:3026"
-  concepto_nombre: "Exudado amigdalino"
-  sensibilidad: 0.40
-  especificidad: 0.88
+  condicion_id: HM:6009
+  condicion_nombre: Faringitis estreptocócica
+  concepto_id: HM:3026
+  concepto_nombre: Exudado amigdalino
+  estado_lr: medido
   lr_positivo: 3.4
-  lr_negativo: 0.68
-  poblacion: "Pacientes que consultan por odinofagia y dolor faríngeo agudo"
-  referencia_id: "pmid:11147989"
-  referencia_cita: "Ebell MH, Smith MA, Barry HC, Ives K, Carey M. Does this patient have strep throat? The Rational Clinical Examination. JAMA. 2000;284(22):2912-8."
-  doi: "10.1001/jama.284.22.2912"
-  pmid: "11147989"
-
+  lr_negativo: null
+  lr_positivo_rango: null
+  lr_negativo_rango: null
+  poblacion: null
+  referencia_id: pmid:11147989
+  referencia_cita: Ebell MH, Smith MA, Barry HC, Ives K, Carey M The rational clinical examination. Does this patient have strep throat? JAMA 2000
+  pmid: '11147989'
+  doi: 10.1001/jama.284.22.2912
 triada:
-  significante: "Placas blanquecinas o confluentes de material pultáceo sobre la superficie de las amígdalas palatinas o la pared faríngea posterior."
-  significado: "Respuesta inflamatoria neutrofílica intensa con necrosis superficial y formación de detritos fibrinoleucocitarios."
-  decision: "Es el hallazgo físico aislado de mayor rendimiento (LR+ 3.4), pero sigue siendo insuficiente por sí solo: requiere puntuación clínica formal (Centor/McIsaac) o test rápido de antígeno antes de iniciar antibióticos."
-
+  significante: Exudado amigdalino
+  significado: El mecanismo fisiopatológico no está documentado en esta fuente.
+  decision: el hallazgo aislado más útil, y aun así insuficiente por sí solo
+evidencia:
+- concepto: HM:3026
+  rol: prueba_especifica
+  estado_lr: medido
+  lr_positivo: &id001
+    valor: 3.4
+    ref: pmid:11147989
+    nota: la fuente no publica intervalo de confianza en el abstract
+  decision: el hallazgo aislado más útil, y aun así insuficiente por sí solo
+- concepto: HM:3027
+  rol: prueba_especifica
+  estado_lr: medido
+  lr_positivo: &id002
+    valor: 2.1
+    ref: pmid:11147989
+    nota: la fuente no publica intervalo de confianza en el abstract
+  decision: apoya menos que el exudado amigdalino, del que se distingue
+- concepto: HM:3028
+  rol: apoyo
+  estado_lr: medido
+  lr_positivo:
+    valor: 1.9
+    ref: pmid:11147989
+    nota: exposición en las dos semanas previas; sin intervalo en el abstract
+  decision: dato de anamnesis con peso escaso
+- concepto: HM:3029
+  rol: prueba_sensible
+  estado_lr: medido
+  lr_negativo:
+    valor: 0.6
+    ref: pmid:11147989
+    nota: la fuente no publica intervalo de confianza en el abstract
+  decision: su ausencia es lo que más reduce la probabilidad, y aun así la deja en más de la mitad de la previa
+- concepto: HM:3030
+  rol: prueba_sensible
+  estado_lr: medido
+  lr_negativo:
+    valor: 0.63
+    ref: pmid:11147989
+    nota: la fuente no publica intervalo de confianza en el abstract
+  decision: su ausencia reduce poco la probabilidad
+- concepto: HM:0211
+  rol: manifestacion
+  estado_lr: no_medible
+  motivo: es el motivo de consulta que define la población estudiada, no una prueba dentro de ella
 autoevaluacion:
-  - id: "q1"
-    pregunta: "Un paciente de 22 años acude por dolor de garganta y fiebre de 38.5 °C. En la exploración se observa exudado amigdalino blanquecino bilateral, pero no tiene adenopatías ni tos. Con un LR+ de 3.4 para el exudado, ¿cuál es el manejo diagnóstico más adecuado según JAMA (PMID: 11147989)?"
-    opciones:
-      - texto: "Prescribir amoxicilina de inmediato porque el exudado amigdalino confirma 100% etiología bacteriana."
-        correcta: false
-        feedback: "Incorrecto. Virus respiratorios (como adenovirus, VEB o enterovirus) también producen exudado amigdalino florido; un LR+ de 3.4 no es confirmatorio por sí solo."
-      - texto: "Calcular la puntuación de Centor/McIsaac y realizar test rápido de antígeno estreptocócico (o cultivo) para confirmar antes de prescribir antibiótico."
-        correcta: true
-        feedback: "¡Correcto! Ebell et al. demuestran que ningún signo individual basta para prescribir antibióticos empíricos; la integración en escalas clínicas o test antigénico rápido evita el sobreuso de antibióticos."
-      - texto: "Descartar cualquier etiología estreptocócica y enviar a casa sin más estudios."
-        correcta: false
-        feedback: "Incorrecto. El paciente tiene criterios de sospecha moderada-alta que ameritan confirmación microbiológica rápida."
-
-  - id: "q2"
-    pregunta: "¿Cuál de los siguientes síntomas tiene el Likelihood Ratio NEGATIVO (LR-) más favorable para alejar la sospecha de faringitis por estreptococo del grupo A?"
-    opciones:
-      - texto: "Presencia franca de tos y rinorrea (LR- ≈ 0.60 a favor de etiología viral)."
-        correcta: true
-        feedback: "¡Exacto! La presencia de tos, coriza o conjuntivitis orienta fuertemente hacia infección viral de vías respiratorias superiores y reduce la probabilidad de estreptococo."
-      - texto: "Presencia de cefalea intensa."
-        correcta: false
-        feedback: "Incorrecto. La cefalea es inespecífica y frecuente en infecciones tanto virales como bacterianas."
+- id: q1
+  pregunta: En Faringitis estreptocócica, ¿cuál es el resultado documentado del LR positivo para «Exudado amigdalino»?
+  concepto_id: HM:3026
+  referencia_id: pmid:11147989
+  pmid: '11147989'
+  doi: 10.1001/jama.284.22.2912
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6009
+    concepto_id: HM:3026
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: el hallazgo aislado más útil, y aun así insuficiente por sí solo
+    advertencia: null
+  opciones:
+  - texto: El valor 3.4 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 3.4. LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo.'
+  - texto: 'LR positivo: 3.4.'
+    correcta: true
+    feedback: 'LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo.'
+- id: q2
+  pregunta: En Faringitis estreptocócica, ¿cuál es el resultado documentado del LR positivo para «Exudado faríngeo»?
+  concepto_id: HM:3027
+  referencia_id: pmid:11147989
+  pmid: '11147989'
+  doi: 10.1001/jama.284.22.2912
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6009
+    concepto_id: HM:3027
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: apoya menos que el exudado amigdalino, del que se distingue
+    advertencia: null
+  opciones:
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 2.1. LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue.'
+  - texto: 'LR positivo: 2.1.'
+    correcta: true
+    feedback: 'LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue.'
+  - texto: El valor 2.1 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue.'
 ---
 
-## El desafío del dolor faríngeo y el sobreuso de antibióticos
+# Faringitis estreptocócica
 
-La faringoamigdalitis aguda es una de las causas más frecuentes de prescripción antibiótica inadecuada. Aunque el **Estreptococo $\beta$-hemolítico del Grupo A (EbhGA)** es responsable de solo el 10% al 15% de los casos en adultos, con frecuencia se prescriben antibióticos en más del 60% de las consultas.
+Hallazgos, cocientes documentados y límites de la evidencia.
 
----
+## Nombre en inglés
 
-## Discriminación de Hallazgos Individuales
+Streptococcal pharyngitis
 
-La síntesis metaanalítica de la serie *The Rational Clinical Examination* (JAMA 2000) analizó la capacidad diagnóstica de los signos cardinales:
+## Sinónimos
 
-- **Exudado amigdalino:** LR+ **3.4** (el signo individual más potente).
-- **Exudado faríngeo difuso:** LR+ **2.1**.
-- **Adenopatías cervicales anteriores dolorosas:** LR+ **1.8**.
-- **Historia de fiebre:** LR+ **1.9**.
-- **Ausencia de tos:** LR+ **1.5**.
+faringoamigdalitis estreptocócica
 
-Ninguno de estos hallazgos alcanza un LR+ > 5 por sí solo. Por tanto, la suma de criterios en la regla de **Centor modificada por McIsaac** es la clave para la toma de decisiones.
+faringitis por estreptococo del grupo A
 
-```
-                    [ Paciente con Odinofagia Aguda ]
-                                   │
-              ┌────────────────────┴────────────────────┐
-              ▼                                         ▼
-     Centor 0 - 1 Puntos                       Centor ≥ 3 Puntos
-  (Probabilidad baja < 10%)                (Probabilidad moderada ~30-50%)
-              │                                         │
-    Manejo sintomático.                       Realizar Test Rápido (RADT).
-    No indicar antibióticos                   Prescribir antibiótico
-    ni pruebas diagnósticas.                  solo si el test es positivo.
-```
+strep throat
 
----
+## Códigos
 
-## Evidencia Cuantitativa y Fuentes
+Snomed: No documentado.; Cie10: No documentado.
 
-Parámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):
+## Hallazgos clínicos
 
-- **Cociente de Verosimilitud Positivo del Exudado Amigdalino (LR+):** 3.40 [Ebell et al., JAMA 2000]
-- **Cociente de Verosimilitud Negativo del Exudado Amigdalino (LR-):** 0.68 [Ebell et al., JAMA 2000]
-- **Sensibilidad del Exudado Amigdalino:** 0.40 (40%)
-- **Especificidad del Exudado Amigdalino:** 0.88 (88%)
-- **Población evaluada:** Pacientes que consultan por faringitis aguda en atención primaria y urgencias.
+### Exudado amigdalino (HM:3026)
 
----
+**Rol:** Prueba específica
 
-## Conclusión Semiótica
+**Estado del LR:** LR medido
 
-El exudado amigdalino **orienta pero no sentencia**. El uso racional de antimicrobianos exige combinar la semiología con pruebas rápidas de antígeno en pacientes con 3 o más criterios de Centor.
+**LR positivo:** Valor: 3.4; Referencia: pmid:11147989; Nota: la fuente no publica intervalo de confianza en el abstract
+
+**Decisión:** el hallazgo aislado más útil, y aun así insuficiente por sí solo
+
+### Exudado faríngeo (HM:3027)
+
+**Rol:** Prueba específica
+
+**Estado del LR:** LR medido
+
+**LR positivo:** Valor: 2.1; Referencia: pmid:11147989; Nota: la fuente no publica intervalo de confianza en el abstract
+
+**Decisión:** apoya menos que el exudado amigdalino, del que se distingue
+
+### Exposición reciente a faringitis estreptocócica (HM:3028)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR medido
+
+**LR positivo:** Valor: 1.9; Referencia: pmid:11147989; Nota: exposición en las dos semanas previas; sin intervalo en el abstract
+
+**Decisión:** dato de anamnesis con peso escaso
+
+### Adenopatía cervical anterior dolorosa (HM:3029)
+
+**Rol:** Prueba sensible
+
+**Estado del LR:** LR medido
+
+**LR negativo:** Valor: 0.6; Referencia: pmid:11147989; Nota: la fuente no publica intervalo de confianza en el abstract
+
+**Decisión:** su ausencia es lo que más reduce la probabilidad, y aun así la deja en más de la mitad de la previa
+
+### Hipertrofia amigdalina (HM:3030)
+
+**Rol:** Prueba sensible
+
+**Estado del LR:** LR medido
+
+**LR negativo:** Valor: 0.63; Referencia: pmid:11147989; Nota: la fuente no publica intervalo de confianza en el abstract
+
+**Decisión:** su ausencia reduce poco la probabilidad
+
+### Odinofagia (HM:0211)
+
+**Rol:** Manifestación
+
+**Estado del LR:** LR no medible
+
+**Motivo:** es el motivo de consulta que define la población estudiada, no una prueba dentro de ella
+
+## Reglas clínicas
+
+Nombre: Ausencia de exudado; Componentes: Exudado amigdalino (HM:3026) / Exudado faríngeo (HM:3027); Criterio: ausencia de exudado amigdalino o faríngeo; LR negativo: 0.74; Referencia: pmid:11147989; Decisión: su ausencia apenas modifica la probabilidad; no sirve para descartar
+
+## Conclusión de la fuente
+
+Ningún elemento aislado de la anamnesis o de la exploración física es lo bastante preciso para excluir ni para diagnosticar la faringitis estreptocócica. Una regla de predicción clínica bien validada sí resulta útil y ayuda al médico a usar de forma más informada las pruebas rápidas de antígeno y el cultivo faríngeo.
+
+## Aspectos pendientes de documentación
+
+La fuente describe tres reglas de predicción clínica validadas, para población adulta y pediátrica, pero el abstract no las nombra ni las cuantifica. Registrarlas exige el texto completo.
+
+## Referencias y procedencia
+
+**pmid:11147989:** The rational clinical examination. Does this patient have strep throat?. JAMA, 2000. DOI: 10.1001/jama.284.22.2912.
+
+Fuente clínica: medsemiotics-db, condición HM:6009.
