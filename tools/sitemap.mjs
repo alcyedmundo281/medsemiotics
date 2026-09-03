@@ -41,7 +41,11 @@ const entradas = incluidas.map((p) => {
   return `  <url>\n    <loc>${url(p)}</loc>\n    <lastmod>${fecha(p)}</lastmod>\n    <priority>${prioridad}</priority>\n  </url>`;
 }).join('\n');
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entradas}\n</urlset>\n`;
+const blog = JSON.parse(fs.readFileSync('assets/data/condition-posts.json', 'utf8'));
+const blogEntries = '<!-- BLOG-START -->\n' + blog.map(post =>
+  `  <url><loc>${post.url}</loc></url>`,
+).sort().join('\n') + '\n<!-- BLOG-END -->';
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entradas}\n${blogEntries}\n</urlset>\n`;
 fs.writeFileSync('sitemap.xml', xml.replace(/\n/g, '\r\n'), 'utf8');
 
 console.log(`sitemap.xml: ${incluidas.length} URLs (de ${paginas.length} páginas; ${REDIRECCIONES.size} redirecciones excluidas)`);

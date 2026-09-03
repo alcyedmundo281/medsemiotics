@@ -1,123 +1,160 @@
 ---
-id: "HM6015-01"
-slug: "enfermedad-parkinson-criterios-clinicos-mds"
-title: "Diagnóstico clínico de la Enfermedad de Parkinson: El rigor de los Criterios MDS"
-subtitle: "Del parkinsonismo motor nuclear a la búsqueda sistemática de banderas rojas y criterios de apoyo."
-date: "2026-08-21"
-author: "Dr. Alcy Torres"
-category: "neurologia"
-category_label: "Neurología"
-tags: ["neurologia", "parkinson", "semiologia", "movimientos-anormales"]
-reading_time: "7 min"
-difficulty: "Avanzado"
+id: HM6015-01
+slug: enfermedad-parkinson-criterios-clinicos-mds
+title: 'Enfermedad de Parkinson: hallazgos y evidencia clínica'
+subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
+date: '2026-08-21'
+author: Dr. Alcy Torres
+category: neurologia
+category_label: Neurología
+tags:
+- criterios
+- enfermedad-de-parkinson
+- neurologia
+- semiologia
+reading_time: 8 min
+difficulty: Avanzado
+fuente:
+  repositorio: alcyedmundo281/medsemiotics-db
+  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  condicion: condiciones/HM6015-enfermedad-de-parkinson.yaml
+  archivos:
+    conceptos/HM3061-bradicinesia.yaml: 623f4a414f90755471fd23933757b9118848638e618f5a63fa01a4ab626182a0
+    conceptos/HM3062-temblor-de-reposo.yaml: b181c4353fd0a2b46cc1bb9b46e240e468ab0e4de27f1aeedf8d081851671027
+    conceptos/HM3063-rigidez-parkinsoniana.yaml: 97ec764a6867749d77971a91cde2028ec1cb43e13d7504e12308094528a43de5
+    condiciones/HM6002-sindrome-intestino-irritable.yaml: de99a8c5755f450792d575897902bde932154119c4318ee30d916dbec0bd11f5
+    condiciones/HM6015-enfermedad-de-parkinson.yaml: da6f3cf1eb93f27411eda8f603aac72d4a94af776a79c05e94afffd30ee5768c
+    referencias/pmid-26474316.yaml: 409c161aa7d66ee82f74cac52519280375172cc5fe2c388633ab2b80dbbf38dc
 grounding:
-  condicion_id: "HM:6015"
-  condicion_nombre: "Enfermedad de Parkinson"
-  concepto_id: "HM:3061"
-  concepto_nombre: "Bradicinesia con decremento progresivo"
-  sensibilidad: 0.90
-  especificidad: 0.88
-  lr_positivo: 7.5
-  lr_negativo: 0.11
-  poblacion: "Adultos con sospecha de trastorno del movimiento parkinsoniano"
-  referencia_id: "pmid:26474316"
-  referencia_cita: "Postuma RB, Berg D, Stern M, Poewe W, Olanow CW, Peng W, et al. MDS clinical diagnostic criteria for Parkinson's disease. Mov Disord. 2015;30(12):1591-601."
-  doi: "10.1002/mds.26424"
-  pmid: "26474316"
-
+  condicion_id: HM:6015
+  condicion_nombre: Enfermedad de Parkinson
+  concepto_id: HM:3061
+  concepto_nombre: Bradicinesia
+  estado_lr: no_medible
+  lr_positivo: null
+  lr_negativo: null
+  lr_positivo_rango: null
+  lr_negativo_rango: null
+  poblacion: null
+  referencia_id: pmid:26474316
+  referencia_cita: Postuma RB, Berg D, Stern M, Poewe W, Olanow CW, Oertel W, Obeso J, Marek K, Litvan I, Lang AE, Halliday G, Goetz CG, Gasser T, Dubois B, Chan P, Bloem BR, Adler CH, Deuschl G MDS clinical diagnostic criteria for Parkinson's disease Mov Disord 2015
+  pmid: '26474316'
+  doi: 10.1002/mds.26424
 triada:
-  significante: "Bradicinesia caracterizada por lentitud de movimiento combinada con decremento progresivo en velocidad y amplitud durante maniobras repetitivas (finger tapping), asociada a temblor de reposo de 4-6 Hz o rigidez en rueda dentada."
-  significado: "Degeneración progresiva de las neuronas dopaminérgicas de la sustancia negra pars compacta con disfunción de los circuitos corticoestriatales."
-  decision: "El diagnóstico requiere constatar el núcleo motor, ausencia de criterios de exclusión absoluta, y un balance favorable entre banderas rojas y criterios de apoyo (excelente respuesta a L-dopa o discinesias inducidas)."
-
+  significante: Bradicinesia
+  significado: El mecanismo fisiopatológico no está documentado en esta fuente.
+  decision: La fuente no documenta una decisión específica para este hallazgo.
+evidencia:
+- concepto: HM:3061
+  rol: manifestacion
+  efecto: apoya
+  estado_lr: no_medible
+  motivo: 'forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación'
+- concepto: HM:3062
+  rol: manifestacion
+  efecto: apoya
+  estado_lr: no_medible
+  motivo: componente del núcleo; sesgo de incorporación
+- concepto: HM:3063
+  rol: manifestacion
+  efecto: apoya
+  estado_lr: no_medible
+  motivo: componente del núcleo; sesgo de incorporación
 autoevaluacion:
-  - id: "q1"
-    pregunta: "Según los criterios diagnósticos clínicos oficiales de la MDS 2015 (PMID: 26474316), ¿cuál es el signo semiológico OBLIGATORIO que debe estar presente de forma ineludible para definir parkinsonismo motor?"
-    opciones:
-      - texto: "Bradicinesia (lentitud motora con decremento progresivo en amplitud o velocidad durante movimientos repetitivos)."
-        correcta: true
-        feedback: "¡Correcto! La MDS establece la bradicinesia como el rasgo nuclear indispensable, que debe coexistir con temblor de reposo O rigidez muscular."
-      - texto: "Temblor postural bilateral simétrico en miembros superiores."
-        correcta: false
-        feedback: "Incorrecto. El temblor postural aislado orienta más a Temblor Esencial y no constituye el núcleo obligatorio."
-      - texto: "Inestabilidad postural con caídas frecuentes durante el primer año."
-        correcta: false
-        feedback: "Incorrecto. Las caídas precoces en el primer año son una 'bandera roja' que sugiere Parálisis Supranuclear Progresiva (PSP), no Enfermedad de Parkinson típica."
-
-  - id: "q2"
-    pregunta: "¿Cuál de los siguientes hallazgos se considera un CRITERIO DE EXCLUSIÓN ABSOLUTA para Enfermedad de Parkinson idiopática?"
-    opciones:
-      - texto: "Tratamiento activo con antagonistas dopaminérgicos (antipsicóticos o antieméticos tipo metoclopramida) que justifique parkinsonismo farmacológico inducido."
-        correcta: true
-        feedback: "¡Exacto! El bloqueo dopaminérgico farmacológico es una causa secundaria que excluye formalmente la enfermedad idiopática."
-      - texto: "Excelente respuesta motora y funcional al tratamiento con levodopa."
-        correcta: false
-        feedback: "Incorrecto. La respuesta marcada a levodopa es el criterio de apoyo positivo más potente de la enfermedad."
-      - texto: "Presencia de asimetría motora al inicio del cuadro clínico."
-        correcta: false
-        feedback: "Incorrecto. El inicio unilateral o asimétrico es característico de la Enfermedad de Parkinson."
+- id: q1
+  pregunta: ¿Cómo está documentado el LR de Bradicinesia en Enfermedad de Parkinson?
+  concepto_id: HM:3061
+  referencia_id: null
+  pmid: null
+  doi: null
+  opciones:
+  - texto: LR no medible
+    correcta: true
+    feedback: 'Registro HM:6015: LR no medible'
+  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
+    correcta: false
+    feedback: 'El registro documenta: LR no medible'
+- id: q2
+  pregunta: ¿Cómo está documentado el LR de Temblor de reposo en Enfermedad de Parkinson?
+  concepto_id: HM:3062
+  referencia_id: null
+  pmid: null
+  doi: null
+  opciones:
+  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
+    correcta: false
+    feedback: 'El registro documenta: LR no medible'
+  - texto: LR no medible
+    correcta: true
+    feedback: 'Registro HM:6015: LR no medible'
 ---
 
-## El desafío del diagnóstico clínico en la Enfermedad de Parkinson
+# Enfermedad de Parkinson
 
-A diferencia de otras entidades neurológicas con biomarcadores séricos definitivos, el diagnóstico de la **Enfermedad de Parkinson (EP)** continúa descansando primordialmente en la exploración física meticulosa y el seguimiento longitudinal.
+Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
 
-En 2015, la *International Parkinson and Movement Disorder Society (MDS)* publicó los criterios clínicos contemporáneos para maximizar la precisión diagnóstica frente a parkinsonismos atípicos (PSP, AMS, DCB).
+## Nombre en inglés
 
----
+Parkinson's disease
 
-## Estructura Diagnóstica en 3 Pasos (MDS)
+## Sinónimos
 
-1. **Paso 1: Definir Parkinsonismo Motor (Núcleo Ineludible):**
-   - **Bradicinesia obligatoria** (disminución de velocidad y amplitud en maniobras como *finger tapping*, apertura/cierre de mano o golpeteo de talón).
-   - Más al menos uno de los siguientes:
-     - **Temblor de reposo** (4 a 6 Hz, tildado a menudo como "cuenta de monedas").
-     - **Rigidez muscular** (fenómeno de rueda dentada).
+parkinson
 
-2. **Paso 2: Evaluar Criterios de Exclusión Absoluta:**
-   - Signos cerebelosos francos, parálisis de la mirada vertical supranuclear, demencia frontotemporal precoz, o parkinsonismo farmacológico.
+EP
 
-3. **Paso 3: Balance de Banderas Rojas vs. Criterios de Apoyo:**
-   - **Banderas Rojas (*Red Flags*):** Caídas tempranas (<3 años), disautonomía severa precoz, progresión motora acelerada con silla de ruedas temprana.
-   - **Criterios de Apoyo:** Respuesta dramática a levodopa, discinesias inducidas por L-dopa, hiposmia documentada, alucinaciones visuales no psicóticas.
+enfermedad de Parkinson idiopática
 
-```
-                   [ Sospecha de Trastorno del Movimiento ]
-                                      │
-                                      ▼
-                      ¿Cumple Núcleo Motor MDS?
-                      (Bradicinesia + Temblor/Rigidez)
-                                      │
-                      ┌───────────────┴───────────────┐
-                      ▼                               ▼
-                     NO                              SÍ
-             (No es parkinsonismo)                    │
-                                                      ▼
-                                       ¿Criterios de Exclusión Absoluta?
-                                                      │
-                                      ┌───────────────┴───────────────┐
-                                      ▼                               ▼
-                                     SÍ                              NO
-                             (Causa secundaria /                      │
-                              Parkinsonismo plus)                     ▼
-                                                       Evaluar Balance:
-                                                       Criterios de Apoyo vs Red Flags
-                                                       (EP Establecida vs EP Probable)
-```
+## Códigos
 
----
+Snomed: No documentado.; Cie10: No documentado.
 
-## Evidencia Cuantitativa y Fuentes
+## Núcleo diagnóstico
 
-Parámetros diagnósticos validados en la literatura médica (*Movement Disorder Society*, 2015):
+Requiere: Bradicinesia (HM:3061); Y al menos uno de: Temblor de reposo (HM:3062) / Rigidez parkinsoniana (HM:3063); Referencia: pmid:26474316
 
-- **Referencia estándar:** Criterios diagnósticos clínicos MDS para Enfermedad de Parkinson.
-- **Sensibilidad global de la bradicinesia nuclear:** ~0.90 (90%)
-- **Especificidad del núcleo con criterios de apoyo:** ~0.88 - 0.95
-- **Fuente validada:** Postuma RB, Berg D, et al. *MDS clinical diagnostic criteria for Parkinson's disease*. Mov Disord. 2015;30(12):1591-601. [PMID: 26474316]
+## Balance de criterios
 
----
+Referencia: pmid:26474316; Establecida: Apoyos minimos: 2; Banderas maximas: 0; Probable: Contrapeso: 1; Banderas maximas: 2
 
-## Conclusión Semiótica
+## Hallazgos clínicos
 
-La bradicinesia es el **eje cardinal**. Ningún paciente debe diagnosticarse de Parkinson por temblor o rigidez aislados si no se constata la lentitud y el decremento progresivo de amplitud motora.
+### Bradicinesia (HM:3061)
+
+**Rol:** Manifestación
+
+**Efecto:** Apoya
+
+**Estado del LR:** LR no medible
+
+**Motivo:** forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación
+
+### Temblor de reposo (HM:3062)
+
+**Rol:** Manifestación
+
+**Efecto:** Apoya
+
+**Estado del LR:** LR no medible
+
+**Motivo:** componente del núcleo; sesgo de incorporación
+
+### Rigidez parkinsoniana (HM:3063)
+
+**Rol:** Manifestación
+
+**Efecto:** Apoya
+
+**Estado del LR:** LR no medible
+
+**Motivo:** componente del núcleo; sesgo de incorporación
+
+## Aspectos pendientes de documentación
+
+Los criterios de apoyo y las banderas rojas de MDS no se pueblan en este ciclo. Cuando se hagan, les corresponde `consenso_con_afirmacion` y no `consenso_de_lista`: MDS las declara COMO CRITERIO, con su panel detrás y con una mecánica de contrapeso explícita, que es justo lo que una reseña que enumera síntomas de alarma no hace. Esa distinción es la que dejó fuera a la fiebre en HM:6002 y hay que justificarla por escrito, no darla por obvia.
+
+## Referencias y procedencia
+
+**pmid:26474316:** MDS clinical diagnostic criteria for Parkinson's disease. Mov Disord, 2015. DOI: 10.1002/mds.26424.
+
+Fuente clínica: medsemiotics-db, condición HM:6015.

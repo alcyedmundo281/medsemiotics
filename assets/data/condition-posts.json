@@ -1,0 +1,128 @@
+[
+  {
+    "condicion_id": "HM:6001",
+    "archivo": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
+    "slug": "hepatitis-viral-aguda-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=hepatitis-viral-aguda-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6002",
+    "archivo": "condiciones/HM6002-sindrome-intestino-irritable.yaml",
+    "slug": "sindrome-de-intestino-irritable-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=sindrome-de-intestino-irritable-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6003",
+    "archivo": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
+    "slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=mononucleosis-infecciosa-adenopatias-linfocitos-atipicos"
+  },
+  {
+    "condicion_id": "HM:6004",
+    "archivo": "condiciones/HM6004-meningitis-aguda.yaml",
+    "slug": "meningitis-aguda-sacudida-cefalica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=meningitis-aguda-sacudida-cefalica"
+  },
+  {
+    "condicion_id": "HM:6005",
+    "archivo": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
+    "slug": "derrame-pleural-exudado-criterios-light-colesterol",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=derrame-pleural-exudado-criterios-light-colesterol"
+  },
+  {
+    "condicion_id": "HM:6006",
+    "archivo": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
+    "slug": "aneurisma-aorta-abdominal-palpacion-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=aneurisma-aorta-abdominal-palpacion-semiotica"
+  },
+  {
+    "condicion_id": "HM:6007",
+    "archivo": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
+    "slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=sindrome-coronario-agudo-dolor-toracico-ecg"
+  },
+  {
+    "condicion_id": "HM:6008",
+    "archivo": "condiciones/HM6008-hipovolemia.yaml",
+    "slug": "hipovolemia-aguda-signos-vitales-posturales",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=hipovolemia-aguda-signos-vitales-posturales"
+  },
+  {
+    "condicion_id": "HM:6009",
+    "archivo": "condiciones/HM6009-faringitis-estreptococica.yaml",
+    "slug": "faringitis-estreptococica-exudado-criterios-centor",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=faringitis-estreptococica-exudado-criterios-centor"
+  },
+  {
+    "condicion_id": "HM:6010",
+    "archivo": "condiciones/HM6010-sincope-cardiaco.yaml",
+    "slug": "sincope-cardiaco-vs-vasovagal-anamnesis",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=sincope-cardiaco-vs-vasovagal-anamnesis"
+  },
+  {
+    "condicion_id": "HM:6011",
+    "archivo": "condiciones/HM6011-infeccion-precoz-por-vih.yaml",
+    "slug": "infeccion-precoz-por-vih-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=infeccion-precoz-por-vih-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6012",
+    "archivo": "condiciones/HM6012-artrosis-de-cadera.yaml",
+    "slug": "artrosis-de-cadera-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=artrosis-de-cadera-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6013",
+    "archivo": "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml",
+    "slug": "enfermedad-del-manguito-rotador-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=enfermedad-del-manguito-rotador-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6014",
+    "archivo": "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml",
+    "slug": "rotura-completa-del-manguito-rotador-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=rotura-completa-del-manguito-rotador-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6015",
+    "archivo": "condiciones/HM6015-enfermedad-de-parkinson.yaml",
+    "slug": "enfermedad-parkinson-criterios-clinicos-mds",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=enfermedad-parkinson-criterios-clinicos-mds"
+  },
+  {
+    "condicion_id": "HM:6016",
+    "archivo": "condiciones/HM6016-embarazo-ectopico.yaml",
+    "slug": "embarazo-ectopico-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=embarazo-ectopico-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6017",
+    "archivo": "condiciones/HM6017-conjuntivitis-bacteriana.yaml",
+    "slug": "conjuntivitis-bacteriana-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=conjuntivitis-bacteriana-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6018",
+    "archivo": "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml",
+    "slug": "apnea-obstructiva-del-sueno-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=apnea-obstructiva-del-sueno-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6019",
+    "archivo": "condiciones/HM6019-luxacion-cadera-lactante.yaml",
+    "slug": "luxacion-cadera-lactante-barlow-ortolani",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=luxacion-cadera-lactante-barlow-ortolani"
+  },
+  {
+    "condicion_id": "HM:6020",
+    "archivo": "condiciones/HM6020-intubacion-dificil.yaml",
+    "slug": "intubacion-dificil-mallampati-mordida-labio",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=intubacion-dificil-mallampati-mordida-labio"
+  },
+  {
+    "condicion_id": "HM:6021",
+    "archivo": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
+    "slug": "trastorno-consumo-alcohol-audit-audit-c",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-consumo-alcohol-audit-audit-c"
+  }
+]

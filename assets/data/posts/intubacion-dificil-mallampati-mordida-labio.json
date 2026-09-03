@@ -1,86 +1,186 @@
 {
   "id": "HM6020-01",
   "slug": "intubacion-dificil-mallampati-mordida-labio",
-  "title": "Vía aérea difícil: Rendimiento del test de mordida del labio superior y la escala de Mallampati",
-  "subtitle": "Análisis bayesiano de los predictores físicos preoperatorios de intubación difícil según la evidencia de JAMA.",
+  "title": "Intubación difícil: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-22",
   "author": "Dr. Alcy Torres",
   "category": "anestesiologia",
   "category_label": "Anestesiología y Cuidados Críticos",
   "tags": [
     "anestesiologia",
-    "via-aerea",
-    "intubacion",
-    "urgencias",
-    "semiologia",
-    "evidencia"
+    "intubacion-dificil",
+    "semiologia"
   ],
-  "reading_time": "6 min",
+  "reading_time": "8 min",
   "difficulty": "Intermedio",
   "grounding_badge": "HM:6020 · PMID:30721300",
-  "has_quiz": true,
-  "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mallampati.svg/960px-Mallampati.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "image_source": "https://commons.wikimedia.org/wiki/File:Mallampati.svg",
-  "image_license": "CC BY-SA 3.0",
-  "image_title": "Mallampati.svg",
-  "excerpt": "El test de mordida del labio superior clase 3 es el hallazgo físico con mayor fuerza confirmatoria de intubación difícil (LR+ 14), pero ningún hallazgo permite excluir de forma fiable una vía aérea dificultosa.",
   "grounding": {
     "condicion_id": "HM:6020",
     "condicion_nombre": "Intubación difícil",
     "concepto_id": "HM:3078",
     "concepto_nombre": "Test de mordida del labio superior clase 3",
-    "especificidad": 0.96,
+    "estado_lr": "medido",
     "lr_positivo": 14,
     "lr_negativo": null,
-    "poblacion": "pacientes adultos quirúrgicos generales (n = 33 559 en 62 estudios)",
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": "pacientes quirúrgicos adultos (n = 33 559)",
     "referencia_id": "pmid:30721300",
-    "referencia_cita": "Detsky ME, et al. Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review. JAMA. 2019;321(5):493-503.",
+    "referencia_cita": "Detsky ME, Jivraj N, Adhikari NK, Friedrich JO, Pinto R, Simel DL, Wijeysundera DN, Scales DC Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review JAMA 2019",
+    "pmid": "30721300",
     "doi": "10.1001/jama.2018.21413",
-    "pmid": "30721300"
+    "especificidad": 0.96
   },
+  "evidencia": [
+    {
+      "concepto": "HM:3078",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.96,
+      "poblacion": "pacientes quirúrgicos adultos (n = 33 559)",
+      "lr_positivo": {
+        "valor": 14,
+        "ic95": [
+          8.9,
+          22
+        ],
+        "ref": "pmid:30721300"
+      },
+      "decision": "Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
+    },
+    {
+      "concepto": "HM:3079",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.97,
+      "poblacion": "pacientes quirúrgicos adultos",
+      "lr_positivo": {
+        "valor": 6.4,
+        "ic95": [
+          4.1,
+          10
+        ],
+        "ref": "pmid:30721300"
+      },
+      "decision": "Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4."
+    },
+    {
+      "concepto": "HM:3080",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.98,
+      "poblacion": "pacientes quirúrgicos adultos",
+      "lr_positivo": {
+        "valor": 6,
+        "ic95": [
+          3.1,
+          11
+        ],
+        "ref": "pmid:30721300"
+      },
+      "decision": "Retrognatia (mandíbula <9 cm): especificidad del 98% con LR+ 6.0."
+    },
+    {
+      "concepto": "HM:3082",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.95,
+      "poblacion": "pacientes quirúrgicos adultos",
+      "lr_positivo": {
+        "valor": 9.1,
+        "ic95": [
+          5.1,
+          16
+        ],
+        "ref": "pmid:30721300"
+      },
+      "decision": "Score de Wilson de riesgo aumentado: combinación de 5 factores anatómicos con LR+ 9.1 y especificidad del 95%."
+    },
+    {
+      "concepto": "HM:3081",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "especificidad": 0.87,
+      "poblacion": "pacientes quirúrgicos adultos",
+      "lr_positivo": {
+        "valor": 4.1,
+        "ic95": [
+          3,
+          5.6
+        ],
+        "ref": "pmid:30721300"
+      },
+      "decision": "Escala de Mallampati modificada (clase 3 o 4): el test más difundido; aporta un LR+ de 4.1 pero con especificidad moderada (87%)."
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "condicion": "condiciones/HM6020-intubacion-dificil.yaml",
+    "archivos": {
+      "conceptos/HM3078-test-mordida-labio-superior-clase-3.yaml": "bf284c373f4ef74131492f0264af906aec28dcc1891e19f7776d424495a11f1b",
+      "conceptos/HM3079-distancia-hiodomentoniana-corta.yaml": "6afcfa37fd303843404cf8c9c6853885f52b3ec85a76b5c63f471ac54511f141",
+      "conceptos/HM3080-retrognatia.yaml": "e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b",
+      "conceptos/HM3081-mallampati-clase-3-o-4.yaml": "366c0d1c97f6fa6e8742157e005d8058c19a3df9b131b41cdef47fd1360ae170",
+      "conceptos/HM3082-score-de-wilson.yaml": "a6c034805fc5b741f39efffe0d2d933c1737147705c7fb53b518bd8b3e34ffa0",
+      "condiciones/HM6020-intubacion-dificil.yaml": "ff9a4c558137006cb089f056c8f5bf3a48d9ec9bd951225ca5502a571b871704",
+      "referencias/pmid-30721300.yaml": "33f42c72248a77f200f42a1f7fe909b8428f6945ea78ad9bab90f2ac3ed168b5"
+    }
+  },
+  "has_quiz": true,
+  "quiz_count": 2,
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
-    "significante": "Incapacidad de los incisivos inferiores para alcanzar la línea bermellón del labio superior durante la protrusión mandibular forzada (Test de mordida del labio superior clase 3), asociada a Mallampati clase 3/4 o distancia tiromentoniana reducida.",
-    "significado": "Limitación del rango de movimiento temporomandibular y subluxación anterior, restringiendo la alineación de los ejes oral, faríngeo y laríngeo durante la laringoscopia directa.",
-    "decision": "Test de mordida del labio superior clase 3: el hallazgo individual que más eleva la probabilidad (LR+ 14, especificidad 96%), subiendo el riesgo basal del 10% a más del 60%. Impone preparar videolaringoscopio o fibrobroncoscopio flexible. Advertencia: NINGÚN signo clínico negativo permite descartar intubación difícil (LR- ~0.50-0.70)."
+    "significante": "Test de mordida del labio superior clase 3",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
   },
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Cuál es el hallazgo físico individual con mayor rendimiento diagnóstico para confirmar una intubación endotraqueal difícil según JAMA (PMID: 30721300)?",
+      "pregunta": "¿Qué cociente registra la fuente para Test de mordida del labio superior clase 3 en Intubación difícil?",
+      "concepto_id": "HM:3078",
+      "referencia_id": "pmid:30721300",
+      "pmid": "30721300",
+      "doi": "10.1001/jama.2018.21413",
       "opciones": [
         {
-          "texto": "El test de mordida del labio superior (Upper Lip Bite Test) clase 3, con un LR+ de 14 y una especificidad del 96%.",
+          "texto": "LR positivo: 14.",
           "correcta": true,
-          "feedback": "¡Correcto! La incapacidad de morder el labio superior por encima de la línea del bermellón es el predictor anatómico individual más específico (LR+ 14), superando al test de Mallampati aislado (LR+ 4.1)."
+          "feedback": "Registro HM:6020: LR positivo: 14."
         },
         {
-          "texto": "La escala de Mallampati modificada clase 1 o 2.",
+          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Incorrecto. Mallampati 1 y 2 son patrones normales que no aumentan la probabilidad de intubación difícil."
-        },
-        {
-          "texto": "Cualquier hallazgo físico normal descarta la vía aérea difícil con un LR- menor a 0.05.",
-          "correcta": false,
-          "feedback": "Incorrecto. Una de las conclusiones centrales de JAMA es que ningún hallazgo clínico permite excluir de forma fiable una intubación difícil (los LR- rondan 0.50-0.70)."
+          "feedback": "El registro documenta: LR positivo: 14."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "Un paciente presenta un test de Mallampati clase 3 previo a una cirugía electiva (incidencia basal 10%). ¿Cuál es la interpretación bayesiana de este hallazgo?",
+      "pregunta": "¿Qué cociente registra la fuente para Distancia hiodomentoniana o tiromentoniana corta en Intubación difícil?",
+      "concepto_id": "HM:3079",
+      "referencia_id": "pmid:30721300",
+      "pmid": "30721300",
+      "doi": "10.1001/jama.2018.21413",
       "opciones": [
         {
-          "texto": "Posee un LR+ de 4.1 (especificidad 87%), elevando la probabilidad de intubación difícil a aproximadamente 31%, lo que aconseja disponer de dispositivos de rescate.",
-          "correcta": true,
-          "feedback": "¡Correcto! Con un LR+ de 4.1, Mallampati 3/4 multiplica por cuatro la probabilidad pretest, requiriendo preparación del carro de vía aérea difícil."
+          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "El registro documenta: LR positivo: 6.4."
         },
         {
-          "texto": "Es un hallazgo patognomónico que obliga a realizar siempre una traqueostomía de entrada.",
-          "correcta": false,
-          "feedback": "Incorrecto. Un LR+ de 4.1 aumenta la sospecha y exige videolaringoscopía o técnicas avanzadas, no una traqueostomía quirúrgica primaria."
+          "texto": "LR positivo: 6.4.",
+          "correcta": true,
+          "feedback": "Registro HM:6020: LR positivo: 6.4."
         }
       ]
     }
-  ]
+  ],
+  "body": "# Intubación difícil\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nDifficult endotracheal intubation\n\n## Sinónimos\n\nvía aérea difícil\n\nintubación orotraqueal dificultosa\n\nlaringoscopia difícil\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.1; Población: pacientes adultos quirúrgicos generales candidatos a intubación (n = 33 559 en 62 estudios); Referencia: pmid:30721300\n\n## Factores de riesgo\n\nFactor: Obesidad con IMC elevado\n\nFactor: Movilidad cervical limitada o artropatía cervical\n\nFactor: Antecedente personal de intubación difícil\n\n## Hallazgos clínicos\n\n### Test de mordida del labio superior clase 3 (HM:3078)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.96\n\n**Población:** pacientes quirúrgicos adultos (n = 33 559)\n\n**LR positivo:** Valor: 14; IC del 95 %: 8.9 / 22; Referencia: pmid:30721300\n\n**Decisión:** Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.\n\n### Distancia hiodomentoniana o tiromentoniana corta (HM:3079)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.97\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 6.4; IC del 95 %: 4.1 / 10; Referencia: pmid:30721300\n\n**Decisión:** Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.\n\n### Retrognatia o longitud mandibular reducida (HM:3080)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.98\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 6.0; IC del 95 %: 3.1 / 11; Referencia: pmid:30721300\n\n**Decisión:** Retrognatia (mandíbula <9 cm): especificidad del 98% con LR+ 6.0.\n\n### Score de Wilson de riesgo aumentado (HM:3082)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.95\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 9.1; IC del 95 %: 5.1 / 16; Referencia: pmid:30721300\n\n**Decisión:** Score de Wilson de riesgo aumentado: combinación de 5 factores anatómicos con LR+ 9.1 y especificidad del 95%.\n\n### Escala de Mallampati modificada clase 3 o 4 (HM:3081)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.87\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 4.1; IC del 95 %: 3.0 / 5.6; Referencia: pmid:30721300\n\n**Decisión:** Escala de Mallampati modificada (clase 3 o 4): el test más difundido; aporta un LR+ de 4.1 pero con especificidad moderada (87%).\n\n## Conclusión de la fuente\n\nVarios hallazgos de exploración física simple permiten identificar a pacientes con alta probabilidad de intubación difícil (especialmente el test de mordida del labio superior, LR+ 14), pero ningún hallazgo clínico permite excluir de forma fiable una vía aérea difícil.\n\n## Referencias y procedencia\n\n**pmid:30721300:** Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review. JAMA, 2019. DOI: 10.1001/jama.2018.21413.\n\nFuente clínica: medsemiotics-db, condición HM:6020."
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artículo Clínico - Powersemiotics</title>
+    <link rel="canonical" href="https://powersemiotics.com/medsemiotics/post.html" />
     <link href="assets/fonts/fonts.css" rel="stylesheet" />
     <link href="assets/tailwind.css" rel="stylesheet" />
     <style>
@@ -203,7 +204,7 @@
         </div>
 
         <!-- Interactive Bayesian Calculator (Grounding) -->
-        <section class="mb-14 bg-stone-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl">
+        <section id="calculatorSection" class="mb-14 bg-stone-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl">
           <div class="flex items-center justify-between mb-4">
             <h3 class="text-lg font-bold flex items-center gap-2">
               <span class="text-purple-400">⚡</span>
@@ -212,7 +213,7 @@
             <span class="text-xs font-mono bg-stone-800 text-purple-300 px-2.5 py-1 rounded">Regla de Fagan</span>
           </div>
           <p class="text-sm text-stone-300 mb-6">
-            Ajusta la sospecha pre-test para observar cómo el Likelihood Ratio verificado (<strong id="calcLrPosBadge">LR+ 2.2</strong> / <strong id="calcLrNegBadge">LR- 0.0</strong>) altera la probabilidad final en este paciente.
+            Ajusta la probabilidad pre-test usando los cocientes documentados para <strong id="calculatorSign"></strong>: <strong id="calcLrPosBadge"></strong> / <strong id="calcLrNegBadge"></strong>.
           </p>
 
           <div class="space-y-6">
@@ -233,15 +234,15 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div class="bg-stone-800 p-4 rounded-xl border border-stone-700">
-                <div class="text-xs text-stone-400 mb-1">Si el Signo es POSITIVO (LR+ <span id="posLrText">2.2</span>)</div>
-                <div class="text-2xl font-extrabold text-emerald-400" id="postTestPosProb">35.5%</div>
+                <div class="text-xs text-stone-400 mb-1">Si el Signo es POSITIVO (LR+ <span id="posLrText"></span>)</div>
+                <div class="text-2xl font-extrabold text-emerald-400" id="postTestPosProb"></div>
                 <div class="text-xs text-stone-400 mt-1">Probabilidad Post-Test resultante</div>
               </div>
 
               <div class="bg-stone-800 p-4 rounded-xl border border-stone-700">
-                <div class="text-xs text-stone-400 mb-1">Si el Signo es NEGATIVO (LR- <span id="negLrText">0.0</span>)</div>
-                <div class="text-2xl font-extrabold text-purple-300" id="postTestNegProb">0.0%</div>
-                <div class="text-xs text-stone-400 mt-1">Sospecha residual descartada</div>
+                <div class="text-xs text-stone-400 mb-1">Si el Signo es NEGATIVO (LR- <span id="negLrText"></span>)</div>
+                <div class="text-2xl font-extrabold text-purple-300" id="postTestNegProb"></div>
+                <div class="text-xs text-stone-400 mt-1">Probabilidad Post-Test resultante</div>
               </div>
             </div>
           </div>
@@ -282,9 +283,9 @@
             Cargando referencia...
           </p>
           <div class="flex items-center gap-4 text-purple-700 font-semibold">
-            <span id="refPmidSpan">PMID: 10411200</span>
+            <span id="refPmidSpan"></span>
             <span>•</span>
-            <span id="refDoiSpan">DOI: 10.1001/jama.282.2.175</span>
+            <span id="refDoiSpan"></span>
           </div>
         </footer>
       </article>
@@ -329,7 +330,9 @@
 
         // Evidence and references
         const g = currentPost.grounding || {};
-        document.getElementById('clinicalEvidenceLabel').textContent = g.poblacion || 'Evidencia clínica en adultos';
+        document.getElementById('clinicalEvidenceLabel').textContent = g.poblacion || 'Población no especificada en la fuente';
+        document.getElementById('pubmedLink').classList.toggle('hidden', !g.pmid);
+        document.getElementById('doiLink').classList.toggle('hidden', !g.doi);
         if (g.pmid) {
           document.getElementById('pubmedLink').href = `https://pubmed.ncbi.nlm.nih.gov/${g.pmid}/`;
           document.getElementById('refPmidSpan').textContent = `PMID: ${g.pmid}`;
@@ -338,7 +341,10 @@
           document.getElementById('doiLink').href = `https://doi.org/${g.doi}`;
           document.getElementById('refDoiSpan').textContent = `DOI: ${g.doi}`;
         }
-        document.getElementById('refCitation').textContent = g.referencia_cita || 'Referencia verificada en la literatura médica indexada.';
+        document.getElementById('refCitation').textContent = g.referencia_cita || 'Este registro todavía no documenta una referencia bibliográfica específica.';
+        document.getElementById('refPmidSpan').textContent = g.pmid ? `PMID: ${g.pmid}` : '';
+        document.getElementById('refDoiSpan').textContent = g.doi ? `DOI: ${g.doi}` : '';
+        document.querySelector('link[rel="canonical"]').href = `https://powersemiotics.com/medsemiotics/post.html?slug=${encodeURIComponent(currentPost.slug)}`;
 
         // Titles & Metas
         document.getElementById('postTitle').textContent = currentPost.title;
@@ -369,12 +375,15 @@
         document.getElementById('triadaDecision').textContent = t.decision || '';
 
         // Bayesian calculator setup
-        const lrPos = Number(g.lr_positivo) || 2.2;
-        const lrNeg = Number(g.lr_negativo) !== undefined ? Number(g.lr_negativo) : 0.0;
-        document.getElementById('calcLrPosBadge').textContent = `LR+ ${lrPos}`;
-        document.getElementById('calcLrNegBadge').textContent = `LR- ${lrNeg}`;
-        document.getElementById('posLrText').textContent = lrPos;
-        document.getElementById('negLrText').textContent = lrNeg;
+        const numericLR = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
+        const lrPos = g.estado_lr === 'medido' ? numericLR(g.lr_positivo) : null;
+        const lrNeg = g.estado_lr === 'medido' ? numericLR(g.lr_negativo) : null;
+        document.getElementById('calculatorSection').classList.toggle('hidden', lrPos === null && lrNeg === null);
+        document.getElementById('calculatorSign').textContent = g.concepto_nombre || '';
+        document.getElementById('calcLrPosBadge').textContent = `LR+ ${lrPos ?? 'no documentado'}`;
+        document.getElementById('calcLrNegBadge').textContent = `LR- ${lrNeg ?? 'no documentado'}`;
+        document.getElementById('posLrText').textContent = lrPos ?? 'no documentado';
+        document.getElementById('negLrText').textContent = lrNeg ?? 'no documentado';
 
         setupCalculator(lrPos, lrNeg);
 
@@ -425,12 +434,12 @@
           // Post Pos Odds = Pre Odds * LR+
           const postPosOdds = preOdds * lrPos;
           const postPosProb = (postPosOdds / (1 + postPosOdds)) * 100;
-          posProbText.textContent = `${postPosProb.toFixed(1)}%`;
+          posProbText.textContent = lrPos === null ? 'No calculable' : `${postPosProb.toFixed(1)}%`;
 
           // Post Neg Odds = Pre Odds * LR-
           const postNegOdds = preOdds * lrNeg;
           const postNegProb = (postNegOdds / (1 + postNegOdds)) * 100;
-          negProbText.textContent = `${postNegProb.toFixed(1)}%`;
+          negProbText.textContent = lrNeg === null ? 'No calculable' : `${postNegProb.toFixed(1)}%`;
         }
 
         slider.addEventListener('input', update);
@@ -442,10 +451,11 @@
       function parseSimpleMarkdown(md) {
         if (!md) return '';
         return md
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
           .replace(/^### (.*$)/gim, '<h3>$1</h3>')
           .replace(/^## (.*$)/gim, '<h2>$1</h2>')
           .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-          .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+          .replace(/^&gt; (.*$)/gim, '<blockquote>$1</blockquote>')
           .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
           .replace(/\*(.*?)\*/gim, '<em>$1</em>')
           .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')

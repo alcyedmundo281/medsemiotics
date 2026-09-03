@@ -5,6 +5,22 @@ enlaza desde ninguna página y no hace falta para servir el contenido.
 
 ## Recurrentes
 
+### `generate_topic.py` y `build-blog.mjs`
+
+`generate_topic.py --sync-all` lee medsemiotics-db y crea o actualiza un artículo
+por condición, conservando las URLs existentes. Los temas sin LR se publican
+cualitativamente; no se inventan cifras ni referencias. `--db-dir` selecciona
+un checkout local y `--check` comprueba la correspondencia sin modificar archivos.
+
+`build-blog.mjs` convierte los Markdown derivados en el índice, los artículos
+JSON, el banco de preguntas y `assets/data/condition-posts.json`. Su opción
+`--check` detecta JSON desactualizados. Las preguntas se generan a partir de
+hechos explícitos de la fuente y mantienen sus propias referencias.
+
+`--write-backlinks` requiere un checkout de medsemiotics-db y comprueba que los
+artículos estén publicados antes de actualizar su campo `url`. No hace commits
+ni pushes. Ver el flujo completo en [README.md](../README.md).
+
 ### `build-js.mjs`
 
 Compila con esbuild los módulos interactivos en React. Lee cada `.jsx` —que es la

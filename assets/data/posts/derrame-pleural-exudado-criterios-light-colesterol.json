@@ -1,87 +1,171 @@
 {
   "id": "HM6005-01",
   "slug": "derrame-pleural-exudado-criterios-light-colesterol",
-  "title": "Derrame pleural: Criterios de Light vs. Colesterol pleural en la discriminación de exudados",
-  "subtitle": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos.",
+  "title": "Derrame pleural exudativo: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "author": "Dr. Alcy Torres",
   "category": "neumologia",
   "category_label": "Neumología y Medicina Interna",
   "tags": [
+    "derrame-pleural-exudativo",
     "neumologia",
-    "pleura",
-    "laboratorio",
-    "criterios-light",
-    "medicina-interna"
+    "semiologia"
   ],
-  "reading_time": "6 min",
+  "reading_time": "8 min",
   "difficulty": "Intermedio",
   "grounding_badge": "HM:6005 · PMID:24938565",
+  "grounding": {
+    "condicion_id": "HM:6005",
+    "condicion_nombre": "Derrame pleural exudativo",
+    "concepto_id": "HM:3009",
+    "concepto_nombre": "LDH elevada en líquido pleural",
+    "estado_lr": "medido",
+    "lr_positivo": 18,
+    "lr_negativo": null,
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": null,
+    "referencia_id": "pmid:24938565",
+    "referencia_cita": "Wilcox ME, Chong CA, Stanbrook MB, Tricco AC, Wong C, Straus SE Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review JAMA 2014",
+    "pmid": "24938565",
+    "doi": "10.1001/jama.2014.5552"
+  },
+  "evidencia": [
+    {
+      "concepto": "HM:3008",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "rango": [
+          7.1,
+          250
+        ],
+        "umbral": "colesterol pleural > 55 mg/dL",
+        "ref": "pmid:24938565",
+        "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+      },
+      "decision": "el indicador aislado más potente para clasificar el derrame"
+    },
+    {
+      "concepto": "HM:3009",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 18,
+        "ic95": [
+          6.8,
+          46
+        ],
+        "umbral": "LDH pleural > 200 U/L",
+        "ref": "pmid:24938565"
+      },
+      "decision": "confirma exudado con un intervalo estrecho y reproducible"
+    },
+    {
+      "concepto": "HM:3010",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 14,
+        "ic95": [
+          5.5,
+          38
+        ],
+        "umbral": "cociente > 0.3",
+        "ref": "pmid:24938565"
+      },
+      "decision": "alternativa al colesterol absoluto cuando se dispone del sérico"
+    },
+    {
+      "concepto": "HM:3011",
+      "rol": "prueba_sensible",
+      "estado_lr": "medido",
+      "lr_negativo": {
+        "valor": 0.04,
+        "ic95": [
+          0.02,
+          0.11
+        ],
+        "umbral": "ausencia de los tres criterios",
+        "ref": "pmid:24938565"
+      },
+      "decision": "su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado"
+    },
+    {
+      "concepto": "HM:3007",
+      "rol": "manifestacion",
+      "estado_lr": "no_medible",
+      "motivo": "es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado"
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
+    "archivos": {
+      "conceptos/HM3007-derrame-pleural.yaml": "a0ff591f0ccbe7b4ce56d06f14b904174cc9be542c879da32ea43688912c76c3",
+      "conceptos/HM3008-colesterol-pleural-elevado.yaml": "54f1e2a139a84af23e9dac062e42c6a2b79a150d87d9657452f6860ecb5d13e6",
+      "conceptos/HM3009-ldh-pleural-elevada.yaml": "b2afdd29ba8d0e1489ef7ec4578124f9479c4586db527cf66e5f8fc8df6287d2",
+      "conceptos/HM3010-cociente-colesterol-pleural-suero.yaml": "43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180",
+      "conceptos/HM3011-criterios-de-light.yaml": "7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f",
+      "condiciones/HM6005-derrame-pleural-exudativo.yaml": "be323c90b632013bda6e773b21184abc9afb8f77d920168ca036ee2b17c18d44",
+      "referencias/pmid-24938565.yaml": "e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc"
+    }
+  },
   "has_quiz": true,
   "quiz_count": 2,
   "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg/960px-Chest_radiograph_of_a_lung_with_Kerley_B_lines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "image_source": "https://commons.wikimedia.org/wiki/File%3AChest%20radiograph%20of%20a%20lung%20with%20Kerley%20B%20lines.jpg",
   "image_license": "CC0",
   "image_title": "Chest radiograph of a lung with Kerley B lines.jpg",
-  "excerpt": "Análisis cuantitativo de la toracocentesis diagnóstica y el manejo de los falsos exudados por diuréticos.",
-  "grounding": {
-    "condicion_id": "HM:6005",
-    "condicion_nombre": "Derrame pleural exudativo",
-    "concepto_id": "HM:3008",
-    "concepto_nombre": "Colesterol pleural elevado (>55 mg/dL)",
-    "sensibilidad": 0.85,
-    "especificidad": 0.98,
-    "lr_positivo": 15,
-    "lr_negativo": 0.15,
-    "poblacion": "Adultos sometidos a toracocentesis diagnóstica por derrame pleural",
-    "referencia_id": "pmid:24938565",
-    "referencia_cita": "Wilcox ME, Chong CA, Stanbrook MB, Tricco AC, Wong C, Faughnan ME. Does this patient have an exudative pleural effusion? The Rational Clinical Examination Systematic Review. JAMA. 2014;311(23):2422-31.",
-    "doi": "10.1001/jama.2014.5552",
-    "pmid": "24938565"
-  },
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
-    "significante": "Líquido pleural obtenido por toracocentesis con colesterol pleural > 55 mg/dL, o relación LDH pleural/sérica > 0.6, o proteínas pleurales/séricas > 0.5.",
-    "significado": "Aumento patológico de la permeabilidad capilar pleural o disrupción linfática local por inflamación, neoplasia o infección.",
-    "decision": "Los Criterios de Light tradicionales ofrecen alta sensibilidad (98%) pero clasifican erróneamente hasta un 25% de trasudados tratados con diuréticos como exudados; la medición del colesterol pleural (>55 mg/dL) y el gradiente albúmina sérica-pleural (>1.2 g/dL) resuelven la discrepancia."
+    "significante": "LDH elevada en líquido pleural",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "confirma exudado con un intervalo estrecho y reproducible"
   },
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "Un paciente con insuficiencia cardíaca descompensada y tratamiento intensivo con furosemida presenta derrame pleural derecho. La toracocentesis muestra relación proteínas pleural/suero de 0.53 (criterio de Light positivo para exudado), pero el gradiente de albúmina suero-líquido pleural es de 1.4 g/dL (> 1.2 g/dL). ¿Cuál es la interpretación diagnóstica según JAMA (PMID: 24938565)?",
+      "pregunta": "¿Qué cociente registra la fuente para LDH elevada en líquido pleural en Derrame pleural exudativo?",
+      "concepto_id": "HM:3009",
+      "referencia_id": "pmid:24938565",
+      "pmid": "24938565",
+      "doi": "10.1001/jama.2014.5552",
       "opciones": [
         {
-          "texto": "Es un pseudoirritativo / falso exudado inducido por la concentración diurética; el gradiente de albúmina >1.2 g/dL confirma que la etiología de base es un trasudado por insuficiencia cardíaca.",
+          "texto": "LR positivo: 18.",
           "correcta": true,
-          "feedback": "¡Correcto! El uso de diuréticos concentra las proteínas del líquido pleural produciendo falsos exudados por Light. Un gradiente albúmina sérica - albúmina pleural > 1.2 g/dL reclasifica correctamente el derrame como trasudado cardíaco."
+          "feedback": "Registro HM:6005: LR positivo: 18."
         },
         {
-          "texto": "Confirma empiema bacteriano y exige colocar tubo de drenaje pleural de inmediato.",
+          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Incorrecto. No hay clínica infecciosa y el gradiente de albúmina demuestra que es origen hemodinámico."
-        },
-        {
-          "texto": "Descarta cualquier patología cardíaca.",
-          "correcta": false,
-          "feedback": "Incorrecto. Es un fenómeno clásico en pacientes con IC tratados con diuréticos."
+          "feedback": "El registro documenta: LR positivo: 18."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Qué ventaja diagnóstica ofrece el colesterol pleural > 55 mg/dL frente a los criterios de Light convencionales?",
+      "pregunta": "¿Cómo está documentado el LR de Colesterol elevado en líquido pleural en Derrame pleural exudativo?",
+      "concepto_id": "HM:3008",
+      "referencia_id": "pmid:24938565",
+      "pmid": "24938565",
+      "doi": "10.1001/jama.2014.5552",
       "opciones": [
         {
-          "texto": "Mayor especificidad para exudado con un LR+ superior a 10-15 en la mayoría de las series analizadas, sin requerir extracción sanguínea simultánea.",
-          "correcta": true,
-          "feedback": "¡Exacto! El colesterol en líquido pleural > 55 mg/dL es altamente específico para patología pleural activa exudativa y no se altera tan fácilmente por la volemia."
+          "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+          "correcta": false,
+          "feedback": "El registro documenta: La fuente registra un rango, no una estimación numérica única."
         },
         {
-          "texto": "Permite diagnosticar precozmente hipercolesterolemia familiar tipo II.",
-          "correcta": false,
-          "feedback": "Incorrecto. Los lípidos pleurales reflejan permeabilidad de la membrana y degradación celular local, no dislipidemias hereditarias."
+          "texto": "La fuente registra un rango, no una estimación numérica única.",
+          "correcta": true,
+          "feedback": "Registro HM:6005: La fuente registra un rango, no una estimación numérica única."
         }
       ]
     }
   ],
-  "body": "## La bifurcación inicial: ¿Trasudado o Exudado?\r\n\r\nAnte cualquier paciente con derrame pleural significativo, la toracocentesis diagnóstica persigue un objetivo fundamental: **clasificar el líquido en trasudado (causa sistémica como insuficiencia cardíaca o cirrosis) o exudado (patología pleural local como neumonía, cáncer o tuberculosis)**.\r\n\r\n---\r\n\r\n## Criterios de Light y el reto de los Falsos Exudados\r\n\r\nLa revisión sistemática de 48 estudios publicada en *JAMA* (2014) sintetizó la evidencia diagnóstica:\r\n\r\n### Criterios Clásicos de Light (Requieren al menos 1 positivo):\r\n1. Relación proteínas pleurales / séricas $> 0.5$.\r\n2. Relación LDH pleural / sérica $> 0.6$.\r\n3. LDH pleural $> 2/3$ del límite superior normal sérico.\r\n- **Sensibilidad:** 97.5% (LR− **0.04**, ideal para descartar exudado).\r\n- **Especificidad:** Solo 70–80% (frecuentes falsos positivos en pacientes bajo diuréticos).\r\n\r\n### Pruebas de Rescate y Alta Especificidad:\r\n- **Colesterol en líquido pleural $> 55\\text{ mg/dL}$:** LR+ entre **7.1 y 15.0** (excelente confirmación).\r\n- **Gradiente albúmina sérica - pleural $> 1.2\\text{ g/dL}$:** Reclasifica el 85% de los falsos exudados como trasudados cardíacos verdaderos.\r\n\r\n```\r\n                    [ Análisis de Líquido Pleural ]\r\n                                   │\r\n              ┌────────────────────┴────────────────────┐\r\n              ▼                                         ▼\r\n     Criterios de Light NEGATIVOS               Criterios de Light POSITIVOS\r\n            (LR- ≈ 0.04)                                (Sens. ~98%)\r\n              │                                         │\r\n     Trasudado Confirmado                       ¿Paciente bajo diuréticos?\r\n  (Insuficiencia cardíaca, cirrosis)                    │\r\n                                            ┌───────────┴───────────┐\r\n                                            ▼                       ▼\r\n                                           SÍ                       NO\r\n                                   Medir Gradiente Albúmina     Exudado Verdadero\r\n                                    o Colesterol Pleural       (Estudiar cáncer,\r\n                                  (>1.2 g/dL = Trasudado)      infección o TBC)\r\n```\r\n\r\n---\r\n\r\n## Evidencia Cuantitativa y Fuentes\r\n\r\nParámetros diagnósticos validados en la literatura médica (serie *The Rational Clinical Examination*, JAMA):\r\n\r\n- **Sensibilidad de los Criterios de Light combinados:** 0.98 (98%)\r\n- **Cociente de Verosimilitud Negativo (Light negativo):** 0.04 [Wilcox et al., JAMA 2014]\r\n- **Cociente de Verosimilitud Positivo del Colesterol Pleural (>55 mg/dL):** 7.1 – 15.0 [Wilcox et al., JAMA 2014]\r\n- **Población evaluada:** Adultos sometidos a punción pleural diagnóstica.\r\n\r\n---\r\n\r\n## Conclusión Semiótica\r\n\r\nLos Criterios de Light son una magnífica prueba de **cribado (alta sensibilidad, LR− 0.04)**. Si son negativos, el exudado queda descartado; si son positivos en un paciente con insuficiencia cardíaca, el colesterol pleural o el gradiente de albúmina evitan estudios invasivos innecesarios."
+  "body": "# Derrame pleural exudativo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nExudative pleural effusion\n\n## Sinónimos\n\nexudado pleural\n\nderrame pleural tipo exudado\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Colesterol elevado en líquido pleural (HM:3008)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor.\n\n**Decisión:** el indicador aislado más potente para clasificar el derrame\n\n### LDH elevada en líquido pleural (HM:3009)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 18; IC del 95 %: 6.8 / 46; Umbral: LDH pleural > 200 U/L; Referencia: pmid:24938565\n\n**Decisión:** confirma exudado con un intervalo estrecho y reproducible\n\n### Cociente colesterol pleural/sérico elevado (HM:3010)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14; IC del 95 %: 5.5 / 38; Umbral: cociente > 0.3; Referencia: pmid:24938565\n\n**Decisión:** alternativa al colesterol absoluto cuando se dispone del sérico\n\n### Criterios de Light (HM:3011)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.02 / 0.11; Umbral: ausencia de los tres criterios; Referencia: pmid:24938565\n\n**Decisión:** su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado\n\n### Derrame pleural (HM:3007)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado\n\n## Referencias y procedencia\n\n**pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.\n\nFuente clínica: medsemiotics-db, condición HM:6005."
 }
