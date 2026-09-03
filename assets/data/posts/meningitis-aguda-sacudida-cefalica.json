@@ -143,41 +143,79 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Acentuación de la cefalea con la sacudida cefálica en Meningitis aguda?",
+      "pregunta": "En Meningitis aguda, ¿cuál es el resultado documentado del LR positivo para «Acentuación de la cefalea con la sacudida cefálica»?",
       "concepto_id": "HM:3006",
       "referencia_id": "pmid:10411200",
       "pmid": "10411200",
       "doi": "10.1001/jama.282.2.175",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6004",
+        "concepto_id": "HM:3006",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 2.2,
+          "ref": "pmid:10411200",
+          "poblacion": "pacientes que ya presentan fiebre y cefalea"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda",
+        "advertencia": null
+      },
       "opciones": [
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 2.2. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
+        },
         {
           "texto": "LR positivo: 2.2.",
           "correcta": true,
-          "feedback": "Registro HM:6004: LR positivo: 2.2."
+          "feedback": "LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
         },
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 2.2 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 2.2."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Cómo está documentado el LR de Cefalea en Meningitis aguda?",
+      "pregunta": "En Meningitis aguda, ¿qué estado de la evidencia corresponde a «Cefalea» según la fuente?",
       "concepto_id": "HM:0207",
       "referencia_id": null,
       "pmid": null,
       "doi": null,
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6004",
+        "concepto_id": "HM:0207",
+        "estado_lr": "no_medido",
+        "campo": null,
+        "dato": null,
+        "poblacion": null,
+        "motivo": "la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract",
+        "decision": null,
+        "advertencia": null
+      },
       "opciones": [
-        {
-          "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
-          "correcta": false,
-          "feedback": "El registro documenta: LR no medido"
-        },
         {
           "texto": "LR no medido",
           "correcta": true,
-          "feedback": "Registro HM:6004: LR no medido"
+          "feedback": "LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+        },
+        {
+          "texto": "LR no medible",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+        },
+        {
+          "texto": "Sin efecto discriminativo",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
         }
       ]
     }

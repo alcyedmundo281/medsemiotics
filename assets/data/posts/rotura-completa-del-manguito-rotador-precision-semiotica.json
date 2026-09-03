@@ -101,41 +101,89 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Signo de lag de rotación interna en Rotura completa del manguito rotador?",
+      "pregunta": "En Rotura completa del manguito rotador, ¿cuál es el resultado documentado del LR positivo para «Signo de lag de rotación interna»?",
       "concepto_id": "HM:3057",
       "referencia_id": "pmid:23982370",
       "pmid": "23982370",
       "doi": "10.1001/jama.2013.276187",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6014",
+        "concepto_id": "HM:3057",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 5.6,
+          "ic95": [
+            2.6,
+            12
+          ],
+          "ref": "pmid:23982370"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta.",
+        "advertencia": null
+      },
       "opciones": [
         {
           "texto": "LR positivo: 5.6.",
           "correcta": true,
-          "feedback": "Registro HM:6014: LR positivo: 5.6."
+          "feedback": "LR positivo: 5.6. IC del 95 %: 2.6 a 12. Interpretación registrada: sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
         },
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 5.6 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 5.6."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.6. IC del 95 %: 2.6 a 12. Interpretación registrada: sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 5.6. LR positivo: 5.6. IC del 95 %: 2.6 a 12. Interpretación registrada: sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Qué cociente registra la fuente para Signo de lag de rotación externa en Rotura completa del manguito rotador?",
+      "pregunta": "En Rotura completa del manguito rotador, ¿cuál es el resultado documentado del LR positivo para «Signo de lag de rotación externa»?",
       "concepto_id": "HM:3056",
       "referencia_id": "pmid:23982370",
       "pmid": "23982370",
       "doi": "10.1001/jama.2013.276187",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6014",
+        "concepto_id": "HM:3056",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 7.2,
+          "ic95": [
+            1.7,
+            31
+          ],
+          "ref": "pmid:23982370"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 7.2 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 7.2."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 7.2. IC del 95 %: 1.7 a 31. Interpretación registrada: el cociente más alto para la rotura completa, con intervalo muy ancho."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 7.2. LR positivo: 7.2. IC del 95 %: 1.7 a 31. Interpretación registrada: el cociente más alto para la rotura completa, con intervalo muy ancho."
         },
         {
           "texto": "LR positivo: 7.2.",
           "correcta": true,
-          "feedback": "Registro HM:6014: LR positivo: 7.2."
+          "feedback": "LR positivo: 7.2. IC del 95 %: 1.7 a 31. Interpretación registrada: el cociente más alto para la rotura completa, con intervalo muy ancho."
         }
       ]
     }

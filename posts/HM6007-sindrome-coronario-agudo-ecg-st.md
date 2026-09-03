@@ -54,7 +54,7 @@ evidencia:
   rol: prueba_especifica
   estado_lr: medido
   especificidad: 0.95
-  lr_positivo:
+  lr_positivo: &id001
     valor: 5.3
     ic95:
     - 2.1
@@ -65,7 +65,7 @@ evidencia:
   rol: prueba_especifica
   estado_lr: medido
   especificidad: 0.91
-  lr_positivo:
+  lr_positivo: &id002
     valor: 3.6
     ic95:
     - 1.6
@@ -111,31 +111,59 @@ evidencia:
   motivo: es el motivo de consulta que define la población estudiada, no una prueba dentro de ella
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Descenso del segmento ST en Síndrome coronario agudo?
+  pregunta: En Síndrome coronario agudo, ¿cuál es el resultado documentado del LR positivo para «Descenso del segmento ST»?
   concepto_id: HM:3015
   referencia_id: pmid:26547467
   pmid: '26547467'
   doi: 10.1001/jama.2015.12735
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6007
+    concepto_id: HM:3015
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: el hallazgo aislado más útil, pero insuficiente para confirmar
+    advertencia: null
   opciones:
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 5.3. LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar.'
   - texto: 'LR positivo: 5.3.'
     correcta: true
-    feedback: 'Registro HM:6007: LR positivo: 5.3.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+    feedback: 'LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar.'
+  - texto: El valor 5.3 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 5.3.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Signos de isquemia en el electrocardiograma en Síndrome coronario agudo?
+  pregunta: En Síndrome coronario agudo, ¿cuál es el resultado documentado del LR positivo para «Signos de isquemia en el electrocardiograma»?
   concepto_id: HM:3016
   referencia_id: pmid:26547467
   pmid: '26547467'
   doi: 10.1001/jama.2015.12735
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6007
+    concepto_id: HM:3016
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: categoría más amplia que el descenso del ST y con menos peso
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
-    correcta: false
-    feedback: 'El registro documenta: LR positivo: 3.6.'
   - texto: 'LR positivo: 3.6.'
     correcta: true
-    feedback: 'Registro HM:6007: LR positivo: 3.6.'
+    feedback: 'LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso.'
+  - texto: El valor 3.6 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 3.6. LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso.'
 ---
 
 # Síndrome coronario agudo

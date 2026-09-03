@@ -51,7 +51,7 @@ evidencia:
   rol: prueba_especifica
   estado_lr: medido
   poblacion: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)
-  lr_positivo:
+  lr_positivo: &id001
     valor: 6.5
     ic95:
     - 3.9
@@ -63,7 +63,7 @@ evidencia:
   rol: prueba_sensible
   estado_lr: medido
   poblacion: adultos evaluados con AUDIT
-  lr_negativo:
+  lr_negativo: &id002
     valor: 0.33
     ic95:
     - 0.2
@@ -105,31 +105,59 @@ evidencia:
   decision: 'TWEAK o T-ACE < 2 en postparto: excelente poder de exclusión (LR- 0.05), descartando prácticamente el trastorno en esta población.'
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Cuestionario AUDIT con puntuación ≥ 8 en Trastorno por consumo de alcohol?
+  pregunta: 'En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR positivo para «Cuestionario AUDIT con puntuación ≥ 8»? Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633).'
   concepto_id: HM:3083
   referencia_id: pmid:38592385
   pmid: '38592385'
   doi: 10.1001/jama.2024.3101
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6021
+    concepto_id: HM:3083
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)
+    motivo: null
+    decision: 'AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.'
+    advertencia: null
   opciones:
+  - texto: El valor 6.5 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 6.5. LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.'
   - texto: 'LR positivo: 6.5.'
     correcta: true
-    feedback: 'Registro HM:6021: LR positivo: 6.5.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
-    correcta: false
-    feedback: 'El registro documenta: LR positivo: 6.5.'
+    feedback: 'LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Cuestionario AUDIT con puntuación < 8 en Trastorno por consumo de alcohol?
+  pregunta: 'En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR negativo para «Cuestionario AUDIT con puntuación < 8»? Población: adultos evaluados con AUDIT.'
   concepto_id: HM:3085
   referencia_id: pmid:38592385
   pmid: '38592385'
   doi: 10.1001/jama.2024.3101
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6021
+    concepto_id: HM:3085
+    estado_lr: medido
+    campo: lr_negativo
+    dato: *id002
+    poblacion: adultos evaluados con AUDIT
+    motivo: null
+    decision: 'AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.'
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'El registro documenta: LR negativo: 0.33.'
+    feedback: 'Sí hay una medición documentada: LR negativo: 0.33. LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.'
   - texto: 'LR negativo: 0.33.'
     correcta: true
-    feedback: 'Registro HM:6021: LR negativo: 0.33.'
+    feedback: 'LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.'
+  - texto: El valor 0.33 corresponde al LR positivo y no al LR negativo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.'
 ---
 
 # Trastorno por consumo de alcohol

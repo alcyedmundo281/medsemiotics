@@ -53,7 +53,7 @@ evidencia:
   estado_lr: medido
   especificidad: 0.96
   poblacion: pacientes quirúrgicos adultos (n = 33 559)
-  lr_positivo:
+  lr_positivo: &id001
     valor: 14
     ic95:
     - 8.9
@@ -65,7 +65,7 @@ evidencia:
   estado_lr: medido
   especificidad: 0.97
   poblacion: pacientes quirúrgicos adultos
-  lr_positivo:
+  lr_positivo: &id002
     valor: 6.4
     ic95:
     - 4.1
@@ -110,31 +110,59 @@ evidencia:
   decision: 'Escala de Mallampati modificada (clase 3 o 4): el test más difundido; aporta un LR+ de 4.1 pero con especificidad moderada (87%).'
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Test de mordida del labio superior clase 3 en Intubación difícil?
+  pregunta: 'En Intubación difícil, ¿cuál es el resultado documentado del LR positivo para «Test de mordida del labio superior clase 3»? Población: pacientes quirúrgicos adultos (n = 33 559).'
   concepto_id: HM:3078
   referencia_id: pmid:30721300
   pmid: '30721300'
   doi: 10.1001/jama.2018.21413
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6020
+    concepto_id: HM:3078
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: pacientes quirúrgicos adultos (n = 33 559)
+    motivo: null
+    decision: 'Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.'
+    advertencia: null
   opciones:
   - texto: 'LR positivo: 14.'
     correcta: true
-    feedback: 'Registro HM:6020: LR positivo: 14.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+    feedback: 'LR positivo: 14. IC del 95 %: 8.9 a 22. Población: pacientes quirúrgicos adultos (n = 33 559). Interpretación registrada: Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.'
+  - texto: El valor 14 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 14.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 14. IC del 95 %: 8.9 a 22. Población: pacientes quirúrgicos adultos (n = 33 559). Interpretación registrada: Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 14. LR positivo: 14. IC del 95 %: 8.9 a 22. Población: pacientes quirúrgicos adultos (n = 33 559). Interpretación registrada: Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Distancia hiodomentoniana o tiromentoniana corta en Intubación difícil?
+  pregunta: 'En Intubación difícil, ¿cuál es el resultado documentado del LR positivo para «Distancia hiodomentoniana o tiromentoniana corta»? Población: pacientes quirúrgicos adultos.'
   concepto_id: HM:3079
   referencia_id: pmid:30721300
   pmid: '30721300'
   doi: 10.1001/jama.2018.21413
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6020
+    concepto_id: HM:3079
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: pacientes quirúrgicos adultos
+    motivo: null
+    decision: 'Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.'
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+  - texto: El valor 6.4 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 6.4.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.4. IC del 95 %: 4.1 a 10. Población: pacientes quirúrgicos adultos. Interpretación registrada: Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 6.4. LR positivo: 6.4. IC del 95 %: 4.1 a 10. Población: pacientes quirúrgicos adultos. Interpretación registrada: Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.'
   - texto: 'LR positivo: 6.4.'
     correcta: true
-    feedback: 'Registro HM:6020: LR positivo: 6.4.'
+    feedback: 'LR positivo: 6.4. IC del 95 %: 4.1 a 10. Población: pacientes quirúrgicos adultos. Interpretación registrada: Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.'
 ---
 
 # Intubación difícil

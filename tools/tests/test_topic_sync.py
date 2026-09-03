@@ -86,6 +86,40 @@ class SynchronizationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.make(Source("no_medible", {"valor": 7.5, "ref": "pmid:123"}))
 
+    def test_questions_preserve_interval_population_and_reference(self):
+        source = Source("medido", {"valor": 6.5, "ic95": [3.9, 11],
+                                   "umbral": "Prueba >= 8", "ref": "pmid:123"})
+        source.c["signos"][0]["poblacion"] = "Población de la fuente"
+        source.c["signos"][0]["decision"] = "Decisión descrita por la fuente."
+        _, post = self.make(source)
+        q = post["autoevaluacion"][0]
+        self.assertEqual(len(q["opciones"]), 3)
+        self.assertEqual(sum(o["correcta"] for o in q["opciones"]), 1)
+        answer = next(o for o in q["opciones"] if o["correcta"])
+        self.assertIn("3.9 a 11", answer["feedback"])
+        self.assertIn("Población de la fuente", q["pregunta"])
+        self.assertIn("Decisión descrita por la fuente.", answer["feedback"])
+        self.assertEqual(q["evidencia"]["dato"], source.c["signos"][0]["lr_positivo"])
+        self.assertEqual(q["doi"], "10.test/fuente")
+        self.assertEqual(q["fuente_doi"], "10.test/dataset")
+
+    def test_range_question_never_treats_an_endpoint_as_a_point_estimate(self):
+        _, post = self.make(Source("medido", {"rango": [7.1, 250], "ref": "pmid:123"}))
+        q = post["autoevaluacion"][0]
+        answer = next(o for o in q["opciones"] if o["correcta"])
+        self.assertIn("7.1 a 250", answer["texto"])
+        self.assertEqual(q["evidencia"]["dato"]["rango"], [7.1, 250])
+        self.assertTrue(all("límite" in o["feedback"] for o in q["opciones"] if not o["correcta"]))
+
+    def test_negative_lr_question_remains_negative(self):
+        source = Source("medido")
+        source.c["signos"][0]["lr_negativo"] = {"valor": 0.3, "ref": "pmid:123"}
+        _, post = self.make(source)
+        q = post["autoevaluacion"][0]
+        answer = next(o for o in q["opciones"] if o["correcta"])
+        self.assertEqual(answer["texto"], "LR negativo: 0.3.")
+        self.assertEqual(q["evidencia"]["campo"], "lr_negativo")
+
 
 if __name__ == "__main__":
     unittest.main()

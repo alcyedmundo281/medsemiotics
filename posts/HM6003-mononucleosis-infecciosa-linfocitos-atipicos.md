@@ -55,7 +55,7 @@ evidencia:
   rol: prueba_especifica
   estado_lr: medido
   especificidad: 0.87
-  lr_positivo:
+  lr_positivo: &id001
     valor: 3.1
     ic95:
     - 1.6
@@ -65,7 +65,7 @@ evidencia:
 - concepto: HM:3002
   rol: prueba_especifica
   estado_lr: medido
-  lr_positivo:
+  lr_positivo: &id002
     rango:
     - 3.0
     - 3.1
@@ -152,31 +152,59 @@ evidencia:
     ref: pmid:27115266
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Adenopatía cervical posterior en Mononucleosis infecciosa?
+  pregunta: En Mononucleosis infecciosa, ¿cuál es el resultado documentado del LR positivo para «Adenopatía cervical posterior»?
   concepto_id: HM:3001
   referencia_id: pmid:27115266
   pmid: '27115266'
   doi: 10.1001/jama.2016.2111
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6003
+    concepto_id: HM:3001
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: aumenta la probabilidad; por sí sola no confirma
+    advertencia: null
   opciones:
+  - texto: El valor 3.1 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 1.6 a 5.9. Interpretación registrada: aumenta la probabilidad; por sí sola no confirma.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 1.6 a 5.9. Interpretación registrada: aumenta la probabilidad; por sí sola no confirma.'
   - texto: 'LR positivo: 3.1.'
     correcta: true
-    feedback: 'Registro HM:6003: LR positivo: 3.1.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
-    correcta: false
-    feedback: 'El registro documenta: LR positivo: 3.1.'
+    feedback: 'LR positivo: 3.1. IC del 95 %: 1.6 a 5.9. Interpretación registrada: aumenta la probabilidad; por sí sola no confirma.'
 - id: q2
-  pregunta: ¿Cómo está documentado el LR de Adenopatía inguinal o axilar en Mononucleosis infecciosa?
+  pregunta: Al evaluar «Adenopatía inguinal o axilar» en Mononucleosis infecciosa, ¿cómo debe comunicarse el LR positivo según la fuente?
   concepto_id: HM:3002
   referencia_id: pmid:27115266
   pmid: '27115266'
   doi: 10.1001/jama.2016.2111
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6003
+    concepto_id: HM:3002
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: aumenta la probabilidad de forma similar a la cervical posterior
+    advertencia: null
   opciones:
-  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
+  - texto: 'LR positivo: 3.1, como estimación puntual única.'
     correcta: false
-    feedback: 'El registro documenta: La fuente registra un rango, no una estimación numérica única.'
-  - texto: La fuente registra un rango, no una estimación numérica única.
+    feedback: '3.1 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior.'
+  - texto: 'LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única.'
     correcta: true
-    feedback: 'Registro HM:6003: La fuente registra un rango, no una estimación numérica única.'
+    feedback: 'LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior.'
+  - texto: 'LR positivo: 3.0, como estimación puntual única.'
+    correcta: false
+    feedback: '3.0 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior.'
 ---
 
 # Mononucleosis infecciosa

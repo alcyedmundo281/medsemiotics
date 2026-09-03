@@ -193,41 +193,82 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Axila seca en Hipovolemia?",
+      "pregunta": "En Hipovolemia, ¿cuál es el resultado documentado del LR positivo para «Axila seca»? Población: pacientes con vómitos, diarrea o descenso de la ingesta.",
       "concepto_id": "HM:3021",
       "referencia_id": "pmid:10086438",
       "pmid": "10086438",
       "doi": "10.1001/jama.281.11.1022",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6008",
+        "concepto_id": "HM:3021",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 2.8,
+          "ic95": [
+            1.4,
+            5.4
+          ],
+          "ref": "pmid:10086438"
+        },
+        "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+        "motivo": null,
+        "decision": "apoya el diagnóstico, con fuerza modesta",
+        "advertencia": null
+      },
       "opciones": [
         {
           "texto": "LR positivo: 2.8.",
           "correcta": true,
-          "feedback": "Registro HM:6008: LR positivo: 2.8."
+          "feedback": "LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
         },
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 2.8 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 2.8."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 2.8. LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Cómo está documentado el LR de Mareo postural intenso en Hipovolemia?",
+      "pregunta": "En Hipovolemia, ¿qué estado de la evidencia corresponde a «Mareo postural intenso» según la fuente?",
       "concepto_id": "HM:3019",
       "referencia_id": null,
       "pmid": null,
       "doi": null,
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6008",
+        "concepto_id": "HM:3019",
+        "estado_lr": "no_medido",
+        "campo": null,
+        "dato": null,
+        "poblacion": "adultos con sospecha de pérdida sanguínea",
+        "motivo": "la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado.",
+        "decision": "su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+          "texto": "LR no medible",
           "correcta": false,
-          "feedback": "El registro documenta: LR no medido"
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
+        },
+        {
+          "texto": "Sin efecto discriminativo",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
         },
         {
           "texto": "LR no medido",
           "correcta": true,
-          "feedback": "Registro HM:6008: LR no medido"
+          "feedback": "LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
         }
       ]
     }

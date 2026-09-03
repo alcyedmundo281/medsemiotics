@@ -57,7 +57,7 @@ evidencia:
   ic95_especificidad:
   - 0.58
   - 0.73
-  lr_positivo:
+  lr_positivo: &id002
     valor: 2.1
     ic95:
     - 1.7
@@ -75,7 +75,7 @@ evidencia:
   ic95_especificidad:
   - 0.85
   - 0.94
-  lr_positivo:
+  lr_positivo: &id001
     valor: 2.5
     ic95:
     - 1.5
@@ -84,31 +84,59 @@ evidencia:
   decision: 'el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada'
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Otitis media concomitante en Conjuntivitis bacteriana?
+  pregunta: En Conjuntivitis bacteriana, ¿cuál es el resultado documentado del LR positivo para «Otitis media concomitante»?
   concepto_id: HM:3071
   referencia_id: pmid:35699701
   pmid: '35699701'
   doi: 10.1001/jama.2022.7687
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6017
+    concepto_id: HM:3071
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: 'el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada'
+    advertencia: null
   opciones:
   - texto: 'LR positivo: 2.5.'
     correcta: true
-    feedback: 'Registro HM:6017: LR positivo: 2.5.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+    feedback: 'LR positivo: 2.5. IC del 95 %: 1.5 a 4.4. Interpretación registrada: el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada.'
+  - texto: El valor 2.5 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 2.5.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.5. IC del 95 %: 1.5 a 4.4. Interpretación registrada: el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 2.5. LR positivo: 2.5. IC del 95 %: 1.5 a 4.4. Interpretación registrada: el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Secreción ocular mucopurulenta en Conjuntivitis bacteriana?
+  pregunta: En Conjuntivitis bacteriana, ¿cuál es el resultado documentado del LR positivo para «Secreción ocular mucopurulenta»?
   concepto_id: HM:3070
   referencia_id: pmid:35699701
   pmid: '35699701'
   doi: 10.1001/jama.2022.7687
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6017
+    concepto_id: HM:3070
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: 'el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico'
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+  - texto: El valor 2.1 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 2.1.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.1. IC del 95 %: 1.7 a 2.6. Interpretación registrada: el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 2.1. LR positivo: 2.1. IC del 95 %: 1.7 a 2.6. Interpretación registrada: el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico.'
   - texto: 'LR positivo: 2.1.'
     correcta: true
-    feedback: 'Registro HM:6017: LR positivo: 2.1.'
+    feedback: 'LR positivo: 2.1. IC del 95 %: 1.7 a 2.6. Interpretación registrada: el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico.'
 ---
 
 # Conjuntivitis bacteriana

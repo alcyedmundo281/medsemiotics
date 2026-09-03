@@ -135,6 +135,8 @@ function buildBlog() {
           condicion_id: data.grounding ? data.grounding.condicion_id : null,
           condicion_nombre: data.grounding ? data.grounding.condicion_nombre : data.title,
           concepto_id: q.concepto_id,
+          evidencia: q.evidencia,
+          fuente_doi: q.fuente_doi,
           referencia_id: q.referencia_id,
           pmid: q.pmid || null,
           doi: q.doi || null,

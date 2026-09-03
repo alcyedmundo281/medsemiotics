@@ -89,41 +89,75 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Cómo está documentado el LR de Bradicinesia en Enfermedad de Parkinson?",
+      "pregunta": "En Enfermedad de Parkinson, ¿qué estado de la evidencia corresponde a «Bradicinesia» según la fuente?",
       "concepto_id": "HM:3061",
       "referencia_id": null,
       "pmid": null,
       "doi": null,
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6015",
+        "concepto_id": "HM:3061",
+        "estado_lr": "no_medible",
+        "campo": null,
+        "dato": null,
+        "poblacion": null,
+        "motivo": "forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación",
+        "decision": null,
+        "advertencia": null
+      },
       "opciones": [
+        {
+          "texto": "LR no medido",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación."
+        },
+        {
+          "texto": "Sin efecto discriminativo",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación."
+        },
         {
           "texto": "LR no medible",
           "correcta": true,
-          "feedback": "Registro HM:6015: LR no medible"
-        },
-        {
-          "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
-          "correcta": false,
-          "feedback": "El registro documenta: LR no medible"
+          "feedback": "LR no medible Motivo: forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Cómo está documentado el LR de Temblor de reposo en Enfermedad de Parkinson?",
+      "pregunta": "En Enfermedad de Parkinson, ¿qué estado de la evidencia corresponde a «Temblor de reposo» según la fuente?",
       "concepto_id": "HM:3062",
       "referencia_id": null,
       "pmid": null,
       "doi": null,
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6015",
+        "concepto_id": "HM:3062",
+        "estado_lr": "no_medible",
+        "campo": null,
+        "dato": null,
+        "poblacion": null,
+        "motivo": "componente del núcleo; sesgo de incorporación",
+        "decision": null,
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+          "texto": "Sin efecto discriminativo",
           "correcta": false,
-          "feedback": "El registro documenta: LR no medible"
+          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: componente del núcleo; sesgo de incorporación."
         },
         {
           "texto": "LR no medible",
           "correcta": true,
-          "feedback": "Registro HM:6015: LR no medible"
+          "feedback": "LR no medible Motivo: componente del núcleo; sesgo de incorporación."
+        },
+        {
+          "texto": "LR no medido",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: componente del núcleo; sesgo de incorporación."
         }
       ]
     }

@@ -62,31 +62,59 @@ evidencia:
   estado_lr: no_medido
 autoevaluacion:
 - id: q1
-  pregunta: ¿Cómo está documentado el LR de Dolor abdominal en Síndrome de intestino irritable?
+  pregunta: En Síndrome de intestino irritable, ¿qué estado de la evidencia corresponde a «Dolor abdominal» según la fuente?
   concepto_id: HM:0201
   referencia_id: null
   pmid: null
   doi: null
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6002
+    concepto_id: HM:0201
+    estado_lr: no_medido
+    campo: null
+    dato: null
+    poblacion: null
+    motivo: null
+    decision: null
+    advertencia: null
   opciones:
   - texto: LR no medido
     correcta: true
-    feedback: 'Registro HM:6002: LR no medido'
-  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
+    feedback: LR no medido
+  - texto: LR no medible
     correcta: false
-    feedback: 'El registro documenta: LR no medido'
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
+  - texto: Sin efecto discriminativo
+    correcta: false
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
 - id: q2
-  pregunta: ¿Cómo está documentado el LR de Diarrea en Síndrome de intestino irritable?
+  pregunta: En Síndrome de intestino irritable, ¿qué estado de la evidencia corresponde a «Diarrea» según la fuente?
   concepto_id: HM:0303
   referencia_id: null
   pmid: null
   doi: null
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6002
+    concepto_id: HM:0303
+    estado_lr: no_medido
+    campo: null
+    dato: null
+    poblacion: null
+    motivo: null
+    decision: null
+    advertencia: null
   opciones:
-  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
+  - texto: LR no medible
     correcta: false
-    feedback: 'El registro documenta: LR no medido'
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
+  - texto: Sin efecto discriminativo
+    correcta: false
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
   - texto: LR no medido
     correcta: true
-    feedback: 'Registro HM:6002: LR no medido'
+    feedback: LR no medido
 ---
 
 # Síndrome de intestino irritable

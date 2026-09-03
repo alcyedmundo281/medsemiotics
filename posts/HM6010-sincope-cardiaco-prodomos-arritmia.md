@@ -66,7 +66,7 @@ evidencia:
   ic95_especificidad:
   - 0.96
   - 1.0
-  lr_positivo:
+  lr_positivo: &id001
     valor: 7.3
     ic95:
     - 2.4
@@ -84,7 +84,7 @@ evidencia:
   ic95_especificidad:
   - 0.98
   - 1.0
-  lr_positivo:
+  lr_positivo: &id002
     valor: 6.2
     ic95:
     - 1.6
@@ -192,31 +192,59 @@ evidencia:
   motivo: es el motivo de consulta que define la población estudiada; la pregunta no es si hubo síncope sino si fue cardíaco
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Fibrilación o flutter auricular en Síncope cardíaco?
+  pregunta: En Síncope cardíaco, ¿cuál es el resultado documentado del LR positivo para «Fibrilación o flutter auricular»?
   concepto_id: HM:3032
   referencia_id: pmid:31237649
   pmid: '31237649'
   doi: 10.1001/jama.2019.8001
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6010
+    concepto_id: HM:3032
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: el antecedente que más desplaza hacia el origen cardíaco
+    advertencia: null
   opciones:
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 7.3. LR positivo: 7.3. IC del 95 %: 2.4 a 22. Interpretación registrada: el antecedente que más desplaza hacia el origen cardíaco.'
   - texto: 'LR positivo: 7.3.'
     correcta: true
-    feedback: 'Registro HM:6010: LR positivo: 7.3.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+    feedback: 'LR positivo: 7.3. IC del 95 %: 2.4 a 22. Interpretación registrada: el antecedente que más desplaza hacia el origen cardíaco.'
+  - texto: El valor 7.3 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 7.3.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 7.3. IC del 95 %: 2.4 a 22. Interpretación registrada: el antecedente que más desplaza hacia el origen cardíaco.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Cianosis presenciada durante el episodio en Síncope cardíaco?
+  pregunta: En Síncope cardíaco, ¿cuál es el resultado documentado del LR positivo para «Cianosis presenciada durante el episodio»?
   concepto_id: HM:3034
   referencia_id: pmid:31237649
   pmid: '31237649'
   doi: 10.1001/jama.2019.8001
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6010
+    concepto_id: HM:3034
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: 'rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio.'
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
-    correcta: false
-    feedback: 'El registro documenta: LR positivo: 6.2.'
   - texto: 'LR positivo: 6.2.'
     correcta: true
-    feedback: 'Registro HM:6010: LR positivo: 6.2.'
+    feedback: 'LR positivo: 6.2. IC del 95 %: 1.6 a 24. Interpretación registrada: rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio.'
+  - texto: El valor 6.2 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.2. IC del 95 %: 1.6 a 24. Interpretación registrada: rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 6.2. LR positivo: 6.2. IC del 95 %: 1.6 a 24. Interpretación registrada: rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio.'
 ---
 
 # Síncope cardíaco

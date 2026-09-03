@@ -143,41 +143,89 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Maniobras de Barlow y Ortolani positivas en Luxación de cadera en el lactante?",
+      "pregunta": "En Luxación de cadera en el lactante, ¿cuál es el resultado documentado del LR positivo para «Maniobras de Barlow y Ortolani positivas»? Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios).",
       "concepto_id": "HM:3075",
       "referencia_id": "pmid:38619828",
       "pmid": "38619828",
       "doi": "10.1001/jama.2024.2404",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6019",
+        "concepto_id": "HM:3075",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 52,
+          "ic95": [
+            21,
+            127
+          ],
+          "ref": "pmid:38619828"
+        },
+        "poblacion": "lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios)",
+        "motivo": null,
+        "decision": "Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55).",
+        "advertencia": null
+      },
       "opciones": [
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 52. LR positivo: 52. IC del 95 %: 21 a 127. Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios). Interpretación registrada: Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
+        },
         {
           "texto": "LR positivo: 52.",
           "correcta": true,
-          "feedback": "Registro HM:6019: LR positivo: 52."
+          "feedback": "LR positivo: 52. IC del 95 %: 21 a 127. Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios). Interpretación registrada: Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
         },
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 52 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 52."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 52. IC del 95 %: 21 a 127. Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios). Interpretación registrada: Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Qué cociente registra la fuente para Limitación de la abducción de la cadera en el lactante en Luxación de cadera en el lactante?",
+      "pregunta": "En Luxación de cadera en el lactante, ¿cuál es el resultado documentado del LR positivo para «Limitación de la abducción de la cadera en el lactante»? Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios).",
       "concepto_id": "HM:3076",
       "referencia_id": "pmid:38619828",
       "pmid": "38619828",
       "doi": "10.1001/jama.2024.2404",
-      "opciones": [
-        {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-          "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 3.6."
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6019",
+        "concepto_id": "HM:3076",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 3.6,
+          "ic95": [
+            0.72,
+            18
+          ],
+          "ref": "pmid:38619828"
         },
+        "poblacion": "lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios)",
+        "motivo": null,
+        "decision": "Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%.",
+        "advertencia": null
+      },
+      "opciones": [
         {
           "texto": "LR positivo: 3.6.",
           "correcta": true,
-          "feedback": "Registro HM:6019: LR positivo: 3.6."
+          "feedback": "LR positivo: 3.6. IC del 95 %: 0.72 a 18. Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios). Interpretación registrada: Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
+        },
+        {
+          "texto": "El valor 3.6 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.6. IC del 95 %: 0.72 a 18. Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios). Interpretación registrada: Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 3.6. LR positivo: 3.6. IC del 95 %: 0.72 a 18. Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios). Interpretación registrada: Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
         }
       ]
     }

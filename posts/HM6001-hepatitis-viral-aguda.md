@@ -86,31 +86,59 @@ evidencia:
   estado_lr: no_medido
 autoevaluacion:
 - id: q1
-  pregunta: ¿Cómo está documentado el LR de Ictericia en Hepatitis viral aguda?
+  pregunta: En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Ictericia» según la fuente?
   concepto_id: HM:0305
   referencia_id: null
   pmid: null
   doi: null
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6001
+    concepto_id: HM:0305
+    estado_lr: no_medible
+    campo: null
+    dato: null
+    poblacion: null
+    motivo: forma parte de la definición de caso; sesgo de incorporación
+    decision: null
+    advertencia: null
   opciones:
+  - texto: Sin efecto discriminativo
+    correcta: false
+    feedback: 'La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación.'
   - texto: LR no medible
     correcta: true
-    feedback: 'Registro HM:6001: LR no medible'
-  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
+    feedback: 'LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación.'
+  - texto: LR no medido
     correcta: false
-    feedback: 'El registro documenta: LR no medible'
+    feedback: 'La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación.'
 - id: q2
-  pregunta: ¿Cómo está documentado el LR de Coluria en Hepatitis viral aguda?
+  pregunta: En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Coluria» según la fuente?
   concepto_id: HM:0306
   referencia_id: null
   pmid: null
   doi: null
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6001
+    concepto_id: HM:0306
+    estado_lr: no_medido
+    campo: null
+    dato: null
+    poblacion: null
+    motivo: null
+    decision: null
+    advertencia: null
   opciones:
-  - texto: Hay una estimación numérica única disponible para calcular la probabilidad posterior.
-    correcta: false
-    feedback: 'El registro documenta: LR no medido'
   - texto: LR no medido
     correcta: true
-    feedback: 'Registro HM:6001: LR no medido'
+    feedback: LR no medido
+  - texto: LR no medible
+    correcta: false
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
+  - texto: Sin efecto discriminativo
+    correcta: false
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
 ---
 
 # Hepatitis viral aguda

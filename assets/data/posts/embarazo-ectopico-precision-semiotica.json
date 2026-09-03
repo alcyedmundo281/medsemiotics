@@ -160,41 +160,90 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Masa anexial sin gestación intrauterina en ecografía transvaginal en Embarazo ectópico?",
+      "pregunta": "En Embarazo ectópico, ¿cuál es el resultado documentado del LR positivo para «Masa anexial sin gestación intrauterina en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
       "concepto_id": "HM:3064",
       "referencia_id": "pmid:23613077",
       "pmid": "23613077",
       "doi": "10.1001/jama.2013.3914",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6016",
+        "concepto_id": "HM:3064",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 111,
+          "ic95": [
+            12,
+            1028
+          ],
+          "ref": "pmid:23613077"
+        },
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+        "motivo": null,
+        "decision": "el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto",
+        "advertencia": "el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
+      },
       "opciones": [
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 111. LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene."
+        },
         {
           "texto": "LR positivo: 111.",
           "correcta": true,
-          "feedback": "Registro HM:6016: LR positivo: 111."
+          "feedback": "LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene."
         },
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 111 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 111."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Qué cociente registra la fuente para Anomalía anexial en ecografía transvaginal en Embarazo ectópico?",
+      "pregunta": "En Embarazo ectópico, ¿cuál es el resultado documentado del LR negativo para «Anomalía anexial en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
       "concepto_id": "HM:3065",
       "referencia_id": "pmid:23613077",
       "pmid": "23613077",
       "doi": "10.1001/jama.2013.3914",
-      "opciones": [
-        {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-          "correcta": false,
-          "feedback": "El registro documenta: LR negativo: 0.12."
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6016",
+        "concepto_id": "HM:3065",
+        "estado_lr": "medido",
+        "campo": "lr_negativo",
+        "dato": {
+          "valor": 0.12,
+          "ic95": [
+            0.03,
+            0.55
+          ],
+          "ref": "pmid:23613077",
+          "nota": "la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo"
         },
+        "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+        "motivo": null,
+        "decision": "la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí",
+        "advertencia": null
+      },
+      "opciones": [
         {
           "texto": "LR negativo: 0.12.",
           "correcta": true,
-          "feedback": "Registro HM:6016: LR negativo: 0.12."
+          "feedback": "LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+        },
+        {
+          "texto": "El valor 0.12 corresponde al LR positivo y no al LR negativo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR negativo: 0.12. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
         }
       ]
     }

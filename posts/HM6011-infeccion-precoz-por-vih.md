@@ -52,7 +52,7 @@ evidencia:
 - concepto: HM:3039
   rol: prueba_especifica
   estado_lr: medido
-  lr_positivo:
+  lr_positivo: &id001
     valor: 5.4
     ic95:
     - 2.5
@@ -62,7 +62,7 @@ evidencia:
 - concepto: HM:0803
   rol: prueba_especifica
   estado_lr: medido
-  lr_positivo:
+  lr_positivo: &id002
     valor: 4.7
     ic95:
     - 2.1
@@ -115,31 +115,59 @@ evidencia:
   decision: el signo exploratorio más útil, y aun así modesto. El extremo inferior de su intervalo toca 1.0, es decir, es compatible con no aportar nada.
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Úlceras genitales en Infección precoz por VIH?
+  pregunta: En Infección precoz por VIH, ¿cuál es el resultado documentado del LR positivo para «Úlceras genitales»?
   concepto_id: HM:3039
   referencia_id: pmid:25027143
   pmid: '25027143'
   doi: 10.1001/jama.2014.5954
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6011
+    concepto_id: HM:3039
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: el síntoma que más aumenta la probabilidad
+    advertencia: null
   opciones:
   - texto: 'LR positivo: 5.4.'
     correcta: true
-    feedback: 'Registro HM:6011: LR positivo: 5.4.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+    feedback: 'LR positivo: 5.4. IC del 95 %: 2.5 a 12. Interpretación registrada: el síntoma que más aumenta la probabilidad.'
+  - texto: El valor 5.4 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 5.4.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.4. IC del 95 %: 2.5 a 12. Interpretación registrada: el síntoma que más aumenta la probabilidad.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 5.4. LR positivo: 5.4. IC del 95 %: 2.5 a 12. Interpretación registrada: el síntoma que más aumenta la probabilidad.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Pérdida de peso en Infección precoz por VIH?
+  pregunta: En Infección precoz por VIH, ¿cuál es el resultado documentado del LR positivo para «Pérdida de peso»?
   concepto_id: HM:0803
   referencia_id: pmid:25027143
   pmid: '25027143'
   doi: 10.1001/jama.2014.5954
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6011
+    concepto_id: HM:0803
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: null
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+  - texto: El valor 4.7 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 4.7.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.7. IC del 95 %: 2.1 a 7.2.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 4.7. LR positivo: 4.7. IC del 95 %: 2.1 a 7.2.'
   - texto: 'LR positivo: 4.7.'
     correcta: true
-    feedback: 'Registro HM:6011: LR positivo: 4.7.'
+    feedback: 'LR positivo: 4.7. IC del 95 %: 2.1 a 7.2.'
 ---
 
 # Infección precoz por VIH

@@ -134,41 +134,91 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para LDH elevada en líquido pleural en Derrame pleural exudativo?",
+      "pregunta": "En Derrame pleural exudativo, ¿cuál es el resultado documentado del LR positivo para «LDH elevada en líquido pleural»? Umbral: LDH pleural > 200 U/L.",
       "concepto_id": "HM:3009",
       "referencia_id": "pmid:24938565",
       "pmid": "24938565",
       "doi": "10.1001/jama.2014.5552",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6005",
+        "concepto_id": "HM:3009",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 18,
+          "ic95": [
+            6.8,
+            46
+          ],
+          "umbral": "LDH pleural > 200 U/L",
+          "ref": "pmid:24938565"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "confirma exudado con un intervalo estrecho y reproducible",
+        "advertencia": null
+      },
       "opciones": [
         {
           "texto": "LR positivo: 18.",
           "correcta": true,
-          "feedback": "Registro HM:6005: LR positivo: 18."
+          "feedback": "LR positivo: 18. IC del 95 %: 6.8 a 46. Umbral: LDH pleural > 200 U/L. Interpretación registrada: confirma exudado con un intervalo estrecho y reproducible."
         },
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "El valor 18 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 18."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 18. IC del 95 %: 6.8 a 46. Umbral: LDH pleural > 200 U/L. Interpretación registrada: confirma exudado con un intervalo estrecho y reproducible."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 18. LR positivo: 18. IC del 95 %: 6.8 a 46. Umbral: LDH pleural > 200 U/L. Interpretación registrada: confirma exudado con un intervalo estrecho y reproducible."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Cómo está documentado el LR de Colesterol elevado en líquido pleural en Derrame pleural exudativo?",
+      "pregunta": "Al evaluar «Colesterol elevado en líquido pleural» en Derrame pleural exudativo, ¿cómo debe comunicarse el LR positivo según la fuente? Umbral: colesterol pleural > 55 mg/dL.",
       "concepto_id": "HM:3008",
       "referencia_id": "pmid:24938565",
       "pmid": "24938565",
       "doi": "10.1001/jama.2014.5552",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6005",
+        "concepto_id": "HM:3008",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "rango": [
+            7.1,
+            250
+          ],
+          "umbral": "colesterol pleural > 55 mg/dL",
+          "ref": "pmid:24938565",
+          "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "el indicador aislado más potente para clasificar el derrame",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+          "texto": "LR positivo: 7.1, como estimación puntual única.",
           "correcta": false,
-          "feedback": "El registro documenta: La fuente registra un rango, no una estimación numérica única."
+          "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         },
         {
-          "texto": "La fuente registra un rango, no una estimación numérica única.",
+          "texto": "LR positivo: 250, como estimación puntual única.",
+          "correcta": false,
+          "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+        },
+        {
+          "texto": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única.",
           "correcta": true,
-          "feedback": "Registro HM:6005: La fuente registra un rango, no una estimación numérica única."
+          "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         }
       ]
     }

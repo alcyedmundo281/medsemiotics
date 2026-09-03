@@ -47,7 +47,7 @@ evidencia:
 - concepto: HM:3012
   rol: prueba_especifica
   estado_lr: medido
-  lr_positivo:
+  lr_positivo: &id001
     valor: 12.0
     ic95:
     - 7.4
@@ -96,18 +96,32 @@ evidencia:
     ref: pmid:9892455
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Pulsación aórtica ensanchada a la palpación en Aneurisma de aorta abdominal?
+  pregunta: En Aneurisma de aorta abdominal, ¿cuál es el resultado documentado del LR positivo para «Pulsación aórtica ensanchada a la palpación»?
   concepto_id: HM:3012
   referencia_id: pmid:9892455
   pmid: '9892455'
   doi: 10.1001/jama.281.1.77
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6006
+    concepto_id: HM:3012
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: 'la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta'
+    advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.
   opciones:
+  - texto: El valor 12.0 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 12.0. LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.'
   - texto: 'LR positivo: 12.0.'
     correcta: true
-    feedback: 'Registro HM:6006: LR positivo: 12.0.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
-    correcta: false
-    feedback: 'El registro documenta: LR positivo: 12.0.'
+    feedback: 'LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.'
 ---
 
 # Aneurisma de aorta abdominal

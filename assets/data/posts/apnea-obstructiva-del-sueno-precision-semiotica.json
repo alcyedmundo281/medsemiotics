@@ -96,41 +96,90 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Ahogo o jadeo nocturno en Apnea obstructiva del sueño?",
+      "pregunta": "En Apnea obstructiva del sueño, ¿cuál es el resultado documentado del LR positivo para «Ahogo o jadeo nocturno»?",
       "concepto_id": "HM:3072",
       "referencia_id": "pmid:23989984",
       "pmid": "23989984",
       "doi": "10.1001/jama.2013.276185",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6018",
+        "concepto_id": "HM:3072",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 3.3,
+          "ic95": [
+            2.1,
+            4.6
+          ],
+          "umbral_condicion": "IAH ≥10/h",
+          "ref": "pmid:23989984"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño",
+        "advertencia": null
+      },
       "opciones": [
+        {
+          "texto": "El valor 3.3 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.3. IC del 95 %: 2.1 a 4.6. Interpretación registrada: la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 3.3. LR positivo: 3.3. IC del 95 %: 2.1 a 4.6. Interpretación registrada: la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño."
+        },
         {
           "texto": "LR positivo: 3.3.",
           "correcta": true,
-          "feedback": "Registro HM:6018: LR positivo: 3.3."
-        },
-        {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-          "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 3.3."
+          "feedback": "LR positivo: 3.3. IC del 95 %: 2.1 a 4.6. Interpretación registrada: la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Qué cociente registra la fuente para Ronquido en Apnea obstructiva del sueño?",
+      "pregunta": "En Apnea obstructiva del sueño, ¿cuál es el resultado documentado del LR positivo para «Ronquido»?",
       "concepto_id": "HM:3073",
       "referencia_id": "pmid:23989984",
       "pmid": "23989984",
       "doi": "10.1001/jama.2013.276185",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6018",
+        "concepto_id": "HM:3073",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 1.1,
+          "ic95": [
+            1,
+            1.1
+          ],
+          "ref": "pmid:23989984"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo",
+        "advertencia": "un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada"
+      },
       "opciones": [
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 1.1."
+          "feedback": "Sí hay una medición documentada: LR positivo: 1.1. LR positivo: 1.1. IC del 95 %: 1.0 a 1.1. Interpretación registrada: frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo. Advertencia: un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada."
         },
         {
           "texto": "LR positivo: 1.1.",
           "correcta": true,
-          "feedback": "Registro HM:6018: LR positivo: 1.1."
+          "feedback": "LR positivo: 1.1. IC del 95 %: 1.0 a 1.1. Interpretación registrada: frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo. Advertencia: un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada."
+        },
+        {
+          "texto": "El valor 1.1 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 1.1. IC del 95 %: 1.0 a 1.1. Interpretación registrada: frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo. Advertencia: un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada."
         }
       ]
     }

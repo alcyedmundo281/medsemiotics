@@ -187,6 +187,98 @@ def render_value(value, concepts):
     return TERMS.get(text, text)
 
 
+def make_question(condition, sign, concept, references, number, dataset_doi):
+    """Pregunta y retroalimentación trazables al mismo hallazgo de la fuente."""
+    name = concept["termino"]
+    state = sign.get("estado_lr")
+    blocks = [("lr_positivo", "LR positivo", sign.get("lr_positivo") or {}),
+              ("lr_negativo", "LR negativo", sign.get("lr_negativo") or {})]
+    field, label, block = next(
+        ((key, label, block) for key, label, block in blocks if scalar(block.get("valor"))),
+        (None, None, {}),
+    )
+    if field is None and state == "medido":
+        field, label, block = next(
+            ((key, label, block) for key, label, block in blocks if block.get("rango")),
+            (None, None, {}),
+        )
+        if field is None:
+            raise ValueError(f"{condition['id']}: hallazgo medido sin valor ni rango para la pregunta.")
+    context = []
+    for label_context, value in [
+        ("Umbral", block.get("umbral")), ("Población", sign.get("poblacion")),
+    ]:
+        if value:
+            context.append(f"{label_context}: {value}.")
+    context_text = " ".join(context)
+    if scalar(block.get("valor")):
+        answer = f"{label}: {block['valor']}."
+        opposite = "LR negativo" if field == "lr_positivo" else "LR positivo"
+        question = (f"En {condition['termino']}, ¿cuál es el resultado documentado del "
+                    f"{label} para «{name}»? {context_text}").strip()
+        wrong = [
+            (f"El valor {block['valor']} corresponde al {opposite} y no al {label}.",
+             f"Ese número corresponde al {label}, no al {opposite}."),
+            ("La fuente no dispone de un cociente medido para este hallazgo.",
+             f"Sí hay una medición documentada: {answer}"),
+        ]
+    elif block.get("rango"):
+        lo, hi = block["rango"]
+        answer = f"{label}: rango de {lo} a {hi}; no se registra una estimación puntual única."
+        question = (f"Al evaluar «{name}» en {condition['termino']}, "
+                    f"¿cómo debe comunicarse el {label} según la fuente? {context_text}").strip()
+        wrong = [
+            (f"{label}: {lo}, como estimación puntual única.",
+             f"{lo} es el límite inferior del rango documentado, no una estimación puntual."),
+            (f"{label}: {hi}, como estimación puntual única.",
+             f"{hi} es el límite superior del rango documentado, no una estimación puntual."),
+        ]
+    else:
+        if state not in STATES:
+            raise ValueError(f"Estado del LR no reconocido en la pregunta: {state}")
+        answer = STATES[state]
+        question = (f"En {condition['termino']}, ¿qué estado de la evidencia corresponde "
+                    f"a «{name}» según la fuente?")
+        alternatives = {
+            "no_medido": ["no_medible", "sin_efecto"],
+            "no_medible": ["no_medido", "sin_efecto"],
+            "sin_efecto": ["no_medido", "no_medible"],
+        }
+        wrong = [(STATES[other], f"La fuente clasifica este hallazgo como «{answer}».")
+                 for other in alternatives[state]]
+    details = [answer]
+    if block.get("ic95"):
+        lo, hi = block["ic95"]
+        details.append(f"IC del 95 %: {lo} a {hi}.")
+    details += context
+    for label_detail, value in (("Nota", block.get("nota")), ("Motivo", sign.get("motivo")),
+                                ("Interpretación registrada", sign.get("decision")),
+                                ("Advertencia", sign.get("advertencia"))):
+        if value:
+            details.append(f"{label_detail}: {str(value).strip().rstrip('.')}.")
+    explanation = " ".join(details)
+    options = [{"texto": answer, "correcta": True, "feedback": explanation}] + [
+        {"texto": text, "correcta": False, "feedback": correction + " " + explanation}
+        for text, correction in wrong
+    ]
+    offset = (int(condition["id"].split(":")[1]) + number) % len(options)
+    options = options[offset:] + options[:offset]
+    rid = block.get("ref") or sign.get("ref")
+    ref_ids = references.get(rid, {}).get("identificadores", {})
+    return {
+        "id": f"q{number}", "pregunta": question, "concepto_id": sign["concepto"],
+        "referencia_id": rid, "pmid": str(ref_ids["pmid"]) if ref_ids.get("pmid") else None,
+        "doi": ref_ids.get("doi"), "fuente_doi": dataset_doi,
+        "evidencia": {
+            "condicion_id": condition["id"], "concepto_id": sign["concepto"],
+            "estado_lr": state, "campo": field, "dato": block if field else None,
+            "poblacion": sign.get("poblacion"), "motivo": sign.get("motivo"),
+            "decision": sign.get("decision"), "advertencia": sign.get("advertencia"),
+        },
+        "opciones": options,
+    }
+
+
 def make_post(source, condition_path, previous=None):
     c = source.read(condition_path)
     if not re.fullmatch(r"HM:\d+", c.get("id", "")):
@@ -265,36 +357,10 @@ def make_post(source, condition_path, previous=None):
                     c.get("conclusion_de_la_fuente") or
                     "La fuente no documenta una decisión específica para este hallazgo.",
     }
-    quiz = []
     chosen = ([main] + [s for s in signs if s is not main])[:2] if main else []
-    for number, sign in enumerate(chosen, 1):
-        sign_concept = concepts[sign["concepto"]]
-        blocks = [("LR positivo", sign.get("lr_positivo") or {}),
-                  ("LR negativo", sign.get("lr_negativo") or {})]
-        field, block = next(((k, b) for k, b in blocks if scalar(b.get("valor"))), (None, {}))
-        if field:
-            answer = f"{field}: {block['valor']}."
-            question = f"¿Qué cociente registra la fuente para {sign_concept['termino']} en {c['termino']}?"
-            wrong = "La fuente no registra ningún cociente medido para este hallazgo."
-        else:
-            answer = render_value(sign.get("estado_lr"), concepts)
-            question = f"¿Cómo está documentado el LR de {sign_concept['termino']} en {c['termino']}?"
-            wrong = "Hay una estimación numérica única disponible para calcular la probabilidad posterior."
-            if sign.get("estado_lr") == "medido":
-                answer = "La fuente registra un rango, no una estimación numérica única."
-                block = next((b for _, b in blocks if b.get("rango")), {})
-        rid = block.get("ref")
-        qref = references.get(rid, {})
-        qids = qref.get("identificadores", {})
-        options = [
-            {"texto": answer, "correcta": True, "feedback": f"Registro {cid}: {answer}"},
-            {"texto": wrong, "correcta": False, "feedback": f"El registro documenta: {answer}"},
-        ]
-        if number % 2 == 0:
-            options.reverse()
-        quiz.append({"id": f"q{number}", "pregunta": question, "concepto_id": sign["concepto"],
-                     "referencia_id": rid, "pmid": str(qids["pmid"]) if qids.get("pmid") else None,
-                     "doi": qids.get("doi"), "opciones": options})
+    quiz = [make_question(c, sign, concepts[sign['concepto']], references, number,
+                          source_citation['doi'])
+            for number, sign in enumerate(chosen, 1)]
     source_data = {
         "repositorio": REPO, "revision": source.revision,
         "doi": source_citation["doi"],

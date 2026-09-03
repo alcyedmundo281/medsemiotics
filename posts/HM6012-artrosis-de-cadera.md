@@ -57,7 +57,7 @@ evidencia:
   estado_lr: medido
   sensibilidad: 0.24
   especificidad: 0.96
-  lr_positivo:
+  lr_positivo: &id001
     valor: 6.1
     ic95:
     - 1.3
@@ -69,7 +69,7 @@ evidencia:
   estado_lr: medido
   sensibilidad: 0.33
   especificidad: 0.94
-  lr_positivo:
+  lr_positivo: &id002
     valor: 5.7
     ic95:
     - 1.6
@@ -149,31 +149,59 @@ evidencia:
     nota: mismo cociente agrupado que el dolor al subir escaleras
 autoevaluacion:
 - id: q1
-  pregunta: ¿Qué cociente registra la fuente para Dolor posterior de cadera al ponerse en cuclillas en Artrosis de cadera?
+  pregunta: En Artrosis de cadera, ¿cuál es el resultado documentado del LR positivo para «Dolor posterior de cadera al ponerse en cuclillas»?
   concepto_id: HM:3041
   referencia_id: pmid:31846019
   pmid: '31846019'
   doi: 10.1001/jama.2019.19413
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6012
+    concepto_id: HM:3041
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: null
+    motivo: null
+    decision: 'el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante'
+    advertencia: null
   opciones:
+  - texto: El valor 6.1 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.1. IC del 95 %: 1.3 a 29. Interpretación registrada: el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante.'
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 6.1. LR positivo: 6.1. IC del 95 %: 1.3 a 29. Interpretación registrada: el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante.'
   - texto: 'LR positivo: 6.1.'
     correcta: true
-    feedback: 'Registro HM:6012: LR positivo: 6.1.'
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
-    correcta: false
-    feedback: 'El registro documenta: LR positivo: 6.1.'
+    feedback: 'LR positivo: 6.1. IC del 95 %: 1.3 a 29. Interpretación registrada: el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante.'
 - id: q2
-  pregunta: ¿Qué cociente registra la fuente para Dolor inguinal a la abducción o aducción pasiva en Artrosis de cadera?
+  pregunta: En Artrosis de cadera, ¿cuál es el resultado documentado del LR positivo para «Dolor inguinal a la abducción o aducción pasiva»?
   concepto_id: HM:3042
   referencia_id: pmid:31846019
   pmid: '31846019'
   doi: 10.1001/jama.2019.19413
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6012
+    concepto_id: HM:3042
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id002
+    poblacion: null
+    motivo: null
+    decision: null
+    advertencia: null
   opciones:
-  - texto: La fuente no registra ningún cociente medido para este hallazgo.
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'El registro documenta: LR positivo: 5.7.'
+    feedback: 'Sí hay una medición documentada: LR positivo: 5.7. LR positivo: 5.7. IC del 95 %: 1.6 a 20.'
   - texto: 'LR positivo: 5.7.'
     correcta: true
-    feedback: 'Registro HM:6012: LR positivo: 5.7.'
+    feedback: 'LR positivo: 5.7. IC del 95 %: 1.6 a 20.'
+  - texto: El valor 5.7 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.7. IC del 95 %: 1.6 a 20.'
 ---
 
 # Artrosis de cadera

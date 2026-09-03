@@ -8,6 +8,18 @@
     "condicion_id": "HM:6001",
     "condicion_nombre": "Hepatitis viral aguda",
     "concepto_id": "HM:0305",
+    "evidencia": {
+      "condicion_id": "HM:6001",
+      "concepto_id": "HM:0305",
+      "estado_lr": "no_medible",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "forma parte de la definición de caso; sesgo de incorporación",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -17,17 +29,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "¿Cómo está documentado el LR de Ictericia en Hepatitis viral aguda?",
+    "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Ictericia» según la fuente?",
     "opciones": [
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+      },
       {
         "texto": "LR no medible",
         "correcta": true,
-        "feedback": "Registro HM:6001: LR no medible"
+        "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
       },
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "LR no medido",
         "correcta": false,
-        "feedback": "El registro documenta: LR no medible"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
       }
     ]
   },
@@ -40,6 +57,18 @@
     "condicion_id": "HM:6001",
     "condicion_nombre": "Hepatitis viral aguda",
     "concepto_id": "HM:0306",
+    "evidencia": {
+      "condicion_id": "HM:6001",
+      "concepto_id": "HM:0306",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -49,17 +78,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "¿Cómo está documentado el LR de Coluria en Hepatitis viral aguda?",
+    "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Coluria» según la fuente?",
     "opciones": [
-      {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR no medido"
-      },
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "Registro HM:6001: LR no medido"
+        "feedback": "LR no medido"
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
       }
     ]
   },
@@ -72,6 +106,18 @@
     "condicion_id": "HM:6002",
     "condicion_nombre": "Síndrome de intestino irritable",
     "concepto_id": "HM:0201",
+    "evidencia": {
+      "condicion_id": "HM:6002",
+      "concepto_id": "HM:0201",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -81,17 +127,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "¿Cómo está documentado el LR de Dolor abdominal en Síndrome de intestino irritable?",
+    "pregunta": "En Síndrome de intestino irritable, ¿qué estado de la evidencia corresponde a «Dolor abdominal» según la fuente?",
     "opciones": [
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "Registro HM:6002: LR no medido"
+        "feedback": "LR no medido"
       },
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "LR no medible",
         "correcta": false,
-        "feedback": "El registro documenta: LR no medido"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
       }
     ]
   },
@@ -104,6 +155,18 @@
     "condicion_id": "HM:6002",
     "condicion_nombre": "Síndrome de intestino irritable",
     "concepto_id": "HM:0303",
+    "evidencia": {
+      "condicion_id": "HM:6002",
+      "concepto_id": "HM:0303",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -113,17 +176,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "¿Cómo está documentado el LR de Diarrea en Síndrome de intestino irritable?",
+    "pregunta": "En Síndrome de intestino irritable, ¿qué estado de la evidencia corresponde a «Diarrea» según la fuente?",
     "opciones": [
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "LR no medible",
         "correcta": false,
-        "feedback": "El registro documenta: LR no medido"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
       },
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "Registro HM:6002: LR no medido"
+        "feedback": "LR no medido"
       }
     ]
   },
@@ -136,6 +204,25 @@
     "condicion_id": "HM:6003",
     "condicion_nombre": "Mononucleosis infecciosa",
     "concepto_id": "HM:3001",
+    "evidencia": {
+      "condicion_id": "HM:6003",
+      "concepto_id": "HM:3001",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.1,
+        "ic95": [
+          1.6,
+          5.9
+        ],
+        "ref": "pmid:27115266"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "aumenta la probabilidad; por sí sola no confirma",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:27115266",
     "pmid": "27115266",
     "doi": "10.1001/jama.2016.2111",
@@ -145,17 +232,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "aumenta la probabilidad; por sí sola no confirma"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Adenopatía cervical posterior en Mononucleosis infecciosa?",
+    "pregunta": "En Mononucleosis infecciosa, ¿cuál es el resultado documentado del LR positivo para «Adenopatía cervical posterior»?",
     "opciones": [
+      {
+        "texto": "El valor 3.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 1.6 a 5.9. Interpretación registrada: aumenta la probabilidad; por sí sola no confirma."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 1.6 a 5.9. Interpretación registrada: aumenta la probabilidad; por sí sola no confirma."
+      },
       {
         "texto": "LR positivo: 3.1.",
         "correcta": true,
-        "feedback": "Registro HM:6003: LR positivo: 3.1."
-      },
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.1."
+        "feedback": "LR positivo: 3.1. IC del 95 %: 1.6 a 5.9. Interpretación registrada: aumenta la probabilidad; por sí sola no confirma."
       }
     ]
   },
@@ -168,6 +260,25 @@
     "condicion_id": "HM:6003",
     "condicion_nombre": "Mononucleosis infecciosa",
     "concepto_id": "HM:3002",
+    "evidencia": {
+      "condicion_id": "HM:6003",
+      "concepto_id": "HM:3002",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "rango": [
+          3,
+          3.1
+        ],
+        "ref": "pmid:27115266",
+        "nota": "rango entre estudios; la fuente no da estimación resumida"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "aumenta la probabilidad de forma similar a la cervical posterior",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:27115266",
     "pmid": "27115266",
     "doi": "10.1001/jama.2016.2111",
@@ -177,17 +288,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "aumenta la probabilidad; por sí sola no confirma"
     },
-    "pregunta": "¿Cómo está documentado el LR de Adenopatía inguinal o axilar en Mononucleosis infecciosa?",
+    "pregunta": "Al evaluar «Adenopatía inguinal o axilar» en Mononucleosis infecciosa, ¿cómo debe comunicarse el LR positivo según la fuente?",
     "opciones": [
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "LR positivo: 3.1, como estimación puntual única.",
         "correcta": false,
-        "feedback": "El registro documenta: La fuente registra un rango, no una estimación numérica única."
+        "feedback": "3.1 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior."
       },
       {
-        "texto": "La fuente registra un rango, no una estimación numérica única.",
+        "texto": "LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única.",
         "correcta": true,
-        "feedback": "Registro HM:6003: La fuente registra un rango, no una estimación numérica única."
+        "feedback": "LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior."
+      },
+      {
+        "texto": "LR positivo: 3.0, como estimación puntual única.",
+        "correcta": false,
+        "feedback": "3.0 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior."
       }
     ]
   },
@@ -200,6 +316,22 @@
     "condicion_id": "HM:6004",
     "condicion_nombre": "Meningitis aguda",
     "concepto_id": "HM:3006",
+    "evidencia": {
+      "condicion_id": "HM:6004",
+      "concepto_id": "HM:3006",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.2,
+        "ref": "pmid:10411200",
+        "poblacion": "pacientes que ya presentan fiebre y cefalea"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:10411200",
     "pmid": "10411200",
     "doi": "10.1001/jama.282.2.175",
@@ -209,17 +341,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Acentuación de la cefalea con la sacudida cefálica en Meningitis aguda?",
+    "pregunta": "En Meningitis aguda, ¿cuál es el resultado documentado del LR positivo para «Acentuación de la cefalea con la sacudida cefálica»?",
     "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.2. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
+      },
       {
         "texto": "LR positivo: 2.2.",
         "correcta": true,
-        "feedback": "Registro HM:6004: LR positivo: 2.2."
+        "feedback": "LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 2.2 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 2.2."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
       }
     ]
   },
@@ -232,6 +369,18 @@
     "condicion_id": "HM:6004",
     "condicion_nombre": "Meningitis aguda",
     "concepto_id": "HM:0207",
+    "evidencia": {
+      "condicion_id": "HM:6004",
+      "concepto_id": "HM:0207",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -241,17 +390,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda"
     },
-    "pregunta": "¿Cómo está documentado el LR de Cefalea en Meningitis aguda?",
+    "pregunta": "En Meningitis aguda, ¿qué estado de la evidencia corresponde a «Cefalea» según la fuente?",
     "opciones": [
-      {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR no medido"
-      },
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "Registro HM:6004: LR no medido"
+        "feedback": "LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
       }
     ]
   },
@@ -264,6 +418,26 @@
     "condicion_id": "HM:6005",
     "condicion_nombre": "Derrame pleural exudativo",
     "concepto_id": "HM:3009",
+    "evidencia": {
+      "condicion_id": "HM:6005",
+      "concepto_id": "HM:3009",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 18,
+        "ic95": [
+          6.8,
+          46
+        ],
+        "umbral": "LDH pleural > 200 U/L",
+        "ref": "pmid:24938565"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "confirma exudado con un intervalo estrecho y reproducible",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:24938565",
     "pmid": "24938565",
     "doi": "10.1001/jama.2014.5552",
@@ -273,17 +447,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "confirma exudado con un intervalo estrecho y reproducible"
     },
-    "pregunta": "¿Qué cociente registra la fuente para LDH elevada en líquido pleural en Derrame pleural exudativo?",
+    "pregunta": "En Derrame pleural exudativo, ¿cuál es el resultado documentado del LR positivo para «LDH elevada en líquido pleural»? Umbral: LDH pleural > 200 U/L.",
     "opciones": [
       {
         "texto": "LR positivo: 18.",
         "correcta": true,
-        "feedback": "Registro HM:6005: LR positivo: 18."
+        "feedback": "LR positivo: 18. IC del 95 %: 6.8 a 46. Umbral: LDH pleural > 200 U/L. Interpretación registrada: confirma exudado con un intervalo estrecho y reproducible."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 18 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 18."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 18. IC del 95 %: 6.8 a 46. Umbral: LDH pleural > 200 U/L. Interpretación registrada: confirma exudado con un intervalo estrecho y reproducible."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 18. LR positivo: 18. IC del 95 %: 6.8 a 46. Umbral: LDH pleural > 200 U/L. Interpretación registrada: confirma exudado con un intervalo estrecho y reproducible."
       }
     ]
   },
@@ -296,6 +475,26 @@
     "condicion_id": "HM:6005",
     "condicion_nombre": "Derrame pleural exudativo",
     "concepto_id": "HM:3008",
+    "evidencia": {
+      "condicion_id": "HM:6005",
+      "concepto_id": "HM:3008",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "rango": [
+          7.1,
+          250
+        ],
+        "umbral": "colesterol pleural > 55 mg/dL",
+        "ref": "pmid:24938565",
+        "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el indicador aislado más potente para clasificar el derrame",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:24938565",
     "pmid": "24938565",
     "doi": "10.1001/jama.2014.5552",
@@ -305,17 +504,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "confirma exudado con un intervalo estrecho y reproducible"
     },
-    "pregunta": "¿Cómo está documentado el LR de Colesterol elevado en líquido pleural en Derrame pleural exudativo?",
+    "pregunta": "Al evaluar «Colesterol elevado en líquido pleural» en Derrame pleural exudativo, ¿cómo debe comunicarse el LR positivo según la fuente? Umbral: colesterol pleural > 55 mg/dL.",
     "opciones": [
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "LR positivo: 7.1, como estimación puntual única.",
         "correcta": false,
-        "feedback": "El registro documenta: La fuente registra un rango, no una estimación numérica única."
+        "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
       },
       {
-        "texto": "La fuente registra un rango, no una estimación numérica única.",
+        "texto": "LR positivo: 250, como estimación puntual única.",
+        "correcta": false,
+        "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+      },
+      {
+        "texto": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única.",
         "correcta": true,
-        "feedback": "Registro HM:6005: La fuente registra un rango, no una estimación numérica única."
+        "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
       }
     ]
   },
@@ -328,6 +532,26 @@
     "condicion_id": "HM:6006",
     "condicion_nombre": "Aneurisma de aorta abdominal",
     "concepto_id": "HM:3012",
+    "evidencia": {
+      "condicion_id": "HM:6006",
+      "concepto_id": "HM:3012",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 12,
+        "ic95": [
+          7.4,
+          19.5
+        ],
+        "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+        "ref": "pmid:9892455"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta",
+      "advertencia": "no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:9892455",
     "pmid": "9892455",
     "doi": "10.1001/jama.281.1.77",
@@ -337,17 +561,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Pulsación aórtica ensanchada a la palpación en Aneurisma de aorta abdominal?",
+    "pregunta": "En Aneurisma de aorta abdominal, ¿cuál es el resultado documentado del LR positivo para «Pulsación aórtica ensanchada a la palpación»?",
     "opciones": [
+      {
+        "texto": "El valor 12.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 12.0. LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
+      },
       {
         "texto": "LR positivo: 12.0.",
         "correcta": true,
-        "feedback": "Registro HM:6006: LR positivo: 12.0."
-      },
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 12.0."
+        "feedback": "LR positivo: 12.0. IC del 95 %: 7.4 a 19.5. Interpretación registrada: la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta. Advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita."
       }
     ]
   },
@@ -360,6 +589,25 @@
     "condicion_id": "HM:6007",
     "condicion_nombre": "Síndrome coronario agudo",
     "concepto_id": "HM:3015",
+    "evidencia": {
+      "condicion_id": "HM:6007",
+      "concepto_id": "HM:3015",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 5.3,
+        "ic95": [
+          2.1,
+          8.6
+        ],
+        "ref": "pmid:26547467"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:26547467",
     "pmid": "26547467",
     "doi": "10.1001/jama.2015.12735",
@@ -369,17 +617,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Descenso del segmento ST en Síndrome coronario agudo?",
+    "pregunta": "En Síndrome coronario agudo, ¿cuál es el resultado documentado del LR positivo para «Descenso del segmento ST»?",
     "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 5.3. LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar."
+      },
       {
         "texto": "LR positivo: 5.3.",
         "correcta": true,
-        "feedback": "Registro HM:6007: LR positivo: 5.3."
+        "feedback": "LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 5.3 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 5.3."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.3. IC del 95 %: 2.1 a 8.6. Interpretación registrada: el hallazgo aislado más útil, pero insuficiente para confirmar."
       }
     ]
   },
@@ -392,6 +645,25 @@
     "condicion_id": "HM:6007",
     "condicion_nombre": "Síndrome coronario agudo",
     "concepto_id": "HM:3016",
+    "evidencia": {
+      "condicion_id": "HM:6007",
+      "concepto_id": "HM:3016",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.6,
+        "ic95": [
+          1.6,
+          5.7
+        ],
+        "ref": "pmid:26547467"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "categoría más amplia que el descenso del ST y con menos peso",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:26547467",
     "pmid": "26547467",
     "doi": "10.1001/jama.2015.12735",
@@ -401,17 +673,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Signos de isquemia en el electrocardiograma en Síndrome coronario agudo?",
+    "pregunta": "En Síndrome coronario agudo, ¿cuál es el resultado documentado del LR positivo para «Signos de isquemia en el electrocardiograma»?",
     "opciones": [
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.6."
-      },
       {
         "texto": "LR positivo: 3.6.",
         "correcta": true,
-        "feedback": "Registro HM:6007: LR positivo: 3.6."
+        "feedback": "LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso."
+      },
+      {
+        "texto": "El valor 3.6 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.6. LR positivo: 3.6. IC del 95 %: 1.6 a 5.7. Interpretación registrada: categoría más amplia que el descenso del ST y con menos peso."
       }
     ]
   },
@@ -424,6 +701,25 @@
     "condicion_id": "HM:6008",
     "condicion_nombre": "Hipovolemia",
     "concepto_id": "HM:3021",
+    "evidencia": {
+      "condicion_id": "HM:6008",
+      "concepto_id": "HM:3021",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.8,
+        "ic95": [
+          1.4,
+          5.4
+        ],
+        "ref": "pmid:10086438"
+      },
+      "poblacion": "pacientes con vómitos, diarrea o descenso de la ingesta",
+      "motivo": null,
+      "decision": "apoya el diagnóstico, con fuerza modesta",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:10086438",
     "pmid": "10086438",
     "doi": "10.1001/jama.281.11.1022",
@@ -433,17 +729,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "apoya el diagnóstico, con fuerza modesta"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Axila seca en Hipovolemia?",
+    "pregunta": "En Hipovolemia, ¿cuál es el resultado documentado del LR positivo para «Axila seca»? Población: pacientes con vómitos, diarrea o descenso de la ingesta.",
     "opciones": [
       {
         "texto": "LR positivo: 2.8.",
         "correcta": true,
-        "feedback": "Registro HM:6008: LR positivo: 2.8."
+        "feedback": "LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 2.8 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 2.8."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.8. LR positivo: 2.8. IC del 95 %: 1.4 a 5.4. Población: pacientes con vómitos, diarrea o descenso de la ingesta. Interpretación registrada: apoya el diagnóstico, con fuerza modesta."
       }
     ]
   },
@@ -456,6 +757,18 @@
     "condicion_id": "HM:6008",
     "condicion_nombre": "Hipovolemia",
     "concepto_id": "HM:3019",
+    "evidencia": {
+      "condicion_id": "HM:6008",
+      "concepto_id": "HM:3019",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": "adultos con sospecha de pérdida sanguínea",
+      "motivo": "la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado.",
+      "decision": "su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -465,17 +778,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "apoya el diagnóstico, con fuerza modesta"
     },
-    "pregunta": "¿Cómo está documentado el LR de Mareo postural intenso en Hipovolemia?",
+    "pregunta": "En Hipovolemia, ¿qué estado de la evidencia corresponde a «Mareo postural intenso» según la fuente?",
     "opciones": [
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "LR no medible",
         "correcta": false,
-        "feedback": "El registro documenta: LR no medido"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
       },
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "Registro HM:6008: LR no medido"
+        "feedback": "LR no medido Población: adultos con sospecha de pérdida sanguínea. Motivo: la fuente publica sensibilidad y especificidad pero no el cociente. Es derivable por aritmética, pero no se anota como medido porque el autor no lo calculó: la forma de agrupar entre estudios cambia el resultado. Interpretación registrada: su presencia apoya con fuerza la pérdida grande; su ausencia no descarta una pérdida moderada."
       }
     ]
   },
@@ -488,6 +806,22 @@
     "condicion_id": "HM:6009",
     "condicion_nombre": "Faringitis estreptocócica",
     "concepto_id": "HM:3026",
+    "evidencia": {
+      "condicion_id": "HM:6009",
+      "concepto_id": "HM:3026",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.4,
+        "ref": "pmid:11147989",
+        "nota": "la fuente no publica intervalo de confianza en el abstract"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el hallazgo aislado más útil, y aun así insuficiente por sí solo",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:11147989",
     "pmid": "11147989",
     "doi": "10.1001/jama.284.22.2912",
@@ -497,17 +831,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo aislado más útil, y aun así insuficiente por sí solo"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Exudado amigdalino en Faringitis estreptocócica?",
+    "pregunta": "En Faringitis estreptocócica, ¿cuál es el resultado documentado del LR positivo para «Exudado amigdalino»?",
     "opciones": [
+      {
+        "texto": "El valor 3.4 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.4. LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo."
+      },
       {
         "texto": "LR positivo: 3.4.",
         "correcta": true,
-        "feedback": "Registro HM:6009: LR positivo: 3.4."
-      },
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.4."
+        "feedback": "LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo."
       }
     ]
   },
@@ -520,6 +859,22 @@
     "condicion_id": "HM:6009",
     "condicion_nombre": "Faringitis estreptocócica",
     "concepto_id": "HM:3027",
+    "evidencia": {
+      "condicion_id": "HM:6009",
+      "concepto_id": "HM:3027",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.1,
+        "ref": "pmid:11147989",
+        "nota": "la fuente no publica intervalo de confianza en el abstract"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "apoya menos que el exudado amigdalino, del que se distingue",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:11147989",
     "pmid": "11147989",
     "doi": "10.1001/jama.284.22.2912",
@@ -529,17 +884,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo aislado más útil, y aun así insuficiente por sí solo"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Exudado faríngeo en Faringitis estreptocócica?",
+    "pregunta": "En Faringitis estreptocócica, ¿cuál es el resultado documentado del LR positivo para «Exudado faríngeo»?",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 2.1."
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.1. LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue."
       },
       {
         "texto": "LR positivo: 2.1.",
         "correcta": true,
-        "feedback": "Registro HM:6009: LR positivo: 2.1."
+        "feedback": "LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue."
+      },
+      {
+        "texto": "El valor 2.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue."
       }
     ]
   },
@@ -552,6 +912,25 @@
     "condicion_id": "HM:6010",
     "condicion_nombre": "Síncope cardíaco",
     "concepto_id": "HM:3032",
+    "evidencia": {
+      "condicion_id": "HM:6010",
+      "concepto_id": "HM:3032",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 7.3,
+        "ic95": [
+          2.4,
+          22
+        ],
+        "ref": "pmid:31237649"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el antecedente que más desplaza hacia el origen cardíaco",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:31237649",
     "pmid": "31237649",
     "doi": "10.1001/jama.2019.8001",
@@ -561,17 +940,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el antecedente que más desplaza hacia el origen cardíaco"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Fibrilación o flutter auricular en Síncope cardíaco?",
+    "pregunta": "En Síncope cardíaco, ¿cuál es el resultado documentado del LR positivo para «Fibrilación o flutter auricular»?",
     "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 7.3. LR positivo: 7.3. IC del 95 %: 2.4 a 22. Interpretación registrada: el antecedente que más desplaza hacia el origen cardíaco."
+      },
       {
         "texto": "LR positivo: 7.3.",
         "correcta": true,
-        "feedback": "Registro HM:6010: LR positivo: 7.3."
+        "feedback": "LR positivo: 7.3. IC del 95 %: 2.4 a 22. Interpretación registrada: el antecedente que más desplaza hacia el origen cardíaco."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 7.3 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 7.3."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 7.3. IC del 95 %: 2.4 a 22. Interpretación registrada: el antecedente que más desplaza hacia el origen cardíaco."
       }
     ]
   },
@@ -584,6 +968,25 @@
     "condicion_id": "HM:6010",
     "condicion_nombre": "Síncope cardíaco",
     "concepto_id": "HM:3034",
+    "evidencia": {
+      "condicion_id": "HM:6010",
+      "concepto_id": "HM:3034",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 6.2,
+        "ic95": [
+          1.6,
+          24
+        ],
+        "ref": "pmid:31237649"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:31237649",
     "pmid": "31237649",
     "doi": "10.1001/jama.2019.8001",
@@ -593,17 +996,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el antecedente que más desplaza hacia el origen cardíaco"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Cianosis presenciada durante el episodio en Síncope cardíaco?",
+    "pregunta": "En Síncope cardíaco, ¿cuál es el resultado documentado del LR positivo para «Cianosis presenciada durante el episodio»?",
     "opciones": [
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 6.2."
-      },
       {
         "texto": "LR positivo: 6.2.",
         "correcta": true,
-        "feedback": "Registro HM:6010: LR positivo: 6.2."
+        "feedback": "LR positivo: 6.2. IC del 95 %: 1.6 a 24. Interpretación registrada: rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio."
+      },
+      {
+        "texto": "El valor 6.2 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.2. IC del 95 %: 1.6 a 24. Interpretación registrada: rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 6.2. LR positivo: 6.2. IC del 95 %: 1.6 a 24. Interpretación registrada: rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio."
       }
     ]
   },
@@ -616,6 +1024,25 @@
     "condicion_id": "HM:6011",
     "condicion_nombre": "Infección precoz por VIH",
     "concepto_id": "HM:3039",
+    "evidencia": {
+      "condicion_id": "HM:6011",
+      "concepto_id": "HM:3039",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 5.4,
+        "ic95": [
+          2.5,
+          12
+        ],
+        "ref": "pmid:25027143"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el síntoma que más aumenta la probabilidad",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:25027143",
     "pmid": "25027143",
     "doi": "10.1001/jama.2014.5954",
@@ -625,17 +1052,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el síntoma que más aumenta la probabilidad"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Úlceras genitales en Infección precoz por VIH?",
+    "pregunta": "En Infección precoz por VIH, ¿cuál es el resultado documentado del LR positivo para «Úlceras genitales»?",
     "opciones": [
       {
         "texto": "LR positivo: 5.4.",
         "correcta": true,
-        "feedback": "Registro HM:6011: LR positivo: 5.4."
+        "feedback": "LR positivo: 5.4. IC del 95 %: 2.5 a 12. Interpretación registrada: el síntoma que más aumenta la probabilidad."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 5.4 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 5.4."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.4. IC del 95 %: 2.5 a 12. Interpretación registrada: el síntoma que más aumenta la probabilidad."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 5.4. LR positivo: 5.4. IC del 95 %: 2.5 a 12. Interpretación registrada: el síntoma que más aumenta la probabilidad."
       }
     ]
   },
@@ -648,6 +1080,25 @@
     "condicion_id": "HM:6011",
     "condicion_nombre": "Infección precoz por VIH",
     "concepto_id": "HM:0803",
+    "evidencia": {
+      "condicion_id": "HM:6011",
+      "concepto_id": "HM:0803",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 4.7,
+        "ic95": [
+          2.1,
+          7.2
+        ],
+        "ref": "pmid:25027143"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:25027143",
     "pmid": "25027143",
     "doi": "10.1001/jama.2014.5954",
@@ -657,17 +1108,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el síntoma que más aumenta la probabilidad"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Pérdida de peso en Infección precoz por VIH?",
+    "pregunta": "En Infección precoz por VIH, ¿cuál es el resultado documentado del LR positivo para «Pérdida de peso»?",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 4.7 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 4.7."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.7. IC del 95 %: 2.1 a 7.2."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 4.7. LR positivo: 4.7. IC del 95 %: 2.1 a 7.2."
       },
       {
         "texto": "LR positivo: 4.7.",
         "correcta": true,
-        "feedback": "Registro HM:6011: LR positivo: 4.7."
+        "feedback": "LR positivo: 4.7. IC del 95 %: 2.1 a 7.2."
       }
     ]
   },
@@ -680,6 +1136,25 @@
     "condicion_id": "HM:6012",
     "condicion_nombre": "Artrosis de cadera",
     "concepto_id": "HM:3041",
+    "evidencia": {
+      "condicion_id": "HM:6012",
+      "concepto_id": "HM:3041",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 6.1,
+        "ic95": [
+          1.3,
+          29
+        ],
+        "ref": "pmid:31846019"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:31846019",
     "pmid": "31846019",
     "doi": "10.1001/jama.2019.19413",
@@ -689,17 +1164,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Dolor posterior de cadera al ponerse en cuclillas en Artrosis de cadera?",
+    "pregunta": "En Artrosis de cadera, ¿cuál es el resultado documentado del LR positivo para «Dolor posterior de cadera al ponerse en cuclillas»?",
     "opciones": [
+      {
+        "texto": "El valor 6.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.1. IC del 95 %: 1.3 a 29. Interpretación registrada: el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 6.1. LR positivo: 6.1. IC del 95 %: 1.3 a 29. Interpretación registrada: el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante."
+      },
       {
         "texto": "LR positivo: 6.1.",
         "correcta": true,
-        "feedback": "Registro HM:6012: LR positivo: 6.1."
-      },
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 6.1."
+        "feedback": "LR positivo: 6.1. IC del 95 %: 1.3 a 29. Interpretación registrada: el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante."
       }
     ]
   },
@@ -712,6 +1192,25 @@
     "condicion_id": "HM:6012",
     "condicion_nombre": "Artrosis de cadera",
     "concepto_id": "HM:3042",
+    "evidencia": {
+      "condicion_id": "HM:6012",
+      "concepto_id": "HM:3042",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 5.7,
+        "ic95": [
+          1.6,
+          20
+        ],
+        "ref": "pmid:31846019"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:31846019",
     "pmid": "31846019",
     "doi": "10.1001/jama.2019.19413",
@@ -721,17 +1220,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Dolor inguinal a la abducción o aducción pasiva en Artrosis de cadera?",
+    "pregunta": "En Artrosis de cadera, ¿cuál es el resultado documentado del LR positivo para «Dolor inguinal a la abducción o aducción pasiva»?",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 5.7."
+        "feedback": "Sí hay una medición documentada: LR positivo: 5.7. LR positivo: 5.7. IC del 95 %: 1.6 a 20."
       },
       {
         "texto": "LR positivo: 5.7.",
         "correcta": true,
-        "feedback": "Registro HM:6012: LR positivo: 5.7."
+        "feedback": "LR positivo: 5.7. IC del 95 %: 1.6 a 20."
+      },
+      {
+        "texto": "El valor 5.7 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.7. IC del 95 %: 1.6 a 20."
       }
     ]
   },
@@ -744,6 +1248,25 @@
     "condicion_id": "HM:6013",
     "condicion_nombre": "Enfermedad del manguito rotador",
     "concepto_id": "HM:3055",
+    "evidencia": {
+      "condicion_id": "HM:6013",
+      "concepto_id": "HM:3055",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.7,
+        "ic95": [
+          1.9,
+          7
+        ],
+        "ref": "pmid:23982370"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23982370",
     "pmid": "23982370",
     "doi": "10.1001/jama.2013.276187",
@@ -753,17 +1276,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Arco doloroso en Enfermedad del manguito rotador?",
+    "pregunta": "En Enfermedad del manguito rotador, ¿cuál es el resultado documentado del LR positivo para «Arco doloroso»?",
     "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.7. LR positivo: 3.7. IC del 95 %: 1.9 a 7.0. Interpretación registrada: la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal."
+      },
       {
         "texto": "LR positivo: 3.7.",
         "correcta": true,
-        "feedback": "Registro HM:6013: LR positivo: 3.7."
+        "feedback": "LR positivo: 3.7. IC del 95 %: 1.9 a 7.0. Interpretación registrada: la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 3.7 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.7."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.7. IC del 95 %: 1.9 a 7.0. Interpretación registrada: la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal."
       }
     ]
   },
@@ -776,6 +1304,25 @@
     "condicion_id": "HM:6013",
     "condicion_nombre": "Enfermedad del manguito rotador",
     "concepto_id": "HM:3058",
+    "evidencia": {
+      "condicion_id": "HM:6013",
+      "concepto_id": "HM:3058",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.3,
+        "ic95": [
+          1,
+          11
+        ],
+        "ref": "pmid:23982370"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "puede ayudar a identificar la enfermedad, pero su intervalo toca 1.0: es compatible con no aportar nada",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23982370",
     "pmid": "23982370",
     "doi": "10.1001/jama.2013.276187",
@@ -785,17 +1332,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Signo del brazo caído en Enfermedad del manguito rotador?",
+    "pregunta": "En Enfermedad del manguito rotador, ¿cuál es el resultado documentado del LR positivo para «Signo del brazo caído»?",
     "opciones": [
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.3."
-      },
       {
         "texto": "LR positivo: 3.3.",
         "correcta": true,
-        "feedback": "Registro HM:6013: LR positivo: 3.3."
+        "feedback": "LR positivo: 3.3. IC del 95 %: 1.0 a 11. Interpretación registrada: puede ayudar a identificar la enfermedad, pero su intervalo toca 1.0: es compatible con no aportar nada."
+      },
+      {
+        "texto": "El valor 3.3 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.3. IC del 95 %: 1.0 a 11. Interpretación registrada: puede ayudar a identificar la enfermedad, pero su intervalo toca 1.0: es compatible con no aportar nada."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.3. LR positivo: 3.3. IC del 95 %: 1.0 a 11. Interpretación registrada: puede ayudar a identificar la enfermedad, pero su intervalo toca 1.0: es compatible con no aportar nada."
       }
     ]
   },
@@ -808,6 +1360,25 @@
     "condicion_id": "HM:6014",
     "condicion_nombre": "Rotura completa del manguito rotador",
     "concepto_id": "HM:3057",
+    "evidencia": {
+      "condicion_id": "HM:6014",
+      "concepto_id": "HM:3057",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 5.6,
+        "ic95": [
+          2.6,
+          12
+        ],
+        "ref": "pmid:23982370"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23982370",
     "pmid": "23982370",
     "doi": "10.1001/jama.2013.276187",
@@ -817,17 +1388,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Signo de lag de rotación interna en Rotura completa del manguito rotador?",
+    "pregunta": "En Rotura completa del manguito rotador, ¿cuál es el resultado documentado del LR positivo para «Signo de lag de rotación interna»?",
     "opciones": [
       {
         "texto": "LR positivo: 5.6.",
         "correcta": true,
-        "feedback": "Registro HM:6014: LR positivo: 5.6."
+        "feedback": "LR positivo: 5.6. IC del 95 %: 2.6 a 12. Interpretación registrada: sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 5.6 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 5.6."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.6. IC del 95 %: 2.6 a 12. Interpretación registrada: sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 5.6. LR positivo: 5.6. IC del 95 %: 2.6 a 12. Interpretación registrada: sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
       }
     ]
   },
@@ -840,6 +1416,25 @@
     "condicion_id": "HM:6014",
     "condicion_nombre": "Rotura completa del manguito rotador",
     "concepto_id": "HM:3056",
+    "evidencia": {
+      "condicion_id": "HM:6014",
+      "concepto_id": "HM:3056",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 7.2,
+        "ic95": [
+          1.7,
+          31
+        ],
+        "ref": "pmid:23982370"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el cociente más alto para la rotura completa, con intervalo muy ancho",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23982370",
     "pmid": "23982370",
     "doi": "10.1001/jama.2013.276187",
@@ -849,17 +1444,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Signo de lag de rotación externa en Rotura completa del manguito rotador?",
+    "pregunta": "En Rotura completa del manguito rotador, ¿cuál es el resultado documentado del LR positivo para «Signo de lag de rotación externa»?",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 7.2 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 7.2."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 7.2. IC del 95 %: 1.7 a 31. Interpretación registrada: el cociente más alto para la rotura completa, con intervalo muy ancho."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 7.2. LR positivo: 7.2. IC del 95 %: 1.7 a 31. Interpretación registrada: el cociente más alto para la rotura completa, con intervalo muy ancho."
       },
       {
         "texto": "LR positivo: 7.2.",
         "correcta": true,
-        "feedback": "Registro HM:6014: LR positivo: 7.2."
+        "feedback": "LR positivo: 7.2. IC del 95 %: 1.7 a 31. Interpretación registrada: el cociente más alto para la rotura completa, con intervalo muy ancho."
       }
     ]
   },
@@ -872,6 +1472,18 @@
     "condicion_id": "HM:6015",
     "condicion_nombre": "Enfermedad de Parkinson",
     "concepto_id": "HM:3061",
+    "evidencia": {
+      "condicion_id": "HM:6015",
+      "concepto_id": "HM:3061",
+      "estado_lr": "no_medible",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -881,17 +1493,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "¿Cómo está documentado el LR de Bradicinesia en Enfermedad de Parkinson?",
+    "pregunta": "En Enfermedad de Parkinson, ¿qué estado de la evidencia corresponde a «Bradicinesia» según la fuente?",
     "opciones": [
+      {
+        "texto": "LR no medido",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación."
+      },
       {
         "texto": "LR no medible",
         "correcta": true,
-        "feedback": "Registro HM:6015: LR no medible"
-      },
-      {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR no medible"
+        "feedback": "LR no medible Motivo: forma parte de la definición de parkinsonismo motor, que es el patrón de referencia del propio criterio: sesgo de incorporación."
       }
     ]
   },
@@ -904,6 +1521,18 @@
     "condicion_id": "HM:6015",
     "condicion_nombre": "Enfermedad de Parkinson",
     "concepto_id": "HM:3062",
+    "evidencia": {
+      "condicion_id": "HM:6015",
+      "concepto_id": "HM:3062",
+      "estado_lr": "no_medible",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "componente del núcleo; sesgo de incorporación",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": null,
     "pmid": null,
     "doi": null,
@@ -913,17 +1542,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "¿Cómo está documentado el LR de Temblor de reposo en Enfermedad de Parkinson?",
+    "pregunta": "En Enfermedad de Parkinson, ¿qué estado de la evidencia corresponde a «Temblor de reposo» según la fuente?",
     "opciones": [
       {
-        "texto": "Hay una estimación numérica única disponible para calcular la probabilidad posterior.",
+        "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "El registro documenta: LR no medible"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: componente del núcleo; sesgo de incorporación."
       },
       {
         "texto": "LR no medible",
         "correcta": true,
-        "feedback": "Registro HM:6015: LR no medible"
+        "feedback": "LR no medible Motivo: componente del núcleo; sesgo de incorporación."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: componente del núcleo; sesgo de incorporación."
       }
     ]
   },
@@ -936,6 +1570,25 @@
     "condicion_id": "HM:6016",
     "condicion_nombre": "Embarazo ectópico",
     "concepto_id": "HM:3064",
+    "evidencia": {
+      "condicion_id": "HM:6016",
+      "concepto_id": "HM:3064",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 111,
+        "ic95": [
+          12,
+          1028
+        ],
+        "ref": "pmid:23613077"
+      },
+      "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+      "motivo": null,
+      "decision": "el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto",
+      "advertencia": "el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23613077",
     "pmid": "23613077",
     "doi": "10.1001/jama.2013.3914",
@@ -945,17 +1598,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Masa anexial sin gestación intrauterina en ecografía transvaginal en Embarazo ectópico?",
+    "pregunta": "En Embarazo ectópico, ¿cuál es el resultado documentado del LR positivo para «Masa anexial sin gestación intrauterina en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
     "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 111. LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene."
+      },
       {
         "texto": "LR positivo: 111.",
         "correcta": true,
-        "feedback": "Registro HM:6016: LR positivo: 111."
+        "feedback": "LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 111 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 111."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 111. IC del 95 %: 12 a 1028. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Interpretación registrada: el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto. Advertencia: el intervalo de confianza abarca de 12 a 1028. La dirección es inequívoca; la magnitud exacta, no. Tratar el 111 como un número fino es leer en la cifra una precisión que el estudio no tiene."
       }
     ]
   },
@@ -968,6 +1626,26 @@
     "condicion_id": "HM:6016",
     "condicion_nombre": "Embarazo ectópico",
     "concepto_id": "HM:3065",
+    "evidencia": {
+      "condicion_id": "HM:6016",
+      "concepto_id": "HM:3065",
+      "estado_lr": "medido",
+      "campo": "lr_negativo",
+      "dato": {
+        "valor": 0.12,
+        "ic95": [
+          0.03,
+          0.55
+        ],
+        "ref": "pmid:23613077",
+        "nota": "la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo"
+      },
+      "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
+      "motivo": null,
+      "decision": "la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23613077",
     "pmid": "23613077",
     "doi": "10.1001/jama.2013.3914",
@@ -977,17 +1655,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Anomalía anexial en ecografía transvaginal en Embarazo ectópico?",
+    "pregunta": "En Embarazo ectópico, ¿cuál es el resultado documentado del LR negativo para «Anomalía anexial en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
     "opciones": [
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR negativo: 0.12."
-      },
       {
         "texto": "LR negativo: 0.12.",
         "correcta": true,
-        "feedback": "Registro HM:6016: LR negativo: 0.12."
+        "feedback": "LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+      },
+      {
+        "texto": "El valor 0.12 corresponde al LR positivo y no al LR negativo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.12. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
       }
     ]
   },
@@ -1000,6 +1683,25 @@
     "condicion_id": "HM:6017",
     "condicion_nombre": "Conjuntivitis bacteriana",
     "concepto_id": "HM:3071",
+    "evidencia": {
+      "condicion_id": "HM:6017",
+      "concepto_id": "HM:3071",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.5,
+        "ic95": [
+          1.5,
+          4.4
+        ],
+        "ref": "pmid:35699701"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:35699701",
     "pmid": "35699701",
     "doi": "10.1001/jama.2022.7687",
@@ -1009,17 +1711,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Otitis media concomitante en Conjuntivitis bacteriana?",
+    "pregunta": "En Conjuntivitis bacteriana, ¿cuál es el resultado documentado del LR positivo para «Otitis media concomitante»?",
     "opciones": [
       {
         "texto": "LR positivo: 2.5.",
         "correcta": true,
-        "feedback": "Registro HM:6017: LR positivo: 2.5."
+        "feedback": "LR positivo: 2.5. IC del 95 %: 1.5 a 4.4. Interpretación registrada: el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 2.5 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 2.5."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.5. IC del 95 %: 1.5 a 4.4. Interpretación registrada: el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.5. LR positivo: 2.5. IC del 95 %: 1.5 a 4.4. Interpretación registrada: el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada."
       }
     ]
   },
@@ -1032,6 +1739,25 @@
     "condicion_id": "HM:6017",
     "condicion_nombre": "Conjuntivitis bacteriana",
     "concepto_id": "HM:3070",
+    "evidencia": {
+      "condicion_id": "HM:6017",
+      "concepto_id": "HM:3070",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.1,
+        "ic95": [
+          1.7,
+          2.6
+        ],
+        "ref": "pmid:35699701"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:35699701",
     "pmid": "35699701",
     "doi": "10.1001/jama.2022.7687",
@@ -1041,17 +1767,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Secreción ocular mucopurulenta en Conjuntivitis bacteriana?",
+    "pregunta": "En Conjuntivitis bacteriana, ¿cuál es el resultado documentado del LR positivo para «Secreción ocular mucopurulenta»?",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 2.1 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 2.1."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.1. IC del 95 %: 1.7 a 2.6. Interpretación registrada: el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.1. LR positivo: 2.1. IC del 95 %: 1.7 a 2.6. Interpretación registrada: el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico."
       },
       {
         "texto": "LR positivo: 2.1.",
         "correcta": true,
-        "feedback": "Registro HM:6017: LR positivo: 2.1."
+        "feedback": "LR positivo: 2.1. IC del 95 %: 1.7 a 2.6. Interpretación registrada: el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico."
       }
     ]
   },
@@ -1064,6 +1795,26 @@
     "condicion_id": "HM:6018",
     "condicion_nombre": "Apnea obstructiva del sueño",
     "concepto_id": "HM:3072",
+    "evidencia": {
+      "condicion_id": "HM:6018",
+      "concepto_id": "HM:3072",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.3,
+        "ic95": [
+          2.1,
+          4.6
+        ],
+        "umbral_condicion": "IAH ≥10/h",
+        "ref": "pmid:23989984"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23989984",
     "pmid": "23989984",
     "doi": "10.1001/jama.2013.276185",
@@ -1073,17 +1824,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Ahogo o jadeo nocturno en Apnea obstructiva del sueño?",
+    "pregunta": "En Apnea obstructiva del sueño, ¿cuál es el resultado documentado del LR positivo para «Ahogo o jadeo nocturno»?",
     "opciones": [
+      {
+        "texto": "El valor 3.3 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.3. IC del 95 %: 2.1 a 4.6. Interpretación registrada: la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.3. LR positivo: 3.3. IC del 95 %: 2.1 a 4.6. Interpretación registrada: la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño."
+      },
       {
         "texto": "LR positivo: 3.3.",
         "correcta": true,
-        "feedback": "Registro HM:6018: LR positivo: 3.3."
-      },
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.3."
+        "feedback": "LR positivo: 3.3. IC del 95 %: 2.1 a 4.6. Interpretación registrada: la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño."
       }
     ]
   },
@@ -1096,6 +1852,25 @@
     "condicion_id": "HM:6018",
     "condicion_nombre": "Apnea obstructiva del sueño",
     "concepto_id": "HM:3073",
+    "evidencia": {
+      "condicion_id": "HM:6018",
+      "concepto_id": "HM:3073",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 1.1,
+        "ic95": [
+          1,
+          1.1
+        ],
+        "ref": "pmid:23989984"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo",
+      "advertencia": "un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:23989984",
     "pmid": "23989984",
     "doi": "10.1001/jama.2013.276185",
@@ -1105,17 +1880,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "la observación aislada más útil de la revisión para identificar apnea obstructiva del sueño"
     },
-    "pregunta": "¿Qué cociente registra la fuente para Ronquido en Apnea obstructiva del sueño?",
+    "pregunta": "En Apnea obstructiva del sueño, ¿cuál es el resultado documentado del LR positivo para «Ronquido»?",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 1.1."
+        "feedback": "Sí hay una medición documentada: LR positivo: 1.1. LR positivo: 1.1. IC del 95 %: 1.0 a 1.1. Interpretación registrada: frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo. Advertencia: un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada."
       },
       {
         "texto": "LR positivo: 1.1.",
         "correcta": true,
-        "feedback": "Registro HM:6018: LR positivo: 1.1."
+        "feedback": "LR positivo: 1.1. IC del 95 %: 1.0 a 1.1. Interpretación registrada: frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo. Advertencia: un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada."
+      },
+      {
+        "texto": "El valor 1.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 1.1. IC del 95 %: 1.0 a 1.1. Interpretación registrada: frecuente en la enfermedad, pero el cociente pegado a 1.0 significa que no sirve para establecer el diagnóstico por sí solo. Advertencia: un hallazgo casi universal en la sospecha clínica que, precisamente por serlo, no discrimina nada."
       }
     ]
   },
@@ -1128,6 +1908,25 @@
     "condicion_id": "HM:6019",
     "condicion_nombre": "Luxación de cadera en el lactante",
     "concepto_id": "HM:3075",
+    "evidencia": {
+      "condicion_id": "HM:6019",
+      "concepto_id": "HM:3075",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 52,
+        "ic95": [
+          21,
+          127
+        ],
+        "ref": "pmid:38619828"
+      },
+      "poblacion": "lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios)",
+      "motivo": null,
+      "decision": "Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55).",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:38619828",
     "pmid": "38619828",
     "doi": "10.1001/jama.2024.2404",
@@ -1137,17 +1936,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Maniobras de Barlow y Ortolani positivas en Luxación de cadera en el lactante?",
+    "pregunta": "En Luxación de cadera en el lactante, ¿cuál es el resultado documentado del LR positivo para «Maniobras de Barlow y Ortolani positivas»? Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios).",
     "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 52. LR positivo: 52. IC del 95 %: 21 a 127. Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios). Interpretación registrada: Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
+      },
       {
         "texto": "LR positivo: 52.",
         "correcta": true,
-        "feedback": "Registro HM:6019: LR positivo: 52."
+        "feedback": "LR positivo: 52. IC del 95 %: 21 a 127. Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios). Interpretación registrada: Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 52 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 52."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 52. IC del 95 %: 21 a 127. Población: lactantes de 3 meses o menores (n = 44 827 caderas en 8 estudios). Interpretación registrada: Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
       }
     ]
   },
@@ -1160,6 +1964,25 @@
     "condicion_id": "HM:6019",
     "condicion_nombre": "Luxación de cadera en el lactante",
     "concepto_id": "HM:3076",
+    "evidencia": {
+      "condicion_id": "HM:6019",
+      "concepto_id": "HM:3076",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.6,
+        "ic95": [
+          0.72,
+          18
+        ],
+        "ref": "pmid:38619828"
+      },
+      "poblacion": "lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios)",
+      "motivo": null,
+      "decision": "Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:38619828",
     "pmid": "38619828",
     "doi": "10.1001/jama.2024.2404",
@@ -1169,17 +1992,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "Maniobras de Barlow y Ortolani positivas: el signo que confirma la luxación inestable. Cuando es positiva eleva la probabilidad pretest de 0.94% a más del 33% (LR+ 52); su negatividad no descarta la displasia (LR- 0.55)."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Limitación de la abducción de la cadera en el lactante en Luxación de cadera en el lactante?",
+    "pregunta": "En Luxación de cadera en el lactante, ¿cuál es el resultado documentado del LR positivo para «Limitación de la abducción de la cadera en el lactante»? Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios).",
     "opciones": [
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 3.6."
-      },
       {
         "texto": "LR positivo: 3.6.",
         "correcta": true,
-        "feedback": "Registro HM:6019: LR positivo: 3.6."
+        "feedback": "LR positivo: 3.6. IC del 95 %: 0.72 a 18. Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios). Interpretación registrada: Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
+      },
+      {
+        "texto": "El valor 3.6 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.6. IC del 95 %: 0.72 a 18. Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios). Interpretación registrada: Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.6. LR positivo: 3.6. IC del 95 %: 0.72 a 18. Población: lactantes de 3 meses o menores (n = 22 472 caderas en 3 estudios). Interpretación registrada: Limitación de la abducción: no concluyente por sí sola en menores de 3 meses; el intervalo de confianza abarca el 1.0 y la sensibilidad es de apenas 13%."
       }
     ]
   },
@@ -1192,6 +2020,25 @@
     "condicion_id": "HM:6020",
     "condicion_nombre": "Intubación difícil",
     "concepto_id": "HM:3078",
+    "evidencia": {
+      "condicion_id": "HM:6020",
+      "concepto_id": "HM:3078",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 14,
+        "ic95": [
+          8.9,
+          22
+        ],
+        "ref": "pmid:30721300"
+      },
+      "poblacion": "pacientes quirúrgicos adultos (n = 33 559)",
+      "motivo": null,
+      "decision": "Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:30721300",
     "pmid": "30721300",
     "doi": "10.1001/jama.2018.21413",
@@ -1201,17 +2048,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Test de mordida del labio superior clase 3 en Intubación difícil?",
+    "pregunta": "En Intubación difícil, ¿cuál es el resultado documentado del LR positivo para «Test de mordida del labio superior clase 3»? Población: pacientes quirúrgicos adultos (n = 33 559).",
     "opciones": [
       {
         "texto": "LR positivo: 14.",
         "correcta": true,
-        "feedback": "Registro HM:6020: LR positivo: 14."
+        "feedback": "LR positivo: 14. IC del 95 %: 8.9 a 22. Población: pacientes quirúrgicos adultos (n = 33 559). Interpretación registrada: Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
       },
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 14 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 14."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 14. IC del 95 %: 8.9 a 22. Población: pacientes quirúrgicos adultos (n = 33 559). Interpretación registrada: Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 14. LR positivo: 14. IC del 95 %: 8.9 a 22. Población: pacientes quirúrgicos adultos (n = 33 559). Interpretación registrada: Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
       }
     ]
   },
@@ -1224,6 +2076,25 @@
     "condicion_id": "HM:6020",
     "condicion_nombre": "Intubación difícil",
     "concepto_id": "HM:3079",
+    "evidencia": {
+      "condicion_id": "HM:6020",
+      "concepto_id": "HM:3079",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 6.4,
+        "ic95": [
+          4.1,
+          10
+        ],
+        "ref": "pmid:30721300"
+      },
+      "poblacion": "pacientes quirúrgicos adultos",
+      "motivo": null,
+      "decision": "Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:30721300",
     "pmid": "30721300",
     "doi": "10.1001/jama.2018.21413",
@@ -1233,17 +2104,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Distancia hiodomentoniana o tiromentoniana corta en Intubación difícil?",
+    "pregunta": "En Intubación difícil, ¿cuál es el resultado documentado del LR positivo para «Distancia hiodomentoniana o tiromentoniana corta»? Población: pacientes quirúrgicos adultos.",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "El valor 6.4 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 6.4."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.4. IC del 95 %: 4.1 a 10. Población: pacientes quirúrgicos adultos. Interpretación registrada: Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 6.4. LR positivo: 6.4. IC del 95 %: 4.1 a 10. Población: pacientes quirúrgicos adultos. Interpretación registrada: Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4."
       },
       {
         "texto": "LR positivo: 6.4.",
         "correcta": true,
-        "feedback": "Registro HM:6020: LR positivo: 6.4."
+        "feedback": "LR positivo: 6.4. IC del 95 %: 4.1 a 10. Población: pacientes quirúrgicos adultos. Interpretación registrada: Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4."
       }
     ]
   },
@@ -1256,6 +2132,26 @@
     "condicion_id": "HM:6021",
     "condicion_nombre": "Trastorno por consumo de alcohol",
     "concepto_id": "HM:3083",
+    "evidencia": {
+      "condicion_id": "HM:6021",
+      "concepto_id": "HM:3083",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 6.5,
+        "ic95": [
+          3.9,
+          11
+        ],
+        "ref": "pmid:38592385",
+        "nota": "en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5)"
+      },
+      "poblacion": "adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)",
+      "motivo": null,
+      "decision": "AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:38592385",
     "pmid": "38592385",
     "doi": "10.1001/jama.2024.3101",
@@ -1265,17 +2161,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Cuestionario AUDIT con puntuación ≥ 8 en Trastorno por consumo de alcohol?",
+    "pregunta": "En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR positivo para «Cuestionario AUDIT con puntuación ≥ 8»? Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633).",
     "opciones": [
+      {
+        "texto": "El valor 6.5 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 6.5. LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
+      },
       {
         "texto": "LR positivo: 6.5.",
         "correcta": true,
-        "feedback": "Registro HM:6021: LR positivo: 6.5."
-      },
-      {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-        "correcta": false,
-        "feedback": "El registro documenta: LR positivo: 6.5."
+        "feedback": "LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
       }
     ]
   },
@@ -1288,6 +2189,25 @@
     "condicion_id": "HM:6021",
     "condicion_nombre": "Trastorno por consumo de alcohol",
     "concepto_id": "HM:3085",
+    "evidencia": {
+      "condicion_id": "HM:6021",
+      "concepto_id": "HM:3085",
+      "estado_lr": "medido",
+      "campo": "lr_negativo",
+      "dato": {
+        "valor": 0.33,
+        "ic95": [
+          0.2,
+          0.52
+        ],
+        "ref": "pmid:38592385"
+      },
+      "poblacion": "adultos evaluados con AUDIT",
+      "motivo": null,
+      "decision": "AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:38592385",
     "pmid": "38592385",
     "doi": "10.1001/jama.2024.3101",
@@ -1297,17 +2217,22 @@
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
     },
-    "pregunta": "¿Qué cociente registra la fuente para Cuestionario AUDIT con puntuación < 8 en Trastorno por consumo de alcohol?",
+    "pregunta": "En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR negativo para «Cuestionario AUDIT con puntuación < 8»? Población: adultos evaluados con AUDIT.",
     "opciones": [
       {
-        "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "El registro documenta: LR negativo: 0.33."
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.33. LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres."
       },
       {
         "texto": "LR negativo: 0.33.",
         "correcta": true,
-        "feedback": "Registro HM:6021: LR negativo: 0.33."
+        "feedback": "LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres."
+      },
+      {
+        "texto": "El valor 0.33 corresponde al LR positivo y no al LR negativo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres."
       }
     ]
   }

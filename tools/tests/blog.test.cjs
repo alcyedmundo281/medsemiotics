@@ -34,6 +34,13 @@ test('Una condición, un artículo, una URL; preguntas sin ediciones independien
       assert.equal(actual.pregunta, q.pregunta);
       assert.deepEqual(actual.opciones, q.opciones);
       assert.equal(actual.pmid, q.pmid);
+      assert.equal(actual.doi, q.doi);
+      assert.equal(actual.fuente_doi, p.fuente.doi);
+      assert.deepEqual(actual.evidencia, q.evidencia);
+      assert.equal(q.opciones.length, 3);
+      const questionSign = p.evidencia.find(s => s.concepto === q.concepto_id);
+      assert.equal(q.evidencia.estado_lr, questionSign.estado_lr);
+      if (q.evidencia.campo) assert.deepEqual(q.evidencia.dato, questionSign[q.evidencia.campo]);
       assert.equal(q.opciones.filter(o => o.correcta).length, 1);
     }
     for (const field of ['lr_positivo', 'lr_negativo']) {

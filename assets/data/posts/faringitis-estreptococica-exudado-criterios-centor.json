@@ -131,41 +131,83 @@
   "autoevaluacion": [
     {
       "id": "q1",
-      "pregunta": "¿Qué cociente registra la fuente para Exudado amigdalino en Faringitis estreptocócica?",
+      "pregunta": "En Faringitis estreptocócica, ¿cuál es el resultado documentado del LR positivo para «Exudado amigdalino»?",
       "concepto_id": "HM:3026",
       "referencia_id": "pmid:11147989",
       "pmid": "11147989",
       "doi": "10.1001/jama.284.22.2912",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6009",
+        "concepto_id": "HM:3026",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 3.4,
+          "ref": "pmid:11147989",
+          "nota": "la fuente no publica intervalo de confianza en el abstract"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "el hallazgo aislado más útil, y aun así insuficiente por sí solo",
+        "advertencia": null
+      },
       "opciones": [
+        {
+          "texto": "El valor 3.4 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 3.4. LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo."
+        },
         {
           "texto": "LR positivo: 3.4.",
           "correcta": true,
-          "feedback": "Registro HM:6009: LR positivo: 3.4."
-        },
-        {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
-          "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 3.4."
+          "feedback": "LR positivo: 3.4. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: el hallazgo aislado más útil, y aun así insuficiente por sí solo."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "¿Qué cociente registra la fuente para Exudado faríngeo en Faringitis estreptocócica?",
+      "pregunta": "En Faringitis estreptocócica, ¿cuál es el resultado documentado del LR positivo para «Exudado faríngeo»?",
       "concepto_id": "HM:3027",
       "referencia_id": "pmid:11147989",
       "pmid": "11147989",
       "doi": "10.1001/jama.284.22.2912",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6009",
+        "concepto_id": "HM:3027",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 2.1,
+          "ref": "pmid:11147989",
+          "nota": "la fuente no publica intervalo de confianza en el abstract"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "apoya menos que el exudado amigdalino, del que se distingue",
+        "advertencia": null
+      },
       "opciones": [
         {
-          "texto": "La fuente no registra ningún cociente medido para este hallazgo.",
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "El registro documenta: LR positivo: 2.1."
+          "feedback": "Sí hay una medición documentada: LR positivo: 2.1. LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue."
         },
         {
           "texto": "LR positivo: 2.1.",
           "correcta": true,
-          "feedback": "Registro HM:6009: LR positivo: 2.1."
+          "feedback": "LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue."
+        },
+        {
+          "texto": "El valor 2.1 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.1. Nota: la fuente no publica intervalo de confianza en el abstract. Interpretación registrada: apoya menos que el exudado amigdalino, del que se distingue."
         }
       ]
     }
