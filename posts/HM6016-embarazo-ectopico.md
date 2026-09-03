@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6016-embarazo-ectopico.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml: 26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15
     conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml: 201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f

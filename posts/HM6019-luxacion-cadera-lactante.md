@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6019-luxacion-cadera-lactante.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3075-maniobras-de-barlow-y-ortolani.yaml: 43c819ea911471811bf4a17ff48eea18f4e84b64b57238a996fc999ddc4bca43
     conceptos/HM3076-limitacion-abduccion-cadera-lactante.yaml: 9573e001bae058b99488d56515e007eb920038be62889c2e83e4a37b2caca157
     conceptos/HM3077-chasquido-articular-cadera-lactante.yaml: ca91e3bf119a83bd0546f000c7203a50cd7595f1e4921202d0cc03b9d63bfa33

@@ -192,7 +192,10 @@ def make_post(source, condition_path, previous=None):
     if not re.fullmatch(r"HM:\d+", c.get("id", "")):
         raise ValueError(f"ID de condición inválido: {condition_path}")
     cid = c["id"]
-    files = {condition_path}
+    source_citation = source.read("CITATION.cff")
+    if not source_citation.get("doi"):
+        raise ValueError("medsemiotics-db no declara su DOI en CITATION.cff.")
+    files = {condition_path, "CITATION.cff"}
     concepts, references = {}, {}
     # Resolve clinical IDs anywhere, including criteria, warnings and pending material.
     for identifier in sorted(set(identifiers(c)) - {cid}):
@@ -294,6 +297,7 @@ def make_post(source, condition_path, previous=None):
                      "doi": qids.get("doi"), "opciones": options})
     source_data = {
         "repositorio": REPO, "revision": source.revision,
+        "doi": source_citation["doi"],
         "condicion": condition_path,
         "archivos": {path: source.cache[path][1] for path in sorted(files)},
     }

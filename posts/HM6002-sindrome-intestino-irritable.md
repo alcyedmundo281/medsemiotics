@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6002-sindrome-intestino-irritable.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM0101-fiebre.yaml: fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM0303-diarrea.yaml: 0d5ca16fa30e66c063ee51a787ddae512941d0600d783e12fbd847482a224ced

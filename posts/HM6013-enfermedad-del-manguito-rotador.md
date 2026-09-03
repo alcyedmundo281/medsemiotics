@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6013-enfermedad-del-manguito-rotador.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3055-arco-doloroso.yaml: 3548cc14bec9a5d961bcdddcdcc82ccad1ccf929916776673aa2aca3cc9f28b3
     conceptos/HM3058-drop-arm.yaml: 27f9b42dcac851d3c59294207f5ee6cf42d3205bdffb08da8c5e854c801ddb1c
     conceptos/HM3059-dolor-de-hombro.yaml: 99c4073545b37133cd7e218ead1bfbe7ea6d4d11b970fd95c2aa91bb8696fcff

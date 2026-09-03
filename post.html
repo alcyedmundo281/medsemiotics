@@ -125,7 +125,7 @@
             </a>
             <span class="text-purple-300">|</span>
             <a id="doiLink" href="#" target="_blank" rel="noopener" class="font-semibold hover:underline inline-flex items-center gap-1">
-              <span>CrossRef DOI</span>
+              <span>DOI del estudio</span>
               <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
             </a>
           </div>
@@ -278,7 +278,7 @@
 
         <!-- Verified Reference Citation Footer -->
         <footer class="p-6 bg-stone-100 border border-stone-200 rounded-2xl text-xs text-stone-600">
-          <h4 class="font-bold text-stone-900 mb-2 uppercase tracking-wider">Referencia Bibliográfica:</h4>
+          <h4 class="font-bold text-stone-900 mb-2 uppercase tracking-wider">Estudio de referencia:</h4>
           <p id="refCitation" class="leading-relaxed mb-3">
             Cargando referencia...
           </p>
@@ -286,6 +286,10 @@
             <span id="refPmidSpan"></span>
             <span>•</span>
             <span id="refDoiSpan"></span>
+          </div>
+          <div id="projectCitations" class="mt-4 pt-4 border-t border-stone-200 space-y-2">
+            <p>Material educativo · Medsemiotics: <a id="publicationDoiLink" class="text-purple-700 hover:underline" target="_blank" rel="noopener"></a></p>
+            <p>Fuente de datos · medsemiotics-db: <a id="sourceDoiLink" class="text-purple-700 hover:underline" target="_blank" rel="noopener"></a></p>
           </div>
         </footer>
       </article>
@@ -330,6 +334,11 @@
 
         // Evidence and references
         const g = currentPost.grounding || {};
+        for (const [id, doi] of [['publicationDoiLink', currentPost.publicacion?.doi], ['sourceDoiLink', currentPost.fuente?.doi]]) {
+          const link = document.getElementById(id);
+          link.textContent = doi || 'DOI no documentado';
+          if (doi) link.href = `https://doi.org/${doi}`;
+        }
         document.getElementById('clinicalEvidenceLabel').textContent = g.poblacion || 'Población no especificada en la fuente';
         document.getElementById('pubmedLink').classList.toggle('hidden', !g.pmid);
         document.getElementById('doiLink').classList.toggle('hidden', !g.doi);

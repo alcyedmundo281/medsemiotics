@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6006-aneurisma-aorta-abdominal.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3012-pulsacion-aortica-ensanchada.yaml: 54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35
     conceptos/HM3013-obesidad-abdominal.yaml: ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54
     condiciones/HM6006-aneurisma-aorta-abdominal.yaml: 9cec6260cfe5eea995f9e1ed8f1cddf95e7dc5734e645a439483e7e774717138

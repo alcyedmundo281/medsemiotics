@@ -18,6 +18,7 @@ class Source:
         if block:
             self.c["signos"][0]["lr_positivo"] = block
         self.records = {
+            "CITATION.cff": {"title": "Fuente de prueba", "doi": "10.test/dataset"},
             "condiciones/HM9999-tema.yaml": self.c,
             "conceptos/HM0001-signo.yaml": {"id": "HM:0001", "tipo": "concepto", "termino": "Signo"},
             "referencias/pmid-123.yaml": {"id": "pmid:123", "titulo": "Fuente",
@@ -33,7 +34,7 @@ class Source:
 
     def resolve(self, identifier):
         for path, data in self.records.items():
-            if data["id"] == identifier:
+            if data.get("id") == identifier:
                 return path, self.read(path)
         raise ValueError("No resoluble: " + identifier)
 
@@ -75,6 +76,11 @@ class SynchronizationTests(unittest.TestCase):
         source = Source("medido", {"valor": 6.5, "ref": "pmid:999"})
         with self.assertRaises(ValueError):
             self.make(source)
+
+    def test_dataset_doi_and_study_doi_remain_separate(self):
+        _, post = self.make(Source("medido", {"valor": 6.5, "ref": "pmid:123"}))
+        self.assertEqual(post["fuente"]["doi"], "10.test/dataset")
+        self.assertEqual(post["grounding"]["doi"], "10.test/fuente")
 
     def test_unmeasured_sign_cannot_carry_numeric_lr(self):
         with self.assertRaises(ValueError):

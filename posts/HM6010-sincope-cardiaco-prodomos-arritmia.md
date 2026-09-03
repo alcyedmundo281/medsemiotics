@@ -17,8 +17,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6010-sincope-cardiaco.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM0207-cefalea.yaml: 3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c
     conceptos/HM0505-sincope.yaml: c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c
     conceptos/HM3031-primer-sincope-desde-los-35.yaml: 3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa

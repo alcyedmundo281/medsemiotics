@@ -17,8 +17,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6007-sindrome-coronario-agudo.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM0206-dolor-toracico.yaml: b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f
     conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml: bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2
     conceptos/HM3015-descenso-segmento-st.yaml: c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24

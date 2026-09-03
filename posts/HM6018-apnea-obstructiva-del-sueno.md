@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6018-apnea-obstructiva-del-sueno.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3072-ahogo-o-jadeo-nocturno.yaml: bb978561f85d04ea3c3d96596aed38b1fccd27c88a0c6855cef56cdc1d111d92
     conceptos/HM3073-ronquido.yaml: 7b20f9582eab041322e5a8b9209a4bd214bb831c3476d25c74ffa78bec5d4f5b
     conceptos/HM3074-indice-de-masa-corporal-bajo.yaml: 55a3f9877aee395d377f92bd9235307ef18d9a02c85c6345d8529b2256949caa

@@ -177,8 +177,10 @@
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
     "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
     "archivos": {
+      "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
       "conceptos/HM0211-odinofagia.yaml": "cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f",
       "conceptos/HM0603-esplenomegalia.yaml": "91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5",
       "conceptos/HM0607-adenopatias.yaml": "f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561",
@@ -190,6 +192,10 @@
       "condiciones/HM6003-mononucleosis-infecciosa.yaml": "a09354b3a9d4e54f2ae83ceddb09caf69b8f76f4f155ef031223ada310a90371",
       "referencias/pmid-27115266.yaml": "668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b"
     }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
   },
   "has_quiz": true,
   "quiz_count": 2,

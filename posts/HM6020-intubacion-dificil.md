@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6020-intubacion-dificil.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3078-test-mordida-labio-superior-clase-3.yaml: bf284c373f4ef74131492f0264af906aec28dcc1891e19f7776d424495a11f1b
     conceptos/HM3079-distancia-hiodomentoniana-corta.yaml: 6afcfa37fd303843404cf8c9c6853885f52b3ec85a76b5c63f471ac54511f141
     conceptos/HM3080-retrognatia.yaml: e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b

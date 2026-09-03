@@ -309,6 +309,20 @@ redirecciones.
 
 ## Licencia y cita
 
+Los DOI identifican obras distintas y se mantienen separados:
+
+- **Medsemiotics (material educativo):** `10.5281/zenodo.22069641`, leído de
+  `CITATION.cff` y publicado en el campo `publicacion.doi` de cada artículo JSON.
+- **medsemiotics-db (conjunto de datos):** `10.5281/zenodo.22064424`, leído del
+  `CITATION.cff` de la base y conservado en `fuente.doi`.
+- **Estudio de referencia:** el DOI de cada artículo científico se toma de
+  `referencias/*.yaml` de medsemiotics-db y se conserva en `grounding.doi` o en la
+  pregunta correspondiente. No identifica al blog ni al conjunto de datos.
+
+Por ejemplo, mononucleosis cita el estudio con PMID `27115266` y DOI
+`10.1001/jama.2016.2111`; su material educativo y su fuente de datos mantienen
+los DOI de sus respectivos proyectos.
+
 El contenido se publica bajo [Creative Commons Atribución-CompartirIgual 4.0
 Internacional](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
 (CC BY-SA 4.0). El texto completo está en [LICENSE](LICENSE).

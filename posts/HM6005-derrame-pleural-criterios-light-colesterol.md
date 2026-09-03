@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6005-derrame-pleural-exudativo.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3007-derrame-pleural.yaml: a0ff591f0ccbe7b4ce56d06f14b904174cc9be542c879da32ea43688912c76c3
     conceptos/HM3008-colesterol-pleural-elevado.yaml: 54f1e2a139a84af23e9dac062e42c6a2b79a150d87d9657452f6860ecb5d13e6
     conceptos/HM3009-ldh-pleural-elevada.yaml: b2afdd29ba8d0e1489ef7ec4578124f9479c4586db527cf66e5f8fc8df6287d2

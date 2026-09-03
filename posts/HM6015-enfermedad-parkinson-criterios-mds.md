@@ -17,8 +17,10 @@ difficulty: Avanzado
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6015-enfermedad-de-parkinson.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM3061-bradicinesia.yaml: 623f4a414f90755471fd23933757b9118848638e618f5a63fa01a4ab626182a0
     conceptos/HM3062-temblor-de-reposo.yaml: b181c4353fd0a2b46cc1bb9b46e240e468ab0e4de27f1aeedf8d081851671027
     conceptos/HM3063-rigidez-parkinsoniana.yaml: 97ec764a6867749d77971a91cde2028ec1cb43e13d7504e12308094528a43de5

@@ -90,8 +90,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
         "conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml": "c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f",
         "conceptos/HM0305-ictericia.yaml": "87323a0b278fc5c8d70ae931a46478eccb092cec8330f28434d136003b6ad270",
@@ -104,6 +106,10 @@
         "conceptos/HM0802-anorexia.yaml": "41f5d159539277ac7fb97cdefeefb66395ea5f70741a4d577bb22efed5940bba",
         "condiciones/HM6001-hepatitis-viral-aguda.yaml": "5289dc6268987469b2bfd8fa5ebae8fa70066f1bfc491f518e4106cbe979b225"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -166,8 +172,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6002-sindrome-intestino-irritable.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
         "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
         "conceptos/HM0303-diarrea.yaml": "0d5ca16fa30e66c063ee51a787ddae512941d0600d783e12fbd847482a224ced",
@@ -180,6 +188,10 @@
         "referencias/pmid-15082584.yaml": "bed79febe6875717f56dda071ab3d22da080c14d2f6552a0c7803e9eb9dc4a27",
         "referencias/pmid-20697190.yaml": "5acfa5ff915443623dc06031e8065400f6ab0f27d72e95e35e365d825b88b3ad"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -304,14 +316,20 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6019-luxacion-cadera-lactante.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3075-maniobras-de-barlow-y-ortolani.yaml": "43c819ea911471811bf4a17ff48eea18f4e84b64b57238a996fc999ddc4bca43",
         "conceptos/HM3076-limitacion-abduccion-cadera-lactante.yaml": "9573e001bae058b99488d56515e007eb920038be62889c2e83e4a37b2caca157",
         "conceptos/HM3077-chasquido-articular-cadera-lactante.yaml": "ca91e3bf119a83bd0546f000c7203a50cd7595f1e4921202d0cc03b9d63bfa33",
         "condiciones/HM6019-luxacion-cadera-lactante.yaml": "ffc5b922cd1ebe05a5ece1a2636d498516bf11a4153e28981d3c8c4b1eb2aea0",
         "referencias/pmid-38619828.yaml": "4d7ba894e0678354a11cec41782b767ceebd056d308c1ff8edde131894a71268"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -440,8 +458,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6020-intubacion-dificil.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3078-test-mordida-labio-superior-clase-3.yaml": "bf284c373f4ef74131492f0264af906aec28dcc1891e19f7776d424495a11f1b",
         "conceptos/HM3079-distancia-hiodomentoniana-corta.yaml": "6afcfa37fd303843404cf8c9c6853885f52b3ec85a76b5c63f471ac54511f141",
         "conceptos/HM3080-retrognatia.yaml": "e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b",
@@ -450,6 +470,10 @@
         "condiciones/HM6020-intubacion-dificil.yaml": "ff9a4c558137006cb089f056c8f5bf3a48d9ec9bd951225ca5502a571b871704",
         "referencias/pmid-30721300.yaml": "33f42c72248a77f200f42a1f7fe909b8428f6945ea78ad9bab90f2ac3ed168b5"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -573,8 +597,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml": "4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35",
         "conceptos/HM3084-cuestionario-audit-c-positivo.yaml": "60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37",
         "conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml": "2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406",
@@ -583,6 +609,10 @@
         "condiciones/HM6021-trastorno-consumo-alcohol.yaml": "db7898f5af71fc0ce7cd96fc246f82f46220189956ef6bff8cea50dc2201e4df",
         "referencias/pmid-38592385.yaml": "58bb53d39a0494342209a56cbc96e0c66000e96f4e960a6d0b9793ae0a7f7882"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -771,8 +801,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0211-odinofagia.yaml": "cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f",
         "conceptos/HM0603-esplenomegalia.yaml": "91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5",
         "conceptos/HM0607-adenopatias.yaml": "f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561",
@@ -784,6 +816,10 @@
         "condiciones/HM6003-mononucleosis-infecciosa.yaml": "a09354b3a9d4e54f2ae83ceddb09caf69b8f76f4f155ef031223ada310a90371",
         "referencias/pmid-27115266.yaml": "668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -897,8 +933,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3007-derrame-pleural.yaml": "a0ff591f0ccbe7b4ce56d06f14b904174cc9be542c879da32ea43688912c76c3",
         "conceptos/HM3008-colesterol-pleural-elevado.yaml": "54f1e2a139a84af23e9dac062e42c6a2b79a150d87d9657452f6860ecb5d13e6",
         "conceptos/HM3009-ldh-pleural-elevada.yaml": "b2afdd29ba8d0e1489ef7ec4578124f9479c4586db527cf66e5f8fc8df6287d2",
@@ -907,6 +945,10 @@
         "condiciones/HM6005-derrame-pleural-exudativo.yaml": "be323c90b632013bda6e773b21184abc9afb8f77d920168ca036ee2b17c18d44",
         "referencias/pmid-24938565.yaml": "e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -1026,13 +1068,19 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3012-pulsacion-aortica-ensanchada.yaml": "54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35",
         "conceptos/HM3013-obesidad-abdominal.yaml": "ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54",
         "condiciones/HM6006-aneurisma-aorta-abdominal.yaml": "9cec6260cfe5eea995f9e1ed8f1cddf95e7dc5734e645a439483e7e774717138",
         "referencias/pmid-9892455.yaml": "781f7d38a1ffdb9e732d07f96d7d375d0b690cc6f5ddd1324d87d3070f981905"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 1,
@@ -1163,8 +1211,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
         "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
         "conceptos/HM3015-descenso-segmento-st.yaml": "c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24",
@@ -1174,6 +1224,10 @@
         "condiciones/HM6007-sindrome-coronario-agudo.yaml": "c6a257121f0d7e4755e662b68f56bb2f21d12babd0a8f21870d0c5e826ed0feb",
         "referencias/pmid-26547467.yaml": "fee2183becb69467acb2e26ec76404b1a9aae18c1272b85d9f36adeb16ffe831"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -1343,8 +1397,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6008-hipovolemia.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0109-hipotension-arterial.yaml": "cd9dbafb92f3d3716704d2a295ea2ce5fcf4f22d97358dbd1b9c44a8f0ea69f5",
         "conceptos/HM3019-mareo-postural-intenso.yaml": "7e119a6b7791169797291abac826a63b6117a0e7ff5c33ec27b0f18ac811938a",
         "conceptos/HM3020-incremento-postural-del-pulso.yaml": "9ae6d79e5bc0201bf89204bc06c2824a565d8a1ff2b2433c64e5326f11d4db40",
@@ -1356,6 +1412,10 @@
         "condiciones/HM6008-hipovolemia.yaml": "46d0a8360a8a324654ea420239ab9f2348ab5223c33df7c90ad6deeaa9302fba",
         "referencias/pmid-10086438.yaml": "b63336db28ca997d4e2c31dc9518c172e2261fd09055c3902a5ff7236d038cd0"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -1465,8 +1525,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6009-faringitis-estreptococica.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0211-odinofagia.yaml": "cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f",
         "conceptos/HM3026-exudado-amigdalino.yaml": "2035d19d7697ad00e8860ba5bf2e4be6d4c17b557a6f8ab8b8c966ae088e8b43",
         "conceptos/HM3027-exudado-faringeo.yaml": "06a0f094562bd1a1b9c9ec09d5dc2c2ca5b963c627c82897dd1f93ac6dca0c50",
@@ -1476,6 +1538,10 @@
         "condiciones/HM6009-faringitis-estreptococica.yaml": "3d245901b5953adc1bc2bb4fabfb95e3855fa4b1d5009751cfbe62f421bc4ef7",
         "referencias/pmid-11147989.yaml": "f6aca870e75ab118eba2a41950cb38d56cabbcb69b65ba4e5eadc1f671edafc8"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -1707,8 +1773,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6010-sincope-cardiaco.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0207-cefalea.yaml": "3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c",
         "conceptos/HM0505-sincope.yaml": "c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c",
         "conceptos/HM3031-primer-sincope-desde-los-35.yaml": "3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa",
@@ -1722,6 +1790,10 @@
         "condiciones/HM6010-sincope-cardiaco.yaml": "44d25df093a428884d0ed09d208d86e4a6f154d48a6259c6bca1e2257492d664",
         "referencias/pmid-31237649.yaml": "b8a3d22701b7aceb50254216ad315c9c7235424e0bba5bd261e1621a976c75bb"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -1860,8 +1932,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6011-infeccion-precoz-por-vih.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
         "conceptos/HM0302-vomitos.yaml": "c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9",
         "conceptos/HM0607-adenopatias.yaml": "f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561",
@@ -1871,6 +1945,10 @@
         "condiciones/HM6011-infeccion-precoz-por-vih.yaml": "da3f12b7d2d61192612c0bc2de23c0f8bb38cf47d7f94c19d50712de89160d80",
         "referencias/pmid-25027143.yaml": "9b6cbb935f7a83c37d6ec407afb0d65294b8b4cc753e02096259ca180ee189f0"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2049,8 +2127,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6012-artrosis-de-cadera.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3041-dolor-posterior-en-cuclillas.yaml": "96fcce3b26f280f51628c1f17a08a4de45b992674fe7e6746399e714583693b4",
         "conceptos/HM3042-dolor-inguinal-abduccion-aduccion.yaml": "b7d701d16997b0d6ed38d9ee16dc7d0ef4d7ea5423ad7e64119f985fc7b7ec6a",
         "conceptos/HM3043-debilidad-de-abductores.yaml": "5cc8943c630898ae3f35af6571edeed0a3ebbca0b288bf67987360aa999d3e4b",
@@ -2062,6 +2142,10 @@
         "condiciones/HM6012-artrosis-de-cadera.yaml": "031ae0b9a25da2de810bca47feea7a8eb76b360d03bd06b25df92b4f11010ea8",
         "referencias/pmid-31846019.yaml": "b01d3c39fe0f1808b637635828f325109795ca8975031303f200957a7c2e53f7"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2151,14 +2235,20 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3055-arco-doloroso.yaml": "3548cc14bec9a5d961bcdddcdcc82ccad1ccf929916776673aa2aca3cc9f28b3",
         "conceptos/HM3058-drop-arm.yaml": "27f9b42dcac851d3c59294207f5ee6cf42d3205bdffb08da8c5e854c801ddb1c",
         "conceptos/HM3059-dolor-de-hombro.yaml": "99c4073545b37133cd7e218ead1bfbe7ea6d4d11b970fd95c2aa91bb8696fcff",
         "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml": "20562fb16c0d1d17104d710f6b21f8da0bbd8782cb5e9ddf99af3f81f4ef9f52",
         "referencias/pmid-23982370.yaml": "a069ef6d93f543653e62805872e4ffaf929021cd19668bcb2eb3b5413613c18b"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2242,13 +2332,19 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3056-lag-rotacion-externa.yaml": "89f1056f9840213b12973fd986960c9acce2cd4e1659313609b9f348683f8464",
         "conceptos/HM3057-lag-rotacion-interna.yaml": "af8fb988476f76fe41cf62414d3d78eb79c6c92ae5e378f150ac4ec2cf6b5bed",
         "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml": "948a520a9c00092a5e3a1fd4b58e9745c3cd733f976167157f29f89c4437c6d0",
         "referencias/pmid-23982370.yaml": "a069ef6d93f543653e62805872e4ffaf929021cd19668bcb2eb3b5413613c18b"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2318,8 +2414,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6015-enfermedad-de-parkinson.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3061-bradicinesia.yaml": "623f4a414f90755471fd23933757b9118848638e618f5a63fa01a4ab626182a0",
         "conceptos/HM3062-temblor-de-reposo.yaml": "b181c4353fd0a2b46cc1bb9b46e240e468ab0e4de27f1aeedf8d081851671027",
         "conceptos/HM3063-rigidez-parkinsoniana.yaml": "97ec764a6867749d77971a91cde2028ec1cb43e13d7504e12308094528a43de5",
@@ -2327,6 +2425,10 @@
         "condiciones/HM6015-enfermedad-de-parkinson.yaml": "da6f3cf1eb93f27411eda8f603aac72d4a94af776a79c05e94afffd30ee5768c",
         "referencias/pmid-26474316.yaml": "409c161aa7d66ee82f74cac52519280375172cc5fe2c388633ab2b80dbbf38dc"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2464,8 +2566,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6016-embarazo-ectopico.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
         "conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml": "26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15",
         "conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml": "201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f",
@@ -2476,6 +2580,10 @@
         "condiciones/HM6016-embarazo-ectopico.yaml": "dbb752230c0f4a1145368812d0694ad3aa10d99465f17ea03f151db071c5106d",
         "referencias/pmid-23613077.yaml": "8611f28321a818a1dd3195b5ddfc92a6f3f8af796cb75285e456be3693232cc1"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2573,13 +2681,19 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6017-conjuntivitis-bacteriana.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3070-secrecion-ocular-mucopurulenta.yaml": "3bfe58e42533a195ed4c5a0364a3b97703e1146d74d2b98a0189e021bdc4a1e5",
         "conceptos/HM3071-otitis-media-concomitante.yaml": "0a18de104fa683c09fea5b0e07a9c02ba15220367b82e53dd95ad80fe21fa86b",
         "condiciones/HM6017-conjuntivitis-bacteriana.yaml": "249ba11c9a4bcd8c2d644056c2ce1178c1e4ba7fad6a298f600044bb240a6c4a",
         "referencias/pmid-35699701.yaml": "d9348ef1222256bb8266c2fcc4df081baad7956845719fe8c927731c65599454"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2657,14 +2771,20 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM3072-ahogo-o-jadeo-nocturno.yaml": "bb978561f85d04ea3c3d96596aed38b1fccd27c88a0c6855cef56cdc1d111d92",
         "conceptos/HM3073-ronquido.yaml": "7b20f9582eab041322e5a8b9209a4bd214bb831c3476d25c74ffa78bec5d4f5b",
         "conceptos/HM3074-indice-de-masa-corporal-bajo.yaml": "55a3f9877aee395d377f92bd9235307ef18d9a02c85c6345d8529b2256949caa",
         "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml": "1cf4cd6512f8168487b509b4c743cb9f7dcec67eec9581cbd642e8213c950d82",
         "referencias/pmid-23989984.yaml": "adade58f82c42307bf63354293d2c8ce4a392f3f9cc3e4e5291fec62b652fad0"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,
@@ -2785,8 +2905,10 @@
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
       "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6004-meningitis-aguda.yaml",
       "archivos": {
+        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
         "conceptos/HM0101-fiebre.yaml": "fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93",
         "conceptos/HM0207-cefalea.yaml": "3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c",
         "conceptos/HM0301-nauseas.yaml": "e678ffbd65c8ecbae1afe311de0693dc240bff7d676879838347df44fa30556a",
@@ -2797,6 +2919,10 @@
         "condiciones/HM6004-meningitis-aguda.yaml": "094b0b47f35478cc7db439647a545a988f3804088f1bfbc0df379019c3efb45a",
         "referencias/pmid-10411200.yaml": "8b029e69cf573d005a0416d103199e091dfd7156895fad9de3768aebf43a5eab"
       }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
     },
     "has_quiz": true,
     "quiz_count": 2,

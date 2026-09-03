@@ -12,6 +12,8 @@ const outputDataDir = path.join(rootDir, 'assets', 'data');
 const outputPostsDir = path.join(outputDataDir, 'posts');
 const checkOnly = process.argv.includes('--check');
 const pendingOutputs = new Map();
+const publicationCitation = yaml.load(fs.readFileSync(path.join(rootDir, 'CITATION.cff'), 'utf8'));
+if (!publicationCitation.doi) throw new Error('Medsemiotics no declara su DOI en CITATION.cff');
 
 function emitJson(filename, data) {
   pendingOutputs.set(filename, JSON.stringify(data, null, 2) + '\n');
@@ -86,6 +88,7 @@ function buildBlog() {
       grounding: data.grounding,
       evidencia: data.evidencia || [],
       fuente: data.fuente,
+      publicacion: { titulo: publicationCitation.title, doi: publicationCitation.doi },
       has_quiz: Boolean(data.autoevaluacion && data.autoevaluacion.length > 0),
       quiz_count: data.autoevaluacion ? data.autoevaluacion.length : 0,
       featured_image: data.image || (imgData ? (imgData.thumb || imgData.url) : null),

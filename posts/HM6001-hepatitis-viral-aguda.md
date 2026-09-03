@@ -16,8 +16,10 @@ difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
   revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6001-hepatitis-viral-aguda.yaml
   archivos:
+    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
     conceptos/HM0101-fiebre.yaml: fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93
     conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml: c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f
     conceptos/HM0305-ictericia.yaml: 87323a0b278fc5c8d70ae931a46478eccb092cec8330f28434d136003b6ad270

@@ -86,13 +86,19 @@
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
     "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+    "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6017-conjuntivitis-bacteriana.yaml",
     "archivos": {
+      "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
       "conceptos/HM3070-secrecion-ocular-mucopurulenta.yaml": "3bfe58e42533a195ed4c5a0364a3b97703e1146d74d2b98a0189e021bdc4a1e5",
       "conceptos/HM3071-otitis-media-concomitante.yaml": "0a18de104fa683c09fea5b0e07a9c02ba15220367b82e53dd95ad80fe21fa86b",
       "condiciones/HM6017-conjuntivitis-bacteriana.yaml": "249ba11c9a4bcd8c2d644056c2ce1178c1e4ba7fad6a298f600044bb240a6c4a",
       "referencias/pmid-35699701.yaml": "d9348ef1222256bb8266c2fcc4df081baad7956845719fe8c927731c65599454"
     }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
   },
   "has_quiz": true,
   "quiz_count": 2,

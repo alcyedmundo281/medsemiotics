@@ -26,6 +26,8 @@ test('Una condición, un artículo, una URL; preguntas sin ediciones independien
     assert.deepEqual(article.evidencia, p.evidencia);
     assert.deepEqual(article.autoevaluacion, p.autoevaluacion);
     assert.deepEqual(article.fuente, p.fuente);
+    assert.equal(article.publicacion.doi, yaml.load(read('CITATION.cff')).doi);
+    assert.ok(article.fuente.doi);
     assert.equal(links.find(l => l.condicion_id === p.grounding.condicion_id).slug, p.slug);
     for (const q of p.autoevaluacion) {
       const actual = bank.find(b => b.id === p.slug + '-' + q.id);
@@ -42,6 +44,17 @@ test('Una condición, un artículo, una URL; preguntas sin ediciones independien
       assert.ok(sign[field].ref);
     }
   }
+});
+
+test('La página distingue el DOI del material, el del conjunto de datos y el del estudio', async () => {
+  const { context, element } = browser();
+  context.fixture = { slug: 'prueba', title: 'Prueba', body: '',
+    publicacion: { doi: '10.test/material' }, fuente: { doi: '10.test/datos' },
+    grounding: { doi: '10.test/estudio' } };
+  await vm.runInContext('currentPost = fixture; renderPost()', context);
+  assert.equal(element('publicationDoiLink').href, 'https://doi.org/10.test/material');
+  assert.equal(element('sourceDoiLink').href, 'https://doi.org/10.test/datos');
+  assert.equal(element('doiLink').href, 'https://doi.org/10.test/estudio');
 });
 
 function browser() {
