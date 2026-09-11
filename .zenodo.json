@@ -9,8 +9,7 @@
   "creators": [
     {
       "name": "Torres Guerrero, Alcy Edmundo",
-      "orcid": "0000-0002-9742-375X",
-      "affiliation": "Hospital de Especialidades Carlos Andrade Marín; Universidad Central del Ecuador"
+      "orcid": "0000-0002-9742-375X"
     }
   ],
   "communities": [
@@ -44,5 +43,6 @@
       "relation": "isSupplementTo",
       "scheme": "url"
     }
-  ]
+  ],
+  "notes": "Plataforma independiente. El contenido no implica aval ni representación de ninguna institución sanitaria ni académica."
 }
