@@ -1511,7 +1511,7 @@ video {
 }
 
 /* Los 6 hubs y el índice usan estas dos clases desde siempre, pero nadie las
-     definía: vivían sueltas en el <style> de algunas páginas de contenido y en
+     definía: vivían sueltas en el \3c style> de algunas páginas de contenido y en
      ninguna parte para los hubs. Aquí quedan disponibles para todo el sitio. */
 
 .gradient-text {
