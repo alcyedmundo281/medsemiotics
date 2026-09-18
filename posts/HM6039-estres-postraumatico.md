@@ -21,8 +21,8 @@ fuente:
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3153-trauma-screening-questionnaire-positivo.yaml: 2b723c3ecd63806c897092b32412cab381754a741c9a458452299ffe36773049
-    condiciones/HM6037-sobrecarga-de-volumen.yaml: 1ee4b478ea3078d46cf57ace81fb81364c221e4301ce70e88a3bbc6a069cd90f
-    condiciones/HM6039-estres-postraumatico.yaml: b867ea823d02c9e241ca2c3c0a97e04835d2ca66307dc2ca192f007f287f9eea
+    condiciones/HM6037-sobrecarga-de-volumen.yaml: eca41c49d71742acef49b4319fc79da95905d97155a2dbaec845d342004a615f
+    condiciones/HM6039-estres-postraumatico.yaml: 8cafa5f4b6857f8b3ce169444a5043a95c04f9c8328a718a17473053b037542d
     referencias/pmid-26241601.yaml: ce57c07f613a42e7c63eeb0f42dec5c35414e5e3e290c3af7250cd9b71ab55b2
 grounding:
   condicion_id: HM:6039

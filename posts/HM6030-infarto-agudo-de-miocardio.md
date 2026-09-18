@@ -29,7 +29,7 @@ fuente:
     conceptos/HM3134-dolor-toracico-reproducible-a-la-palpacion.yaml: f23a1800f2d73e860ab303a1026f8e90a3aa29f340d037668ba3de3522297ef6
     conceptos/HM3135-dolor-toracico-punzante.yaml: a82cc27a26e2f5c4fdee7225832251f4bf5e1d18fce8c93ed82c0e081f7463c3
     conceptos/HM3136-dolor-toracico-posicional.yaml: 14e7c84d587048ab1b4a61d4b88c29ea6693307a7e4c1e67889e09cdd9eafec3
-    condiciones/HM6030-infarto-agudo-de-miocardio.yaml: 3058acb4abb177a7e64b7b69c6ad71c9b0902a9b3eafbe2d7a205e5ccf5f0fc0
+    condiciones/HM6030-infarto-agudo-de-miocardio.yaml: 92fcbe38a8b1f3b2bc0223fe3eb0bcf09d1641e57bbe160a23ff0941da4e9a8a
     referencias/pmid-9786377.yaml: a744bdfe061bea39eeebdfeb75c36d78c863cb9fb6a8a848d121b42024f1665f
 grounding:
   condicion_id: HM:6030

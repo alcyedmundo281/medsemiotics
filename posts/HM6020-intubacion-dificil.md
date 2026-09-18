@@ -15,18 +15,18 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6020-intubacion-dificil.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3078-test-mordida-labio-superior-clase-3.yaml: bf284c373f4ef74131492f0264af906aec28dcc1891e19f7776d424495a11f1b
     conceptos/HM3079-distancia-hiodomentoniana-corta.yaml: 6afcfa37fd303843404cf8c9c6853885f52b3ec85a76b5c63f471ac54511f141
     conceptos/HM3080-retrognatia.yaml: e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b
     conceptos/HM3081-mallampati-clase-3-o-4.yaml: 366c0d1c97f6fa6e8742157e005d8058c19a3df9b131b41cdef47fd1360ae170
     conceptos/HM3082-score-de-wilson.yaml: a6c034805fc5b741f39efffe0d2d933c1737147705c7fb53b518bd8b3e34ffa0
     condiciones/HM6020-intubacion-dificil.yaml: ff9a4c558137006cb089f056c8f5bf3a48d9ec9bd951225ca5502a571b871704
-    referencias/pmid-30721300.yaml: 33f42c72248a77f200f42a1f7fe909b8428f6945ea78ad9bab90f2ac3ed168b5
+    referencias/pmid-30721300.yaml: ad82c0d43425b8e7808e9c35f6c5c8e3a626e0af90641b3673f7469cb13fc9ea
 grounding:
   condicion_id: HM:6020
   condicion_nombre: Intubación difícil

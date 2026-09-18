@@ -15,18 +15,20 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6005-derrame-pleural-exudativo.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
-    conceptos/HM3007-derrame-pleural.yaml: a0ff591f0ccbe7b4ce56d06f14b904174cc9be542c879da32ea43688912c76c3
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM3007-derrame-pleural.yaml: c9c8eaf748230a1ecee3b74a98548dba77dc6f6c2690be1aa36daa58cd362bc5
     conceptos/HM3008-colesterol-pleural-elevado.yaml: 54f1e2a139a84af23e9dac062e42c6a2b79a150d87d9657452f6860ecb5d13e6
     conceptos/HM3009-ldh-pleural-elevada.yaml: b2afdd29ba8d0e1489ef7ec4578124f9479c4586db527cf66e5f8fc8df6287d2
     conceptos/HM3010-cociente-colesterol-pleural-suero.yaml: 43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180
     conceptos/HM3011-criterios-de-light.yaml: 7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f
     condiciones/HM6005-derrame-pleural-exudativo.yaml: be323c90b632013bda6e773b21184abc9afb8f77d920168ca036ee2b17c18d44
+    referencias/pmid-22392031.yaml: 167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b
     referencias/pmid-24938565.yaml: e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc
+    referencias/pmid-26218493.yaml: 6d5857478ed53b16e1e807535dfd875a1268ced08bfca4be21a703991508150f
 grounding:
   condicion_id: HM:6005
   condicion_nombre: Derrame pleural exudativo
@@ -214,6 +216,12 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ### Derrame pleural (HM:3007)
 
+**Significante:** Espacio anecoico entre la pared torácica y el pulmón, sobre el diafragma.
+
+**Significado:** Líquido en el espacio pleural.
+
+**Falsos positivos:** Ascitis subdiafragmática / Consolidación pulmonar / Órgano sólido / Engrosamiento o masa pleural / Derrame pericárdico / Ventana mala
+
 **Rol:** Manifestación
 
 **Estado del LR:** LR no medible
@@ -223,5 +231,9 @@ Snomed: No documentado.; Cie10: No documentado.
 ## Referencias y procedencia
 
 **pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.
+
+**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.
+
+**pmid:22392031:** International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med, 2012. DOI: 10.1007/s00134-012-2513-4.
 
 Fuente clínica: medsemiotics-db, condición HM:6005.

@@ -15,12 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6008-hipovolemia.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
-    conceptos/HM0109-hipotension-arterial.yaml: cd9dbafb92f3d3716704d2a295ea2ce5fcf4f22d97358dbd1b9c44a8f0ea69f5
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0109-hipotension-arterial.yaml: 934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc
     conceptos/HM3019-mareo-postural-intenso.yaml: 7e119a6b7791169797291abac826a63b6117a0e7ff5c33ec27b0f18ac811938a
     conceptos/HM3020-incremento-postural-del-pulso.yaml: 9ae6d79e5bc0201bf89204bc06c2824a565d8a1ff2b2433c64e5326f11d4db40
     conceptos/HM3021-axila-seca.yaml: a0e492588458e16f639ca2acc73bb0f7f66135ca013584ebb650670365cca0be

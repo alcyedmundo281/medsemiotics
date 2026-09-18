@@ -26,7 +26,7 @@ fuente:
     conceptos/HM0206-dolor-toracico.yaml: b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f
     conceptos/HM0406-crepitantes.yaml: 5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083
     conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml: 9449ad5b45db85fce3b18a01aaa8241470c2edfe132589b703bd498687eac216
-    condiciones/HM6036-neumonia-infantil.yaml: af94e664be7f5dd8c1e61b8891c8c79e162b079cbe2a18c01ea952d2780e9445
+    condiciones/HM6036-neumonia-infantil.yaml: 2592cfc7ca6b494357364ace2e9241755179b522a731d51563820e9c32e4da2a
     referencias/pmid-28763554.yaml: 6b16261f8789e9a1205fa94803b9f07841f6bd6563ebcd59b30a6595ce6db76f
 grounding:
   condicion_id: HM:6036

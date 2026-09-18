@@ -28,7 +28,7 @@ fuente:
     conceptos/HM3097-punto-proximo-de-convergencia-anormal.yaml: e652c6a21318fffa323862abb88f3570d077900498ce2d079519c99bc55530fd
     conceptos/HM3098-movimientos-de-persecucion-suave-anormales.yaml: 48ebc6227ba3c681a5d3e0bd6378be7aeac41aea9ea2d3d4ff15c290fbfae32c
     conceptos/HM3099-sacadas-oculares-anormales.yaml: 96dba68766d1678acadb7b30e890122f25fdf325f812b05371553369e90db62b
-    condiciones/HM6023-conmocion-cerebral-pediatrica.yaml: dd25083b61e5aaec55eaab33a745e07d6b0118c2bd9a06219fabc1ddd4af27a2
+    condiciones/HM6023-conmocion-cerebral-pediatrica.yaml: d63ec5841dbc0749f78ad4ecc2b45254ed5262b4756783b72eb83551b7c57a8c
     referencias/pmid-41941197.yaml: 18cbdb879da36a79aef7d6c8911332329c408e68df1052682cb850affb3dd528
 grounding:
   condicion_id: HM:6023

@@ -15,11 +15,11 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6012-artrosis-de-cadera.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3041-dolor-posterior-en-cuclillas.yaml: 96fcce3b26f280f51628c1f17a08a4de45b992674fe7e6746399e714583693b4
     conceptos/HM3042-dolor-inguinal-abduccion-aduccion.yaml: b7d701d16997b0d6ed38d9ee16dc7d0ef4d7ea5423ad7e64119f985fc7b7ec6a
     conceptos/HM3043-debilidad-de-abductores.yaml: 5cc8943c630898ae3f35af6571edeed0a3ebbca0b288bf67987360aa999d3e4b

@@ -15,11 +15,11 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3056-lag-rotacion-externa.yaml: 89f1056f9840213b12973fd986960c9acce2cd4e1659313609b9f348683f8464
     conceptos/HM3057-lag-rotacion-interna.yaml: af8fb988476f76fe41cf62414d3d78eb79c6c92ae5e378f150ac4ec2cf6b5bed
     condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml: 948a520a9c00092a5e3a1fd4b58e9745c3cd733f976167157f29f89c4437c6d0

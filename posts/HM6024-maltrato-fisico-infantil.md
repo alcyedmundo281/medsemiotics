@@ -27,7 +27,7 @@ fuente:
     conceptos/HM3106-hematoma-subdural-en-lactante.yaml: f132fc6a4a74599296d1a96fcaeb38487007830c56b84185395857514d099bf8
     conceptos/HM3107-fractura-unica-en-serie-esqueletica.yaml: be31c4998e1478df93c64676081ec95bfd52afc014ebeb8657a757d77e5e6ba1
     conceptos/HM3108-fracturas-multiples-en-serie-esqueletica.yaml: e3dc5c958e029cbffb622f0e698dea3b3f31d338bfe51d6b6827496a3fef52c6
-    condiciones/HM6024-maltrato-fisico-infantil.yaml: 5a57d90ed734929a8784df29ee962bd2e4eaf8c2d911869979ca5906cd5b89ac
+    condiciones/HM6024-maltrato-fisico-infantil.yaml: 31fb05add92e2b335003bb0a085d0374a0fbdf63fcc84691089134c1b06cd5d1
     referencias/pmid-40257808.yaml: 5253c0c81716cc93fa96ea9ed210018f678433817a16e78b6538d0d0b873dc62
 grounding:
   condicion_id: HM:6024

@@ -15,11 +15,11 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6017-conjuntivitis-bacteriana.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3070-secrecion-ocular-mucopurulenta.yaml: 3bfe58e42533a195ed4c5a0364a3b97703e1146d74d2b98a0189e021bdc4a1e5
     conceptos/HM3071-otitis-media-concomitante.yaml: 0a18de104fa683c09fea5b0e07a9c02ba15220367b82e53dd95ad80fe21fa86b
     condiciones/HM6017-conjuntivitis-bacteriana.yaml: 249ba11c9a4bcd8c2d644056c2ce1178c1e4ba7fad6a298f600044bb240a6c4a

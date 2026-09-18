@@ -15,17 +15,17 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6002-sindrome-intestino-irritable.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
-    conceptos/HM0101-fiebre.yaml: fb16183d00cc93f60aff82d7904798fe984a3cef751a56e41e3d4f82bd58cc93
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM0303-diarrea.yaml: 0d5ca16fa30e66c063ee51a787ddae512941d0600d783e12fbd847482a224ced
     conceptos/HM0304-estrenimiento.yaml: 144e3ac249c42c3c2b9a726e28a4fc596afc88b32b7266ad8906ed7fd157899f
     conceptos/HM0310-melena.yaml: 56ea476133e21be467cd68f7bb9a8a9b3f9a7623d63fbf3e4e37810fe2d87081
-    conceptos/HM0711-anemia.yaml: 33c2de9e06e96c38c950b2cdc270e1acd8a60d7953e04b9c6224303f28628410
+    conceptos/HM0711-anemia.yaml: c338972f0322d30f8cc652238e28f0d141409666b6d0f1bf27bc2e7b532c24d5
     conceptos/HM0803-perdida-de-peso.yaml: 78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e
     conceptos/HM3060-hematoquecia.yaml: 3859f875c15207194d1bc498152f293a810c21faeb51c3ae1ce78ba459cbd338
     condiciones/HM6002-sindrome-intestino-irritable.yaml: de99a8c5755f450792d575897902bde932154119c4318ee30d916dbec0bd11f5

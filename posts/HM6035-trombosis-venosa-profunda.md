@@ -23,7 +23,7 @@ fuente:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0604-edema-en-miembros-inferiores.yaml: ca8df008ba56ddf2a9a2d6786ecd624e2d1e8ded2adb5a20c6b86adff479c0e9
     conceptos/HM3144-dimero-d-elevado.yaml: 562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2
-    condiciones/HM6035-trombosis-venosa-profunda.yaml: d41d82f53d07e490b652031ce7841eef4326ce8d17c5fe2067efca0911bec05a
+    condiciones/HM6035-trombosis-venosa-profunda.yaml: d7561128a4412c17b6fe37d8cd17dadb7fec9176c9098736e9ef624a0a8bdb82
     referencias/pmid-16403932.yaml: a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789
 grounding:
   condicion_id: HM:6035
