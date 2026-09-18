@@ -169,12 +169,15 @@ function buildBlog() {
   })).sort((a, b) => a.condicion_id.localeCompare(b.condicion_id)));
   const sitemapPath = path.join(rootDir, 'sitemap.xml');
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const blogUrls = '<!-- BLOG-START -->\n' + postsIndex.map(p =>
+  // sitemap.mjs escribe el archivo entero con CRLF: el bloque del blog conserva
+  // el mismo fin de línea para no reescribir todo el sitemap en cada build.
+  const eol = sitemap.includes('\r\n') ? '\r\n' : '\n';
+  const blogUrls = '<!-- BLOG-START -->' + eol + postsIndex.map(p =>
     `  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=${p.slug}</loc></url>`,
-  ).sort().join('\n') + '\n<!-- BLOG-END -->';
+  ).sort().join(eol) + eol + '<!-- BLOG-END -->';
   const updatedSitemap = sitemap.includes('<!-- BLOG-START -->')
     ? sitemap.replace(/<!-- BLOG-START -->[\s\S]*?<!-- BLOG-END -->/, blogUrls)
-    : sitemap.replace('</urlset>', blogUrls + '\n</urlset>');
+    : sitemap.replace('</urlset>', blogUrls + eol + '</urlset>');
   pendingOutputs.set(sitemapPath, updatedSitemap);
   const stale = [];
   for (const [filename, text] of pendingOutputs) {
