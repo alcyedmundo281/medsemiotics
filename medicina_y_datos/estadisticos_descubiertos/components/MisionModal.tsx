@@ -1,5 +1,5 @@
 import React from 'react';
-import { chimborazoDataset } from '../data/chimborazoDataset';
+import { chimborazoDataset, chimborazoDatasetAssets } from '../data/chimborazoDataset';
 
 interface ModalProps {
     isOpen: boolean;
@@ -67,7 +67,7 @@ const MisionModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 </div>
                 <div className="bg-gray-100 px-8 py-4 flex justify-end items-center gap-4">
                     <a
-                        href={`${import.meta.env.BASE_URL}muestra-base-datos-anonimizada-chimborazo.csv`}
+                        href={chimborazoDatasetAssets.csv()}
                         download
                         className="inline-flex items-center justify-center gap-2 rounded-lg border border-teal-500 px-6 py-2 font-bold text-teal-600 transition-colors duration-300 hover:bg-teal-50"
                     >
@@ -85,4 +85,4 @@ const MisionModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     );
 };
 
-export default MisionModal;
+export default MisionModal;
