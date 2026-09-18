@@ -1,0 +1,259 @@
+{
+  "id": "HM6024-01",
+  "slug": "maltrato-fisico-infantil-precision-semiotica",
+  "title": "Maltrato físico infantil: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "date": "2026-09-18",
+  "author": "Dr. Alcy Torres",
+  "category": "medicina_interna",
+  "category_label": "Medicina Interna",
+  "tags": [
+    "maltrato-fisico-infantil",
+    "medicina_interna",
+    "semiologia"
+  ],
+  "reading_time": "8 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6024 · PMID:40257808",
+  "grounding": {
+    "condicion_id": "HM:6024",
+    "condicion_nombre": "Maltrato físico infantil",
+    "concepto_id": "HM:3104",
+    "concepto_nombre": "Hemorragias retinianas en niño pequeño",
+    "estado_lr": "medido",
+    "lr_positivo": 11,
+    "lr_negativo": null,
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": null,
+    "referencia_id": "pmid:40257808",
+    "referencia_cita": "Shah SN, Fong HF, Haney SB, Harper NS, Pierce MC, Neuman MI Has This Child Experienced Physical Abuse?: The Rational Clinical Examination Systematic Review JAMA 2025",
+    "pmid": "40257808",
+    "doi": "10.1001/jama.2025.2216"
+  },
+  "evidencia": [
+    {
+      "concepto": "HM:3104",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 11,
+        "ic95": [
+          5.2,
+          23
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)"
+    },
+    {
+      "concepto": "HM:3100",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 6.6,
+        "ic95": [
+          2.8,
+          16
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo"
+    },
+    {
+      "concepto": "HM:3108",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 5.9,
+        "ic95": [
+          3.3,
+          10
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "hallazgo en el examen radiológico esquelético altamente discriminativo"
+    },
+    {
+      "concepto": "HM:3102",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 5.6,
+        "ic95": [
+          2.1,
+          15
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "hematomas con forma de objeto o marca anatómica incompatible con caídas accidentales"
+    },
+    {
+      "concepto": "HM:3101",
+      "rol": "apoyo",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 5.1,
+        "ic95": [
+          1.8,
+          14
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "localización anatómica protegida indicativa de lesión infligida intencionalmente"
+    },
+    {
+      "concepto": "HM:3106",
+      "rol": "apoyo",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 3.2,
+        "ic95": [
+          2.1,
+          4.8
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "complicación intracraneal frecuente en traumatismos por sacudida o impacto"
+    },
+    {
+      "concepto": "HM:3107",
+      "rol": "apoyo",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 1.8,
+        "ic95": [
+          1.2,
+          2.7
+        ],
+        "ref": "pmid:40257808"
+      },
+      "decision": "incrementa modestamente el riesgo de maltrato pero requiere correlación con el mecanismo referido"
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+    "doi": "10.5281/zenodo.22064424",
+    "condicion": "condiciones/HM6024-maltrato-fisico-infantil.yaml",
+    "archivos": {
+      "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM3100-lesion-oral-o-desgarro-del-frenillo.yaml": "3f167e8d111ea490b60ca54e111019666fc1f982a42a7dff0f2c9bacb062e022",
+      "conceptos/HM3101-equimosis-en-nalgas-o-cuello.yaml": "3c8982da088013e28ded5d661186c1660bf4fbebad08a02b6f8383d8b66f3129",
+      "conceptos/HM3102-equimosis-con-patron.yaml": "3acf12db1ed57feeef815579d76bb37aa3aa9852c17e8624b2b24f1650342414",
+      "conceptos/HM3104-hemorragias-retinianas-en-nino-pequeno.yaml": "f6b5e3a84a565d6ad57a2bdac956b5eece0aaaa535ca475af9c0142459133c7e",
+      "conceptos/HM3106-hematoma-subdural-en-lactante.yaml": "f132fc6a4a74599296d1a96fcaeb38487007830c56b84185395857514d099bf8",
+      "conceptos/HM3107-fractura-unica-en-serie-esqueletica.yaml": "be31c4998e1478df93c64676081ec95bfd52afc014ebeb8657a757d77e5e6ba1",
+      "conceptos/HM3108-fracturas-multiples-en-serie-esqueletica.yaml": "e3dc5c958e029cbffb622f0e698dea3b3f31d338bfe51d6b6827496a3fef52c6",
+      "condiciones/HM6024-maltrato-fisico-infantil.yaml": "5a57d90ed734929a8784df29ee962bd2e4eaf8c2d911869979ca5906cd5b89ac",
+      "referencias/pmid-40257808.yaml": "5253c0c81716cc93fa96ea9ed210018f678433817a16e78b6538d0d0b873dc62"
+    }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
+  },
+  "has_quiz": true,
+  "quiz_count": 2,
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "triada": {
+    "significante": "Hemorragias retinianas en niño pequeño",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "En Maltrato físico infantil, ¿cuál es el resultado documentado del LR positivo para «Hemorragias retinianas en niño pequeño»?",
+      "concepto_id": "HM:3104",
+      "referencia_id": "pmid:40257808",
+      "pmid": "40257808",
+      "doi": "10.1001/jama.2025.2216",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6024",
+        "concepto_id": "HM:3104",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 11,
+          "ic95": [
+            5.2,
+            23
+          ],
+          "ref": "pmid:40257808"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)",
+        "advertencia": null
+      },
+      "opciones": [
+        {
+          "texto": "El valor 11.0 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 11.0. IC del 95 %: 5.2 a 23.0. Interpretación registrada: el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 11.0. LR positivo: 11.0. IC del 95 %: 5.2 a 23.0. Interpretación registrada: el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)."
+        },
+        {
+          "texto": "LR positivo: 11.0.",
+          "correcta": true,
+          "feedback": "LR positivo: 11.0. IC del 95 %: 5.2 a 23.0. Interpretación registrada: el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En Maltrato físico infantil, ¿cuál es el resultado documentado del LR positivo para «Lesión oral o desgarro del frenillo»?",
+      "concepto_id": "HM:3100",
+      "referencia_id": "pmid:40257808",
+      "pmid": "40257808",
+      "doi": "10.1001/jama.2025.2216",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6024",
+        "concepto_id": "HM:3100",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 6.6,
+          "ic95": [
+            2.8,
+            16
+          ],
+          "ref": "pmid:40257808"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo",
+        "advertencia": null
+      },
+      "opciones": [
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 6.6. LR positivo: 6.6. IC del 95 %: 2.8 a 16.0. Interpretación registrada: traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo."
+        },
+        {
+          "texto": "LR positivo: 6.6.",
+          "correcta": true,
+          "feedback": "LR positivo: 6.6. IC del 95 %: 2.8 a 16.0. Interpretación registrada: traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo."
+        },
+        {
+          "texto": "El valor 6.6 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.6. IC del 95 %: 2.8 a 16.0. Interpretación registrada: traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo."
+        }
+      ]
+    }
+  ],
+  "body": "# Maltrato físico infantil\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nChild physical abuse\n\n## Sinónimos\n\ntraumatismo no accidental en niños\n\nviolencia física infantil\n\nsíndrome del niño maltratado\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Hemorragias retinianas en niño pequeño (HM:3104)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 11.0; IC del 95 %: 5.2 / 23.0; Referencia: pmid:40257808\n\n**Decisión:** el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)\n\n### Lesión oral o desgarro del frenillo (HM:3100)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 6.6; IC del 95 %: 2.8 / 16.0; Referencia: pmid:40257808\n\n**Decisión:** traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo\n\n### Fracturas múltiples en serie esquelética (HM:3108)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.9; IC del 95 %: 3.3 / 10.0; Referencia: pmid:40257808\n\n**Decisión:** hallazgo en el examen radiológico esquelético altamente discriminativo\n\n### Equimosis con patrón (HM:3102)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.6; IC del 95 %: 2.1 / 15.0; Referencia: pmid:40257808\n\n**Decisión:** hematomas con forma de objeto o marca anatómica incompatible con caídas accidentales\n\n### Equimosis en nalgas o cuello (HM:3101)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.1; IC del 95 %: 1.8 / 14.0; Referencia: pmid:40257808\n\n**Decisión:** localización anatómica protegida indicativa de lesión infligida intencionalmente\n\n### Hematoma subdural en lactante (HM:3106)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.2; IC del 95 %: 2.1 / 4.8; Referencia: pmid:40257808\n\n**Decisión:** complicación intracraneal frecuente en traumatismos por sacudida o impacto\n\n### Fractura única en serie esquelética (HM:3107)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 1.8; IC del 95 %: 1.2 / 2.7; Referencia: pmid:40257808\n\n**Decisión:** incrementa modestamente el riesgo de maltrato pero requiere correlación con el mecanismo referido\n\n## Conclusión de la fuente\n\nLa presencia de hemorragias retinianas (LR+ 11.0), desgarro del frenillo labial (LR+ 6.6), fracturas múltiples (LR+ 5.9) y hematomas con patrón o en localizaciones protegidas (LR+ 5.1-5.6) son las banderas rojas con mayor capacidad discriminativa para maltrato físico.\n\n## Referencias y procedencia\n\n**pmid:40257808:** Has This Child Experienced Physical Abuse?: The Rational Clinical Examination Systematic Review. JAMA, 2025. DOI: 10.1001/jama.2025.2216.\n\nFuente clínica: medsemiotics-db, condición HM:6024."
+}

@@ -1625,52 +1625,44 @@
     "category_label": "Medicina Interna",
     "condicion_id": "HM:6016",
     "condicion_nombre": "Embarazo ectópico",
-    "concepto_id": "HM:3065",
+    "concepto_id": "HM:3165",
     "evidencia": {
       "condicion_id": "HM:6016",
-      "concepto_id": "HM:3065",
-      "estado_lr": "medido",
-      "campo": "lr_negativo",
-      "dato": {
-        "valor": 0.12,
-        "ic95": [
-          0.03,
-          0.55
-        ],
-        "ref": "pmid:23613077",
-        "nota": "la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo"
-      },
-      "poblacion": "gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885)",
-      "motivo": null,
-      "decision": "la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí",
-      "advertencia": null
+      "concepto_id": "HM:3165",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": "143 gestantes sintomáticas del primer trimestre atendidas en urgencias por sangrado vaginal y dolor abdominopélvico",
+      "motivo": "la exclusión no descansa en un cociente sino en la anatomía: un embarazo ectópico está fuera del útero por definición, así que ver el embarazo dentro lo vuelve muy improbable sin que nadie haya tenido que medirlo. Y la fuente no lo mide: su condición diana es el embarazo intrauterino contrastado contra la ecografía transvaginal del obstetra, no el ectópico contrastado contra visualización quirúrgica o seguimiento. Convertir su especificidad del 100% en un cociente del ectópico sería inventar un número que el estudio no calculó. Ver `notas_de_uso`.",
+      "decision": "cuando dice que sí, créele; cuando no lo ve, no has descartado nada. Es una asimetría, no un resultado positivo o negativo: sin intrauterino confirmado hay un embarazo de localización no determinada, que obliga a ecografía transvaginal y hCG, no a un alta",
+      "advertencia": "el embarazo heterotópico existe: confirmar el intrauterino no excluye un ectópico simultáneo, y la excepción pesa de verdad en la mujer que viene de reproducción asistida. El seudosaco es la otra trampa, y es la peligrosa: una colección endometrial central sin saco vitelino ni embrión NO es este hallazgo"
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": "pmid:23613077",
-    "pmid": "23613077",
-    "doi": "10.1001/jama.2013.3914",
-    "referencia_cita": "Crochet JR, Bastian LA, Chireau MV Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review JAMA 2013",
+    "referencia_id": "pmid:36063623",
+    "pmid": "36063623",
+    "doi": "10.1016/j.ajem.2022.08.045",
+    "referencia_cita": null,
     "triada": {
       "significante": "Masa anexial sin gestación intrauterina en ecografía transvaginal",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "el hallazgo que confirma. Con el útero vacío, una masa anexial mueve la probabilidad más que todo lo demás junto"
     },
-    "pregunta": "En Embarazo ectópico, ¿cuál es el resultado documentado del LR negativo para «Anomalía anexial en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).",
+    "pregunta": "En Embarazo ectópico, ¿qué estado de la evidencia corresponde a «Embarazo intrauterino confirmado en ecografía» según la fuente?",
     "opciones": [
       {
-        "texto": "LR negativo: 0.12.",
+        "texto": "LR no medido",
         "correcta": true,
-        "feedback": "LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+        "feedback": "LR no medido Población: 143 gestantes sintomáticas del primer trimestre atendidas en urgencias por sangrado vaginal y dolor abdominopélvico. Motivo: la exclusión no descansa en un cociente sino en la anatomía: un embarazo ectópico está fuera del útero por definición, así que ver el embarazo dentro lo vuelve muy improbable sin que nadie haya tenido que medirlo. Y la fuente no lo mide: su condición diana es el embarazo intrauterino contrastado contra la ecografía transvaginal del obstetra, no el ectópico contrastado contra visualización quirúrgica o seguimiento. Convertir su especificidad del 100% en un cociente del ectópico sería inventar un número que el estudio no calculó. Ver `notas_de_uso`. Interpretación registrada: cuando dice que sí, créele; cuando no lo ve, no has descartado nada. Es una asimetría, no un resultado positivo o negativo: sin intrauterino confirmado hay un embarazo de localización no determinada, que obliga a ecografía transvaginal y hCG, no a un alta. Advertencia: el embarazo heterotópico existe: confirmar el intrauterino no excluye un ectópico simultáneo, y la excepción pesa de verdad en la mujer que viene de reproducción asistida. El seudosaco es la otra trampa, y es la peligrosa: una colección endometrial central sin saco vitelino ni embrión NO es este hallazgo."
       },
       {
-        "texto": "El valor 0.12 corresponde al LR positivo y no al LR negativo.",
+        "texto": "LR no medible",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: 143 gestantes sintomáticas del primer trimestre atendidas en urgencias por sangrado vaginal y dolor abdominopélvico. Motivo: la exclusión no descansa en un cociente sino en la anatomía: un embarazo ectópico está fuera del útero por definición, así que ver el embarazo dentro lo vuelve muy improbable sin que nadie haya tenido que medirlo. Y la fuente no lo mide: su condición diana es el embarazo intrauterino contrastado contra la ecografía transvaginal del obstetra, no el ectópico contrastado contra visualización quirúrgica o seguimiento. Convertir su especificidad del 100% en un cociente del ectópico sería inventar un número que el estudio no calculó. Ver `notas_de_uso`. Interpretación registrada: cuando dice que sí, créele; cuando no lo ve, no has descartado nada. Es una asimetría, no un resultado positivo o negativo: sin intrauterino confirmado hay un embarazo de localización no determinada, que obliga a ecografía transvaginal y hCG, no a un alta. Advertencia: el embarazo heterotópico existe: confirmar el intrauterino no excluye un ectópico simultáneo, y la excepción pesa de verdad en la mujer que viene de reproducción asistida. El seudosaco es la otra trampa, y es la peligrosa: una colección endometrial central sin saco vitelino ni embrión NO es este hallazgo."
       },
       {
-        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR negativo: 0.12. LR negativo: 0.12. IC del 95 %: 0.03 a 0.55. Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885). Nota: la fuente lo expresa como el valor de NO encontrar anomalías anexiales, que es el cociente negativo de este hallazgo. Interpretación registrada: la exploración anexial normal es lo que más baja la probabilidad, y es la otra mitad de por qué la ecografía transvaginal manda aquí."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: 143 gestantes sintomáticas del primer trimestre atendidas en urgencias por sangrado vaginal y dolor abdominopélvico. Motivo: la exclusión no descansa en un cociente sino en la anatomía: un embarazo ectópico está fuera del útero por definición, así que ver el embarazo dentro lo vuelve muy improbable sin que nadie haya tenido que medirlo. Y la fuente no lo mide: su condición diana es el embarazo intrauterino contrastado contra la ecografía transvaginal del obstetra, no el ectópico contrastado contra visualización quirúrgica o seguimiento. Convertir su especificidad del 100% en un cociente del ectópico sería inventar un número que el estudio no calculó. Ver `notas_de_uso`. Interpretación registrada: cuando dice que sí, créele; cuando no lo ve, no has descartado nada. Es una asimetría, no un resultado positivo o negativo: sin intrauterino confirmado hay un embarazo de localización no determinada, que obliga a ecografía transvaginal y hCG, no a un alta. Advertencia: el embarazo heterotópico existe: confirmar el intrauterino no excluye un ectópico simultáneo, y la excepción pesa de verdad en la mujer que viene de reproducción asistida. El seudosaco es la otra trampa, y es la peligrosa: una colección endometrial central sin saco vitelino ni embrión NO es este hallazgo."
       }
     ]
   },
@@ -2233,6 +2225,1943 @@
         "texto": "El valor 0.33 corresponde al LR positivo y no al LR negativo.",
         "correcta": false,
         "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.33. IC del 95 %: 0.2 a 0.52. Población: adultos evaluados con AUDIT. Interpretación registrada: AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres."
+      }
+    ]
+  },
+  {
+    "id": "glaucoma-primario-de-angulo-abierto-precision-semiotica-q1",
+    "post_slug": "glaucoma-primario-de-angulo-abierto-precision-semiotica",
+    "post_title": "Glaucoma primario de ángulo abierto: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6022",
+    "condicion_nombre": "Glaucoma primario de ángulo abierto",
+    "concepto_id": "HM:3088",
+    "evidencia": {
+      "condicion_id": "HM:6022",
+      "concepto_id": "HM:3088",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 14,
+        "ic95": [
+          6.3,
+          30
+        ],
+        "ref": "pmid:23677315"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:23677315",
+    "pmid": "23677315",
+    "doi": "10.1001/jama.2013.5099",
+    "referencia_cita": "Hollands H, Johnson D, Hollands S, Simel DL, Jinapriya D, Sharma S Do findings on routine examination identify patients at risk for primary open-angle glaucoma? The rational clinical examination systematic review JAMA 2013",
+    "triada": {
+      "significante": "Relación copa-disco aumentada",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma"
+    },
+    "pregunta": "En Glaucoma primario de ángulo abierto, ¿cuál es el resultado documentado del LR positivo para «Relación copa-disco aumentada»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 14.0. LR positivo: 14.0. IC del 95 %: 6.3 a 30.0. Interpretación registrada: el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma."
+      },
+      {
+        "texto": "LR positivo: 14.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 14.0. IC del 95 %: 6.3 a 30.0. Interpretación registrada: el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma."
+      },
+      {
+        "texto": "El valor 14.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 14.0. IC del 95 %: 6.3 a 30.0. Interpretación registrada: el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma."
+      }
+    ]
+  },
+  {
+    "id": "glaucoma-primario-de-angulo-abierto-precision-semiotica-q2",
+    "post_slug": "glaucoma-primario-de-angulo-abierto-precision-semiotica",
+    "post_title": "Glaucoma primario de ángulo abierto: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6022",
+    "condicion_nombre": "Glaucoma primario de ángulo abierto",
+    "concepto_id": "HM:3089",
+    "evidencia": {
+      "condicion_id": "HM:6022",
+      "concepto_id": "HM:3089",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 7.3,
+        "ic95": [
+          3.4,
+          16
+        ],
+        "ref": "pmid:23677315"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:23677315",
+    "pmid": "23677315",
+    "doi": "10.1001/jama.2013.5099",
+    "referencia_cita": "Hollands H, Johnson D, Hollands S, Simel DL, Jinapriya D, Sharma S Do findings on routine examination identify patients at risk for primary open-angle glaucoma? The rational clinical examination systematic review JAMA 2013",
+    "triada": {
+      "significante": "Relación copa-disco aumentada",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma"
+    },
+    "pregunta": "En Glaucoma primario de ángulo abierto, ¿cuál es el resultado documentado del LR positivo para «Asimetría de la relación copa-disco»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 7.3.",
+        "correcta": true,
+        "feedback": "LR positivo: 7.3. IC del 95 %: 3.4 a 16.0. Interpretación registrada: la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad."
+      },
+      {
+        "texto": "El valor 7.3 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 7.3. IC del 95 %: 3.4 a 16.0. Interpretación registrada: la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 7.3. LR positivo: 7.3. IC del 95 %: 3.4 a 16.0. Interpretación registrada: la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad."
+      }
+    ]
+  },
+  {
+    "id": "conmocion-cerebral-pediatrica-precision-semiotica-q1",
+    "post_slug": "conmocion-cerebral-pediatrica-precision-semiotica",
+    "post_title": "Conmoción cerebral pediátrica: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6023",
+    "condicion_nombre": "Conmoción cerebral pediátrica",
+    "concepto_id": "HM:3094",
+    "evidencia": {
+      "condicion_id": "HM:6023",
+      "concepto_id": "HM:3094",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 11.9,
+        "ic95": [
+          5.2,
+          27
+        ],
+        "ref": "pmid:41941197"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:41941197",
+    "pmid": "41941197",
+    "doi": "10.1001/jama.2026.1233",
+    "referencia_cita": "Shah SN, Chizuk HM, Fong HF, Hannon M, Mannix RC Does This Child Have a Concussion?: The Rational Clinical Examination Systematic Review JAMA 2026",
+    "triada": {
+      "significante": "Niebla mental",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática"
+    },
+    "pregunta": "En Conmoción cerebral pediátrica, ¿cuál es el resultado documentado del LR positivo para «Niebla mental»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 11.9.",
+        "correcta": true,
+        "feedback": "LR positivo: 11.9. IC del 95 %: 5.2 a 27.0. Interpretación registrada: el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática."
+      },
+      {
+        "texto": "El valor 11.9 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 11.9. IC del 95 %: 5.2 a 27.0. Interpretación registrada: el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 11.9. LR positivo: 11.9. IC del 95 %: 5.2 a 27.0. Interpretación registrada: el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática."
+      }
+    ]
+  },
+  {
+    "id": "conmocion-cerebral-pediatrica-precision-semiotica-q2",
+    "post_slug": "conmocion-cerebral-pediatrica-precision-semiotica",
+    "post_title": "Conmoción cerebral pediátrica: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6023",
+    "condicion_nombre": "Conmoción cerebral pediátrica",
+    "concepto_id": "HM:3097",
+    "evidencia": {
+      "condicion_id": "HM:6023",
+      "concepto_id": "HM:3097",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 7,
+        "ic95": [
+          3.1,
+          16
+        ],
+        "ref": "pmid:41941197"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el signo físico oculomotor más potente del examen vestibular/ocular motor (VOMS)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:41941197",
+    "pmid": "41941197",
+    "doi": "10.1001/jama.2026.1233",
+    "referencia_cita": "Shah SN, Chizuk HM, Fong HF, Hannon M, Mannix RC Does This Child Have a Concussion?: The Rational Clinical Examination Systematic Review JAMA 2026",
+    "triada": {
+      "significante": "Niebla mental",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática"
+    },
+    "pregunta": "En Conmoción cerebral pediátrica, ¿cuál es el resultado documentado del LR positivo para «Punto próximo de convergencia anormal»?",
+    "opciones": [
+      {
+        "texto": "El valor 7.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 7.0. IC del 95 %: 3.1 a 16.0. Interpretación registrada: el signo físico oculomotor más potente del examen vestibular/ocular motor (VOMS)."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 7.0. LR positivo: 7.0. IC del 95 %: 3.1 a 16.0. Interpretación registrada: el signo físico oculomotor más potente del examen vestibular/ocular motor (VOMS)."
+      },
+      {
+        "texto": "LR positivo: 7.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 7.0. IC del 95 %: 3.1 a 16.0. Interpretación registrada: el signo físico oculomotor más potente del examen vestibular/ocular motor (VOMS)."
+      }
+    ]
+  },
+  {
+    "id": "maltrato-fisico-infantil-precision-semiotica-q1",
+    "post_slug": "maltrato-fisico-infantil-precision-semiotica",
+    "post_title": "Maltrato físico infantil: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6024",
+    "condicion_nombre": "Maltrato físico infantil",
+    "concepto_id": "HM:3104",
+    "evidencia": {
+      "condicion_id": "HM:6024",
+      "concepto_id": "HM:3104",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 11,
+        "ic95": [
+          5.2,
+          23
+        ],
+        "ref": "pmid:40257808"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:40257808",
+    "pmid": "40257808",
+    "doi": "10.1001/jama.2025.2216",
+    "referencia_cita": "Shah SN, Fong HF, Haney SB, Harper NS, Pierce MC, Neuman MI Has This Child Experienced Physical Abuse?: The Rational Clinical Examination Systematic Review JAMA 2025",
+    "triada": {
+      "significante": "Hemorragias retinianas en niño pequeño",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)"
+    },
+    "pregunta": "En Maltrato físico infantil, ¿cuál es el resultado documentado del LR positivo para «Hemorragias retinianas en niño pequeño»?",
+    "opciones": [
+      {
+        "texto": "El valor 11.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 11.0. IC del 95 %: 5.2 a 23.0. Interpretación registrada: el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 11.0. LR positivo: 11.0. IC del 95 %: 5.2 a 23.0. Interpretación registrada: el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)."
+      },
+      {
+        "texto": "LR positivo: 11.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 11.0. IC del 95 %: 5.2 a 23.0. Interpretación registrada: el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)."
+      }
+    ]
+  },
+  {
+    "id": "maltrato-fisico-infantil-precision-semiotica-q2",
+    "post_slug": "maltrato-fisico-infantil-precision-semiotica",
+    "post_title": "Maltrato físico infantil: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6024",
+    "condicion_nombre": "Maltrato físico infantil",
+    "concepto_id": "HM:3100",
+    "evidencia": {
+      "condicion_id": "HM:6024",
+      "concepto_id": "HM:3100",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 6.6,
+        "ic95": [
+          2.8,
+          16
+        ],
+        "ref": "pmid:40257808"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:40257808",
+    "pmid": "40257808",
+    "doi": "10.1001/jama.2025.2216",
+    "referencia_cita": "Shah SN, Fong HF, Haney SB, Harper NS, Pierce MC, Neuman MI Has This Child Experienced Physical Abuse?: The Rational Clinical Examination Systematic Review JAMA 2025",
+    "triada": {
+      "significante": "Hemorragias retinianas en niño pequeño",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)"
+    },
+    "pregunta": "En Maltrato físico infantil, ¿cuál es el resultado documentado del LR positivo para «Lesión oral o desgarro del frenillo»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 6.6. LR positivo: 6.6. IC del 95 %: 2.8 a 16.0. Interpretación registrada: traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo."
+      },
+      {
+        "texto": "LR positivo: 6.6.",
+        "correcta": true,
+        "feedback": "LR positivo: 6.6. IC del 95 %: 2.8 a 16.0. Interpretación registrada: traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo."
+      },
+      {
+        "texto": "El valor 6.6 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 6.6. IC del 95 %: 2.8 a 16.0. Interpretación registrada: traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo."
+      }
+    ]
+  },
+  {
+    "id": "hipertension-arterial-secundaria-pediatrica-precision-semiotica-q1",
+    "post_slug": "hipertension-arterial-secundaria-pediatrica-precision-semiotica",
+    "post_title": "Hipertensión arterial secundaria pediátrica: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6025",
+    "condicion_nombre": "Hipertensión arterial secundaria pediátrica",
+    "concepto_id": "HM:3113",
+    "evidencia": {
+      "condicion_id": "HM:6025",
+      "concepto_id": "HM:3113",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 13,
+        "ic95": [
+          3.2,
+          53
+        ],
+        "ref": "pmid:36976276"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:36976276",
+    "pmid": "36976276",
+    "doi": "10.1001/jama.2023.3184",
+    "referencia_cita": "Nugent JT, Jiang K, Funaro MC, Saran I, Young C, Ghazi L, Bakhoum CY, Wilson FP, Greenberg JH Does This Child With High Blood Pressure Have Secondary Hypertension?: The Rational Clinical Examination Systematic Review JAMA 2023",
+    "triada": {
+      "significante": "Microalbuminuria",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos"
+    },
+    "pregunta": "En Hipertensión arterial secundaria pediátrica, ¿cuál es el resultado documentado del LR positivo para «Microalbuminuria»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 13.0. LR positivo: 13.0. IC del 95 %: 3.2 a 53.0. Interpretación registrada: el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos."
+      },
+      {
+        "texto": "LR positivo: 13.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 13.0. IC del 95 %: 3.2 a 53.0. Interpretación registrada: el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos."
+      },
+      {
+        "texto": "El valor 13.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 13.0. IC del 95 %: 3.2 a 53.0. Interpretación registrada: el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos."
+      }
+    ]
+  },
+  {
+    "id": "hipertension-arterial-secundaria-pediatrica-precision-semiotica-q2",
+    "post_slug": "hipertension-arterial-secundaria-pediatrica-precision-semiotica",
+    "post_title": "Hipertensión arterial secundaria pediátrica: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6025",
+    "condicion_nombre": "Hipertensión arterial secundaria pediátrica",
+    "concepto_id": "HM:3115",
+    "evidencia": {
+      "condicion_id": "HM:6025",
+      "concepto_id": "HM:3115",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 4.8,
+        "ic95": [
+          1.8,
+          13
+        ],
+        "ref": "pmid:36976276"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "alteración en la monitorización ambulatoria que orienta fuertemente hacia etiología secundaria",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:36976276",
+    "pmid": "36976276",
+    "doi": "10.1001/jama.2023.3184",
+    "referencia_cita": "Nugent JT, Jiang K, Funaro MC, Saran I, Young C, Ghazi L, Bakhoum CY, Wilson FP, Greenberg JH Does This Child With High Blood Pressure Have Secondary Hypertension?: The Rational Clinical Examination Systematic Review JAMA 2023",
+    "triada": {
+      "significante": "Microalbuminuria",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos"
+    },
+    "pregunta": "En Hipertensión arterial secundaria pediátrica, ¿cuál es el resultado documentado del LR positivo para «Carga tensional aumentada en monitorización ambulatoria (MAPA)»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 4.8.",
+        "correcta": true,
+        "feedback": "LR positivo: 4.8. IC del 95 %: 1.8 a 13.0. Interpretación registrada: alteración en la monitorización ambulatoria que orienta fuertemente hacia etiología secundaria."
+      },
+      {
+        "texto": "El valor 4.8 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.8. IC del 95 %: 1.8 a 13.0. Interpretación registrada: alteración en la monitorización ambulatoria que orienta fuertemente hacia etiología secundaria."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 4.8. LR positivo: 4.8. IC del 95 %: 1.8 a 13.0. Interpretación registrada: alteración en la monitorización ambulatoria que orienta fuertemente hacia etiología secundaria."
+      }
+    ]
+  },
+  {
+    "id": "insuficiencia-aortica-precision-semiotica-q1",
+    "post_slug": "insuficiencia-aortica-precision-semiotica",
+    "post_title": "Insuficiencia aórtica: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6026",
+    "condicion_nombre": "Insuficiencia aórtica",
+    "concepto_id": "HM:3116",
+    "evidencia": {
+      "condicion_id": "HM:6026",
+      "concepto_id": "HM:3116",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 8.8,
+        "ic95": [
+          7.3,
+          11
+        ],
+        "ref": "pmid:10376577"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:10376577",
+    "pmid": "10376577",
+    "doi": "10.1001/jama.281.23.2231",
+    "referencia_cita": "Choudhry NK, Etchells EE The rational clinical examination. Does this patient have aortic regurgitation? JAMA 1999",
+    "triada": {
+      "significante": "Soplo diastólico precoz",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)"
+    },
+    "pregunta": "En Insuficiencia aórtica, ¿cuál es el resultado documentado del LR positivo para «Soplo diastólico precoz»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 8.8.",
+        "correcta": true,
+        "feedback": "LR positivo: 8.8. IC del 95 %: 7.3 a 11.0. Interpretación registrada: el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)."
+      },
+      {
+        "texto": "El valor 8.8 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 8.8. IC del 95 %: 7.3 a 11.0. Interpretación registrada: el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 8.8. LR positivo: 8.8. IC del 95 %: 7.3 a 11.0. Interpretación registrada: el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)."
+      }
+    ]
+  },
+  {
+    "id": "insuficiencia-aortica-precision-semiotica-q2",
+    "post_slug": "insuficiencia-aortica-precision-semiotica",
+    "post_title": "Insuficiencia aórtica: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6026",
+    "condicion_nombre": "Insuficiencia aórtica",
+    "concepto_id": "HM:3118",
+    "evidencia": {
+      "condicion_id": "HM:6026",
+      "concepto_id": "HM:3118",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 8.4,
+        "ic95": [
+          3.9,
+          18
+        ],
+        "ref": "pmid:10376577"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:10376577",
+    "pmid": "10376577",
+    "doi": "10.1001/jama.281.23.2231",
+    "referencia_cita": "Choudhry NK, Etchells EE The rational clinical examination. Does this patient have aortic regurgitation? JAMA 1999",
+    "triada": {
+      "significante": "Soplo diastólico precoz",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)"
+    },
+    "pregunta": "En Insuficiencia aórtica, ¿cuál es el resultado documentado del LR positivo para «Maniobra de oclusión arterial transitoria»?",
+    "opciones": [
+      {
+        "texto": "El valor 8.4 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 8.4. IC del 95 %: 3.9 a 18.0. Interpretación registrada: la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 8.4. LR positivo: 8.4. IC del 95 %: 3.9 a 18.0. Interpretación registrada: la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico."
+      },
+      {
+        "texto": "LR positivo: 8.4.",
+        "correcta": true,
+        "feedback": "LR positivo: 8.4. IC del 95 %: 3.9 a 18.0. Interpretación registrada: la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico."
+      }
+    ]
+  },
+  {
+    "id": "rotura-del-ligamento-cruzado-anterior-precision-semiotica-q1",
+    "post_slug": "rotura-del-ligamento-cruzado-anterior-precision-semiotica",
+    "post_title": "Rotura del ligamento cruzado anterior: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6027",
+    "condicion_nombre": "Rotura del ligamento cruzado anterior",
+    "concepto_id": "HM:3119",
+    "evidencia": {
+      "condicion_id": "HM:6027",
+      "concepto_id": "HM:3119",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 25,
+        "ic95": [
+          2.7,
+          250
+        ],
+        "ref": "pmid:11585485"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:11585485",
+    "pmid": "11585485",
+    "doi": "10.1001/jama.286.13.1610",
+    "referencia_cita": "Solomon DH, Simel DL, Bates DW, Katz JN, Schaffer JL The rational clinical examination. Does this patient have a torn meniscus or ligament of the knee? Value of the physical examination JAMA 2001",
+    "triada": {
+      "significante": "Prueba de Lachman positiva",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA"
+    },
+    "pregunta": "En Rotura del ligamento cruzado anterior, ¿cuál es el resultado documentado del LR positivo para «Prueba de Lachman positiva»?",
+    "opciones": [
+      {
+        "texto": "El valor 25.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 25.0. IC del 95 %: 2.7 a 250.0. Interpretación registrada: la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 25.0. LR positivo: 25.0. IC del 95 %: 2.7 a 250.0. Interpretación registrada: la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA."
+      },
+      {
+        "texto": "LR positivo: 25.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 25.0. IC del 95 %: 2.7 a 250.0. Interpretación registrada: la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA."
+      }
+    ]
+  },
+  {
+    "id": "rotura-del-ligamento-cruzado-anterior-precision-semiotica-q2",
+    "post_slug": "rotura-del-ligamento-cruzado-anterior-precision-semiotica",
+    "post_title": "Rotura del ligamento cruzado anterior: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6027",
+    "condicion_nombre": "Rotura del ligamento cruzado anterior",
+    "concepto_id": "HM:3123",
+    "evidencia": {
+      "condicion_id": "HM:6027",
+      "concepto_id": "HM:3123",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 25,
+        "ic95": [
+          2.7,
+          250
+        ],
+        "ref": "pmid:11585485"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la combinación de maniobras clínicas por un examinador entrenado descarta con fiabilidad casi absoluta (LR- 0.04)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:11585485",
+    "pmid": "11585485",
+    "doi": "10.1001/jama.286.13.1610",
+    "referencia_cita": "Solomon DH, Simel DL, Bates DW, Katz JN, Schaffer JL The rational clinical examination. Does this patient have a torn meniscus or ligament of the knee? Value of the physical examination JAMA 2001",
+    "triada": {
+      "significante": "Prueba de Lachman positiva",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA"
+    },
+    "pregunta": "En Rotura del ligamento cruzado anterior, ¿cuál es el resultado documentado del LR positivo para «Examen compuesto de rodilla positivo para ligamento cruzado anterior»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 25.0. LR positivo: 25.0. IC del 95 %: 2.7 a 250.0. Interpretación registrada: la combinación de maniobras clínicas por un examinador entrenado descarta con fiabilidad casi absoluta (LR- 0.04)."
+      },
+      {
+        "texto": "LR positivo: 25.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 25.0. IC del 95 %: 2.7 a 250.0. Interpretación registrada: la combinación de maniobras clínicas por un examinador entrenado descarta con fiabilidad casi absoluta (LR- 0.04)."
+      },
+      {
+        "texto": "El valor 25.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 25.0. IC del 95 %: 2.7 a 250.0. Interpretación registrada: la combinación de maniobras clínicas por un examinador entrenado descarta con fiabilidad casi absoluta (LR- 0.04)."
+      }
+    ]
+  },
+  {
+    "id": "alergia-a-penicilina-precision-semiotica-q1",
+    "post_slug": "alergia-a-penicilina-precision-semiotica",
+    "post_title": "Alergia a penicilina: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6028",
+    "condicion_nombre": "Alergia a penicilina",
+    "concepto_id": "HM:3125",
+    "evidencia": {
+      "condicion_id": "HM:6028",
+      "concepto_id": "HM:3125",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 1.9,
+        "ic95": [
+          1.5,
+          2.5
+        ],
+        "ref": "pmid:11368703"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:11368703",
+    "pmid": "11368703",
+    "doi": "10.1001/jama.285.19.2498",
+    "referencia_cita": "Salkind AR, Cuddy PG, Foxworth JW The rational clinical examination. Is this patient allergic to penicillin? An evidence-based analysis of the likelihood of penicillin allergy JAMA 2001",
+    "triada": {
+      "significante": "Antecedente referido de alergia a penicilina",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos"
+    },
+    "pregunta": "En Alergia a penicilina, ¿cuál es el resultado documentado del LR positivo para «Antecedente referido de alergia a penicilina»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 1.9. LR positivo: 1.9. IC del 95 %: 1.5 a 2.5. Interpretación registrada: el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos."
+      },
+      {
+        "texto": "LR positivo: 1.9.",
+        "correcta": true,
+        "feedback": "LR positivo: 1.9. IC del 95 %: 1.5 a 2.5. Interpretación registrada: el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos."
+      },
+      {
+        "texto": "El valor 1.9 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 1.9. IC del 95 %: 1.5 a 2.5. Interpretación registrada: el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos."
+      }
+    ]
+  },
+  {
+    "id": "alergia-a-penicilina-precision-semiotica-q2",
+    "post_slug": "alergia-a-penicilina-precision-semiotica",
+    "post_title": "Alergia a penicilina: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6028",
+    "condicion_nombre": "Alergia a penicilina",
+    "concepto_id": "HM:3126",
+    "evidencia": {
+      "condicion_id": "HM:6028",
+      "concepto_id": "HM:3126",
+      "estado_lr": "no_medible",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "es el estándar de referencia (gold standard) contra el que se calculan los cocientes de la historia clínica",
+      "decision": "el patrón de referencia para hipersensibilidad mediada por IgE; la negatividad descarta anafilaxia con seguridad casi absoluta",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Antecedente referido de alergia a penicilina",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos"
+    },
+    "pregunta": "En Alergia a penicilina, ¿qué estado de la evidencia corresponde a «Prueba cutánea a determinantes de penicilina» según la fuente?",
+    "opciones": [
+      {
+        "texto": "LR no medible",
+        "correcta": true,
+        "feedback": "LR no medible Motivo: es el estándar de referencia (gold standard) contra el que se calculan los cocientes de la historia clínica. Interpretación registrada: el patrón de referencia para hipersensibilidad mediada por IgE; la negatividad descarta anafilaxia con seguridad casi absoluta."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: es el estándar de referencia (gold standard) contra el que se calculan los cocientes de la historia clínica. Interpretación registrada: el patrón de referencia para hipersensibilidad mediada por IgE; la negatividad descarta anafilaxia con seguridad casi absoluta."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: es el estándar de referencia (gold standard) contra el que se calculan los cocientes de la historia clínica. Interpretación registrada: el patrón de referencia para hipersensibilidad mediada por IgE; la negatividad descarta anafilaxia con seguridad casi absoluta."
+      }
+    ]
+  },
+  {
+    "id": "hipertension-arterial-en-adultos-precision-semiotica-q1",
+    "post_slug": "hipertension-arterial-en-adultos-precision-semiotica",
+    "post_title": "Hipertensión arterial en adultos: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6029",
+    "condicion_nombre": "Hipertensión arterial en adultos",
+    "concepto_id": "HM:3127",
+    "evidencia": {
+      "condicion_id": "HM:6029",
+      "concepto_id": "HM:3127",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 4.2,
+        "ic95": [
+          2.9,
+          6.1
+        ],
+        "ref": "pmid:34313682"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:34313682",
+    "pmid": "34313682",
+    "doi": "10.1001/jama.2021.4533",
+    "referencia_cita": "Viera AJ, Yano Y, Lin FC, Simel DL, Yun J, Dave G, Von Holle A, Viera LA, Shimbo D, Hardy ST, Donahue KE, Hinderliter A, Voisin CE, Jonas DE Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review JAMA 2021",
+    "triada": {
+      "significante": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+    },
+    "pregunta": "En Hipertensión arterial en adultos, ¿cuál es el resultado documentado del LR positivo para «Presión arterial en consulta mayor o igual a 140/90 mmHg»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 4.2.",
+        "correcta": true,
+        "feedback": "LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+      },
+      {
+        "texto": "El valor 4.2 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 4.2. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+      }
+    ]
+  },
+  {
+    "id": "hipertension-arterial-en-adultos-precision-semiotica-q2",
+    "post_slug": "hipertension-arterial-en-adultos-precision-semiotica",
+    "post_title": "Hipertensión arterial en adultos: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6029",
+    "condicion_nombre": "Hipertensión arterial en adultos",
+    "concepto_id": "HM:3128",
+    "evidencia": {
+      "condicion_id": "HM:6029",
+      "concepto_id": "HM:3128",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.1,
+        "ic95": [
+          2.3,
+          4.2
+        ],
+        "ref": "pmid:34313682"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:34313682",
+    "pmid": "34313682",
+    "doi": "10.1001/jama.2021.4533",
+    "referencia_cita": "Viera AJ, Yano Y, Lin FC, Simel DL, Yun J, Dave G, Von Holle A, Viera LA, Shimbo D, Hardy ST, Donahue KE, Hinderliter A, Voisin CE, Jonas DE Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review JAMA 2021",
+    "triada": {
+      "significante": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+    },
+    "pregunta": "En Hipertensión arterial en adultos, ¿cuál es el resultado documentado del LR positivo para «Automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg»?",
+    "opciones": [
+      {
+        "texto": "El valor 3.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+      },
+      {
+        "texto": "LR positivo: 3.1.",
+        "correcta": true,
+        "feedback": "LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+      }
+    ]
+  },
+  {
+    "id": "infarto-agudo-de-miocardio-precision-semiotica-q1",
+    "post_slug": "infarto-agudo-de-miocardio-precision-semiotica",
+    "post_title": "Infarto agudo de miocardio: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6030",
+    "condicion_nombre": "Infarto agudo de miocardio",
+    "concepto_id": "HM:3130",
+    "evidencia": {
+      "condicion_id": "HM:6030",
+      "concepto_id": "HM:3130",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 22,
+        "ic95": [
+          5.7,
+          53.9
+        ],
+        "ref": "pmid:9786377"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:9786377",
+    "pmid": "9786377",
+    "doi": "10.1001/jama.280.14.1256",
+    "referencia_cita": "Panju AA, Hemmelgarn BR, Guyatt GH, Simel DL The rational clinical examination. Is this patient having a myocardial infarction? JAMA 1998",
+    "triada": {
+      "significante": "Elevación nueva del segmento ST en el ECG",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión"
+    },
+    "pregunta": "En Infarto agudo de miocardio, ¿cuál es el resultado documentado del LR positivo para «Elevación nueva del segmento ST en el ECG»?",
+    "opciones": [
+      {
+        "texto": "El valor 22.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 22.0. IC del 95 %: 5.7 a 53.9. Interpretación registrada: el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 22.0. LR positivo: 22.0. IC del 95 %: 5.7 a 53.9. Interpretación registrada: el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión."
+      },
+      {
+        "texto": "LR positivo: 22.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 22.0. IC del 95 %: 5.7 a 53.9. Interpretación registrada: el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión."
+      }
+    ]
+  },
+  {
+    "id": "infarto-agudo-de-miocardio-precision-semiotica-q2",
+    "post_slug": "infarto-agudo-de-miocardio-precision-semiotica",
+    "post_title": "Infarto agudo de miocardio: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6030",
+    "condicion_nombre": "Infarto agudo de miocardio",
+    "concepto_id": "HM:3131",
+    "evidencia": {
+      "condicion_id": "HM:6030",
+      "concepto_id": "HM:3131",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 11,
+        "ic95": [
+          5.3,
+          24.8
+        ],
+        "ref": "pmid:9786377"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "signo electrocardiográfico de necrosis miocárdica transmisible",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:9786377",
+    "pmid": "9786377",
+    "doi": "10.1001/jama.280.14.1256",
+    "referencia_cita": "Panju AA, Hemmelgarn BR, Guyatt GH, Simel DL The rational clinical examination. Is this patient having a myocardial infarction? JAMA 1998",
+    "triada": {
+      "significante": "Elevación nueva del segmento ST en el ECG",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión"
+    },
+    "pregunta": "En Infarto agudo de miocardio, ¿cuál es el resultado documentado del LR positivo para «Nueva onda Q patológica en el ECG»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 11.0. LR positivo: 11.0. IC del 95 %: 5.3 a 24.8. Interpretación registrada: signo electrocardiográfico de necrosis miocárdica transmisible."
+      },
+      {
+        "texto": "LR positivo: 11.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 11.0. IC del 95 %: 5.3 a 24.8. Interpretación registrada: signo electrocardiográfico de necrosis miocárdica transmisible."
+      },
+      {
+        "texto": "El valor 11.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 11.0. IC del 95 %: 5.3 a 24.8. Interpretación registrada: signo electrocardiográfico de necrosis miocárdica transmisible."
+      }
+    ]
+  },
+  {
+    "id": "trastorno-de-ansiedad-generalizada-precision-semiotica-q1",
+    "post_slug": "trastorno-de-ansiedad-generalizada-precision-semiotica",
+    "post_title": "Trastorno de ansiedad generalizada: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6031",
+    "condicion_nombre": "Trastorno de ansiedad generalizada",
+    "concepto_id": "HM:3137",
+    "evidencia": {
+      "condicion_id": "HM:6031",
+      "concepto_id": "HM:3137",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 5.1,
+        "ic95": [
+          4.3,
+          6
+        ],
+        "ref": "pmid:25058220"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:25058220",
+    "pmid": "25058220",
+    "doi": "10.1001/jama.2014.5950",
+    "referencia_cita": "Herr NR, Williams JW Jr, Benjamin S, McDuffie J Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review JAMA 2014",
+    "triada": {
+      "significante": "Cuestionario GAD-7 positivo",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)"
+    },
+    "pregunta": "En Trastorno de ansiedad generalizada, ¿cuál es el resultado documentado del LR positivo para «Cuestionario GAD-7 positivo»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 5.1. LR positivo: 5.1. IC del 95 %: 4.3 a 6.0. Interpretación registrada: la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)."
+      },
+      {
+        "texto": "LR positivo: 5.1.",
+        "correcta": true,
+        "feedback": "LR positivo: 5.1. IC del 95 %: 4.3 a 6.0. Interpretación registrada: la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)."
+      },
+      {
+        "texto": "El valor 5.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.1. IC del 95 %: 4.3 a 6.0. Interpretación registrada: la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)."
+      }
+    ]
+  },
+  {
+    "id": "trastorno-de-panico-precision-semiotica-q1",
+    "post_slug": "trastorno-de-panico-precision-semiotica",
+    "post_title": "Trastorno de pánico: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6032",
+    "condicion_nombre": "Trastorno de pánico",
+    "concepto_id": "HM:3138",
+    "evidencia": {
+      "condicion_id": "HM:6032",
+      "concepto_id": "HM:3138",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 78,
+        "ic95": [
+          29,
+          210
+        ],
+        "ref": "pmid:25058220"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:25058220",
+    "pmid": "25058220",
+    "doi": "10.1001/jama.2014.5950",
+    "referencia_cita": "Herr NR, Williams JW Jr, Benjamin S, McDuffie J Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review JAMA 2014",
+    "triada": {
+      "significante": "Cuestionario PHQ de pánico positivo",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)"
+    },
+    "pregunta": "En Trastorno de pánico, ¿cuál es el resultado documentado del LR positivo para «Cuestionario PHQ de pánico positivo»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 78.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 78.0. IC del 95 %: 29.0 a 210.0. Interpretación registrada: el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)."
+      },
+      {
+        "texto": "El valor 78.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 78.0. IC del 95 %: 29.0 a 210.0. Interpretación registrada: el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 78.0. LR positivo: 78.0. IC del 95 %: 29.0 a 210.0. Interpretación registrada: el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)."
+      }
+    ]
+  },
+  {
+    "id": "melanoma-cutaneo-precision-semiotica-q1",
+    "post_slug": "melanoma-cutaneo-precision-semiotica",
+    "post_title": "Melanoma cutáneo: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6033",
+    "condicion_nombre": "Melanoma cutáneo",
+    "concepto_id": "HM:3139",
+    "evidencia": {
+      "condicion_id": "HM:6033",
+      "concepto_id": "HM:3139",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 46,
+        "ic95": [
+          18.4,
+          96
+        ],
+        "ref": "pmid:9496989"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:9496989",
+    "pmid": "9496989",
+    "doi": "10.1001/jama.279.9.696",
+    "referencia_cita": "Whited JD, Grichnik JM The rational clinical examination. Does this patient have a mole or a melanoma? JAMA 1998",
+    "triada": {
+      "significante": "Criterios ABCD de lesión pigmentada positivos",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica"
+    },
+    "pregunta": "En Melanoma cutáneo, ¿cuál es el resultado documentado del LR positivo para «Criterios ABCD de lesión pigmentada positivos»?",
+    "opciones": [
+      {
+        "texto": "El valor 46.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 46.0. IC del 95 %: 18.4 a 96.0. Interpretación registrada: la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 46.0. LR positivo: 46.0. IC del 95 %: 18.4 a 96.0. Interpretación registrada: la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica."
+      },
+      {
+        "texto": "LR positivo: 46.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 46.0. IC del 95 %: 18.4 a 96.0. Interpretación registrada: la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica."
+      }
+    ]
+  },
+  {
+    "id": "melanoma-cutaneo-precision-semiotica-q2",
+    "post_slug": "melanoma-cutaneo-precision-semiotica",
+    "post_title": "Melanoma cutáneo: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6033",
+    "condicion_nombre": "Melanoma cutáneo",
+    "concepto_id": "HM:3140",
+    "evidencia": {
+      "condicion_id": "HM:6033",
+      "concepto_id": "HM:3140",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "componente de los criterios semiológicos combinados de dermatología clínica",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Criterios ABCD de lesión pigmentada positivos",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica"
+    },
+    "pregunta": "En Melanoma cutáneo, ¿qué estado de la evidencia corresponde a «Asimetría y bordes irregulares en lesión cutánea» según la fuente?",
+    "opciones": [
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: componente de los criterios semiológicos combinados de dermatología clínica."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Motivo: componente de los criterios semiológicos combinados de dermatología clínica."
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: componente de los criterios semiológicos combinados de dermatología clínica."
+      }
+    ]
+  },
+  {
+    "id": "cancer-de-mama-precision-semiotica-q1",
+    "post_slug": "cancer-de-mama-precision-semiotica",
+    "post_title": "Cáncer de mama: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6034",
+    "condicion_nombre": "Cáncer de mama",
+    "concepto_id": "HM:3142",
+    "evidencia": {
+      "condicion_id": "HM:6034",
+      "concepto_id": "HM:3142",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 10.6,
+        "ic95": [
+          5.8,
+          19.2
+        ],
+        "ref": "pmid:10517431"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:10517431",
+    "pmid": "10517431",
+    "doi": "10.1001/jama.282.13.1270",
+    "referencia_cita": "Barton MB, Harris R, Fletcher SW The rational clinical examination. Does this patient have breast cancer? The screening clinical breast examination: should it be done? How? JAMA 1999",
+    "triada": {
+      "significante": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)"
+    },
+    "pregunta": "En Cáncer de mama, ¿cuál es el resultado documentado del LR positivo para «Masa mamaria palpable o hallazgo sospechoso en la exploración»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 10.6. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)."
+      },
+      {
+        "texto": "LR positivo: 10.6.",
+        "correcta": true,
+        "feedback": "LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)."
+      },
+      {
+        "texto": "El valor 10.6 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)."
+      }
+    ]
+  },
+  {
+    "id": "cancer-de-mama-precision-semiotica-q2",
+    "post_slug": "cancer-de-mama-precision-semiotica",
+    "post_title": "Cáncer de mama: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6034",
+    "condicion_nombre": "Cáncer de mama",
+    "concepto_id": "HM:3143",
+    "evidencia": {
+      "condicion_id": "HM:6034",
+      "concepto_id": "HM:3143",
+      "estado_lr": "medido",
+      "campo": "lr_negativo",
+      "dato": {
+        "valor": 0.47,
+        "ic95": [
+          0.4,
+          0.56
+        ],
+        "ref": "pmid:10517431"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:10517431",
+    "pmid": "10517431",
+    "doi": "10.1001/jama.282.13.1270",
+    "referencia_cita": "Barton MB, Harris R, Fletcher SW The rational clinical examination. Does this patient have breast cancer? The screening clinical breast examination: should it be done? How? JAMA 1999",
+    "triada": {
+      "significante": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)"
+    },
+    "pregunta": "En Cáncer de mama, ¿cuál es el resultado documentado del LR negativo para «Examen clínico de mama reglado normal»?",
+    "opciones": [
+      {
+        "texto": "LR negativo: 0.47.",
+        "correcta": true,
+        "feedback": "LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado."
+      },
+      {
+        "texto": "El valor 0.47 corresponde al LR positivo y no al LR negativo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.47. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado."
+      }
+    ]
+  },
+  {
+    "id": "trombosis-venosa-profunda-precision-semiotica-q1",
+    "post_slug": "trombosis-venosa-profunda-precision-semiotica",
+    "post_title": "Trombosis venosa profunda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6035",
+    "condicion_nombre": "Trombosis venosa profunda",
+    "concepto_id": "HM:3144",
+    "evidencia": {
+      "condicion_id": "HM:6035",
+      "concepto_id": "HM:3144",
+      "estado_lr": "medido",
+      "campo": "lr_negativo",
+      "dato": {
+        "valor": 0.1,
+        "ic95": [
+          0.03,
+          0.37
+        ],
+        "poblacion": "sospecha clínica baja, ensayo de alta sensibilidad",
+        "nota": "es la lectura que la conclusión de la fuente convierte en decisión",
+        "ref": "pmid:16403932"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "un dímero D normal descarta la TVP con fuerza, pero cuánta depende de dos cosas que hay que saber antes de aplicarlo: qué ensayo se usó y en qué estrato de probabilidad previa está el paciente",
+      "advertencia": "la fuente es explícita en que, con sospecha clínica alta, el resultado no debe modificar la decisión clínica. Un dímero D normal no autoriza a detener el estudio en ese estrato."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:16403932",
+    "pmid": "16403932",
+    "doi": "10.1001/jama.295.2.199",
+    "referencia_cita": "Wells PS, Owen C, Doucette S, Fergusson D, Tran H Does this patient have deep vein thrombosis? JAMA 2006",
+    "triada": {
+      "significante": "Dímero D elevado",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "un dímero D normal descarta la TVP con fuerza, pero cuánta depende de dos cosas que hay que saber antes de aplicarlo: qué ensayo se usó y en qué estrato de probabilidad previa está el paciente"
+    },
+    "pregunta": "En Trombosis venosa profunda, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»?",
+    "opciones": [
+      {
+        "texto": "LR negativo: 0.1.",
+        "correcta": true,
+        "feedback": "LR negativo: 0.1. IC del 95 %: 0.03 a 0.37. Nota: es la lectura que la conclusión de la fuente convierte en decisión. Interpretación registrada: un dímero D normal descarta la TVP con fuerza, pero cuánta depende de dos cosas que hay que saber antes de aplicarlo: qué ensayo se usó y en qué estrato de probabilidad previa está el paciente. Advertencia: la fuente es explícita en que, con sospecha clínica alta, el resultado no debe modificar la decisión clínica. Un dímero D normal no autoriza a detener el estudio en ese estrato."
+      },
+      {
+        "texto": "El valor 0.1 corresponde al LR positivo y no al LR negativo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.1. IC del 95 %: 0.03 a 0.37. Nota: es la lectura que la conclusión de la fuente convierte en decisión. Interpretación registrada: un dímero D normal descarta la TVP con fuerza, pero cuánta depende de dos cosas que hay que saber antes de aplicarlo: qué ensayo se usó y en qué estrato de probabilidad previa está el paciente. Advertencia: la fuente es explícita en que, con sospecha clínica alta, el resultado no debe modificar la decisión clínica. Un dímero D normal no autoriza a detener el estudio en ese estrato."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.1. LR negativo: 0.1. IC del 95 %: 0.03 a 0.37. Nota: es la lectura que la conclusión de la fuente convierte en decisión. Interpretación registrada: un dímero D normal descarta la TVP con fuerza, pero cuánta depende de dos cosas que hay que saber antes de aplicarlo: qué ensayo se usó y en qué estrato de probabilidad previa está el paciente. Advertencia: la fuente es explícita en que, con sospecha clínica alta, el resultado no debe modificar la decisión clínica. Un dímero D normal no autoriza a detener el estudio en ese estrato."
+      }
+    ]
+  },
+  {
+    "id": "neumonia-infantil-precision-semiotica-q1",
+    "post_slug": "neumonia-infantil-precision-semiotica",
+    "post_title": "Neumonía infantil: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6036",
+    "condicion_nombre": "Neumonía infantil",
+    "concepto_id": "HM:0110",
+    "evidencia": {
+      "condicion_id": "HM:6036",
+      "concepto_id": "HM:0110",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.8,
+        "ic95": [
+          2.1,
+          3.6
+        ],
+        "umbral": "saturación de oxígeno ≤ 96%",
+        "ref": "pmid:28763554"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación",
+      "advertencia": "el corte de esta arista es ≤ 96%, no el 92% que el concepto declara como umbral canónico. El de la fuente es un corte pediátrico de hipoxemia moderada, mucho más laxo; aplicar el de adulto aquí perdería el hallazgo."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:28763554",
+    "pmid": "28763554",
+    "doi": "10.1001/jama.2017.9039",
+    "referencia_cita": "Shah SN, Bachur RG, Simel DL, Neuman MI Does This Child Have Pneumonia?: The Rational Clinical Examination Systematic Review JAMA 2017",
+    "triada": {
+      "significante": "Hipoxemia",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación"
+    },
+    "pregunta": "En Neumonía infantil, ¿cuál es el resultado documentado del LR positivo para «Hipoxemia»? Umbral: saturación de oxígeno ≤ 96%.",
+    "opciones": [
+      {
+        "texto": "El valor 2.8 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.8. IC del 95 %: 2.1 a 3.6. Umbral: saturación de oxígeno ≤ 96%. Interpretación registrada: junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación. Advertencia: el corte de esta arista es ≤ 96%, no el 92% que el concepto declara como umbral canónico. El de la fuente es un corte pediátrico de hipoxemia moderada, mucho más laxo; aplicar el de adulto aquí perdería el hallazgo."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.8. LR positivo: 2.8. IC del 95 %: 2.1 a 3.6. Umbral: saturación de oxígeno ≤ 96%. Interpretación registrada: junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación. Advertencia: el corte de esta arista es ≤ 96%, no el 92% que el concepto declara como umbral canónico. El de la fuente es un corte pediátrico de hipoxemia moderada, mucho más laxo; aplicar el de adulto aquí perdería el hallazgo."
+      },
+      {
+        "texto": "LR positivo: 2.8.",
+        "correcta": true,
+        "feedback": "LR positivo: 2.8. IC del 95 %: 2.1 a 3.6. Umbral: saturación de oxígeno ≤ 96%. Interpretación registrada: junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación. Advertencia: el corte de esta arista es ≤ 96%, no el 92% que el concepto declara como umbral canónico. El de la fuente es un corte pediátrico de hipoxemia moderada, mucho más laxo; aplicar el de adulto aquí perdería el hallazgo."
+      }
+    ]
+  },
+  {
+    "id": "neumonia-infantil-precision-semiotica-q2",
+    "post_slug": "neumonia-infantil-precision-semiotica",
+    "post_title": "Neumonía infantil: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6036",
+    "condicion_nombre": "Neumonía infantil",
+    "concepto_id": "HM:3145",
+    "evidencia": {
+      "condicion_id": "HM:6036",
+      "concepto_id": "HM:3145",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.1,
+        "ic95": [
+          1.6,
+          2.7
+        ],
+        "nota": "quejido, aleteo y tiraje medidos en conjunto, no por separado",
+        "ref": "pmid:28763554"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el otro signo que la fuente destaca; se mide como bloque y no admite desglose",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:28763554",
+    "pmid": "28763554",
+    "doi": "10.1001/jama.2017.9039",
+    "referencia_cita": "Shah SN, Bachur RG, Simel DL, Neuman MI Does This Child Have Pneumonia?: The Rational Clinical Examination Systematic Review JAMA 2017",
+    "triada": {
+      "significante": "Hipoxemia",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación"
+    },
+    "pregunta": "En Neumonía infantil, ¿cuál es el resultado documentado del LR positivo para «Aumento del trabajo respiratorio»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.1. LR positivo: 2.1. IC del 95 %: 1.6 a 2.7. Nota: quejido, aleteo y tiraje medidos en conjunto, no por separado. Interpretación registrada: el otro signo que la fuente destaca; se mide como bloque y no admite desglose."
+      },
+      {
+        "texto": "LR positivo: 2.1.",
+        "correcta": true,
+        "feedback": "LR positivo: 2.1. IC del 95 %: 1.6 a 2.7. Nota: quejido, aleteo y tiraje medidos en conjunto, no por separado. Interpretación registrada: el otro signo que la fuente destaca; se mide como bloque y no admite desglose."
+      },
+      {
+        "texto": "El valor 2.1 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.1. IC del 95 %: 1.6 a 2.7. Nota: quejido, aleteo y tiraje medidos en conjunto, no por separado. Interpretación registrada: el otro signo que la fuente destaca; se mide como bloque y no admite desglose."
+      }
+    ]
+  },
+  {
+    "id": "sobrecarga-de-volumen-precision-semiotica-q1",
+    "post_slug": "sobrecarga-de-volumen-precision-semiotica",
+    "post_title": "Sobrecarga de volumen: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6037",
+    "condicion_nombre": "Sobrecarga de volumen",
+    "concepto_id": "HM:3147",
+    "evidencia": {
+      "condicion_id": "HM:6037",
+      "concepto_id": "HM:3147",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 5.8,
+        "ic95": [
+          2.9,
+          11.5
+        ],
+        "ref": "pmid:41729549"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga.",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:41729549",
+    "pmid": "41729549",
+    "doi": "10.1001/jama.2026.0446",
+    "referencia_cita": "Drum B, La Course B, Kelly M, York A, Worrall E, Martins J, Johnson S, Liles EA Jr Does This Patient Have Volume Overload?: The Rational Clinical Examination JAMA 2026",
+    "triada": {
+      "significante": "Congestión vascular en la radiografía de tórax",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga."
+    },
+    "pregunta": "En Sobrecarga de volumen, ¿cuál es el resultado documentado del LR positivo para «Congestión vascular en la radiografía de tórax»?",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 5.8. LR positivo: 5.8. IC del 95 %: 2.9 a 11.5. Interpretación registrada: con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga."
+      },
+      {
+        "texto": "LR positivo: 5.8.",
+        "correcta": true,
+        "feedback": "LR positivo: 5.8. IC del 95 %: 2.9 a 11.5. Interpretación registrada: con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga."
+      },
+      {
+        "texto": "El valor 5.8 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 5.8. IC del 95 %: 2.9 a 11.5. Interpretación registrada: con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga."
+      }
+    ]
+  },
+  {
+    "id": "sobrecarga-de-volumen-precision-semiotica-q2",
+    "post_slug": "sobrecarga-de-volumen-precision-semiotica",
+    "post_title": "Sobrecarga de volumen: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6037",
+    "condicion_nombre": "Sobrecarga de volumen",
+    "concepto_id": "HM:3151",
+    "evidencia": {
+      "condicion_id": "HM:6037",
+      "concepto_id": "HM:3151",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 4.2,
+        "ic95": [
+          1.8,
+          10
+        ],
+        "umbral": "BNP ≥ 100 ng/mL",
+        "ref": "pmid:41729549"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "la conclusión de la fuente lo señala, junto con la ausencia de líneas B, como lo más útil para EXCLUIR la sobrecarga: un BNP normal la hace muy poco probable",
+      "advertencia": "la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto HM:3151 antes de usar este umbral."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:41729549",
+    "pmid": "41729549",
+    "doi": "10.1001/jama.2026.0446",
+    "referencia_cita": "Drum B, La Course B, Kelly M, York A, Worrall E, Martins J, Johnson S, Liles EA Jr Does This Patient Have Volume Overload?: The Rational Clinical Examination JAMA 2026",
+    "triada": {
+      "significante": "Congestión vascular en la radiografía de tórax",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga."
+    },
+    "pregunta": "En Sobrecarga de volumen, ¿cuál es el resultado documentado del LR positivo para «Péptido natriurético cerebral elevado»? Umbral: BNP ≥ 100 ng/mL.",
+    "opciones": [
+      {
+        "texto": "LR positivo: 4.2.",
+        "correcta": true,
+        "feedback": "LR positivo: 4.2. IC del 95 %: 1.8 a 10. Umbral: BNP ≥ 100 ng/mL. Interpretación registrada: la conclusión de la fuente lo señala, junto con la ausencia de líneas B, como lo más útil para EXCLUIR la sobrecarga: un BNP normal la hace muy poco probable. Advertencia: la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto HM:3151 antes de usar este umbral."
+      },
+      {
+        "texto": "El valor 4.2 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.2. IC del 95 %: 1.8 a 10. Umbral: BNP ≥ 100 ng/mL. Interpretación registrada: la conclusión de la fuente lo señala, junto con la ausencia de líneas B, como lo más útil para EXCLUIR la sobrecarga: un BNP normal la hace muy poco probable. Advertencia: la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto HM:3151 antes de usar este umbral."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 4.2. LR positivo: 4.2. IC del 95 %: 1.8 a 10. Umbral: BNP ≥ 100 ng/mL. Interpretación registrada: la conclusión de la fuente lo señala, junto con la ausencia de líneas B, como lo más útil para EXCLUIR la sobrecarga: un BNP normal la hace muy poco probable. Advertencia: la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto HM:3151 antes de usar este umbral."
+      }
+    ]
+  },
+  {
+    "id": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica-q1",
+    "post_slug": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica",
+    "post_title": "Lesión intracraneal en el traumatismo craneal leve del adulto: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6038",
+    "condicion_nombre": "Lesión intracraneal en el traumatismo craneal leve del adulto",
+    "concepto_id": "HM:3049",
+    "evidencia": {
+      "condicion_id": "HM:6038",
+      "concepto_id": "HM:3049",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 16,
+        "ic95": [
+          3.1,
+          59
+        ],
+        "ref": "pmid:26717031"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": "con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo",
+      "advertencia": "el intervalo va de 3.1 a 59, casi veinte veces de ancho. El hallazgo es raro y la estimación muy imprecisa: lo que sostiene la decisión es el extremo inferior, no el valor puntual."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:26717031",
+    "pmid": "26717031",
+    "doi": "10.1001/jama.2015.16316",
+    "referencia_cita": "Easter JS, Haukoos JS, Meehan WP, Novack V, Edlow JA Will Neuroimaging Reveal a Severe Intracranial Injury in This Adult With Minor Head Trauma?: The Rational Clinical Examination Systematic Review JAMA 2015",
+    "triada": {
+      "significante": "Signos de fractura de cráneo",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo"
+    },
+    "pregunta": "En Lesión intracraneal en el traumatismo craneal leve del adulto, ¿cuál es el resultado documentado del LR positivo para «Signos de fractura de cráneo»?",
+    "opciones": [
+      {
+        "texto": "LR positivo: 16.",
+        "correcta": true,
+        "feedback": "LR positivo: 16. IC del 95 %: 3.1 a 59. Interpretación registrada: con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo. Advertencia: el intervalo va de 3.1 a 59, casi veinte veces de ancho. El hallazgo es raro y la estimación muy imprecisa: lo que sostiene la decisión es el extremo inferior, no el valor puntual."
+      },
+      {
+        "texto": "El valor 16 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 16. IC del 95 %: 3.1 a 59. Interpretación registrada: con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo. Advertencia: el intervalo va de 3.1 a 59, casi veinte veces de ancho. El hallazgo es raro y la estimación muy imprecisa: lo que sostiene la decisión es el extremo inferior, no el valor puntual."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 16. LR positivo: 16. IC del 95 %: 3.1 a 59. Interpretación registrada: con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo. Advertencia: el intervalo va de 3.1 a 59, casi veinte veces de ancho. El hallazgo es raro y la estimación muy imprecisa: lo que sostiene la decisión es el extremo inferior, no el valor puntual."
+      }
+    ]
+  },
+  {
+    "id": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica-q2",
+    "post_slug": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica",
+    "post_title": "Lesión intracraneal en el traumatismo craneal leve del adulto: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6038",
+    "condicion_nombre": "Lesión intracraneal en el traumatismo craneal leve del adulto",
+    "concepto_id": "HM:3050",
+    "evidencia": {
+      "condicion_id": "HM:6038",
+      "concepto_id": "HM:3050",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 4.9,
+        "ic95": [
+          2.8,
+          8.5
+        ],
+        "ref": "pmid:26717031"
+      },
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": "es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (HM:3152) con otro cociente."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:26717031",
+    "pmid": "26717031",
+    "doi": "10.1001/jama.2015.16316",
+    "referencia_cita": "Easter JS, Haukoos JS, Meehan WP, Novack V, Edlow JA Will Neuroimaging Reveal a Severe Intracranial Injury in This Adult With Minor Head Trauma?: The Rational Clinical Examination Systematic Review JAMA 2015",
+    "triada": {
+      "significante": "Signos de fractura de cráneo",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo"
+    },
+    "pregunta": "En Lesión intracraneal en el traumatismo craneal leve del adulto, ¿cuál es el resultado documentado del LR positivo para «Puntuación de Glasgow de 13»?",
+    "opciones": [
+      {
+        "texto": "El valor 4.9 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.9. IC del 95 %: 2.8 a 8.5. Advertencia: es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (HM:3152) con otro cociente."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 4.9. LR positivo: 4.9. IC del 95 %: 2.8 a 8.5. Advertencia: es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (HM:3152) con otro cociente."
+      },
+      {
+        "texto": "LR positivo: 4.9.",
+        "correcta": true,
+        "feedback": "LR positivo: 4.9. IC del 95 %: 2.8 a 8.5. Advertencia: es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (HM:3152) con otro cociente."
+      }
+    ]
+  },
+  {
+    "id": "trastorno-de-estres-postraumatico-precision-semiotica-q1",
+    "post_slug": "trastorno-de-estres-postraumatico-precision-semiotica",
+    "post_title": "Trastorno de estrés postraumático: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6039",
+    "condicion_nombre": "Trastorno de estrés postraumático",
+    "concepto_id": "HM:3153",
+    "evidencia": {
+      "condicion_id": "HM:6039",
+      "concepto_id": "HM:3153",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 1.3,
+        "ic95": [
+          1.2,
+          1.4
+        ],
+        "ref": "pmid:26241601"
+      },
+      "poblacion": "152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila",
+      "motivo": null,
+      "decision": "solo decide cuando es NEGATIVO. Con sensibilidad del 95% y LR− 0.20, un TSQ negativo hace el trastorno bastante improbable. Un TSQ positivo no decide nada: LR+ 1.3 sobre una especificidad del 26% apenas mueve la probabilidad, así que cribar positivo obliga a la entrevista diagnóstica y no la sustituye.",
+      "advertencia": "las cuatro cifras son las de la CORRECCIÓN (doi 10.1001/jama.2015.16955), no las del eAppendix 5 original, que la corrección declara erróneo. No se transcriben del abstract: el abstract ni siquiera nombra este instrumento."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:26241601",
+    "pmid": "26241601",
+    "doi": "10.1001/jama.2015.7877",
+    "referencia_cita": "Spoont MR, Williams JW Jr, Kehle-Forbes S, Nieuwsma JA, Mann-Wrobel MC, Gross R Does This Patient Have Posttraumatic Stress Disorder?: Rational Clinical Examination Systematic Review JAMA 2015",
+    "triada": {
+      "significante": "Trauma Screening Questionnaire positivo",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "solo decide cuando es NEGATIVO. Con sensibilidad del 95% y LR− 0.20, un TSQ negativo hace el trastorno bastante improbable. Un TSQ positivo no decide nada: LR+ 1.3 sobre una especificidad del 26% apenas mueve la probabilidad, así que cribar positivo obliga a la entrevista diagnóstica y no la sustituye."
+    },
+    "pregunta": "En Trastorno de estrés postraumático, ¿cuál es el resultado documentado del LR positivo para «Trauma Screening Questionnaire positivo»? Población: 152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila.",
+    "opciones": [
+      {
+        "texto": "El valor 1.3 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 1.3. IC del 95 %: 1.2 a 1.4. Población: 152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila. Interpretación registrada: solo decide cuando es NEGATIVO. Con sensibilidad del 95% y LR− 0.20, un TSQ negativo hace el trastorno bastante improbable. Un TSQ positivo no decide nada: LR+ 1.3 sobre una especificidad del 26% apenas mueve la probabilidad, así que cribar positivo obliga a la entrevista diagnóstica y no la sustituye. Advertencia: las cuatro cifras son las de la CORRECCIÓN (doi 10.1001/jama.2015.16955), no las del eAppendix 5 original, que la corrección declara erróneo. No se transcriben del abstract: el abstract ni siquiera nombra este instrumento."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 1.3. LR positivo: 1.3. IC del 95 %: 1.2 a 1.4. Población: 152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila. Interpretación registrada: solo decide cuando es NEGATIVO. Con sensibilidad del 95% y LR− 0.20, un TSQ negativo hace el trastorno bastante improbable. Un TSQ positivo no decide nada: LR+ 1.3 sobre una especificidad del 26% apenas mueve la probabilidad, así que cribar positivo obliga a la entrevista diagnóstica y no la sustituye. Advertencia: las cuatro cifras son las de la CORRECCIÓN (doi 10.1001/jama.2015.16955), no las del eAppendix 5 original, que la corrección declara erróneo. No se transcriben del abstract: el abstract ni siquiera nombra este instrumento."
+      },
+      {
+        "texto": "LR positivo: 1.3.",
+        "correcta": true,
+        "feedback": "LR positivo: 1.3. IC del 95 %: 1.2 a 1.4. Población: 152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila. Interpretación registrada: solo decide cuando es NEGATIVO. Con sensibilidad del 95% y LR− 0.20, un TSQ negativo hace el trastorno bastante improbable. Un TSQ positivo no decide nada: LR+ 1.3 sobre una especificidad del 26% apenas mueve la probabilidad, así que cribar positivo obliga a la entrevista diagnóstica y no la sustituye. Advertencia: las cuatro cifras son las de la CORRECCIÓN (doi 10.1001/jama.2015.16955), no las del eAppendix 5 original, que la corrección declara erróneo. No se transcriben del abstract: el abstract ni siquiera nombra este instrumento."
+      }
+    ]
+  },
+  {
+    "id": "pancreatitis-aguda-precision-semiotica-q1",
+    "post_slug": "pancreatitis-aguda-precision-semiotica",
+    "post_title": "Pancreatitis aguda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6040",
+    "condicion_nombre": "Pancreatitis aguda",
+    "concepto_id": "HM:0732",
+    "evidencia": {
+      "condicion_id": "HM:6040",
+      "concepto_id": "HM:0732",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Hiperlipasemia",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas"
+    },
+    "pregunta": "En Pancreatitis aguda, ¿qué estado de la evidencia corresponde a «Hiperlipasemia» según la fuente?",
+    "opciones": [
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Interpretación registrada: es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
+      }
+    ]
+  },
+  {
+    "id": "pancreatitis-aguda-precision-semiotica-q2",
+    "post_slug": "pancreatitis-aguda-precision-semiotica",
+    "post_title": "Pancreatitis aguda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6040",
+    "condicion_nombre": "Pancreatitis aguda",
+    "concepto_id": "HM:0731",
+    "evidencia": {
+      "condicion_id": "HM:6040",
+      "concepto_id": "HM:0731",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
+      "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Hiperlipasemia",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas"
+    },
+    "pregunta": "En Pancreatitis aguda, ¿qué estado de la evidencia corresponde a «Hiperamilasemia» según la fuente?",
+    "opciones": [
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+      }
+    ]
+  },
+  {
+    "id": "absceso-de-partes-blandas-precision-semiotica-q1",
+    "post_slug": "absceso-de-partes-blandas-precision-semiotica",
+    "post_title": "Absceso de partes blandas: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6041",
+    "condicion_nombre": "Absceso de partes blandas",
+    "concepto_id": "HM:3166",
+    "evidencia": {
+      "condicion_id": "HM:6041",
+      "concepto_id": "HM:3166",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 10.9,
+        "ic95": [
+          6.2,
+          19.2
+        ],
+        "ref": "pmid:32081383"
+      },
+      "poblacion": "adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total)",
+      "motivo": null,
+      "decision": "colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección",
+      "advertencia": "estos cocientes son del subgrupo de ADULTOS y no se trasladan al niño. El mismo metaanálisis da en pediatría cocientes peores, que no entran todavía porque esperan la comprobación de Marin 2013"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:32081383",
+    "pmid": "32081383",
+    "doi": "10.1016/j.annemergmed.2020.01.004",
+    "referencia_cita": "Gottlieb M, Avila J, Chottiner M, Peksa GD Point-of-Care Ultrasonography for the Diagnosis of Skin and Soft Tissue Abscesses: A Systematic Review and Meta-analysis Ann Emerg Med 2020",
+    "triada": {
+      "significante": "Colección de bordes irregulares dentro del tejido blando, anecoica o con ecos internos en suspensión, con refuerzo acústico posterior, que deforma sus bordes al comprimir con la sonda y cuyo contenido se arremolina. Alrededor, la celulitis da el patrón en empedrado: tabiques hipoecoicos entre lobulillos de grasa.",
+      "significado": "Pus colectado: un espacio ocupado por material líquido y detritos que no se resuelve con antibiótico solo. El refuerzo posterior aparece porque el contenido atenúa menos que el tejido vecino: ese artefacto es la prueba de que hay líquido, no tejido.",
+      "decision": "colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección"
+    },
+    "pregunta": "En Absceso de partes blandas, ¿cuál es el resultado documentado del LR positivo para «Colección de partes blandas en ecografía»? Población: adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total).",
+    "opciones": [
+      {
+        "texto": "LR positivo: 10.9.",
+        "correcta": true,
+        "feedback": "LR positivo: 10.9. IC del 95 %: 6.2 a 19.2. Población: adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total). Interpretación registrada: colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección. Advertencia: estos cocientes son del subgrupo de ADULTOS y no se trasladan al niño. El mismo metaanálisis da en pediatría cocientes peores, que no entran todavía porque esperan la comprobación de Marin 2013."
+      },
+      {
+        "texto": "El valor 10.9 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 10.9. IC del 95 %: 6.2 a 19.2. Población: adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total). Interpretación registrada: colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección. Advertencia: estos cocientes son del subgrupo de ADULTOS y no se trasladan al niño. El mismo metaanálisis da en pediatría cocientes peores, que no entran todavía porque esperan la comprobación de Marin 2013."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 10.9. LR positivo: 10.9. IC del 95 %: 6.2 a 19.2. Población: adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total). Interpretación registrada: colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección. Advertencia: estos cocientes son del subgrupo de ADULTOS y no se trasladan al niño. El mismo metaanálisis da en pediatría cocientes peores, que no entran todavía porque esperan la comprobación de Marin 2013."
       }
     ]
   }

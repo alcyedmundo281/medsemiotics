@@ -15,11 +15,11 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6003-mononucleosis-infecciosa.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0211-odinofagia.yaml: cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f
     conceptos/HM0603-esplenomegalia.yaml: 91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5
     conceptos/HM0607-adenopatias.yaml: f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561
@@ -28,7 +28,7 @@ fuente:
     conceptos/HM3002-adenopatia-inguinal-o-axilar.yaml: ed55476401fe6508e8147f39abd6c52d6ef52ed15a2eb21037d33892a19b7283
     conceptos/HM3003-petequias-en-paladar.yaml: 64eecce570f47b537bf1f3a38f89bfefe8f6ec6d2babe3acbccb65e82935e5ad
     conceptos/HM3004-linfocitosis-atipica.yaml: 1e115e6db2ec1f26c0a14a915b5490531f21ae8de6938767a68809d9cc32b1ea
-    condiciones/HM6003-mononucleosis-infecciosa.yaml: a09354b3a9d4e54f2ae83ceddb09caf69b8f76f4f155ef031223ada310a90371
+    condiciones/HM6003-mononucleosis-infecciosa.yaml: ad06be6c03439dcfab6bad9012bfdc3553e229daae0870deec069eeb40f46c09
     referencias/pmid-27115266.yaml: 668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b
 grounding:
   condicion_id: HM:6003
@@ -124,20 +124,27 @@ evidencia:
     umbral: linfocitos atípicos ≥ 10%
     ref: pmid:27115266
   decision: a partir del 10% ya desplaza la probabilidad con fuerza
+  graduacion:
+    parametro: Linfocitos atípicos
+    unidad: '%'
+    lectura: acumulativo
   tramos:
   - umbral: linfocitos atípicos ≥ 10%
+    desde: 10
     lr_positivo: 11.4
     ic95:
     - 2.7
     - 35
     ref: pmid:27115266
   - umbral: linfocitos atípicos ≥ 20%
+    desde: 20
     lr_positivo: 26
     ic95:
     - 9.6
     - 68
     ref: pmid:27115266
   - umbral: linfocitos atípicos ≥ 40%
+    desde: 40
     lr_positivo: 50
     ic95:
     - 38
@@ -321,7 +328,9 @@ Factor: Edad entre 5 y 25 años; Referencia: pmid:27115266; Nota: máxima frecue
 
 **Decisión:** a partir del 10% ya desplaza la probabilidad con fuerza
 
-**Tramos:** Umbral: linfocitos atípicos ≥ 10%; LR positivo: 11.4; IC del 95 %: 2.7 / 35; Referencia: pmid:27115266 / Umbral: linfocitos atípicos ≥ 20%; LR positivo: 26; IC del 95 %: 9.6 / 68; Referencia: pmid:27115266 / Umbral: linfocitos atípicos ≥ 40%; LR positivo: 50; IC del 95 %: 38 / 64; Referencia: pmid:27115266 / Umbral: linfocitos > 50% y atípicos > 10%; LR positivo: 54; IC del 95 %: 8.4 / 189; Especificidad: 0.99; Referencia: pmid:27115266
+**Graduación:** Parámetro: Linfocitos atípicos; Unidad: %; Lectura: acumulativo
+
+**Tramos:** Umbral: linfocitos atípicos ≥ 10%; Desde: 10; LR positivo: 11.4; IC del 95 %: 2.7 / 35; Referencia: pmid:27115266 / Umbral: linfocitos atípicos ≥ 20%; Desde: 20; LR positivo: 26; IC del 95 %: 9.6 / 68; Referencia: pmid:27115266 / Umbral: linfocitos atípicos ≥ 40%; Desde: 40; LR positivo: 50; IC del 95 %: 38 / 64; Referencia: pmid:27115266 / Umbral: linfocitos > 50% y atípicos > 10%; LR positivo: 54; IC del 95 %: 8.4 / 189; Especificidad: 0.99; Referencia: pmid:27115266
 
 ## Referencias y procedencia
 

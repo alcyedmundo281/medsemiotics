@@ -1,0 +1,133 @@
+{
+  "id": "HM6032-01",
+  "slug": "trastorno-de-panico-precision-semiotica",
+  "title": "Trastorno de pánico: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "date": "2026-09-18",
+  "author": "Dr. Alcy Torres",
+  "category": "medicina_interna",
+  "category_label": "Medicina Interna",
+  "tags": [
+    "medicina_interna",
+    "semiologia",
+    "trastorno-de-panico"
+  ],
+  "reading_time": "8 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6032 · PMID:25058220",
+  "grounding": {
+    "condicion_id": "HM:6032",
+    "condicion_nombre": "Trastorno de pánico",
+    "concepto_id": "HM:3138",
+    "concepto_nombre": "Cuestionario PHQ de pánico positivo",
+    "estado_lr": "medido",
+    "lr_positivo": 78,
+    "lr_negativo": 0.2,
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": null,
+    "referencia_id": "pmid:25058220",
+    "referencia_cita": "Herr NR, Williams JW Jr, Benjamin S, McDuffie J Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review JAMA 2014",
+    "pmid": "25058220",
+    "doi": "10.1001/jama.2014.5950"
+  },
+  "evidencia": [
+    {
+      "concepto": "HM:3138",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "lr_positivo": {
+        "valor": 78,
+        "ic95": [
+          29,
+          210
+        ],
+        "ref": "pmid:25058220"
+      },
+      "lr_negativo": {
+        "valor": 0.2,
+        "ic95": [
+          0.11,
+          0.37
+        ],
+        "ref": "pmid:25058220"
+      },
+      "decision": "el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)"
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+    "doi": "10.5281/zenodo.22064424",
+    "condicion": "condiciones/HM6032-trastorno-de-panico.yaml",
+    "archivos": {
+      "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM3138-cuestionario-phq-panico-positivo.yaml": "2d87a17ec761d174db4b44a201334e6bfbfcd079d1ae7bb71cc28c88ac5567e3",
+      "condiciones/HM6032-trastorno-de-panico.yaml": "4a5e3a9dcb11a202f07689dd160d2a5c20b79b00b057479424d8ad5a2177e589",
+      "referencias/pmid-25058220.yaml": "c0b00c67a6434792c8113c2fd0dcbf58e8d984f338e492cf5a56ef51f78801e3"
+    }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
+  },
+  "has_quiz": true,
+  "quiz_count": 1,
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "triada": {
+    "significante": "Cuestionario PHQ de pánico positivo",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "En Trastorno de pánico, ¿cuál es el resultado documentado del LR positivo para «Cuestionario PHQ de pánico positivo»?",
+      "concepto_id": "HM:3138",
+      "referencia_id": "pmid:25058220",
+      "pmid": "25058220",
+      "doi": "10.1001/jama.2014.5950",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6032",
+        "concepto_id": "HM:3138",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 78,
+          "ic95": [
+            29,
+            210
+          ],
+          "ref": "pmid:25058220"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)",
+        "advertencia": null
+      },
+      "opciones": [
+        {
+          "texto": "LR positivo: 78.0.",
+          "correcta": true,
+          "feedback": "LR positivo: 78.0. IC del 95 %: 29.0 a 210.0. Interpretación registrada: el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)."
+        },
+        {
+          "texto": "El valor 78.0 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 78.0. IC del 95 %: 29.0 a 210.0. Interpretación registrada: el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 78.0. LR positivo: 78.0. IC del 95 %: 29.0 a 210.0. Interpretación registrada: el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)."
+        }
+      ]
+    }
+  ],
+  "body": "# Trastorno de pánico\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPanic disorder\n\n## Sinónimos\n\ncrisis de angustia\n\nataques de pánico\n\nansiedad paroxística episódica\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.085; Población: pacientes adultos atendidos en consultas de atención primaria; Referencia: pmid:25058220\n\n## Hallazgos clínicos\n\n### Cuestionario PHQ de pánico positivo (HM:3138)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 78.0; IC del 95 %: 29.0 / 210.0; Referencia: pmid:25058220\n\n**LR negativo:** Valor: 0.2; IC del 95 %: 0.11 / 0.37; Referencia: pmid:25058220\n\n**Decisión:** el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)\n\n## Conclusión de la fuente\n\nEl módulo de pánico del Patient Health Questionnaire (PHQ) es el instrumento de autoinforme más potente para detectar el trastorno de pánico en atención primaria (LR+ 78, LR- 0.20).\n\n## Referencias y procedencia\n\n**pmid:25058220:** Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5950.\n\nFuente clínica: medsemiotics-db, condición HM:6032."
+}

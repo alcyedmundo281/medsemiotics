@@ -15,14 +15,14 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6006-aneurisma-aorta-abdominal.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3012-pulsacion-aortica-ensanchada.yaml: 54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35
     conceptos/HM3013-obesidad-abdominal.yaml: ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54
-    condiciones/HM6006-aneurisma-aorta-abdominal.yaml: 9cec6260cfe5eea995f9e1ed8f1cddf95e7dc5734e645a439483e7e774717138
+    condiciones/HM6006-aneurisma-aorta-abdominal.yaml: f73182b98384a0455bdbb601191fab2246fdfabda875153c8834a4de39b6cbf3
     referencias/pmid-9892455.yaml: 781f7d38a1ffdb9e732d07f96d7d375d0b690cc6f5ddd1324d87d3070f981905
 grounding:
   condicion_id: HM:6006
@@ -63,8 +63,13 @@ evidencia:
     ref: pmid:9892455
   decision: 'la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta'
   advertencia: no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.
+  graduacion:
+    parametro: Diámetro aórtico máximo
+    unidad: cm
+    lectura: acumulativo
   tramos:
   - umbral_condicion: aneurisma de 3.0 cm o mayor
+    desde: 3.0
     lr_positivo: 12.0
     ic95:
     - 7.4
@@ -75,6 +80,7 @@ evidencia:
     - 0.81
     ref: pmid:9892455
   - umbral_condicion: aneurisma de 4.0 cm o mayor
+    desde: 4.0
     lr_positivo: 15.6
     ic95:
     - 8.6
@@ -158,7 +164,9 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Advertencia:** no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.
 
-**Tramos:** Umbral condicion: aneurisma de 3.0 cm o mayor; LR positivo: 12.0; IC del 95 %: 7.4 / 19.5; LR negativo: 0.72; Ic95 negativo: 0.65 / 0.81; Referencia: pmid:9892455 / Umbral condicion: aneurisma de 4.0 cm o mayor; LR positivo: 15.6; IC del 95 %: 8.6 / 28.5; LR negativo: 0.51; Ic95 negativo: 0.38 / 0.67; Referencia: pmid:9892455
+**Graduación:** Parámetro: Diámetro aórtico máximo; Unidad: cm; Lectura: acumulativo
+
+**Tramos:** Umbral condicion: aneurisma de 3.0 cm o mayor; Desde: 3.0; LR positivo: 12.0; IC del 95 %: 7.4 / 19.5; LR negativo: 0.72; Ic95 negativo: 0.65 / 0.81; Referencia: pmid:9892455 / Umbral condicion: aneurisma de 4.0 cm o mayor; Desde: 4.0; LR positivo: 15.6; IC del 95 %: 8.6 / 28.5; LR negativo: 0.51; Ic95 negativo: 0.38 / 0.67; Referencia: pmid:9892455
 
 **Sensibilidad por diametro:** Diametro: 3.0 a 3.9 cm; Sensibilidad: 0.29; Referencia: pmid:9892455 / Diametro: 4.0 a 4.9 cm; Sensibilidad: 0.5; Referencia: pmid:9892455 / Diametro: 5.0 cm o mayor; Sensibilidad: 0.76; Referencia: pmid:9892455
 

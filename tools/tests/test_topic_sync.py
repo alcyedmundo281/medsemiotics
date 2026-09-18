@@ -36,6 +36,20 @@ class Source:
         for path, data in self.records.items():
             if data.get("id") == identifier:
                 return path, self.read(path)
+        for path, data in self.records.items():
+            if path.startswith("referencias/"):
+                verif = data.get("verificacion") or {}
+                if verif.get("errata_pmid") == identifier:
+                    errata_data = {
+                        "id": identifier, "tipo": "errata",
+                        "titulo": verif.get("errata_corrige") or f"Erratum a {data.get('titulo')}",
+                        "publicacion": data.get("publicacion", ""),
+                        "anio": data.get("anio", ""),
+                        "identificadores": {"pmid": identifier.split(":")[1]},
+                        "verificacion": {"pubmed": True, "retractado": False},
+                        "errata_de": data.get("id"),
+                    }
+                    return path, errata_data
         raise ValueError("No resoluble: " + identifier)
 
 
@@ -119,6 +133,42 @@ class SynchronizationTests(unittest.TestCase):
         answer = next(o for o in q["opciones"] if o["correcta"])
         self.assertEqual(answer["texto"], "LR negativo: 0.3.")
         self.assertEqual(q["evidencia"]["campo"], "lr_negativo")
+
+    def test_errata_reference_in_notes_resolves_and_generates_post(self):
+        source = Source("medido", {"valor": 6.5, "ref": "pmid:123"})
+        source.records["referencias/pmid-123.yaml"]["verificacion"]["errata_pmid"] = "pmid:456"
+        source.records["referencias/pmid-123.yaml"]["verificacion"]["errata_corrige"] = "Corrección de prueba"
+        source.c["notas_de_uso"] = ["Tiene errata cotejada (pmid:456)."]
+        text, post = self.make(source)
+        self.assertIn("pmid:456", text)
+        self.assertIn("Corrección de prueba", text)
+
+    def test_real_source_resolves_errata_from_parent_reference(self):
+        source = sync.Source.__new__(sync.Source)
+        source.paths = ["referencias/pmid-100.yaml"]
+        source.cache = {
+            "referencias/pmid-100.yaml": ({
+                "id": "pmid:100",
+                "titulo": "Estudio principal",
+                "publicacion": "JAMA",
+                "anio": 2024,
+                "verificacion": {
+                    "pubmed": True,
+                    "errata": "JAMA 2025. doi: 10.1001/errata.",
+                    "errata_pmid": "pmid:200",
+                    "errata_corrige": "Corrección al estudio principal",
+                    "errata_verificada": True,
+                },
+            }, "hash123")
+        }
+        path, errata = source.resolve("pmid:200")
+        self.assertEqual(path, "referencias/pmid-100.yaml")
+        self.assertEqual(errata["id"], "pmid:200")
+        self.assertEqual(errata["tipo"], "errata")
+        self.assertEqual(errata["titulo"], "Corrección al estudio principal")
+        self.assertEqual(errata["identificadores"]["doi"], "10.1001/errata")
+        self.assertTrue(errata["verificacion"]["pubmed"])
+        self.assertFalse(errata["verificacion"]["retractado"])
 
 
 if __name__ == "__main__":

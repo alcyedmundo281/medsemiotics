@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://powersemiotics.com/medsemiotics/gastroenterologia.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-06</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -28,6 +28,11 @@
   <url>
     <loc>https://powersemiotics.com/medsemiotics/gastroenterologia/diarrea-cronica.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://powersemiotics.com/medsemiotics/gastroenterologia/enfermedad-crohn.html</loc>
+    <lastmod>2026-09-06</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -232,7 +237,7 @@
   </url>
   <url>
     <loc>https://powersemiotics.com/medsemiotics/medicina_y_datos/inferencia-causal.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -441,26 +446,46 @@
     <priority>0.8</priority>
   </url>
 <!-- BLOG-START -->
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=absceso-de-partes-blandas-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=alergia-a-penicilina-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=aneurisma-aorta-abdominal-palpacion-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=apnea-obstructiva-del-sueno-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=artrosis-de-cadera-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=cancer-de-mama-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=conjuntivitis-bacteriana-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=conmocion-cerebral-pediatrica-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=derrame-pleural-exudado-criterios-light-colesterol</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=embarazo-ectopico-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=enfermedad-del-manguito-rotador-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=enfermedad-parkinson-criterios-clinicos-mds</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=faringitis-estreptococica-exudado-criterios-centor</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=glaucoma-primario-de-angulo-abierto-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=hepatitis-viral-aguda-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=hipertension-arterial-en-adultos-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=hipertension-arterial-secundaria-pediatrica-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=hipovolemia-aguda-signos-vitales-posturales</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=infarto-agudo-de-miocardio-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=infeccion-precoz-por-vih-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=insuficiencia-aortica-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=intubacion-dificil-mallampati-mordida-labio</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=luxacion-cadera-lactante-barlow-ortolani</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=maltrato-fisico-infantil-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=melanoma-cutaneo-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=meningitis-aguda-sacudida-cefalica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=mononucleosis-infecciosa-adenopatias-linfocitos-atipicos</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=neumonia-infantil-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=pancreatitis-aguda-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=rotura-completa-del-manguito-rotador-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=rotura-del-ligamento-cruzado-anterior-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=sincope-cardiaco-vs-vasovagal-anamnesis</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=sindrome-coronario-agudo-dolor-toracico-ecg</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=sindrome-de-intestino-irritable-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=sobrecarga-de-volumen-precision-semiotica</loc></url>
   <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-consumo-alcohol-audit-audit-c</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-de-ansiedad-generalizada-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-de-estres-postraumatico-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-de-panico-precision-semiotica</loc></url>
+  <url><loc>https://powersemiotics.com/medsemiotics/post.html?slug=trombosis-venosa-profunda-precision-semiotica</loc></url>
 <!-- BLOG-END -->
 </urlset>

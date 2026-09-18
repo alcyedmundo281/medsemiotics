@@ -59,6 +59,7 @@ LABELS = {
     "poblacion": "Población", "umbral": "Umbral", "decision": "Decisión",
     "advertencia": "Advertencia", "motivo": "Motivo", "nota": "Nota",
     "sensibilidad": "Sensibilidad", "especificidad": "Especificidad",
+    "graduacion": "Graduación", "parametro": "Parámetro",
 }
 
 
@@ -104,6 +105,18 @@ class Source:
             self.cache[path] = (yaml.safe_load(raw), hashlib.sha256(raw.encode()).hexdigest())
         return self.cache[path][0]
 
+    def _find_errata(self, identifier):
+        if not hasattr(self, "_errata_map"):
+            self._errata_map = {}
+            for path in self.paths:
+                if path.startswith("referencias/"):
+                    ref = self.read(path)
+                    verif = ref.get("verificacion") or {}
+                    errata_pmid = verif.get("errata_pmid")
+                    if errata_pmid:
+                        self._errata_map[errata_pmid] = (path, ref)
+        return self._errata_map.get(identifier)
+
     def resolve(self, identifier):
         if identifier.startswith("HM:"):
             prefixes = tuple(folder + "/" + identifier.replace(":", "") + "-"
@@ -114,12 +127,34 @@ class Source:
                        identifier.replace(":", "-") + ".yaml"]
         else:
             raise ValueError(f"Identificador no soportado: {identifier}")
-        if len(matches) != 1:
-            raise ValueError(f"Referencia no resoluble o ambigua: {identifier}")
-        data = self.read(matches[0])
-        if data.get("id") != identifier:
-            raise ValueError(f"ID diferente al archivo: {identifier}")
-        return matches[0], data
+        if len(matches) == 1:
+            data = self.read(matches[0])
+            if data.get("id") != identifier:
+                raise ValueError(f"ID diferente al archivo: {identifier}")
+            return matches[0], data
+        if identifier.startswith("pmid:"):
+            errata = self._find_errata(identifier)
+            if errata:
+                parent_path, parent_ref = errata
+                verif = parent_ref.get("verificacion") or {}
+                pmid_num = identifier.split(":")[1] if ":" in identifier else identifier
+                doi_match = re.search(r"10\.\d{4,9}/[-._;()/:A-Za-z0-9]+", verif.get("errata", ""))
+                doi = doi_match.group(0).rstrip(".") if doi_match else None
+                errata_data = {
+                    "id": identifier,
+                    "tipo": "errata",
+                    "titulo": verif.get("errata_corrige") or f"Erratum a {parent_ref.get('titulo')}",
+                    "publicacion": parent_ref.get("publicacion", ""),
+                    "anio": parent_ref.get("anio", ""),
+                    "identificadores": {"pmid": int(pmid_num) if pmid_num.isdigit() else pmid_num, "doi": doi},
+                    "verificacion": {
+                        "pubmed": bool(verif.get("errata_verificada", verif.get("pubmed"))),
+                        "retractado": False,
+                    },
+                    "errata_de": parent_ref.get("id"),
+                }
+                return parent_path, errata_data
+        raise ValueError(f"Referencia no resoluble o ambigua: {identifier}")
 
 
 def identifiers(value):
