@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
+  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6001-hepatitis-viral-aguda.yaml
   archivos:
