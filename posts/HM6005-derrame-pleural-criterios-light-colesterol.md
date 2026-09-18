@@ -232,8 +232,8 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.
 
-**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.
-
 **pmid:22392031:** International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med, 2012. DOI: 10.1007/s00134-012-2513-4.
+
+**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.
 
 Fuente clínica: medsemiotics-db, condición HM:6005.
