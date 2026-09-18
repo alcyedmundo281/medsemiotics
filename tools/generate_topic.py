@@ -333,7 +333,7 @@ def make_post(source, condition_path, previous=None):
     for concept in concepts.values():
         if concept.get("tipo") != "concepto":
             continue
-        for identifier in set(identifiers(concept)):
+        for identifier in sorted(set(identifiers(concept))):
             if identifier.startswith("pmid:"):
                 path, ref = source.resolve(identifier)
                 files.add(path)
