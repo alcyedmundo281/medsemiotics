@@ -1,5 +1,2638 @@
 [
   {
+    "id": "HM6022-01",
+    "slug": "glaucoma-primario-de-angulo-abierto-precision-semiotica",
+    "title": "Glaucoma primario de ángulo abierto: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "glaucoma-primario-de-angulo-abierto",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6022 · PMID:23677315",
+    "grounding": {
+      "condicion_id": "HM:6022",
+      "condicion_nombre": "Glaucoma primario de ángulo abierto",
+      "concepto_id": "HM:3088",
+      "concepto_nombre": "Relación copa-disco aumentada",
+      "estado_lr": "medido",
+      "lr_positivo": 14,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:23677315",
+      "referencia_cita": "Hollands H, Johnson D, Hollands S, Simel DL, Jinapriya D, Sharma S Do findings on routine examination identify patients at risk for primary open-angle glaucoma? The rational clinical examination systematic review JAMA 2013",
+      "pmid": "23677315",
+      "doi": "10.1001/jama.2013.5099"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3088",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 14,
+          "ic95": [
+            6.3,
+            30
+          ],
+          "ref": "pmid:23677315"
+        },
+        "decision": "el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma"
+      },
+      {
+        "concepto": "HM:3089",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 7.3,
+          "ic95": [
+            3.4,
+            16
+          ],
+          "ref": "pmid:23677315"
+        },
+        "decision": "la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad"
+      },
+      {
+        "concepto": "HM:3090",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 12,
+          "ic95": [
+            2.9,
+            48
+          ],
+          "ref": "pmid:23677315"
+        },
+        "decision": "signo patognomónico de daño microvascular y progresión activa de la neuropatía glaucomatosa"
+      },
+      {
+        "concepto": "HM:3091",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 13,
+          "ic95": [
+            8.2,
+            21
+          ],
+          "ref": "pmid:23677315"
+        },
+        "lr_negativo": {
+          "valor": 0.65,
+          "ic95": [
+            0.55,
+            0.76
+          ],
+          "ref": "pmid:23677315"
+        },
+        "decision": "confirma con fuerza pero una PIO normal no descarta (glaucoma de tensión normal)"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3088-relacion-copa-disco-aumentada.yaml": "5bb0259e0f6fd3ae574ed32378ed9e99111c1627ecc93deb1f28220860ed68e0",
+        "conceptos/HM3089-asimetria-de-la-relacion-copa-disco.yaml": "2ede5f860716039873d028cb9f8f2b7c7addacdf28bc1931a8781c38e207c5d7",
+        "conceptos/HM3090-hemorragia-en-astilla-del-disco-optico.yaml": "583ac968bd35113ff71f83184e2bdad70ffbe293038bb642c73d316fbf7d9dee",
+        "conceptos/HM3091-presion-intraocular-elevada.yaml": "c39c8d51b0c74ccf320b8c3fa0fdc2f995f8a67cc438c560d662a90094c2c8ab",
+        "condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml": "f7b6eaf74a3a00933ad3281f9ac22b2028dab49180533926ab33a3aa1ba17467",
+        "referencias/pmid-23677315.yaml": "d2303bc8eb2ac4ce32a6238ef16bdce5d8b07ca52d1a7842da5ee848fd9f787a"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6023-01",
+    "slug": "conmocion-cerebral-pediatrica-precision-semiotica",
+    "title": "Conmoción cerebral pediátrica: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "conmocion-cerebral-pediatrica",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6023 · PMID:41941197",
+    "grounding": {
+      "condicion_id": "HM:6023",
+      "condicion_nombre": "Conmoción cerebral pediátrica",
+      "concepto_id": "HM:3094",
+      "concepto_nombre": "Niebla mental",
+      "estado_lr": "medido",
+      "lr_positivo": 11.9,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:41941197",
+      "referencia_cita": "Shah SN, Chizuk HM, Fong HF, Hannon M, Mannix RC Does This Child Have a Concussion?: The Rational Clinical Examination Systematic Review JAMA 2026",
+      "pmid": "41941197",
+      "doi": "10.1001/jama.2026.1233"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3094",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 11.9,
+          "ic95": [
+            5.2,
+            27
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática"
+      },
+      {
+        "concepto": "HM:3097",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 7,
+          "ic95": [
+            3.1,
+            16
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "el signo físico oculomotor más potente del examen vestibular/ocular motor (VOMS)"
+      },
+      {
+        "concepto": "HM:3095",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 6.9,
+          "ic95": [
+            3.4,
+            14
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "hipersensibilidad sensorial fuertemente indicativa de disfunción corticosensorial aguda"
+      },
+      {
+        "concepto": "HM:0105",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 6.7,
+          "ic95": [
+            3.5,
+            13
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "síntoma neurovegetativo precoz muy prevalente tras conmoción cerebral"
+      },
+      {
+        "concepto": "HM:3096",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.6,
+          "ic95": [
+            2.9,
+            11
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "síntoma sensorial complementario de alta especificidad"
+      },
+      {
+        "concepto": "HM:3098",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.5,
+          "ic95": [
+            2,
+            10
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "signo exploratorio de afectación cerebelosa o de vías de seguimiento visual"
+      },
+      {
+        "concepto": "HM:3099",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.4,
+          "ic95": [
+            2,
+            9.7
+          ],
+          "ref": "pmid:41941197"
+        },
+        "decision": "dismetría sacádica indicativa de alteración en la coordinación ocular rápida"
+      },
+      {
+        "concepto": "HM:0201",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 0.2,
+          "ic95": [
+            0.1,
+            0.4
+          ],
+          "ref": "pmid:41941197"
+        },
+        "dispara_si": "ausente",
+        "efecto": "excluye",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:41941197",
+        "decision": "la ausencia completa de cefalea reduce sustancialmente la probabilidad de conmoción cerebral (LR 0.20)"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6023-conmocion-cerebral-pediatrica.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM0105-bradicardia.yaml": "088974edd57d3a795e8df4a594180e440f0821a08fc12ef6e4a22f7af9d66607",
+        "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
+        "conceptos/HM3094-niebla-mental.yaml": "edba2bd487bfd1c0b34a33f4762a78d33e6911ef7373b14badff7a1f96c3f03f",
+        "conceptos/HM3095-fonofobia-o-sensibilidad-al-ruido.yaml": "ebcd511d4f323df138cd1d4a8dcced8d5673d99c1b49af975e5cf15ee120445e",
+        "conceptos/HM3096-fotofobia-o-sensibilidad-a-la-luz.yaml": "bf007f38615273e68025c7f51a03ad2aa99bc7d92c8fa306dd8f016fc022a4fc",
+        "conceptos/HM3097-punto-proximo-de-convergencia-anormal.yaml": "e652c6a21318fffa323862abb88f3570d077900498ce2d079519c99bc55530fd",
+        "conceptos/HM3098-movimientos-de-persecucion-suave-anormales.yaml": "48ebc6227ba3c681a5d3e0bd6378be7aeac41aea9ea2d3d4ff15c290fbfae32c",
+        "conceptos/HM3099-sacadas-oculares-anormales.yaml": "96dba68766d1678acadb7b30e890122f25fdf325f812b05371553369e90db62b",
+        "condiciones/HM6023-conmocion-cerebral-pediatrica.yaml": "dd25083b61e5aaec55eaab33a745e07d6b0118c2bd9a06219fabc1ddd4af27a2",
+        "referencias/pmid-41941197.yaml": "18cbdb879da36a79aef7d6c8911332329c408e68df1052682cb850affb3dd528"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6024-01",
+    "slug": "maltrato-fisico-infantil-precision-semiotica",
+    "title": "Maltrato físico infantil: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "maltrato-fisico-infantil",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6024 · PMID:40257808",
+    "grounding": {
+      "condicion_id": "HM:6024",
+      "condicion_nombre": "Maltrato físico infantil",
+      "concepto_id": "HM:3104",
+      "concepto_nombre": "Hemorragias retinianas en niño pequeño",
+      "estado_lr": "medido",
+      "lr_positivo": 11,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:40257808",
+      "referencia_cita": "Shah SN, Fong HF, Haney SB, Harper NS, Pierce MC, Neuman MI Has This Child Experienced Physical Abuse?: The Rational Clinical Examination Systematic Review JAMA 2025",
+      "pmid": "40257808",
+      "doi": "10.1001/jama.2025.2216"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3104",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 11,
+          "ic95": [
+            5.2,
+            23
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "el signo oftalmológico clásico más específico de traumatismo craneoencefálico abusivo (AHT)"
+      },
+      {
+        "concepto": "HM:3100",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 6.6,
+          "ic95": [
+            2.8,
+            16
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "traumatismo centrado en la cavidad bucal por alimentación forzada o impacto directo"
+      },
+      {
+        "concepto": "HM:3108",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.9,
+          "ic95": [
+            3.3,
+            10
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "hallazgo en el examen radiológico esquelético altamente discriminativo"
+      },
+      {
+        "concepto": "HM:3102",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.6,
+          "ic95": [
+            2.1,
+            15
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "hematomas con forma de objeto o marca anatómica incompatible con caídas accidentales"
+      },
+      {
+        "concepto": "HM:3101",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.1,
+          "ic95": [
+            1.8,
+            14
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "localización anatómica protegida indicativa de lesión infligida intencionalmente"
+      },
+      {
+        "concepto": "HM:3106",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.2,
+          "ic95": [
+            2.1,
+            4.8
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "complicación intracraneal frecuente en traumatismos por sacudida o impacto"
+      },
+      {
+        "concepto": "HM:3107",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 1.8,
+          "ic95": [
+            1.2,
+            2.7
+          ],
+          "ref": "pmid:40257808"
+        },
+        "decision": "incrementa modestamente el riesgo de maltrato pero requiere correlación con el mecanismo referido"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6024-maltrato-fisico-infantil.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3100-lesion-oral-o-desgarro-del-frenillo.yaml": "3f167e8d111ea490b60ca54e111019666fc1f982a42a7dff0f2c9bacb062e022",
+        "conceptos/HM3101-equimosis-en-nalgas-o-cuello.yaml": "3c8982da088013e28ded5d661186c1660bf4fbebad08a02b6f8383d8b66f3129",
+        "conceptos/HM3102-equimosis-con-patron.yaml": "3acf12db1ed57feeef815579d76bb37aa3aa9852c17e8624b2b24f1650342414",
+        "conceptos/HM3104-hemorragias-retinianas-en-nino-pequeno.yaml": "f6b5e3a84a565d6ad57a2bdac956b5eece0aaaa535ca475af9c0142459133c7e",
+        "conceptos/HM3106-hematoma-subdural-en-lactante.yaml": "f132fc6a4a74599296d1a96fcaeb38487007830c56b84185395857514d099bf8",
+        "conceptos/HM3107-fractura-unica-en-serie-esqueletica.yaml": "be31c4998e1478df93c64676081ec95bfd52afc014ebeb8657a757d77e5e6ba1",
+        "conceptos/HM3108-fracturas-multiples-en-serie-esqueletica.yaml": "e3dc5c958e029cbffb622f0e698dea3b3f31d338bfe51d6b6827496a3fef52c6",
+        "condiciones/HM6024-maltrato-fisico-infantil.yaml": "5a57d90ed734929a8784df29ee962bd2e4eaf8c2d911869979ca5906cd5b89ac",
+        "referencias/pmid-40257808.yaml": "5253c0c81716cc93fa96ea9ed210018f678433817a16e78b6538d0d0b873dc62"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6025-01",
+    "slug": "hipertension-arterial-secundaria-pediatrica-precision-semiotica",
+    "title": "Hipertensión arterial secundaria pediátrica: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "hipertension-arterial-secundaria-pediatrica",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6025 · PMID:36976276",
+    "grounding": {
+      "condicion_id": "HM:6025",
+      "condicion_nombre": "Hipertensión arterial secundaria pediátrica",
+      "concepto_id": "HM:3113",
+      "concepto_nombre": "Microalbuminuria",
+      "estado_lr": "medido",
+      "lr_positivo": 13,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:36976276",
+      "referencia_cita": "Nugent JT, Jiang K, Funaro MC, Saran I, Young C, Ghazi L, Bakhoum CY, Wilson FP, Greenberg JH Does This Child With High Blood Pressure Have Secondary Hypertension?: The Rational Clinical Examination Systematic Review JAMA 2023",
+      "pmid": "36976276",
+      "doi": "10.1001/jama.2023.3184"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3113",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 13,
+          "ic95": [
+            3.2,
+            53
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos"
+      },
+      {
+        "concepto": "HM:3115",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.8,
+          "ic95": [
+            1.8,
+            13
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "alteración en la monitorización ambulatoria que orienta fuertemente hacia etiología secundaria"
+      },
+      {
+        "concepto": "HM:3109",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.7,
+          "ic95": [
+            1.5,
+            15
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "historia familiar de nefropatía o trastornos vasculares orienta al diagnóstico etiológico"
+      },
+      {
+        "concepto": "HM:3110",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.5,
+          "ic95": [
+            1.8,
+            11
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "la delgadez o bajo peso contrasta con la HTA primaria pediátrica típica asociada a obesidad"
+      },
+      {
+        "concepto": "HM:3114",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.6,
+          "ic95": [
+            1.5,
+            8.6
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "niveles de ácido úrico no elevados aumentan la sospecha de causa secundaria frente a primaria"
+      },
+      {
+        "concepto": "HM:3111",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3,
+          "ic95": [
+            1.2,
+            7.5
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "antecedente perinatal asociado a oligonefronía o trombosis de arteria renal por catéter"
+      },
+      {
+        "concepto": "HM:3112",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.8,
+          "ic95": [
+            1.3,
+            6
+          ],
+          "ref": "pmid:36976276"
+        },
+        "decision": "a menor edad de presentación, mucho mayor probabilidad de hipertensión secundaria"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3109-antecedente-familiar-de-hipertension-secundaria.yaml": "b94cc9924892778effe26baca73560d92da494a843cad864167b711670d07a18",
+        "conceptos/HM3110-peso-bajo-percentil-10-en-nino-hipertenso.yaml": "331ece63b61eef99b3fead086aafa9c52869ff7ca2563068176947c8fe0fd43f",
+        "conceptos/HM3111-antecedente-de-prematuridad.yaml": "585196ce7386ffb350f6f6092ea3da79ad004e57e634b0d57c3d1d583d96ca77",
+        "conceptos/HM3112-edad-menor-o-igual-a-6-anos-con-hipertension.yaml": "0f3d824c733b4a1f19b89b595e799b5837c813ddb0daa9fe2e06717dcee17215",
+        "conceptos/HM3113-microalbuminuria.yaml": "da4ff7b2c46ac107270d48c583bb8ed001cf4dca4ca6860ae86fe8fa3f335bd1",
+        "conceptos/HM3114-acido-urico-serico-menor-de-5-5.yaml": "2bd70c99638f2fc515bf59cade2aef38889e6c12d0e2c6d15ac963ac3e285a46",
+        "conceptos/HM3115-carga-tensional-aumentada-en-mapa.yaml": "7a12feca239e20ac76edb71d80c2454affc58492fd27a7408d6c5f9a8b4fcc15",
+        "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml": "1b0baec3b00d44f2cabd1be1a29d4d766397956c94bd32fd53303e2a0ac65696",
+        "referencias/pmid-36976276.yaml": "f142f3f34ddca77f06c307508a4b4891dfe85a82dbe3e1eb07ac907d42160105"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6026-01",
+    "slug": "insuficiencia-aortica-precision-semiotica",
+    "title": "Insuficiencia aórtica: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "insuficiencia-aortica",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6026 · PMID:10376577",
+    "grounding": {
+      "condicion_id": "HM:6026",
+      "condicion_nombre": "Insuficiencia aórtica",
+      "concepto_id": "HM:3116",
+      "concepto_nombre": "Soplo diastólico precoz",
+      "estado_lr": "medido",
+      "lr_positivo": 8.8,
+      "lr_negativo": 0.2,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:10376577",
+      "referencia_cita": "Choudhry NK, Etchells EE The rational clinical examination. Does this patient have aortic regurgitation? JAMA 1999",
+      "pmid": "10376577",
+      "doi": "10.1001/jama.281.23.2231"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3116",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 8.8,
+          "ic95": [
+            7.3,
+            11
+          ],
+          "ref": "pmid:10376577"
+        },
+        "lr_negativo": {
+          "valor": 0.2,
+          "ic95": [
+            0.1,
+            0.3
+          ],
+          "ref": "pmid:10376577"
+        },
+        "decision": "el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)"
+      },
+      {
+        "concepto": "HM:3118",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 8.4,
+          "ic95": [
+            3.9,
+            18
+          ],
+          "ref": "pmid:10376577"
+        },
+        "lr_negativo": {
+          "valor": 0.3,
+          "ic95": [
+            0.1,
+            0.7
+          ],
+          "ref": "pmid:10376577"
+        },
+        "decision": "la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico"
+      },
+      {
+        "concepto": "HM:3117",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "motivo": "signo hemodinámico clásico de regurgitación aórtica moderada o severa"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6026-insuficiencia-aortica.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3116-soplo-diastolico-precoz.yaml": "37b9bc68c6c7ee2c103f014c04aa4010b9ecf1d5cb019f825457e043e24a29d4",
+        "conceptos/HM3117-presion-de-pulso-amplia.yaml": "778885d546492a734b8df1094da2e6b4ba9dc11ec4717fbf453e522dd6b5f396",
+        "conceptos/HM3118-maniobra-de-oclusion-arterial-transitoria.yaml": "b8dde95621d686f2bfd5b7640530fc8bd766200ed4b9ce2d5903dafbc1800482",
+        "condiciones/HM6026-insuficiencia-aortica.yaml": "f78cf7f8f7eb4734bb5f425d810868888370f3ab4c380525c970795476f6e74e",
+        "referencias/pmid-10376577.yaml": "feae2c2a3d4086c1a6dcc4485d2cb32bb3de83d22ce185ee1f213cce2b8f8d8a"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6027-01",
+    "slug": "rotura-del-ligamento-cruzado-anterior-precision-semiotica",
+    "title": "Rotura del ligamento cruzado anterior: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "rotura-del-ligamento-cruzado-anterior",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6027 · PMID:11585485",
+    "grounding": {
+      "condicion_id": "HM:6027",
+      "condicion_nombre": "Rotura del ligamento cruzado anterior",
+      "concepto_id": "HM:3119",
+      "concepto_nombre": "Prueba de Lachman positiva",
+      "estado_lr": "medido",
+      "lr_positivo": 25,
+      "lr_negativo": 0.1,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:11585485",
+      "referencia_cita": "Solomon DH, Simel DL, Bates DW, Katz JN, Schaffer JL The rational clinical examination. Does this patient have a torn meniscus or ligament of the knee? Value of the physical examination JAMA 2001",
+      "pmid": "11585485",
+      "doi": "10.1001/jama.286.13.1610"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3119",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 25,
+          "ic95": [
+            2.7,
+            250
+          ],
+          "ref": "pmid:11585485"
+        },
+        "lr_negativo": {
+          "valor": 0.1,
+          "ic95": [
+            0.04,
+            0.2
+          ],
+          "ref": "pmid:11585485"
+        },
+        "decision": "la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA"
+      },
+      {
+        "concepto": "HM:3123",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 25,
+          "ic95": [
+            2.7,
+            250
+          ],
+          "ref": "pmid:11585485"
+        },
+        "lr_negativo": {
+          "valor": 0.04,
+          "ic95": [
+            0.01,
+            0.4
+          ],
+          "ref": "pmid:11585485"
+        },
+        "decision": "la combinación de maniobras clínicas por un examinador entrenado descarta con fiabilidad casi absoluta (LR- 0.04)"
+      },
+      {
+        "concepto": "HM:3120",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.8,
+          "ic95": [
+            0.7,
+            22
+          ],
+          "ref": "pmid:11585485"
+        },
+        "decision": "maniobra clásica pero con menor sensibilidad que la prueba de Lachman debido al bloqueo de isquiotibiales"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3119-prueba-de-lachman-positiva.yaml": "f1262827c44da29b5f39f4f226b7715dcfc6390d26b4e2958e54e8ff18283ecd",
+        "conceptos/HM3120-prueba-del-cajon-anterior-de-rodilla-positiva.yaml": "5d0abbc5761601b3d36e1dd38a114eea754462744b5c3ed540a913ecc4b98d95",
+        "conceptos/HM3123-examen-compuesto-de-rodilla-positivo-para-lca.yaml": "0105b1d42c0dfce2f482b36f14d810eb57dc7c4eb859603fab51324dd9c788aa",
+        "condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml": "ff009674bb8d677b79ae826723580db5d1315c0b8f67c89b19685d882a865612",
+        "referencias/pmid-11585485.yaml": "e1de8ca5ef9d38cc51bb3337dd446e13d07426b80c8cd769c37c582f962fac61"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6028-01",
+    "slug": "alergia-a-penicilina-precision-semiotica",
+    "title": "Alergia a penicilina: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "alergia-a-penicilina",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6028 · PMID:11368703",
+    "grounding": {
+      "condicion_id": "HM:6028",
+      "condicion_nombre": "Alergia a penicilina",
+      "concepto_id": "HM:3125",
+      "concepto_nombre": "Antecedente referido de alergia a penicilina",
+      "estado_lr": "medido",
+      "lr_positivo": 1.9,
+      "lr_negativo": 0.5,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:11368703",
+      "referencia_cita": "Salkind AR, Cuddy PG, Foxworth JW The rational clinical examination. Is this patient allergic to penicillin? An evidence-based analysis of the likelihood of penicillin allergy JAMA 2001",
+      "pmid": "11368703",
+      "doi": "10.1001/jama.285.19.2498"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3126",
+        "rol": "prueba_especifica",
+        "estado_lr": "no_medible",
+        "motivo": "es el estándar de referencia (gold standard) contra el que se calculan los cocientes de la historia clínica",
+        "decision": "el patrón de referencia para hipersensibilidad mediada por IgE; la negatividad descarta anafilaxia con seguridad casi absoluta"
+      },
+      {
+        "concepto": "HM:3125",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 1.9,
+          "ic95": [
+            1.5,
+            2.5
+          ],
+          "ref": "pmid:11368703"
+        },
+        "lr_negativo": {
+          "valor": 0.5,
+          "ic95": [
+            0.4,
+            0.6
+          ],
+          "ref": "pmid:11368703"
+        },
+        "decision": "el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6028-alergia-a-penicilina.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3125-antecedente-referido-de-alergia-a-penicilina.yaml": "cde9b548831034bf68455dc22a3b5d1ccdc309998f3ab33be1a6220f3923619d",
+        "conceptos/HM3126-prueba-cutanea-positiva-a-penicilina.yaml": "70e9fbd90708978f3c252aac45fbcb47cabfb1a9fb6986047e63924be88b00da",
+        "condiciones/HM6028-alergia-a-penicilina.yaml": "7f2fb7617504f48dc51d288c54f0d8b19b4b37733e2572e6cd47c711e57d0a3e",
+        "referencias/pmid-11368703.yaml": "37596dbc27a0ff3259412f5a0df332d992662f586e45fd89eee19f63d25124de"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6029-01",
+    "slug": "hipertension-arterial-en-adultos-precision-semiotica",
+    "title": "Hipertensión arterial en adultos: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "hipertension-arterial-en-adultos",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6029 · PMID:34313682",
+    "grounding": {
+      "condicion_id": "HM:6029",
+      "condicion_nombre": "Hipertensión arterial en adultos",
+      "concepto_id": "HM:3127",
+      "concepto_nombre": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
+      "estado_lr": "medido",
+      "lr_positivo": 4.2,
+      "lr_negativo": 0.56,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:34313682",
+      "referencia_cita": "Viera AJ, Yano Y, Lin FC, Simel DL, Yun J, Dave G, Von Holle A, Viera LA, Shimbo D, Hardy ST, Donahue KE, Hinderliter A, Voisin CE, Jonas DE Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review JAMA 2021",
+      "pmid": "34313682",
+      "doi": "10.1001/jama.2021.4533"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3127",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.2,
+          "ic95": [
+            2.9,
+            6.1
+          ],
+          "ref": "pmid:34313682"
+        },
+        "lr_negativo": {
+          "valor": 0.56,
+          "ic95": [
+            0.46,
+            0.68
+          ],
+          "ref": "pmid:34313682"
+        },
+        "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+      },
+      {
+        "concepto": "HM:3128",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.1,
+          "ic95": [
+            2.3,
+            4.2
+          ],
+          "ref": "pmid:34313682"
+        },
+        "lr_negativo": {
+          "valor": 0.33,
+          "ic95": [
+            0.24,
+            0.46
+          ],
+          "ref": "pmid:34313682"
+        },
+        "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3127-presion-arterial-en-consulta-mayor-o-igual-a-140-90.yaml": "f66c2c28d0371db93331bb99132c23a4faff7857c109318c5b7ab1fa5ec6b5e1",
+        "conceptos/HM3128-automonitorizacion-domiciliaria-ampa-mayor-o-igual-a-135-85.yaml": "7872dd1ef931f340ae6ad78b211211312c1aa72c4758b7e65df7047129bfbf1f",
+        "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml": "fdb8b341149d84c4eb0ad27f5f1fb0e7bc05cd912b55dda9bcabeacc5b3c7bd9",
+        "referencias/pmid-34313682.yaml": "a7ab07c045ece7b7760dd6b8df4d794d8c7d4e2d4747d57f9c58da5c11d89920"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6030-01",
+    "slug": "infarto-agudo-de-miocardio-precision-semiotica",
+    "title": "Infarto agudo de miocardio: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "infarto-agudo-de-miocardio",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6030 · PMID:9786377",
+    "grounding": {
+      "condicion_id": "HM:6030",
+      "condicion_nombre": "Infarto agudo de miocardio",
+      "concepto_id": "HM:3130",
+      "concepto_nombre": "Elevación nueva del segmento ST en el ECG",
+      "estado_lr": "medido",
+      "lr_positivo": 22,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:9786377",
+      "referencia_cita": "Panju AA, Hemmelgarn BR, Guyatt GH, Simel DL The rational clinical examination. Is this patient having a myocardial infarction? JAMA 1998",
+      "pmid": "9786377",
+      "doi": "10.1001/jama.280.14.1256"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3130",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 22,
+          "ic95": [
+            5.7,
+            53.9
+          ],
+          "ref": "pmid:9786377"
+        },
+        "decision": "el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión"
+      },
+      {
+        "concepto": "HM:3131",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 11,
+          "ic95": [
+            5.3,
+            24.8
+          ],
+          "ref": "pmid:9786377"
+        },
+        "decision": "signo electrocardiográfico de necrosis miocárdica transmisible"
+      },
+      {
+        "concepto": "HM:3014",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 7.1,
+          "ic95": [
+            3.5,
+            14.2
+          ],
+          "ref": "pmid:9786377"
+        },
+        "decision": "el síntoma de irradiación dolorosa con mayor rendimiento discriminativo positivo"
+      },
+      {
+        "concepto": "HM:3132",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.2,
+          "ic95": [
+            1.6,
+            6.5
+          ],
+          "ref": "pmid:9786377"
+        },
+        "decision": "signo auscultatorio de disfunción ventricular izquierda aguda"
+      },
+      {
+        "concepto": "HM:0109",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.1,
+          "ic95": [
+            1.6,
+            6.2
+          ],
+          "ref": "pmid:9786377"
+        },
+        "decision": "marcador hemodinámico de compromiso miocárdico o shock cardiogénico"
+      },
+      {
+        "concepto": "HM:3133",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 0.2,
+          "ic95": [
+            0.1,
+            0.4
+          ],
+          "ref": "pmid:9786377"
+        },
+        "efecto": "excluye",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:9786377",
+        "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM (LR 0.2)"
+      },
+      {
+        "concepto": "HM:3134",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 0.3,
+          "ic95": [
+            0.2,
+            0.4
+          ],
+          "ref": "pmid:9786377"
+        },
+        "efecto": "excluye",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:9786377",
+        "decision": "el dolor reproducible a la presión de la pared torácica orienta a causa osteomuscular"
+      },
+      {
+        "concepto": "HM:3135",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 0.3,
+          "ic95": [
+            0.1,
+            0.6
+          ],
+          "ref": "pmid:9786377"
+        },
+        "efecto": "excluye",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:9786377",
+        "decision": "el dolor punzante desplaza fuertemente la probabilidad en contra de IAM"
+      },
+      {
+        "concepto": "HM:3136",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 0.3,
+          "ic95": [
+            0.1,
+            0.7
+          ],
+          "ref": "pmid:9786377"
+        },
+        "efecto": "excluye",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:9786377",
+        "decision": "la modificación postural del dolor aleja la sospecha de isquemia coronaria aguda"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
+        "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
+        "conceptos/HM3130-elevacion-nueva-del-segmento-st.yaml": "1d658265c2bf4bfc1cdd21c84fcb04c7b7a759452f0391286719fc7945b097da",
+        "conceptos/HM3131-nueva-onda-q-en-ecg.yaml": "4394118565a537b17dc696e47bdd1b7209333e71fe79432ea786c28230f2d157",
+        "conceptos/HM3132-tercer-tono-cardiaco.yaml": "871b5b877625900180cc033eac4c47eebd458ff7f860fa2ccbf757f0d6309cb2",
+        "conceptos/HM3133-dolor-toracico-pleuritico.yaml": "3f1683fbafaa904023e35502ef85c1178268756e609583348f81d467c6547726",
+        "conceptos/HM3134-dolor-toracico-reproducible-a-la-palpacion.yaml": "f23a1800f2d73e860ab303a1026f8e90a3aa29f340d037668ba3de3522297ef6",
+        "conceptos/HM3135-dolor-toracico-punzante.yaml": "a82cc27a26e2f5c4fdee7225832251f4bf5e1d18fce8c93ed82c0e081f7463c3",
+        "conceptos/HM3136-dolor-toracico-posicional.yaml": "14e7c84d587048ab1b4a61d4b88c29ea6693307a7e4c1e67889e09cdd9eafec3",
+        "condiciones/HM6030-infarto-agudo-de-miocardio.yaml": "3058acb4abb177a7e64b7b69c6ad71c9b0902a9b3eafbe2d7a205e5ccf5f0fc0",
+        "referencias/pmid-9786377.yaml": "a744bdfe061bea39eeebdfeb75c36d78c863cb9fb6a8a848d121b42024f1665f"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6031-01",
+    "slug": "trastorno-de-ansiedad-generalizada-precision-semiotica",
+    "title": "Trastorno de ansiedad generalizada: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "semiologia",
+      "trastorno-de-ansiedad-generalizada"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6031 · PMID:25058220",
+    "grounding": {
+      "condicion_id": "HM:6031",
+      "condicion_nombre": "Trastorno de ansiedad generalizada",
+      "concepto_id": "HM:3137",
+      "concepto_nombre": "Cuestionario GAD-7 positivo",
+      "estado_lr": "medido",
+      "lr_positivo": 5.1,
+      "lr_negativo": 0.13,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:25058220",
+      "referencia_cita": "Herr NR, Williams JW Jr, Benjamin S, McDuffie J Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review JAMA 2014",
+      "pmid": "25058220",
+      "doi": "10.1001/jama.2014.5950"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3137",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.1,
+          "ic95": [
+            4.3,
+            6
+          ],
+          "ref": "pmid:25058220"
+        },
+        "lr_negativo": {
+          "valor": 0.13,
+          "ic95": [
+            0.07,
+            0.25
+          ],
+          "ref": "pmid:25058220"
+        },
+        "decision": "la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3137-cuestionario-gad7-positivo.yaml": "135b9bc5ba635c2a20eabe0de9721b6702c2c7d8830c5f56cd9f9a2d221ff94e",
+        "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml": "d42aa54b618137134387388e17e514f8c8cc5052be55a1de48ee59d6f5b8d738",
+        "referencias/pmid-25058220.yaml": "c0b00c67a6434792c8113c2fd0dcbf58e8d984f338e492cf5a56ef51f78801e3"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 1,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6032-01",
+    "slug": "trastorno-de-panico-precision-semiotica",
+    "title": "Trastorno de pánico: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "semiologia",
+      "trastorno-de-panico"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6032 · PMID:25058220",
+    "grounding": {
+      "condicion_id": "HM:6032",
+      "condicion_nombre": "Trastorno de pánico",
+      "concepto_id": "HM:3138",
+      "concepto_nombre": "Cuestionario PHQ de pánico positivo",
+      "estado_lr": "medido",
+      "lr_positivo": 78,
+      "lr_negativo": 0.2,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:25058220",
+      "referencia_cita": "Herr NR, Williams JW Jr, Benjamin S, McDuffie J Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review JAMA 2014",
+      "pmid": "25058220",
+      "doi": "10.1001/jama.2014.5950"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3138",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 78,
+          "ic95": [
+            29,
+            210
+          ],
+          "ref": "pmid:25058220"
+        },
+        "lr_negativo": {
+          "valor": 0.2,
+          "ic95": [
+            0.11,
+            0.37
+          ],
+          "ref": "pmid:25058220"
+        },
+        "decision": "el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6032-trastorno-de-panico.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3138-cuestionario-phq-panico-positivo.yaml": "2d87a17ec761d174db4b44a201334e6bfbfcd079d1ae7bb71cc28c88ac5567e3",
+        "condiciones/HM6032-trastorno-de-panico.yaml": "4a5e3a9dcb11a202f07689dd160d2a5c20b79b00b057479424d8ad5a2177e589",
+        "referencias/pmid-25058220.yaml": "c0b00c67a6434792c8113c2fd0dcbf58e8d984f338e492cf5a56ef51f78801e3"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 1,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6033-01",
+    "slug": "melanoma-cutaneo-precision-semiotica",
+    "title": "Melanoma cutáneo: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "melanoma-cutaneo",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6033 · PMID:9496989",
+    "grounding": {
+      "condicion_id": "HM:6033",
+      "condicion_nombre": "Melanoma cutáneo",
+      "concepto_id": "HM:3139",
+      "concepto_nombre": "Criterios ABCD de lesión pigmentada positivos",
+      "estado_lr": "medido",
+      "lr_positivo": 46,
+      "lr_negativo": 0.08,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:9496989",
+      "referencia_cita": "Whited JD, Grichnik JM The rational clinical examination. Does this patient have a mole or a melanoma? JAMA 1998",
+      "pmid": "9496989",
+      "doi": "10.1001/jama.279.9.696",
+      "sensibilidad": 0.92,
+      "especificidad": 0.98
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3139",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.92,
+        "especificidad": 0.98,
+        "lr_positivo": {
+          "valor": 46,
+          "ic95": [
+            18.4,
+            96
+          ],
+          "ref": "pmid:9496989"
+        },
+        "lr_negativo": {
+          "valor": 0.08,
+          "ic95": [
+            0.04,
+            0.18
+          ],
+          "ref": "pmid:9496989"
+        },
+        "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica"
+      },
+      {
+        "concepto": "HM:3140",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "motivo": "componente de los criterios semiológicos combinados de dermatología clínica"
+      },
+      {
+        "concepto": "HM:3141",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "motivo": "componente de los criterios semiológicos combinados de dermatología clínica"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6033-melanoma-cutaneo.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3139-criterios-abcd-de-melanoma-positivos.yaml": "404beb1eb965a5c407754b3121d72c2245a3e1cdf9c00ca37b6425a0ec3bc256",
+        "conceptos/HM3140-asimetria-y-bordes-irregulares-en-lesion-cutanea.yaml": "7677966496a1f369c013c20a30bf359b3577565514cf0d0fa006bf000cd5473e",
+        "conceptos/HM3141-color-heterogeneo-y-diametro-mayor-de-6mm.yaml": "772a8f13150061fc073ec2631a3697326757a562a9dfc54d034297cb69b299b1",
+        "condiciones/HM6033-melanoma-cutaneo.yaml": "37f9762792dda2cb6247296da51458367f1f83ff2dc0d40c1485418ffbad7ce6",
+        "referencias/pmid-9496989.yaml": "991643f724b46ed9d4747e3fd9a92422e90ca8ea1503d55419ebcefe6bd294a5"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6034-01",
+    "slug": "cancer-de-mama-precision-semiotica",
+    "title": "Cáncer de mama: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "cancer-de-mama",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6034 · PMID:10517431",
+    "grounding": {
+      "condicion_id": "HM:6034",
+      "condicion_nombre": "Cáncer de mama",
+      "concepto_id": "HM:3142",
+      "concepto_nombre": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
+      "estado_lr": "medido",
+      "lr_positivo": 10.6,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:10517431",
+      "referencia_cita": "Barton MB, Harris R, Fletcher SW The rational clinical examination. Does this patient have breast cancer? The screening clinical breast examination: should it be done? How? JAMA 1999",
+      "pmid": "10517431",
+      "doi": "10.1001/jama.282.13.1270",
+      "sensibilidad": 0.54,
+      "especificidad": 0.94
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3142",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "sensibilidad": 0.54,
+        "especificidad": 0.94,
+        "lr_positivo": {
+          "valor": 10.6,
+          "ic95": [
+            5.8,
+            19.2
+          ],
+          "ref": "pmid:10517431"
+        },
+        "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)"
+      },
+      {
+        "concepto": "HM:3143",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_negativo": {
+          "valor": 0.47,
+          "ic95": [
+            0.4,
+            0.56
+          ],
+          "ref": "pmid:10517431"
+        },
+        "decision": "una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6034-cancer-de-mama.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3142-masa-mamaria-palpable-sospechosa.yaml": "f11f27c1edc99011448c3818fbae8799dad25cbd5df600b47f5f6136f60218c9",
+        "conceptos/HM3143-examen-clinico-mamario-reglado-normal.yaml": "5a107bc0bf6672b131ceac761664ae19eca3bbb043d0291ba6fb0a72992dd450",
+        "condiciones/HM6034-cancer-de-mama.yaml": "e3639182294e288b830943eea2d21aa7819de5f9c8e57bc535fd1b6b14403b0f",
+        "referencias/pmid-10517431.yaml": "8ebe10c6f72dd592a497d527f6bc8a3d8cbdc4cd8b626cf974280489fe49e662"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6035-01",
+    "slug": "trombosis-venosa-profunda-precision-semiotica",
+    "title": "Trombosis venosa profunda: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "criterios",
+      "medicina_interna",
+      "semiologia",
+      "trombosis-venosa-profunda"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6035 · PMID:16403932",
+    "grounding": {
+      "condicion_id": "HM:6035",
+      "condicion_nombre": "Trombosis venosa profunda",
+      "concepto_id": "HM:3144",
+      "concepto_nombre": "Dímero D elevado",
+      "estado_lr": "medido",
+      "lr_positivo": null,
+      "lr_negativo": 0.1,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:16403932",
+      "referencia_cita": "Wells PS, Owen C, Doucette S, Fergusson D, Tran H Does this patient have deep vein thrombosis? JAMA 2006",
+      "pmid": "16403932",
+      "doi": "10.1001/jama.295.2.199"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3144",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_negativo": {
+          "valor": 0.1,
+          "ic95": [
+            0.03,
+            0.37
+          ],
+          "poblacion": "sospecha clínica baja, ensayo de alta sensibilidad",
+          "nota": "es la lectura que la conclusión de la fuente convierte en decisión",
+          "ref": "pmid:16403932"
+        },
+        "efecto": "excluye",
+        "dispara_si": "ausente",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:16403932",
+        "decision": "un dímero D normal descarta la TVP con fuerza, pero cuánta depende de dos cosas que hay que saber antes de aplicarlo: qué ensayo se usó y en qué estrato de probabilidad previa está el paciente",
+        "advertencia": "la fuente es explícita en que, con sospecha clínica alta, el resultado no debe modificar la decisión clínica. Un dímero D normal no autoriza a detener el estudio en ese estrato.",
+        "tramos": [
+          {
+            "poblacion": "sospecha clínica baja, ensayo de alta sensibilidad",
+            "lr_negativo": 0.1,
+            "ic95_negativo": [
+              0.03,
+              0.37
+            ],
+            "ref": "pmid:16403932"
+          },
+          {
+            "poblacion": "sospecha clínica baja, ensayo de sensibilidad moderada",
+            "lr_negativo": 0.2,
+            "ic95_negativo": [
+              0.12,
+              0.31
+            ],
+            "ref": "pmid:16403932"
+          },
+          {
+            "poblacion": "sospecha clínica moderada, ensayo de alta sensibilidad",
+            "lr_negativo": 0.05,
+            "ic95_negativo": [
+              0.01,
+              0.21
+            ],
+            "ref": "pmid:16403932"
+          },
+          {
+            "poblacion": "sospecha clínica moderada, ensayo de sensibilidad moderada",
+            "lr_negativo": 0.23,
+            "ic95_negativo": [
+              0.13,
+              0.39
+            ],
+            "ref": "pmid:16403932"
+          },
+          {
+            "poblacion": "sospecha clínica alta, ensayo de alta sensibilidad",
+            "lr_negativo": 0.07,
+            "ic95_negativo": [
+              0.03,
+              0.18
+            ],
+            "ref": "pmid:16403932"
+          },
+          {
+            "poblacion": "sospecha clínica alta, ensayo de sensibilidad moderada",
+            "lr_negativo": 0.15,
+            "ic95_negativo": [
+              0.1,
+              0.38
+            ],
+            "ref": "pmid:16403932"
+          }
+        ]
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6035-trombosis-venosa-profunda.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM0604-edema-en-miembros-inferiores.yaml": "ca8df008ba56ddf2a9a2d6786ecd624e2d1e8ded2adb5a20c6b86adff479c0e9",
+        "conceptos/HM3144-dimero-d-elevado.yaml": "562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2",
+        "condiciones/HM6035-trombosis-venosa-profunda.yaml": "d41d82f53d07e490b652031ce7841eef4326ce8d17c5fe2067efca0911bec05a",
+        "referencias/pmid-16403932.yaml": "a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 1,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6036-01",
+    "slug": "neumonia-infantil-precision-semiotica",
+    "title": "Neumonía infantil: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "neumonia-infantil",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6036 · PMID:28763554",
+    "grounding": {
+      "condicion_id": "HM:6036",
+      "condicion_nombre": "Neumonía infantil",
+      "concepto_id": "HM:0110",
+      "concepto_nombre": "Hipoxemia",
+      "estado_lr": "medido",
+      "lr_positivo": 2.8,
+      "lr_negativo": 0.47,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:28763554",
+      "referencia_cita": "Shah SN, Bachur RG, Simel DL, Neuman MI Does This Child Have Pneumonia?: The Rational Clinical Examination Systematic Review JAMA 2017",
+      "pmid": "28763554",
+      "doi": "10.1001/jama.2017.9039",
+      "sensibilidad": 0.64,
+      "especificidad": 0.77
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:0110",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.8,
+          "ic95": [
+            2.1,
+            3.6
+          ],
+          "umbral": "saturación de oxígeno ≤ 96%",
+          "ref": "pmid:28763554"
+        },
+        "lr_negativo": {
+          "valor": 0.47,
+          "ic95": [
+            0.32,
+            0.67
+          ],
+          "umbral": "saturación de oxígeno > 96%",
+          "ref": "pmid:28763554"
+        },
+        "sensibilidad": 0.64,
+        "especificidad": 0.77,
+        "decision": "junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación",
+        "advertencia": "el corte de esta arista es ≤ 96%, no el 92% que el concepto declara como umbral canónico. El de la fuente es un corte pediátrico de hipoxemia moderada, mucho más laxo; aplicar el de adulto aquí perdería el hallazgo."
+      },
+      {
+        "concepto": "HM:3145",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.1,
+          "ic95": [
+            1.6,
+            2.7
+          ],
+          "nota": "quejido, aleteo y tiraje medidos en conjunto, no por separado",
+          "ref": "pmid:28763554"
+        },
+        "decision": "el otro signo que la fuente destaca; se mide como bloque y no admite desglose"
+      },
+      {
+        "concepto": "HM:0206",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            1.5,
+            5.5
+          ],
+          "poblacion": "dos estudios que incluían adolescentes",
+          "ref": "pmid:28763554"
+        },
+        "nota": "sensibilidad 8-14% y especificidad 94-97%: es el único síntoma que la fuente asocia a la neumonía, y lo hace por su especificidad, no por su rendimiento global. Casi nunca está, pero cuando está cuenta.",
+        "advertencia": "el rango 1.5-5.5 sale de dos estudios, no de un metaanálisis: es la dispersión entre dos mediciones y no un intervalo de confianza"
+      },
+      {
+        "concepto": "HM:0101",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            1.7,
+            1.8
+          ],
+          "umbral": "temperatura > 37.5 °C",
+          "ref": "pmid:28763554"
+        },
+        "nota": "sensibilidad 80-92% y especificidad 47-54%: sensible y muy inespecífica, con un cociente que apenas mueve la probabilidad",
+        "advertencia": "el corte de la fuente es 37.5 °C, no los 38.0 °C del umbral canónico del concepto. Con el corte de 38.0 el cociente publicado no aplica."
+      },
+      {
+        "concepto": "HM:0106",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 1.5,
+          "ic95": [
+            1.3,
+            1.7
+          ],
+          "umbral": "frecuencia respiratoria > 40 por minuto",
+          "ref": "pmid:28763554"
+        },
+        "sensibilidad": 0.79,
+        "especificidad": 0.51,
+        "decision": "la conclusión de la fuente es explícita en que la taquipnea pesa MENOS que la hipoxemia y el trabajo respiratorio, al contrario de lo que sugiere su papel en los algoritmos de cribado",
+        "advertencia": "el corte es > 40 por minuto, pediátrico, no los 20 del umbral canónico del concepto, que es de adulto"
+      },
+      {
+        "concepto": "HM:0406",
+        "rol": "manifestacion",
+        "estado_lr": "sin_efecto",
+        "motivo": "la fuente afirma que los hallazgos auscultatorios no se asociaron al diagnóstico, pero no publica su cociente. Es un resultado medido de ausencia de efecto, no una laguna: por eso sin_efecto y no no_medido."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6036-neumonia-infantil.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM0101-fiebre.yaml": "d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e",
+        "conceptos/HM0106-taquipnea.yaml": "8e68bf600e7cf9fb754061ed9aea27944c56cf6cf4c2103ab86dba1a7f2a6290",
+        "conceptos/HM0110-hipoxemia.yaml": "618b916bc8d46710e8ad723489a7e11b4428f5bf9680f2a7df81ede750ed150d",
+        "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+        "conceptos/HM0406-crepitantes.yaml": "5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083",
+        "conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml": "9449ad5b45db85fce3b18a01aaa8241470c2edfe132589b703bd498687eac216",
+        "condiciones/HM6036-neumonia-infantil.yaml": "af94e664be7f5dd8c1e61b8891c8c79e162b079cbe2a18c01ea952d2780e9445",
+        "referencias/pmid-28763554.yaml": "6b16261f8789e9a1205fa94803b9f07841f6bd6563ebcd59b30a6595ce6db76f"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6037-01",
+    "slug": "sobrecarga-de-volumen-precision-semiotica",
+    "title": "Sobrecarga de volumen: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "semiologia",
+      "sobrecarga-de-volumen"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6037 · PMID:41729549",
+    "grounding": {
+      "condicion_id": "HM:6037",
+      "condicion_nombre": "Sobrecarga de volumen",
+      "concepto_id": "HM:3147",
+      "concepto_nombre": "Congestión vascular en la radiografía de tórax",
+      "estado_lr": "medido",
+      "lr_positivo": 5.8,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:41729549",
+      "referencia_cita": "Drum B, La Course B, Kelly M, York A, Worrall E, Martins J, Johnson S, Liles EA Jr Does This Patient Have Volume Overload?: The Rational Clinical Examination JAMA 2026",
+      "pmid": "41729549",
+      "doi": "10.1001/jama.2026.0446",
+      "especificidad": 0.91
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3147",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 5.8,
+          "ic95": [
+            2.9,
+            11.5
+          ],
+          "ref": "pmid:41729549"
+        },
+        "especificidad": 0.91,
+        "decision": "con las cifras corregidas es el cociente positivo más alto de los doce, por encima del BNP. La conclusión de la fuente los nombra juntos como las dos pruebas más útiles para identificar la sobrecarga."
+      },
+      {
+        "concepto": "HM:3151",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.2,
+          "ic95": [
+            1.8,
+            10
+          ],
+          "umbral": "BNP ≥ 100 ng/mL",
+          "ref": "pmid:41729549"
+        },
+        "lr_negativo": {
+          "valor": 0.09,
+          "ic95": [
+            0.06,
+            0.16
+          ],
+          "umbral": "BNP < 100 ng/mL",
+          "ref": "pmid:41729549"
+        },
+        "sensibilidad": 0.93,
+        "especificidad": 0.78,
+        "efecto": "excluye",
+        "dispara_si": "ausente",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:41729549",
+        "decision": "la conclusión de la fuente lo señala, junto con la ausencia de líneas B, como lo más útil para EXCLUIR la sobrecarga: un BNP normal la hace muy poco probable",
+        "advertencia": "la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto HM:3151 antes de usar este umbral.",
+        "nota": "es el hallazgo cuyas cifras más movió la corrección: LR+ pasó de 6.9 a 4.2 y LR− de 0.14 a 0.09. Las de aquí son las corregidas."
+      },
+      {
+        "concepto": "HM:3146",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.1,
+          "ic95": [
+            2.9,
+            5.6
+          ],
+          "umbral": "punto máximo de pulsación > 3 cm sobre el ángulo esternal",
+          "ref": "pmid:41729549"
+        },
+        "especificidad": 0.92,
+        "decision": "el hallazgo de exploración física con mejor rendimiento de la serie, y el más específico de los doce",
+        "advertencia": "es la ingurgitación que se INSPECCIONA. La presión venosa yugular medida con ecografía es otra arista (HM:3150) con otro cociente: 2.9 frente a 4.1, y especificidad 73% frente a 92%. No son intercambiables."
+      },
+      {
+        "concepto": "HM:3148",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4,
+          "ic95": [
+            2.7,
+            6.1
+          ],
+          "ref": "pmid:41729549"
+        },
+        "lr_negativo": {
+          "valor": 0.09,
+          "ic95": [
+            0.04,
+            0.23
+          ],
+          "ref": "pmid:41729549"
+        },
+        "sensibilidad": 0.93,
+        "especificidad": 0.77,
+        "efecto": "excluye",
+        "dispara_si": "ausente",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:41729549",
+        "decision": "su AUSENCIA es lo que la conclusión de la fuente convierte en decisión: junto con un BNP normal, es lo más útil para excluir la sobrecarga",
+        "advertencia": "el cociente es el de las líneas B BILATERALES. Unas líneas B focales son otro hallazgo y no llevan este número."
+      },
+      {
+        "concepto": "HM:3149",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.9,
+          "ic95": [
+            2.5,
+            6.1
+          ],
+          "umbral": "índice de colapsabilidad < 50%",
+          "ref": "pmid:41729549"
+        },
+        "lr_negativo": {
+          "valor": 0.22,
+          "ic95": [
+            0.11,
+            0.45
+          ],
+          "umbral": "índice de colapsabilidad ≥ 50%",
+          "ref": "pmid:41729549"
+        },
+        "sensibilidad": 0.82,
+        "especificidad": 0.79,
+        "ref": "pmid:41729549",
+        "advertencia": "el corte va al revés que la intuición: lo que indica sobrecarga es colapsar POCO. Un índice por debajo del 50% la hace más probable; por encima, menos."
+      },
+      {
+        "concepto": "HM:3150",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.9,
+          "ic95": [
+            2.3,
+            3.7
+          ],
+          "umbral": "PVY ecográfica > 8 cm",
+          "ref": "pmid:41729549"
+        },
+        "lr_negativo": {
+          "valor": 0.27,
+          "ic95": [
+            0.21,
+            0.34
+          ],
+          "umbral": "PVY ecográfica ≤ 8 cm",
+          "ref": "pmid:41729549"
+        },
+        "sensibilidad": 0.8,
+        "especificidad": 0.73,
+        "ref": "pmid:41729549",
+        "advertencia": "no confundir con la ingurgitación yugular de la inspección (HM:3146), que la fuente mide aparte y con mejor cociente"
+      },
+      {
+        "concepto": "HM:0406",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.7,
+          "ic95": [
+            0.7,
+            4.5
+          ],
+          "ref": "pmid:41729549"
+        },
+        "especificidad": 0.82,
+        "advertencia": "EL INTERVALO CORREGIDO CRUZA EL 1. La corrección cambió el límite inferior de 1.7 a 0.7, así que el cociente ya no es distinguible de la ausencia de efecto. Se transcribe tal como lo publica la fuente corregida, sin redondear ni recortar. Quien lo consuma no debe tratarlo como un hallazgo que desplaza la probabilidad.",
+        "nota": "el intervalo es además el único de los doce que no es simétrico en escala logarítmica: la distancia al límite inferior es 2.6 veces la distancia al superior. Se anota porque se comprobó, no porque autorice a corregirlo."
+      },
+      {
+        "concepto": "HM:0604",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 2.2,
+          "ic95": [
+            1.5,
+            3.1
+          ],
+          "ref": "pmid:41729549"
+        },
+        "especificidad": 0.8,
+        "decision": "el más débil de los hallazgos de exploración con efecto medible: mueve la probabilidad, pero poco"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6037-sobrecarga-de-volumen.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM0406-crepitantes.yaml": "5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083",
+        "conceptos/HM0604-edema-en-miembros-inferiores.yaml": "ca8df008ba56ddf2a9a2d6786ecd624e2d1e8ded2adb5a20c6b86adff479c0e9",
+        "conceptos/HM3146-ingurgitacion-yugular.yaml": "68f00e3333cd5790afa7a4f9a6a550b2feee50898fb40eda646b356d00312ab0",
+        "conceptos/HM3147-congestion-vascular-en-radiografia-de-torax.yaml": "740f5e92a92e8a63c9c5cb4d68bd83b7dae9cf7aaaa646a7c0a418ed1ad7de5d",
+        "conceptos/HM3148-lineas-b-pulmonares-bilaterales.yaml": "bf438bf8faf27db643fbcfa947ad803782ce7e30b057ddcd3e21790d952d516e",
+        "conceptos/HM3149-colapsabilidad-reducida-de-la-vena-cava-inferior.yaml": "4ecb426dd940030438b55098a70a345224f1f74377bd1b7b0082f88d43d217b7",
+        "conceptos/HM3150-presion-venosa-yugular-elevada-por-ecografia.yaml": "14123abf7c9a13905022e5cf5ce2d07cd179a9c60fff58883b5bf109d21c0ccc",
+        "conceptos/HM3151-peptido-natriuretico-cerebral-elevado.yaml": "67c8cf440251c504880f70bde0dce1ea5b332e82a46c97beaa37fe6b1cc9c151",
+        "condiciones/HM6037-sobrecarga-de-volumen.yaml": "1ee4b478ea3078d46cf57ace81fb81364c221e4301ce70e88a3bbc6a069cd90f",
+        "referencias/pmid-22392031.yaml": "167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b",
+        "referencias/pmid-41729549.yaml": "a3b8210b679e9dff1f5671c3127d08ad54fcd26329cfe6735e29183e0cc98937"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6038-01",
+    "slug": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica",
+    "title": "Lesión intracraneal en el traumatismo craneal leve del adulto: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "criterios",
+      "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6038 · PMID:26717031",
+    "grounding": {
+      "condicion_id": "HM:6038",
+      "condicion_nombre": "Lesión intracraneal en el traumatismo craneal leve del adulto",
+      "concepto_id": "HM:3049",
+      "concepto_nombre": "Signos de fractura de cráneo",
+      "estado_lr": "medido",
+      "lr_positivo": 16,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:26717031",
+      "referencia_cita": "Easter JS, Haukoos JS, Meehan WP, Novack V, Edlow JA Will Neuroimaging Reveal a Severe Intracranial Injury in This Adult With Minor Head Trauma?: The Rational Clinical Examination Systematic Review JAMA 2015",
+      "pmid": "26717031",
+      "doi": "10.1001/jama.2015.16316",
+      "especificidad": 0.99
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3049",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 16,
+          "ic95": [
+            3.1,
+            59
+          ],
+          "ref": "pmid:26717031"
+        },
+        "especificidad": 0.99,
+        "decision": "con diferencia el cociente más alto de la serie: encontrarlos cambia la decisión por sí solo",
+        "advertencia": "el intervalo va de 3.1 a 59, casi veinte veces de ancho. El hallazgo es raro y la estimación muy imprecisa: lo que sostiene la decisión es el extremo inferior, no el valor puntual."
+      },
+      {
+        "concepto": "HM:3050",
+        "rol": "prueba_especifica",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 4.9,
+          "ic95": [
+            2.8,
+            8.5
+          ],
+          "ref": "pmid:26717031"
+        },
+        "especificidad": 0.97,
+        "advertencia": "es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (HM:3152) con otro cociente."
+      },
+      {
+        "concepto": "HM:3052",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.6,
+          "ic95": [
+            3.1,
+            4.1
+          ],
+          "ref": "pmid:26717031"
+        },
+        "especificidad": 0.92,
+        "decision": "el cociente más preciso de la serie —intervalo de 3.1 a 4.1— y el más fácil de recoger en la anamnesis",
+        "advertencia": "lo que discrimina son DOS o más episodios. El vómito aislado no lleva este número."
+      },
+      {
+        "concepto": "HM:3152",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "valor": 3.4,
+          "ic95": [
+            1.4,
+            8.4
+          ],
+          "ref": "pmid:26717031"
+        },
+        "decision": "un Glasgow que sigue por debajo de 14 dos horas después pesa por sí mismo, con independencia de la puntuación de llegada",
+        "nota": "ESTE COCIENTE NO ESTÁ EN EL ABSTRACT: lo aporta la corrección publicada. El artículo original decía «menor de 15 a las dos horas, LR 1.6-7.6».",
+        "advertencia": "el corte es 14, no 15. Con el corte de 15 ni este cociente ni el del artículo original aplican: la corrección cambió los dos a la vez."
+      },
+      {
+        "concepto": "HM:3051",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            3.4,
+            16
+          ],
+          "poblacion": "entre los estudios que lo midieron",
+          "ref": "pmid:26717031"
+        },
+        "nota": "especificidad del 91% al 99% según el estudio",
+        "advertencia": "3.4 a 16 es la DISPERSIÓN ENTRE ESTUDIOS, no un intervalo de confianza. El rango es tan ancho que no se puede tratar como una estimación única."
+      },
+      {
+        "concepto": "HM:3053",
+        "rol": "apoyo",
+        "estado_lr": "medido",
+        "lr_positivo": {
+          "rango": [
+            3,
+            4.3
+          ],
+          "poblacion": "entre los estudios que lo midieron",
+          "ref": "pmid:26717031"
+        },
+        "nota": "especificidad del 96% al 97% según el estudio",
+        "advertencia": "es un mecanismo lesional, no un hallazgo de exploración: se obtiene de la anamnesis y está disponible antes de tocar al paciente",
+        "decision": "3.0 a 4.3 es la dispersión entre estudios, no un intervalo de confianza"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6038-lesion-intracraneal-en-traumatismo-craneal-leve.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3049-signos-de-fractura-de-craneo.yaml": "ce6f034ae43408ebea3e6ca4309220d733e35ab15cdf7527ceb16e2a6569ec07",
+        "conceptos/HM3050-glasgow-13.yaml": "0c3fb5915c6faca5bfbcfc575d907798e7c45a6e1de7166f72bcc5b4ad43a894",
+        "conceptos/HM3051-descenso-del-glasgow.yaml": "13010e9e437d79cb658aa00de645153db9b832e64651e60f23b97099dec859dd",
+        "conceptos/HM3052-vomitos-dos-o-mas-episodios.yaml": "3ab546f05e3fadd91cc5d8bac8c2a41a60a4e4f7d1acb1f9130f23a971313c73",
+        "conceptos/HM3053-peaton-atropellado.yaml": "87fcff44c9ffb89dd3766b4d6cc064acdd4476bf1d6587f340e4c6b577d96521",
+        "conceptos/HM3054-amnesia-mayor-de-30-min.yaml": "bd4ac67e39e67a66ea4cadca88daf1a3a358655d739f684aebd220fcae10fe8f",
+        "conceptos/HM3152-glasgow-menor-de-14-a-las-dos-horas.yaml": "f9e4f0d74d2b9c89036a59e2930e40d7f0eeaa5004ede8270c34a0997fc12eaf",
+        "condiciones/HM6038-lesion-intracraneal-en-traumatismo-craneal-leve.yaml": "598fbf3a44d31221d196e27ee332d361359efcb663565f7dd742b9e265ec0bdf",
+        "referencias/pmid-26717031.yaml": "6bf1614f97ba4ce9c310b9bfba7ed9cfbba47a3abccf393fcbffaa880102fa0d"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6039-01",
+    "slug": "trastorno-de-estres-postraumatico-precision-semiotica",
+    "title": "Trastorno de estrés postraumático: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "semiologia",
+      "trastorno-de-estres-postraumatico"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6039 · PMID:26241601",
+    "grounding": {
+      "condicion_id": "HM:6039",
+      "condicion_nombre": "Trastorno de estrés postraumático",
+      "concepto_id": "HM:3153",
+      "concepto_nombre": "Trauma Screening Questionnaire positivo",
+      "estado_lr": "medido",
+      "lr_positivo": 1.3,
+      "lr_negativo": 0.2,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila",
+      "referencia_id": "pmid:26241601",
+      "referencia_cita": "Spoont MR, Williams JW Jr, Kehle-Forbes S, Nieuwsma JA, Mann-Wrobel MC, Gross R Does This Patient Have Posttraumatic Stress Disorder?: Rational Clinical Examination Systematic Review JAMA 2015",
+      "pmid": "26241601",
+      "doi": "10.1001/jama.2015.7877",
+      "sensibilidad": 0.95,
+      "especificidad": 0.26
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3153",
+        "rol": "prueba_sensible",
+        "estado_lr": "medido",
+        "poblacion": "152 pacientes, los de la fila del Trauma Screening Questionnaire; la corrección publica además VPP 44 y VPN 89 para esa misma fila",
+        "lr_positivo": {
+          "valor": 1.3,
+          "ic95": [
+            1.2,
+            1.4
+          ],
+          "ref": "pmid:26241601"
+        },
+        "lr_negativo": {
+          "valor": 0.2,
+          "ic95": [
+            0.1,
+            0.41
+          ],
+          "ref": "pmid:26241601"
+        },
+        "sensibilidad": 0.95,
+        "ic95_sensibilidad": [
+          0.9,
+          0.97
+        ],
+        "especificidad": 0.26,
+        "ic95_especificidad": [
+          0.22,
+          0.3
+        ],
+        "efecto": "excluye",
+        "dispara_si": "ausente",
+        "sostiene": "discriminacion_medida",
+        "ref": "pmid:26241601",
+        "decision": "solo decide cuando es NEGATIVO. Con sensibilidad del 95% y LR− 0.20, un TSQ negativo hace el trastorno bastante improbable. Un TSQ positivo no decide nada: LR+ 1.3 sobre una especificidad del 26% apenas mueve la probabilidad, así que cribar positivo obliga a la entrevista diagnóstica y no la sustituye.",
+        "advertencia": "las cuatro cifras son las de la CORRECCIÓN (doi 10.1001/jama.2015.16955), no las del eAppendix 5 original, que la corrección declara erróneo. No se transcriben del abstract: el abstract ni siquiera nombra este instrumento.",
+        "nota": "la fila corregida es coherente consigo misma, y se comprobó: Se/(1−Sp) = 0.95/0.74 = 1.28, que redondea al LR+ 1.3 publicado, y (1−Se)/Sp = 0.05/0.26 = 0.19, que redondea al LR− 0.20. Es una comprobación que se hizo, no una fuente de datos."
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6039-estres-postraumatico.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3153-trauma-screening-questionnaire-positivo.yaml": "2b723c3ecd63806c897092b32412cab381754a741c9a458452299ffe36773049",
+        "condiciones/HM6037-sobrecarga-de-volumen.yaml": "1ee4b478ea3078d46cf57ace81fb81364c221e4301ce70e88a3bbc6a069cd90f",
+        "condiciones/HM6039-estres-postraumatico.yaml": "b867ea823d02c9e241ca2c3c0a97e04835d2ca66307dc2ca192f007f287f9eea",
+        "referencias/pmid-26241601.yaml": "ce57c07f613a42e7c63eeb0f42dec5c35414e5e3e290c3af7250cd9b71ab55b2"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 1,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
+    "id": "HM6040-01",
+    "slug": "pancreatitis-aguda-precision-semiotica",
+    "title": "Pancreatitis aguda: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "medicina_interna",
+      "pancreatitis-aguda",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6040 · PMID:23100216",
+    "grounding": {
+      "condicion_id": "HM:6040",
+      "condicion_nombre": "Pancreatitis aguda",
+      "concepto_id": "HM:0732",
+      "concepto_nombre": "Hiperlipasemia",
+      "estado_lr": "no_medido",
+      "lr_positivo": null,
+      "lr_negativo": null,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": null,
+      "referencia_id": "pmid:23100216",
+      "referencia_cita": "Banks PA, Bollen TL, Dervenis C, Gooszen HG, Johnson CD, Sarr MG, Tsiotos GG, Vege SS Classification of acute pancreatitis--2012: revision of the Atlanta classification and definitions by international consensus Gut 2013",
+      "pmid": "23100216",
+      "doi": "10.1136/gutjnl-2012-302779"
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:0732",
+        "rol": "prueba_especifica",
+        "estado_lr": "no_medido",
+        "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+        "nota": "el corte que usa el protocolo es más de tres veces el límite alto, que es también el que exige Atlanta. El cociente que holonmed le asigna no entra por falta de procedencia; ver «Fuera de alcance»."
+      },
+      {
+        "concepto": "HM:0731",
+        "rol": "prueba_especifica",
+        "estado_lr": "no_medido",
+        "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
+        "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+      },
+      {
+        "concepto": "HM:0202",
+        "rol": "manifestacion",
+        "estado_lr": "no_medido",
+        "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que holonmed aprovecha de él es sobre todo su ausencia"
+      },
+      {
+        "concepto": "HM:0302",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "decision": "aporta poca certeza por sí solo"
+      },
+      {
+        "concepto": "HM:0601",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "decision": "signo de Blumberg; apoya, no decide"
+      },
+      {
+        "concepto": "HM:0611",
+        "rol": "apoyo",
+        "estado_lr": "no_medido",
+        "decision": "raro pero llamativo: orienta a pancreatitis necrotizante o hemorrágica",
+        "advertencia": "su AUSENCIA no descarta nada, y por eso el protocolo de holonmed no le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad."
+      },
+      {
+        "concepto": "HM:0901",
+        "rol": "imagen",
+        "estado_lr": "no_medido",
+        "decision": "es el tercero de los tres criterios de Atlanta, y el que permite diagnosticar cuando las enzimas no llegan al corte",
+        "nota": "la referencia es la tomografía con contraste; la ecografía sirve sobre todo para buscar la causa biliar, no para confirmar la pancreatitis"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6040-pancreatitis-aguda.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM0202-dolor-epigastrico.yaml": "284406d6397caf6b3b25e539e0237ddf1d424b846f97b94cbb2ff75b2c1ef99a",
+        "conceptos/HM0205-dolor-abdominal-en-cinturon.yaml": "0f13e881a8d29bac46d58b3c6664e9414fd2ba135075822528317bf09e1fb47b",
+        "conceptos/HM0302-vomitos.yaml": "c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9",
+        "conceptos/HM0601-irritacion-peritoneal.yaml": "05237c0ae13ba1c349514b2e63ecc620a13a04defc2b7219c2e9c0313ac9eb21",
+        "conceptos/HM0611-signo-de-cullen.yaml": "62e0a5988b00f41af3b6ed75aa0592dc4a79051730d1a35351c642294a0064ac",
+        "conceptos/HM0731-hiperamilasemia.yaml": "1b410460c87df8c6666cb99675252d225a10ef6f58bd871a82229c183236ef74",
+        "conceptos/HM0732-hiperlipasemia.yaml": "b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275",
+        "conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml": "556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a",
+        "condiciones/HM6040-pancreatitis-aguda.yaml": "d6896da321d84890fe9eb3fbeb7738d99c1087b45f8ef05bf3b4dfc56acd75e5",
+        "referencias/pmid-23100216.yaml": "43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 2,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos."
+  },
+  {
+    "id": "HM6041-01",
+    "slug": "absceso-de-partes-blandas-precision-semiotica",
+    "title": "Absceso de partes blandas: hallazgos y evidencia clínica",
+    "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+    "date": "2026-09-18",
+    "author": "Dr. Alcy Torres",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "tags": [
+      "absceso-de-partes-blandas",
+      "medicina_interna",
+      "semiologia"
+    ],
+    "reading_time": "8 min",
+    "difficulty": "Intermedio",
+    "grounding_badge": "HM:6041 · PMID:32081383",
+    "grounding": {
+      "condicion_id": "HM:6041",
+      "condicion_nombre": "Absceso de partes blandas",
+      "concepto_id": "HM:3166",
+      "concepto_nombre": "Colección de partes blandas en ecografía",
+      "estado_lr": "medido",
+      "lr_positivo": 10.9,
+      "lr_negativo": 0.01,
+      "lr_positivo_rango": null,
+      "lr_negativo_rango": null,
+      "poblacion": "adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total)",
+      "referencia_id": "pmid:32081383",
+      "referencia_cita": "Gottlieb M, Avila J, Chottiner M, Peksa GD Point-of-Care Ultrasonography for the Diagnosis of Skin and Soft Tissue Abscesses: A Systematic Review and Meta-analysis Ann Emerg Med 2020",
+      "pmid": "32081383",
+      "doi": "10.1016/j.annemergmed.2020.01.004",
+      "sensibilidad": 0.987,
+      "especificidad": 0.91
+    },
+    "evidencia": [
+      {
+        "concepto": "HM:3166",
+        "rol": "imagen",
+        "estado_lr": "medido",
+        "poblacion": "adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total)",
+        "ref": "pmid:32081383",
+        "sensibilidad": 0.987,
+        "ic95_sensibilidad": [
+          0.953,
+          0.998
+        ],
+        "especificidad": 0.91,
+        "ic95_especificidad": [
+          0.844,
+          0.954
+        ],
+        "lr_positivo": {
+          "valor": 10.9,
+          "ic95": [
+            6.2,
+            19.2
+          ],
+          "ref": "pmid:32081383"
+        },
+        "lr_negativo": {
+          "valor": 0.01,
+          "ic95": [
+            0.001,
+            0.06
+          ],
+          "ref": "pmid:32081383"
+        },
+        "decision": "colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección",
+        "advertencia": "estos cocientes son del subgrupo de ADULTOS y no se trasladan al niño. El mismo metaanálisis da en pediatría cocientes peores, que no entran todavía porque esperan la comprobación de Marin 2013"
+      }
+    ],
+    "fuente": {
+      "repositorio": "alcyedmundo281/medsemiotics-db",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+      "doi": "10.5281/zenodo.22064424",
+      "condicion": "condiciones/HM6041-absceso-de-partes-blandas.yaml",
+      "archivos": {
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+        "conceptos/HM3166-coleccion-de-partes-blandas-en-ecografia.yaml": "84f9731d01658e9e254d134f515c73948778b9c351fccbb28061c8c1596c36a0",
+        "condiciones/HM6041-absceso-de-partes-blandas.yaml": "b010eca416816aed8aad0e869d0ec455efa93540297ede7a86f1ed23935848b0",
+        "referencias/pmid-28073795.yaml": "34414d3cb382d8a6153cdfc6ee51cbf0d018320cb102c03782c4258cb9d81619",
+        "referencias/pmid-32081383.yaml": "93b9a9c75593bb9ba0d20983c254ee2fa36c6a94de4a04cf21c72497d85d4a68",
+        "referencias/pmid-34379709.yaml": "fc71b08758d1230b66485b83ce555b363f89b0661faac03a7ea2bc7b051c7235"
+      }
+    },
+    "publicacion": {
+      "titulo": "medsemiotics",
+      "doi": "10.5281/zenodo.22069641"
+    },
+    "has_quiz": true,
+    "quiz_count": 1,
+    "featured_image": null,
+    "image_source": null,
+    "image_license": null,
+    "image_title": null,
+    "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
+  },
+  {
     "id": "HM6001-01",
     "slug": "hepatitis-viral-aguda-precision-semiotica",
     "title": "Hepatitis viral aguda: hallazgos y evidencia clínica",
@@ -757,9 +3390,15 @@
           "ref": "pmid:27115266"
         },
         "decision": "a partir del 10% ya desplaza la probabilidad con fuerza",
+        "graduacion": {
+          "parametro": "Linfocitos atípicos",
+          "unidad": "%",
+          "lectura": "acumulativo"
+        },
         "tramos": [
           {
             "umbral": "linfocitos atípicos ≥ 10%",
+            "desde": 10,
             "lr_positivo": 11.4,
             "ic95": [
               2.7,
@@ -769,6 +3408,7 @@
           },
           {
             "umbral": "linfocitos atípicos ≥ 20%",
+            "desde": 20,
             "lr_positivo": 26,
             "ic95": [
               9.6,
@@ -778,6 +3418,7 @@
           },
           {
             "umbral": "linfocitos atípicos ≥ 40%",
+            "desde": 40,
             "lr_positivo": 50,
             "ic95": [
               38,
@@ -800,11 +3441,11 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
       "archivos": {
-        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
         "conceptos/HM0211-odinofagia.yaml": "cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f",
         "conceptos/HM0603-esplenomegalia.yaml": "91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5",
         "conceptos/HM0607-adenopatias.yaml": "f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561",
@@ -813,7 +3454,7 @@
         "conceptos/HM3002-adenopatia-inguinal-o-axilar.yaml": "ed55476401fe6508e8147f39abd6c52d6ef52ed15a2eb21037d33892a19b7283",
         "conceptos/HM3003-petequias-en-paladar.yaml": "64eecce570f47b537bf1f3a38f89bfefe8f6ec6d2babe3acbccb65e82935e5ad",
         "conceptos/HM3004-linfocitosis-atipica.yaml": "1e115e6db2ec1f26c0a14a915b5490531f21ae8de6938767a68809d9cc32b1ea",
-        "condiciones/HM6003-mononucleosis-infecciosa.yaml": "a09354b3a9d4e54f2ae83ceddb09caf69b8f76f4f155ef031223ada310a90371",
+        "condiciones/HM6003-mononucleosis-infecciosa.yaml": "ad06be6c03439dcfab6bad9012bfdc3553e229daae0870deec069eeb40f46c09",
         "referencias/pmid-27115266.yaml": "668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b"
       }
     },
@@ -1016,9 +3657,15 @@
         },
         "decision": "la palpación positiva desplaza con fuerza hacia el diagnóstico, pero la negativa apenas descarta: un LR− de 0.72 deja la probabilidad casi intacta",
         "advertencia": "no puede usarse para excluir el aneurisma, y menos si la rotura entra en el diferencial. La fuente lo dice de forma explícita.",
+        "graduacion": {
+          "parametro": "Diámetro aórtico máximo",
+          "unidad": "cm",
+          "lectura": "acumulativo"
+        },
         "tramos": [
           {
             "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+            "desde": 3,
             "lr_positivo": 12,
             "ic95": [
               7.4,
@@ -1033,6 +3680,7 @@
           },
           {
             "umbral_condicion": "aneurisma de 4.0 cm o mayor",
+            "desde": 4,
             "lr_positivo": 15.6,
             "ic95": [
               8.6,
@@ -1067,14 +3715,14 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
       "archivos": {
-        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
         "conceptos/HM3012-pulsacion-aortica-ensanchada.yaml": "54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35",
         "conceptos/HM3013-obesidad-abdominal.yaml": "ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54",
-        "condiciones/HM6006-aneurisma-aorta-abdominal.yaml": "9cec6260cfe5eea995f9e1ed8f1cddf95e7dc5734e645a439483e7e774717138",
+        "condiciones/HM6006-aneurisma-aorta-abdominal.yaml": "f73182b98384a0455bdbb601191fab2246fdfabda875153c8834a4de39b6cbf3",
         "referencias/pmid-9892455.yaml": "781f7d38a1ffdb9e732d07f96d7d375d0b690cc6f5ddd1324d87d3070f981905"
       }
     },
@@ -1210,18 +3858,18 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
       "archivos": {
-        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
         "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
         "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
         "conceptos/HM3015-descenso-segmento-st.yaml": "c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24",
         "conceptos/HM3016-isquemia-en-ecg.yaml": "1e5a608a8d553e5255f2956ed1c7be9f99a61607806f545899aa8e1cd6f14611",
         "conceptos/HM3017-prueba-esfuerzo-previa-anormal.yaml": "a3d131df7f6e8dbb4a6b9d80be9ad2538dba12105c56314080566c77cb4a0d27",
         "conceptos/HM3018-enfermedad-arterial-periferica.yaml": "44920bd7d7d1b70253977858e7924075e688fdfd7bdca5c8e53f9db62bcfca01",
-        "condiciones/HM6007-sindrome-coronario-agudo.yaml": "c6a257121f0d7e4755e662b68f56bb2f21d12babd0a8f21870d0c5e826ed0feb",
+        "condiciones/HM6007-sindrome-coronario-agudo.yaml": "2b7df69a61f0283700cfbcac8c8891387e4642f9c3a58b44eb8b912d24c2fe55",
         "referencias/pmid-26547467.yaml": "fee2183becb69467acb2e26ec76404b1a9aae18c1272b85d9f36adeb16ffe831"
       }
     },
@@ -1772,11 +4420,11 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6010-sincope-cardiaco.yaml",
       "archivos": {
-        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
         "conceptos/HM0207-cefalea.yaml": "3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c",
         "conceptos/HM0505-sincope.yaml": "c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c",
         "conceptos/HM3031-primer-sincope-desde-los-35.yaml": "3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa",
@@ -1787,7 +4435,7 @@
         "conceptos/HM3036-sensacion-de-frio.yaml": "dba095414da8b845a5b9633a999b5abc1d0a300ca84372afa7e71767b2e3a672",
         "conceptos/HM3037-cambio-de-humor-tras-sincope.yaml": "b9b67d523e646f9ac5cdb1485cfc695850606465d39f8757457b1c781a565716",
         "conceptos/HM3038-amnesia-de-la-conducta-previa.yaml": "14e2e16f8fe44a282a932e1cd7320655aefa24fac8713585af88f90926dab65f",
-        "condiciones/HM6010-sincope-cardiaco.yaml": "44d25df093a428884d0ed09d208d86e4a6f154d48a6259c6bca1e2257492d664",
+        "condiciones/HM6010-sincope-cardiaco.yaml": "0040a4665bac761caf36289d8c22a5b0d1a6e6918b3a029165028a7cd784ddc5",
         "referencias/pmid-31237649.yaml": "b8a3d22701b7aceb50254216ad315c9c7235424e0bba5bd261e1621a976c75bb"
       }
     },
@@ -2473,6 +5121,19 @@
     },
     "evidencia": [
       {
+        "concepto": "HM:3165",
+        "rol": "imagen",
+        "estado_lr": "no_medido",
+        "efecto": "excluye",
+        "dispara_si": "presente",
+        "sostiene": "mecanismo",
+        "poblacion": "143 gestantes sintomáticas del primer trimestre atendidas en urgencias por sangrado vaginal y dolor abdominopélvico",
+        "ref": "pmid:36063623",
+        "motivo": "la exclusión no descansa en un cociente sino en la anatomía: un embarazo ectópico está fuera del útero por definición, así que ver el embarazo dentro lo vuelve muy improbable sin que nadie haya tenido que medirlo. Y la fuente no lo mide: su condición diana es el embarazo intrauterino contrastado contra la ecografía transvaginal del obstetra, no el ectópico contrastado contra visualización quirúrgica o seguimiento. Convertir su especificidad del 100% en un cociente del ectópico sería inventar un número que el estudio no calculó. Ver `notas_de_uso`.",
+        "decision": "cuando dice que sí, créele; cuando no lo ve, no has descartado nada. Es una asimetría, no un resultado positivo o negativo: sin intrauterino confirmado hay un embarazo de localización no determinada, que obliga a ecografía transvaginal y hCG, no a un alta",
+        "advertencia": "el embarazo heterotópico existe: confirmar el intrauterino no excluye un ectópico simultáneo, y la excepción pesa de verdad en la mujer que viene de reproducción asistida. El seudosaco es la otra trampa, y es la peligrosa: una colección endometrial central sin saco vitelino ni embrión NO es este hallazgo"
+      },
+      {
         "concepto": "HM:3064",
         "rol": "imagen",
         "estado_lr": "medido",
@@ -2565,11 +5226,11 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "a6b2afeb208457aaf6ce2d86ff78304f45071d5b",
+      "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6016-embarazo-ectopico.yaml",
       "archivos": {
-        "CITATION.cff": "e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7",
+        "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
         "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
         "conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml": "26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15",
         "conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml": "201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f",
@@ -2577,8 +5238,10 @@
         "conceptos/HM3067-masa-anexial-en-la-exploracion-bimanual.yaml": "1a1bb1e23bd7e565387065099cfdcd1af8160e58117a524eb84f4847d21255ef",
         "conceptos/HM3068-dolor-a-la-palpacion-anexial.yaml": "cfacb53553472ff10929397fb4b333684a4110ec83e44a02b807a2742dcc1161",
         "conceptos/HM3069-sangrado-vaginal-en-la-gestacion-precoz.yaml": "a7c6df28b077ba236b0c2784d246ad30c7e10e5bc9eae7d10725927d836273ee",
-        "condiciones/HM6016-embarazo-ectopico.yaml": "dbb752230c0f4a1145368812d0694ad3aa10d99465f17ea03f151db071c5106d",
-        "referencias/pmid-23613077.yaml": "8611f28321a818a1dd3195b5ddfc92a6f3f8af796cb75285e456be3693232cc1"
+        "conceptos/HM3165-embarazo-intrauterino-confirmado.yaml": "9526f85850a91e95243c5eafb04dfccb263eb8b37fd37855676a65616a9466c5",
+        "condiciones/HM6016-embarazo-ectopico.yaml": "0a41c034477bba32617b7f2f1c7e082f9f80e782e40257414102a2d88fc1b8f8",
+        "referencias/pmid-23613077.yaml": "8611f28321a818a1dd3195b5ddfc92a6f3f8af796cb75285e456be3693232cc1",
+        "referencias/pmid-36063623.yaml": "b3c2b193b298c18f72507cab22503d788ddb54f6e11877b2e91c33665db2d7f0"
       }
     },
     "publicacion": {

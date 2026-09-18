@@ -16,18 +16,18 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6007-sindrome-coronario-agudo.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0206-dolor-toracico.yaml: b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f
     conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml: bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2
     conceptos/HM3015-descenso-segmento-st.yaml: c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24
     conceptos/HM3016-isquemia-en-ecg.yaml: 1e5a608a8d553e5255f2956ed1c7be9f99a61607806f545899aa8e1cd6f14611
     conceptos/HM3017-prueba-esfuerzo-previa-anormal.yaml: a3d131df7f6e8dbb4a6b9d80be9ad2538dba12105c56314080566c77cb4a0d27
     conceptos/HM3018-enfermedad-arterial-periferica.yaml: 44920bd7d7d1b70253977858e7924075e688fdfd7bdca5c8e53f9db62bcfca01
-    condiciones/HM6007-sindrome-coronario-agudo.yaml: c6a257121f0d7e4755e662b68f56bb2f21d12babd0a8f21870d0c5e826ed0feb
+    condiciones/HM6007-sindrome-coronario-agudo.yaml: 2b7df69a61f0283700cfbcac8c8891387e4642f9c3a58b44eb8b912d24c2fe55
     referencias/pmid-26547467.yaml: fee2183becb69467acb2e26ec76404b1a9aae18c1272b85d9f36adeb16ffe831
 grounding:
   condicion_id: HM:6007
@@ -260,9 +260,9 @@ Valor: 0.1; Población: pacientes que acuden a urgencias con dolor torácico agu
 
 ## Escalas
 
-Nombre: HEART; Componentes declarados: anamnesis, electrocardiograma, edad, factores de riesgo y primera troponina; Tramos: Rango documentado: 7 a 10 (riesgo alto); LR positivo: 13; IC del 95 %: 7.0 / 24; Referencia: pmid:26547467 / Rango documentado: 0 a 3 (riesgo bajo); LR negativo: 0.2; IC del 95 %: 0.13 / 0.3; Referencia: pmid:26547467; Decisión: el instrumento más potente en ambos sentidos: confirma en el tramo alto y descarta en el bajo
+Nombre: HEART; Componentes declarados: anamnesis, electrocardiograma, edad, factores de riesgo y primera troponina; Graduación: Parámetro: Puntuación HEART; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: 7 a 10 (riesgo alto); Desde: 7; Hasta: 11; LR positivo: 13; IC del 95 %: 7.0 / 24; Referencia: pmid:26547467 / Rango documentado: 0 a 3 (riesgo bajo); Desde: 0; Hasta: 4; LR negativo: 0.2; IC del 95 %: 0.13 / 0.3; Referencia: pmid:26547467; Decisión: el instrumento más potente en ambos sentidos: confirma en el tramo alto y descarta en el bajo
 
-Nombre: TIMI; Tramos: Rango documentado: 5 a 7 (riesgo alto); LR positivo: 6.8; IC del 95 %: 5.2 / 8.9; Referencia: pmid:26547467 / Rango documentado: 0 a 1 (riesgo bajo); LR negativo: 0.31; IC del 95 %: 0.23 / 0.43; Referencia: pmid:26547467
+Nombre: TIMI; Graduación: Parámetro: Puntuación TIMI; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: 5 a 7 (riesgo alto); Desde: 5; Hasta: 8; LR positivo: 6.8; IC del 95 %: 5.2 / 8.9; Referencia: pmid:26547467 / Rango documentado: 0 a 1 (riesgo bajo); Desde: 0; Hasta: 2; LR negativo: 0.31; IC del 95 %: 0.23 / 0.43; Referencia: pmid:26547467
 
 Nombre: Algoritmo de la Heart Foundation of Australia y la Cardiac Society of Australia and New Zealand; Tramos: Rango documentado: riesgo bajo a intermedio; LR negativo: 0.24; IC del 95 %: 0.19 / 0.31; Referencia: pmid:26547467
 

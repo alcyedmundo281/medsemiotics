@@ -1,0 +1,188 @@
+{
+  "id": "HM6033-01",
+  "slug": "melanoma-cutaneo-precision-semiotica",
+  "title": "Melanoma cutáneo: hallazgos y evidencia clínica",
+  "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "date": "2026-09-18",
+  "author": "Dr. Alcy Torres",
+  "category": "medicina_interna",
+  "category_label": "Medicina Interna",
+  "tags": [
+    "medicina_interna",
+    "melanoma-cutaneo",
+    "semiologia"
+  ],
+  "reading_time": "8 min",
+  "difficulty": "Intermedio",
+  "grounding_badge": "HM:6033 · PMID:9496989",
+  "grounding": {
+    "condicion_id": "HM:6033",
+    "condicion_nombre": "Melanoma cutáneo",
+    "concepto_id": "HM:3139",
+    "concepto_nombre": "Criterios ABCD de lesión pigmentada positivos",
+    "estado_lr": "medido",
+    "lr_positivo": 46,
+    "lr_negativo": 0.08,
+    "lr_positivo_rango": null,
+    "lr_negativo_rango": null,
+    "poblacion": null,
+    "referencia_id": "pmid:9496989",
+    "referencia_cita": "Whited JD, Grichnik JM The rational clinical examination. Does this patient have a mole or a melanoma? JAMA 1998",
+    "pmid": "9496989",
+    "doi": "10.1001/jama.279.9.696",
+    "sensibilidad": 0.92,
+    "especificidad": 0.98
+  },
+  "evidencia": [
+    {
+      "concepto": "HM:3139",
+      "rol": "prueba_especifica",
+      "estado_lr": "medido",
+      "sensibilidad": 0.92,
+      "especificidad": 0.98,
+      "lr_positivo": {
+        "valor": 46,
+        "ic95": [
+          18.4,
+          96
+        ],
+        "ref": "pmid:9496989"
+      },
+      "lr_negativo": {
+        "valor": 0.08,
+        "ic95": [
+          0.04,
+          0.18
+        ],
+        "ref": "pmid:9496989"
+      },
+      "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica"
+    },
+    {
+      "concepto": "HM:3140",
+      "rol": "apoyo",
+      "estado_lr": "no_medido",
+      "motivo": "componente de los criterios semiológicos combinados de dermatología clínica"
+    },
+    {
+      "concepto": "HM:3141",
+      "rol": "apoyo",
+      "estado_lr": "no_medido",
+      "motivo": "componente de los criterios semiológicos combinados de dermatología clínica"
+    }
+  ],
+  "fuente": {
+    "repositorio": "alcyedmundo281/medsemiotics-db",
+    "revision": "1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54",
+    "doi": "10.5281/zenodo.22064424",
+    "condicion": "condiciones/HM6033-melanoma-cutaneo.yaml",
+    "archivos": {
+      "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM3139-criterios-abcd-de-melanoma-positivos.yaml": "404beb1eb965a5c407754b3121d72c2245a3e1cdf9c00ca37b6425a0ec3bc256",
+      "conceptos/HM3140-asimetria-y-bordes-irregulares-en-lesion-cutanea.yaml": "7677966496a1f369c013c20a30bf359b3577565514cf0d0fa006bf000cd5473e",
+      "conceptos/HM3141-color-heterogeneo-y-diametro-mayor-de-6mm.yaml": "772a8f13150061fc073ec2631a3697326757a562a9dfc54d034297cb69b299b1",
+      "condiciones/HM6033-melanoma-cutaneo.yaml": "37f9762792dda2cb6247296da51458367f1f83ff2dc0d40c1485418ffbad7ce6",
+      "referencias/pmid-9496989.yaml": "991643f724b46ed9d4747e3fd9a92422e90ca8ea1503d55419ebcefe6bd294a5"
+    }
+  },
+  "publicacion": {
+    "titulo": "medsemiotics",
+    "doi": "10.5281/zenodo.22069641"
+  },
+  "has_quiz": true,
+  "quiz_count": 2,
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
+  "triada": {
+    "significante": "Criterios ABCD de lesión pigmentada positivos",
+    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+    "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica"
+  },
+  "autoevaluacion": [
+    {
+      "id": "q1",
+      "pregunta": "En Melanoma cutáneo, ¿cuál es el resultado documentado del LR positivo para «Criterios ABCD de lesión pigmentada positivos»?",
+      "concepto_id": "HM:3139",
+      "referencia_id": "pmid:9496989",
+      "pmid": "9496989",
+      "doi": "10.1001/jama.279.9.696",
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6033",
+        "concepto_id": "HM:3139",
+        "estado_lr": "medido",
+        "campo": "lr_positivo",
+        "dato": {
+          "valor": 46,
+          "ic95": [
+            18.4,
+            96
+          ],
+          "ref": "pmid:9496989"
+        },
+        "poblacion": null,
+        "motivo": null,
+        "decision": "la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica",
+        "advertencia": null
+      },
+      "opciones": [
+        {
+          "texto": "El valor 46.0 corresponde al LR negativo y no al LR positivo.",
+          "correcta": false,
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 46.0. IC del 95 %: 18.4 a 96.0. Interpretación registrada: la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica."
+        },
+        {
+          "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+          "correcta": false,
+          "feedback": "Sí hay una medición documentada: LR positivo: 46.0. LR positivo: 46.0. IC del 95 %: 18.4 a 96.0. Interpretación registrada: la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica."
+        },
+        {
+          "texto": "LR positivo: 46.0.",
+          "correcta": true,
+          "feedback": "LR positivo: 46.0. IC del 95 %: 18.4 a 96.0. Interpretación registrada: la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "pregunta": "En Melanoma cutáneo, ¿qué estado de la evidencia corresponde a «Asimetría y bordes irregulares en lesión cutánea» según la fuente?",
+      "concepto_id": "HM:3140",
+      "referencia_id": null,
+      "pmid": null,
+      "doi": null,
+      "fuente_doi": "10.5281/zenodo.22064424",
+      "evidencia": {
+        "condicion_id": "HM:6033",
+        "concepto_id": "HM:3140",
+        "estado_lr": "no_medido",
+        "campo": null,
+        "dato": null,
+        "poblacion": null,
+        "motivo": "componente de los criterios semiológicos combinados de dermatología clínica",
+        "decision": null,
+        "advertencia": null
+      },
+      "opciones": [
+        {
+          "texto": "Sin efecto discriminativo",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: componente de los criterios semiológicos combinados de dermatología clínica."
+        },
+        {
+          "texto": "LR no medido",
+          "correcta": true,
+          "feedback": "LR no medido Motivo: componente de los criterios semiológicos combinados de dermatología clínica."
+        },
+        {
+          "texto": "LR no medible",
+          "correcta": false,
+          "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: componente de los criterios semiológicos combinados de dermatología clínica."
+        }
+      ]
+    }
+  ],
+  "body": "# Melanoma cutáneo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nCutaneous melanoma\n\n## Sinónimos\n\nmelanoma maligno\n\ncáncer de piel tipo melanoma\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Criterios ABCD de lesión pigmentada positivos (HM:3139)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.92\n\n**Especificidad:** 0.98\n\n**LR positivo:** Valor: 46.0; IC del 95 %: 18.4 / 96.0; Referencia: pmid:9496989\n\n**LR negativo:** Valor: 0.08; IC del 95 %: 0.04 / 0.18; Referencia: pmid:9496989\n\n**Decisión:** la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica\n\n### Asimetría y bordes irregulares en lesión cutánea (HM:3140)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Motivo:** componente de los criterios semiológicos combinados de dermatología clínica\n\n### Color heterogéneo y diámetro mayor de 6 mm en lesión cutánea (HM:3141)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Motivo:** componente de los criterios semiológicos combinados de dermatología clínica\n\n## Conclusión de la fuente\n\nLa detección precoz del melanoma mediante la regla semiológica ABCD (Asimetría, Bordes irregulares, Color heterogéneo y Diámetro >6 mm) presenta una sensibilidad del 92-100% y una especificidad del 98%, siendo la principal herramienta clínica de triaje y derivación para biopsia.\n\n## Referencias y procedencia\n\n**pmid:9496989:** The rational clinical examination. Does this patient have a mole or a melanoma?. JAMA, 1998. DOI: 10.1001/jama.279.9.696.\n\nFuente clínica: medsemiotics-db, condición HM:6033."
+}

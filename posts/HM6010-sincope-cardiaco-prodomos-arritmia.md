@@ -16,11 +16,11 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6010-sincope-cardiaco.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0207-cefalea.yaml: 3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c
     conceptos/HM0505-sincope.yaml: c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c
     conceptos/HM3031-primer-sincope-desde-los-35.yaml: 3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa
@@ -31,7 +31,7 @@ fuente:
     conceptos/HM3036-sensacion-de-frio.yaml: dba095414da8b845a5b9633a999b5abc1d0a300ca84372afa7e71767b2e3a672
     conceptos/HM3037-cambio-de-humor-tras-sincope.yaml: b9b67d523e646f9ac5cdb1485cfc695850606465d39f8757457b1c781a565716
     conceptos/HM3038-amnesia-de-la-conducta-previa.yaml: 14e2e16f8fe44a282a932e1cd7320655aefa24fac8713585af88f90926dab65f
-    condiciones/HM6010-sincope-cardiaco.yaml: 44d25df093a428884d0ed09d208d86e4a6f154d48a6259c6bca1e2257492d664
+    condiciones/HM6010-sincope-cardiaco.yaml: 0040a4665bac761caf36289d8c22a5b0d1a6e6918b3a029165028a7cd784ddc5
     referencias/pmid-31237649.yaml: b8a3d22701b7aceb50254216ad315c9c7235424e0bba5bd261e1621a976c75bb
 grounding:
   condicion_id: HM:6010
@@ -413,7 +413,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Escalas
 
-Nombre: EGSYS; Componentes declarados: seis variables clínicas, electrocardiograma incluido; Tramos: Rango documentado: menor de 3; Lr negativo rango: 0.12 / 0.17; Referencia: pmid:31237649; Nota: rango entre 2 estudios que la validaron de forma prospectiva; sensibilidad 0.89-0.91, especificidad 0.69-0.73; Decisión: una puntuación menor de 3 es lo que mejor descarta el origen cardíaco
+Nombre: EGSYS; Componentes declarados: seis variables clínicas, electrocardiograma incluido; Graduación: Parámetro: Puntuación EGSYS; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: menor de 3; Hasta: 3; Lr negativo rango: 0.12 / 0.17; Referencia: pmid:31237649; Nota: rango entre 2 estudios que la validaron de forma prospectiva; sensibilidad 0.89-0.91, especificidad 0.69-0.73; Decisión: una puntuación menor de 3 es lo que mejor descarta el origen cardíaco
 
 ## Aspectos pendientes de documentación
 

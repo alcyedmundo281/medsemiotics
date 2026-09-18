@@ -124,5 +124,125 @@
     "archivo": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
     "slug": "trastorno-consumo-alcohol-audit-audit-c",
     "url": "https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-consumo-alcohol-audit-audit-c"
+  },
+  {
+    "condicion_id": "HM:6022",
+    "archivo": "condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml",
+    "slug": "glaucoma-primario-de-angulo-abierto-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=glaucoma-primario-de-angulo-abierto-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6023",
+    "archivo": "condiciones/HM6023-conmocion-cerebral-pediatrica.yaml",
+    "slug": "conmocion-cerebral-pediatrica-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=conmocion-cerebral-pediatrica-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6024",
+    "archivo": "condiciones/HM6024-maltrato-fisico-infantil.yaml",
+    "slug": "maltrato-fisico-infantil-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=maltrato-fisico-infantil-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6025",
+    "archivo": "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml",
+    "slug": "hipertension-arterial-secundaria-pediatrica-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=hipertension-arterial-secundaria-pediatrica-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6026",
+    "archivo": "condiciones/HM6026-insuficiencia-aortica.yaml",
+    "slug": "insuficiencia-aortica-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=insuficiencia-aortica-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6027",
+    "archivo": "condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml",
+    "slug": "rotura-del-ligamento-cruzado-anterior-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=rotura-del-ligamento-cruzado-anterior-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6028",
+    "archivo": "condiciones/HM6028-alergia-a-penicilina.yaml",
+    "slug": "alergia-a-penicilina-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=alergia-a-penicilina-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6029",
+    "archivo": "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml",
+    "slug": "hipertension-arterial-en-adultos-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=hipertension-arterial-en-adultos-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6030",
+    "archivo": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
+    "slug": "infarto-agudo-de-miocardio-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=infarto-agudo-de-miocardio-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6031",
+    "archivo": "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml",
+    "slug": "trastorno-de-ansiedad-generalizada-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-de-ansiedad-generalizada-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6032",
+    "archivo": "condiciones/HM6032-trastorno-de-panico.yaml",
+    "slug": "trastorno-de-panico-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-de-panico-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6033",
+    "archivo": "condiciones/HM6033-melanoma-cutaneo.yaml",
+    "slug": "melanoma-cutaneo-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=melanoma-cutaneo-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6034",
+    "archivo": "condiciones/HM6034-cancer-de-mama.yaml",
+    "slug": "cancer-de-mama-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=cancer-de-mama-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6035",
+    "archivo": "condiciones/HM6035-trombosis-venosa-profunda.yaml",
+    "slug": "trombosis-venosa-profunda-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=trombosis-venosa-profunda-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6036",
+    "archivo": "condiciones/HM6036-neumonia-infantil.yaml",
+    "slug": "neumonia-infantil-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=neumonia-infantil-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6037",
+    "archivo": "condiciones/HM6037-sobrecarga-de-volumen.yaml",
+    "slug": "sobrecarga-de-volumen-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=sobrecarga-de-volumen-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6038",
+    "archivo": "condiciones/HM6038-lesion-intracraneal-en-traumatismo-craneal-leve.yaml",
+    "slug": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6039",
+    "archivo": "condiciones/HM6039-estres-postraumatico.yaml",
+    "slug": "trastorno-de-estres-postraumatico-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=trastorno-de-estres-postraumatico-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6040",
+    "archivo": "condiciones/HM6040-pancreatitis-aguda.yaml",
+    "slug": "pancreatitis-aguda-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=pancreatitis-aguda-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6041",
+    "archivo": "condiciones/HM6041-absceso-de-partes-blandas.yaml",
+    "slug": "absceso-de-partes-blandas-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=absceso-de-partes-blandas-precision-semiotica"
   }
 ]
