@@ -23,7 +23,7 @@ fuente:
     conceptos/HM3116-soplo-diastolico-precoz.yaml: 37b9bc68c6c7ee2c103f014c04aa4010b9ecf1d5cb019f825457e043e24a29d4
     conceptos/HM3117-presion-de-pulso-amplia.yaml: 778885d546492a734b8df1094da2e6b4ba9dc11ec4717fbf453e522dd6b5f396
     conceptos/HM3118-maniobra-de-oclusion-arterial-transitoria.yaml: b8dde95621d686f2bfd5b7640530fc8bd766200ed4b9ce2d5903dafbc1800482
-    condiciones/HM6026-insuficiencia-aortica.yaml: f78cf7f8f7eb4734bb5f425d810868888370f3ab4c380525c970795476f6e74e
+    condiciones/HM6026-insuficiencia-aortica.yaml: 225ba4e8acc7794a1930bef4f5600cd5656ce3170baf1f6b27a7cbc49a9ea623
     referencias/pmid-10376577.yaml: feae2c2a3d4086c1a6dcc4485d2cb32bb3de83d22ce185ee1f213cce2b8f8d8a
 grounding:
   condicion_id: HM:6026

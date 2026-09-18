@@ -15,14 +15,14 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: a6b2afeb208457aaf6ce2d86ff78304f45071d5b
+  revision: 1db38dcd49a911196aa7c2f30bd8ad0e6cb17c54
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6018-apnea-obstructiva-del-sueno.yaml
   archivos:
-    CITATION.cff: e2840db4d37cfb43ebe9835e23c1acfef6352e730051918fa0cbd9fe6fad77d7
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3072-ahogo-o-jadeo-nocturno.yaml: bb978561f85d04ea3c3d96596aed38b1fccd27c88a0c6855cef56cdc1d111d92
     conceptos/HM3073-ronquido.yaml: 7b20f9582eab041322e5a8b9209a4bd214bb831c3476d25c74ffa78bec5d4f5b
-    conceptos/HM3074-indice-de-masa-corporal-bajo.yaml: 55a3f9877aee395d377f92bd9235307ef18d9a02c85c6345d8529b2256949caa
+    conceptos/HM3074-indice-de-masa-corporal-bajo.yaml: 55b96f3fb69ebe11af7ef6cc3623013227cc1d9f96677b6b139f681d3b1cd20b
     condiciones/HM6018-apnea-obstructiva-del-sueno.yaml: 1cf4cd6512f8168487b509b4c743cb9f7dcec67eec9581cbd642e8213c950d82
     referencias/pmid-23989984.yaml: adade58f82c42307bf63354293d2c8ce4a392f3f9cc3e4e5291fec62b652fad0
 grounding:

@@ -28,7 +28,7 @@ fuente:
     conceptos/HM3149-colapsabilidad-reducida-de-la-vena-cava-inferior.yaml: 4ecb426dd940030438b55098a70a345224f1f74377bd1b7b0082f88d43d217b7
     conceptos/HM3150-presion-venosa-yugular-elevada-por-ecografia.yaml: 14123abf7c9a13905022e5cf5ce2d07cd179a9c60fff58883b5bf109d21c0ccc
     conceptos/HM3151-peptido-natriuretico-cerebral-elevado.yaml: 67c8cf440251c504880f70bde0dce1ea5b332e82a46c97beaa37fe6b1cc9c151
-    condiciones/HM6037-sobrecarga-de-volumen.yaml: 1ee4b478ea3078d46cf57ace81fb81364c221e4301ce70e88a3bbc6a069cd90f
+    condiciones/HM6037-sobrecarga-de-volumen.yaml: eca41c49d71742acef49b4319fc79da95905d97155a2dbaec845d342004a615f
     referencias/pmid-22392031.yaml: 167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b
     referencias/pmid-41729549.yaml: a3b8210b679e9dff1f5671c3127d08ad54fcd26329cfe6735e29183e0cc98937
 grounding:

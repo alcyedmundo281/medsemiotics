@@ -23,7 +23,7 @@ fuente:
     conceptos/HM3139-criterios-abcd-de-melanoma-positivos.yaml: 404beb1eb965a5c407754b3121d72c2245a3e1cdf9c00ca37b6425a0ec3bc256
     conceptos/HM3140-asimetria-y-bordes-irregulares-en-lesion-cutanea.yaml: 7677966496a1f369c013c20a30bf359b3577565514cf0d0fa006bf000cd5473e
     conceptos/HM3141-color-heterogeneo-y-diametro-mayor-de-6mm.yaml: 772a8f13150061fc073ec2631a3697326757a562a9dfc54d034297cb69b299b1
-    condiciones/HM6033-melanoma-cutaneo.yaml: 37f9762792dda2cb6247296da51458367f1f83ff2dc0d40c1485418ffbad7ce6
+    condiciones/HM6033-melanoma-cutaneo.yaml: a285af88e38dca74cb4b12599312ae463176c0f72ff0839a2f4820356100b29a
     referencias/pmid-9496989.yaml: 991643f724b46ed9d4747e3fd9a92422e90ca8ea1503d55419ebcefe6bd294a5
 grounding:
   condicion_id: HM:6033

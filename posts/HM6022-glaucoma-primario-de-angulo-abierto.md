@@ -24,7 +24,7 @@ fuente:
     conceptos/HM3089-asimetria-de-la-relacion-copa-disco.yaml: 2ede5f860716039873d028cb9f8f2b7c7addacdf28bc1931a8781c38e207c5d7
     conceptos/HM3090-hemorragia-en-astilla-del-disco-optico.yaml: 583ac968bd35113ff71f83184e2bdad70ffbe293038bb642c73d316fbf7d9dee
     conceptos/HM3091-presion-intraocular-elevada.yaml: c39c8d51b0c74ccf320b8c3fa0fdc2f995f8a67cc438c560d662a90094c2c8ab
-    condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml: f7b6eaf74a3a00933ad3281f9ac22b2028dab49180533926ab33a3aa1ba17467
+    condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml: 97a4fbaf8ef0426fbcf6d2e95c1eca55bb2500c99c088de890f1b211c8496ef9
     referencias/pmid-23677315.yaml: d2303bc8eb2ac4ce32a6238ef16bdce5d8b07ca52d1a7842da5ee848fd9f787a
 grounding:
   condicion_id: HM:6022

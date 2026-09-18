@@ -22,7 +22,7 @@ fuente:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM3125-antecedente-referido-de-alergia-a-penicilina.yaml: cde9b548831034bf68455dc22a3b5d1ccdc309998f3ab33be1a6220f3923619d
     conceptos/HM3126-prueba-cutanea-positiva-a-penicilina.yaml: 70e9fbd90708978f3c252aac45fbcb47cabfb1a9fb6986047e63924be88b00da
-    condiciones/HM6028-alergia-a-penicilina.yaml: 7f2fb7617504f48dc51d288c54f0d8b19b4b37733e2572e6cd47c711e57d0a3e
+    condiciones/HM6028-alergia-a-penicilina.yaml: 14ec24e8a69013757f7625c64dfdff929a18a22a50bd903898efd2b2ff4c2c1d
     referencias/pmid-11368703.yaml: 37596dbc27a0ff3259412f5a0df332d992662f586e45fd89eee19f63d25124de
 grounding:
   condicion_id: HM:6028
