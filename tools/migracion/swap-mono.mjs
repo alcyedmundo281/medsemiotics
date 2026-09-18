@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import path from 'node:path';
 
 const REPO = process.argv[2];
 process.chdir(REPO);

@@ -1,7 +1,6 @@
 // Segunda pasada: pulsa un control DISTINTO del ya activo y compara el contenido
-// real (hash del innerHTML + texto), no la longitud.
+// real (innerHTML + texto, comparados en la pagina), no la longitud.
 import puppeteer from 'puppeteer';
-import crypto from 'node:crypto';
 
 const BASE = 'https://alcyedmundo281.github.io/medsemiotics';
 const PAGES = [
