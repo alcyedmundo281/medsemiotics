@@ -51,7 +51,7 @@ for (const f of cdnPages) {
 }
 
 // Clases completas que viven dentro de literales JS (los ternarios del punto A)
-const STRLIT = /['"`]((?:(?:bg|text|border|from|via|to|ring|shadow|fill|stroke)-[a-z0-9/\[\].-]+\s*)+)['"`]/g;
+const STRLIT = /['"`]((?:(?:bg|text|border|from|via|to|ring|shadow|fill|stroke)-[a-z0-9/[\].-]+\s*)+)['"`]/g;
 const fromJs = new Map();
 for (const f of cdnPages) {
   const rel = path.relative(REPO, f).replace(/\\/g, '/');

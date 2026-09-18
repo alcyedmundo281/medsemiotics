@@ -53,7 +53,9 @@ function buildBlog() {
   if (fs.existsSync(imagesJsonPath)) {
     try {
       topicImages = JSON.parse(fs.readFileSync(imagesJsonPath, 'utf-8'));
-    } catch (e) {}
+    } catch {
+      // topic-images.json ilegible: se sigue sin imagenes verificadas
+    }
   }
 
   for (const file of files) {

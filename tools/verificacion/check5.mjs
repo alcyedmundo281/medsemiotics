@@ -10,8 +10,8 @@ const css = fs.readFileSync(path.join(REPO, 'assets/tailwind.css'), 'utf8');
 // incluidas .group:hover .group-hover\:x y las que viven dentro de @media.
 const present = new Set();
 const selectorPart = css.replace(/\{[^{}]*\}/g, '{}');
-for (const m of selectorPart.matchAll(/\.((?:[A-Za-z0-9_-]|\.)+)/g)) {
-  present.add(m[1].replace(/\(.)/g, '$1'));
+for (const m of selectorPart.matchAll(/\.((?:[A-Za-z0-9_-]|\\[^\\])+)/g)) {
+  present.add(m[1].replace(/\\(.)/g, '$1'));
 }
 
 function walk(d, a = []) {
