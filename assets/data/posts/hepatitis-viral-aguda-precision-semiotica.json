@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
   "date": "2026-09-02",
   "fecha_publicacion": "2026-09-02",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-09-21",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "gastroenterologia",
   "category_label": "Gastroenterología",
@@ -116,12 +116,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": null,
-  "image_source": null,
-  "image_license": null,
-  "image_title": null,
-  "image_alt": null,
-  "image_author": null,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Jaundice_eye.jpg",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Jaundice_eye.jpg",
+  "image_license": "Public domain",
+  "image_title": "Jaundice eye.jpg",
+  "image_alt": "Ictericia de conjuntivas y piel facial en un paciente con hepatitis A (fotografía de los CDC)",
+  "image_author": "Autor no declarado",
   "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
   "triada": {
     "significante": "Ictericia",
@@ -204,6 +204,287 @@
       ]
     }
   ],
-  "caso": null,
+  "caso": {
+    "condicion_id": "HM:6001",
+    "slug": "hepatitis-viral-aguda-precision-semiotica",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-09-21",
+      "version": 1,
+      "ultima_revision": "2026-09-21",
+      "revisiones": []
+    },
+    "fuente_revision": "97f51ff1d54adf8360b0e89cf56b36eb7e633e4f",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Reconocer el pródromo y la fase ictérica de la hepatitis viral aguda en el relato clínico.",
+      "Usar la coluria y la acolia para ubicar el trastorno de la bilirrubina, sin atribuirles un poder discriminativo que la base no documenta.",
+      "Distinguir un LR «no medido» de uno «no medible» y explicar el sesgo de incorporación.",
+      "Identificar la serología como el estándar que define el diagnóstico etiológico."
+    ],
+    "vineta": {
+      "titulo": "Un cocinero con la orina oscura",
+      "texto": "Varón de 26 años, ayudante de cocina. Consulta porque desde hace dos días nota la orina «color de té» y sus compañeros le dicen que tiene los ojos amarillos. Una semana antes empezó con malestar general, cansancio, falta de apetito, náuseas y fiebre no cuantificada. Hace un mes regresó de un viaje a una zona rural donde bebió agua sin tratar. No consume alcohol de forma habitual, no toma medicamentos ni productos de herbolario y niega relaciones sexuales de riesgo o uso de drogas inyectables.",
+      "datos": [
+        {
+          "etiqueta": "Temperatura",
+          "valor": "37.9 °C"
+        },
+        {
+          "etiqueta": "Presión arterial",
+          "valor": "118/74 mmHg"
+        },
+        {
+          "etiqueta": "Estado de conciencia",
+          "valor": "Alerta y orientado, sin asterixis"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "El pródromo que casi nadie reconoce",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": "Antes de la ictericia hubo una semana de fiebre, astenia y anorexia. En ese momento el paciente pensó que era «una gripe».",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0101",
+            "nombre": "Fiebre",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0801",
+            "nombre": "Astenia",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0802",
+            "nombre": "Anorexia",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Con solo el pródromo, ¿qué diagnósticos habrías considerado? ¿Qué te habría hecho sospechar una afectación hepática antes de la ictericia?",
+            "clave": "Un síndrome viral inespecífico es compatible con decenas de infecciones. La sospecha hepática nace del contexto (exposición a agua o alimentos contaminados, contactos, viaje) y de la aparición de orina oscura. En la base, los tres síntomas figuran como apoyo diagnóstico con LR no medido: nadie ha publicado cuánto modifican la probabilidad de hepatitis viral, así que no se les puede asignar un peso numérico."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "La exploración del paciente ictérico",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "Se observa ictericia en escleras y piel. El paciente confirma coluria y, desde ayer, heces de color claro (acolia). A la palpación hay dolor en hipocondrio derecho y el borde hepático es romo y doloroso, compatible con hepatomegalia. No hay esplenomegalia ni estigmas de hepatopatía crónica.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0305",
+            "nombre": "Ictericia",
+            "rol": "Manifestación",
+            "estado_lr": "no_medible",
+            "estado": "LR no medible",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "forma parte de la definición de caso; sesgo de incorporación",
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0306",
+            "nombre": "Coluria",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0307",
+            "nombre": "Acolia",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0203",
+            "nombre": "Dolor en hipocondrio derecho",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0602",
+            "nombre": "Hepatomegalia",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "La coluria y la acolia aparecen juntas. ¿Qué te dicen sobre el tipo de bilirrubina que está elevada y sobre dónde se altera su vía?",
+            "clave": "La coluria indica que hay bilirrubina conjugada en sangre, porque solo la conjugada es hidrosoluble y se filtra en la orina; eso aleja una causa prehepática pura como la hemólisis, que eleva la no conjugada. La acolia indica que llega poca bilis al intestino. Juntas señalan un trastorno de la excreción hepatocelular o de la vía biliar. Sirven para ubicar el problema, pero la base registra ambas con LR no medido: su capacidad para distinguir la hepatitis viral de otras causas de ictericia no está cuantificada."
+          },
+          {
+            "pregunta": "¿Cuánto aumenta la ictericia la probabilidad de hepatitis viral aguda en este paciente?",
+            "clave": "No hay un número que dar, y no por falta de estudios. Para la ictericia la base registra LR no medible: la ictericia forma parte de la definición de caso. Si el patrón de referencia ya incluye el hallazgo, medir su cociente contra ese patrón lo sobreestima por construcción (sesgo de incorporación). Clínicamente orienta, pero no «suma» probabilidad de forma cuantificable."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "El laboratorio y el límite de la evidencia",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "El laboratorio muestra elevación de transaminasas de predominio de ALT e hiperbilirrubinemia de predominio directo. El tiempo de protrombina es normal.",
+        "datos": [
+          {
+            "etiqueta": "ALT",
+            "valor": "1850 U/L"
+          },
+          {
+            "etiqueta": "AST",
+            "valor": "1320 U/L"
+          },
+          {
+            "etiqueta": "Bilirrubina total / directa",
+            "valor": "6.8 / 5.1 mg/dL"
+          },
+          {
+            "etiqueta": "Fosfatasa alcalina",
+            "valor": "190 U/L"
+          },
+          {
+            "etiqueta": "INR",
+            "valor": "1.1"
+          }
+        ],
+        "hallazgos": [
+          {
+            "id": "HM:0733",
+            "nombre": "Elevación de transaminasas",
+            "rol": "Prueba sensible",
+            "estado_lr": "no_medible",
+            "estado": "LR no medible",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "forma parte de la definición de caso; sesgo de incorporación",
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0745",
+            "nombre": "Hiperbilirrubinemia",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medible",
+            "estado": "LR no medible",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "forma parte de la definición de caso; sesgo de incorporación",
+            "advertencia": null,
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Este artículo no tiene calculadora bayesiana. ¿Por qué? ¿Qué diferencia hay entre un hallazgo «no medido» y uno «no medible»?",
+            "clave": "Un LR «no medido» es una laguna de la literatura: el estudio podría hacerse y todavía no se ha publicado (como la hepatomegalia, con LR no medido). Uno «no medible» no puede existir con el diseño habitual: la elevación de transaminasas y la hiperbilirrubinemia tienen LR no medible porque forman parte de la definición de caso. Sin cocientes válidos, la calculadora no tiene con qué operar, y la base prefiere no mostrar un número antes que inventarlo."
+          },
+          {
+            "pregunta": "Un patrón hepatocelular con transaminasas muy elevadas es compatible con varias causas. ¿Qué prueba define que la hepatitis es viral y de qué virus?",
+            "clave": "La serología: IgM contra el virus de la hepatitis A, antígeno de superficie e IgM anti-core de la hepatitis B y, según el contexto, anticuerpos contra la hepatitis C y E. Es el estándar de referencia del diagnóstico, y por eso los hallazgos que definen el caso no pueden evaluarse contra él. El diferencial incluye la hepatitis tóxica o por fármacos, la isquémica y la autoinmune; la anamnesis de este paciente hace menos probables las dos primeras."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Qué hacer con este paciente",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": "La IgM contra el virus de la hepatitis A resulta positiva. El paciente tolera la vía oral, está orientado y su tiempo de protrombina es normal.",
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Puede manejarse de forma ambulatoria? ¿Qué datos te harían cambiar de decisión?",
+            "clave": "Sí, con tratamiento de soporte, hidratación, evitar alcohol y fármacos hepatotóxicos y control clínico y de laboratorio. Obligan a reevaluar e ingresar la prolongación del tiempo de protrombina, cualquier signo de encefalopatía (confusión, somnolencia, asterixis), la intolerancia oral o el empeoramiento de la ictericia: sugieren insuficiencia hepática aguda."
+          },
+          {
+            "pregunta": "El paciente trabaja manipulando alimentos. ¿Qué medidas de salud pública corresponden?",
+            "clave": "La hepatitis A se transmite por vía fecal-oral. Corresponde notificar el caso según la normativa local, indicar la suspensión temporal de la manipulación de alimentos, reforzar la higiene de manos y valorar la profilaxis de los contactos cercanos (vacuna o inmunoglobulina, según la edad y el tiempo desde la exposición)."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "En la hepatitis viral aguda la semiología cumple dos funciones: sugiere el síndrome (pródromo seguido de ictericia) y ubica el trastorno de la bilirrubina (coluria y acolia). Pero la base no documenta ningún cociente de verosimilitud para este tema: la ictericia, las transaminasas y la hiperbilirrubinemia son no medibles porque definen el caso, y el resto no se ha medido. La ausencia de un número también es información: el diagnóstico etiológico lo da la serología, no la exploración.",
+      "necesidades_aprendizaje": [
+        "Patrones serológicos de las hepatitis A, B, C y E, y su evolución en el tiempo.",
+        "Criterios de insuficiencia hepática aguda y cuándo derivar a una unidad de trasplante.",
+        "Probabilidad basal de hepatitis viral en adultos con ictericia en nuestro medio, que la base aún no registra.",
+        "Estudios que hayan medido la coluria, la acolia o la hepatomegalia frente a la serología."
+      ]
+    },
+    "omitidos": [],
+    "referencias": []
+  },
   "body": "# Hepatitis viral aguda\n\nHallazgos y criterios clínicos sin cocientes de verosimilitud medidos.\n\n## Nombre en inglés\n\nAcute viral hepatitis\n\n## Sinónimos\n\nhepatitis aguda\n\nhepatitis A\n\nhepatitis vírica aguda\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Ictericia (HM:0305)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Coluria (HM:0306)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Acolia (HM:0307)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Elevación de transaminasas (HM:0733)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Hiperbilirrubinemia (HM:0745)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Dolor en hipocondrio derecho (HM:0203)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Hepatomegalia (HM:0602)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Fiebre (HM:0101)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Astenia (HM:0801)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Anorexia (HM:0802)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n## Referencias y procedencia\n\nFuente clínica: medsemiotics-db, condición HM:6001."
 }
