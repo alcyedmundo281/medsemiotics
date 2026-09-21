@@ -404,7 +404,9 @@
           document.getElementById('postFeaturedImage').alt = currentPost.image_alt || currentPost.title;
           document.getElementById('postImageTitle').textContent = currentPost.image_title || currentPost.title;
           document.getElementById('postImageAuthor').textContent = currentPost.image_author ? `· ${currentPost.image_author}` : '';
-          document.getElementById('postImageLicense').textContent = currentPost.image_license || 'CC';
+          const licencias = { 'Public domain': 'Dominio público', CC0: 'CC0 · dominio público' };
+          document.getElementById('postImageLicense').textContent =
+            licencias[currentPost.image_license] || currentPost.image_license || 'Licencia no declarada';
           if (currentPost.image_source) {
             document.getElementById('postImageSource').href = currentPost.image_source;
           }
@@ -414,9 +416,9 @@
 
         // Triada
         const t = currentPost.triada || {};
-        document.getElementById('triadaSignificante').textContent = t.significante || '';
-        document.getElementById('triadaSignificado').textContent = t.significado || '';
-        document.getElementById('triadaDecision').textContent = t.decision || '';
+        document.getElementById('triadaSignificante').innerHTML = linkPmids(t.significante || '');
+        document.getElementById('triadaSignificado').innerHTML = linkPmids(t.significado || '');
+        document.getElementById('triadaDecision').innerHTML = linkPmids(t.decision || '');
 
         // Bayesian calculator setup
         const numericLR = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
@@ -553,7 +555,7 @@
             ${h.poblacion ? `<p class="text-xs text-stone-600 mb-2">Población: ${escapeHtml(h.poblacion)}</p>` : ''}
             ${cifras ? `<div class="flex flex-wrap gap-1.5 mb-2">${cifras}</div>` : ''}
             ${nota ? `<p class="text-sm text-purple-950">${nota}</p>` : ''}
-            ${(h.referencias || []).length ? `<p class="text-[11px] font-mono text-stone-500 mt-1">${h.referencias.map(escapeHtml).join(' · ')}</p>` : ''}
+            ${(h.referencias || []).length ? `<p class="text-[11px] font-mono text-stone-500 mt-1">${h.referencias.map(linkPmids).join(' · ')}</p>` : ''}
           </div>`;
       }
 
@@ -608,6 +610,8 @@
         if (!md) return '';
         return md
           .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          // El ID del hallazgo sigue en el Markdown (lo usa tools/casos) pero se atenúa.
+          .replace(/^### (.*?) \((HM:\d+)\)$/gim, '<h3>$1 <span class="text-xs font-mono font-normal text-stone-400">$2</span></h3>')
           .replace(/^### (.*$)/gim, '<h3>$1</h3>')
           .replace(/^## (.*$)/gim, '<h2>$1</h2>')
           .replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -616,7 +620,17 @@
           .replace(/\*(.*?)\*/gim, '<em>$1</em>')
           .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
           .replace(/\n\n/gim, '</p><p>')
-          .replace(/^---$/gim, '<hr/>');
+          .replace(/^---$/gim, '<hr/>')
+          .replace(/\bpmid:(\d+)/g, pubmedLink);
+      }
+
+      // «pmid:123» del texto de la base → enlace legible a PubMed (sobre HTML ya escapado).
+      function pubmedLink(_match, pmid) {
+        return `<a href="https://pubmed.ncbi.nlm.nih.gov/${pmid}/" target="_blank" rel="noopener" class="text-purple-700 hover:underline">PMID ${pmid}</a>`;
+      }
+
+      function linkPmids(text) {
+        return escapeHtml(text).replace(/\bpmid:(\d+)/g, pubmedLink);
       }
 
       loadPost();

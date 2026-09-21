@@ -20,13 +20,20 @@ fuente:
   condicion: condiciones/HM6042-colecistitis-aguda.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml: c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM0601-irritacion-peritoneal.yaml: 05237c0ae13ba1c349514b2e63ecc620a13a04defc2b7219c2e9c0313ac9eb21
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
     conceptos/HM0712-leucocitosis.yaml: 2e5c508b2e66972503180b4cfced57952439dbca740f2bfa1cbb9dbc6a25b158
+    conceptos/HM0760-alteracion-inflamatoria.yaml: c7d1f595f9f94e0fc538d3e99611c8104ccc39a7296b3fbf0ef52f4e9923a136
     conceptos/HM0761-elevacion-de-proteina-c-reactiva.yaml: e5f533635901a0f3fea4233a9cde7282422d3f4e53a4e4b1693958cd04b1fc36
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM0903-litiasis-biliar-en-imagen.yaml: 3685adff80e1bf7890deb6f1fb7d391636534657e9bc32821b198df491f6803c
     conceptos/HM3175-signo-ecografico-de-colecistitis-aguda.yaml: 07916c2b27fb3a3d2e301a7f222a8091061c97b47ddd8c7480939deec0efbefb
+    conceptos/HM3176-dilatacion-del-conducto-biliar-comun.yaml: 8a3cadfca4f59863f8c04b232527efa4676e5d0c38b6befa222eab3eb24c3983
     condiciones/HM6042-colecistitis-aguda.yaml: 0ac2baac25de13e7bd10400b7ea461aed65dba5dec8175c6fe76f75590861cf5
     referencias/pmid-20138397.yaml: 30eb58a7de689c93d3a9869b99651834ad8abcedf4566b724a461adafbbfa1ce
     referencias/pmid-2017956.yaml: 480d4b64ecf137f52a48f863c98c86758f05013602fcc483c7d515ff283fd90a

@@ -20,6 +20,7 @@ fuente:
   condicion: condiciones/HM6034-cancer-de-mama.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3142-masa-mamaria-palpable-sospechosa.yaml: f11f27c1edc99011448c3818fbae8799dad25cbd5df600b47f5f6136f60218c9
     conceptos/HM3143-examen-clinico-mamario-reglado-normal.yaml: 5a107bc0bf6672b131ceac761664ae19eca3bbb043d0291ba6fb0a72992dd450
     condiciones/HM6034-cancer-de-mama.yaml: eab87d90399daf8948d669883195f2284c932252bf03bab648bc5c922eaead2f

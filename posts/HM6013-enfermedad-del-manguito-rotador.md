@@ -20,6 +20,8 @@ fuente:
   condicion: condiciones/HM6013-enfermedad-del-manguito-rotador.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0208-lumbalgia.yaml: f0c00b1d9232e55fee8e3f54fffbe60e7401832fb4ea2e5d626976ed0f733070
+    conceptos/HM0500-sintoma-neurologico.yaml: bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044
     conceptos/HM3055-arco-doloroso.yaml: 3548cc14bec9a5d961bcdddcdcc82ccad1ccf929916776673aa2aca3cc9f28b3
     conceptos/HM3058-drop-arm.yaml: 27f9b42dcac851d3c59294207f5ee6cf42d3205bdffb08da8c5e854c801ddb1c
     conceptos/HM3059-dolor-de-hombro.yaml: 99c4073545b37133cd7e218ead1bfbe7ea6d4d11b970fd95c2aa91bb8696fcff

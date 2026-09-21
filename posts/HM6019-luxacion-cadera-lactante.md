@@ -20,6 +20,7 @@ fuente:
   condicion: condiciones/HM6019-luxacion-cadera-lactante.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3075-maniobras-de-barlow-y-ortolani.yaml: 43c819ea911471811bf4a17ff48eea18f4e84b64b57238a996fc999ddc4bca43
     conceptos/HM3076-limitacion-abduccion-cadera-lactante.yaml: 9573e001bae058b99488d56515e007eb920038be62889c2e83e4a37b2caca157
     conceptos/HM3077-chasquido-articular-cadera-lactante.yaml: ca91e3bf119a83bd0546f000c7203a50cd7595f1e4921202d0cc03b9d63bfa33

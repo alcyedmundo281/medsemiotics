@@ -142,6 +142,7 @@
     "condicion": "condiciones/HM6024-maltrato-fisico-infantil.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3100-lesion-oral-o-desgarro-del-frenillo.yaml": "3f167e8d111ea490b60ca54e111019666fc1f982a42a7dff0f2c9bacb062e022",
       "conceptos/HM3101-equimosis-en-nalgas-o-cuello.yaml": "3c8982da088013e28ded5d661186c1660bf4fbebad08a02b6f8383d8b66f3129",
       "conceptos/HM3102-equimosis-con-patron.yaml": "3acf12db1ed57feeef815579d76bb37aa3aa9852c17e8624b2b24f1650342414",

@@ -20,6 +20,7 @@ fuente:
   condicion: condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0109-hipotension-arterial.yaml: 934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc
     conceptos/HM3127-presion-arterial-en-consulta-mayor-o-igual-a-140-90.yaml: f66c2c28d0371db93331bb99132c23a4faff7857c109318c5b7ab1fa5ec6b5e1
     conceptos/HM3128-automonitorizacion-domiciliaria-ampa-mayor-o-igual-a-135-85.yaml: 7872dd1ef931f340ae6ad78b211211312c1aa72c4758b7e65df7047129bfbf1f
     condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml: 13859cd6ce6e7d118f245376b993efb13ca4779a500051b4809c448a0ab27a6b

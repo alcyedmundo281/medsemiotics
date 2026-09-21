@@ -142,6 +142,7 @@
     "condicion": "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3109-antecedente-familiar-de-hipertension-secundaria.yaml": "b94cc9924892778effe26baca73560d92da494a843cad864167b711670d07a18",
       "conceptos/HM3110-peso-bajo-percentil-10-en-nino-hipertenso.yaml": "331ece63b61eef99b3fead086aafa9c52869ff7ca2563068176947c8fe0fd43f",
       "conceptos/HM3111-antecedente-de-prematuridad.yaml": "585196ce7386ffb350f6f6092ea3da79ad004e57e634b0d57c3d1d583d96ca77",

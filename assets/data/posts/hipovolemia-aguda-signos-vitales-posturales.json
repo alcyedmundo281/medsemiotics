@@ -166,7 +166,11 @@
     "condicion": "condiciones/HM6008-hipovolemia.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0100-signo-vital-alterado.yaml": "3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504",
+      "conceptos/HM0104-taquicardia.yaml": "a71b0c60cea7fec615df5f089557df4c7275da3ab54bb060c0651c5ff79f15d6",
       "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
+      "conceptos/HM0500-sintoma-neurologico.yaml": "bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3019-mareo-postural-intenso.yaml": "7e119a6b7791169797291abac826a63b6117a0e7ff5c33ec27b0f18ac811938a",
       "conceptos/HM3020-incremento-postural-del-pulso.yaml": "9ae6d79e5bc0201bf89204bc06c2824a565d8a1ff2b2433c64e5326f11d4db40",
       "conceptos/HM3021-axila-seca.yaml": "a0e492588458e16f639ca2acc73bb0f7f66135ca013584ebb650670365cca0be",

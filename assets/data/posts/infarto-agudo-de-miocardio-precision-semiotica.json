@@ -182,7 +182,11 @@
     "condicion": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0100-signo-vital-alterado.yaml": "3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504",
       "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
+      "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
+      "conceptos/HM0608-soplo-cardiaco.yaml": "47bf7c076b53036a2d48cedd74b74aaa26ba69f1cb243c07f96afcc8a0068475",
       "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
       "conceptos/HM3130-elevacion-nueva-del-segmento-st.yaml": "1d658265c2bf4bfc1cdd21c84fcb04c7b7a759452f0391286719fc7945b097da",
       "conceptos/HM3131-nueva-onda-q-en-ecg.yaml": "4394118565a537b17dc696e47bdd1b7209333e71fe79432ea786c28230f2d157",

@@ -20,7 +20,12 @@ fuente:
   condicion: condiciones/HM6016-embarazo-ectopico.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0001-hallazgo-clinico.yaml: 5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml: 26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15
     conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml: 201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f
     conceptos/HM3066-dolor-a-la-movilizacion-cervical.yaml: 2c27db232894c6a15ba314df23163c9b9684b3dbd1340f2fa398bda7648b81be
@@ -393,7 +398,7 @@ ESTA FUENTE TIENE ERRATA PUBLICADA Y ESTÁ COTEJADA (Am J Emerg Med 2025;88:277,
 
 ## Aspectos pendientes de documentación
 
-El embarazo de localización no determinada no está en el índice como concepto propio, y es el hallazgo que de verdad decide el manejo en urgencias: no es «ausencia de HM:3165» sino una categoría con su propia ruta. Entrará cuando haya una fuente que lo mida, no antes.
+El embarazo de localización no determinada no está en el índice como concepto propio, y es el hallazgo que de verdad decide el manejo en urgencias: no es «ausencia de embarazo intrauterino confirmado en ecografía» sino una categoría con su propia ruta. Entrará cuando haya una fuente que lo mida, no antes.
 
 La cinética de la hCG seriada no entra: requiere otra fuente con datos de ascenso porcentual a las 48 horas.
 

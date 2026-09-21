@@ -20,10 +20,14 @@ fuente:
   condicion: condiciones/HM6045-taponamiento-cardiaco.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0104-taquicardia.yaml: a71b0c60cea7fec615df5f089557df4c7275da3ab54bb060c0651c5ff79f15d6
     conceptos/HM0109-hipotension-arterial.yaml: 934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3146-ingurgitacion-yugular.yaml: 68f00e3333cd5790afa7a4f9a6a550b2feee50898fb40eda646b356d00312ab0
     conceptos/HM3155-derrame-pericardico-en-ecografia.yaml: 049d32edd47c084b8b87549994e90e0b312f7c07a6c83683b35bd30eb35825c4
+    conceptos/HM3162-ventriculo-derecho-dilatado.yaml: bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134
     conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml: 8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621
     condiciones/HM6045-taponamiento-cardiaco.yaml: 9968e16d03dba30116bdc00d69ac12b38601117eab695d5827c675c9f2b28e19
     referencias/pmid-35696801.yaml: d2c0807fd4b21b2c1693489c411d348016f85e8b910cf65c9b8ae1afed98dcd2

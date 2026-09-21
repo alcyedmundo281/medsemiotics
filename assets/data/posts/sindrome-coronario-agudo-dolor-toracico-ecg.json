@@ -127,7 +127,11 @@
     "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0001-hallazgo-clinico.yaml": "5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329",
+      "conceptos/HM0200-dolor.yaml": "583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463",
       "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+      "conceptos/HM0500-sintoma-neurologico.yaml": "bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044",
+      "conceptos/HM1000-trastorno.yaml": "9862513dc10aa15c0adccc15214151612f5c4e54e079cad422d03adf8d795c0b",
       "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
       "conceptos/HM3015-descenso-segmento-st.yaml": "c9cfb8446c7d1ad3854ce2da560af56eae0fa62226d3882275cb27a4f90d3f24",
       "conceptos/HM3016-isquemia-en-ecg.yaml": "1e5a608a8d553e5255f2956ed1c7be9f99a61607806f545899aa8e1cd6f14611",

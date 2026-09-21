@@ -20,14 +20,21 @@ fuente:
   condicion: condiciones/HM6001-hepatitis-viral-aguda.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml: c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f
+    conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0305-ictericia.yaml: b74c8005b4a83083707e9f9ec915ecd21c8a33bf54777678e7315e11a721a590
     conceptos/HM0306-coluria.yaml: b7dd5e073616f460472eb6dc11c3184608632a490741d4a43cd1fda17e61920d
     conceptos/HM0307-acolia.yaml: d7dd7ef35f9348d3e91f2554154bfd4038f75257eefb6ae18b8f623c2d147f06
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM0602-hepatomegalia.yaml: 51c18ec466026b08b337817e2c5b004960c0f3862e814e6d629ec27d375618aa
+    conceptos/HM0730-alteracion-enzimatica.yaml: eaace3c0ef5fc70eda08396c77e4b145c690302347b2c6dca54ffe7c2ceb5298
     conceptos/HM0733-elevacion-de-transaminasas.yaml: 57ca69d57c386aea3a46015b76181a5ff05fdae4adfe53f0b16c52abb4e3762e
+    conceptos/HM0740-alteracion-metabolica.yaml: 1e6be943f471a5f9ef1b932a5a22b199953565dad68469866fd6b213a397729b
     conceptos/HM0745-hiperbilirrubinemia.yaml: ea9070ab1927760a0d4257c84bd763673fe29378372f3ac7bdf3028761480e92
+    conceptos/HM0800-sintoma-general.yaml: 39761069b5de091733e7864bb0c96f68755b6d3fa5e59003f5f8c7949b0c4827
     conceptos/HM0801-astenia.yaml: 95bc981acd8d63bc1c693bd3ba572e4e714a900777e0d933281d82d22bcaa097
     conceptos/HM0802-anorexia.yaml: 41f5d159539277ac7fb97cdefeefb66395ea5f70741a4d577bb22efed5940bba
     condiciones/HM6001-hepatitis-viral-aguda.yaml: 77da0697a85d1c3bedd12f4e41e87cc27b52da4924005ed512abc120f95e9f5d
@@ -54,7 +61,7 @@ grounding:
   doi: null
 triada:
   significante: 'Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).'
-  significado: Depósito tisular de bilirrubina por hiperbilirrubinemia (HM:0745), no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).
+  significado: Depósito tisular de bilirrubina por hiperbilirrubinemia, no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).
   decision: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad
 evidencia:
 - concepto: HM:0305
@@ -175,7 +182,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Significante:** Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).
 
-**Significado:** Depósito tisular de bilirrubina por hiperbilirrubinemia (HM:0745), no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).
+**Significado:** Depósito tisular de bilirrubina por hiperbilirrubinemia, no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).
 
 **Falsos positivos:** Carotenemia, que tiñe la piel de amarillo pero respeta la esclerótica / Examen con luz artificial o por un examinador inexperto (pmid:9271910)
 

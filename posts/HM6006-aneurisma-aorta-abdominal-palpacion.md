@@ -20,6 +20,7 @@ fuente:
   condicion: condiciones/HM6006-aneurisma-aorta-abdominal.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3012-pulsacion-aortica-ensanchada.yaml: 54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35
     conceptos/HM3013-obesidad-abdominal.yaml: ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54
     condiciones/HM6006-aneurisma-aorta-abdominal.yaml: f73182b98384a0455bdbb601191fab2246fdfabda875153c8834a4de39b6cbf3

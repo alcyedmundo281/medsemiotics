@@ -21,7 +21,12 @@ fuente:
   condicion: condiciones/HM6009-faringitis-estreptococica.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0001-hallazgo-clinico.yaml: 5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0211-odinofagia.yaml: cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0607-adenopatias.yaml: f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561
+    conceptos/HM3001-adenopatia-cervical-posterior.yaml: 771bd6d4c7525ad532de18c2977bb2420d1abba7ed1f0f5d2c57444eb6f7467f
     conceptos/HM3026-exudado-amigdalino.yaml: 2035d19d7697ad00e8860ba5bf2e4be6d4c17b557a6f8ab8b8c966ae088e8b43
     conceptos/HM3027-exudado-faringeo.yaml: 06a0f094562bd1a1b9c9ec09d5dc2c2ca5b963c627c82897dd1f93ac6dca0c50
     conceptos/HM3028-exposicion-estreptococo.yaml: 26edc47823c8d5fa6dc3268a3bdcc36f8470f2fe973db587f023d6ac3ccaff21
@@ -234,7 +239,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Reglas clínicas
 
-Nombre: Ausencia de exudado; Componentes: Exudado amigdalino (HM:3026) / Exudado faríngeo (HM:3027); Criterio: ausencia de exudado amigdalino o faríngeo; LR negativo: 0.74; Referencia: pmid:11147989; Decisión: su ausencia apenas modifica la probabilidad; no sirve para descartar
+Nombre: Ausencia de exudado; Componentes: Exudado amigdalino / Exudado faríngeo; Criterio: ausencia de exudado amigdalino o faríngeo; LR negativo: 0.74; Referencia: pmid:11147989; Decisión: su ausencia apenas modifica la probabilidad; no sirve para descartar
 
 ## Escalas
 

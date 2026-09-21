@@ -20,6 +20,7 @@ fuente:
   condicion: condiciones/HM6048-bocio.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3187-agrandamiento-tiroideo-palpable-en-posicion-neutra.yaml: 1d793434c05ab2831964fc1d1f654b97e7d3e2996836348af6071f283928d41a
     conceptos/HM3188-lobulo-tiroideo-mayor-que-falange-distal.yaml: 599c45292d1527aa32bc82a0cbbc70ee66839078b4760da97143be6d5e596773
     condiciones/HM6048-bocio.yaml: 1785df54bf631b90590429f6217ff1cc0bbc6aa6d3c71bae4eb439d3ca8497b5

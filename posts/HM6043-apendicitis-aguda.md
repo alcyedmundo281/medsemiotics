@@ -20,10 +20,15 @@ fuente:
   condicion: condiciones/HM6043-apendicitis-aguda.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM0204-dolor-en-fosa-iliaca-derecha.yaml: 5d9a8cbd3896d2d48a03c14d7f5e8cf05547ae16696539eb6793b4495f25043d
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM0601-irritacion-peritoneal.yaml: 05237c0ae13ba1c349514b2e63ecc620a13a04defc2b7219c2e9c0313ac9eb21
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
     conceptos/HM0712-leucocitosis.yaml: 2e5c508b2e66972503180b4cfced57952439dbca740f2bfa1cbb9dbc6a25b158
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3177-signo-ecografico-de-apendicitis-aguda.yaml: 8af710d0fc65e8203a82946be611bed521b330ae00b5ea647d9d6de7a55c6f96
     condiciones/HM6043-apendicitis-aguda.yaml: b0a473b4952302c66f6cb8c65a8451e3b133eb1d30ef978f2a0f0c87d59073ce
     referencias/pmid-24113477.yaml: 371db850598e103d5be3697f876a8e8501122f3de0f8f20893ccd9c8bd75ffb2

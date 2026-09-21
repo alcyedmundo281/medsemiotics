@@ -20,13 +20,18 @@ fuente:
   condicion: condiciones/HM6040-pancreatitis-aguda.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
     conceptos/HM0202-dolor-epigastrico.yaml: 284406d6397caf6b3b25e539e0237ddf1d424b846f97b94cbb2ff75b2c1ef99a
     conceptos/HM0205-dolor-abdominal-en-cinturon.yaml: 0f13e881a8d29bac46d58b3c6664e9414fd2ba135075822528317bf09e1fb47b
+    conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0302-vomitos.yaml: c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM0601-irritacion-peritoneal.yaml: 05237c0ae13ba1c349514b2e63ecc620a13a04defc2b7219c2e9c0313ac9eb21
     conceptos/HM0611-signo-de-cullen.yaml: 62e0a5988b00f41af3b6ed75aa0592dc4a79051730d1a35351c642294a0064ac
+    conceptos/HM0730-alteracion-enzimatica.yaml: eaace3c0ef5fc70eda08396c77e4b145c690302347b2c6dca54ffe7c2ceb5298
     conceptos/HM0731-hiperamilasemia.yaml: 1b410460c87df8c6666cb99675252d225a10ef6f58bd871a82229c183236ef74
     conceptos/HM0732-hiperlipasemia.yaml: b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml: 556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a
     condiciones/HM6040-pancreatitis-aguda.yaml: 759d0dc1bb7e18c9083bff2e0e8a061c0d413da6fc48fc3417f9954a9d5407d5
     referencias/pmid-23100216.yaml: 43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd
@@ -247,7 +252,7 @@ EL ORIGEN DE LOS SIETE YA NO ES UNA INCÓGNITA: GetTheDiagnosis.org, confirmado 
 
 Dos atajos que NO valen, y conviene dejarlos escritos para no repetirlos: la serie Rational Clinical Examination no tiene artículo de pancreatitis —comprobado contra PubMed—, y los metaanálisis de pancreatitis POST-CPRE miden otra cosa, con cocientes que rondan 8 y 6 en vez de 26.6 y 12.5.
 
-LA REGLA DE ATLANTA, que es lo único cuantificado y bien citado de todo el protocolo. Está escrita y comprobada; solo espera a que se coteje la errata de pmid:23100216. Sus componentes son HM:0205 y HM:0202 (dolor), HM:0731 y HM:0732 (enzimas) y HM:0901 (imagen), con el criterio de dos de tres.
+LA REGLA DE ATLANTA, que es lo único cuantificado y bien citado de todo el protocolo. Está escrita y comprobada; solo espera a que se coteje la errata de pmid:23100216. Sus componentes son dolor abdominal en cinturón y dolor epigástrico (dolor), hiperamilasemia y hiperlipasemia (enzimas) y hallazgos de imagen compatibles con pancreatitis (imagen), con el criterio de dos de tres.
 
 Los cuatro factores de riesgo entran sin `ref`. La asociación es conocida, pero este índice guarda hechos con procedencia y todavía no la tienen.
 

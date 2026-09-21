@@ -20,6 +20,8 @@ fuente:
   condicion: condiciones/HM6047-esplenomegalia.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0602-hepatomegalia.yaml: 51c18ec466026b08b337817e2c5b004960c0f3862e814e6d629ec27d375618aa
     conceptos/HM0603-esplenomegalia.yaml: d694a903ae98ee750e432f8b2f95e52b856440a67ebef8ea14396108447626a6
     conceptos/HM3184-matidez-en-espacio-de-traube.yaml: aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9
     conceptos/HM3185-signo-de-percusion-de-castell.yaml: 493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f
@@ -43,7 +45,7 @@ grounding:
   sensibilidad: 0.58
   especificidad: 0.93
 triada:
-  significante: Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (HM:3184, HM:3185).
+  significante: Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).
   significado: Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.
   decision: un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2)
 evidencia:
@@ -185,7 +187,7 @@ anemia hemolítica o hemoglobinopatía crónica
 
 ### Esplenomegalia (HM:0603)
 
-**Significante:** Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (HM:3184, HM:3185).
+**Significante:** Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).
 
 **Significado:** Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.
 

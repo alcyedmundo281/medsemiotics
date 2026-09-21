@@ -21,8 +21,12 @@ fuente:
   condicion: condiciones/HM6010-sincope-cardiaco.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0207-cefalea.yaml: 3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c
+    conceptos/HM0500-sintoma-neurologico.yaml: bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044
     conceptos/HM0505-sincope.yaml: c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c
+    conceptos/HM0606-cianosis.yaml: ed93e7260a197f59efd82fdacb9cbf6369a52b0176c881b46cf6faf6ffc9f53e
+    conceptos/HM1000-trastorno.yaml: 9862513dc10aa15c0adccc15214151612f5c4e54e079cad422d03adf8d795c0b
     conceptos/HM3031-primer-sincope-desde-los-35.yaml: 3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa
     conceptos/HM3032-fibrilacion-o-flutter-auricular.yaml: 2877f7e08d60a0632a58fd5f30ad58846ee9222b099d0582f37588246c12f0c6
     conceptos/HM3033-cardiopatia-estructural-grave.yaml: 03e8e3289317f111216fc2e7f84145729dace21f7ada8a9d719e50f834e10edb

@@ -120,6 +120,7 @@
     "condicion": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml": "4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35",
       "conceptos/HM3084-cuestionario-audit-c-positivo.yaml": "60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37",
       "conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml": "2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406",

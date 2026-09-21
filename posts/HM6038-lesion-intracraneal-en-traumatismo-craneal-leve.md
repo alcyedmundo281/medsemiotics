@@ -21,6 +21,11 @@ fuente:
   condicion: condiciones/HM6038-lesion-intracraneal-en-traumatismo-craneal-leve.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0001-hallazgo-clinico.yaml: 5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329
+    conceptos/HM0302-vomitos.yaml: c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9
+    conceptos/HM0500-sintoma-neurologico.yaml: bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044
+    conceptos/HM0501-alteracion-del-nivel-de-conciencia.yaml: c3d0515c056d2458152b77498e02ec985a7f67d31c63bec961722da48ac6d980
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3049-signos-de-fractura-de-craneo.yaml: ce6f034ae43408ebea3e6ca4309220d733e35ab15cdf7527ceb16e2a6569ec07
     conceptos/HM3050-glasgow-13.yaml: 0c3fb5915c6faca5bfbcfc575d907798e7c45a6e1de7166f72bcc5b4ad43a894
     conceptos/HM3051-descenso-del-glasgow.yaml: 13010e9e437d79cb658aa00de645153db9b832e64651e60f23b97099dec859dd
@@ -228,7 +233,7 @@ Valor: 0.071; IC del 95 %: 0.068 / 0.074; Población: adultos atendidos por trau
 
 **Especificidad:** 0.97
 
-**Advertencia:** es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (HM:3152) con otro cociente.
+**Advertencia:** es la puntuación EXACTA de 13, no «13 o menos». El Glasgow por debajo de 14 a las dos horas es otra arista (Puntuación de Glasgow menor de 14 a las dos horas del traumatismo) con otro cociente.
 
 ### Vómitos en dos o más episodios (HM:3052)
 
@@ -312,7 +317,7 @@ El valor de esta condición está en sus cocientes NEGATIVOS. Con una prevalenci
 
 Los componentes de la Canadian CT Head Rule y de los New Orleans Criteria no están en el abstract, así que los tramos de las escalas no pueden llevar límites ni desglose. Requiere el texto completo.
 
-La amnesia de más de 30 minutos (HM:3054) existe como concepto y no tiene arista: el abstract no publica su cociente aislado. Está declarado en `no_emitidos`.
+La amnesia de más de 30 minutos existe como concepto y no tiene arista: el abstract no publica su cociente aislado. Está declarado en `no_emitidos`.
 
 Las especificidades del descenso del Glasgow (91-99%) y del atropello (96-97%) son rangos entre estudios y no entran como `especificidad`, que es un valor único. Quedan anotadas en la nota de cada arista.
 
