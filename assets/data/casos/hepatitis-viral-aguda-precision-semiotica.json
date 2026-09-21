@@ -12,7 +12,7 @@
     "ultima_revision": "2026-09-21",
     "revisiones": []
   },
-  "fuente_revision": "97f51ff1d54adf8360b0e89cf56b36eb7e633e4f",
+  "fuente_revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -112,10 +112,12 @@
           "estado": "LR no medible",
           "poblacion": null,
           "cifras": [],
-          "decision": null,
+          "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
           "motivo": "forma parte de la definición de caso; sesgo de incorporación",
           "advertencia": null,
-          "referencias": []
+          "referencias": [
+            "pmid:14765767"
+          ]
         },
         {
           "id": "HM:0306",
@@ -278,5 +280,10 @@
     ]
   },
   "omitidos": [],
-  "referencias": []
+  "referencias": [
+    {
+      "id": "pmid:14765767",
+      "cita": "Jaundice in the adult patient. Am Fam Physician, 2004. DOI: no documentado."
+    }
+  ]
 }

@@ -18,7 +18,7 @@
   ],
   "reading_time": "8 min",
   "difficulty": "Intermedio",
-  "grounding_badge": "HM:6001 · Sin LR medidos",
+  "grounding_badge": "HM:6001 · PMID:14765767",
   "grounding": {
     "condicion_id": "HM:6001",
     "condicion_nombre": "Hepatitis viral aguda",
@@ -30,9 +30,9 @@
     "lr_positivo_rango": null,
     "lr_negativo_rango": null,
     "poblacion": null,
-    "referencia_id": null,
-    "referencia_cita": null,
-    "pmid": null,
+    "referencia_id": "pmid:14765767",
+    "referencia_cita": "Roche SP, Kobos R Jaundice in the adult patient Am Fam Physician 2004",
+    "pmid": "14765767",
     "doi": null
   },
   "evidencia": [
@@ -40,7 +40,9 @@
       "concepto": "HM:0305",
       "rol": "manifestacion",
       "estado_lr": "no_medible",
-      "motivo": "forma parte de la definición de caso; sesgo de incorporación"
+      "motivo": "forma parte de la definición de caso; sesgo de incorporación",
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
+      "ref": "pmid:14765767"
     },
     {
       "concepto": "HM:0306",
@@ -92,22 +94,28 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "97f51ff1d54adf8360b0e89cf56b36eb7e633e4f",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
       "conceptos/HM0101-fiebre.yaml": "d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e",
       "conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml": "c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f",
-      "conceptos/HM0305-ictericia.yaml": "87323a0b278fc5c8d70ae931a46478eccb092cec8330f28434d136003b6ad270",
-      "conceptos/HM0306-coluria.yaml": "103fe65f0cbe26bc6e06f186234246227b04cde241b8ec4625ff30ddfe01ef2e",
-      "conceptos/HM0307-acolia.yaml": "d753e6cbaa96116d92baa7836ec987a3eec9284280c8199b688051df744e6aef",
+      "conceptos/HM0305-ictericia.yaml": "b74c8005b4a83083707e9f9ec915ecd21c8a33bf54777678e7315e11a721a590",
+      "conceptos/HM0306-coluria.yaml": "b7dd5e073616f460472eb6dc11c3184608632a490741d4a43cd1fda17e61920d",
+      "conceptos/HM0307-acolia.yaml": "d7dd7ef35f9348d3e91f2554154bfd4038f75257eefb6ae18b8f623c2d147f06",
       "conceptos/HM0602-hepatomegalia.yaml": "51c18ec466026b08b337817e2c5b004960c0f3862e814e6d629ec27d375618aa",
       "conceptos/HM0733-elevacion-de-transaminasas.yaml": "57ca69d57c386aea3a46015b76181a5ff05fdae4adfe53f0b16c52abb4e3762e",
       "conceptos/HM0745-hiperbilirrubinemia.yaml": "ea9070ab1927760a0d4257c84bd763673fe29378372f3ac7bdf3028761480e92",
       "conceptos/HM0801-astenia.yaml": "95bc981acd8d63bc1c693bd3ba572e4e714a900777e0d933281d82d22bcaa097",
       "conceptos/HM0802-anorexia.yaml": "41f5d159539277ac7fb97cdefeefb66395ea5f70741a4d577bb22efed5940bba",
-      "condiciones/HM6001-hepatitis-viral-aguda.yaml": "5289dc6268987469b2bfd8fa5ebae8fa70066f1bfc491f518e4106cbe979b225"
+      "condiciones/HM6001-hepatitis-viral-aguda.yaml": "77da0697a85d1c3bedd12f4e41e87cc27b52da4924005ed512abc120f95e9f5d",
+      "referencias/pmid-10691073.yaml": "ab226b879bcd64b1c9619713b0c49e1568654d7b2e3f27a29edf46d447c016d7",
+      "referencias/pmid-14765767.yaml": "201a915a3fde351b13aeecfcdc0f8e2f3f55cc78cf70819600ce12d54f5c0b90",
+      "referencias/pmid-16585309.yaml": "af267dfe0091dd8287e9e49f53f66f9db53027ad3346adc1bf6f446ea49a120e",
+      "referencias/pmid-21249394.yaml": "e3a32f4f111f5d21c64776e2ed4f844570fe474c6e9ad3bb3978e810ed0b17f5",
+      "referencias/pmid-28145671.yaml": "d679ee9f38f7860fce733b0cf5a9ec49282ee08312314f45bcb08a03399f1812",
+      "referencias/pmid-9271910.yaml": "c9eedc33de76fecbda4e892fc73f3156142206daeaef27e58f4d2e3d69ae5f11"
     }
   },
   "publicacion": {
@@ -124,17 +132,17 @@
   "image_author": "Autor no declarado",
   "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
   "triada": {
-    "significante": "Ictericia",
-    "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-    "decision": "La fuente no documenta una decisión específica para este hallazgo."
+    "significante": "Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).",
+    "significado": "Depósito tisular de bilirrubina por hiperbilirrubinemia (HM:0745), no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).",
+    "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad"
   },
   "autoevaluacion": [
     {
       "id": "q1",
       "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Ictericia» según la fuente?",
       "concepto_id": "HM:0305",
-      "referencia_id": null,
-      "pmid": null,
+      "referencia_id": "pmid:14765767",
+      "pmid": "14765767",
       "doi": null,
       "fuente_doi": "10.5281/zenodo.22064424",
       "evidencia": {
@@ -145,24 +153,24 @@
         "dato": null,
         "poblacion": null,
         "motivo": "forma parte de la definición de caso; sesgo de incorporación",
-        "decision": null,
+        "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
         "advertencia": null
       },
       "opciones": [
         {
           "texto": "Sin efecto discriminativo",
           "correcta": false,
-          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
         },
         {
           "texto": "LR no medible",
           "correcta": true,
-          "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+          "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
         },
         {
           "texto": "LR no medido",
           "correcta": false,
-          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+          "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
         }
       ]
     },
@@ -218,7 +226,7 @@
       "ultima_revision": "2026-09-21",
       "revisiones": []
     },
-    "fuente_revision": "97f51ff1d54adf8360b0e89cf56b36eb7e633e4f",
+    "fuente_revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -318,10 +326,12 @@
             "estado": "LR no medible",
             "poblacion": null,
             "cifras": [],
-            "decision": null,
+            "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
             "motivo": "forma parte de la definición de caso; sesgo de incorporación",
             "advertencia": null,
-            "referencias": []
+            "referencias": [
+              "pmid:14765767"
+            ]
           },
           {
             "id": "HM:0306",
@@ -484,7 +494,12 @@
       ]
     },
     "omitidos": [],
-    "referencias": []
+    "referencias": [
+      {
+        "id": "pmid:14765767",
+        "cita": "Jaundice in the adult patient. Am Fam Physician, 2004. DOI: no documentado."
+      }
+    ]
   },
-  "body": "# Hepatitis viral aguda\n\nHallazgos y criterios clínicos sin cocientes de verosimilitud medidos.\n\n## Nombre en inglés\n\nAcute viral hepatitis\n\n## Sinónimos\n\nhepatitis aguda\n\nhepatitis A\n\nhepatitis vírica aguda\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Ictericia (HM:0305)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Coluria (HM:0306)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Acolia (HM:0307)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Elevación de transaminasas (HM:0733)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Hiperbilirrubinemia (HM:0745)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Dolor en hipocondrio derecho (HM:0203)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Hepatomegalia (HM:0602)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Fiebre (HM:0101)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Astenia (HM:0801)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Anorexia (HM:0802)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n## Referencias y procedencia\n\nFuente clínica: medsemiotics-db, condición HM:6001."
+  "body": "# Hepatitis viral aguda\n\nHallazgos y criterios clínicos sin cocientes de verosimilitud medidos.\n\n## Nombre en inglés\n\nAcute viral hepatitis\n\n## Sinónimos\n\nhepatitis aguda\n\nhepatitis A\n\nhepatitis vírica aguda\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Ictericia (HM:0305)\n\n**Significante:** Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).\n\n**Significado:** Depósito tisular de bilirrubina por hiperbilirrubinemia (HM:0745), no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).\n\n**Falsos positivos:** Carotenemia, que tiñe la piel de amarillo pero respeta la esclerótica / Examen con luz artificial o por un examinador inexperto (pmid:9271910)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n**Decisión:** orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad\n\n**Referencia:** pmid:14765767\n\n### Coluria (HM:0306)\n\n**Significante:** Orina de color oscuro, pardo o «de té» por la presencia de bilirrubina; se confirma con la tira reactiva de orina positiva para bilirrubina (pmid:14765767).\n\n**Significado:** Solo la bilirrubina conjugada, hidrosoluble, se excreta por el riñón: la coluria indica hiperbilirrubinemia conjugada y separa el daño hepatocelular y la colestasis de las causas prehepáticas, que elevan la fracción no conjugada (pmid:14765767, pmid:28145671).\n\n**Falsos positivos:** Orina concentrada por deshidratación, sin bilirrubina en la tira reactiva / Hematuria, hemoglobinuria o mioglobinuria / Pigmentos de alimentos o de fármacos que oscurecen la orina\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Acolia (HM:0307)\n\n**Significante:** Heces de color pálido, gris arcilla o blanquecino, sin el pigmento pardo habitual. En el lactante se objetiva comparándolas con una tarjeta colorimétrica de heces (pmid:16585309).\n\n**Significado:** Llega poca o ninguna bilis al intestino por colestasis, intrahepática o por obstrucción de la vía biliar; suele acompañar a la hiperbilirrubinemia conjugada (pmid:28145671). En el lactante con colestasis obliga a descartar atresia biliar (pmid:21249394).\n\n**Falsos positivos:** Esteatorrea por malabsorción, con heces pálidas y grasas pero con bilis presente / Sulfato de bario eliminado tras un estudio radiológico con contraste\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Elevación de transaminasas (HM:0733)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Hiperbilirrubinemia (HM:0745)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Dolor en hipocondrio derecho (HM:0203)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Hepatomegalia (HM:0602)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Fiebre (HM:0101)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Astenia (HM:0801)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Anorexia (HM:0802)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n## Aspectos pendientes de documentación\n\nBúsqueda en PubMed del 2026-09-21: no se hallaron estudios que midan la coluria, la acolia, el dolor en hipocondrio derecho, la hepatomegalia, la fiebre, la astenia ni la anorexia frente a la serología en la hepatitis viral aguda. Sus aristas siguen en no_medido.\n\n## Referencias y procedencia\n\n**pmid:14765767:** Jaundice in the adult patient. Am Fam Physician, 2004. DOI: no documentado.\n\n**pmid:10691073:** Evaluation of the physician's ability to recognize the presence or absence of anemia, fever, and jaundice. Acad Emerg Med, 2000. DOI: 10.1111/j.1553-2712.2000.tb00518.x.\n\n**pmid:28145671:** Evaluation of Jaundice in Adults. Am Fam Physician, 2017. DOI: no documentado.\n\n**pmid:9271910:** The clinical detection of scleral icterus: observations of multiple examiners. Mil Med, 1997. DOI: no documentado.\n\n**pmid:16585309:** Screening for biliary atresia by infant stool color card in Taiwan. Pediatrics, 2006. DOI: 10.1542/peds.2005-1267.\n\n**pmid:21249394:** Clinical practice: neonatal cholestasis. Eur J Pediatr, 2011. DOI: 10.1007/s00431-010-1363-8.\n\nFuente clínica: medsemiotics-db, condición HM:6001."
 }

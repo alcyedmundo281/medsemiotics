@@ -16,35 +16,35 @@
       "dato": null,
       "poblacion": null,
       "motivo": "forma parte de la definición de caso; sesgo de incorporación",
-      "decision": null,
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": null,
-    "pmid": null,
+    "referencia_id": "pmid:14765767",
+    "pmid": "14765767",
     "doi": null,
-    "referencia_cita": null,
+    "referencia_cita": "Roche SP, Kobos R Jaundice in the adult patient Am Fam Physician 2004",
     "triada": {
-      "significante": "Ictericia",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+      "significante": "Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).",
+      "significado": "Depósito tisular de bilirrubina por hiperbilirrubinemia (HM:0745), no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).",
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad"
     },
     "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Ictericia» según la fuente?",
     "opciones": [
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       },
       {
         "texto": "LR no medible",
         "correcta": true,
-        "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+        "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       },
       {
         "texto": "LR no medido",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       }
     ]
   },
@@ -74,9 +74,9 @@
     "doi": null,
     "referencia_cita": null,
     "triada": {
-      "significante": "Ictericia",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+      "significante": "Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).",
+      "significado": "Depósito tisular de bilirrubina por hiperbilirrubinemia (HM:0745), no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).",
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad"
     },
     "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Coluria» según la fuente?",
     "opciones": [
