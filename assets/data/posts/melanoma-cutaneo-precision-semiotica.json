@@ -4,6 +4,10 @@
   "title": "Melanoma cutáneo: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -95,6 +99,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Criterios ABCD de lesión pigmentada positivos",
@@ -184,5 +190,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Melanoma cutáneo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nCutaneous melanoma\n\n## Sinónimos\n\nmelanoma maligno\n\ncáncer de piel tipo melanoma\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Criterios ABCD de lesión pigmentada positivos (HM:3139)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.92\n\n**Especificidad:** 0.98\n\n**LR positivo:** Valor: 46.0; IC del 95 %: 18.4 / 96.0; Referencia: pmid:9496989\n\n**LR negativo:** Valor: 0.08; IC del 95 %: 0.04 / 0.18; Referencia: pmid:9496989\n\n**Decisión:** la regla clínica ABCD (Asimetría, Bordes, Color, Diámetro >6mm) es altamente sensible y específica\n\n### Asimetría y bordes irregulares en lesión cutánea (HM:3140)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Motivo:** componente de los criterios semiológicos combinados de dermatología clínica\n\n### Color heterogéneo y diámetro mayor de 6 mm en lesión cutánea (HM:3141)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Motivo:** componente de los criterios semiológicos combinados de dermatología clínica\n\n## Conclusión de la fuente\n\nLa detección precoz del melanoma mediante la regla semiológica ABCD (Asimetría, Bordes irregulares, Color heterogéneo y Diámetro >6 mm) presenta una sensibilidad del 92-100% y una especificidad del 98%, siendo la principal herramienta clínica de triaje y derivación para biopsia.\n\n## Referencias y procedencia\n\n**pmid:9496989:** The rational clinical examination. Does this patient have a mole or a melanoma?. JAMA, 1998. DOI: 10.1001/jama.279.9.696.\n\nFuente clínica: medsemiotics-db, condición HM:6033."
 }

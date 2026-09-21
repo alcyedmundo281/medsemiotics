@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "medsemiotics", "runtimeExecutable": "node", "runtimeArgs": ["tools/local-server.js"], "port": 3000 }
+  ]
+}

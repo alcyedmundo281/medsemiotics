@@ -4,6 +4,10 @@
   "title": "Infección precoz por VIH: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
+  "fecha_publicacion": "2026-08-21",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "infectologia",
   "category_label": "Infectología y Medicina Interna",
@@ -147,10 +151,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/HI-Virus_Replication_Cycle_%285057022555%29.jpg/960px-HI-Virus_Replication_Cycle_%285057022555%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "image_source": "https://commons.wikimedia.org/wiki/File%3AHI-Virus%20Replication%20Cycle%20%285057022555%29.jpg",
-  "image_license": "CC BY 2.0",
-  "image_title": "HI-Virus Replication Cycle (5057022555).jpg",
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Úlceras genitales",
@@ -247,5 +253,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Infección precoz por VIH\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nEarly HIV infection\n\n## Sinónimos\n\nprimoinfección por VIH\n\ninfección aguda por VIH\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Úlceras genitales (HM:3039)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.4; IC del 95 %: 2.5 / 12; Referencia: pmid:25027143\n\n**Decisión:** el síntoma que más aumenta la probabilidad\n\n### Pérdida de peso (HM:0803)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.7; IC del 95 %: 2.1 / 7.2; Referencia: pmid:25027143\n\n### Vómitos (HM:0302)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.6; IC del 95 %: 2.5 / 8.0; Referencia: pmid:25027143\n\n### Adenopatías referidas por el paciente (HM:3040)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.6; IC del 95 %: 1.3 / 8.0; Referencia: pmid:25027143\n\n**Decisión:** nótese que el síntoma referido pesa MÁS que el signo hallado en la exploración, que tiene LR 3.1\n\n### Fiebre (HM:0101)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.74; IC del 95 %: 0.64 / 0.84; Referencia: pmid:25027143\n\n**Decisión:** su ausencia reduce la probabilidad muy poco; no sirve para descartar\n\n### Adenopatías (HM:0607)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 1.0 / 5.2; Referencia: pmid:25027143\n\n**LR negativo:** Valor: 0.7; IC del 95 %: 0.49 / 0.92; Referencia: pmid:25027143\n\n**Decisión:** el signo exploratorio más útil, y aun así modesto. El extremo inferior de su intervalo toca 1.0, es decir, es compatible con no aportar nada.\n\n## Reglas clínicas\n\nNombre: Ausencia de todo hallazgo; Componentes: Úlceras genitales (HM:3039) / Pérdida de peso (HM:0803) / Vómitos (HM:0302) / Adenopatías referidas por el paciente (HM:3040) / Fiebre (HM:0101) / Adenopatías (HM:0607); Criterio: ninguno de los hallazgos considerados presente; LR negativo: 0.47; IC del 95 %: 0.38 / 0.58; Referencia: pmid:25027143; Decisión: ni siquiera no encontrar NADA descarta la infección: la probabilidad baja a menos de la mitad, no a cero; Nota: calculado sobre estudios que consideraban combinaciones de 4 a 17 hallazgos posibles\n\n## Conclusión de la fuente\n\nLa utilidad limitada de la exploración clínica para detectar o descartar la infección precoz por VIH subraya la importancia del cribado sistemático en adultos.\n\n## Referencias y procedencia\n\n**pmid:25027143:** Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5954.\n\nFuente clínica: medsemiotics-db, condición HM:6011."
 }

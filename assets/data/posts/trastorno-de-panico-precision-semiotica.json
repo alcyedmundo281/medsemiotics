@@ -4,6 +4,10 @@
   "title": "Trastorno de pánico: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -77,6 +81,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Cuestionario PHQ de pánico positivo",
@@ -129,5 +135,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Trastorno de pánico\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPanic disorder\n\n## Sinónimos\n\ncrisis de angustia\n\nataques de pánico\n\nansiedad paroxística episódica\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.085; Población: pacientes adultos atendidos en consultas de atención primaria; Referencia: pmid:25058220\n\n## Hallazgos clínicos\n\n### Cuestionario PHQ de pánico positivo (HM:3138)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 78.0; IC del 95 %: 29.0 / 210.0; Referencia: pmid:25058220\n\n**LR negativo:** Valor: 0.2; IC del 95 %: 0.11 / 0.37; Referencia: pmid:25058220\n\n**Decisión:** el módulo de pánico del PHQ tiene un cociente positivo masivo (LR+ 78) y permite descartar eficazmente cuando es negativo (LR- 0.20)\n\n## Conclusión de la fuente\n\nEl módulo de pánico del Patient Health Questionnaire (PHQ) es el instrumento de autoinforme más potente para detectar el trastorno de pánico en atención primaria (LR+ 78, LR- 0.20).\n\n## Referencias y procedencia\n\n**pmid:25058220:** Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5950.\n\nFuente clínica: medsemiotics-db, condición HM:6032."
 }

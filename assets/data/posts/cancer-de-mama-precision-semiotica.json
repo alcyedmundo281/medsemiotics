@@ -4,6 +4,10 @@
   "title": "Cáncer de mama: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -88,6 +92,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
@@ -184,5 +190,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Cáncer de mama\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nBreast cancer\n\n## Sinónimos\n\ncarcinoma mamario\n\nneoplasia maligna de mama\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Masa mamaria palpable o hallazgo sospechoso en la exploración (HM:3142)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.54\n\n**Especificidad:** 0.94\n\n**LR positivo:** Valor: 10.6; IC del 95 %: 5.8 / 19.2; Referencia: pmid:10517431\n\n**Decisión:** el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)\n\n### Examen clínico de mama reglado normal (HM:3143)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.47; IC del 95 %: 0.4 / 0.56; Referencia: pmid:10517431\n\n**Decisión:** una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado\n\n## Conclusión de la fuente\n\nLa exploración clínica mamaria (CBE) reglada y minuciosa de al menos 3 minutos por mama es una herramienta diagnóstica complementaria relevante: un resultado positivo tiene un cociente de 10.6 (especificidad 94%), aunque un examen normal no descarta la enfermedad (LR- 0.47).\n\n## Referencias y procedencia\n\n**pmid:10517431:** The rational clinical examination. Does this patient have breast cancer? The screening clinical breast examination: should it be done? How?. JAMA, 1999. DOI: 10.1001/jama.282.13.1270.\n\nFuente clínica: medsemiotics-db, condición HM:6034."
 }

@@ -4,6 +4,10 @@
   "title": "Alergia a penicilina: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -85,6 +89,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Antecedente referido de alergia a penicilina",
@@ -174,5 +180,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Alergia a penicilina\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPenicillin allergy\n\n## Sinónimos\n\nhipersensibilidad a penicilina mediada por IgE\n\nreacción alérgica a betalactámicos\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.15; IC del 95 %: 0.1 / 0.2; Población: pacientes que autorreportan antecedentes de alergia a penicilina confirmados por pruebas cutáneas; Referencia: pmid:11368703\n\n## Hallazgos clínicos\n\n### Prueba cutánea a determinantes de penicilina (HM:3126)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es el estándar de referencia (gold standard) contra el que se calculan los cocientes de la historia clínica\n\n**Decisión:** el patrón de referencia para hipersensibilidad mediada por IgE; la negatividad descarta anafilaxia con seguridad casi absoluta\n\n### Antecedente referido de alergia a penicilina (HM:3125)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 1.9; IC del 95 %: 1.5 / 2.5; Referencia: pmid:11368703\n\n**LR negativo:** Valor: 0.5; IC del 95 %: 0.4 / 0.6; Referencia: pmid:11368703\n\n**Decisión:** el autorreporte de alergia tiene muy baja exactitud discriminativa (LR+ 1.9); solo un 10-20% son verdaderos alérgicos\n\n## Conclusión de la fuente\n\nSolo el 10% al 20% de los pacientes que refieren antecedentes de alergia a la penicilina son verdaderamente alérgicos al evaluarse mediante pruebas cutáneas. La historia clínica referida desplaza poco la probabilidad (LR+ 1.9), mientras que una prueba cutánea negativa descarta con seguridad secuelas graves.\n\n## Referencias y procedencia\n\n**pmid:11368703:** The rational clinical examination. Is this patient allergic to penicillin? An evidence-based analysis of the likelihood of penicillin allergy. JAMA, 2001. DOI: 10.1001/jama.285.19.2498.\n\nFuente clínica: medsemiotics-db, condición HM:6028."
 }

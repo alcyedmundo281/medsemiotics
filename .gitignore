@@ -23,3 +23,13 @@ dist-ssr
 # Allow checked-in build for the neurologia interactive module
 !neurologia/examen-neurologico/dist
 !neurologia/examen-neurologico/dist/**
+
+# Python (uv)
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Claude Code: la configuracion local y los worktrees no se versionan
+.claude/settings.local.json
+.claude/worktrees/

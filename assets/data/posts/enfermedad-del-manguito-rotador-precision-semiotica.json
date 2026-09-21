@@ -4,6 +4,10 @@
   "title": "Enfermedad del manguito rotador: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
+  "fecha_publicacion": "2026-08-21",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "traumatologia",
   "category_label": "Traumatología y Medicina Deportiva",
@@ -95,10 +99,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rotator_cuff_injury.svg/960px-Rotator_cuff_injury.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "image_source": "https://commons.wikimedia.org/wiki/File%3ARotator%20cuff%20injury.svg",
-  "image_license": "CC BY-SA 4.0",
-  "image_title": "Rotator cuff injury.svg",
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Arco doloroso",
@@ -195,5 +201,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Enfermedad del manguito rotador\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nRotator cuff disease\n\n## Sinónimos\n\npatología del manguito rotador\n\ntendinopatía del manguito\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nRango documentado: 0.33 / 0.81; Población: pacientes derivados a especialista por dolor de hombro, en los estudios de calidad nivel 1-2; Referencia: pmid:23982370; Nota: rango tan amplio que la previa hay que tomarla del contexto propio, no de aquí\n\n## Hallazgos clínicos\n\n### Arco doloroso (HM:3055)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.7; IC del 95 %: 1.9 / 7.0; Referencia: pmid:23982370\n\n**LR negativo:** Valor: 0.36; IC del 95 %: 0.23 / 0.54; Referencia: pmid:23982370\n\n**Decisión:** la única prueba de provocación de dolor con cociente positivo por encima de 2, y la que mejor descarta cuando es normal\n\n### Signo del brazo caído (HM:3058)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.3; IC del 95 %: 1.0 / 11; Referencia: pmid:23982370\n\n**Decisión:** puede ayudar a identificar la enfermedad, pero su intervalo toca 1.0: es compatible con no aportar nada\n\n### Dolor de hombro (HM:3059)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es el motivo de consulta que define la población estudiada, no una prueba dentro de ella\n\n## Aspectos pendientes de documentación\n\nLa conclusión menciona la prueba de resistencia a la rotación externa entre las más precisas para la enfermedad, pero el abstract no publica su cociente. Requiere el texto completo.\n\n## Conclusión de la fuente\n\nEl arco doloroso positivo y la prueba de resistencia a la rotación externa fueron los hallazgos más precisos para detectar la enfermedad del manguito. Como todas las maniobras las realizaron especialistas, se desconoce hasta qué punto los resultados se generalizan a población no derivada.\n\n## Referencias y procedencia\n\n**pmid:23982370:** Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA, 2013. DOI: 10.1001/jama.2013.276187.\n\nFuente clínica: medsemiotics-db, condición HM:6013."
 }

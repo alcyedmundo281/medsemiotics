@@ -4,6 +4,10 @@
   "title": "Glaucoma primario de ángulo abierto: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -122,6 +126,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Relación copa-disco aumentada",
@@ -218,5 +224,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Glaucoma primario de ángulo abierto\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPrimary open-angle glaucoma\n\n## Sinónimos\n\nGPAA\n\nglaucoma crónico simple\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.02; IC del 95 %: 0.01 / 0.03; Población: adultos mayores de 40 años en cribado poblacional; Referencia: pmid:23677315\n\n## Hallazgos clínicos\n\n### Relación copa-disco aumentada (HM:3088)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14.0; IC del 95 %: 6.3 / 30.0; Referencia: pmid:23677315\n\n**Decisión:** el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma\n\n### Asimetría de la relación copa-disco (HM:3089)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.3; IC del 95 %: 3.4 / 16.0; Referencia: pmid:23677315\n\n**Decisión:** la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad\n\n### Hemorragia en astilla del disco óptico (HM:3090)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 12.0; IC del 95 %: 2.9 / 48.0; Referencia: pmid:23677315\n\n**Decisión:** signo patognomónico de daño microvascular y progresión activa de la neuropatía glaucomatosa\n\n### Presión intraocular elevada (HM:3091)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 13.0; IC del 95 %: 8.2 / 21.0; Referencia: pmid:23677315\n\n**LR negativo:** Valor: 0.65; IC del 95 %: 0.55 / 0.76; Referencia: pmid:23677315\n\n**Decisión:** confirma con fuerza pero una PIO normal no descarta (glaucoma de tensión normal)\n\n## Conclusión de la fuente\n\nLa evaluación del disco óptico (relación copa-disco >= 0.7, asimetría y hemorragias en astilla) es más informativa que la tonometría aislada para el diagnóstico de glaucoma.\n\n## Referencias y procedencia\n\n**pmid:23677315:** Do findings on routine examination identify patients at risk for primary open-angle glaucoma? The rational clinical examination systematic review. JAMA, 2013. DOI: 10.1001/jama.2013.5099.\n\nFuente clínica: medsemiotics-db, condición HM:6022."
 }

@@ -4,6 +4,10 @@
   "title": "Hipertensión arterial en adultos: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -100,6 +104,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
@@ -196,5 +202,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Hipertensión arterial en adultos\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nHypertension in adults\n\n## Sinónimos\n\nHTA esencial\n\nhipertensión arterial primaria en adultos\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Presión arterial en consulta mayor o igual a 140/90 mmHg (HM:3127)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.2; IC del 95 %: 2.9 / 6.1; Referencia: pmid:34313682\n\n**LR negativo:** Valor: 0.56; IC del 95 %: 0.46 / 0.68; Referencia: pmid:34313682\n\n**Decisión:** una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca\n\n### Automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg (HM:3128)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 2.3 / 4.2; Referencia: pmid:34313682\n\n**LR negativo:** Valor: 0.33; IC del 95 %: 0.24 / 0.46; Referencia: pmid:34313682\n\n**Decisión:** la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida\n\n## Conclusión de la fuente\n\nLa medición de la presión arterial en consulta es una prueba de cribado útil (LR+ 4.2), pero la automonitorización domiciliaria (AMPA) o el MAPA son necesarios para confirmar el diagnóstico definitivo y descartar la hipertensión de bata blanca.\n\n## Referencias y procedencia\n\n**pmid:34313682:** Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review. JAMA, 2021. DOI: 10.1001/jama.2021.4533.\n\nFuente clínica: medsemiotics-db, condición HM:6029."
 }

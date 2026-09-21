@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artículo Clínico - Powersemiotics</title>
     <link rel="canonical" href="https://powersemiotics.com/medsemiotics/post.html" />
+    <!-- Metadatos bibliográficos (Highwire/Google Scholar y Dublin Core), completados al cargar el artículo -->
+    <meta id="metaCitationTitle" name="citation_title" content="" />
+    <meta id="metaCitationAuthor" name="citation_author" content="" />
+    <meta id="metaCitationDate" name="citation_publication_date" content="" />
+    <meta id="metaCitationPublisher" name="citation_publisher" content="Powersemiotics" />
+    <meta id="metaCitationJournal" name="citation_journal_title" content="Medsemiotics" />
+    <meta id="metaCitationLanguage" name="citation_language" content="es" />
+    <meta id="metaCitationUrl" name="citation_public_url" content="" />
+    <meta id="metaDcDate" name="DC.date.issued" content="" />
+    <meta id="metaDcModified" name="DC.date.modified" content="" />
+    <script id="jsonLd" type="application/ld+json">{}</script>
     <link href="assets/fonts/fonts.css" rel="stylesheet" />
     <link href="assets/tailwind.css" rel="stylesheet" />
     <style>
@@ -143,7 +154,8 @@
             <div class="flex items-center gap-2">
               <span class="font-medium text-stone-900" id="postAuthor">Dr. Alcy Torres</span>
               <span>•</span>
-              <time id="postDate" class="text-stone-500">Fecha</time>
+              <span>Publicado <time id="postDate" class="text-stone-500">Fecha</time></span>
+              <span id="postRevisedWrap" class="hidden">• Revisado <time id="postRevised"></time> · versión <span id="postVersion"></span></span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-mono" id="postDifficulty">Intermedio</span>
@@ -155,7 +167,10 @@
         <figure id="featuredImageWrapper" class="mb-10 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-sm hidden">
           <img id="postFeaturedImage" src="" alt="" class="w-full max-h-[440px] object-cover" />
           <figcaption class="p-3 bg-stone-50 text-xs text-stone-500 flex flex-wrap items-center justify-between gap-2 border-t border-stone-200">
-            <span id="postImageTitle" class="font-medium text-stone-700">Ilustración clínica</span>
+            <span>
+              <span id="postImageTitle" class="font-medium text-stone-700">Ilustración clínica</span>
+              <span id="postImageAuthor" class="text-stone-500"></span>
+            </span>
             <span class="flex items-center gap-2">
               <span id="postImageLicense" class="font-mono bg-stone-200 text-stone-700 px-2 py-0.5 rounded text-[11px]">Licencia</span>
               <a id="postImageSource" href="#" target="_blank" rel="noopener" class="text-purple-700 hover:underline">Wikimedia Commons ↗</a>
@@ -198,7 +213,18 @@
           </div>
         </section>
 
+        <!-- Caso socrático (ABP dirigido): contexto clínico alrededor de la evidencia de medsemiotics-db -->
+        <section id="casoSection" class="hidden mb-14 bg-white border-2 border-amber-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-1 rounded-md">Caso clínico socrático · ABP dirigido</span>
+            <span id="casoMeta" class="text-xs text-stone-500"></span>
+          </div>
+          <p id="casoAviso" class="text-xs text-stone-500 italic mb-6"></p>
+          <div id="casoContenido"></div>
+        </section>
+
         <!-- Main Narrative / Text Body -->
+        <h2 id="evidenceHeading" class="hidden text-xs font-bold uppercase tracking-wider text-purple-700 mb-2">Ficha de evidencia · medsemiotics-db</h2>
         <div id="markdownBody" class="prose-custom mb-12">
           <!-- Rendered HTML will go here -->
         </div>
@@ -359,16 +385,25 @@
         document.getElementById('postTitle').textContent = currentPost.title;
         document.getElementById('postSubtitle').textContent = currentPost.subtitle || '';
         document.getElementById('postAuthor').textContent = currentPost.author || 'Dr. Alcy Torres';
-        document.getElementById('postDate').textContent = currentPost.date || '';
+        const published = currentPost.fecha_publicacion || currentPost.date || '';
+        document.getElementById('postDate').textContent = published;
+        document.getElementById('postDate').dateTime = published;
+        const revised = currentPost.fecha_revision;
+        document.getElementById('postRevisedWrap').classList.toggle('hidden', !revised);
+        document.getElementById('postRevised').textContent = revised || '';
+        document.getElementById('postRevised').dateTime = revised || '';
+        document.getElementById('postVersion').textContent = currentPost.version || '';
         document.getElementById('postDifficulty').textContent = currentPost.difficulty || 'Intermedio';
+        renderCitationMeta(published, revised);
 
         // Featured Image
         const imgWrapper = document.getElementById('featuredImageWrapper');
         if (currentPost.featured_image) {
           imgWrapper.classList.remove('hidden');
           document.getElementById('postFeaturedImage').src = currentPost.featured_image;
-          document.getElementById('postFeaturedImage').alt = currentPost.title;
+          document.getElementById('postFeaturedImage').alt = currentPost.image_alt || currentPost.title;
           document.getElementById('postImageTitle').textContent = currentPost.image_title || currentPost.title;
+          document.getElementById('postImageAuthor').textContent = currentPost.image_author ? `· ${currentPost.image_author}` : '';
           document.getElementById('postImageLicense').textContent = currentPost.image_license || 'CC';
           if (currentPost.image_source) {
             document.getElementById('postImageSource').href = currentPost.image_source;
@@ -396,7 +431,8 @@
 
         setupCalculator(lrPos, lrNeg);
 
-        // Markdown Body
+        // Caso socrático y ficha de evidencia
+        renderCaso(currentPost.caso);
         document.getElementById('markdownBody').innerHTML = parseSimpleMarkdown(currentPost.body || '');
 
         // Link autoevaluation to Reto Clínico with ?signo=slug
@@ -456,6 +492,116 @@
       }
 
 
+
+      function escapeHtml(value) {
+        return String(value ?? '')
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+
+      function renderCitationMeta(published, revised) {
+        const url = `https://powersemiotics.com/medsemiotics/post.html?slug=${encodeURIComponent(currentPost.slug)}`;
+        const author = currentPost.author || 'Dr. Alcy Torres';
+        document.getElementById('metaCitationTitle').content = currentPost.title || '';
+        document.getElementById('metaCitationAuthor').content = author;
+        document.getElementById('metaCitationDate').content = (published || '').replace(/-/g, '/');
+        document.getElementById('metaCitationUrl').content = url;
+        document.getElementById('metaDcDate').content = published || '';
+        document.getElementById('metaDcModified').content = revised || published || '';
+        const doi = currentPost.publicacion?.doi;
+        document.getElementById('jsonLd').textContent = JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'ScholarlyArticle',
+          headline: currentPost.title,
+          description: currentPost.subtitle || undefined,
+          inLanguage: 'es',
+          url,
+          datePublished: published || undefined,
+          dateModified: revised || published || undefined,
+          version: currentPost.version || undefined,
+          author: { '@type': 'Person', name: author },
+          publisher: { '@type': 'Organization', name: 'Powersemiotics' },
+          isPartOf: { '@type': 'Periodical', name: 'Medsemiotics', ...(doi ? { sameAs: `https://doi.org/${doi}` } : {}) },
+          license: 'https://creativecommons.org/licenses/by-sa/4.0/',
+          learningResourceType: currentPost.caso ? 'Caso clínico socrático (ABP dirigido)' : undefined,
+          image: currentPost.featured_image || undefined,
+        });
+      }
+
+      // Tabla de datos clínicos del caso (texto del autor, siempre escapado).
+      function casoTabla(datos) {
+        if (!datos || !datos.length) return '';
+        return `<table class="w-full text-sm border border-stone-200 rounded-lg overflow-hidden my-4"><tbody>${datos.map(d => `
+          <tr class="border-b border-stone-200 last:border-0">
+            <th class="text-left align-top bg-stone-50 font-semibold text-stone-700 p-2.5 w-1/3">${escapeHtml(d.etiqueta)}</th>
+            <td class="p-2.5 text-stone-800">${escapeHtml(d.valor)}</td>
+          </tr>`).join('')}</tbody></table>`;
+      }
+
+      // Ficha de un hallazgo tal como la registra medsemiotics-db: el foco del aprendizaje.
+      function casoHallazgo(h) {
+        const cifras = (h.cifras || []).map(c =>
+          `<span class="inline-block font-mono text-[12px] bg-white border border-purple-200 text-purple-900 px-2 py-0.5 rounded">${escapeHtml(c)}</span>`).join(' ');
+        const nota = [h.decision, h.motivo, h.advertencia].filter(Boolean).map(escapeHtml).join(' · ');
+        return `
+          <div class="bg-purple-50 border border-purple-200 rounded-xl p-4">
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-700">medsemiotics-db</span>
+              <span class="font-bold text-stone-900">${escapeHtml(h.nombre)}</span>
+              <span class="text-xs text-stone-500">${escapeHtml(h.rol)} · ${escapeHtml(h.estado)}</span>
+            </div>
+            ${cifras ? `<div class="flex flex-wrap gap-1.5 mb-2">${cifras}</div>` : ''}
+            ${nota ? `<p class="text-sm text-purple-950">${nota}</p>` : ''}
+            ${(h.referencias || []).length ? `<p class="text-[11px] font-mono text-stone-500 mt-1">${h.referencias.map(escapeHtml).join(' · ')}</p>` : ''}
+          </div>`;
+      }
+
+      function renderCaso(caso) {
+        document.getElementById('casoSection').classList.toggle('hidden', !caso);
+        document.getElementById('evidenceHeading').classList.toggle('hidden', !caso);
+        if (!caso) return;
+        document.getElementById('casoMeta').textContent =
+          `${caso.nivel} · ${caso.duracion_min} min · versión ${caso.publicacion.version}`;
+        document.getElementById('casoAviso').textContent = caso.aviso;
+        const md = text => `<p>${parseSimpleMarkdown(text)}</p>`;
+        const etapas = caso.etapas.map(e => `
+          <section class="mt-8 pt-6 border-t border-stone-200">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-amber-800 mb-1">Etapa ${e.numero} · ${escapeHtml(e.fase_etiqueta)}</div>
+            <h3>${escapeHtml(e.titulo)}</h3>
+            ${e.informacion ? md(e.informacion) : ''}
+            ${casoTabla(e.datos)}
+            ${e.hallazgos.length ? `<div class="grid gap-3 my-4">${e.hallazgos.map(casoHallazgo).join('')}</div>` : ''}
+            ${e.preguntas.map(p => `
+              <div class="bg-amber-50 border-l-4 border-amber-400 rounded-r-xl p-4 my-4">
+                <p class="font-semibold text-stone-900 !mb-2">❓ ${parseSimpleMarkdown(p.pregunta)}</p>
+                <details class="text-stone-800">
+                  <summary class="cursor-pointer text-sm font-semibold text-amber-900">Razónalo primero · ver clave docente</summary>
+                  <div class="mt-2">${md(p.clave)}</div>
+                </details>
+              </div>`).join('')}
+          </section>`).join('');
+        const omitidos = caso.omitidos.length ? `
+          <details class="mt-6 text-sm text-stone-600">
+            <summary class="cursor-pointer font-semibold">Hallazgos de la base que este caso no usa (${caso.omitidos.length})</summary>
+            <ul class="list-disc pl-6 mt-2">${caso.omitidos.map(o => `<li><strong>${escapeHtml(o.nombre)}</strong>: ${escapeHtml(o.motivo)}</li>`).join('')}</ul>
+          </details>` : '';
+        document.getElementById('casoContenido').innerHTML = `
+          <div class="prose-custom">
+            <h3>Objetivos de aprendizaje</h3>
+            <ul class="list-disc">${caso.objetivos.map(o => `<li>${escapeHtml(o)}</li>`).join('')}</ul>
+            <h3>${escapeHtml(caso.vineta.titulo)}</h3>
+            <blockquote>${parseSimpleMarkdown(caso.vineta.texto)}</blockquote>
+            ${casoTabla(caso.vineta.datos)}
+            ${etapas}
+            <section class="mt-8 pt-6 border-t border-stone-200">
+              <h3>Cierre</h3>
+              ${md(caso.cierre.sintesis)}
+              <p class="!mb-1 font-semibold">Necesidades de aprendizaje</p>
+              <ul class="list-disc">${caso.cierre.necesidades_aprendizaje.map(n => `<li>${escapeHtml(n)}</li>`).join('')}</ul>
+            </section>
+            ${omitidos}
+          </div>`;
+      }
 
       function parseSimpleMarkdown(md) {
         if (!md) return '';

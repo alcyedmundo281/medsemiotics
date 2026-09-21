@@ -4,6 +4,10 @@
   "title": "Trastorno por consumo de alcohol: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-22",
+  "fecha_publicacion": "2026-08-22",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "psiquiatria",
   "category_label": "Psiquiatría y Atención Primaria",
@@ -135,6 +139,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Cuestionario AUDIT con puntuación ≥ 8",
@@ -232,5 +238,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Trastorno por consumo de alcohol\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAlcohol use disorder\n\n## Sinónimos\n\nalcoholismo\n\ndependencia del alcohol\n\nabuso de alcohol\n\nconsumo perjudicial de alcohol\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Factores de riesgo\n\nFactor: Antecedente familiar de trastorno por consumo de sustancias\n\nFactor: Inicio precoz del consumo de alcohol en la adolescencia\n\nFactor: Trastornos psiquiátricos comórbidos (depresión, ansiedad)\n\n## Hallazgos clínicos\n\n### Cuestionario AUDIT con puntuación ≥ 8 (HM:3083)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)\n\n**LR positivo:** Valor: 6.5; IC del 95 %: 3.9 / 11; Referencia: pmid:38592385; Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5)\n\n**Decisión:** AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.\n\n### Cuestionario AUDIT con puntuación < 8 (HM:3085)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Población:** adultos evaluados con AUDIT\n\n**LR negativo:** Valor: 0.33; IC del 95 %: 0.2 / 0.52; Referencia: pmid:38592385\n\n**Decisión:** AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.\n\n### Cuestionario AUDIT-C positivo (hombres ≥ 4, mujeres ≥ 3) (HM:3084)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Población:** adultos en atención primaria\n\n**LR positivo:** Rango documentado: 1.8 / 2.0; Referencia: pmid:38592385; Nota: hombres LR+ 1.8 (IC 95%: 1.5-2.2); mujeres LR+ 2.0 (IC 95%: 1.8-2.3)\n\n**Decisión:** AUDIT-C positivo (hombres ≥4, mujeres ≥3): útil para detectar consumo excesivo de riesgo rápido, pero modesto para confirmar trastorno por consumo formal (LR+ ~1.9).\n\n### Cuestionario AUDIT con puntuación ≥ 4 en postparto (HM:3086)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** mujeres puérperas evaluadas en las primeras 48 horas postparto\n\n**LR positivo:** Valor: 6.4; IC del 95 %: 5.1 / 8.0; Referencia: pmid:38592385\n\n**Decisión:** AUDIT ≥ 4 en postparto: identifica eficazmente a puérperas con alta probabilidad de trastorno por consumo de alcohol (LR+ 6.4).\n\n### Cuestionario TWEAK o T-ACE con puntuación < 2 en postparto (HM:3087)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Población:** mujeres puérperas evaluadas en las primeras 48 horas postparto\n\n**LR negativo:** Valor: 0.05; IC del 95 %: 0.01 / 0.2; Referencia: pmid:38592385\n\n**Decisión:** TWEAK o T-ACE < 2 en postparto: excelente poder de exclusión (LR- 0.05), descartando prácticamente el trastorno en esta población.\n\n## Conclusión de la fuente\n\nEl cuestionario AUDIT (≥ 8) es la herramienta más útil para identificar trastorno por consumo de alcohol según el DSM-5 en adultos (LR+ 6.5; LR- 0.33). El AUDIT-C es adecuado para consumo de riesgo. En el postparto inmediato, el AUDIT ≥ 4 confirma (LR+ 6.4) y las herramientas TWEAK/T-ACE < 2 descartan con gran exactitud (LR- 0.05).\n\n## Referencias y procedencia\n\n**pmid:38592385:** Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review. JAMA, 2024. DOI: 10.1001/jama.2024.3101.\n\nFuente clínica: medsemiotics-db, condición HM:6021."
 }

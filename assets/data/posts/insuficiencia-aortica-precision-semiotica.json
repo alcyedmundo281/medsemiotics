@@ -4,6 +4,10 @@
   "title": "Insuficiencia aórtica: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -107,6 +111,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Soplo diastólico precoz",
@@ -203,5 +209,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Insuficiencia aórtica\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAortic regurgitation\n\n## Sinónimos\n\nregurgitación aórtica\n\nvalvulopatía aórtica incompetente\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Soplo diastólico precoz (HM:3116)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 8.8; IC del 95 %: 7.3 / 11.0; Referencia: pmid:10376577\n\n**LR negativo:** Valor: 0.2; IC del 95 %: 0.1 / 0.3; Referencia: pmid:10376577\n\n**Decisión:** el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)\n\n### Maniobra de oclusión arterial transitoria (HM:3118)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 8.4; IC del 95 %: 3.9 / 18.0; Referencia: pmid:10376577\n\n**LR negativo:** Valor: 0.3; IC del 95 %: 0.1 / 0.7; Referencia: pmid:10376577\n\n**Decisión:** la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico\n\n### Presión de pulso amplia (HM:3117)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Motivo:** signo hemodinámico clásico de regurgitación aórtica moderada o severa\n\n## Conclusión de la fuente\n\nLa auscultación de un soplo diastólico precoz es el signo más potente para diagnosticar o descartar la insuficiencia aórtica (LR+ 8.8, LR- 0.20). Maniobras como la oclusión arterial transitoria aumentan la sensibilidad de la auscultación en casos dudosos.\n\n## Referencias y procedencia\n\n**pmid:10376577:** The rational clinical examination. Does this patient have aortic regurgitation?. JAMA, 1999. DOI: 10.1001/jama.281.23.2231.\n\nFuente clínica: medsemiotics-db, condición HM:6026."
 }

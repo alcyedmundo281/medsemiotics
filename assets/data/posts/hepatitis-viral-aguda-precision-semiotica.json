@@ -4,6 +4,10 @@
   "title": "Hepatitis viral aguda: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
   "date": "2026-09-02",
+  "fecha_publicacion": "2026-09-02",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "gastroenterologia",
   "category_label": "Gastroenterología",
@@ -116,6 +120,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
   "triada": {
     "significante": "Ictericia",
@@ -198,5 +204,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Hepatitis viral aguda\n\nHallazgos y criterios clínicos sin cocientes de verosimilitud medidos.\n\n## Nombre en inglés\n\nAcute viral hepatitis\n\n## Sinónimos\n\nhepatitis aguda\n\nhepatitis A\n\nhepatitis vírica aguda\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Ictericia (HM:0305)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Coluria (HM:0306)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Acolia (HM:0307)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Elevación de transaminasas (HM:0733)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Hiperbilirrubinemia (HM:0745)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medible\n\n**Motivo:** forma parte de la definición de caso; sesgo de incorporación\n\n### Dolor en hipocondrio derecho (HM:0203)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Hepatomegalia (HM:0602)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Fiebre (HM:0101)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Astenia (HM:0801)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n### Anorexia (HM:0802)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n## Referencias y procedencia\n\nFuente clínica: medsemiotics-db, condición HM:6001."
 }

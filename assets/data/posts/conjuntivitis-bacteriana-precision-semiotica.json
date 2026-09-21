@@ -4,6 +4,10 @@
   "title": "Conjuntivitis bacteriana: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
+  "fecha_publicacion": "2026-08-21",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -106,6 +110,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Otitis media concomitante",
@@ -202,5 +208,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Conjuntivitis bacteriana\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nBacterial conjunctivitis\n\n## Sinónimos\n\nconjuntivitis bacteriana aguda\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nRango documentado: 0.16 / 0.71; Población: pacientes con conjuntivitis infecciosa aguda: 16% en adultos, 71% en niños (rango de edad 1 mes-18 años); Referencia: pmid:35699701; Nota: la previa se invierte por edad, no es un rango de incertidumbre sobre un mismo valor: en niños predomina la causa bacteriana y en adultos la viral\n\n## Hallazgos clínicos\n\n### Secreción ocular mucopurulenta (HM:3070)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.76\n\n**Ic95 sensibilidad:** 0.6 / 0.87\n\n**Especificidad:** 0.66\n\n**Ic95 especificidad:** 0.58 / 0.73\n\n**LR positivo:** Valor: 2.1; IC del 95 %: 1.7 / 2.6; Referencia: pmid:35699701\n\n**Decisión:** el hallazgo más sensible de la revisión para causa bacteriana, pero su cociente es modesto: no basta por sí solo para decidir antibiótico\n\n### Otitis media concomitante (HM:3071)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.24\n\n**Ic95 sensibilidad:** 0.2 / 0.29\n\n**Especificidad:** 0.91\n\n**Ic95 especificidad:** 0.85 / 0.94\n\n**LR positivo:** Valor: 2.5; IC del 95 %: 1.5 / 4.4; Referencia: pmid:35699701\n\n**Decisión:** el síndrome otitis-conjuntivitis favorece origen bacteriano, aunque su sensibilidad es baja: su ausencia no descarta nada\n\n## Aspectos pendientes de documentación\n\nLa fuente mide faringitis concomitante (LR 5.4-9.9), adenopatía preauricular (LR 2.5-5.6) y contacto con otra persona con ojo rojo (LR 2.5, IC95% 1.6-3.7) como signos que apuntan a etiología VIRAL, no bacteriana. Invertir esos cocientes para leerlos «a favor de bacteriana» no es aritmética que el abstract sostenga —viral y bacteriana no son un 2x2 exhaustivo dentro de «conjuntivitis infecciosa aguda», hay más etiologías posibles— así que no se emiten en esta condición. Entrarían, con su signo correcto, en una futura condición «Conjuntivitis viral».\n\nLa prevalencia por edad (16% adultos, 71% niños) no se resume en un solo número: quien puebla `probabilidad_base` en un protocolo debe elegir según la edad del paciente, no promediar.\n\n## Conclusión de la fuente\n\nNingún síntoma o signo aislado distingue con certeza la conjuntivitis bacteriana de la viral. La secreción mucopurulenta y la otitis media concomitante se asocian a causa bacteriana; la faringitis, la adenopatía preauricular y el contacto con otra persona con ojo rojo se asocian a causa viral.\n\n## Referencias y procedencia\n\n**pmid:35699701:** Does This Patient With Acute Infectious Conjunctivitis Have a Bacterial Infection?: The Rational Clinical Examination Systematic Review. JAMA, 2022. DOI: 10.1001/jama.2022.7687.\n\nFuente clínica: medsemiotics-db, condición HM:6017."
 }

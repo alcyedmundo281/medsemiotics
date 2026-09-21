@@ -4,6 +4,10 @@
   "title": "Conmoción cerebral pediátrica: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -178,6 +182,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Niebla mental",
@@ -274,5 +280,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Conmoción cerebral pediátrica\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPediatric concussion\n\n## Sinónimos\n\ntraumatismo craneoencefálico leve pediátrico\n\nconcusión cerebral en niños\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Niebla mental (HM:3094)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 11.9; IC del 95 %: 5.2 / 27.0; Referencia: pmid:41941197\n\n**Decisión:** el síntoma cognitivo autoinformado con mayor LR positivo en la evaluación postraumática\n\n### Punto próximo de convergencia anormal (HM:3097)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.0; IC del 95 %: 3.1 / 16.0; Referencia: pmid:41941197\n\n**Decisión:** el signo físico oculomotor más potente del examen vestibular/ocular motor (VOMS)\n\n### Fonofobia o sensibilidad al ruido (HM:3095)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 6.9; IC del 95 %: 3.4 / 14.0; Referencia: pmid:41941197\n\n**Decisión:** hipersensibilidad sensorial fuertemente indicativa de disfunción corticosensorial aguda\n\n### Bradicardia (HM:0105)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 6.7; IC del 95 %: 3.5 / 13.0; Referencia: pmid:41941197\n\n**Decisión:** síntoma neurovegetativo precoz muy prevalente tras conmoción cerebral\n\n### Fotofobia o sensibilidad a la luz (HM:3096)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.6; IC del 95 %: 2.9 / 11.0; Referencia: pmid:41941197\n\n**Decisión:** síntoma sensorial complementario de alta especificidad\n\n### Movimientos de persecución suave anormales (HM:3098)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.5; IC del 95 %: 2.0 / 10.0; Referencia: pmid:41941197\n\n**Decisión:** signo exploratorio de afectación cerebelosa o de vías de seguimiento visual\n\n### Sacadas oculares anormales (HM:3099)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.4; IC del 95 %: 2.0 / 9.7; Referencia: pmid:41941197\n\n**Decisión:** dismetría sacádica indicativa de alteración en la coordinación ocular rápida\n\n### Dolor abdominal (HM:0201)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.2; IC del 95 %: 0.1 / 0.4; Referencia: pmid:41941197\n\n**Dispara si:** ausente\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:41941197\n\n**Decisión:** la ausencia completa de cefalea reduce sustancialmente la probabilidad de conmoción cerebral (LR 0.20)\n\n## Conclusión de la fuente\n\nLos síntomas referidos como sentirse 'en una niebla' (LR+ 11.9) y los hallazgos del examen de motilidad ocular/convergencia (LR+ 7.0) son los mejores predictores de conmoción cerebral pediátrica. La ausencia de cefalea prácticamente descarta el cuadro (LR 0.20).\n\n## Referencias y procedencia\n\n**pmid:41941197:** Does This Child Have a Concussion?: The Rational Clinical Examination Systematic Review. JAMA, 2026. DOI: 10.1001/jama.2026.1233.\n\nFuente clínica: medsemiotics-db, condición HM:6023."
 }

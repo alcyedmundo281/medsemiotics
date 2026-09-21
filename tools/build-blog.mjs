@@ -10,6 +10,10 @@ const rootDir = path.resolve(__dirname, '..');
 const postsDir = path.join(rootDir, 'posts');
 const outputDataDir = path.join(rootDir, 'assets', 'data');
 const outputPostsDir = path.join(outputDataDir, 'posts');
+// Casos socráticos compilados y validados por `python -m casos build` (solo los publicados).
+const casosDir = path.join(outputDataDir, 'casos');
+// Política de imágenes destacadas: Wikimedia Commons en dominio público o CC0.
+const imageLicenses = new Set(['Public domain', 'CC0']);
 const checkOnly = process.argv.includes('--check');
 const pendingOutputs = new Map();
 const publicationCitation = yaml.load(fs.readFileSync(path.join(rootDir, 'CITATION.cff'), 'utf8'));
@@ -47,14 +51,21 @@ function buildBlog() {
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
   const postsIndex = [];
 
-  // Load verified Wikimedia Commons images
-  let topicImages = {};
+  // Imágenes registradas y verificadas con `python -m imagenes asignar`.
   const imagesJsonPath = path.join(outputDataDir, 'topic-images.json');
-  if (fs.existsSync(imagesJsonPath)) {
-    try {
-      topicImages = JSON.parse(fs.readFileSync(imagesJsonPath, 'utf-8'));
-    } catch {
-      // topic-images.json ilegible: se sigue sin imagenes verificadas
+  const topicImages = fs.existsSync(imagesJsonPath)
+    ? JSON.parse(fs.readFileSync(imagesJsonPath, 'utf-8'))
+    : {};
+  for (const [key, image] of Object.entries(topicImages)) {
+    if (!imageLicenses.has(image.license)) {
+      throw new Error(`${key}: imagen con licencia «${image.license}»; solo dominio público o CC0`);
+    }
+  }
+  const casos = new Map();
+  if (fs.existsSync(casosDir)) {
+    for (const file of fs.readdirSync(casosDir).filter(f => f.endsWith('.json'))) {
+      const caso = JSON.parse(fs.readFileSync(path.join(casosDir, file), 'utf-8'));
+      casos.set(caso.slug, caso);
     }
   }
 
@@ -74,12 +85,23 @@ function buildBlog() {
       throw new Error(`${file}: LR sin estado medido y referencia.`);
     }
 
+    const caso = casos.get(data.slug) || null;
+    if (caso && caso.condicion_id !== data.grounding.condicion_id) {
+      throw new Error(`${file}: el caso ${caso.condicion_id} no corresponde a este artículo`);
+    }
+    casos.delete(data.slug);
+
     const postSummary = {
       id: data.id || file.replace('.md', ''),
       slug: data.slug || file.replace('.md', ''),
       title: data.title || 'Sin título',
       subtitle: data.subtitle || '',
       date: data.date || '2026-08-20',
+      // Fechas editoriales: primera publicación de la URL y última revisión del caso.
+      fecha_publicacion: String(data.date),
+      fecha_revision: caso ? caso.publicacion.ultima_revision : null,
+      version: caso ? caso.publicacion.version : null,
+      has_caso: Boolean(caso),
       author: data.author || 'Dr. Alcy Torres',
       category: data.category || 'general',
       category_label: data.category_label || data.category || 'General',
@@ -97,6 +119,8 @@ function buildBlog() {
       image_source: imgData ? imgData.source : null,
       image_license: imgData ? imgData.license : null,
       image_title: imgData ? imgData.title.replace('File:', '') : null,
+      image_alt: imgData ? imgData.alt || null : null,
+      image_author: imgData ? imgData.author || null : null,
       excerpt: data.subtitle || markdownBody.slice(0, 160).replace(/[#*`_]/g, '') + '...'
     };
 
@@ -105,6 +129,7 @@ function buildBlog() {
       grounding: data.grounding || {},
       triada: data.triada || {},
       autoevaluacion: data.autoevaluacion || [],
+      caso,
       body: markdownBody
     };
 
@@ -115,6 +140,10 @@ function buildBlog() {
       path.join(outputPostsDir, `${postSummary.slug}.json`),
       fullPost,
     );
+  }
+
+  if (casos.size) {
+    throw new Error('Casos compilados sin artículo: ' + [...casos.keys()].join(', '));
   }
 
   // Sort reverse chronological
