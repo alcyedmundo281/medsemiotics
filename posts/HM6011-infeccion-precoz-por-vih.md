@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
+  revision: 9c9015322734168fe0328362950237f8ad296a55
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6011-infeccion-precoz-por-vih.yaml
   archivos:

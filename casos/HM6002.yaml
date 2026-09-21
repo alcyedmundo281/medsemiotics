@@ -1,0 +1,143 @@
+# Caso socrático para Síndrome de intestino irritable (HM:6002).
+# Tema cualitativo: la base no registra LR medidos para los síntomas. Lo que discrimina
+# son los signos de alarma, y ahí la base distingue consenso sin cifras, relaciones que
+# no se emiten con su motivo y una discrepancia entre fuentes (hematoquecia).
+condicion_id: HM:6002
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-09-21
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Plantear el síndrome de intestino irritable como un diagnóstico positivo basado en el patrón de síntomas, no como un diagnóstico de exclusión.
+  - Reconocer que el dolor abdominal, la diarrea y el estreñimiento orientan el diagnóstico sin tener cocientes de verosimilitud medidos.
+  - Distinguir en la base un signo de alarma sostenido por consenso, una relación no emitida con su motivo y una discrepancia entre fuentes.
+  - Decidir qué estudios pedir y cuándo no hace falta una colonoscopia.
+vineta:
+  titulo: Una contadora con dolor que mejora al evacuar
+  texto: >-
+    Mujer de 29 años, contadora. Consulta por dolor abdominal cólico en el hemiabdomen
+    inferior que aparece varios días por semana desde hace ocho meses. El dolor mejora
+    después de evacuar. Alterna semanas de heces blandas y frecuentes con semanas de
+    heces duras, y refiere distensión que empeora al final del día y en los cierres de
+    mes del trabajo. No ha visto sangre, no ha perdido peso, no la despierta el dolor por
+    la noche y no ha tenido fiebre. No hay antecedentes familiares de cáncer colorrectal,
+    enfermedad celíaca ni enfermedad inflamatoria intestinal.
+  datos:
+    - etiqueta: Índice de masa corporal
+      valor: 23 kg/m²
+    - etiqueta: Signos vitales
+      valor: Normales
+    - etiqueta: Último ciclo menstrual
+      valor: Hace dos semanas, ciclos regulares
+etapas:
+  - titulo: Antes de explorar
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          ¿Qué diagnósticos consideras ante un dolor abdominal crónico y recurrente en una
+          mujer joven? ¿El intestino irritable debe ser lo último que queda tras
+          descartarlo todo?
+        clave: >-
+          El diferencial incluye la enfermedad celíaca, la enfermedad inflamatoria
+          intestinal, la intolerancia a la lactosa, la colitis microscópica, causas
+          ginecológicas como la endometriosis y alteraciones tiroideas. Pero el síndrome
+          de intestino irritable no es un diagnóstico de exclusión: se hace en positivo,
+          por un patrón de síntomas característico, y se completa con pocas pruebas
+          dirigidas cuando no hay datos de alarma. Descartarlo todo expone a la paciente
+          a estudios innecesarios y no mejora la certeza.
+  - titulo: El patrón del dolor
+    fase: exploracion
+    hallazgos: [HM:0201]
+    informacion: >-
+      El {{hallazgo HM:0201}} es recurrente, se relaciona con la defecación y se acompaña
+      de cambios en la frecuencia y la forma de las heces. En la exploración hay
+      molestia leve a la palpación profunda en la fosa ilíaca izquierda, sin masas,
+      visceromegalias ni signos de irritación peritoneal.
+    preguntas:
+      - pregunta: >-
+          ¿Qué rasgos del dolor sostienen el diagnóstico de intestino irritable? ¿Cuánto
+          aumenta la probabilidad la presencia de este dolor?
+        clave: >-
+          Lo característico es la relación del dolor con la defecación y con los cambios
+          en la frecuencia o la consistencia de las heces: es el núcleo de los criterios
+          de Roma IV. Pero la base registra el {{hallazgo HM:0201}} con {{estado HM:0201}}:
+          el único cociente publicado corresponde a un hallazgo más estrecho, el dolor
+          abdominal bajo, y la base no se lo atribuye al dolor abdominal en general.
+          Orienta el diagnóstico sin que podamos ponerle un número, y un dolor que no se
+          relaciona con la defecación obliga a buscar otra explicación.
+  - titulo: El hábito intestinal y las alarmas
+    fase: discriminacion
+    hallazgos: [HM:0303, HM:0304]
+    informacion: >-
+      La paciente alterna {{hallazgo HM:0303}} y {{hallazgo HM:0304}}, sin un hábito que
+      predomine claramente. Revisas de forma dirigida los datos que harían pensar en una
+      enfermedad orgánica: sangre en las heces, anemia, pérdida de peso, fiebre,
+      síntomas nocturnos o antecedentes familiares.
+    preguntas:
+      - pregunta: >-
+          ¿Por qué importa si predomina la diarrea, el estreñimiento o si alternan? ¿Qué
+          dice la base sobre su poder diagnóstico?
+        clave: >-
+          El hábito predominante define el subtipo (con predominio de diarrea, de
+          estreñimiento o mixto) y orienta tanto las pruebas como el tratamiento: el
+          predominio de diarrea obliga a pensar en celiaquía, colitis microscópica o
+          enfermedad inflamatoria. Como diagnóstico, la base registra la
+          {{hallazgo HM:0303}} y el {{hallazgo HM:0304}} con {{estado HM:0303}}: describen
+          el cuadro, no lo confirman. Lo que sí tiene cocientes medidos son los
+          criterios que combinan varios síntomas (Manning, Roma y Kruis): revisa en la
+          ficha de evidencia cuánto aportan y por qué la base aún no los estructura.
+      - pregunta: >-
+          Si los síntomas no discriminan, ¿qué lo hace? Revisa en la ficha de evidencia
+          cómo registra la base la anemia, la pérdida de peso, la fiebre y la sangre en
+          las heces. ¿Por qué no las trata a todas igual?
+        clave: >-
+          Lo que separa el intestino irritable de la enfermedad orgánica son los signos
+          de alarma, pero la base distingue tres situaciones. La anemia y la pérdida de
+          peso son signos de alarma sostenidos por consenso: una revisión sistemática
+          afirma que son específicos, pero sin publicar cifras, así que no tienen
+          cociente. La fiebre no se incorpora: no contradice el diagnóstico, solo obliga
+          a explicarla. Y la sangre en las heces tiene dos fuentes que se contradicen,
+          por lo que la base prefiere no atribuirle un poder discriminativo que no
+          consta. En la práctica, cualquiera de ellos obliga a estudiar a la paciente;
+          lo que la base enseña es con cuánta certeza lo sabemos.
+  - titulo: Qué hacer con esta paciente
+    fase: decision
+    informacion: >-
+      El hemograma no muestra anemia, la proteína C reactiva es normal, la serología de
+      enfermedad celíaca es negativa y la calprotectina fecal es normal.
+    preguntas:
+      - pregunta: >-
+          ¿Necesita una colonoscopia? ¿Cómo le comunicas el diagnóstico?
+        clave: >-
+          No: es joven, no tiene signos de alarma ni antecedentes familiares y las
+          pruebas dirigidas son normales. La colonoscopia se reserva para los signos de
+          alarma, el inicio de los síntomas a la edad del cribado de cáncer colorrectal o
+          los antecedentes familiares. Se le explica que tiene un diagnóstico
+          establecido, no «la ausencia de algo»: un trastorno de la interacción entre
+          el intestino y el cerebro, benigno y crónico, con fluctuaciones.
+      - pregunta: >-
+          ¿Qué plan inicial le propones y qué te haría reconsiderar el diagnóstico?
+        clave: >-
+          Educación y una relación terapéutica sólida, actividad física, regularidad en
+          las comidas, fibra soluble y, si hay relación con alimentos, una dieta baja en
+          FODMAP supervisada; tratamiento sintomático del dolor y del hábito según el
+          subtipo. Obliga a reconsiderar la aparición de cualquier signo de alarma, un
+          cambio en el patrón de los síntomas o la falta de respuesta al tratamiento.
+cierre:
+  sintesis: >-
+    El intestino irritable se diagnostica en positivo, por un patrón de dolor ligado a la
+    defecación y a cambios en el hábito intestinal. Pero la base no documenta ningún
+    cociente de verosimilitud para esos síntomas, y lo que realmente discrimina —los
+    signos de alarma— se sostiene por consenso, se excluye con un motivo o se discute
+    entre fuentes que se contradicen. Saber con cuánta certeza se sabe algo también es
+    parte del razonamiento clínico.
+  necesidades_aprendizaje:
+    - Criterios de Roma IV y sus subtipos; la base registra cocientes para Manning, Roma I, Roma III y Kruis, pero no para Roma IV.
+    - Probabilidad basal en la consulta de atención primaria de nuestro medio; la que registra la base procede de pacientes derivados a estudio.
+    - Texto completo de Hammer 2004 sobre la sangre en las heces, necesario para reabrir la discrepancia registrada.
+    - Opciones farmacológicas según el subtipo, en farmacosemiotics.
+omitidos: []

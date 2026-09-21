@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
+  revision: 9c9015322734168fe0328362950237f8ad296a55
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6023-conmocion-cerebral-pediatrica.yaml
   archivos:
@@ -23,7 +23,7 @@ fuente:
     conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0105-bradicardia.yaml: 088974edd57d3a795e8df4a594180e440f0821a08fc12ef6e4a22f7af9d66607
     conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
-    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0201-dolor-abdominal.yaml: adbaa4992613e08871e7e4d6259066ab9da4d9696dd256e274007f5965dd7813
     conceptos/HM0400-sintoma-respiratorio.yaml: 437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b
     conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3094-niebla-mental.yaml: edba2bd487bfd1c0b34a33f4762a78d33e6911ef7373b14badff7a1f96c3f03f
@@ -32,7 +32,11 @@ fuente:
     conceptos/HM3097-punto-proximo-de-convergencia-anormal.yaml: e652c6a21318fffa323862abb88f3570d077900498ce2d079519c99bc55530fd
     conceptos/HM3098-movimientos-de-persecucion-suave-anormales.yaml: 48ebc6227ba3c681a5d3e0bd6378be7aeac41aea9ea2d3d4ff15c290fbfae32c
     conceptos/HM3099-sacadas-oculares-anormales.yaml: 96dba68766d1678acadb7b30e890122f25fdf325f812b05371553369e90db62b
+    condiciones/HM6002-sindrome-intestino-irritable.yaml: 91c7f09f57b2be77b8bc5ea732b1ac712c6c0e587dd230ec8587f8a5e3dbf04b
     condiciones/HM6023-conmocion-cerebral-pediatrica.yaml: d63ec5841dbc0749f78ad4ecc2b45254ed5262b4756783b72eb83551b7c57a8c
+    referencias/pmid-18441863.yaml: d9f899b7a68ba1799bfaae19fadfcc97108841be6db29c7632e00ce769237478
+    referencias/pmid-23055768.yaml: 6ff183a65d1b0bb695846f2ae115ec0e7c0b18ca72b18f8cf6eb2ae158f926ec
+    referencias/pmid-27144627.yaml: 8fee779f41d1a67e9a989383a7d43687d62c6d28617e004730efe3b075dafadf
     referencias/pmid-41941197.yaml: 18cbdb879da36a79aef7d6c8911332329c408e68df1052682cb850affb3dd528
 grounding:
   condicion_id: HM:6023
@@ -287,6 +291,12 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ### Dolor abdominal (HM:0201)
 
+**Significante:** Dolor referido por el paciente en el abdomen. Se caracteriza por su localización (cuadrante o región), carácter, cronología, irradiación y los factores que lo modifican; la localización es el punto de partida de la evaluación (pmid:18441863).
+
+**Significado:** Estímulo nociceptivo de origen visceral (distensión, inflamación o isquemia de una víscera, mal localizado y de línea media), parietal (irritación del peritoneo, bien localizado) o referido desde estructuras extraabdominales (pmid:23055768). En los trastornos funcionales intestinales se asocia a la defecación o a cambios del hábito intestinal (pmid:27144627).
+
+**Falsos positivos:** Dolor de pared abdominal (musculoesquelético o neuropático), que no procede de las vísceras / Dolor referido desde el tórax, como el de origen cardiaco o pleural
+
 **Rol:** Prueba sensible
 
 **Estado del LR:** LR medido
@@ -310,5 +320,11 @@ Los síntomas referidos como sentirse 'en una niebla' (LR+ 11.9) y los hallazgos
 ## Referencias y procedencia
 
 **pmid:41941197:** Does This Child Have a Concussion?: The Rational Clinical Examination Systematic Review. JAMA, 2026. DOI: 10.1001/jama.2026.1233.
+
+**pmid:18441863:** Evaluation of acute abdominal pain in adults. Am Fam Physician, 2008. DOI: no documentado.
+
+**pmid:23055768:** Evaluation and management of acute abdominal pain in the emergency department. Int J Gen Med, 2012. DOI: 10.2147/IJGM.S25936.
+
+**pmid:27144627:** Bowel Disorders. Gastroenterology, 2016. DOI: 10.1053/j.gastro.2016.02.031.
 
 Fuente clínica: medsemiotics-db, condición HM:6023.

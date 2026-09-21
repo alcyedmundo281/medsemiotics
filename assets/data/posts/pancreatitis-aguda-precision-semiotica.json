@@ -85,12 +85,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
+    "revision": "9c9015322734168fe0328362950237f8ad296a55",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6040-pancreatitis-aguda.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
-      "conceptos/HM0201-dolor-abdominal.yaml": "564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda",
+      "conceptos/HM0201-dolor-abdominal.yaml": "adbaa4992613e08871e7e4d6259066ab9da4d9696dd256e274007f5965dd7813",
       "conceptos/HM0202-dolor-epigastrico.yaml": "284406d6397caf6b3b25e539e0237ddf1d424b846f97b94cbb2ff75b2c1ef99a",
       "conceptos/HM0205-dolor-abdominal-en-cinturon.yaml": "0f13e881a8d29bac46d58b3c6664e9414fd2ba135075822528317bf09e1fb47b",
       "conceptos/HM0300-sintoma-digestivo.yaml": "2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa",
