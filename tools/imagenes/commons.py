@@ -55,6 +55,17 @@ def _texto(valor: Any) -> str:
     return re.sub(r"\s+", " ", html.unescape(limpio)).strip()
 
 
+def _autor(valor: Any) -> str:
+    """Commons repite a veces el nombre («Unknown author Unknown author»)."""
+    texto = _texto(valor)
+    mitad = len(texto) // 2
+    if len(texto) % 2 == 1 and texto[:mitad] == texto[mitad + 1 :]:
+        texto = texto[:mitad]
+    if not texto or texto.lower() in {"unknown", "unknown author", "anonymous"}:
+        return "Autor no declarado"
+    return texto
+
+
 def _sin_consulta(url: Any) -> str:
     """Quita los parámetros de seguimiento (``utm_*``) que añade la API."""
     return str(url or "").split("?", 1)[0]
@@ -85,7 +96,7 @@ def _imagen(pagina: dict[str, Any]) -> Imagen | None:
         pagina=_sin_consulta(info.get("descriptionurl")),
         licencia=licencia if aceptada else f"NO PERMITIDA: {licencia}",
         codigo_licencia=codigo,
-        autor=_texto((metadatos.get("Artist") or {}).get("value")) or "Autor no declarado",
+        autor=_autor((metadatos.get("Artist") or {}).get("value")),
         descripcion=_texto((metadatos.get("ImageDescription") or {}).get("value"))[:300],
         ancho=int(info.get("width") or 0),
         alto=int(info.get("height") or 0),

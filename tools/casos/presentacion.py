@@ -8,12 +8,9 @@ from typing import Any
 def _tabla(datos: list[dict[str, str]]) -> list[str]:
     if not datos:
         return []
-    return [
-        "",
-        "| Dato | Hallazgo |",
-        "| :--- | :--- |",
-        *(f"| {d['etiqueta']} | {d['valor']} |" for d in datos),
-    ]
+    filas = ["| Dato | Hallazgo |", "| :--- | :--- |"]
+    filas += [f"| {d['etiqueta']} | {d['valor']} |" for d in datos]
+    return ["\n".join(filas)]
 
 
 def markdown(caso: dict[str, Any]) -> str:

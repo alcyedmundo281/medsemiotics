@@ -92,3 +92,9 @@ def test_registro_y_comprobacion(raiz: Path) -> None:
     assert comprobar(raiz, estricto=True, online=False) == [
         "HM1234: imagen de una condición sin artículo."
     ]
+
+
+def test_autor_duplicado_o_desconocido() -> None:
+    assert commons._autor("Unknown author Unknown author") == "Autor no declarado"
+    assert commons._autor("CDC CDC") == "CDC"
+    assert commons._autor("R. G. Wiener, Harlem Hospital") == "R. G. Wiener, Harlem Hospital"

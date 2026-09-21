@@ -169,10 +169,27 @@ def resolver(texto: str, articulo: Articulo, permitidos: Collection[str], donde:
         errores.append(f"{donde}: {concepto} se cita antes de revelarse en una etapa.")
     if errores:
         raise ErrorDeCaso("\n".join(errores))
-    return TOKEN.sub(
-        lambda m: resolver_token(m["tipo"], m["id"], articulo, int(m["n"]) if m["n"] else None),
-        texto,
-    )
+
+    def sustituir(m: re.Match[str]) -> str:
+        valor = resolver_token(m["tipo"], m["id"], articulo, int(m["n"]) if m["n"] else None)
+        if m["tipo"] == "hallazgo" and not _inicio_de_oracion(texto, m.start()):
+            return _minuscula_inicial(valor)
+        return valor
+
+    return TOKEN.sub(sustituir, texto)
+
+
+def _inicio_de_oracion(texto: str, posicion: int) -> bool:
+    previo = texto[:posicion].rstrip(" «\"'")
+    # Tras dos puntos, el español sigue en minúscula.
+    return not previo or previo[-1] in ".?!¿¡\n"
+
+
+def _minuscula_inicial(nombre: str) -> str:
+    """«Fiebre» → «fiebre» dentro de una oración; las siglas («ECG», «VIH») no se tocan."""
+    if len(nombre) > 1 and nombre[0].isupper() and nombre[1].islower():
+        return nombre[0].lower() + nombre[1:]
+    return nombre
 
 
 def resumen(concepto: str, articulo: Articulo) -> list[dict[str, Any]]:

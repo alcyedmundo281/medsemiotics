@@ -36,7 +36,7 @@ def test_las_cifras_llegan_desde_la_base_con_su_incertidumbre(raiz: Path) -> Non
     clave = exploracion["preguntas"][0]["clave"]
     assert "LR+ 3.1 (IC 95 %: 1.6–5.9)" in clave
     assert "especificidad 0.87" in clave
-    assert exploracion["preguntas"][0]["pregunta"] == "¿Qué aporta Signo específico?"
+    assert exploracion["preguntas"][0]["pregunta"] == "¿Qué aporta signo específico?"
     # Un rango nunca se convierte en estimación puntual.
     assert "LR− entre 0.23 y 0.44 (rango entre estudios" in discriminacion["preguntas"][0]["clave"]
     ficha = exploracion["hallazgos"][0]
@@ -242,3 +242,13 @@ def test_hallazgo_medido_en_varias_poblaciones(raiz: Path) -> None:
     datos["etapas"][1]["preguntas"][0]["clave"] = "Fuera de rango: {{lr+ HM:0001@3}}."
     with pytest.raises(ErrorDeCaso, match="2 medición"):
         compilado(raiz, datos)
+
+
+def test_nombres_en_minuscula_dentro_de_la_oracion() -> None:
+    from casos.evidencia import _inicio_de_oracion, _minuscula_inicial
+
+    assert _minuscula_inicial("Fiebre") == "fiebre"
+    assert _minuscula_inicial("ECG con elevación del ST") == "ECG con elevación del ST"
+    assert _inicio_de_oracion("Hola. ", 6)
+    assert _inicio_de_oracion("", 0)
+    assert not _inicio_de_oracion("Se observa ", 11)
