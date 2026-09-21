@@ -254,6 +254,6 @@ gestación o periodo puerperal
 
 ## Referencias y procedencia
 
-**pmid:7861577:** The rational clinical examination. Does this patient have a goiter?. JAMA, 1995. DOI: None.
+**pmid:7861577:** The rational clinical examination. Does this patient have a goiter?. JAMA, 1995. DOI: no documentado.
 
 Fuente clínica: medsemiotics-db, condición HM:6048.

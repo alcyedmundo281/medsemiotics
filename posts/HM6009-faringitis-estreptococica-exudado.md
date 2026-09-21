@@ -256,6 +256,6 @@ Se incorporaron las escalas canónicas de Centor (pmid:6763125) y McIsaac (pmid:
 
 **pmid:6763125:** The diagnosis of strep throat in adults in the emergency room. Med Decis Making, 1981. DOI: 10.1177/0272989X8100100304.
 
-**pmid:9475915:** A clinical score to reduce unnecessary antibiotic use in patients with sore throat. CMAJ, 1998. DOI: None.
+**pmid:9475915:** A clinical score to reduce unnecessary antibiotic use in patients with sore throat. CMAJ, 1998. DOI: no documentado.
 
 Fuente clínica: medsemiotics-db, condición HM:6009.

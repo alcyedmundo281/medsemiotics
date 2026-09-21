@@ -265,6 +265,6 @@ anemia hemolítica o hemoglobinopatía crónica
 
 ## Referencias y procedencia
 
-**pmid:8411607:** The rational clinical examination. Does this patient have splenomegaly?. JAMA, 1993. DOI: None.
+**pmid:8411607:** The rational clinical examination. Does this patient have splenomegaly?. JAMA, 1993. DOI: no documentado.
 
 Fuente clínica: medsemiotics-db, condición HM:6047.

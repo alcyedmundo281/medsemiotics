@@ -444,7 +444,7 @@ def make_post(source, condition_path, previous=None):
         ids = reference.get("identificadores", {})
         body.append(f"**{rid}:** {reference['titulo']}. "
                     f"{reference.get('publicacion', '')}, {reference.get('anio', '')}. "
-                    f"DOI: {ids.get('doi', 'no documentado')}.")
+                    f"DOI: {ids.get('doi') or 'no documentado'}.")
     body.append(f"Fuente clínica: medsemiotics-db, condición {cid}.")
     text = "---\n" + yaml.safe_dump(meta, allow_unicode=True, sort_keys=False, width=1000) + \
            "---\n\n" + "\n\n".join(body) + "\n"
