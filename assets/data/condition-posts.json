@@ -244,5 +244,47 @@
     "archivo": "condiciones/HM6041-absceso-de-partes-blandas.yaml",
     "slug": "absceso-de-partes-blandas-precision-semiotica",
     "url": "https://powersemiotics.com/medsemiotics/post.html?slug=absceso-de-partes-blandas-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6042",
+    "archivo": "condiciones/HM6042-colecistitis-aguda.yaml",
+    "slug": "colecistitis-aguda-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=colecistitis-aguda-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6043",
+    "archivo": "condiciones/HM6043-apendicitis-aguda.yaml",
+    "slug": "apendicitis-aguda-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=apendicitis-aguda-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6044",
+    "archivo": "condiciones/HM6044-tromboembolia-pulmonar.yaml",
+    "slug": "tromboembolia-pulmonar-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=tromboembolia-pulmonar-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6045",
+    "archivo": "condiciones/HM6045-taponamiento-cardiaco.yaml",
+    "slug": "taponamiento-cardiaco-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=taponamiento-cardiaco-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6046",
+    "archivo": "condiciones/HM6046-ascitis.yaml",
+    "slug": "ascitis-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=ascitis-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6047",
+    "archivo": "condiciones/HM6047-esplenomegalia.yaml",
+    "slug": "esplenomegalia-precision-semiotica",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=esplenomegalia-precision-semiotica"
+  },
+  {
+    "condicion_id": "HM:6048",
+    "archivo": "condiciones/HM6048-bocio.yaml",
+    "slug": "bocio-inspeccion-palpacion-precision",
+    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=bocio-inspeccion-palpacion-precision"
   }
 ]

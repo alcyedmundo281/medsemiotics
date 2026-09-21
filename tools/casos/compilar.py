@@ -159,7 +159,7 @@ def compilar(leido: CasoLeido, hoy: date) -> dict[str, Any]:
                 if etapa.informacion
                 else None,
                 "datos": _datos(etapa.datos, articulo, f"{donde}: {lugar}"),
-                "hallazgos": [resumen(c, articulo) for c in etapa.hallazgos],
+                "hallazgos": [f for c in etapa.hallazgos for f in resumen(c, articulo)],
                 "preguntas": [
                     {
                         "pregunta": texto(p.pregunta, revelados, f"{lugar}, pregunta {i}"),
@@ -269,11 +269,12 @@ def esqueleto(articulo: Articulo, autor: str) -> str:
         "# Asigne cada hallazgo a una etapa o justifique su omisión en «omitidos».",
         "# Hallazgos registrados en medsemiotics-db:",
     ]
-    for concepto, item in articulo.evidencia.items():
+    for concepto, items in articulo.evidencia.items():
         marca = " ← principal" if concepto == articulo.concepto_principal else ""
+        varias = f", {len(items)} poblaciones: use @1..@{len(items)}" if len(items) > 1 else ""
         lineas.append(
             f"#   {concepto}  {articulo.nombres[concepto]} "
-            f"[{item.get('rol')}, {item.get('estado_lr')}]{marca}"
+            f"[{items[0].get('rol')}, {items[0].get('estado_lr')}{varias}]{marca}"
         )
     principal = articulo.concepto_principal or next(iter(articulo.evidencia), "HM:0000")
     plantilla = {

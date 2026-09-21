@@ -31,7 +31,7 @@ class Articulo:
     fecha: str
     revision_fuente: str
     concepto_principal: str | None
-    evidencia: dict[str, dict[str, Any]]
+    evidencia: dict[str, list[dict[str, Any]]]
     nombres: dict[str, str]
     referencias: dict[str, str]
 
@@ -53,12 +53,13 @@ def leer_articulo(ruta: Path) -> Articulo:
     condicion_id = grounding.get("condicion_id")
     if not isinstance(condicion_id, str) or not fuente.get("revision"):
         raise ErrorDeCaso(f"{ruta.name}: artículo sin procedencia de medsemiotics-db.")
-    evidencia: dict[str, dict[str, Any]] = {}
+    # Un mismo hallazgo puede medirse en varias poblaciones: se conservan todas.
+    evidencia: dict[str, list[dict[str, Any]]] = {}
     for item in datos.get("evidencia") or []:
         concepto = item.get("concepto")
-        if not isinstance(concepto, str) or concepto in evidencia:
-            raise ErrorDeCaso(f"{ruta.name}: evidencia sin concepto o duplicada: {concepto}")
-        evidencia[concepto] = item
+        if not isinstance(concepto, str):
+            raise ErrorDeCaso(f"{ruta.name}: evidencia sin concepto.")
+        evidencia.setdefault(concepto, []).append(item)
     nombres = {m["id"]: m["nombre"] for m in ENCABEZADO_HALLAZGO.finditer(cuerpo)}
     sin_nombre = sorted(set(evidencia) - set(nombres))
     if sin_nombre:

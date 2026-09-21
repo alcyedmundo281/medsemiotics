@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Básico
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: 97f51ff1d54adf8360b0e89cf56b36eb7e633e4f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6009-faringitis-estreptococica.yaml
   archivos:
@@ -27,8 +27,10 @@ fuente:
     conceptos/HM3028-exposicion-estreptococo.yaml: 26edc47823c8d5fa6dc3268a3bdcc36f8470f2fe973db587f023d6ac3ccaff21
     conceptos/HM3029-adenopatia-cervical-anterior-dolorosa.yaml: c126e8e1eee16e645ed035c25ba116ac1aa29d60638b8b8dae0a98875240574a
     conceptos/HM3030-hipertrofia-amigdalina.yaml: c5638d1545cdfaeeec3fa4b95fd6b0b104c48be33b947131f4e3b8e8dc4198eb
-    condiciones/HM6009-faringitis-estreptococica.yaml: 3d245901b5953adc1bc2bb4fabfb95e3855fa4b1d5009751cfbe62f421bc4ef7
+    condiciones/HM6009-faringitis-estreptococica.yaml: 31b01dd7623bd529875b45aaed09ac7f06c720c93463cdc005b995a95644e67e
     referencias/pmid-11147989.yaml: f6aca870e75ab118eba2a41950cb38d56cabbcb69b65ba4e5eadc1f671edafc8
+    referencias/pmid-6763125.yaml: 764d2c78e1fd8f05c848d65e20a4927365168d36051cb96e00bd7b7576af1cd8
+    referencias/pmid-9475915.yaml: 2b19c59f77bc92ff3d8a770384ecdf63a7e28433eda7d8030995781991597827
 grounding:
   condicion_id: HM:6009
   condicion_nombre: Faringitis estreptocócica
@@ -234,16 +236,26 @@ Snomed: No documentado.; Cie10: No documentado.
 
 Nombre: Ausencia de exudado; Componentes: Exudado amigdalino (HM:3026) / Exudado faríngeo (HM:3027); Criterio: ausencia de exudado amigdalino o faríngeo; LR negativo: 0.74; Referencia: pmid:11147989; Decisión: su ausencia apenas modifica la probabilidad; no sirve para descartar
 
+## Escalas
+
+Nombre: Criterios de Centor; Componentes declarados: cuatro variables clínicas (1 punto cada una): fiebre referida o medida > 38 °C, ausencia de tos, exudado amigdalino o faríngeo y adenopatía cervical anterior dolorosa; Graduación: Parámetro: Puntuación de Centor; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: 4 puntos (probabilidad alta); Desde: 4; Hasta: 5; Prevalencia: 0.56; Referencia: pmid:6763125; Decisión: la probabilidad ronda el 56%; orienta a realizar prueba rápida o tratamiento según protocolo local / Rango documentado: 3 puntos (probabilidad intermedia-alta); Desde: 3; Hasta: 4; Prevalencia: 0.32; Referencia: pmid:6763125; Decisión: probabilidad de 32%; indicación habitual de prueba rápida de antígeno o cultivo / Rango documentado: 2 puntos (probabilidad intermedia); Desde: 2; Hasta: 3; Prevalencia: 0.15; Referencia: pmid:6763125; Decisión: probabilidad de 15%; orienta a prueba diagnóstica rápida antes de tratar / Rango documentado: 1 punto (probabilidad baja); Desde: 1; Hasta: 2; Prevalencia: 0.065; Referencia: pmid:6763125; Decisión: probabilidad muy baja (6.5%); generalmente no requiere prueba ni antibiótico / Rango documentado: 0 puntos (probabilidad mínima); Desde: 0; Hasta: 1; Prevalencia: 0.025; Referencia: pmid:6763125; Decisión: descarta prácticamente la etiología estreptocócica (2.5%); no tratar ni cultivar
+
+Nombre: Escala de McIsaac (Centor modificada); Componentes declarados: criterios de Centor con ajuste por edad: fiebre > 38 °C (+1), ausencia de tos (+1), exudado o hipertrofia amigdalina (+1), adenopatía cervical anterior dolorosa (+1); edad 3 a 14 años (+1), edad 15 a 44 años (0), edad ≥ 45 años (-1); Graduación: Parámetro: Puntuación de McIsaac; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: 4 a 5 puntos (riesgo alto); Desde: 4; Hasta: 6; Prevalencia rango: 0.51 / 0.53; Referencia: pmid:9475915; Decisión: riesgo alto (51-53%); indicación de prueba rápida o tratamiento empírico según guías locales / Rango documentado: 3 puntos (riesgo intermedio-alto); Desde: 3; Hasta: 4; Prevalencia rango: 0.28 / 0.35; Referencia: pmid:9475915; Decisión: riesgo del 28-35%; indicación de prueba diagnóstica rápida o cultivo / Rango documentado: 2 puntos (riesgo intermedio); Desde: 2; Hasta: 3; Prevalencia rango: 0.11 / 0.17; Referencia: pmid:9475915; Decisión: riesgo del 11-17%; indicación de prueba diagnóstica rápida o cultivo / Rango documentado: 1 punto (riesgo bajo); Desde: 1; Hasta: 2; Prevalencia rango: 0.05 / 0.1; Referencia: pmid:9475915; Decisión: riesgo del 5-10%; no requiere pruebas adicionales ni antibióticos / Rango documentado: 0 o menor (riesgo mínimo); Hasta: 1; Prevalencia rango: 0.01 / 0.025; Referencia: pmid:9475915; Decisión: riesgo mínimo (1-2.5%); manejo sintomático exclusivo sin antibióticos
+
 ## Conclusión de la fuente
 
 Ningún elemento aislado de la anamnesis o de la exploración física es lo bastante preciso para excluir ni para diagnosticar la faringitis estreptocócica. Una regla de predicción clínica bien validada sí resulta útil y ayuda al médico a usar de forma más informada las pruebas rápidas de antígeno y el cultivo faríngeo.
 
 ## Aspectos pendientes de documentación
 
-La fuente describe tres reglas de predicción clínica validadas, para población adulta y pediátrica, pero el abstract no las nombra ni las cuantifica. Registrarlas exige el texto completo.
+Se incorporaron las escalas canónicas de Centor (pmid:6763125) y McIsaac (pmid:9475915). Queda pendiente evaluar la incorporación de la regla de Breese para población pediátrica específica si se requiere mayor granularidad.
 
 ## Referencias y procedencia
 
 **pmid:11147989:** The rational clinical examination. Does this patient have strep throat?. JAMA, 2000. DOI: 10.1001/jama.284.22.2912.
+
+**pmid:6763125:** The diagnosis of strep throat in adults in the emergency room. Med Decis Making, 1981. DOI: 10.1177/0272989X8100100304.
+
+**pmid:9475915:** A clinical score to reduce unnecessary antibiotic use in patients with sore throat. CMAJ, 1998. DOI: None.
 
 Fuente clínica: medsemiotics-db, condición HM:6009.

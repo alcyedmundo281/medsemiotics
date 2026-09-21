@@ -550,6 +550,7 @@
               <span class="font-bold text-stone-900">${escapeHtml(h.nombre)}</span>
               <span class="text-xs text-stone-500">${escapeHtml(h.rol)} · ${escapeHtml(h.estado)}</span>
             </div>
+            ${h.poblacion ? `<p class="text-xs text-stone-600 mb-2">Población: ${escapeHtml(h.poblacion)}</p>` : ''}
             ${cifras ? `<div class="flex flex-wrap gap-1.5 mb-2">${cifras}</div>` : ''}
             ${nota ? `<p class="text-sm text-purple-950">${nota}</p>` : ''}
             ${(h.referencias || []).length ? `<p class="text-[11px] font-mono text-stone-500 mt-1">${h.referencias.map(escapeHtml).join(' · ')}</p>` : ''}

@@ -15,13 +15,13 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: 97f51ff1d54adf8360b0e89cf56b36eb7e633e4f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6003-mononucleosis-infecciosa.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0211-odinofagia.yaml: cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f
-    conceptos/HM0603-esplenomegalia.yaml: 91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5
+    conceptos/HM0603-esplenomegalia.yaml: d694a903ae98ee750e432f8b2f95e52b856440a67ebef8ea14396108447626a6
     conceptos/HM0607-adenopatias.yaml: f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561
     conceptos/HM0801-astenia.yaml: 95bc981acd8d63bc1c693bd3ba572e4e714a900777e0d933281d82d22bcaa097
     conceptos/HM3001-adenopatia-cervical-posterior.yaml: 771bd6d4c7525ad532de18c2977bb2420d1abba7ed1f0f5d2c57444eb6f7467f
@@ -279,6 +279,12 @@ Factor: Edad entre 5 y 25 años; Referencia: pmid:27115266; Nota: máxima frecue
 **Decisión:** el hallazgo exploratorio que más aumenta la probabilidad
 
 ### Esplenomegalia (HM:0603)
+
+**Significante:** Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (HM:3184, HM:3185).
+
+**Significado:** Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.
+
+**Falsos positivos:** Ptosis esplénica (bazo móvil o desplazado caudalmente sin incremento de masa) / Masa en polo inferior de riñón izquierdo o hidronefrosis / Tumor retroperitoneal o masa dependiente del ángulo esplénico del colon
 
 **Rol:** Prueba específica
 

@@ -8,7 +8,8 @@ from datetime import date
 from typing import TYPE_CHECKING, Any
 
 import pytest
-from conftest import CASO, HOY, escribir_caso
+import yaml
+from conftest import CASO, CUERPO, FRONTMATTER, HOY, escribir_caso
 
 from casos.compilar import Rutas, compilar, construir, leer_casos
 from casos.errores import ErrorDeCaso
@@ -215,3 +216,29 @@ def test_nombre_de_archivo_coherente(raiz: Path) -> None:
     (raiz / "casos" / "HM9999.yaml").rename(raiz / "casos" / "HM1234.yaml")
     with pytest.raises(ErrorDeCaso, match=r"debe llamarse HM9999.yaml"):
         leer_casos(Rutas(raiz))
+
+
+def test_hallazgo_medido_en_varias_poblaciones(raiz: Path) -> None:
+    frontmatter = copy.deepcopy(FRONTMATTER)
+    primera = frontmatter["evidencia"][0]
+    primera["poblacion"] = "escolares"
+    frontmatter["evidencia"].append(
+        {
+            **copy.deepcopy(primera),
+            "poblacion": "gestantes",
+            "lr_positivo": {"valor": 4.7, "ic95": [3.6, 6.0], "ref": "pmid:111"},
+        }
+    )
+    texto = "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True) + "---\n" + CUERPO
+    (raiz / "posts" / "HM9999-tema.md").write_text(texto, encoding="utf-8")
+    datos = caso()
+    datos["etapas"][1]["preguntas"][0]["clave"] = "Todas: {{lr+ HM:0001}}. Solo: {{lr+ HM:0001@2}}."
+    resultado = compilado(raiz, datos)
+    clave = resultado["etapas"][1]["preguntas"][0]["clave"]
+    assert "LR+ 3.1 (IC 95 %: 1.6–5.9) (escolares); LR+ 4.7 (IC 95 %: 3.6–6.0) (gestantes)" in clave
+    assert clave.endswith("Solo: LR+ 4.7 (IC 95 %: 3.6–6.0).")
+    fichas = [f for f in resultado["etapas"][1]["hallazgos"] if f["id"] == "HM:0001"]
+    assert [f["poblacion"] for f in fichas] == ["escolares", "gestantes"]
+    datos["etapas"][1]["preguntas"][0]["clave"] = "Fuera de rango: {{lr+ HM:0001@3}}."
+    with pytest.raises(ErrorDeCaso, match="2 medición"):
+        compilado(raiz, datos)

@@ -7,6 +7,9 @@ Sintaxis: ``{{tipo HM:####}}``. Tipos:
 - ``hallazgo``: nombre del hallazgo.
 - ``estado``: estado del LR (medido, no medido, no medible, sin efecto).
 
+Si la base mide un hallazgo en varias poblaciones, ``{{lr+ HM:####@2}}`` cita solo la
+segunda medición; sin índice se citan todas con su población.
+
 Fuera de los tokens, el texto no puede escribir cocientes, sensibilidades, IC ni
 identificadores: así una corrección en medsemiotics-db se propaga sola al caso.
 """
@@ -23,7 +26,7 @@ if TYPE_CHECKING:
 
     from casos.articulo import Articulo
 
-TOKEN = re.compile(r"\{\{\s*(?P<tipo>[a-z+\-]+)\s+(?P<id>HM:\d+)\s*\}\}")
+TOKEN = re.compile(r"\{\{\s*(?P<tipo>[a-z+\-]+)\s+(?P<id>HM:\d+)(?:@(?P<n>\d+))?\s*\}\}")
 LLAVES = re.compile(r"\{\{.*?\}\}|\{\{|\}\}")
 TIPOS = frozenset({"lr+", "lr-", "sens", "esp", "hallazgo", "estado"})
 
@@ -102,16 +105,16 @@ def _proporcion(nombre: str, valor: Any, concepto: str) -> str:
     return f"{nombre} {valor}"
 
 
-def resolver_token(tipo: str, concepto: str, articulo: Articulo) -> str:
-    if tipo not in TIPOS:
-        raise ErrorDeCaso(f"Token desconocido «{tipo}»; tipos válidos: {sorted(TIPOS)}")
-    item = articulo.evidencia.get(concepto)
-    if item is None:
+def mediciones(concepto: str, articulo: Articulo) -> list[dict[str, Any]]:
+    items = articulo.evidencia.get(concepto)
+    if not items:
         raise ErrorDeCaso(
             f"{concepto} no está en la evidencia de {articulo.condicion_id} en medsemiotics-db."
         )
-    if tipo == "hallazgo":
-        return articulo.nombres[concepto]
+    return items
+
+
+def _valor(tipo: str, concepto: str, item: dict[str, Any]) -> str:
     if tipo == "estado":
         return ESTADOS.get(str(item.get("estado_lr")), str(item.get("estado_lr")))
     if tipo in ("lr+", "lr-"):
@@ -119,10 +122,28 @@ def resolver_token(tipo: str, concepto: str, articulo: Articulo) -> str:
             raise ErrorDeCaso(f"{concepto}: no hay LR medido que citar ({item.get('estado_lr')}).")
         campo, etiqueta = ("lr_positivo", "LR+") if tipo == "lr+" else ("lr_negativo", "LR−")
         return _cociente(etiqueta, item.get(campo), concepto)
-    campo, nombre = (
-        ("sensibilidad", "sensibilidad") if tipo == "sens" else ("especificidad", "especificidad")
+    campo = "sensibilidad" if tipo == "sens" else "especificidad"
+    return _proporcion(campo, item.get(campo), concepto)
+
+
+def resolver_token(tipo: str, concepto: str, articulo: Articulo, numero: int | None = None) -> str:
+    """Resuelve un token. Si la base mide el hallazgo en varias poblaciones, ``@n`` elige una;
+    sin índice se citan todas, cada una con su población."""
+    if tipo not in TIPOS:
+        raise ErrorDeCaso(f"Token desconocido «{tipo}»; tipos válidos: {sorted(TIPOS)}")
+    items = mediciones(concepto, articulo)
+    if tipo == "hallazgo":
+        return articulo.nombres[concepto]
+    if numero is not None:
+        if not 1 <= numero <= len(items):
+            raise ErrorDeCaso(f"{concepto}@{numero}: la base registra {len(items)} medición(es).")
+        items = [items[numero - 1]]
+    if len(items) == 1:
+        return _valor(tipo, concepto, items[0])
+    return "; ".join(
+        f"{_valor(tipo, concepto, item)} ({item.get('poblacion') or f'medición {i}'})"
+        for i, item in enumerate(items, 1)
     )
-    return _proporcion(nombre, item.get(campo), concepto)
 
 
 def conceptos_citados(texto: str) -> set[str]:
@@ -148,36 +169,45 @@ def resolver(texto: str, articulo: Articulo, permitidos: Collection[str], donde:
         errores.append(f"{donde}: {concepto} se cita antes de revelarse en una etapa.")
     if errores:
         raise ErrorDeCaso("\n".join(errores))
-    return TOKEN.sub(lambda m: resolver_token(m["tipo"], m["id"], articulo), texto)
+    return TOKEN.sub(
+        lambda m: resolver_token(m["tipo"], m["id"], articulo, int(m["n"]) if m["n"] else None),
+        texto,
+    )
 
 
-def resumen(concepto: str, articulo: Articulo) -> dict[str, Any]:
-    """Ficha de un hallazgo tal como la registra la base, para mostrarla dentro del caso."""
-    item = articulo.evidencia[concepto]
-    estado = str(item.get("estado_lr"))
-    cifras: list[str] = []
-    if estado == "medido":
-        for tipo, campo in (("lr+", "lr_positivo"), ("lr-", "lr_negativo")):
-            if item.get(campo):
-                cifras.append(resolver_token(tipo, concepto, articulo))
-    for tipo, campo in (("sens", "sensibilidad"), ("esp", "especificidad")):
-        if _numero(item.get(campo)):
-            cifras.append(resolver_token(tipo, concepto, articulo))
-    return {
-        "id": concepto,
-        "nombre": articulo.nombres[concepto],
-        "rol": ROLES.get(str(item.get("rol")), str(item.get("rol") or "")),
-        "estado_lr": estado,
-        "estado": ESTADOS.get(estado, estado),
-        "cifras": cifras,
-        "decision": item.get("decision"),
-        "motivo": item.get("motivo"),
-        "advertencia": item.get("advertencia"),
-        "referencias": sorted(referencias_de(item)),
-    }
+def resumen(concepto: str, articulo: Articulo) -> list[dict[str, Any]]:
+    """Fichas de un hallazgo tal como lo registra la base (una por población medida)."""
+    items = mediciones(concepto, articulo)
+    fichas: list[dict[str, Any]] = []
+    for item in items:
+        estado = str(item.get("estado_lr"))
+        cifras: list[str] = []
+        if estado == "medido":
+            for tipo, campo in (("lr+", "lr_positivo"), ("lr-", "lr_negativo")):
+                if item.get(campo):
+                    cifras.append(_valor(tipo, concepto, item))
+        for tipo, campo in (("sens", "sensibilidad"), ("esp", "especificidad")):
+            if _numero(item.get(campo)):
+                cifras.append(_valor(tipo, concepto, item))
+        fichas.append(
+            {
+                "id": concepto,
+                "nombre": articulo.nombres[concepto],
+                "rol": ROLES.get(str(item.get("rol")), str(item.get("rol") or "")),
+                "estado_lr": estado,
+                "estado": ESTADOS.get(estado, estado),
+                "poblacion": item.get("poblacion") if len(items) > 1 else None,
+                "cifras": cifras,
+                "decision": item.get("decision"),
+                "motivo": item.get("motivo"),
+                "advertencia": item.get("advertencia"),
+                "referencias": sorted(referencias_de(item)),
+            }
+        )
+    return fichas
 
 
-def referencias_de(item: dict[str, Any]) -> set[str]:
+def referencias_de(item: Any) -> set[str]:
     encontrados: set[str] = set()
 
     def recorrer(valor: Any) -> None:
