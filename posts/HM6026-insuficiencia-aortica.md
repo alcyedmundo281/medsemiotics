@@ -15,11 +15,14 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6026-insuficiencia-aortica.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0109-hipotension-arterial.yaml: 934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0608-soplo-cardiaco.yaml: 47bf7c076b53036a2d48cedd74b74aaa26ba69f1cb243c07f96afcc8a0068475
     conceptos/HM3116-soplo-diastolico-precoz.yaml: 37b9bc68c6c7ee2c103f014c04aa4010b9ecf1d5cb019f825457e043e24a29d4
     conceptos/HM3117-presion-de-pulso-amplia.yaml: 778885d546492a734b8df1094da2e6b4ba9dc11ec4717fbf453e522dd6b5f396
     conceptos/HM3118-maniobra-de-oclusion-arterial-transitoria.yaml: b8dde95621d686f2bfd5b7640530fc8bd766200ed4b9ce2d5903dafbc1800482

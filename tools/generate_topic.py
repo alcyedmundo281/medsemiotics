@@ -218,8 +218,46 @@ def render_value(value, concepts):
         return "Sí" if value else "No"
     text = str(value).strip()
     if text in concepts:
-        return f"{concepts[text]['termino']} ({text})"
-    return TERMS.get(text, text)
+        return concepts[text]["termino"]
+    return prosa(TERMS.get(text, text), concepts)
+
+
+def prosa(text, concepts):
+    """Sustituye los IDs HM: incrustados en un texto por el nombre del concepto.
+
+    «por hiperbilirrubinemia (HM:0745)» pierde el paréntesis porque el nombre ya
+    está escrito; «(HM:3184, HM:3185)» pasa a los nombres. Un ID sin registro
+    resuelto se deja tal cual antes que inventar un nombre.
+    """
+    def nombre(identifier, inicio):
+        termino = concepts.get(identifier, {}).get("termino")
+        if not termino:
+            return identifier
+        previo = text[:inicio].rstrip(" («")
+        # Minúscula a mitad de frase, salvo siglas y nombres propios («Trauma Screening…»).
+        comun = termino[1:2].islower() and not any(w[:1].isupper() for w in termino.split()[1:])
+        if previo and previo[-1] not in ".?!:" and comun:
+            return termino[0].lower() + termino[1:]
+        return termino
+
+    def citado(m):
+        # «HM:3060 «Hematoquecia»»: el nombre ya va entre comillas, el ID sobra.
+        termino = concepts.get(m.group(1), {}).get("termino", "")
+        return m.group(2) if m.group(2)[1:-1].lower() == termino.lower() else m.group(0)
+
+    text = re.sub(r"(HM:\d+)\s+(«[^»]+»)", citado, text)
+
+    def parentesis(m):
+        ids = re.findall(r"HM:\d+", m.group(1))
+        termino = concepts.get(ids[0], {}).get("termino") if len(ids) == 1 else None
+        # Si el nombre ya se lee en la misma frase, el paréntesis sobra.
+        frase = re.split(r"[.;:]", text[:m.start()])[-1].lower()
+        if termino and termino.lower() in frase:
+            return ""
+        return " (" + ", ".join(nombre(i, m.start()) for i in ids) + ")"
+
+    text = re.sub(r"\s*\(((?:HM:\d+)(?:,\s*HM:\d+)*)\)", parentesis, text)
+    return re.sub(r"HM:\d+", lambda m: nombre(m.group(0), m.start()), text)
 
 
 def make_question(condition, sign, concept, references, number, dataset_doi):
@@ -338,6 +376,16 @@ def make_post(source, condition_path, previous=None):
                 path, ref = source.resolve(identifier)
                 files.add(path)
                 references[identifier] = ref
+    # Concepts named inside another concept's definition only lend their name to the prose:
+    # their own references are not the article's, so they are resolved after the bibliography.
+    for concept in list(concepts.values()):
+        if concept.get("tipo") != "concepto":
+            continue
+        for identifier in sorted(set(identifiers(concept)) - set(concepts) - {cid}):
+            if identifier.startswith("HM:"):
+                path, data = source.resolve(identifier)
+                files.add(path)
+                concepts[identifier] = data
     for rid, ref in references.items():
         verification = ref.get("verificacion", {})
         if not verification.get("pubmed") or verification.get("retractado"):
@@ -384,14 +432,14 @@ def make_post(source, condition_path, previous=None):
     for field in ("sensibilidad", "especificidad"):
         if field in main:
             g[field] = main[field]
-    t = {
+    t = {k: prosa(str(v).strip(), concepts) for k, v in {
         "significante": concept.get("significante") or concept.get("termino") or c["termino"],
         "significado": concept.get("significado") or
                       "El mecanismo fisiopatológico no está documentado en esta fuente.",
         "decision": main.get("decision") or
                     c.get("conclusion_de_la_fuente") or
                     "La fuente no documenta una decisión específica para este hallazgo.",
-    }
+    }.items()}
     chosen = ([main] + [s for s in signs if s is not main])[:2] if main else []
     quiz = [make_question(c, sign, concepts[sign['concepto']], references, number,
                           source_citation['doi'])
@@ -427,7 +475,9 @@ def make_post(source, condition_path, previous=None):
         if isinstance(value, list):
             for item in value:
                 if isinstance(item, dict) and item.get("concepto"):
-                    body.append("### " + render_value(item["concepto"], concepts))
+                    # El ID queda en el encabezado: tools/casos lee de ahí los nombres.
+                    body.append("### " + concepts[item["concepto"]]["termino"]
+                                + " (" + item["concepto"] + ")")
                     definition = concepts[item["concepto"]]
                     for field in ("significante", "significado", "umbrales", "falsos_positivos"):
                         if definition.get(field):
@@ -444,7 +494,7 @@ def make_post(source, condition_path, previous=None):
         ids = reference.get("identificadores", {})
         body.append(f"**{rid}:** {reference['titulo']}. "
                     f"{reference.get('publicacion', '')}, {reference.get('anio', '')}. "
-                    f"DOI: {ids.get('doi', 'no documentado')}.")
+                    f"DOI: {ids.get('doi') or 'no documentado'}.")
     body.append(f"Fuente clínica: medsemiotics-db, condición {cid}.")
     text = "---\n" + yaml.safe_dump(meta, allow_unicode=True, sort_keys=False, width=1000) + \
            "---\n\n" + "\n\n".join(body) + "\n"

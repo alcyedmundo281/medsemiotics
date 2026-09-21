@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6028-alergia-a-penicilina.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3125-antecedente-referido-de-alergia-a-penicilina.yaml: cde9b548831034bf68455dc22a3b5d1ccdc309998f3ab33be1a6220f3923619d
     conceptos/HM3126-prueba-cutanea-positiva-a-penicilina.yaml: 70e9fbd90708978f3c252aac45fbcb47cabfb1a9fb6986047e63924be88b00da
     condiciones/HM6028-alergia-a-penicilina.yaml: 14ec24e8a69013757f7625c64dfdff929a18a22a50bd903898efd2b2ff4c2c1d

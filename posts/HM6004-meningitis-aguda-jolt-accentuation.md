@@ -16,15 +16,19 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6004-meningitis-aguda.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0207-cefalea.yaml: 3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c
+    conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0301-nauseas.yaml: e678ffbd65c8ecbae1afe311de0693dc240bff7d676879838347df44fa30556a
     conceptos/HM0302-vomitos.yaml: c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9
+    conceptos/HM0500-sintoma-neurologico.yaml: bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044
     conceptos/HM0501-alteracion-del-nivel-de-conciencia.yaml: c3d0515c056d2458152b77498e02ec985a7f67d31c63bec961722da48ac6d980
     conceptos/HM3005-rigidez-de-nuca.yaml: acf2a79e35697ca46f2a084ef549f5345ad4d40e9014474088cb2f897f43e9c7
     conceptos/HM3006-acentuacion-cefalea-sacudida.yaml: b7e237eb2e3f5ead09a07aff8832f8b79afc05a258a7649cc778aba725441a12
@@ -258,7 +262,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Reglas clínicas
 
-Nombre: Ausencia de la tríada clásica; Componentes: Fiebre (HM:0101) / Rigidez de nuca (HM:3005) / Alteración del nivel de conciencia (HM:0501); Criterio: ninguno de los tres presente; Sensibilidad de la presencia: 0.99 / 1.0; Referencia: pmid:10411200; Decisión: la ausencia simultánea de fiebre, rigidez de nuca y alteración del estado mental descarta la meningitis en la práctica; Advertencia: la fuente matiza que ante alto riesgo clínico hay que ir directamente a la punción lumbar, sin apoyarse en la exploración
+Nombre: Ausencia de la tríada clásica; Componentes: Fiebre / Rigidez de nuca / Alteración del nivel de conciencia; Criterio: ninguno de los tres presente; Sensibilidad de la presencia: 0.99 / 1.0; Referencia: pmid:10411200; Decisión: la ausencia simultánea de fiebre, rigidez de nuca y alteración del estado mental descarta la meningitis en la práctica; Advertencia: la fuente matiza que ante alto riesgo clínico hay que ir directamente a la punción lumbar, sin apoyarse en la exploración
 
 ## Referencias y procedencia
 

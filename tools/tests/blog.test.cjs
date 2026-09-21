@@ -124,3 +124,43 @@ test('El filtro bayesiano no considera que tener un ID HM sea evidencia cuantita
   vm.runInContext(block, context);
   assert.equal(context.matchEvidence, true);
 });
+
+test('El caso socrático se incorpora al artículo y su texto se escapa', async () => {
+  const casosDir = path.join(root, 'assets/data/casos');
+  const casos = fs.existsSync(casosDir) ? fs.readdirSync(casosDir) : [];
+  for (const file of casos) {
+    const caso = json('assets/data/casos/' + file);
+    const article = json('assets/data/posts/' + caso.slug + '.json');
+    assert.deepEqual(article.caso, caso);
+    assert.equal(article.has_caso, true);
+    assert.equal(article.fecha_revision, caso.publicacion.ultima_revision);
+  }
+  const { context, element } = browser();
+  const hallazgo = { nombre: '<img onerror=x>', rol: 'Prueba', estado: 'LR medido',
+    cifras: ['LR+ 3.1 (IC 95 %: 1.6–5.9)'], decision: 'aumenta', referencias: ['pmid:1'] };
+  context.fixture = { slug: 'prueba', title: 'Prueba', body: '', fecha_publicacion: '2026-08-21',
+    fecha_revision: '2026-09-21', version: 2, grounding: {},
+    caso: { nivel: 'Pregrado', duracion_min: 45, aviso: 'Ficticio', publicacion: { version: 2 },
+      objetivos: ['<b>obj</b>'], vineta: { titulo: 'V', texto: '<script>x</script>', datos: [] },
+      etapas: [{ numero: 1, fase_etiqueta: 'F', titulo: 'T', informacion: null, datos: [],
+        hallazgos: [hallazgo], preguntas: [{ pregunta: '¿P?', clave: 'C' }] }],
+      cierre: { sintesis: 'S', necesidades_aprendizaje: ['N'] }, omitidos: [] } };
+  await vm.runInContext('currentPost = fixture; renderPost()', context);
+  const html = element('casoContenido').innerHTML;
+  assert.equal(element('casoSection').classList.contains('hidden'), false);
+  assert.ok(html.includes('LR+ 3.1 (IC 95 %: 1.6–5.9)'));
+  assert.ok(html.includes('medsemiotics-db'));
+  assert.ok(!html.includes('<script>') && !html.includes('<img') && !html.includes('<b>obj'));
+  assert.equal(element('postRevised').textContent, '2026-09-21');
+  assert.equal(element('metaCitationDate').content, '2026/08/21');
+  assert.equal(JSON.parse(element('jsonLd').textContent).dateModified, '2026-09-21');
+});
+
+test('Imágenes destacadas: solo Wikimedia Commons en dominio público o CC0', () => {
+  const images = json('assets/data/topic-images.json');
+  for (const [key, image] of Object.entries(images)) {
+    assert.ok(['Public domain', 'CC0'].includes(image.license), key);
+    assert.ok(image.source.startsWith('https://commons.wikimedia.org/wiki/File:'), key);
+    assert.ok(image.alt && image.author && image.verified, key);
+  }
+});

@@ -4,6 +4,10 @@
   "title": "Insuficiencia aórtica: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -85,11 +89,14 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6026-insuficiencia-aortica.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
+      "conceptos/HM0608-soplo-cardiaco.yaml": "47bf7c076b53036a2d48cedd74b74aaa26ba69f1cb243c07f96afcc8a0068475",
       "conceptos/HM3116-soplo-diastolico-precoz.yaml": "37b9bc68c6c7ee2c103f014c04aa4010b9ecf1d5cb019f825457e043e24a29d4",
       "conceptos/HM3117-presion-de-pulso-amplia.yaml": "778885d546492a734b8df1094da2e6b4ba9dc11ec4717fbf453e522dd6b5f396",
       "conceptos/HM3118-maniobra-de-oclusion-arterial-transitoria.yaml": "b8dde95621d686f2bfd5b7640530fc8bd766200ed4b9ce2d5903dafbc1800482",
@@ -107,6 +114,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Soplo diastólico precoz",
@@ -203,5 +212,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Insuficiencia aórtica\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAortic regurgitation\n\n## Sinónimos\n\nregurgitación aórtica\n\nvalvulopatía aórtica incompetente\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Soplo diastólico precoz (HM:3116)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 8.8; IC del 95 %: 7.3 / 11.0; Referencia: pmid:10376577\n\n**LR negativo:** Valor: 0.2; IC del 95 %: 0.1 / 0.3; Referencia: pmid:10376577\n\n**Decisión:** el signo físico cardinal; su presencia confirma fuertemente (LR+ 8.8) y su ausencia reduce marcadamente la probabilidad (LR- 0.20)\n\n### Maniobra de oclusión arterial transitoria (HM:3118)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 8.4; IC del 95 %: 3.9 / 18.0; Referencia: pmid:10376577\n\n**LR negativo:** Valor: 0.3; IC del 95 %: 0.1 / 0.7; Referencia: pmid:10376577\n\n**Decisión:** la maniobra de oclusión con manguito acentúa el soplo diastólico con excelente rendimiento diagnóstico\n\n### Presión de pulso amplia (HM:3117)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Motivo:** signo hemodinámico clásico de regurgitación aórtica moderada o severa\n\n## Conclusión de la fuente\n\nLa auscultación de un soplo diastólico precoz es el signo más potente para diagnosticar o descartar la insuficiencia aórtica (LR+ 8.8, LR- 0.20). Maniobras como la oclusión arterial transitoria aumentan la sensibilidad de la auscultación en casos dudosos.\n\n## Referencias y procedencia\n\n**pmid:10376577:** The rational clinical examination. Does this patient have aortic regurgitation?. JAMA, 1999. DOI: 10.1001/jama.281.23.2231.\n\nFuente clínica: medsemiotics-db, condición HM:6026."
 }

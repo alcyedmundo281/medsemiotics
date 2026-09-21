@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3119-prueba-de-lachman-positiva.yaml: f1262827c44da29b5f39f4f226b7715dcfc6390d26b4e2958e54e8ff18283ecd
     conceptos/HM3120-prueba-del-cajon-anterior-de-rodilla-positiva.yaml: 5d0abbc5761601b3d36e1dd38a114eea754462744b5c3ed540a913ecc4b98d95
     conceptos/HM3123-examen-compuesto-de-rodilla-positivo-para-lca.yaml: 0105b1d42c0dfce2f482b36f14d810eb57dc7c4eb859603fab51324dd9c788aa

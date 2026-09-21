@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0500-sintoma-neurologico.yaml: bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044
     conceptos/HM3056-lag-rotacion-externa.yaml: 89f1056f9840213b12973fd986960c9acce2cd4e1659313609b9f348683f8464
     conceptos/HM3057-lag-rotacion-interna.yaml: af8fb988476f76fe41cf62414d3d78eb79c6c92ae5e378f150ac4ec2cf6b5bed
     condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml: 948a520a9c00092a5e3a1fd4b58e9745c3cd733f976167157f29f89c4437c6d0

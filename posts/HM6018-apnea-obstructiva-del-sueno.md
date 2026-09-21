@@ -15,11 +15,13 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6018-apnea-obstructiva-del-sueno.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
+    conceptos/HM0400-sintoma-respiratorio.yaml: 437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b
     conceptos/HM3072-ahogo-o-jadeo-nocturno.yaml: bb978561f85d04ea3c3d96596aed38b1fccd27c88a0c6855cef56cdc1d111d92
     conceptos/HM3073-ronquido.yaml: 7b20f9582eab041322e5a8b9209a4bd214bb831c3476d25c74ffa78bec5d4f5b
     conceptos/HM3074-indice-de-masa-corporal-bajo.yaml: 55b96f3fb69ebe11af7ef6cc3623013227cc1d9f96677b6b139f681d3b1cd20b
@@ -172,7 +174,7 @@ Rango documentado: 0.02 / 0.9; Población: 2%-14% en cribado comunitario, 21%-90
 
 ## Aspectos pendientes de documentación
 
-La fuente publica un cociente combinado real que este índice no estructura todavía: «ronquido leve y IMC menor de 26» tiene LR− 0.07 (IC95% 0.03-0.19) para descartar apnea moderada o grave (IAH ≥15/h). No es una arista de un solo concepto —combina HM:3073 con un umbral de HM:3074— y `reglas` está pensado para criterios con nombre propio pendientes de activar, no para una combinación con cociente ya publicado. Se declara aquí en vez de forzarla en un campo que no la describe bien; entrará estructurada cuando el esquema tenga un lugar para cocientes combinados de dos hallazgos.
+La fuente publica un cociente combinado real que este índice no estructura todavía: «ronquido leve y IMC menor de 26» tiene LR− 0.07 (IC95% 0.03-0.19) para descartar apnea moderada o grave (IAH ≥15/h). No es una arista de un solo concepto —combina ronquido con un umbral de índice de masa corporal bajo— y `reglas` está pensado para criterios con nombre propio pendientes de activar, no para una combinación con cociente ya publicado. Se declara aquí en vez de forzarla en un campo que no la describe bien; entrará estructurada cuando el esquema tenga un lugar para cocientes combinados de dos hallazgos.
 
 ## Conclusión de la fuente
 

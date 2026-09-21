@@ -91,6 +91,39 @@ del repositorio y hashes SHA-256 del texto fuente con finales de línea LF.
 `assets/data/topic-images.json` aporta ilustraciones y su atribución, sin añadir
 hechos clínicos.
 
+#### Casos socráticos (ABP dirigido) e imágenes destacadas
+
+Los artículos derivados no tienen prosa. Cada uno recibe, uno por uno, un caso
+clínico socrático en `casos/HM####.yaml` que aporta contexto clínico (viñeta,
+etapas de activación, exploración, discriminación y decisión, preguntas con clave
+docente y cierre) **sin reemplazar la evidencia de la base, que sigue siendo el
+foco**. Las cifras entran al texto solo por tokens (`{{lr+ HM:3001}}`,
+`{{sens HM:0607}}`…) resueltos contra medsemiotics-db; todo hallazgo de la base se
+usa en una etapa o se omite con un motivo; solo se publica con un revisor humano
+nominado y fecha. El procedimiento está en la skill
+[`caso-socratico`](.claude/skills/caso-socratico/SKILL.md).
+
+```bash
+npm run casos:estado                         # artículos con y sin caso
+uv run python -m casos nuevo HM6003          # borrador con los hallazgos de la base
+uv run python -m casos preview HM6003        # revisión del caso compilado
+npm run casos:build                          # JSON de los casos publicados
+```
+
+La imagen destacada es obligatoria y debe venir de Wikimedia Commons en dominio
+público o CC0. `imagenes asignar` verifica la licencia en la API de Commons y
+registra autor, texto alternativo y fecha de verificación; `build-blog.mjs`
+rechaza cualquier otra licencia.
+
+```bash
+uv run python -m imagenes buscar HM6003 "infectious mononucleosis"
+uv run python -m imagenes asignar HM6003 "File:…" --alt "Descripción"
+```
+
+Cada artículo expone su fecha de publicación (primera aparición de su URL) y, si
+tiene caso, la fecha de la última revisión y la versión, también como metadatos
+`citation_*`, Dublin Core y JSON-LD `ScholarlyArticle`.
+
 Para reconstruir los JSON a partir de los Markdown ya sincronizados:
 
 ```bash
@@ -274,9 +307,12 @@ Lint de JavaScript:
 npm run lint
 ```
 
-`npm test` es todavía un marcador que termina con error; no hay una suite de
-pruebas configurada en ese comando. Las comprobaciones específicas de navegación,
-recursos y módulos interactivos se encuentran en `tools/verificacion/`.
+`npm test` ejecuta `npm run gates`: Ruff (lint y formato), mypy estricto y pytest
+sobre las herramientas Python (Python 3.12 con [uv](https://docs.astral.sh/uv/),
+`uv sync`), `casos check`, `imagenes check`, ESLint, `build-blog --check` y los
+tests del blog. El workflow `.github/workflows/gates.yml` los ejecuta en cada pull
+request. Las comprobaciones de navegación, recursos y módulos interactivos se
+encuentran en `tools/verificacion/`.
 
 ## Herramientas
 

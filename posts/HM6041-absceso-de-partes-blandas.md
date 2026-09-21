@@ -15,12 +15,14 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6041-absceso-de-partes-blandas.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
-    conceptos/HM3166-coleccion-de-partes-blandas-en-ecografia.yaml: 84f9731d01658e9e254d134f515c73948778b9c351fccbb28061c8c1596c36a0
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
+    conceptos/HM3166-coleccion-de-partes-blandas-en-ecografia.yaml: 321e1111a2de0c51d93cbf1084de66b1f94a503cc9a920774909b4018126698f
+    conceptos/HM3170-hernia-complicada-en-ecografia.yaml: e115734755ab89706200fce64c20c8a9cf49498a481b6beeaf419392ed0a914e
     condiciones/HM6041-absceso-de-partes-blandas.yaml: 436182a519a05a87f0d7d098cab4260fb9a06ecee2e0fcd0d089af9f4b58d0d8
     referencias/pmid-28073795.yaml: 34414d3cb382d8a6153cdfc6ee51cbf0d018320cb102c03782c4258cb9d81619
     referencias/pmid-32081383.yaml: 93b9a9c75593bb9ba0d20983c254ee2fa36c6a94de4a04cf21c72497d85d4a68

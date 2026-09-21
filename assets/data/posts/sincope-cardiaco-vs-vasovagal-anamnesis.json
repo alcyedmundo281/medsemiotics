@@ -4,6 +4,10 @@
   "title": "Síncope cardíaco: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
+  "fecha_publicacion": "2026-08-21",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "cardiologia",
   "category_label": "Cardiología y Urgencias",
@@ -219,13 +223,17 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6010-sincope-cardiaco.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0200-dolor.yaml": "583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463",
       "conceptos/HM0207-cefalea.yaml": "3a7957f3f8cda87461090f0aff7e5cccde0cbea0a59b1bd8716a6fb509bb4b8c",
+      "conceptos/HM0500-sintoma-neurologico.yaml": "bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044",
       "conceptos/HM0505-sincope.yaml": "c17b05914b15e6b6a14b4c974424a0c3b36d222dba00c39a9dc405e45ec54b5c",
+      "conceptos/HM0606-cianosis.yaml": "ed93e7260a197f59efd82fdacb9cbf6369a52b0176c881b46cf6faf6ffc9f53e",
+      "conceptos/HM1000-trastorno.yaml": "9862513dc10aa15c0adccc15214151612f5c4e54e079cad422d03adf8d795c0b",
       "conceptos/HM3031-primer-sincope-desde-los-35.yaml": "3e37b7c7209b24ceae6068e78f9b25ea0556115acee35c9c927e82c2de1962fa",
       "conceptos/HM3032-fibrilacion-o-flutter-auricular.yaml": "2877f7e08d60a0632a58fd5f30ad58846ee9222b099d0582f37588246c12f0c6",
       "conceptos/HM3033-cardiopatia-estructural-grave.yaml": "03e8e3289317f111216fc2e7f84145729dace21f7ada8a9d719e50f834e10edb",
@@ -244,10 +252,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Atrial_Fibrillation_in_two_leads.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "image_source": "https://commons.wikimedia.org/wiki/File%3AAtrial%20Fibrillation%20in%20two%20leads.jpg",
-  "image_license": "CC BY-SA 4.0",
-  "image_title": "Atrial Fibrillation in two leads.jpg",
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Fibrilación o flutter auricular",
@@ -344,5 +354,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Síncope cardíaco\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nCardiac syncope\n\n## Sinónimos\n\nsíncope de origen cardíaco\n\nsíncope arrítmico\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Fibrilación o flutter auricular (HM:3032)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.13\n\n**Ic95 sensibilidad:** 0.06 / 0.2\n\n**Especificidad:** 0.98\n\n**Ic95 especificidad:** 0.96 / 1.0\n\n**LR positivo:** Valor: 7.3; IC del 95 %: 2.4 / 22; Referencia: pmid:31237649\n\n**Decisión:** el antecedente que más desplaza hacia el origen cardíaco\n\n### Cianosis presenciada durante el episodio (HM:3034)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.08\n\n**Ic95 sensibilidad:** 0.02 / 0.14\n\n**Especificidad:** 0.99\n\n**Ic95 especificidad:** 0.98 / 1.0\n\n**LR positivo:** Valor: 6.2; IC del 95 %: 1.6 / 24; Referencia: pmid:31237649\n\n**Decisión:** rarísima pero casi definitiva cuando la hay: especificidad del 99%. Depende de que alguien presenciara el episodio.\n\n### Cardiopatía estructural grave conocida (HM:3033)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 3.3 / 4.8; Referencia: pmid:31237649; Nota: rango entre 2 estudios; sensibilidad 0.35-0.51, especificidad 0.84-0.93\n\n**Decisión:** antecedente que apoya con fuerza moderada\n\n### Primer síncope a los 35 años o más (HM:3031)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.91\n\n**Ic95 sensibilidad:** 0.85 / 0.97\n\n**Especificidad:** 0.72\n\n**Ic95 especificidad:** 0.66 / 0.78\n\n**LR positivo:** Valor: 3.3; IC del 95 %: 2.6 / 4.1; Referencia: pmid:31237649\n\n**LR negativo:** Valor: 0.13; IC del 95 %: 0.06 / 0.25; Referencia: pmid:31237649; Nota: la fuente lo expresa como el cociente de la edad menor de 35 años, que es el negativo de este hallazgo\n\n**Decisión:** el dato más útil para DESCARTAR: un primer síncope antes de los 35 prácticamente excluye el origen cardíaco\n\n### Cambio de humor o preocupación prodrómica por los detalles (HM:3035)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.02\n\n**Especificidad:** 0.76\n\n**LR positivo:** Valor: 0.09; IC del 95 %: 0.02 / 0.38; Referencia: pmid:31237649\n\n**Decisión:** su presencia aleja del origen cardíaco y orienta a vasovagal\n\n### Sensación de frío previa al síncope (HM:3036)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.02\n\n**Especificidad:** 0.89\n\n**LR positivo:** Valor: 0.16; IC del 95 %: 0.06 / 0.64; Referencia: pmid:31237649\n\n**Decisión:** pródromo vegetativo; su presencia aleja del origen cardíaco\n\n### Cefalea (HM:0207)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.03\n\n**Especificidad:** 0.8\n\n**LR positivo:** Valor: 0.17; IC del 95 %: 0.06 / 0.55; Referencia: pmid:31237649\n\n**Decisión:** su presencia aleja del origen cardíaco\n\n### Cambio de humor tras el síncope (HM:3037)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.03\n\n**Especificidad:** 0.83\n\n**LR positivo:** Valor: 0.21; IC del 95 %: 0.06 / 0.65; Referencia: pmid:31237649\n\n**Decisión:** su presencia aleja del origen cardíaco\n\n### Incapacidad para recordar la conducta previa al síncope (HM:3038)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.05\n\n**Especificidad:** 0.82\n\n**LR positivo:** Valor: 0.25; IC del 95 %: 0.09 / 0.69; Referencia: pmid:31237649\n\n**Decisión:** su presencia aleja del origen cardíaco\n\n### Síncope (HM:0505)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es el motivo de consulta que define la población estudiada; la pregunta no es si hubo síncope sino si fue cardíaco\n\n## Escalas\n\nNombre: EGSYS; Componentes declarados: seis variables clínicas, electrocardiograma incluido; Graduación: Parámetro: Puntuación EGSYS; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: menor de 3; Hasta: 3; Lr negativo rango: 0.12 / 0.17; Referencia: pmid:31237649; Nota: rango entre 2 estudios que la validaron de forma prospectiva; sensibilidad 0.89-0.91, especificidad 0.69-0.73; Decisión: una puntuación menor de 3 es lo que mejor descarta el origen cardíaco\n\n## Aspectos pendientes de documentación\n\nLos biomarcadores cardíacos muestran exactitud prometedora según la fuente, pero sus umbrales diagnósticos aún requieren validación. No se registran.\n\n## Conclusión de la fuente\n\nLa exploración clínica, con el electrocardiograma dentro de puntuaciones multivariable, puede identificar con precisión a los pacientes con y sin síncope cardíaco.\n\n## Referencias y procedencia\n\n**pmid:31237649:** Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review. JAMA, 2019. DOI: 10.1001/jama.2019.8001.\n\nFuente clínica: medsemiotics-db, condición HM:6010."
 }

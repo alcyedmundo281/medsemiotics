@@ -4,6 +4,10 @@
   "title": "Intubación difícil: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-22",
+  "fecha_publicacion": "2026-08-22",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "anestesiologia",
   "category_label": "Anestesiología y Cuidados Críticos",
@@ -116,11 +120,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6020-intubacion-dificil.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3078-test-mordida-labio-superior-clase-3.yaml": "bf284c373f4ef74131492f0264af906aec28dcc1891e19f7776d424495a11f1b",
       "conceptos/HM3079-distancia-hiodomentoniana-corta.yaml": "6afcfa37fd303843404cf8c9c6853885f52b3ec85a76b5c63f471ac54511f141",
       "conceptos/HM3080-retrognatia.yaml": "e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b",
@@ -140,6 +145,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Test de mordida del labio superior clase 3",
@@ -236,5 +243,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Intubación difícil\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nDifficult endotracheal intubation\n\n## Sinónimos\n\nvía aérea difícil\n\nintubación orotraqueal dificultosa\n\nlaringoscopia difícil\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.1; Población: pacientes adultos quirúrgicos generales candidatos a intubación (n = 33 559 en 62 estudios); Referencia: pmid:30721300\n\n## Factores de riesgo\n\nFactor: Obesidad con IMC elevado\n\nFactor: Movilidad cervical limitada o artropatía cervical\n\nFactor: Antecedente personal de intubación difícil\n\n## Hallazgos clínicos\n\n### Test de mordida del labio superior clase 3 (HM:3078)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.96\n\n**Población:** pacientes quirúrgicos adultos (n = 33 559)\n\n**LR positivo:** Valor: 14; IC del 95 %: 8.9 / 22; Referencia: pmid:30721300\n\n**Decisión:** Test de mordida del labio superior clase 3: el predictor físico individual más potente. Con LR+ 14 y especificidad del 96%, eleva la probabilidad postest de 10% a más de 60%.\n\n### Distancia hiodomentoniana o tiromentoniana corta (HM:3079)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.97\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 6.4; IC del 95 %: 4.1 / 10; Referencia: pmid:30721300\n\n**Decisión:** Distancia hiodomentoniana o tiromentoniana corta (<3 a 5.5 cm): alta especificidad (97%) con LR+ 6.4.\n\n### Retrognatia o longitud mandibular reducida (HM:3080)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.98\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 6.0; IC del 95 %: 3.1 / 11; Referencia: pmid:30721300\n\n**Decisión:** Retrognatia (mandíbula <9 cm): especificidad del 98% con LR+ 6.0.\n\n### Score de Wilson de riesgo aumentado (HM:3082)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.95\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 9.1; IC del 95 %: 5.1 / 16; Referencia: pmid:30721300\n\n**Decisión:** Score de Wilson de riesgo aumentado: combinación de 5 factores anatómicos con LR+ 9.1 y especificidad del 95%.\n\n### Escala de Mallampati modificada clase 3 o 4 (HM:3081)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.87\n\n**Población:** pacientes quirúrgicos adultos\n\n**LR positivo:** Valor: 4.1; IC del 95 %: 3.0 / 5.6; Referencia: pmid:30721300\n\n**Decisión:** Escala de Mallampati modificada (clase 3 o 4): el test más difundido; aporta un LR+ de 4.1 pero con especificidad moderada (87%).\n\n## Conclusión de la fuente\n\nVarios hallazgos de exploración física simple permiten identificar a pacientes con alta probabilidad de intubación difícil (especialmente el test de mordida del labio superior, LR+ 14), pero ningún hallazgo clínico permite excluir de forma fiable una vía aérea difícil.\n\n## Referencias y procedencia\n\n**pmid:30721300:** Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review. JAMA, 2019. DOI: 10.1001/jama.2018.21413.\n\nFuente clínica: medsemiotics-db, condición HM:6020."
 }

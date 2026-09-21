@@ -15,15 +15,18 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6036-neumonia-infantil.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
     conceptos/HM0106-taquipnea.yaml: 8e68bf600e7cf9fb754061ed9aea27944c56cf6cf4c2103ab86dba1a7f2a6290
     conceptos/HM0110-hipoxemia.yaml: 618b916bc8d46710e8ad723489a7e11b4428f5bf9680f2a7df81ede750ed150d
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0206-dolor-toracico.yaml: b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f
+    conceptos/HM0400-sintoma-respiratorio.yaml: 437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b
     conceptos/HM0406-crepitantes.yaml: 5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083
     conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml: 9449ad5b45db85fce3b18a01aaa8241470c2edfe132589b703bd498687eac216
     condiciones/HM6036-neumonia-infantil.yaml: 2592cfc7ca6b494357364ace2e9241755179b522a731d51563820e9c32e4da2a

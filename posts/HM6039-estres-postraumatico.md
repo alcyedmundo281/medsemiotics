@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6039-estres-postraumatico.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0001-hallazgo-clinico.yaml: 5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329
     conceptos/HM3153-trauma-screening-questionnaire-positivo.yaml: 2b723c3ecd63806c897092b32412cab381754a741c9a458452299ffe36773049
     condiciones/HM6037-sobrecarga-de-volumen.yaml: eca41c49d71742acef49b4319fc79da95905d97155a2dbaec845d342004a615f
     condiciones/HM6039-estres-postraumatico.yaml: 8cafa5f4b6857f8b3ce169444a5043a95c04f9c8328a718a17473053b037542d
@@ -169,13 +170,13 @@ ESTE COCIENTE NO SE LEE SOBRE UNA PROBABILIDAD PREVIA DE ATENCIÓN PRIMARIA. El 
 
 Los dos instrumentos que la fuente recomienda —el PC-PTSD de 4 ítems y el PTSD Checklist de 17— NO ESTÁN EN EL ÍNDICE, y su ausencia no significa que rindan peor que el TSQ: significa que sus cifras están bloqueadas por la corrección. Quien lea esta condición como el rendimiento del cribado del estrés postraumático la estará leyendo mal. Es el instrumento cuyas cifras se pudieron verificar, no el mejor de los evaluados.
 
-El punto de corte del TSQ no consta. La corrección da las cuatro cifras de la fila pero no la puntuación con la que se consideró positivo el cuestionario, y no se adivina. Ver HM:3153.
+El punto de corte del TSQ no consta. La corrección da las cuatro cifras de la fila pero no la puntuación con la que se consideró positivo el cuestionario, y no se adivina. Ver Trauma Screening Questionnaire positivo.
 
 ## Aspectos pendientes de documentación
 
-El abstract corregido del artículo (doi 10.1001/jama.2015.7877) desbloquea el PC-PTSD y el PTSD Checklist. El que sirve PubMed sigue siendo el anterior a la corrección —muestra los dos bloques contradictorios—, así que hace falta la página del editor con acceso propio, como en HM:6037.
+El abstract corregido del artículo (doi 10.1001/jama.2015.7877) desbloquea el PC-PTSD y el PTSD Checklist. El que sirve PubMed sigue siendo el anterior a la corrección —muestra los dos bloques contradictorios—, así que hace falta la página del editor con acceso propio, como en sobrecarga de volumen.
 
-El punto de corte del Trauma Screening Questionnaire vive en el eAppendix 5. Con él, HM:3153 puede declarar su umbral.
+El punto de corte del Trauma Screening Questionnaire vive en el eAppendix 5. Con él, Trauma Screening Questionnaire positivo puede declarar su umbral.
 
 ## Conclusión de la fuente
 

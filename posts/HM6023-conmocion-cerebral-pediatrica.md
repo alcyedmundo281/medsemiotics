@@ -15,13 +15,17 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6023-conmocion-cerebral-pediatrica.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0105-bradicardia.yaml: 088974edd57d3a795e8df4a594180e440f0821a08fc12ef6e4a22f7af9d66607
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0400-sintoma-respiratorio.yaml: 437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3094-niebla-mental.yaml: edba2bd487bfd1c0b34a33f4762a78d33e6911ef7373b14badff7a1f96c3f03f
     conceptos/HM3095-fonofobia-o-sensibilidad-al-ruido.yaml: ebcd511d4f323df138cd1d4a8dcced8d5673d99c1b49af975e5cf15ee120445e
     conceptos/HM3096-fotofobia-o-sensibilidad-a-la-luz.yaml: bf007f38615273e68025c7f51a03ad2aa99bc7d92c8fa306dd8f016fc022a4fc

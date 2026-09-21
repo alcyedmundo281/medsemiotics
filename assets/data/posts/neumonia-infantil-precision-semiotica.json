@@ -4,6 +4,10 @@
   "title": "Neumonía infantil: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -133,15 +137,18 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6036-neumonia-infantil.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0100-signo-vital-alterado.yaml": "3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504",
       "conceptos/HM0101-fiebre.yaml": "d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e",
       "conceptos/HM0106-taquipnea.yaml": "8e68bf600e7cf9fb754061ed9aea27944c56cf6cf4c2103ab86dba1a7f2a6290",
       "conceptos/HM0110-hipoxemia.yaml": "618b916bc8d46710e8ad723489a7e11b4428f5bf9680f2a7df81ede750ed150d",
+      "conceptos/HM0200-dolor.yaml": "583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463",
       "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+      "conceptos/HM0400-sintoma-respiratorio.yaml": "437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b",
       "conceptos/HM0406-crepitantes.yaml": "5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083",
       "conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml": "9449ad5b45db85fce3b18a01aaa8241470c2edfe132589b703bd498687eac216",
       "condiciones/HM6036-neumonia-infantil.yaml": "2592cfc7ca6b494357364ace2e9241755179b522a731d51563820e9c32e4da2a",
@@ -158,6 +165,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Hipoxemia",
@@ -256,5 +265,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Neumonía infantil\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nChildhood pneumonia\n\n## Sinónimos\n\nneumonía pediátrica\n\nneumonía radiográfica del niño\n\nneumonía adquirida en la comunidad en la infancia\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nRango documentado: 0.19 / 0.37; Población: niños con sospecha de neumonía: 19% (IC95% 11-31) en los estudios norteamericanos y 37% (IC95% 26-50) fuera de Norteamérica; Referencia: pmid:28763554; Nota: la previa cambia con el entorno asistencial, no es un rango de incertidumbre sobre un mismo valor; quien puebla un protocolo elige según dónde atiende\n\n## Hallazgos clínicos\n\n### Hipoxemia (HM:0110)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 2.8; IC del 95 %: 2.1 / 3.6; Umbral: saturación de oxígeno ≤ 96%; Referencia: pmid:28763554\n\n**LR negativo:** Valor: 0.47; IC del 95 %: 0.32 / 0.67; Umbral: saturación de oxígeno > 96%; Referencia: pmid:28763554\n\n**Sensibilidad:** 0.64\n\n**Especificidad:** 0.77\n\n**Decisión:** junto con el aumento del trabajo respiratorio, es lo que la fuente señala como más asociado a la neumonía, por encima de la taquipnea y de la auscultación\n\n**Advertencia:** el corte de esta arista es ≤ 96%, no el 92% que el concepto declara como umbral canónico. El de la fuente es un corte pediátrico de hipoxemia moderada, mucho más laxo; aplicar el de adulto aquí perdería el hallazgo.\n\n### Aumento del trabajo respiratorio (HM:3145)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 2.1; IC del 95 %: 1.6 / 2.7; Nota: quejido, aleteo y tiraje medidos en conjunto, no por separado; Referencia: pmid:28763554\n\n**Decisión:** el otro signo que la fuente destaca; se mide como bloque y no admite desglose\n\n### Dolor torácico (HM:0206)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 1.5 / 5.5; Población: dos estudios que incluían adolescentes; Referencia: pmid:28763554\n\n**Nota:** sensibilidad 8-14% y especificidad 94-97%: es el único síntoma que la fuente asocia a la neumonía, y lo hace por su especificidad, no por su rendimiento global. Casi nunca está, pero cuando está cuenta.\n\n**Advertencia:** el rango 1.5-5.5 sale de dos estudios, no de un metaanálisis: es la dispersión entre dos mediciones y no un intervalo de confianza\n\n### Fiebre (HM:0101)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 1.7 / 1.8; Umbral: temperatura > 37.5 °C; Referencia: pmid:28763554\n\n**Nota:** sensibilidad 80-92% y especificidad 47-54%: sensible y muy inespecífica, con un cociente que apenas mueve la probabilidad\n\n**Advertencia:** el corte de la fuente es 37.5 °C, no los 38.0 °C del umbral canónico del concepto. Con el corte de 38.0 el cociente publicado no aplica.\n\n### Taquipnea (HM:0106)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 1.5; IC del 95 %: 1.3 / 1.7; Umbral: frecuencia respiratoria > 40 por minuto; Referencia: pmid:28763554\n\n**Sensibilidad:** 0.79\n\n**Especificidad:** 0.51\n\n**Decisión:** la conclusión de la fuente es explícita en que la taquipnea pesa MENOS que la hipoxemia y el trabajo respiratorio, al contrario de lo que sugiere su papel en los algoritmos de cribado\n\n**Advertencia:** el corte es > 40 por minuto, pediátrico, no los 20 del umbral canónico del concepto, que es de adulto\n\n### Crepitantes (HM:0406)\n\n**Rol:** Manifestación\n\n**Estado del LR:** Sin efecto discriminativo\n\n**Motivo:** la fuente afirma que los hallazgos auscultatorios no se asociaron al diagnóstico, pero no publica su cociente. Es un resultado medido de ausencia de efecto, no una laguna: por eso sin_efecto y no no_medido.\n\n## Notas de uso\n\nVeintitrés estudios de cohorte prospectivos, 13 833 niños, entre 78 y 2829 pacientes por estudio; ocho de los estudios son norteamericanos.\n\nEl patrón de referencia es el infiltrado en la radiografía de tórax. Todos los cocientes de esta condición se leen contra esa definición de caso, no contra un diagnóstico clínico ni microbiológico.\n\nNingún hallazgo aislado distingue de forma fiable la neumonía de otras causas de enfermedad respiratoria en la infancia. El cociente más alto de la serie es 2.8.\n\n## Aspectos pendientes de documentación\n\nLa fuente declara que los hallazgos auscultatorios no se asocian al diagnóstico pero no publica el cociente que lo sostiene. Sin él la arista de los crepitantes no puede pasar de sin_efecto a un cociente neutro explícito. Requiere el texto completo, que no está en PMC.\n\n## Conclusión de la fuente\n\nAunque ningún hallazgo aislado diferencia de forma fiable la neumonía de otras causas de enfermedad respiratoria infantil, la hipoxia y el aumento del trabajo respiratorio son más importantes que la taquipnea y que los hallazgos auscultatorios.\n\n## Referencias y procedencia\n\n**pmid:28763554:** Does This Child Have Pneumonia?: The Rational Clinical Examination Systematic Review. JAMA, 2017. DOI: 10.1001/jama.2017.9039.\n\nFuente clínica: medsemiotics-db, condición HM:6036."
 }

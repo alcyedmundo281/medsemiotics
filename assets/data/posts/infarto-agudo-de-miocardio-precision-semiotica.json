@@ -4,6 +4,10 @@
   "title": "Infarto agudo de miocardio: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -173,12 +177,16 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0100-signo-vital-alterado.yaml": "3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504",
       "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
+      "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
+      "conceptos/HM0608-soplo-cardiaco.yaml": "47bf7c076b53036a2d48cedd74b74aaa26ba69f1cb243c07f96afcc8a0068475",
       "conceptos/HM3014-dolor-irradiado-ambos-brazos.yaml": "bdfcf2bc972457bb68f103779293df45277d65f38014fb053b9fe752726915f2",
       "conceptos/HM3130-elevacion-nueva-del-segmento-st.yaml": "1d658265c2bf4bfc1cdd21c84fcb04c7b7a759452f0391286719fc7945b097da",
       "conceptos/HM3131-nueva-onda-q-en-ecg.yaml": "4394118565a537b17dc696e47bdd1b7209333e71fe79432ea786c28230f2d157",
@@ -201,6 +209,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Elevación nueva del segmento ST en el ECG",
@@ -297,5 +307,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Infarto agudo de miocardio\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAcute myocardial infarction\n\n## Sinónimos\n\nIAM\n\nataque cardíaco\n\ninfarto de miocardio\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Elevación nueva del segmento ST en el ECG (HM:3130)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 22.0; IC del 95 %: 5.7 / 53.9; Referencia: pmid:9786377\n\n**Decisión:** el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión\n\n### Nueva onda Q patológica en el ECG (HM:3131)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 11.0; IC del 95 %: 5.3 / 24.8; Referencia: pmid:9786377\n\n**Decisión:** signo electrocardiográfico de necrosis miocárdica transmisible\n\n### Dolor torácico irradiado a ambos brazos (HM:3014)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.1; IC del 95 %: 3.5 / 14.2; Referencia: pmid:9786377\n\n**Decisión:** el síntoma de irradiación dolorosa con mayor rendimiento discriminativo positivo\n\n### Tercer tono cardíaco (R3) (HM:3132)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.2; IC del 95 %: 1.6 / 6.5; Referencia: pmid:9786377\n\n**Decisión:** signo auscultatorio de disfunción ventricular izquierda aguda\n\n### Hipotensión arterial (HM:0109)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 1.6 / 6.2; Referencia: pmid:9786377\n\n**Decisión:** marcador hemodinámico de compromiso miocárdico o shock cardiogénico\n\n### Dolor torácico pleurítico (HM:3133)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.2; IC del 95 %: 0.1 / 0.4; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** las características pleuríticas reducen fuertemente la probabilidad de IAM (LR 0.2)\n\n### Dolor torácico reproducible a la palpación (HM:3134)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.2 / 0.4; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** el dolor reproducible a la presión de la pared torácica orienta a causa osteomuscular\n\n### Dolor torácico punzante o cortante (HM:3135)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.1 / 0.6; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** el dolor punzante desplaza fuertemente la probabilidad en contra de IAM\n\n### Dolor torácico posicional (HM:3136)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.1 / 0.7; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** la modificación postural del dolor aleja la sospecha de isquemia coronaria aguda\n\n## Conclusión de la fuente\n\nLa anamnesis dirigida, la exploración física y el ECG son fundamentales para evaluar a pacientes con dolor torácico agudo. La nueva elevación del ST (LR+ 22.0) y la irradiación a ambos brazos (LR+ 7.1) confirman fuertemente el IAM, mientras que el dolor pleurítico, posicional o reproducible a la palpación lo hacen muy improbable (LR 0.2-0.3).\n\n## Referencias y procedencia\n\n**pmid:9786377:** The rational clinical examination. Is this patient having a myocardial infarction?. JAMA, 1998. DOI: 10.1001/jama.280.14.1256.\n\nFuente clínica: medsemiotics-db, condición HM:6030."
 }

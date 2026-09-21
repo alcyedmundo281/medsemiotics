@@ -4,6 +4,10 @@
   "title": "Cáncer de mama: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -67,11 +71,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6034-cancer-de-mama.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3142-masa-mamaria-palpable-sospechosa.yaml": "f11f27c1edc99011448c3818fbae8799dad25cbd5df600b47f5f6136f60218c9",
       "conceptos/HM3143-examen-clinico-mamario-reglado-normal.yaml": "5a107bc0bf6672b131ceac761664ae19eca3bbb043d0291ba6fb0a72992dd450",
       "condiciones/HM6034-cancer-de-mama.yaml": "eab87d90399daf8948d669883195f2284c932252bf03bab648bc5c922eaead2f",
@@ -88,6 +93,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
@@ -184,5 +191,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Cáncer de mama\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nBreast cancer\n\n## Sinónimos\n\ncarcinoma mamario\n\nneoplasia maligna de mama\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Masa mamaria palpable o hallazgo sospechoso en la exploración (HM:3142)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.54\n\n**Especificidad:** 0.94\n\n**LR positivo:** Valor: 10.6; IC del 95 %: 5.8 / 19.2; Referencia: pmid:10517431\n\n**Decisión:** el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)\n\n### Examen clínico de mama reglado normal (HM:3143)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.47; IC del 95 %: 0.4 / 0.56; Referencia: pmid:10517431\n\n**Decisión:** una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado\n\n## Conclusión de la fuente\n\nLa exploración clínica mamaria (CBE) reglada y minuciosa de al menos 3 minutos por mama es una herramienta diagnóstica complementaria relevante: un resultado positivo tiene un cociente de 10.6 (especificidad 94%), aunque un examen normal no descarta la enfermedad (LR- 0.47).\n\n## Referencias y procedencia\n\n**pmid:10517431:** The rational clinical examination. Does this patient have breast cancer? The screening clinical breast examination: should it be done? How?. JAMA, 1999. DOI: 10.1001/jama.282.13.1270.\n\nFuente clínica: medsemiotics-db, condición HM:6034."
 }

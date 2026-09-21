@@ -171,5 +171,30 @@ class SynchronizationTests(unittest.TestCase):
         self.assertFalse(errata["verificacion"]["retractado"])
 
 
+class ProsaTests(unittest.TestCase):
+    """Los IDs HM: incrustados en la prosa de la base se leen como nombres."""
+
+    conceptos = {"HM:0745": {"termino": "Hiperbilirrubinemia"},
+                 "HM:3184": {"termino": "Bazo palpable"},
+                 "HM:3060": {"termino": "Hematoquecia"},
+                 "HM:9001": {"termino": "Trauma Screening Questionnaire positivo"}}
+
+    def prosa(self, texto):
+        return sync.prosa(texto, self.conceptos)
+
+    def test_parentesis_redundante_se_elimina(self):
+        self.assertEqual(self.prosa("por hiperbilirrubinemia (HM:0745), no conjugada"),
+                         "por hiperbilirrubinemia, no conjugada")
+
+    def test_id_se_sustituye_por_el_nombre(self):
+        self.assertEqual(self.prosa("o percusión mate (HM:3184)."), "o percusión mate (bazo palpable).")
+        self.assertEqual(self.prosa("se acuñó HM:3060 «Hematoquecia», que"), "se acuñó «Hematoquecia», que")
+        self.assertEqual(self.prosa("Con él, HM:9001 declara"),
+                         "Con él, Trauma Screening Questionnaire positivo declara")
+
+    def test_id_sin_registro_no_se_inventa(self):
+        self.assertEqual(self.prosa("ver HM:4040"), "ver HM:4040")
+
+
 if __name__ == "__main__":
     unittest.main()

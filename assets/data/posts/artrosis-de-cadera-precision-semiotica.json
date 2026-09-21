@@ -4,6 +4,10 @@
   "title": "Artrosis de cadera: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
+  "fecha_publicacion": "2026-08-21",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "reumatologia",
   "category_label": "Reumatología y Traumatología",
@@ -166,11 +170,15 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6012-artrosis-de-cadera.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0001-hallazgo-clinico.yaml": "5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329",
+      "conceptos/HM0208-lumbalgia.yaml": "f0c00b1d9232e55fee8e3f54fffbe60e7401832fb4ea2e5d626976ed0f733070",
+      "conceptos/HM0500-sintoma-neurologico.yaml": "bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044",
+      "conceptos/HM1000-trastorno.yaml": "9862513dc10aa15c0adccc15214151612f5c4e54e079cad422d03adf8d795c0b",
       "conceptos/HM3041-dolor-posterior-en-cuclillas.yaml": "96fcce3b26f280f51628c1f17a08a4de45b992674fe7e6746399e714583693b4",
       "conceptos/HM3042-dolor-inguinal-abduccion-aduccion.yaml": "b7d701d16997b0d6ed38d9ee16dc7d0ef4d7ea5423ad7e64119f985fc7b7ec6a",
       "conceptos/HM3043-debilidad-de-abductores.yaml": "5cc8943c630898ae3f35af6571edeed0a3ebbca0b288bf67987360aa999d3e4b",
@@ -189,10 +197,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Hip_joint_pain.svg/960px-Hip_joint_pain.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "image_source": "https://commons.wikimedia.org/wiki/File%3AHip%20joint%20pain.svg",
-  "image_license": "CC BY-SA 4.0",
-  "image_title": "Hip joint pain.svg",
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Dolor posterior de cadera al ponerse en cuclillas",
@@ -289,5 +299,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Artrosis de cadera\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nHip osteoarthritis\n\n## Sinónimos\n\ncoxartrosis\n\nosteoartritis de cadera\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.34; Población: pacientes que consultan en atención primaria por dolor de cadera o inguinal; Referencia: pmid:31846019\n\n## Hallazgos clínicos\n\n### Dolor posterior de cadera al ponerse en cuclillas (HM:3041)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.24\n\n**Especificidad:** 0.96\n\n**LR positivo:** Valor: 6.1; IC del 95 %: 1.3 / 29; Referencia: pmid:31846019\n\n**Decisión:** el cociente más alto, pero con intervalo muy ancho: el extremo inferior roza el 1.3, casi irrelevante\n\n### Dolor inguinal a la abducción o aducción pasiva (HM:3042)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.33\n\n**Especificidad:** 0.94\n\n**LR positivo:** Valor: 5.7; IC del 95 %: 1.6 / 20; Referencia: pmid:31846019\n\n### Debilidad de los abductores de cadera (HM:3043)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.44\n\n**Especificidad:** 0.9\n\n**LR positivo:** Valor: 4.5; IC del 95 %: 2.4 / 8.4; Referencia: pmid:31846019\n\n**Decisión:** intervalo más estrecho que los anteriores; en la práctica, más fiable pese a un cociente algo menor\n\n### Aducción pasiva de cadera disminuida (HM:3044)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.8\n\n**Especificidad:** 0.81\n\n**LR positivo:** Valor: 4.2; IC del 95 %: 3.0 / 6.0; Referencia: pmid:31846019\n\n**LR negativo:** Valor: 0.25; IC del 95 %: 0.11 / 0.54; Referencia: pmid:31846019; Nota: la fuente lo expresa como el valor de encontrar una aducción pasiva NORMAL, que es el cociente negativo de este hallazgo\n\n**Decisión:** el hallazgo más equilibrado y el único que sirve en los dos sentidos: su presencia apoya y su normalidad es lo que mejor descarta\n\n### Rotación interna de cadera disminuida (HM:3045)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.66\n\n**Especificidad:** 0.79\n\n**LR positivo:** Valor: 3.2; IC del 95 %: 1.7 / 6.0; Referencia: pmid:31846019\n\n### Dolor al subir escaleras o cuestas (HM:3046)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 2.1; IC del 95 %: 1.1 / 3.8; Referencia: pmid:31846019; Nota: la fuente agrupa tres datos de anamnesis con idéntico cociente de 2.1; el intervalo citado es el más ancho de los tres\n\n### Antecedente familiar de artrosis (HM:3047)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 2.1; IC del 95 %: 1.1 / 3.8; Referencia: pmid:31846019; Nota: mismo cociente agrupado que el dolor al subir escaleras\n\n### Antecedente personal de artrosis de rodilla (HM:3048)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 2.1; IC del 95 %: 1.1 / 3.8; Referencia: pmid:31846019; Nota: mismo cociente agrupado que el dolor al subir escaleras\n\n## Conclusión de la fuente\n\nPruebas sencillas de movilidad de la cadera, observando si aparece dolor durante el movimiento, distinguen a los pacientes con más probabilidad de tener artrosis en la radiografía. Una combinación de hallazgos detecta con eficiencia a quienes tienen artrosis grave.\n\n## Referencias y procedencia\n\n**pmid:31846019:** Does This Patient Have Hip Osteoarthritis?: The Rational Clinical Examination Systematic Review. JAMA, 2019. DOI: 10.1001/jama.2019.19413.\n\nFuente clínica: medsemiotics-db, condición HM:6012."
 }

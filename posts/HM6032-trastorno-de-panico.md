@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6032-trastorno-de-panico.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0001-hallazgo-clinico.yaml: 5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329
     conceptos/HM3138-cuestionario-phq-panico-positivo.yaml: 2d87a17ec761d174db4b44a201334e6bfbfcd079d1ae7bb71cc28c88ac5567e3
     condiciones/HM6032-trastorno-de-panico.yaml: 9ff078266bae69107d2b13997d0c6b966f95f1c5779cc7707d131318aa86c012
     referencias/pmid-25058220.yaml: c0b00c67a6434792c8113c2fd0dcbf58e8d984f338e492cf5a56ef51f78801e3

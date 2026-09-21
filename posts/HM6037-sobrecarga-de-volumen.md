@@ -15,19 +15,24 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6037-sobrecarga-de-volumen.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0400-sintoma-respiratorio.yaml: 437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b
     conceptos/HM0406-crepitantes.yaml: 5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM0604-edema-en-miembros-inferiores.yaml: ca8df008ba56ddf2a9a2d6786ecd624e2d1e8ded2adb5a20c6b86adff479c0e9
+    conceptos/HM0700-alteracion-analitica.yaml: 855280729989c53c674d74df1d9d1459df52ecfe46d1bb650f6bf3b590383f5b
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3146-ingurgitacion-yugular.yaml: 68f00e3333cd5790afa7a4f9a6a550b2feee50898fb40eda646b356d00312ab0
     conceptos/HM3147-congestion-vascular-en-radiografia-de-torax.yaml: 740f5e92a92e8a63c9c5cb4d68bd83b7dae9cf7aaaa646a7c0a418ed1ad7de5d
     conceptos/HM3148-lineas-b-pulmonares-bilaterales.yaml: bf438bf8faf27db643fbcfa947ad803782ce7e30b057ddcd3e21790d952d516e
     conceptos/HM3149-colapsabilidad-reducida-de-la-vena-cava-inferior.yaml: 4ecb426dd940030438b55098a70a345224f1f74377bd1b7b0082f88d43d217b7
     conceptos/HM3150-presion-venosa-yugular-elevada-por-ecografia.yaml: 14123abf7c9a13905022e5cf5ce2d07cd179a9c60fff58883b5bf109d21c0ccc
     conceptos/HM3151-peptido-natriuretico-cerebral-elevado.yaml: 67c8cf440251c504880f70bde0dce1ea5b332e82a46c97beaa37fe6b1cc9c151
+    conceptos/HM3160-perfil-a-pulmon-seco.yaml: f014ba950c8c3ccaa756c4ff3932886d6468c531a58e0a3d3a9d1cd1877006f5
     condiciones/HM6037-sobrecarga-de-volumen.yaml: eca41c49d71742acef49b4319fc79da95905d97155a2dbaec845d342004a615f
     referencias/pmid-22392031.yaml: 167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b
     referencias/pmid-41729549.yaml: a3b8210b679e9dff1f5671c3127d08ad54fcd26329cfe6735e29183e0cc98937
@@ -309,7 +314,7 @@ Rango documentado: 0.35 / 0.69; Población: adultos que respiran espontáneament
 
 **Decisión:** la conclusión de la fuente lo señala, junto con la ausencia de líneas B, como lo más útil para EXCLUIR la sobrecarga: un BNP normal la hace muy poco probable
 
-**Advertencia:** la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto HM:3151 antes de usar este umbral.
+**Advertencia:** la unidad del corte es la que imprime la fuente, ng/mL, y no se convierte. La literatura habitual sitúa el mismo corte en 100 pg/mL. Ver la advertencia del concepto péptido natriurético cerebral elevado antes de usar este umbral.
 
 **Nota:** es el hallazgo cuyas cifras más movió la corrección: LR+ pasó de 6.9 a 4.2 y LR− de 0.14 a 0.09. Las de aquí son las corregidas.
 
@@ -325,7 +330,7 @@ Rango documentado: 0.35 / 0.69; Población: adultos que respiran espontáneament
 
 **Decisión:** el hallazgo de exploración física con mejor rendimiento de la serie, y el más específico de los doce
 
-**Advertencia:** es la ingurgitación que se INSPECCIONA. La presión venosa yugular medida con ecografía es otra arista (HM:3150) con otro cociente: 2.9 frente a 4.1, y especificidad 73% frente a 92%. No son intercambiables.
+**Advertencia:** es la ingurgitación que se INSPECCIONA. La presión venosa yugular medida con ecografía es otra arista (presión venosa yugular elevada por ecografía) con otro cociente: 2.9 frente a 4.1, y especificidad 73% frente a 92%. No son intercambiables.
 
 ### Líneas B pulmonares bilaterales (HM:3148)
 
@@ -393,7 +398,7 @@ Rango documentado: 0.35 / 0.69; Población: adultos que respiran espontáneament
 
 **Referencia:** pmid:41729549
 
-**Advertencia:** no confundir con la ingurgitación yugular de la inspección (HM:3146), que la fuente mide aparte y con mejor cociente
+**Advertencia:** no confundir con la ingurgitación yugular de la inspección, que la fuente mide aparte y con mejor cociente
 
 ### Crepitantes (HM:0406)
 
@@ -433,7 +438,7 @@ Con las cifras corregidas, la ecografía a pie de cama (líneas B 4.0, vena cava
 
 ## Aspectos pendientes de documentación
 
-La discrepancia de unidad del BNP —100 ng/mL en la fuente frente a los 100 pg/mL habituales en la literatura— no se puede resolver sin el texto completo. Está declarada en HM:3151 y en la arista, y no se reconcilia aquí.
+La discrepancia de unidad del BNP —100 ng/mL en la fuente frente a los 100 pg/mL habituales en la literatura— no se puede resolver sin el texto completo. Está declarada en péptido natriurético cerebral elevado y en la arista, y no se reconcilia aquí.
 
 El intervalo de los crepitantes, 0.7-4.5 sobre un valor puntual de 2.7, es marcadamente asimétrico en escala logarítmica y cruza el 1. Es el valor corregido y así se transcribe, pero conviene confirmarlo contra el texto completo antes de que ningún consumidor lo trate como definitivo.
 

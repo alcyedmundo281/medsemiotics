@@ -1,0 +1,274 @@
+---
+id: HM6043-01
+slug: apendicitis-aguda-precision-semiotica
+title: 'Apendicitis aguda: hallazgos y evidencia clínica'
+subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
+date: '2026-09-21'
+author: Dr. Alcy Torres
+category: medicina_interna
+category_label: Medicina Interna
+tags:
+- apendicitis-aguda
+- medicina_interna
+- semiologia
+reading_time: 8 min
+difficulty: Intermedio
+fuente:
+  repositorio: alcyedmundo281/medsemiotics-db
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
+  doi: 10.5281/zenodo.22064424
+  condicion: condiciones/HM6043-apendicitis-aguda.yaml
+  archivos:
+    CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
+    conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0204-dolor-en-fosa-iliaca-derecha.yaml: 5d9a8cbd3896d2d48a03c14d7f5e8cf05547ae16696539eb6793b4495f25043d
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0601-irritacion-peritoneal.yaml: 05237c0ae13ba1c349514b2e63ecc620a13a04defc2b7219c2e9c0313ac9eb21
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
+    conceptos/HM0712-leucocitosis.yaml: 2e5c508b2e66972503180b4cfced57952439dbca740f2bfa1cbb9dbc6a25b158
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
+    conceptos/HM3177-signo-ecografico-de-apendicitis-aguda.yaml: 8af710d0fc65e8203a82946be611bed521b330ae00b5ea647d9d6de7a55c6f96
+    condiciones/HM6043-apendicitis-aguda.yaml: b0a473b4952302c66f6cb8c65a8451e3b133eb1d30ef978f2a0f0c87d59073ce
+    referencias/pmid-24113477.yaml: 371db850598e103d5be3697f876a8e8501122f3de0f8f20893ccd9c8bd75ffb2
+    referencias/pmid-28826614.yaml: b630a135237dd8eaacc00d6ecaf1d746a89e60945aa88993984831c6d9fe8ce2
+    referencias/pmid-2934762.yaml: b939d65a8573f1a8a5e6a756ae588f8ece263d4a8ff4f2e34b6fc1a6fbb82b5a
+    referencias/pmid-30293146.yaml: 658b74d2aaa206724463543d85b40df254035b7faff5642d8f67f31ab0757d1d
+    referencias/pmid-31743429.yaml: 79a33c339484f02660181a869b7c6e8681d4929afe54bdc6ac02be96eeaf9654
+    referencias/pmid-33688952.yaml: 03ac56a62e4db11f1a69a6a726788bd0439a8e94d067c12565b094fd8b30b1be
+    referencias/pmid-34420255.yaml: fbbdd5799d7b52cf3713412eaab0ef993af8c6f0dd70c19bbccef6b4adbe8b6b
+    referencias/pmid-35100766.yaml: 8a02c21440f12e69f4579437cd9dfff66c4e1ed4a34ad6b96c8ad320099c24da
+    referencias/pmid-3538138.yaml: 01ff22f060598c8093f0abc3c66610b34e407e8cb5205992fd266da295cfa30f
+    referencias/pmid-36130469.yaml: d93b615ff4d1627abe633d3277b694a6536cf5f05c9aa3107dd006157636801f
+grounding:
+  condicion_id: HM:6043
+  condicion_nombre: Apendicitis aguda
+  concepto_id: HM:3177
+  concepto_nombre: Signo ecográfico de apendicitis aguda
+  estado_lr: medido
+  lr_positivo: 2.29
+  lr_negativo: 0.24
+  lr_positivo_rango: null
+  lr_negativo_rango: null
+  poblacion: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)
+  referencia_id: pmid:34420255
+  referencia_cita: Becker BA, Kaminstein D, Secko M, Collin M, Kehrl T, Reardon L, Stahlman BA A prospective, multicenter evaluation of point-of-care ultrasound for appendicitis in the emergency department Acad Emerg Med 2022
+  pmid: '34420255'
+  doi: 10.1111/acem.14378
+  sensibilidad: 0.85
+  especificidad: 0.63
+triada:
+  significante: Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.
+  significado: Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.
+  decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata'
+evidencia:
+- concepto: HM:3177
+  rol: imagen
+  estado_lr: medido
+  poblacion: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)
+  ref: pmid:34420255
+  sensibilidad: 0.85
+  ic95_sensibilidad:
+  - 0.74
+  - 0.92
+  especificidad: 0.63
+  ic95_especificidad:
+  - 0.56
+  - 0.7
+  lr_positivo: &id001
+    valor: 2.29
+    ic95:
+    - 1.85
+    - 2.84
+    ref: pmid:34420255
+  lr_negativo:
+    valor: 0.24
+    ic95:
+    - 0.14
+    - 0.42
+    ref: pmid:34420255
+  decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata'
+  advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación
+- concepto: HM:0204
+  rol: manifestacion
+  estado_lr: no_medido
+- concepto: HM:0601
+  rol: prueba_especifica
+  estado_lr: no_medido
+- concepto: HM:0712
+  rol: apoyo
+  estado_lr: no_medido
+- concepto: HM:0101
+  rol: apoyo
+  estado_lr: no_medido
+autoevaluacion:
+- id: q1
+  pregunta: 'En Apendicitis aguda, ¿cuál es el resultado documentado del LR positivo para «Signo ecográfico de apendicitis aguda»? Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256).'
+  concepto_id: HM:3177
+  referencia_id: pmid:34420255
+  pmid: '34420255'
+  doi: 10.1111/acem.14378
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6043
+    concepto_id: HM:3177
+    estado_lr: medido
+    campo: lr_positivo
+    dato: *id001
+    poblacion: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)
+    motivo: null
+    decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata'
+    advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación
+  opciones:
+  - texto: La fuente no dispone de un cociente medido para este hallazgo.
+    correcta: false
+    feedback: 'Sí hay una medición documentada: LR positivo: 2.29. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
+  - texto: 'LR positivo: 2.29.'
+    correcta: true
+    feedback: 'LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
+  - texto: El valor 2.29 corresponde al LR negativo y no al LR positivo.
+    correcta: false
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
+- id: q2
+  pregunta: En Apendicitis aguda, ¿qué estado de la evidencia corresponde a «Dolor en fosa ilíaca derecha» según la fuente?
+  concepto_id: HM:0204
+  referencia_id: null
+  pmid: null
+  doi: null
+  fuente_doi: 10.5281/zenodo.22064424
+  evidencia:
+    condicion_id: HM:6043
+    concepto_id: HM:0204
+    estado_lr: no_medido
+    campo: null
+    dato: null
+    poblacion: null
+    motivo: null
+    decision: null
+    advertencia: null
+  opciones:
+  - texto: LR no medido
+    correcta: true
+    feedback: LR no medido
+  - texto: LR no medible
+    correcta: false
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
+  - texto: Sin efecto discriminativo
+    correcta: false
+    feedback: La fuente clasifica este hallazgo como «LR no medido». LR no medido
+---
+
+# Apendicitis aguda
+
+Hallazgos, cocientes documentados y límites de la evidencia.
+
+## Nombre en inglés
+
+Acute appendicitis
+
+## Sinónimos
+
+apendicitis
+
+inflamación aguda del apéndice cecal
+
+## Códigos
+
+Snomed: 85189001; Cie10: K35.8
+
+## Factores de riesgo
+
+edad entre 10 y 30 años
+
+sexo masculino
+
+## Hallazgos clínicos
+
+### Signo ecográfico de apendicitis aguda (HM:3177)
+
+**Significante:** Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.
+
+**Significado:** Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.
+
+**Falsos positivos:** Apéndice normal visible con diámetro en el límite alto (5-6 mm) sin dolor ni cambios parietales / Adenitis mesentérica con múltiples ganglios hipoecoicos y reactividad parietal en íleon / Íleon terminal engrosado por enteritis infecciosa (Yersinia, Campylobacter) o enfermedad de Crohn / Diverticulitis cecal o apendagitis epiploica de fosa ilíaca derecha / Patología ginecológica aguda ipsilateral (salpingitis, quiste ovárico hemorrágico, torsión de anexo) / Apéndice retrocecal parcialmente oculto por gas cecal (causa frecuente de falso negativo)
+
+**Rol:** Imagen
+
+**Estado del LR:** LR medido
+
+**Población:** adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)
+
+**Referencia:** pmid:34420255
+
+**Sensibilidad:** 0.85
+
+**Ic95 sensibilidad:** 0.74 / 0.92
+
+**Especificidad:** 0.63
+
+**Ic95 especificidad:** 0.56 / 0.7
+
+**LR positivo:** Valor: 2.29; IC del 95 %: 1.85 / 2.84; Referencia: pmid:34420255
+
+**LR negativo:** Valor: 0.24; IC del 95 %: 0.14 / 0.42; Referencia: pmid:34420255
+
+**Decisión:** hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata
+
+**Advertencia:** el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación
+
+### Dolor en fosa ilíaca derecha (HM:0204)
+
+**Rol:** Manifestación
+
+**Estado del LR:** LR no medido
+
+### Irritación peritoneal (HM:0601)
+
+**Rol:** Prueba específica
+
+**Estado del LR:** LR no medido
+
+### Leucocitosis (HM:0712)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR no medido
+
+### Fiebre (HM:0101)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR no medido
+
+## Notas de uso
+
+VARIABILIDAD SEGÚN OPERADOR Y PROTOCOLO: mientras que el POCUS general de urgencias reporta LR+ de 2.29 (pmid:34420255), los metaanálisis de ecografía reglada que excluyen casos indeterminados (Arruzza 2022, pmid:36130469) alcanzan sensibilidad de 82.1% (73.8-88.2) y especificidad de 85.9% (72.7-93.3).
+
+## Conclusión de la fuente
+
+La ecografía a pie de cama es moderadamente precisa para la sospecha de apendicitis en urgencias; acelera la decisión quirúrgica ante hallazgo positivo inequívoco pero requiere confirmación tomográfica cuando el apéndice no es visualizado.
+
+## Referencias y procedencia
+
+**pmid:34420255:** A prospective, multicenter evaluation of point-of-care ultrasound for appendicitis in the emergency department. Acad Emerg Med, 2022. DOI: 10.1111/acem.14378.
+
+**pmid:36130469:** Diagnostic accuracy of computed tomography and ultrasound for the diagnosis of acute appendicitis: A systematic review and meta-analysis. Radiography (Lond), 2022. DOI: 10.1016/j.radi.2022.08.012.
+
+**pmid:24113477:** Acute appendicitis: investigating an optimal outer appendiceal diameter cut-point in a pediatric population. J Emerg Med, 2014. DOI: 10.1016/j.jemermed.2013.08.027.
+
+**pmid:28826614:** Diagnostic Performance of Ultrasonography for Pediatric Appendicitis: A Night and Day Difference?. Acad Radiol, 2017. DOI: 10.1016/j.acra.2017.06.007.
+
+**pmid:2934762:** Acute appendicitis: US evaluation using graded compression. Radiology, 1986. DOI: 10.1148/radiology.158.2.2934762.
+
+**pmid:30293146:** The non-visualized appendix and secondary signs on ultrasound for pediatric appendicitis in the community hospital setting. Pediatr Surg Int, 2018. DOI: 10.1007/s00383-018-4350-1.
+
+**pmid:31743429:** Computed tomography for diagnosis of acute appendicitis in adults. Cochrane Database Syst Rev, 2019. DOI: 10.1002/14651858.CD009977.pub2.
+
+**pmid:33688952:** Discriminating complicated from uncomplicated appendicitis by ultrasound imaging, computed tomography or magnetic resonance imaging: systematic review and meta-analysis of diagnostic accuracy. BJS Open, 2021. DOI: 10.1093/bjsopen/zraa030.
+
+**pmid:35100766:** Factors Contributing to Nonvisualization of the Appendix on Ultrasound in Children With Suspected Appendicitis. Pediatr Emerg Care, 2022. DOI: 10.1097/PEC.0000000000002394.
+
+**pmid:3538138:** Mesenteric adenitis and acute terminal ileitis: US evaluation using graded compression. Radiology, 1986. DOI: 10.1148/radiology.161.3.3538138.
+
+Fuente clínica: medsemiotics-db, condición HM:6043.

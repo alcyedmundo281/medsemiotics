@@ -15,17 +15,22 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6002-sindrome-intestino-irritable.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0303-diarrea.yaml: 0d5ca16fa30e66c063ee51a787ddae512941d0600d783e12fbd847482a224ced
     conceptos/HM0304-estrenimiento.yaml: 144e3ac249c42c3c2b9a726e28a4fc596afc88b32b7266ad8906ed7fd157899f
     conceptos/HM0310-melena.yaml: 56ea476133e21be467cd68f7bb9a8a9b3f9a7623d63fbf3e4e37810fe2d87081
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
     conceptos/HM0711-anemia.yaml: c338972f0322d30f8cc652238e28f0d141409666b6d0f1bf27bc2e7b532c24d5
+    conceptos/HM0800-sintoma-general.yaml: 39761069b5de091733e7864bb0c96f68755b6d3fa5e59003f5f8c7949b0c4827
     conceptos/HM0803-perdida-de-peso.yaml: 78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e
     conceptos/HM3060-hematoquecia.yaml: 3859f875c15207194d1bc498152f293a810c21faeb51c3ae1ce78ba459cbd338
     condiciones/HM6002-sindrome-intestino-irritable.yaml: de99a8c5755f450792d575897902bde932154119c4318ee30d916dbec0bd11f5
@@ -199,7 +204,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Motivo:** La evidencia disponible es de OTRO hallazgo. Hammer midió sangre en el papel higiénico, que es sangrado bajo; la melena es sangre digerida, de origen alto. Atribuirle ese dato daría una cita que resuelve y habla de otra cosa.
 
-**Nota:** Por eso se acuñó HM:3060 «Hematoquecia», que es el concepto que Hammer sí midió. Su arista tampoco se emite: ver la discrepancia más abajo.
+**Nota:** Por eso se acuñó «Hematoquecia», que es el concepto que Hammer sí midió. Su arista tampoco se emite: ver la discrepancia más abajo.
 
 ## Discrepancias entre fuentes
 

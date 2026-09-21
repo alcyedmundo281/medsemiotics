@@ -15,12 +15,17 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6016-embarazo-ectopico.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0001-hallazgo-clinico.yaml: 5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
+    conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3064-masa-anexial-sin-gestacion-intrauterina.yaml: 26a6a3c941046e13dcbd5bc187fd5b150cd4363c1b1c9b580e175db655831b15
     conceptos/HM3065-anomalia-anexial-en-ecografia-transvaginal.yaml: 201db5101f90698a603a2fed159b9511ebd7e48f0cb70e5c67e2a297241a7c1f
     conceptos/HM3066-dolor-a-la-movilizacion-cervical.yaml: 2c27db232894c6a15ba314df23163c9b9684b3dbd1340f2fa398bda7648b81be
@@ -28,7 +33,10 @@ fuente:
     conceptos/HM3068-dolor-a-la-palpacion-anexial.yaml: cfacb53553472ff10929397fb4b333684a4110ec83e44a02b807a2742dcc1161
     conceptos/HM3069-sangrado-vaginal-en-la-gestacion-precoz.yaml: a7c6df28b077ba236b0c2784d246ad30c7e10e5bc9eae7d10725927d836273ee
     conceptos/HM3165-embarazo-intrauterino-confirmado.yaml: 9526f85850a91e95243c5eafb04dfccb263eb8b37fd37855676a65616a9466c5
-    condiciones/HM6016-embarazo-ectopico.yaml: 0a41c034477bba32617b7f2f1c7e082f9f80e782e40257414102a2d88fc1b8f8
+    conceptos/HM3189-hcg-serica-cuantitativa.yaml: 5df98b5d3d6b165b99abf2ef3341ec5d3ad35cf3c7ef75877e7acedb2912b167
+    condiciones/HM6016-embarazo-ectopico.yaml: fb1d6c98506158df5d8cf54771883ac68297f2937ea1e6e5ca9e9396da865d01
+    referencias/pmid-16308901.yaml: 7d83fd01af208b65e0e2e48604c19ee7e3ae2580a9e25c9dcca9a94de5e970f9
+    referencias/pmid-23262929.yaml: baf9bd5ef0bf63da5d43af178030b43d16e0c2a51d182e40e1dc26a27ce90f9d
     referencias/pmid-23613077.yaml: 8611f28321a818a1dd3195b5ddfc92a6f3f8af796cb75285e456be3693232cc1
     referencias/pmid-36063623.yaml: b3c2b193b298c18f72507cab22503d788ddb54f6e11877b2e91c33665db2d7f0
 grounding:
@@ -128,6 +136,50 @@ evidencia:
   estado_lr: no_medido
   ref: pmid:23613077
   motivo: 'el otro criterio de entrada, con la misma acotación: ningún componente de la anamnesis alcanza un LR+ de 1.5'
+- concepto: HM:3189
+  rol: prueba_especifica
+  estado_lr: medido
+  lr_positivo:
+    valor: 2.3
+    umbral: hCG > 1500 mIU/mL
+    ref: pmid:16308901
+  lr_negativo:
+    valor: 0.91
+    umbral: hCG > 1500 mIU/mL
+    ref: pmid:16308901
+  poblacion: 527 mujeres con embarazo de localización no determinada (PUL) tras ecografía transvaginal en unidad especializada
+  graduacion:
+    parametro: hCG sérica
+    unidad: mIU/mL
+    lectura: acumulativo
+    nota: 1 IU/L equivale numéricamente a 1 mIU/mL
+  tramos:
+  - umbral: hCG > 1000 mIU/mL
+    desde: 1000
+    sensibilidad: 0.217
+    especificidad: 0.873
+    lr_positivo: 1.71
+    lr_negativo: 0.9
+    ref: pmid:16308901
+    nota: un valor superior a 1000 mIU/mL con útero vacío desplaza muy poco la probabilidad (LR+ 1.71); la mayoría de ectópicos cursan con valores inferiores
+  - umbral: hCG > 1500 mIU/mL
+    desde: 1500
+    sensibilidad: 0.152
+    especificidad: 0.934
+    lr_positivo: 2.3
+    lr_negativo: 0.91
+    ref: pmid:16308901
+    nota: umbral clásico de zona discriminatoria; especificidad del 93.4% pero sensibilidad muy pobre (15.2%), con LR+ de sólo 2.30
+  - umbral: hCG > 2000 mIU/mL
+    desde: 2000
+    sensibilidad: 0.109
+    especificidad: 0.952
+    lr_positivo: 2.27
+    lr_negativo: 0.94
+    ref: pmid:16308901
+    nota: elevar el corte a 2000 mIU/mL aumenta la especificidad al 95.2% pero reduce la sensibilidad al 10.9%, sin ganar potencia diagnóstica (LR+ 2.27)
+  decision: ningún valor aislado de hCG por encima de la zona discriminatoria confirma el ectópico, y un valor por debajo nunca lo descarta (LR− 0.90-0.94). La zona discriminatoria define cuándo un embarazo intrauterino viable debería verse, no cuándo un embarazo es obligadamente ectópico
+  advertencia: el uso aislado de la zona discriminatoria clásica (1500-2000 mIU/mL) para indicar metotrexato o legrado interrumpe gestaciones intrauterinas viables que tardan más en ser visibles. La guía ACOG y Connolly 2013 (pmid:23262929) elevan el corte de visualización fiable al 99% a 3500 mIU/mL
 autoevaluacion:
 - id: q1
   pregunta: 'En Embarazo ectópico, ¿cuál es el resultado documentado del LR positivo para «Masa anexial sin gestación intrauterina en ecografía transvaginal»? Población: gestantes con dolor abdominal o sangrado vaginal en la gestación precoz (n = 6885).'
@@ -318,6 +370,26 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Motivo:** el otro criterio de entrada, con la misma acotación: ningún componente de la anamnesis alcanza un LR+ de 1.5
 
+### hCG sérica cuantitativa (HM:3189)
+
+**Rol:** Prueba específica
+
+**Estado del LR:** LR medido
+
+**LR positivo:** Valor: 2.3; Umbral: hCG > 1500 mIU/mL; Referencia: pmid:16308901
+
+**LR negativo:** Valor: 0.91; Umbral: hCG > 1500 mIU/mL; Referencia: pmid:16308901
+
+**Población:** 527 mujeres con embarazo de localización no determinada (PUL) tras ecografía transvaginal en unidad especializada
+
+**Graduación:** Parámetro: hCG sérica; Unidad: mIU/mL; Lectura: acumulativo; Nota: 1 IU/L equivale numéricamente a 1 mIU/mL
+
+**Tramos:** Umbral: hCG > 1000 mIU/mL; Desde: 1000; Sensibilidad: 0.217; Especificidad: 0.873; LR positivo: 1.71; LR negativo: 0.9; Referencia: pmid:16308901; Nota: un valor superior a 1000 mIU/mL con útero vacío desplaza muy poco la probabilidad (LR+ 1.71); la mayoría de ectópicos cursan con valores inferiores / Umbral: hCG > 1500 mIU/mL; Desde: 1500; Sensibilidad: 0.152; Especificidad: 0.934; LR positivo: 2.3; LR negativo: 0.91; Referencia: pmid:16308901; Nota: umbral clásico de zona discriminatoria; especificidad del 93.4% pero sensibilidad muy pobre (15.2%), con LR+ de sólo 2.30 / Umbral: hCG > 2000 mIU/mL; Desde: 2000; Sensibilidad: 0.109; Especificidad: 0.952; LR positivo: 2.27; LR negativo: 0.94; Referencia: pmid:16308901; Nota: elevar el corte a 2000 mIU/mL aumenta la especificidad al 95.2% pero reduce la sensibilidad al 10.9%, sin ganar potencia diagnóstica (LR+ 2.27)
+
+**Decisión:** ningún valor aislado de hCG por encima de la zona discriminatoria confirma el ectópico, y un valor por debajo nunca lo descarta (LR− 0.90-0.94). La zona discriminatoria define cuándo un embarazo intrauterino viable debería verse, no cuándo un embarazo es obligadamente ectópico
+
+**Advertencia:** el uso aislado de la zona discriminatoria clásica (1500-2000 mIU/mL) para indicar metotrexato o legrado interrumpe gestaciones intrauterinas viables que tardan más en ser visibles. La guía ACOG y Connolly 2013 (pmid:23262929) elevan el corte de visualización fiable al 99% a 3500 mIU/mL
+
 ## Notas de uso
 
 LAS CIFRAS DE pmid:36063623 NO SON COCIENTES DEL ECTÓPICO Y NO DEBEN LEERSE COMO TALES. Miden el rendimiento del POCUS transabdominal hecho por médicos de urgencias para CONFIRMAR UN EMBARAZO INTRAUTERINO, contrastado contra la ecografía transvaginal del obstetra, en 143 gestantes sintomáticas del primer trimestre: exactitud 93.0%, sensibilidad 89.0%, especificidad 100%. Añadir un transductor lineal de alta frecuencia las lleva a 97.9%, 96.7% y 100%. La condición diana es el intrauterino, no el ectópico, y el patrón de referencia es otra prueba de imagen, no el desenlace: son dos razones independientes por las que estas cifras no se convierten en un LR de HM:6016.
@@ -326,17 +398,19 @@ ESTA FUENTE TIENE ERRATA PUBLICADA Y ESTÁ COTEJADA (Am J Emerg Med 2025;88:277,
 
 ## Aspectos pendientes de documentación
 
-El embarazo de localización no determinada no está en el índice como concepto propio, y es el hallazgo que de verdad decide el manejo en urgencias: no es «ausencia de HM:3165» sino una categoría con su propia ruta. Entrará cuando haya una fuente que lo mida, no antes.
+El embarazo de localización no determinada no está en el índice como concepto propio, y es el hallazgo que de verdad decide el manejo en urgencias: no es «ausencia de embarazo intrauterino confirmado en ecografía» sino una categoría con su propia ruta. Entrará cuando haya una fuente que lo mida, no antes.
 
-La hCG sérica cuantitativa no entra como arista. La fuente es explícita en que los estudios existentes NO establecen un valor único diagnóstico de ectópico, y un umbral inventado aquí sería exactamente lo que este repositorio no admite. Entrará cuando haya una fuente que lo mida, y probablemente como tramos y no como cifra suelta.
-
-La cinética de la hCG seriada tampoco entra, y aquí ni siquiera hay afirmación de la fuente en que apoyarse: el abstract se pronuncia sobre un valor aislado, no sobre el patrón de ascenso. Requiere otra fuente.
+La cinética de la hCG seriada no entra: requiere otra fuente con datos de ascenso porcentual a las 48 horas.
 
 ## Conclusión de la fuente
 
 La ecografía transvaginal es la mejor prueba diagnóstica aislada para evaluar a una mujer con sospecha de embarazo ectópico. La presencia de dolor abdominal o sangrado vaginal en la gestación precoz debe llevar a solicitar una ecografía transvaginal y una hCG sérica cuantitativa.
 
 ## Referencias y procedencia
+
+**pmid:16308901:** Diagnostic accuracy of varying discriminatory zones for the prediction of ectopic pregnancy in women with a pregnancy of unknown location. Ultrasound Obstet Gynecol, 2005. DOI: 10.1002/uog.2636.
+
+**pmid:23262929:** Reevaluation of discriminatory and threshold levels for serum β-hCG in early pregnancy. Obstet Gynecol, 2013. DOI: 10.1097/aog.0b013e318278f421.
 
 **pmid:23613077:** Does this woman have an ectopic pregnancy?: the rational clinical examination systematic review. JAMA, 2013. DOI: 10.1001/jama.2013.3914.
 

@@ -16,35 +16,35 @@
       "dato": null,
       "poblacion": null,
       "motivo": "forma parte de la definición de caso; sesgo de incorporación",
-      "decision": null,
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": null,
-    "pmid": null,
+    "referencia_id": "pmid:14765767",
+    "pmid": "14765767",
     "doi": null,
-    "referencia_cita": null,
+    "referencia_cita": "Roche SP, Kobos R Jaundice in the adult patient Am Fam Physician 2004",
     "triada": {
-      "significante": "Ictericia",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+      "significante": "Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).",
+      "significado": "Depósito tisular de bilirrubina por hiperbilirrubinemia, no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).",
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad"
     },
     "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Ictericia» según la fuente?",
     "opciones": [
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       },
       {
         "texto": "LR no medible",
         "correcta": true,
-        "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+        "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       },
       {
         "texto": "LR no medido",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       }
     ]
   },
@@ -74,9 +74,9 @@
     "doi": null,
     "referencia_cita": null,
     "triada": {
-      "significante": "Ictericia",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+      "significante": "Coloración amarilla de la esclerótica, las mucosas y la piel, que se busca con luz natural y aparece primero en la esclerótica. Su detección clínica es poco fiable: con bilirrubina sérica total de 2.5 mg/dL la reconoció el 58 % de los examinadores (IC 95 %: 33 a 80 %) y con 3.1 mg/dL el 68 % (IC 95 %: 46 a 85 %) (pmid:9271910); frente a la bilirrubina medida, los médicos la detectaron con sensibilidad y especificidad cercanas al 70 % (pmid:10691073).",
+      "significado": "Depósito tisular de bilirrubina por hiperbilirrubinemia, no conjugada (producción aumentada por hemólisis o defecto de conjugación) o conjugada (daño hepatocelular o colestasis intrahepática o extrahepática) (pmid:28145671, pmid:14765767).",
+      "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad"
     },
     "pregunta": "En Hepatitis viral aguda, ¿qué estado de la evidencia corresponde a «Coluria» según la fuente?",
     "opciones": [
@@ -4162,6 +4162,735 @@
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
         "feedback": "Sí hay una medición documentada: LR positivo: 10.9. LR positivo: 10.9. IC del 95 %: 6.2 a 19.2. Población: adultos en urgencias con infección de piel y partes blandas, sospecha de absceso o celulitis; subgrupo de adultos de un metaanálisis de 14 estudios prospectivos (2 656 pacientes en total). Interpretación registrada: colección confirmada: drena o deriva para drenaje. Sin colección, solo empedrado: antibiótico y control, no incisión a ciegas. Y antes de cortar, Doppler color: un seudoaneurisma o un vaso pueden verse como una colección. Advertencia: estos cocientes son del subgrupo de ADULTOS y no se trasladan al niño. El mismo metaanálisis da en pediatría cocientes peores, que no entran todavía porque esperan la comprobación de Marin 2013."
+      }
+    ]
+  },
+  {
+    "id": "colecistitis-aguda-precision-semiotica-q1",
+    "post_slug": "colecistitis-aguda-precision-semiotica",
+    "post_title": "Colecistitis aguda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6042",
+    "condicion_nombre": "Colecistitis aguda",
+    "concepto_id": "HM:3175",
+    "evidencia": {
+      "condicion_id": "HM:6042",
+      "concepto_id": "HM:3175",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 12.7,
+        "ic95": [
+          5.8,
+          27.5
+        ],
+        "ref": "pmid:37855790"
+      },
+      "poblacion": "adultos en el servicio de urgencias con sospecha clínica de colecistitis aguda; metaanálisis de 7 estudios con diagnóstico final como estándar de referencia (1 772 pacientes)",
+      "motivo": null,
+      "decision": "patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h)",
+      "advertencia": "un LR− de 0.31 no descarta colecistitis en presencia de clínica inflamatoria persistente; ante ecografía indeterminada o negativa con alta sospecha, indicar imagen adicional o reevaluación seriada"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:37855790",
+    "pmid": "37855790",
+    "doi": "10.1016/j.annemergmed.2023.09.005",
+    "referencia_cita": "Wilson SJ, Thavanathan R, Cheng W, Stuart J, Kim DJ, Glen P, Duigenan S, Shorr R, Woo MY, Perry JJ Test Characteristics of Emergency Medicine-Performed Point-of-Care Ultrasound for the Diagnosis of Acute Cholecystitis: A Systematic Review and Meta-analysis Ann Emerg Med 2024",
+    "triada": {
+      "significante": "Coexistencia de colelitiasis (habitualmente con cálculo impactado en cuello o cístico), pared vesicular engrosada mayor de 3 mm en cara anterior, líquido o halo perivesicular y dolor selectivo agudo al presionar con el transductor directamente sobre la vesícula visualizada (Murphy ecográfico). En cuadros avanzados, pared estriada en capas hipo e hiperecogénicas alternas.",
+      "significado": "Obstrucción aguda del conducto cístico con hiperpresión intraluminal, edema, isquemia mural e inflamación aguda de la vesícula biliar.",
+      "decision": "patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h)"
+    },
+    "pregunta": "En Colecistitis aguda, ¿cuál es el resultado documentado del LR positivo para «Signo ecográfico de colecistitis aguda»? Población: adultos en el servicio de urgencias con sospecha clínica de colecistitis aguda; metaanálisis de 7 estudios con diagnóstico final como estándar de referencia (1 772 pacientes).",
+    "opciones": [
+      {
+        "texto": "El valor 12.7 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 12.7. IC del 95 %: 5.8 a 27.5. Población: adultos en el servicio de urgencias con sospecha clínica de colecistitis aguda; metaanálisis de 7 estudios con diagnóstico final como estándar de referencia (1 772 pacientes). Interpretación registrada: patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h). Advertencia: un LR− de 0.31 no descarta colecistitis en presencia de clínica inflamatoria persistente; ante ecografía indeterminada o negativa con alta sospecha, indicar imagen adicional o reevaluación seriada."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 12.7. LR positivo: 12.7. IC del 95 %: 5.8 a 27.5. Población: adultos en el servicio de urgencias con sospecha clínica de colecistitis aguda; metaanálisis de 7 estudios con diagnóstico final como estándar de referencia (1 772 pacientes). Interpretación registrada: patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h). Advertencia: un LR− de 0.31 no descarta colecistitis en presencia de clínica inflamatoria persistente; ante ecografía indeterminada o negativa con alta sospecha, indicar imagen adicional o reevaluación seriada."
+      },
+      {
+        "texto": "LR positivo: 12.7.",
+        "correcta": true,
+        "feedback": "LR positivo: 12.7. IC del 95 %: 5.8 a 27.5. Población: adultos en el servicio de urgencias con sospecha clínica de colecistitis aguda; metaanálisis de 7 estudios con diagnóstico final como estándar de referencia (1 772 pacientes). Interpretación registrada: patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h). Advertencia: un LR− de 0.31 no descarta colecistitis en presencia de clínica inflamatoria persistente; ante ecografía indeterminada o negativa con alta sospecha, indicar imagen adicional o reevaluación seriada."
+      }
+    ]
+  },
+  {
+    "id": "colecistitis-aguda-precision-semiotica-q2",
+    "post_slug": "colecistitis-aguda-precision-semiotica",
+    "post_title": "Colecistitis aguda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6042",
+    "condicion_nombre": "Colecistitis aguda",
+    "concepto_id": "HM:0903",
+    "evidencia": {
+      "condicion_id": "HM:6042",
+      "concepto_id": "HM:0903",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:29032636",
+    "pmid": "29032636",
+    "doi": "10.1002/jhbp.515",
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Coexistencia de colelitiasis (habitualmente con cálculo impactado en cuello o cístico), pared vesicular engrosada mayor de 3 mm en cara anterior, líquido o halo perivesicular y dolor selectivo agudo al presionar con el transductor directamente sobre la vesícula visualizada (Murphy ecográfico). En cuadros avanzados, pared estriada en capas hipo e hiperecogénicas alternas.",
+      "significado": "Obstrucción aguda del conducto cístico con hiperpresión intraluminal, edema, isquemia mural e inflamación aguda de la vesícula biliar.",
+      "decision": "patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h)"
+    },
+    "pregunta": "En Colecistitis aguda, ¿qué estado de la evidencia corresponde a «Litiasis biliar en imagen» según la fuente?",
+    "opciones": [
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido"
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      }
+    ]
+  },
+  {
+    "id": "apendicitis-aguda-precision-semiotica-q1",
+    "post_slug": "apendicitis-aguda-precision-semiotica",
+    "post_title": "Apendicitis aguda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6043",
+    "condicion_nombre": "Apendicitis aguda",
+    "concepto_id": "HM:3177",
+    "evidencia": {
+      "condicion_id": "HM:6043",
+      "concepto_id": "HM:3177",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.29,
+        "ic95": [
+          1.85,
+          2.84
+        ],
+        "ref": "pmid:34420255"
+      },
+      "poblacion": "adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)",
+      "motivo": null,
+      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata",
+      "advertencia": "el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:34420255",
+    "pmid": "34420255",
+    "doi": "10.1111/acem.14378",
+    "referencia_cita": "Becker BA, Kaminstein D, Secko M, Collin M, Kehrl T, Reardon L, Stahlman BA A prospective, multicenter evaluation of point-of-care ultrasound for appendicitis in the emergency department Acad Emerg Med 2022",
+    "triada": {
+      "significante": "Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.",
+      "significado": "Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.",
+      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata"
+    },
+    "pregunta": "En Apendicitis aguda, ¿cuál es el resultado documentado del LR positivo para «Signo ecográfico de apendicitis aguda»? Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256).",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.29. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
+      },
+      {
+        "texto": "LR positivo: 2.29.",
+        "correcta": true,
+        "feedback": "LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
+      },
+      {
+        "texto": "El valor 2.29 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
+      }
+    ]
+  },
+  {
+    "id": "apendicitis-aguda-precision-semiotica-q2",
+    "post_slug": "apendicitis-aguda-precision-semiotica",
+    "post_title": "Apendicitis aguda: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6043",
+    "condicion_nombre": "Apendicitis aguda",
+    "concepto_id": "HM:0204",
+    "evidencia": {
+      "condicion_id": "HM:6043",
+      "concepto_id": "HM:0204",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": null,
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.",
+      "significado": "Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.",
+      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata"
+    },
+    "pregunta": "En Apendicitis aguda, ¿qué estado de la evidencia corresponde a «Dolor en fosa ilíaca derecha» según la fuente?",
+    "opciones": [
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido"
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+      }
+    ]
+  },
+  {
+    "id": "tromboembolia-pulmonar-precision-semiotica-q1",
+    "post_slug": "tromboembolia-pulmonar-precision-semiotica",
+    "post_title": "Tromboembolia pulmonar: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6044",
+    "condicion_nombre": "Tromboembolia pulmonar",
+    "concepto_id": "HM:3162",
+    "evidencia": {
+      "condicion_id": "HM:6044",
+      "concepto_id": "HM:3162",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3.12,
+        "ic95": [
+          1.96,
+          4.97
+        ],
+        "ref": "pmid:28495379"
+      },
+      "poblacion": "pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017)",
+      "motivo": null,
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+      "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:28495379",
+    "pmid": "28495379",
+    "doi": "10.1016/j.echo.2017.03.004",
+    "referencia_cita": "Fields JM, Davis J, Girson L, Au A, Potts J, Morgan CJ, Vetter I, Riesenberg LA Transthoracic Echocardiography for Diagnosing Pulmonary Embolism: A Systematic Review and Meta-Analysis J Am Soc Echocardiogr 2017",
+    "triada": {
+      "significante": "Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).",
+      "significado": "El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.",
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
+    },
+    "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR positivo para «Ventrículo derecho dilatado en ecografía»? Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017).",
+    "opciones": [
+      {
+        "texto": "LR positivo: 3.12.",
+        "correcta": true,
+        "feedback": "LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+      },
+      {
+        "texto": "El valor 3.12 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+      }
+    ]
+  },
+  {
+    "id": "tromboembolia-pulmonar-precision-semiotica-q2",
+    "post_slug": "tromboembolia-pulmonar-precision-semiotica",
+    "post_title": "Tromboembolia pulmonar: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6044",
+    "condicion_nombre": "Tromboembolia pulmonar",
+    "concepto_id": "HM:3144",
+    "evidencia": {
+      "condicion_id": "HM:6044",
+      "concepto_id": "HM:3144",
+      "estado_lr": "medido",
+      "campo": "lr_negativo",
+      "dato": {
+        "valor": 0.1,
+        "ref": "pmid:16403932"
+      },
+      "poblacion": "pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest",
+      "motivo": null,
+      "decision": "un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:16403932",
+    "pmid": "16403932",
+    "doi": "10.1001/jama.295.2.199",
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).",
+      "significado": "El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.",
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
+    },
+    "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest.",
+    "opciones": [
+      {
+        "texto": "El valor 0.1 corresponde al LR positivo y no al LR negativo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.1. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+      },
+      {
+        "texto": "LR negativo: 0.1.",
+        "correcta": true,
+        "feedback": "LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+      }
+    ]
+  },
+  {
+    "id": "taponamiento-cardiaco-precision-semiotica-q1",
+    "post_slug": "taponamiento-cardiaco-precision-semiotica",
+    "post_title": "Taponamiento cardíaco: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6045",
+    "condicion_nombre": "Taponamiento cardíaco",
+    "concepto_id": "HM:3163",
+    "evidencia": {
+      "condicion_id": "HM:6045",
+      "concepto_id": "HM:3163",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": "pacientes con derrame pericárdico evaluados en urgencias o cuidados críticos mediante ecocardiografía a pie de cama; revisión de Alerhand 2022",
+      "motivo": null,
+      "decision": "la presencia de colapso diastólico del ventrículo derecho o colapso sistólico de la aurícula derecha en un paciente con inestabilidad hemodinámica acelera de inmediato la activación del equipo para pericardiocentesis evacuadora o ventana pericárdica quirúrgica de emergencia",
+      "advertencia": "la ausencia de colapso de cavidades derechas puede ocurrir en hipertensión pulmonar grave o hipertrofia ventricular derecha previa debido a presiones diastólicas basales elevadas (falso negativo); no descarta taponamiento ante shock clínico evidente"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:35696801",
+    "pmid": "35696801",
+    "doi": "10.1016/j.ajem.2022.05.001",
+    "referencia_cita": "Alerhand S, Adrian RJ, Long B, Avila J Pericardial tamponade: A comprehensive emergency medicine and echocardiography review Am J Emerg Med 2022",
+    "triada": {
+      "significante": "Derrame pericárdico con colapso diastólico del ventrículo derecho, colapso sistólico de la aurícula derecha, vena cava inferior dilatada (pletórica) sin colapso inspiratorio y, en derrames grandes, corazón oscilante (swinging heart).",
+      "significado": "Presión intrapericárdica elevada que restringe el llenado de las cavidades derechas: fisiología de taponamiento, distinta de solo tener líquido pericárdico.",
+      "decision": "la presencia de colapso diastólico del ventrículo derecho o colapso sistólico de la aurícula derecha en un paciente con inestabilidad hemodinámica acelera de inmediato la activación del equipo para pericardiocentesis evacuadora o ventana pericárdica quirúrgica de emergencia"
+    },
+    "pregunta": "En Taponamiento cardíaco, ¿qué estado de la evidencia corresponde a «Taponamiento cardíaco en ecografía» según la fuente?",
+    "opciones": [
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: pacientes con derrame pericárdico evaluados en urgencias o cuidados críticos mediante ecocardiografía a pie de cama; revisión de Alerhand 2022. Interpretación registrada: la presencia de colapso diastólico del ventrículo derecho o colapso sistólico de la aurícula derecha en un paciente con inestabilidad hemodinámica acelera de inmediato la activación del equipo para pericardiocentesis evacuadora o ventana pericárdica quirúrgica de emergencia. Advertencia: la ausencia de colapso de cavidades derechas puede ocurrir en hipertensión pulmonar grave o hipertrofia ventricular derecha previa debido a presiones diastólicas basales elevadas (falso negativo); no descarta taponamiento ante shock clínico evidente."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: pacientes con derrame pericárdico evaluados en urgencias o cuidados críticos mediante ecocardiografía a pie de cama; revisión de Alerhand 2022. Interpretación registrada: la presencia de colapso diastólico del ventrículo derecho o colapso sistólico de la aurícula derecha en un paciente con inestabilidad hemodinámica acelera de inmediato la activación del equipo para pericardiocentesis evacuadora o ventana pericárdica quirúrgica de emergencia. Advertencia: la ausencia de colapso de cavidades derechas puede ocurrir en hipertensión pulmonar grave o hipertrofia ventricular derecha previa debido a presiones diastólicas basales elevadas (falso negativo); no descarta taponamiento ante shock clínico evidente."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Población: pacientes con derrame pericárdico evaluados en urgencias o cuidados críticos mediante ecocardiografía a pie de cama; revisión de Alerhand 2022. Interpretación registrada: la presencia de colapso diastólico del ventrículo derecho o colapso sistólico de la aurícula derecha en un paciente con inestabilidad hemodinámica acelera de inmediato la activación del equipo para pericardiocentesis evacuadora o ventana pericárdica quirúrgica de emergencia. Advertencia: la ausencia de colapso de cavidades derechas puede ocurrir en hipertensión pulmonar grave o hipertrofia ventricular derecha previa debido a presiones diastólicas basales elevadas (falso negativo); no descarta taponamiento ante shock clínico evidente."
+      }
+    ]
+  },
+  {
+    "id": "taponamiento-cardiaco-precision-semiotica-q2",
+    "post_slug": "taponamiento-cardiaco-precision-semiotica",
+    "post_title": "Taponamiento cardíaco: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6045",
+    "condicion_nombre": "Taponamiento cardíaco",
+    "concepto_id": "HM:3155",
+    "evidencia": {
+      "condicion_id": "HM:6045",
+      "concepto_id": "HM:3155",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "precondición fisiopatológica sine qua non: no puede existir taponamiento cardíaco en ausencia de líquido o coágulo en el espacio pericárdico que eleve la presión intrapericárdica",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Derrame pericárdico con colapso diastólico del ventrículo derecho, colapso sistólico de la aurícula derecha, vena cava inferior dilatada (pletórica) sin colapso inspiratorio y, en derrames grandes, corazón oscilante (swinging heart).",
+      "significado": "Presión intrapericárdica elevada que restringe el llenado de las cavidades derechas: fisiología de taponamiento, distinta de solo tener líquido pericárdico.",
+      "decision": "la presencia de colapso diastólico del ventrículo derecho o colapso sistólico de la aurícula derecha en un paciente con inestabilidad hemodinámica acelera de inmediato la activación del equipo para pericardiocentesis evacuadora o ventana pericárdica quirúrgica de emergencia"
+    },
+    "pregunta": "En Taponamiento cardíaco, ¿qué estado de la evidencia corresponde a «Derrame pericárdico en ecografía» según la fuente?",
+    "opciones": [
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: precondición fisiopatológica sine qua non: no puede existir taponamiento cardíaco en ausencia de líquido o coágulo en el espacio pericárdico que eleve la presión intrapericárdica."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Motivo: precondición fisiopatológica sine qua non: no puede existir taponamiento cardíaco en ausencia de líquido o coágulo en el espacio pericárdico que eleve la presión intrapericárdica."
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: precondición fisiopatológica sine qua non: no puede existir taponamiento cardíaco en ausencia de líquido o coágulo en el espacio pericárdico que eleve la presión intrapericárdica."
+      }
+    ]
+  },
+  {
+    "id": "ascitis-precision-semiotica-q1",
+    "post_slug": "ascitis-precision-semiotica",
+    "post_title": "Ascitis: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6046",
+    "condicion_nombre": "Ascitis",
+    "concepto_id": "HM:3182",
+    "evidencia": {
+      "condicion_id": "HM:6046",
+      "concepto_id": "HM:3182",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 1.6,
+        "ref": "pmid:1573754"
+      },
+      "poblacion": "adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas",
+      "motivo": null,
+      "decision": "maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:1573754",
+    "pmid": "1573754",
+    "doi": "10.1001/jama.267.19.2645",
+    "referencia_cita": "Williams JW Jr, Simel DL The rational clinical examination. Does this patient have ascites? How to divine fluid in the abdomen JAMA 1992",
+    "triada": {
+      "significante": "Con el paciente colocado en posición sobre codos y rodillas (genupectoral) durante varios minutos, el fonendoscopio colocado en la porción más declive del abdomen percibe un cambio brusco en la intensidad y calidad de la transmisión acústica al percutir la pared lateral y desplazar el estetoscopio hacia la periferia del área declive.",
+      "significado": "Agrupamiento gravitacional dependiente de pequeños volúmenes de líquido peritoneal libre (tan bajos como 120-300 mL) en la región periumbilical anterior en posición prona.",
+      "decision": "maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal"
+    },
+    "pregunta": "En Ascitis, ¿cuál es el resultado documentado del LR positivo para «Signo del charco»? Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas.",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 1.6. LR positivo: 1.6. Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas. Interpretación registrada: maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal."
+      },
+      {
+        "texto": "LR positivo: 1.6.",
+        "correcta": true,
+        "feedback": "LR positivo: 1.6. Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas. Interpretación registrada: maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal."
+      },
+      {
+        "texto": "El valor 1.6 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 1.6. Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas. Interpretación registrada: maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal."
+      }
+    ]
+  },
+  {
+    "id": "ascitis-precision-semiotica-q2",
+    "post_slug": "ascitis-precision-semiotica",
+    "post_title": "Ascitis: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6046",
+    "condicion_nombre": "Ascitis",
+    "concepto_id": "HM:0902",
+    "evidencia": {
+      "condicion_id": "HM:6046",
+      "concepto_id": "HM:0902",
+      "estado_lr": "no_medible",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "Estándar de referencia de la condición: la ecografía abdominal define la presencia de líquido libre peritoneal frente a la cual se calibran las maniobras físicas en la revisión sistemática de Williams & Simel 1992 (sesgo de incorporación). Detecta desde 100 mL de líquido libre peritoneal en recesos dependientes (Morrison, esplenorrenal, Douglas), superando ampliamente el umbral de detección de la exploración física clínica (> 1.5 L).",
+      "decision": "la presencia de líquido anecoico libre dependiente confirma ascitis y permite guiar paracentesis diagnóstica de forma segura",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Con el paciente colocado en posición sobre codos y rodillas (genupectoral) durante varios minutos, el fonendoscopio colocado en la porción más declive del abdomen percibe un cambio brusco en la intensidad y calidad de la transmisión acústica al percutir la pared lateral y desplazar el estetoscopio hacia la periferia del área declive.",
+      "significado": "Agrupamiento gravitacional dependiente de pequeños volúmenes de líquido peritoneal libre (tan bajos como 120-300 mL) en la región periumbilical anterior en posición prona.",
+      "decision": "maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal"
+    },
+    "pregunta": "En Ascitis, ¿qué estado de la evidencia corresponde a «Líquido libre en receso hepatorrenal (espacio de Morrison)» según la fuente?",
+    "opciones": [
+      {
+        "texto": "LR no medible",
+        "correcta": true,
+        "feedback": "LR no medible Motivo: Estándar de referencia de la condición: la ecografía abdominal define la presencia de líquido libre peritoneal frente a la cual se calibran las maniobras físicas en la revisión sistemática de Williams & Simel 1992 (sesgo de incorporación). Detecta desde 100 mL de líquido libre peritoneal en recesos dependientes (Morrison, esplenorrenal, Douglas), superando ampliamente el umbral de detección de la exploración física clínica (> 1.5 L). Interpretación registrada: la presencia de líquido anecoico libre dependiente confirma ascitis y permite guiar paracentesis diagnóstica de forma segura."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: Estándar de referencia de la condición: la ecografía abdominal define la presencia de líquido libre peritoneal frente a la cual se calibran las maniobras físicas en la revisión sistemática de Williams & Simel 1992 (sesgo de incorporación). Detecta desde 100 mL de líquido libre peritoneal en recesos dependientes (Morrison, esplenorrenal, Douglas), superando ampliamente el umbral de detección de la exploración física clínica (> 1.5 L). Interpretación registrada: la presencia de líquido anecoico libre dependiente confirma ascitis y permite guiar paracentesis diagnóstica de forma segura."
+      },
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: Estándar de referencia de la condición: la ecografía abdominal define la presencia de líquido libre peritoneal frente a la cual se calibran las maniobras físicas en la revisión sistemática de Williams & Simel 1992 (sesgo de incorporación). Detecta desde 100 mL de líquido libre peritoneal en recesos dependientes (Morrison, esplenorrenal, Douglas), superando ampliamente el umbral de detección de la exploración física clínica (> 1.5 L). Interpretación registrada: la presencia de líquido anecoico libre dependiente confirma ascitis y permite guiar paracentesis diagnóstica de forma segura."
+      }
+    ]
+  },
+  {
+    "id": "esplenomegalia-precision-semiotica-q1",
+    "post_slug": "esplenomegalia-precision-semiotica",
+    "post_title": "Esplenomegalia: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6047",
+    "condicion_nombre": "Esplenomegalia",
+    "concepto_id": "HM:0603",
+    "evidencia": {
+      "condicion_id": "HM:6047",
+      "concepto_id": "HM:0603",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 8.2,
+        "ref": "pmid:8411607"
+      },
+      "poblacion": "adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607)",
+      "motivo": null,
+      "decision": "un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2)",
+      "advertencia": "la ausencia de palpación no descarta agrandamiento esplénico (Se 58%, LR- 0.41); el bazo requiere un aumento de volumen del 40-50% antes de ser palpable"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:8411607",
+    "pmid": "8411607",
+    "doi": null,
+    "referencia_cita": "Grover SA, Barkun AN, Sackett DL The rational clinical examination. Does this patient have splenomegaly? JAMA 1993",
+    "triada": {
+      "significante": "Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).",
+      "significado": "Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.",
+      "decision": "un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2)"
+    },
+    "pregunta": "En Esplenomegalia, ¿cuál es el resultado documentado del LR positivo para «Esplenomegalia»? Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607).",
+    "opciones": [
+      {
+        "texto": "LR positivo: 8.2.",
+        "correcta": true,
+        "feedback": "LR positivo: 8.2. Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607). Interpretación registrada: un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2). Advertencia: la ausencia de palpación no descarta agrandamiento esplénico (Se 58%, LR- 0.41); el bazo requiere un aumento de volumen del 40-50% antes de ser palpable."
+      },
+      {
+        "texto": "El valor 8.2 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 8.2. Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607). Interpretación registrada: un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2). Advertencia: la ausencia de palpación no descarta agrandamiento esplénico (Se 58%, LR- 0.41); el bazo requiere un aumento de volumen del 40-50% antes de ser palpable."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 8.2. LR positivo: 8.2. Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607). Interpretación registrada: un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2). Advertencia: la ausencia de palpación no descarta agrandamiento esplénico (Se 58%, LR- 0.41); el bazo requiere un aumento de volumen del 40-50% antes de ser palpable."
+      }
+    ]
+  },
+  {
+    "id": "esplenomegalia-precision-semiotica-q2",
+    "post_slug": "esplenomegalia-precision-semiotica",
+    "post_title": "Esplenomegalia: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6047",
+    "condicion_nombre": "Esplenomegalia",
+    "concepto_id": "HM:3184",
+    "evidencia": {
+      "condicion_id": "HM:6047",
+      "concepto_id": "HM:3184",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 2.3,
+        "ref": "pmid:8411607"
+      },
+      "poblacion": "adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607)",
+      "motivo": null,
+      "decision": "la matidez en el espacio de Traube eleva la sospecha de bazo agrandado e indica proceder a palpación orientada o ecografía",
+      "advertencia": "falso positivo común en pacientes sin ayuno previo (estómago ocupado por alimentos sólidos o líquidos)"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:8411607",
+    "pmid": "8411607",
+    "doi": null,
+    "referencia_cita": "Grover SA, Barkun AN, Sackett DL The rational clinical examination. Does this patient have splenomegaly? JAMA 1993",
+    "triada": {
+      "significante": "Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).",
+      "significado": "Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.",
+      "decision": "un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2)"
+    },
+    "pregunta": "En Esplenomegalia, ¿cuál es el resultado documentado del LR positivo para «Matidez en el espacio de Traube»? Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607).",
+    "opciones": [
+      {
+        "texto": "El valor 2.3 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.3. Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607). Interpretación registrada: la matidez en el espacio de Traube eleva la sospecha de bazo agrandado e indica proceder a palpación orientada o ecografía. Advertencia: falso positivo común en pacientes sin ayuno previo (estómago ocupado por alimentos sólidos o líquidos)."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.3. LR positivo: 2.3. Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607). Interpretación registrada: la matidez en el espacio de Traube eleva la sospecha de bazo agrandado e indica proceder a palpación orientada o ecografía. Advertencia: falso positivo común en pacientes sin ayuno previo (estómago ocupado por alimentos sólidos o líquidos)."
+      },
+      {
+        "texto": "LR positivo: 2.3.",
+        "correcta": true,
+        "feedback": "LR positivo: 2.3. Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607). Interpretación registrada: la matidez en el espacio de Traube eleva la sospecha de bazo agrandado e indica proceder a palpación orientada o ecografía. Advertencia: falso positivo común en pacientes sin ayuno previo (estómago ocupado por alimentos sólidos o líquidos)."
+      }
+    ]
+  },
+  {
+    "id": "bocio-inspeccion-palpacion-precision-q1",
+    "post_slug": "bocio-inspeccion-palpacion-precision",
+    "post_title": "Bocio: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6048",
+    "condicion_nombre": "Bocio",
+    "concepto_id": "HM:3187",
+    "evidencia": {
+      "condicion_id": "HM:6048",
+      "concepto_id": "HM:3187",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 26.3,
+        "ref": "pmid:7861577"
+      },
+      "poblacion": "adultos evaluados mediante inspección y palpación con el cuello en posición neutra frente a ecografía tiroidea como estándar de referencia",
+      "motivo": null,
+      "decision": "un tiroides netamente visible o palpable con el cuello en posición neutra confirma bocio con muy alta probabilidad clínica (LR+ 26.3)",
+      "advertencia": "la ausencia de bocio evidente en posición neutra no descarta bocio leve o de localización intratorácica/retroesternal (LR- 0.40)"
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:7861577",
+    "pmid": "7861577",
+    "doi": null,
+    "referencia_cita": "Siminoski K The rational clinical examination. Does this patient have a goiter? JAMA 1995",
+    "triada": {
+      "significante": "Tiroides visible o palpable con el cuello en posición neutra o relajada (sin hiperextensión forzada), que asciende con los movimientos de deglución al palpar los lóbulos laterales o el istmo tiroideo.",
+      "significado": "Aumento patológico del volumen o masa de la glándula tiroides (bocio o tiromegalia) por encima de los límites fisiológicos del adulto.",
+      "decision": "un tiroides netamente visible o palpable con el cuello en posición neutra confirma bocio con muy alta probabilidad clínica (LR+ 26.3)"
+    },
+    "pregunta": "En Bocio, ¿cuál es el resultado documentado del LR positivo para «Agrandamiento tiroideo palpable en posición neutra»? Población: adultos evaluados mediante inspección y palpación con el cuello en posición neutra frente a ecografía tiroidea como estándar de referencia.",
+    "opciones": [
+      {
+        "texto": "El valor 26.3 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 26.3. Población: adultos evaluados mediante inspección y palpación con el cuello en posición neutra frente a ecografía tiroidea como estándar de referencia. Interpretación registrada: un tiroides netamente visible o palpable con el cuello en posición neutra confirma bocio con muy alta probabilidad clínica (LR+ 26.3). Advertencia: la ausencia de bocio evidente en posición neutra no descarta bocio leve o de localización intratorácica/retroesternal (LR- 0.40)."
+      },
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 26.3. LR positivo: 26.3. Población: adultos evaluados mediante inspección y palpación con el cuello en posición neutra frente a ecografía tiroidea como estándar de referencia. Interpretación registrada: un tiroides netamente visible o palpable con el cuello en posición neutra confirma bocio con muy alta probabilidad clínica (LR+ 26.3). Advertencia: la ausencia de bocio evidente en posición neutra no descarta bocio leve o de localización intratorácica/retroesternal (LR- 0.40)."
+      },
+      {
+        "texto": "LR positivo: 26.3.",
+        "correcta": true,
+        "feedback": "LR positivo: 26.3. Población: adultos evaluados mediante inspección y palpación con el cuello en posición neutra frente a ecografía tiroidea como estándar de referencia. Interpretación registrada: un tiroides netamente visible o palpable con el cuello en posición neutra confirma bocio con muy alta probabilidad clínica (LR+ 26.3). Advertencia: la ausencia de bocio evidente en posición neutra no descarta bocio leve o de localización intratorácica/retroesternal (LR- 0.40)."
+      }
+    ]
+  },
+  {
+    "id": "bocio-inspeccion-palpacion-precision-q2",
+    "post_slug": "bocio-inspeccion-palpacion-precision",
+    "post_title": "Bocio: hallazgos y evidencia clínica",
+    "category": "medicina_interna",
+    "category_label": "Medicina Interna",
+    "condicion_id": "HM:6048",
+    "condicion_nombre": "Bocio",
+    "concepto_id": "HM:3188",
+    "evidencia": {
+      "condicion_id": "HM:6048",
+      "concepto_id": "HM:3188",
+      "estado_lr": "medido",
+      "campo": "lr_positivo",
+      "dato": {
+        "valor": 3,
+        "ic95": [
+          2.5,
+          3.5
+        ],
+        "ref": "pmid:7861577"
+      },
+      "poblacion": "niños en edad escolar evaluados según el criterio de falange distal del pulgar de la OMS frente a ecografía tiroidea",
+      "motivo": null,
+      "decision": "en cribado pediátrico, un lóbulo que supera la falange distal del pulgar triplica la probabilidad de bocio confirmado por ultrasonido",
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": "pmid:7861577",
+    "pmid": "7861577",
+    "doi": null,
+    "referencia_cita": "Siminoski K The rational clinical examination. Does this patient have a goiter? JAMA 1995",
+    "triada": {
+      "significante": "Tiroides visible o palpable con el cuello en posición neutra o relajada (sin hiperextensión forzada), que asciende con los movimientos de deglución al palpar los lóbulos laterales o el istmo tiroideo.",
+      "significado": "Aumento patológico del volumen o masa de la glándula tiroides (bocio o tiromegalia) por encima de los límites fisiológicos del adulto.",
+      "decision": "un tiroides netamente visible o palpable con el cuello en posición neutra confirma bocio con muy alta probabilidad clínica (LR+ 26.3)"
+    },
+    "pregunta": "En Bocio, ¿cuál es el resultado documentado del LR positivo para «Lóbulo tiroideo palpable mayor que la falange distal del pulgar»? Población: niños en edad escolar evaluados según el criterio de falange distal del pulgar de la OMS frente a ecografía tiroidea.",
+    "opciones": [
+      {
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
+        "correcta": false,
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.0. LR positivo: 3.0. IC del 95 %: 2.5 a 3.5. Población: niños en edad escolar evaluados según el criterio de falange distal del pulgar de la OMS frente a ecografía tiroidea. Interpretación registrada: en cribado pediátrico, un lóbulo que supera la falange distal del pulgar triplica la probabilidad de bocio confirmado por ultrasonido."
+      },
+      {
+        "texto": "LR positivo: 3.0.",
+        "correcta": true,
+        "feedback": "LR positivo: 3.0. IC del 95 %: 2.5 a 3.5. Población: niños en edad escolar evaluados según el criterio de falange distal del pulgar de la OMS frente a ecografía tiroidea. Interpretación registrada: en cribado pediátrico, un lóbulo que supera la falange distal del pulgar triplica la probabilidad de bocio confirmado por ultrasonido."
+      },
+      {
+        "texto": "El valor 3.0 corresponde al LR negativo y no al LR positivo.",
+        "correcta": false,
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.0. IC del 95 %: 2.5 a 3.5. Población: niños en edad escolar evaluados según el criterio de falange distal del pulgar de la OMS frente a ecografía tiroidea. Interpretación registrada: en cribado pediátrico, un lóbulo que supera la falange distal del pulgar triplica la probabilidad de bocio confirmado por ultrasonido."
       }
     ]
   }

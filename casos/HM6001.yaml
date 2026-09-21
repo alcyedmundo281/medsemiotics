@@ -1,0 +1,159 @@
+# Caso socrático para Hepatitis viral aguda (HM:6001).
+# Tema cualitativo: la base no registra ningún LR medido. El eje docente es entender por qué
+# (sesgo de incorporación frente a ausencia de estudios) y qué se puede razonar sin cocientes.
+condicion_id: HM:6001
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-09-21
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Reconocer el pródromo y la fase ictérica de la hepatitis viral aguda en el relato clínico.
+  - Usar la coluria y la acolia para ubicar el trastorno de la bilirrubina, sin atribuirles un poder discriminativo que la base no documenta.
+  - Distinguir un LR «no medido» de uno «no medible» y explicar el sesgo de incorporación.
+  - Identificar la serología como el estándar que define el diagnóstico etiológico.
+vineta:
+  titulo: Un cocinero con la orina oscura
+  texto: >-
+    Varón de 26 años, ayudante de cocina. Consulta porque desde hace dos días nota la
+    orina «color de té» y sus compañeros le dicen que tiene los ojos amarillos. Una
+    semana antes empezó con malestar general, cansancio, falta de apetito, náuseas y
+    fiebre no cuantificada. Hace un mes regresó de un viaje a una zona rural donde bebió
+    agua sin tratar. No consume alcohol de forma habitual, no toma medicamentos ni
+    productos de herbolario y niega relaciones sexuales de riesgo o uso de drogas
+    inyectables.
+  datos:
+    - etiqueta: Temperatura
+      valor: 37.9 °C
+    - etiqueta: Presión arterial
+      valor: 118/74 mmHg
+    - etiqueta: Estado de conciencia
+      valor: Alerta y orientado, sin asterixis
+etapas:
+  - titulo: El pródromo que casi nadie reconoce
+    fase: activacion
+    hallazgos: [HM:0101, HM:0801, HM:0802]
+    informacion: >-
+      Antes de la ictericia hubo una semana de {{hallazgo HM:0101}}, {{hallazgo HM:0801}}
+      y {{hallazgo HM:0802}}. En ese momento el paciente pensó que era «una gripe».
+    preguntas:
+      - pregunta: >-
+          Con solo el pródromo, ¿qué diagnósticos habrías considerado? ¿Qué te habría
+          hecho sospechar una afectación hepática antes de la ictericia?
+        clave: >-
+          Un síndrome viral inespecífico es compatible con decenas de infecciones. La
+          sospecha hepática nace del contexto (exposición a agua o alimentos
+          contaminados, contactos, viaje) y de la aparición de orina oscura. En la base,
+          los tres síntomas figuran como apoyo diagnóstico con {{estado HM:0101}}: nadie
+          ha publicado cuánto modifican la probabilidad de hepatitis viral, así que no se
+          les puede asignar un peso numérico.
+  - titulo: La exploración del paciente ictérico
+    fase: exploracion
+    hallazgos: [HM:0305, HM:0306, HM:0307, HM:0203, HM:0602]
+    informacion: >-
+      Se observa {{hallazgo HM:0305}} en escleras y piel. El paciente confirma
+      {{hallazgo HM:0306}} y, desde ayer, heces de color claro ({{hallazgo HM:0307}}).
+      A la palpación hay {{hallazgo HM:0203}} y el borde hepático es romo y doloroso,
+      compatible con {{hallazgo HM:0602}}. No hay esplenomegalia ni estigmas de
+      hepatopatía crónica.
+    preguntas:
+      - pregunta: >-
+          La coluria y la acolia aparecen juntas. ¿Qué te dicen sobre el tipo de
+          bilirrubina que está elevada y sobre dónde se altera su vía?
+        clave: >-
+          La coluria indica que hay bilirrubina conjugada en sangre, porque solo la
+          conjugada es hidrosoluble y se filtra en la orina; eso aleja una causa
+          prehepática pura como la hemólisis, que eleva la no conjugada. La acolia
+          indica que llega poca bilis al intestino. Juntas señalan un trastorno de la
+          excreción hepatocelular o de la vía biliar. Sirven para ubicar el problema,
+          pero la base registra ambas con {{estado HM:0306}}: su capacidad para
+          distinguir la hepatitis viral de otras causas de ictericia no está cuantificada.
+      - pregunta: >-
+          ¿Cuánto aumenta la ictericia la probabilidad de hepatitis viral aguda en este
+          paciente?
+        clave: >-
+          No hay un número que dar, y no por falta de estudios. Para la {{hallazgo HM:0305}}
+          la base registra {{estado HM:0305}}: la ictericia forma parte de la definición
+          de caso. Si el patrón de referencia ya incluye el hallazgo, medir su cociente
+          contra ese patrón lo sobreestima por construcción (sesgo de incorporación).
+          Clínicamente orienta, pero no «suma» probabilidad de forma cuantificable.
+  - titulo: El laboratorio y el límite de la evidencia
+    fase: discriminacion
+    hallazgos: [HM:0733, HM:0745]
+    informacion: >-
+      El laboratorio muestra {{hallazgo HM:0733}} de predominio de ALT e
+      {{hallazgo HM:0745}} de predominio directo. El tiempo de protrombina es normal.
+    datos:
+      - etiqueta: ALT
+        valor: 1850 U/L
+      - etiqueta: AST
+        valor: 1320 U/L
+      - etiqueta: Bilirrubina total / directa
+        valor: 6.8 / 5.1 mg/dL
+      - etiqueta: Fosfatasa alcalina
+        valor: 190 U/L
+      - etiqueta: INR
+        valor: '1.1'
+    preguntas:
+      - pregunta: >-
+          Este artículo no tiene calculadora bayesiana. ¿Por qué? ¿Qué diferencia hay
+          entre un hallazgo «no medido» y uno «no medible»?
+        clave: >-
+          Un LR «no medido» es una laguna de la literatura: el estudio podría hacerse
+          y todavía no se ha publicado (como la hepatomegalia, con {{estado HM:0602}}).
+          Uno «no medible» no puede existir con el diseño habitual: la
+          {{hallazgo HM:0733}} y la {{hallazgo HM:0745}} tienen {{estado HM:0733}}
+          porque forman parte de la
+          definición de caso. Sin cocientes válidos, la calculadora no tiene con qué
+          operar, y la base prefiere no mostrar un número antes que inventarlo.
+      - pregunta: >-
+          Un patrón hepatocelular con transaminasas muy elevadas es compatible con
+          varias causas. ¿Qué prueba define que la hepatitis es viral y de qué virus?
+        clave: >-
+          La serología: IgM contra el virus de la hepatitis A, antígeno de superficie e
+          IgM anti-core de la hepatitis B y, según el contexto, anticuerpos contra la
+          hepatitis C y E. Es el estándar de referencia del diagnóstico, y por eso los
+          hallazgos que definen el caso no pueden evaluarse contra él. El diferencial
+          incluye la hepatitis tóxica o por fármacos, la isquémica y la autoinmune; la
+          anamnesis de este paciente hace menos probables las dos primeras.
+  - titulo: Qué hacer con este paciente
+    fase: decision
+    informacion: >-
+      La IgM contra el virus de la hepatitis A resulta positiva. El paciente tolera la
+      vía oral, está orientado y su tiempo de protrombina es normal.
+    preguntas:
+      - pregunta: >-
+          ¿Puede manejarse de forma ambulatoria? ¿Qué datos te harían cambiar de
+          decisión?
+        clave: >-
+          Sí, con tratamiento de soporte, hidratación, evitar alcohol y fármacos
+          hepatotóxicos y control clínico y de laboratorio. Obligan a reevaluar e
+          ingresar la prolongación del tiempo de protrombina, cualquier signo de
+          encefalopatía (confusión, somnolencia, asterixis), la intolerancia oral o el
+          empeoramiento de la ictericia: sugieren insuficiencia hepática aguda.
+      - pregunta: >-
+          El paciente trabaja manipulando alimentos. ¿Qué medidas de salud pública
+          corresponden?
+        clave: >-
+          La hepatitis A se transmite por vía fecal-oral. Corresponde notificar el caso
+          según la normativa local, indicar la suspensión temporal de la manipulación de
+          alimentos, reforzar la higiene de manos y valorar la profilaxis de los
+          contactos cercanos (vacuna o inmunoglobulina, según la edad y el tiempo desde
+          la exposición).
+cierre:
+  sintesis: >-
+    En la hepatitis viral aguda la semiología cumple dos funciones: sugiere el síndrome
+    (pródromo seguido de ictericia) y ubica el trastorno de la bilirrubina (coluria y
+    acolia). Pero la base no documenta ningún cociente de verosimilitud para este tema: la
+    ictericia, las transaminasas y la hiperbilirrubinemia son no medibles porque definen
+    el caso, y el resto no se ha medido. La ausencia de un número también es información:
+    el diagnóstico etiológico lo da la serología, no la exploración.
+  necesidades_aprendizaje:
+    - Patrones serológicos de las hepatitis A, B, C y E, y su evolución en el tiempo.
+    - Criterios de insuficiencia hepática aguda y cuándo derivar a una unidad de trasplante.
+    - Probabilidad basal de hepatitis viral en adultos con ictericia en nuestro medio, que la base aún no registra.
+    - Estudios que hayan medido la coluria, la acolia o la hepatomegalia frente a la serología.
+omitidos: []

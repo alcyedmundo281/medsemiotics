@@ -21,6 +21,19 @@ hechos explícitos de la fuente y mantienen sus propias referencias.
 artículos estén publicados antes de actualizar su campo `url`. No hace commits
 ni pushes. Ver el flujo completo en [README.md](../README.md).
 
+### `casos/` e `imagenes/` (Python, con gates)
+
+Paquetes tipados (mypy estricto, Ruff, pytest) que se ejecutan con `uv`:
+
+- `python -m casos` valida `casos/HM####.yaml` contra la evidencia del artículo y compila
+  los casos publicados a `assets/data/casos/<slug>.json`, que `build-blog.mjs` incorpora al
+  artículo. Órdenes: `check`, `build`, `estado`, `nuevo`, `preview`.
+- `python -m imagenes` busca en Wikimedia Commons, verifica que la licencia sea dominio
+  público o CC0 y registra la imagen en `assets/data/topic-images.json`. Órdenes: `buscar`,
+  `asignar`, `check` (`--estricto`, `--online`).
+
+El flujo editorial completo está en la skill `.claude/skills/caso-socratico/SKILL.md`.
+
 ### `build-js.mjs`
 
 Compila con esbuild los módulos interactivos en React. Lee cada `.jsx` —que es la

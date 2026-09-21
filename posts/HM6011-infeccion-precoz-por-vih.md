@@ -16,14 +16,18 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6011-infeccion-precoz-por-vih.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
+    conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0302-vomitos.yaml: c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM0607-adenopatias.yaml: f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561
+    conceptos/HM0800-sintoma-general.yaml: 39761069b5de091733e7864bb0c96f68755b6d3fa5e59003f5f8c7949b0c4827
     conceptos/HM0803-perdida-de-peso.yaml: 78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e
     conceptos/HM3039-ulceras-genitales.yaml: 8d597fccd98b8a83f14956f25483e0c0d5b2e10c73bb1dc3c849e10160f1245a
     conceptos/HM3040-adenopatias-referidas.yaml: ac43dcc86eab8dbe3ebbe9334eedf4bf57ba830257d2b3f5cfa6f008634e7643
@@ -250,7 +254,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Reglas clínicas
 
-Nombre: Ausencia de todo hallazgo; Componentes: Úlceras genitales (HM:3039) / Pérdida de peso (HM:0803) / Vómitos (HM:0302) / Adenopatías referidas por el paciente (HM:3040) / Fiebre (HM:0101) / Adenopatías (HM:0607); Criterio: ninguno de los hallazgos considerados presente; LR negativo: 0.47; IC del 95 %: 0.38 / 0.58; Referencia: pmid:25027143; Decisión: ni siquiera no encontrar NADA descarta la infección: la probabilidad baja a menos de la mitad, no a cero; Nota: calculado sobre estudios que consideraban combinaciones de 4 a 17 hallazgos posibles
+Nombre: Ausencia de todo hallazgo; Componentes: Úlceras genitales / Pérdida de peso / Vómitos / Adenopatías referidas por el paciente / Fiebre / Adenopatías; Criterio: ninguno de los hallazgos considerados presente; LR negativo: 0.47; IC del 95 %: 0.38 / 0.58; Referencia: pmid:25027143; Decisión: ni siquiera no encontrar NADA descarta la infección: la probabilidad baja a menos de la mitad, no a cero; Nota: calculado sobre estudios que consideraban combinaciones de 4 a 17 hallazgos posibles
 
 ## Conclusión de la fuente
 

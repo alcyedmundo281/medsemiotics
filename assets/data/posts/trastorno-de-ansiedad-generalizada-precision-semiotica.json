@@ -4,6 +4,10 @@
   "title": "Trastorno de ansiedad generalizada: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -57,11 +61,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0001-hallazgo-clinico.yaml": "5cf5cbb0a6ce5c773fd60ad80c8b467259ad4d480cd2cd60aa1335d5c8b65329",
       "conceptos/HM3137-cuestionario-gad7-positivo.yaml": "135b9bc5ba635c2a20eabe0de9721b6702c2c7d8830c5f56cd9f9a2d221ff94e",
       "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml": "7401b2b5e3b058e58f1417121ede0e2a0c351ffd1945b66fa797f177cde27402",
       "referencias/pmid-25058220.yaml": "c0b00c67a6434792c8113c2fd0dcbf58e8d984f338e492cf5a56ef51f78801e3"
@@ -77,6 +82,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Cuestionario GAD-7 positivo",
@@ -129,5 +136,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Trastorno de ansiedad generalizada\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nGeneralized anxiety disorder\n\n## Sinónimos\n\nTAG\n\nGAD\n\nansiedad crónica\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.092; Población: pacientes adultos en centros de atención primaria; Referencia: pmid:25058220\n\n## Hallazgos clínicos\n\n### Cuestionario GAD-7 positivo (HM:3137)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.1; IC del 95 %: 4.3 / 6.0; Referencia: pmid:25058220\n\n**LR negativo:** Valor: 0.13; IC del 95 %: 0.07 / 0.25; Referencia: pmid:25058220\n\n**Decisión:** la escala GAD-7 es el mejor instrumento de cribado en atención primaria, con alta capacidad tanto confirmatoria como de exclusión (LR- 0.13)\n\n## Conclusión de la fuente\n\nEl cuestionario GAD-7 presenta excelentes características de rendimiento diagnóstico para detectar el trastorno de ansiedad generalizada en atención primaria (LR+ 5.1, LR- 0.13) y es factible de implementar en la práctica clínica diaria.\n\n## Referencias y procedencia\n\n**pmid:25058220:** Does this patient have generalized anxiety or panic disorder?: The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5950.\n\nFuente clínica: medsemiotics-db, condición HM:6031."
 }

@@ -4,6 +4,10 @@
   "title": "Rotura completa del manguito rotador: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
+  "fecha_publicacion": "2026-08-21",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "traumatologia",
   "category_label": "Traumatología y Medicina Deportiva",
@@ -71,11 +75,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0500-sintoma-neurologico.yaml": "bfed2fddf9ee375171804badb4977b28916322ec3dc288af10da4918cd035044",
       "conceptos/HM3056-lag-rotacion-externa.yaml": "89f1056f9840213b12973fd986960c9acce2cd4e1659313609b9f348683f8464",
       "conceptos/HM3057-lag-rotacion-interna.yaml": "af8fb988476f76fe41cf62414d3d78eb79c6c92ae5e378f150ac4ec2cf6b5bed",
       "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml": "948a520a9c00092a5e3a1fd4b58e9745c3cd733f976167157f29f89c4437c6d0",
@@ -88,10 +93,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/MRI._Subacromial_impingement..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "image_source": "https://commons.wikimedia.org/wiki/File%3AMRI.%20Subacromial%20impingement..jpg",
-  "image_license": "CC BY-SA 3.0",
-  "image_title": "MRI. Subacromial impingement..jpg",
+  "featured_image": null,
+  "image_source": null,
+  "image_license": null,
+  "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Signo de lag de rotación interna",
@@ -188,5 +195,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Rotura completa del manguito rotador\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nFull-thickness rotator cuff tear\n\n## Sinónimos\n\nrotura de espesor completo del manguito\n\ndesgarro transmural del manguito\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Signo de lag de rotación externa (HM:3056)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.2; IC del 95 %: 1.7 / 31; Referencia: pmid:23982370\n\n**Decisión:** el cociente más alto para la rotura completa, con intervalo muy ancho\n\n### Signo de lag de rotación interna (HM:3057)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 5.6; IC del 95 %: 2.6 / 12; Referencia: pmid:23982370\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.0 / 0.58; Referencia: pmid:23982370\n\n**Decisión:** sirve en ambos sentidos y su normalidad es lo más preciso para descartar la rotura completa. Ojo con el extremo inferior del intervalo: llega a 0, lo que refleja series pequeñas, no certeza absoluta.\n\n## Conclusión de la fuente\n\nLa presencia de un signo de lag positivo, de rotación externa o interna, fue lo más preciso para diagnosticar la rotura de espesor completo del manguito rotador.\n\n## Referencias y procedencia\n\n**pmid:23982370:** Does this patient with shoulder pain have rotator cuff disease?: The Rational Clinical Examination systematic review. JAMA, 2013. DOI: 10.1001/jama.2013.276187.\n\nFuente clínica: medsemiotics-db, condición HM:6014."
 }

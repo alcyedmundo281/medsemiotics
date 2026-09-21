@@ -4,6 +4,10 @@
   "title": "Hipertensión arterial secundaria pediátrica: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -133,11 +137,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3109-antecedente-familiar-de-hipertension-secundaria.yaml": "b94cc9924892778effe26baca73560d92da494a843cad864167b711670d07a18",
       "conceptos/HM3110-peso-bajo-percentil-10-en-nino-hipertenso.yaml": "331ece63b61eef99b3fead086aafa9c52869ff7ca2563068176947c8fe0fd43f",
       "conceptos/HM3111-antecedente-de-prematuridad.yaml": "585196ce7386ffb350f6f6092ea3da79ad004e57e634b0d57c3d1d583d96ca77",
@@ -159,6 +164,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Microalbuminuria",
@@ -255,5 +262,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Hipertensión arterial secundaria pediátrica\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPediatric secondary hypertension\n\n## Sinónimos\n\nHTA secundaria en niños\n\nhipertensión renovascular o renal pediátrica\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.15; IC del 95 %: 0.1 / 0.25; Población: niños y adolescentes con confirmación de hipertensión arterial; Referencia: pmid:36976276\n\n## Hallazgos clínicos\n\n### Microalbuminuria (HM:3113)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 13.0; IC del 95 %: 3.2 / 53.0; Referencia: pmid:36976276\n\n**Decisión:** el marcador de daño orgánico o nefropatía subyacente con mayor LR positivo en niños hipertensos\n\n### Carga tensional aumentada en monitorización ambulatoria (MAPA) (HM:3115)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.8; IC del 95 %: 1.8 / 13.0; Referencia: pmid:36976276\n\n**Decisión:** alteración en la monitorización ambulatoria que orienta fuertemente hacia etiología secundaria\n\n### Antecedente familiar de hipertensión secundaria (HM:3109)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.7; IC del 95 %: 1.5 / 15.0; Referencia: pmid:36976276\n\n**Decisión:** historia familiar de nefropatía o trastornos vasculares orienta al diagnóstico etiológico\n\n### Peso menor o igual al percentil 10 en niño con hipertensión (HM:3110)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.5; IC del 95 %: 1.8 / 11.0; Referencia: pmid:36976276\n\n**Decisión:** la delgadez o bajo peso contrasta con la HTA primaria pediátrica típica asociada a obesidad\n\n### Ácido úrico sérico menor de 5.5 mg/dL (HM:3114)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.6; IC del 95 %: 1.5 / 8.6; Referencia: pmid:36976276\n\n**Decisión:** niveles de ácido úrico no elevados aumentan la sospecha de causa secundaria frente a primaria\n\n### Antecedente de prematuridad (HM:3111)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.0; IC del 95 %: 1.2 / 7.5; Referencia: pmid:36976276\n\n**Decisión:** antecedente perinatal asociado a oligonefronía o trombosis de arteria renal por catéter\n\n### Edad menor o igual a 6 años con hipertensión arterial (HM:3112)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 2.8; IC del 95 %: 1.3 / 6.0; Referencia: pmid:36976276\n\n**Decisión:** a menor edad de presentación, mucho mayor probabilidad de hipertensión secundaria\n\n## Conclusión de la fuente\n\nEn niños hipertensos, la microalbuminuria (LR+ 13.0), una elevada carga tensional en el MAPA (LR+ 4.8), el bajo peso para la edad (LR+ 4.5) y el debut en menores de 6 años (LR+ 2.8) son las principales claves clínicas para sospechar hipertensión secundaria.\n\n## Referencias y procedencia\n\n**pmid:36976276:** Does This Child With High Blood Pressure Have Secondary Hypertension?: The Rational Clinical Examination Systematic Review. JAMA, 2023. DOI: 10.1001/jama.2023.3184.\n\nFuente clínica: medsemiotics-db, condición HM:6025."
 }

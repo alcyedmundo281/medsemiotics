@@ -4,6 +4,10 @@
   "title": "Rotura del ligamento cruzado anterior: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -93,11 +97,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3119-prueba-de-lachman-positiva.yaml": "f1262827c44da29b5f39f4f226b7715dcfc6390d26b4e2958e54e8ff18283ecd",
       "conceptos/HM3120-prueba-del-cajon-anterior-de-rodilla-positiva.yaml": "5d0abbc5761601b3d36e1dd38a114eea754462744b5c3ed540a913ecc4b98d95",
       "conceptos/HM3123-examen-compuesto-de-rodilla-positivo-para-lca.yaml": "0105b1d42c0dfce2f482b36f14d810eb57dc7c4eb859603fab51324dd9c788aa",
@@ -115,6 +120,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Prueba de Lachman positiva",
@@ -211,5 +218,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Rotura del ligamento cruzado anterior\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAnterior cruciate ligament tear\n\n## Sinónimos\n\ndesgarro del LCA\n\nrotura del ligamento cruzado de la rodilla\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Prueba de Lachman positiva (HM:3119)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 25.0; IC del 95 %: 2.7 / 250.0; Referencia: pmid:11585485\n\n**LR negativo:** Valor: 0.1; IC del 95 %: 0.04 / 0.2; Referencia: pmid:11585485\n\n**Decisión:** la prueba clínica individual de referencia; altamente sensible y específica para confirmar o descartar rotura del LCA\n\n### Examen compuesto de rodilla positivo para ligamento cruzado anterior (HM:3123)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 25.0; IC del 95 %: 2.7 / 250.0; Referencia: pmid:11585485\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.01 / 0.4; Referencia: pmid:11585485\n\n**Decisión:** la combinación de maniobras clínicas por un examinador entrenado descarta con fiabilidad casi absoluta (LR- 0.04)\n\n### Prueba del cajón anterior de rodilla positiva (HM:3120)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.8; IC del 95 %: 0.7 / 22.0; Referencia: pmid:11585485\n\n**Decisión:** maniobra clásica pero con menor sensibilidad que la prueba de Lachman debido al bloqueo de isquiotibiales\n\n## Conclusión de la fuente\n\nLa prueba de Lachman es la maniobra con mayor exactitud diagnóstica para confirmar (LR+ 25) o descartar (LR- 0.1) la rotura del ligamento cruzado anterior, superando al cajón anterior.\n\n## Referencias y procedencia\n\n**pmid:11585485:** The rational clinical examination. Does this patient have a torn meniscus or ligament of the knee? Value of the physical examination. JAMA, 2001. DOI: 10.1001/jama.286.13.1610.\n\nFuente clínica: medsemiotics-db, condición HM:6027."
 }

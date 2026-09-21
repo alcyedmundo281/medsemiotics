@@ -4,6 +4,10 @@
   "title": "Trastorno por consumo de alcohol: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-22",
+  "fecha_publicacion": "2026-08-22",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "psiquiatria",
   "category_label": "Psiquiatría y Atención Primaria",
@@ -111,17 +115,18 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml": "4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35",
       "conceptos/HM3084-cuestionario-audit-c-positivo.yaml": "60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37",
       "conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml": "2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406",
       "conceptos/HM3086-audit-postparto-puntuacion-4-o-mas.yaml": "aaa992fc60e316a7203b23e37ff2d8e6f109ad56e0310cde66ad69fb875a0294",
       "conceptos/HM3087-tweak-t-ace-menor-2-postparto.yaml": "4b778da7722fe4d93254cea0e7d90d584d874ef12c531adbc35472dc7c1f0433",
-      "condiciones/HM6021-trastorno-consumo-alcohol.yaml": "db7898f5af71fc0ce7cd96fc246f82f46220189956ef6bff8cea50dc2201e4df",
+      "condiciones/HM6021-trastorno-consumo-alcohol.yaml": "17f70ee11c9f4f3d631beafc361a17b2d0c9261f099cd9171852292a627f86fc",
       "referencias/pmid-38592385.yaml": "58bb53d39a0494342209a56cbc96e0c66000e96f4e960a6d0b9793ae0a7f7882"
     }
   },
@@ -135,6 +140,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Cuestionario AUDIT con puntuación ≥ 8",
@@ -232,5 +239,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Trastorno por consumo de alcohol\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAlcohol use disorder\n\n## Sinónimos\n\nalcoholismo\n\ndependencia del alcohol\n\nabuso de alcohol\n\nconsumo perjudicial de alcohol\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Factores de riesgo\n\nFactor: Antecedente familiar de trastorno por consumo de sustancias\n\nFactor: Inicio precoz del consumo de alcohol en la adolescencia\n\nFactor: Trastornos psiquiátricos comórbidos (depresión, ansiedad)\n\n## Hallazgos clínicos\n\n### Cuestionario AUDIT con puntuación ≥ 8 (HM:3083)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633)\n\n**LR positivo:** Valor: 6.5; IC del 95 %: 3.9 / 11; Referencia: pmid:38592385; Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5)\n\n**Decisión:** AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.\n\n### Cuestionario AUDIT con puntuación < 8 (HM:3085)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Población:** adultos evaluados con AUDIT\n\n**LR negativo:** Valor: 0.33; IC del 95 %: 0.2 / 0.52; Referencia: pmid:38592385\n\n**Decisión:** AUDIT < 8: reduce la probabilidad de trastorno por consumo de alcohol (LR- 0.33) de forma consistente en mujeres y hombres.\n\n### Cuestionario AUDIT-C positivo (hombres ≥ 4, mujeres ≥ 3) (HM:3084)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Población:** adultos en atención primaria\n\n**LR positivo:** Rango documentado: 1.8 / 2.0; Referencia: pmid:38592385; Nota: hombres LR+ 1.8 (IC 95%: 1.5-2.2); mujeres LR+ 2.0 (IC 95%: 1.8-2.3)\n\n**Decisión:** AUDIT-C positivo (hombres ≥4, mujeres ≥3): útil para detectar consumo excesivo de riesgo rápido, pero modesto para confirmar trastorno por consumo formal (LR+ ~1.9).\n\n### Cuestionario AUDIT con puntuación ≥ 4 en postparto (HM:3086)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** mujeres puérperas evaluadas en las primeras 48 horas postparto\n\n**LR positivo:** Valor: 6.4; IC del 95 %: 5.1 / 8.0; Referencia: pmid:38592385\n\n**Decisión:** AUDIT ≥ 4 en postparto: identifica eficazmente a puérperas con alta probabilidad de trastorno por consumo de alcohol (LR+ 6.4).\n\n### Cuestionario TWEAK o T-ACE con puntuación < 2 en postparto (HM:3087)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Población:** mujeres puérperas evaluadas en las primeras 48 horas postparto\n\n**LR negativo:** Valor: 0.05; IC del 95 %: 0.01 / 0.2; Referencia: pmid:38592385\n\n**Decisión:** TWEAK o T-ACE < 2 en postparto: excelente poder de exclusión (LR- 0.05), descartando prácticamente el trastorno en esta población.\n\n## Conclusión de la fuente\n\nEl cuestionario AUDIT (≥ 8) es la herramienta más útil para identificar trastorno por consumo de alcohol según el DSM-5 en adultos (LR+ 6.5; LR- 0.33). El AUDIT-C es adecuado para consumo de riesgo. En el postparto inmediato, el AUDIT ≥ 4 confirma (LR+ 6.4) y las herramientas TWEAK/T-ACE < 2 descartan con gran exactitud (LR- 0.05).\n\n## Referencias y procedencia\n\n**pmid:38592385:** Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review. JAMA, 2024. DOI: 10.1001/jama.2024.3101.\n\nFuente clínica: medsemiotics-db, condición HM:6021."
 }

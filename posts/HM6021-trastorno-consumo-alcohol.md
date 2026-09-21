@@ -15,17 +15,18 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6021-trastorno-consumo-alcohol.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml: 4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35
     conceptos/HM3084-cuestionario-audit-c-positivo.yaml: 60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37
     conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml: 2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406
     conceptos/HM3086-audit-postparto-puntuacion-4-o-mas.yaml: aaa992fc60e316a7203b23e37ff2d8e6f109ad56e0310cde66ad69fb875a0294
     conceptos/HM3087-tweak-t-ace-menor-2-postparto.yaml: 4b778da7722fe4d93254cea0e7d90d584d874ef12c531adbc35472dc7c1f0433
-    condiciones/HM6021-trastorno-consumo-alcohol.yaml: db7898f5af71fc0ce7cd96fc246f82f46220189956ef6bff8cea50dc2201e4df
+    condiciones/HM6021-trastorno-consumo-alcohol.yaml: 17f70ee11c9f4f3d631beafc361a17b2d0c9261f099cd9171852292a627f86fc
     referencias/pmid-38592385.yaml: 58bb53d39a0494342209a56cbc96e0c66000e96f4e960a6d0b9793ae0a7f7882
 grounding:
   condicion_id: HM:6021

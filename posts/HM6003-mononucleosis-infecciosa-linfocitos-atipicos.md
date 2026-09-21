@@ -15,20 +15,28 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6003-mononucleosis-infecciosa.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0200-dolor.yaml: 583f1c01f2eeeed369469010e4b7d24d73d883bc3ef40266f80eaa0db0089463
     conceptos/HM0211-odinofagia.yaml: cdb3be1c4118ddfbdbf416bfee31243ab624779e988a089984d8f863ad51551f
-    conceptos/HM0603-esplenomegalia.yaml: 91ae572020e5fae4f29d8937cd19223374e4f2feffab036fdbf5b99085fdd0a5
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
+    conceptos/HM0602-hepatomegalia.yaml: 51c18ec466026b08b337817e2c5b004960c0f3862e814e6d629ec27d375618aa
+    conceptos/HM0603-esplenomegalia.yaml: d694a903ae98ee750e432f8b2f95e52b856440a67ebef8ea14396108447626a6
     conceptos/HM0607-adenopatias.yaml: f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561
+    conceptos/HM0710-alteracion-hematologica.yaml: 8779ebf74773e0648f4a534cb7c6528ec05cfc16c33123eb06d539cc1aa0e3ad
+    conceptos/HM0800-sintoma-general.yaml: 39761069b5de091733e7864bb0c96f68755b6d3fa5e59003f5f8c7949b0c4827
     conceptos/HM0801-astenia.yaml: 95bc981acd8d63bc1c693bd3ba572e4e714a900777e0d933281d82d22bcaa097
     conceptos/HM3001-adenopatia-cervical-posterior.yaml: 771bd6d4c7525ad532de18c2977bb2420d1abba7ed1f0f5d2c57444eb6f7467f
     conceptos/HM3002-adenopatia-inguinal-o-axilar.yaml: ed55476401fe6508e8147f39abd6c52d6ef52ed15a2eb21037d33892a19b7283
     conceptos/HM3003-petequias-en-paladar.yaml: 64eecce570f47b537bf1f3a38f89bfefe8f6ec6d2babe3acbccb65e82935e5ad
     conceptos/HM3004-linfocitosis-atipica.yaml: 1e115e6db2ec1f26c0a14a915b5490531f21ae8de6938767a68809d9cc32b1ea
+    conceptos/HM3184-matidez-en-espacio-de-traube.yaml: aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9
+    conceptos/HM3185-signo-de-percusion-de-castell.yaml: 493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f
     condiciones/HM6003-mononucleosis-infecciosa.yaml: ad06be6c03439dcfab6bad9012bfdc3553e229daae0870deec069eeb40f46c09
+    condiciones/HM6047-esplenomegalia.yaml: c29d0e9bdff4998849728513181ffe00fdb6e93d10ed797a7b969add69d0df0d
     referencias/pmid-27115266.yaml: 668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b
 grounding:
   condicion_id: HM:6003
@@ -279,6 +287,12 @@ Factor: Edad entre 5 y 25 años; Referencia: pmid:27115266; Nota: máxima frecue
 **Decisión:** el hallazgo exploratorio que más aumenta la probabilidad
 
 ### Esplenomegalia (HM:0603)
+
+**Significante:** Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).
+
+**Significado:** Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.
+
+**Falsos positivos:** Ptosis esplénica (bazo móvil o desplazado caudalmente sin incremento de masa) / Masa en polo inferior de riñón izquierdo o hidronefrosis / Tumor retroperitoneal o masa dependiente del ángulo esplénico del colon
 
 **Rol:** Prueba específica
 

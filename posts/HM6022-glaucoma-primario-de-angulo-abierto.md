@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3088-relacion-copa-disco-aumentada.yaml: 5bb0259e0f6fd3ae574ed32378ed9e99111c1627ecc93deb1f28220860ed68e0
     conceptos/HM3089-asimetria-de-la-relacion-copa-disco.yaml: 2ede5f860716039873d028cb9f8f2b7c7addacdf28bc1931a8781c38e207c5d7
     conceptos/HM3090-hemorragia-en-astilla-del-disco-optico.yaml: 583ac968bd35113ff71f83184e2bdad70ffbe293038bb642c73d316fbf7d9dee

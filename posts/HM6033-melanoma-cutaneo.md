@@ -15,11 +15,12 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: f2e95a0834f2c2789e6cc56b5610d9612bdec93b
+  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6033-melanoma-cutaneo.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
+    conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3139-criterios-abcd-de-melanoma-positivos.yaml: 404beb1eb965a5c407754b3121d72c2245a3e1cdf9c00ca37b6425a0ec3bc256
     conceptos/HM3140-asimetria-y-bordes-irregulares-en-lesion-cutanea.yaml: 7677966496a1f369c013c20a30bf359b3577565514cf0d0fa006bf000cd5473e
     conceptos/HM3141-color-heterogeneo-y-diametro-mayor-de-6mm.yaml: 772a8f13150061fc073ec2631a3697326757a562a9dfc54d034297cb69b299b1

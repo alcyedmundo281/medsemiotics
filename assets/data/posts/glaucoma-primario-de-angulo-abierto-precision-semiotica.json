@@ -4,6 +4,10 @@
   "title": "Glaucoma primario de ángulo abierto: hallazgos y evidencia clínica",
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
+  "fecha_publicacion": "2026-09-18",
+  "fecha_revision": null,
+  "version": null,
+  "has_caso": false,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -99,11 +103,12 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "f2e95a0834f2c2789e6cc56b5610d9612bdec93b",
+    "revision": "e654998bddbb8c2b1d22e4da2f3375f9db6bc432",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml",
     "archivos": {
       "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
+      "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
       "conceptos/HM3088-relacion-copa-disco-aumentada.yaml": "5bb0259e0f6fd3ae574ed32378ed9e99111c1627ecc93deb1f28220860ed68e0",
       "conceptos/HM3089-asimetria-de-la-relacion-copa-disco.yaml": "2ede5f860716039873d028cb9f8f2b7c7addacdf28bc1931a8781c38e207c5d7",
       "conceptos/HM3090-hemorragia-en-astilla-del-disco-optico.yaml": "583ac968bd35113ff71f83184e2bdad70ffbe293038bb642c73d316fbf7d9dee",
@@ -122,6 +127,8 @@
   "image_source": null,
   "image_license": null,
   "image_title": null,
+  "image_alt": null,
+  "image_author": null,
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Relación copa-disco aumentada",
@@ -218,5 +225,6 @@
       ]
     }
   ],
+  "caso": null,
   "body": "# Glaucoma primario de ángulo abierto\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPrimary open-angle glaucoma\n\n## Sinónimos\n\nGPAA\n\nglaucoma crónico simple\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Probabilidad basal\n\nValor: 0.02; IC del 95 %: 0.01 / 0.03; Población: adultos mayores de 40 años en cribado poblacional; Referencia: pmid:23677315\n\n## Hallazgos clínicos\n\n### Relación copa-disco aumentada (HM:3088)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14.0; IC del 95 %: 6.3 / 30.0; Referencia: pmid:23677315\n\n**Decisión:** el hallazgo oftalmoscópico aislado más potente para confirmar sospecha de glaucoma\n\n### Asimetría de la relación copa-disco (HM:3089)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.3; IC del 95 %: 3.4 / 16.0; Referencia: pmid:23677315\n\n**Decisión:** la diferencia de excavación entre ambos ojos aumenta marcadamente la probabilidad\n\n### Hemorragia en astilla del disco óptico (HM:3090)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 12.0; IC del 95 %: 2.9 / 48.0; Referencia: pmid:23677315\n\n**Decisión:** signo patognomónico de daño microvascular y progresión activa de la neuropatía glaucomatosa\n\n### Presión intraocular elevada (HM:3091)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 13.0; IC del 95 %: 8.2 / 21.0; Referencia: pmid:23677315\n\n**LR negativo:** Valor: 0.65; IC del 95 %: 0.55 / 0.76; Referencia: pmid:23677315\n\n**Decisión:** confirma con fuerza pero una PIO normal no descarta (glaucoma de tensión normal)\n\n## Conclusión de la fuente\n\nLa evaluación del disco óptico (relación copa-disco >= 0.7, asimetría y hemorragias en astilla) es más informativa que la tonometría aislada para el diagnóstico de glaucoma.\n\n## Referencias y procedencia\n\n**pmid:23677315:** Do findings on routine examination identify patients at risk for primary open-angle glaucoma? The rational clinical examination systematic review. JAMA, 2013. DOI: 10.1001/jama.2013.5099.\n\nFuente clínica: medsemiotics-db, condición HM:6022."
 }
