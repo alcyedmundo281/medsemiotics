@@ -114,35 +114,35 @@
       "dato": null,
       "poblacion": null,
       "motivo": null,
-      "decision": null,
+      "decision": "su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": null,
-    "pmid": null,
-    "doi": null,
+    "referencia_id": "pmid:27144627",
+    "pmid": "27144627",
+    "doi": "10.1053/j.gastro.2016.02.031",
     "referencia_cita": null,
     "triada": {
-      "significante": "Dolor abdominal",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+      "significante": "Dolor referido por el paciente en el abdomen. Se caracteriza por su localización (cuadrante o región), carácter, cronología, irradiación y los factores que lo modifican; la localización es el punto de partida de la evaluación (pmid:18441863).",
+      "significado": "Estímulo nociceptivo de origen visceral (distensión, inflamación o isquemia de una víscera, mal localizado y de línea media), parietal (irritación del peritoneo, bien localizado) o referido desde estructuras extraabdominales (pmid:23055768). En los trastornos funcionales intestinales se asocia a la defecación o a cambios del hábito intestinal (pmid:27144627).",
+      "decision": "su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad"
     },
     "pregunta": "En Síndrome de intestino irritable, ¿qué estado de la evidencia corresponde a «Dolor abdominal» según la fuente?",
     "opciones": [
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "LR no medido"
+        "feedback": "LR no medido Interpretación registrada: su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad."
       },
       {
         "texto": "LR no medible",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad."
       },
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido"
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad."
       }
     ]
   },
@@ -172,9 +172,9 @@
     "doi": null,
     "referencia_cita": null,
     "triada": {
-      "significante": "Dolor abdominal",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+      "significante": "Dolor referido por el paciente en el abdomen. Se caracteriza por su localización (cuadrante o región), carácter, cronología, irradiación y los factores que lo modifican; la localización es el punto de partida de la evaluación (pmid:18441863).",
+      "significado": "Estímulo nociceptivo de origen visceral (distensión, inflamación o isquemia de una víscera, mal localizado y de línea media), parietal (irritación del peritoneo, bien localizado) o referido desde estructuras extraabdominales (pmid:23055768). En los trastornos funcionales intestinales se asocia a la defecación o a cambios del hábito intestinal (pmid:27144627).",
+      "decision": "su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad"
     },
     "pregunta": "En Síndrome de intestino irritable, ¿qué estado de la evidencia corresponde a «Diarrea» según la fuente?",
     "opciones": [

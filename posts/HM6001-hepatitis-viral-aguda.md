@@ -15,14 +15,14 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: e654998bddbb8c2b1d22e4da2f3375f9db6bc432
+  revision: 9c9015322734168fe0328362950237f8ad296a55
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6001-hepatitis-viral-aguda.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0100-signo-vital-alterado.yaml: 3e0914bff0c0dc8f1a07185d49c70c4ee7dcf11cfa7ebc3281d611f5abb4f504
     conceptos/HM0101-fiebre.yaml: d8367b5824cbb321094893d8dde57e082205ace1ba21a89144af01209279e45e
-    conceptos/HM0201-dolor-abdominal.yaml: 564819078999f876e7aa0107eaa37bedc03a6e883b9722492cede175c5cb7bda
+    conceptos/HM0201-dolor-abdominal.yaml: adbaa4992613e08871e7e4d6259066ab9da4d9696dd256e274007f5965dd7813
     conceptos/HM0203-dolor-en-hipocondrio-derecho.yaml: c247a6de7fe880329b9949ead27eb93991f9d824dc7c06a2924e8f3d93e1361f
     conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0305-ictericia.yaml: b74c8005b4a83083707e9f9ec915ecd21c8a33bf54777678e7315e11a721a590
