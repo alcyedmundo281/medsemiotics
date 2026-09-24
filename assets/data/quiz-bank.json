@@ -11,11 +11,11 @@
     "evidencia": {
       "condicion_id": "HM:6001",
       "concepto_id": "HM:0305",
-      "estado_lr": "no_medible",
+      "estado_lr": "no_medido",
       "campo": null,
       "dato": null,
-      "poblacion": null,
-      "motivo": "forma parte de la definición de caso; sesgo de incorporación",
+      "poblacion": "adultos con hepatitis A aguda confirmada por serología en 12 hospitales de Corea del Sur, 2020-2021; 84 de 126",
+      "motivo": "no se halló ningún estudio que la compare con hepatitis agudas no víricas frente a un patrón serológico",
       "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
       "advertencia": null
     },
@@ -34,17 +34,17 @@
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
-      },
-      {
-        "texto": "LR no medible",
-        "correcta": true,
-        "feedback": "LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con hepatitis A aguda confirmada por serología en 12 hospitales de Corea del Sur, 2020-2021; 84 de 126. Motivo: no se halló ningún estudio que la compare con hepatitis agudas no víricas frente a un patrón serológico. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       },
       {
         "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Población: adultos con hepatitis A aguda confirmada por serología en 12 hospitales de Corea del Sur, 2020-2021; 84 de 126. Motivo: no se halló ningún estudio que la compare con hepatitis agudas no víricas frente a un patrón serológico. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
+      },
+      {
+        "texto": "LR no medible",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: forma parte de la definición de caso; sesgo de incorporación. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: adultos con hepatitis A aguda confirmada por serología en 12 hospitales de Corea del Sur, 2020-2021; 84 de 126. Motivo: no se halló ningún estudio que la compare con hepatitis agudas no víricas frente a un patrón serológico. Interpretación registrada: orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad."
       }
     ]
   },
@@ -228,8 +228,8 @@
     "doi": "10.1001/jama.2016.2111",
     "referencia_cita": "Ebell MH, Call M, Shinholser J, Gardner J Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review JAMA 2016",
     "triada": {
-      "significante": "Adenopatía cervical posterior",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "significante": "Adenopatías palpables en la cadena cervical posterior, por detrás del músculo esternocleidomastoideo; es una de las características clínicas de la mononucleosis infecciosa (pmid:36689975).",
+      "significado": "Hiperplasia ganglionar reactiva en el territorio de drenaje de la nasofaringe, sitio inicial de replicación del virus de Epstein-Barr (pmid:25774295). A diferencia de la adenopatía cervical anterior, más propia de la faringitis bacteriana, es la posterior la que orienta a la mononucleosis (pmid:36689975).",
       "decision": "aumenta la probabilidad; por sí sola no confirma"
     },
     "pregunta": "En Mononucleosis infecciosa, ¿cuál es el resultado documentado del LR positivo para «Adenopatía cervical posterior»?",
@@ -259,51 +259,51 @@
     "category_label": "Infectología y Medicina Interna",
     "condicion_id": "HM:6003",
     "condicion_nombre": "Mononucleosis infecciosa",
-    "concepto_id": "HM:3002",
+    "concepto_id": "HM:3001",
     "evidencia": {
       "condicion_id": "HM:6003",
-      "concepto_id": "HM:3002",
+      "concepto_id": "HM:3001",
       "estado_lr": "medido",
       "campo": "lr_positivo",
       "dato": {
-        "rango": [
-          3,
-          3.1
+        "valor": 3.16,
+        "ic95": [
+          1.45,
+          5.2
         ],
-        "ref": "pmid:27115266",
-        "nota": "rango entre estudios; la fuente no da estimación resumida"
+        "ref": "pmid:34772769"
       },
-      "poblacion": null,
+      "poblacion": "metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas",
       "motivo": null,
-      "decision": "aumenta la probabilidad de forma similar a la cervical posterior",
+      "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": "pmid:27115266",
-    "pmid": "27115266",
-    "doi": "10.1001/jama.2016.2111",
-    "referencia_cita": "Ebell MH, Call M, Shinholser J, Gardner J Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review JAMA 2016",
+    "referencia_id": "pmid:34772769",
+    "pmid": "34772769",
+    "doi": "10.3122/jabfm.2021.06.210217",
+    "referencia_cita": null,
     "triada": {
-      "significante": "Adenopatía cervical posterior",
-      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "significante": "Adenopatías palpables en la cadena cervical posterior, por detrás del músculo esternocleidomastoideo; es una de las características clínicas de la mononucleosis infecciosa (pmid:36689975).",
+      "significado": "Hiperplasia ganglionar reactiva en el territorio de drenaje de la nasofaringe, sitio inicial de replicación del virus de Epstein-Barr (pmid:25774295). A diferencia de la adenopatía cervical anterior, más propia de la faringitis bacteriana, es la posterior la que orienta a la mononucleosis (pmid:36689975).",
       "decision": "aumenta la probabilidad; por sí sola no confirma"
     },
-    "pregunta": "Al evaluar «Adenopatía inguinal o axilar» en Mononucleosis infecciosa, ¿cómo debe comunicarse el LR positivo según la fuente?",
+    "pregunta": "En Mononucleosis infecciosa, ¿cuál es el resultado documentado del LR positivo para «Adenopatía cervical posterior»? Población: metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas.",
     "opciones": [
       {
-        "texto": "LR positivo: 3.1, como estimación puntual única.",
+        "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "3.1 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior."
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.16. LR positivo: 3.16. IC del 95 %: 1.45 a 5.2. Población: metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas. Interpretación registrada: moderadamente útil para confirmar; su ausencia apenas descarta."
       },
       {
-        "texto": "LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única.",
+        "texto": "LR positivo: 3.16.",
         "correcta": true,
-        "feedback": "LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior."
+        "feedback": "LR positivo: 3.16. IC del 95 %: 1.45 a 5.2. Población: metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas. Interpretación registrada: moderadamente útil para confirmar; su ausencia apenas descarta."
       },
       {
-        "texto": "LR positivo: 3.0, como estimación puntual única.",
+        "texto": "El valor 3.16 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "3.0 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 3.0 a 3.1; no se registra una estimación puntual única. Nota: rango entre estudios; la fuente no da estimación resumida. Interpretación registrada: aumenta la probabilidad de forma similar a la cervical posterior."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.16. IC del 95 %: 1.45 a 5.2. Población: metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas. Interpretación registrada: moderadamente útil para confirmar; su ausencia apenas descarta."
       }
     ]
   },
@@ -315,48 +315,48 @@
     "category_label": "Neurología",
     "condicion_id": "HM:6004",
     "condicion_nombre": "Meningitis aguda",
-    "concepto_id": "HM:3006",
+    "concepto_id": "HM:3005",
     "evidencia": {
       "condicion_id": "HM:6004",
-      "concepto_id": "HM:3006",
+      "concepto_id": "HM:3005",
       "estado_lr": "medido",
       "campo": "lr_positivo",
       "dato": {
-        "valor": 2.2,
-        "ref": "pmid:10411200",
-        "poblacion": "pacientes que ya presentan fiebre y cefalea"
+        "valor": 0.94,
+        "ref": "pmid:12060874",
+        "poblacion": "297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR"
       },
       "poblacion": null,
       "motivo": null,
-      "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda",
+      "decision": null,
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": "pmid:10411200",
-    "pmid": "10411200",
-    "doi": "10.1001/jama.282.2.175",
-    "referencia_cita": "Attia J, Hatala R, Cook DJ, Wong JG The rational clinical examination. Does this adult patient have acute meningitis? JAMA 1999",
+    "referencia_id": "pmid:12060874",
+    "pmid": "12060874",
+    "doi": "10.1086/340979",
+    "referencia_cita": "Thomas KE, Hasbun R, Jekel J, Quagliarello VJ The diagnostic accuracy of Kernig's sign, Brudzinski's sign, and nuchal rigidity in adults with suspected meningitis Clin Infect Dis 2002",
     "triada": {
-      "significante": "Acentuación de la cefalea con la sacudida cefálica",
+      "significante": "Rigidez de nuca",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda"
+      "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "En Meningitis aguda, ¿cuál es el resultado documentado del LR positivo para «Acentuación de la cefalea con la sacudida cefálica»?",
+    "pregunta": "En Meningitis aguda, ¿cuál es el resultado documentado del LR positivo para «Rigidez de nuca»?",
     "opciones": [
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR positivo: 2.2. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
+        "feedback": "Sí hay una medición documentada: LR positivo: 0.94. LR positivo: 0.94."
       },
       {
-        "texto": "LR positivo: 2.2.",
+        "texto": "LR positivo: 0.94.",
         "correcta": true,
-        "feedback": "LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
+        "feedback": "LR positivo: 0.94."
       },
       {
-        "texto": "El valor 2.2 corresponde al LR negativo y no al LR positivo.",
+        "texto": "El valor 0.94 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 0.94."
       }
     ]
   },
@@ -368,44 +368,44 @@
     "category_label": "Neurología",
     "condicion_id": "HM:6004",
     "condicion_nombre": "Meningitis aguda",
-    "concepto_id": "HM:0207",
+    "concepto_id": "HM:3006",
     "evidencia": {
       "condicion_id": "HM:6004",
-      "concepto_id": "HM:0207",
+      "concepto_id": "HM:3006",
       "estado_lr": "no_medido",
       "campo": null,
       "dato": null,
-      "poblacion": null,
-      "motivo": "la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract",
-      "decision": null,
+      "poblacion": "pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR",
+      "motivo": "la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí",
+      "decision": "una prueba negativa no excluye la meningitis; no evita la punción lumbar",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": null,
-    "pmid": null,
-    "doi": null,
+    "referencia_id": "pmid:32524581",
+    "pmid": "32524581",
+    "doi": "10.1002/14651858.CD012824.pub2",
     "referencia_cita": null,
     "triada": {
-      "significante": "Acentuación de la cefalea con la sacudida cefálica",
+      "significante": "Rigidez de nuca",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda"
+      "decision": "La fuente no documenta una decisión específica para este hallazgo."
     },
-    "pregunta": "En Meningitis aguda, ¿qué estado de la evidencia corresponde a «Cefalea» según la fuente?",
+    "pregunta": "En Meningitis aguda, ¿qué estado de la evidencia corresponde a «Acentuación de la cefalea con la sacudida cefálica» según la fuente?",
     "opciones": [
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+        "feedback": "LR no medido Población: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR. Motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí. Interpretación registrada: una prueba negativa no excluye la meningitis; no evita la punción lumbar."
       },
       {
         "texto": "LR no medible",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR. Motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí. Interpretación registrada: una prueba negativa no excluye la meningitis; no evita la punción lumbar."
       },
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR. Motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí. Interpretación registrada: una prueba negativa no excluye la meningitis; no evita la punción lumbar."
       }
     ]
   },

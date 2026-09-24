@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6019-luxacion-cadera-lactante.yaml
   archivos:

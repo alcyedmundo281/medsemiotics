@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6023-conmocion-cerebral-pediatrica.yaml
   archivos:
@@ -32,7 +32,7 @@ fuente:
     conceptos/HM3097-punto-proximo-de-convergencia-anormal.yaml: e652c6a21318fffa323862abb88f3570d077900498ce2d079519c99bc55530fd
     conceptos/HM3098-movimientos-de-persecucion-suave-anormales.yaml: 48ebc6227ba3c681a5d3e0bd6378be7aeac41aea9ea2d3d4ff15c290fbfae32c
     conceptos/HM3099-sacadas-oculares-anormales.yaml: 96dba68766d1678acadb7b30e890122f25fdf325f812b05371553369e90db62b
-    condiciones/HM6002-sindrome-intestino-irritable.yaml: 91c7f09f57b2be77b8bc5ea732b1ac712c6c0e587dd230ec8587f8a5e3dbf04b
+    condiciones/HM6002-sindrome-intestino-irritable.yaml: 361961cdc2583861c1d77bb2ee3c1557c2ebfb096681ba3d806ee565145f69db
     condiciones/HM6023-conmocion-cerebral-pediatrica.yaml: d63ec5841dbc0749f78ad4ecc2b45254ed5262b4756783b72eb83551b7c57a8c
     referencias/pmid-18441863.yaml: d9f899b7a68ba1799bfaae19fadfcc97108841be6db29c7632e00ce769237478
     referencias/pmid-23055768.yaml: 6ff183a65d1b0bb695846f2ae115ec0e7c0b18ca72b18f8cf6eb2ae158f926ec

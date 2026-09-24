@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6045-taponamiento-cardiaco.yaml
   archivos:
@@ -29,7 +29,7 @@ fuente:
     conceptos/HM3155-derrame-pericardico-en-ecografia.yaml: 049d32edd47c084b8b87549994e90e0b312f7c07a6c83683b35bd30eb35825c4
     conceptos/HM3162-ventriculo-derecho-dilatado.yaml: bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134
     conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml: 8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621
-    condiciones/HM6045-taponamiento-cardiaco.yaml: 9968e16d03dba30116bdc00d69ac12b38601117eab695d5827c675c9f2b28e19
+    condiciones/HM6045-taponamiento-cardiaco.yaml: f5d4af69e7c3787c06e395761095795d135039952840a0b784923be90a1fc6c0
     referencias/pmid-35696801.yaml: d2c0807fd4b21b2c1693489c411d348016f85e8b910cf65c9b8ae1afed98dcd2
     referencias/pmid-41729549.yaml: a3b8210b679e9dff1f5671c3127d08ad54fcd26329cfe6735e29183e0cc98937
 grounding:
@@ -147,7 +147,7 @@ compromiso hemodinámico por derrame pericárdico
 
 ## Códigos
 
-Snomed: 42232009; Cie10: I31.4
+Snomed: 35304003; Cie10: I31.8
 
 ## Factores de riesgo
 

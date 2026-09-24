@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6006-aneurisma-aorta-abdominal.yaml
   archivos:
@@ -23,7 +23,8 @@ fuente:
     conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3012-pulsacion-aortica-ensanchada.yaml: 54dc1972896e31463bf5d4cc9382967a0589d052c695c8879761be103b481f35
     conceptos/HM3013-obesidad-abdominal.yaml: ee9829407e607153c1968b7b8c15bce01f3e5fe32ff4608bce0d385fe8829a54
-    condiciones/HM6006-aneurisma-aorta-abdominal.yaml: f73182b98384a0455bdbb601191fab2246fdfabda875153c8834a4de39b6cbf3
+    condiciones/HM6006-aneurisma-aorta-abdominal.yaml: 672d3116c31867d0a4243f887508109b8b8898cde49f7292bae864ef502ee379
+    referencias/pmid-9072929.yaml: dbb0d3ea0b1080a268e21ac76dd8be2635e3747d5fc3ce7d4d60092c5d6cbd17
     referencias/pmid-9892455.yaml: 781f7d38a1ffdb9e732d07f96d7d375d0b690cc6f5ddd1324d87d3070f981905
 grounding:
   condicion_id: HM:6006
@@ -147,7 +148,27 @@ aneurisma aórtico abdominal
 
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 233985008; Cie10: I71.4
+
+## Probabilidad basal
+
+Valor: 0.014; Población: 73 451 veteranos de 50 a 79 años sin aneurisma conocido, cribados con ecografía en 15 centros de Estados Unidos; 1031 de ellos; Nota: prevalencia de aneurisma de 4.0 cm o mayor, que corresponde al segundo tramo de la palpación; la fuente no da la de 3.0 cm o mayor en su resumen; Referencia: pmid:9072929
+
+## Factores de riesgo
+
+Factor: Tabaquismo; Referencia: pmid:9072929; Nota: OR 5.57 (IC95% 4.24-7.31) para aneurisma de 4.0 cm o mayor frente a aorta normal, en análisis multivariable. Crece con los años fumados y baja con los años sin fumar
+
+Factor: Antecedente familiar de aneurisma de aorta abdominal; Referencia: pmid:9072929; Nota: OR 1.95 (IC95% 1.56-2.43) en análisis multivariable
+
+Factor: Edad; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+
+Factor: Talla alta; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+
+Factor: Enfermedad coronaria o aterosclerosis en otro territorio; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+
+Factor: Hipercolesterolemia; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+
+Factor: Hipertensión arterial; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
 
 ## Hallazgos clínicos
 
@@ -188,6 +209,8 @@ Valor predictivo positivo de la palpación para aneurisma de 3.0 cm o mayor en e
 No se ha descrito que la palpación precipite la rotura.
 
 ## Referencias y procedencia
+
+**pmid:9072929:** Prevalence and associations of abdominal aortic aneurysm detected through screening. Aneurysm Detection and Management (ADAM) Veterans Affairs Cooperative Study Group. Ann Intern Med, 1997. DOI: 10.7326/0003-4819-126-6-199703150-00004.
 
 **pmid:9892455:** The rational clinical examination. Does this patient have abdominal aortic aneurysm?. JAMA, 1999. DOI: 10.1001/jama.281.1.77.
 

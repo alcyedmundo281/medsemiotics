@@ -38,14 +38,17 @@ test('Una condición, un artículo, una URL; preguntas sin ediciones independien
       assert.equal(actual.fuente_doi, p.fuente.doi);
       assert.deepEqual(actual.evidencia, q.evidencia);
       assert.equal(q.opciones.length, 3);
-      const questionSign = p.evidencia.find(s => s.concepto === q.concepto_id);
+      // Una condición puede medir el mismo hallazgo en varias fuentes: la arista es concepto y ref.
+      const questionSign = p.evidencia.find(s => s.concepto === q.concepto_id &&
+        (!q.evidencia.campo || s[q.evidencia.campo]?.ref === q.referencia_id));
       assert.equal(q.evidencia.estado_lr, questionSign.estado_lr);
       if (q.evidencia.campo) assert.deepEqual(q.evidencia.dato, questionSign[q.evidencia.campo]);
       assert.equal(q.opciones.filter(o => o.correcta).length, 1);
     }
     for (const field of ['lr_positivo', 'lr_negativo']) {
       if (p.grounding[field] === null) continue;
-      const sign = p.evidencia.find(s => s.concepto === p.grounding.concepto_id);
+      const sign = p.evidencia.find(s => s.concepto === p.grounding.concepto_id &&
+        s[field]?.ref === p.grounding.referencia_id);
       assert.equal(sign.estado_lr, 'medido');
       assert.equal(sign[field].valor, p.grounding[field]);
       assert.ok(sign[field].ref);

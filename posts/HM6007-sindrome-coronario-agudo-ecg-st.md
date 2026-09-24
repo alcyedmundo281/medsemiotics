@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6007-sindrome-coronario-agudo.yaml
   archivos:
@@ -31,7 +31,7 @@ fuente:
     conceptos/HM3016-isquemia-en-ecg.yaml: 1e5a608a8d553e5255f2956ed1c7be9f99a61607806f545899aa8e1cd6f14611
     conceptos/HM3017-prueba-esfuerzo-previa-anormal.yaml: a3d131df7f6e8dbb4a6b9d80be9ad2538dba12105c56314080566c77cb4a0d27
     conceptos/HM3018-enfermedad-arterial-periferica.yaml: 44920bd7d7d1b70253977858e7924075e688fdfd7bdca5c8e53f9db62bcfca01
-    condiciones/HM6007-sindrome-coronario-agudo.yaml: 2b7df69a61f0283700cfbcac8c8891387e4642f9c3a58b44eb8b912d24c2fe55
+    condiciones/HM6007-sindrome-coronario-agudo.yaml: fb20c23078d2dd9448cb0046f9371d2ea4c902a2fffe60e737b4cd06a5c88f7c
     referencias/pmid-26547467.yaml: fee2183becb69467acb2e26ec76404b1a9aae18c1272b85d9f36adeb16ffe831
 grounding:
   condicion_id: HM:6007
@@ -182,11 +182,9 @@ Acute coronary syndrome
 
 SCA
 
-angina inestable e infarto
-
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 394659003; Cie10: I24.9
 
 ## Probabilidad basal
 
