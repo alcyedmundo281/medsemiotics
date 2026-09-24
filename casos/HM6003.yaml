@@ -3,10 +3,12 @@
 # hallazgos exploratorios con cociente medido, y entre dos revisiones sistemáticas que
 # miden los mismos signos con precisión muy distinta. El frotis cierra el razonamiento.
 condicion_id: HM:6003
-estado: borrador
+estado: publicado
 autoria:
   autor: Dr. Alcy Torres
-  revisor: null
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-09-24
 nivel: Pregrado
 duracion_min: 45
 objetivos:
