@@ -1,3 +1,11 @@
+# Git para Windows trae core.autocrlf=true: al clonar reescribe el árbol de trabajo a
+# CRLF. Este repositorio guarda unos archivos con CRLF y otros con LF, y cada uno debe
+# conservar el suyo (AGENTS.md), así que esa conversión dejaba todos los JSON generados
+# distintos de su versión guardada y «build-blog --check» fallaba en un clon recién
+# hecho. Con «-text» git no convierte nada al entrar ni al salir: el árbol de trabajo es
+# idéntico a lo guardado, en cualquier sistema operativo.
+* -text
+
 neurologia/examen-neurologico-parte-2.html merge=ours
 package.json merge=ours
 package-lock.json merge=ours
