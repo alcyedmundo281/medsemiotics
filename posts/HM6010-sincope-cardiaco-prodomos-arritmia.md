@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
+  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6010-sincope-cardiaco.yaml
   archivos:
@@ -35,8 +35,11 @@ fuente:
     conceptos/HM3036-sensacion-de-frio.yaml: dba095414da8b845a5b9633a999b5abc1d0a300ca84372afa7e71767b2e3a672
     conceptos/HM3037-cambio-de-humor-tras-sincope.yaml: b9b67d523e646f9ac5cdb1485cfc695850606465d39f8757457b1c781a565716
     conceptos/HM3038-amnesia-de-la-conducta-previa.yaml: 14e2e16f8fe44a282a932e1cd7320655aefa24fac8713585af88f90926dab65f
-    condiciones/HM6010-sincope-cardiaco.yaml: 0040a4665bac761caf36289d8c22a5b0d1a6e6918b3a029165028a7cd784ddc5
+    condiciones/HM6010-sincope-cardiaco.yaml: 6d3870a293876020049dbc882c5f78be0302bd81ed4b67f69b2f590450154cba
+    referencias/pmid-12239256.yaml: 08708b832ccadcd95c4ea8ece4c4cb3f3756239d7632e43b9dc2968fcbfa3f35
+    referencias/pmid-29136314.yaml: a3a8604202d152c89bf95ca449f96d9af9b0cae638e51da1f7bfaacc5f1c46a8
     referencias/pmid-31237649.yaml: b8a3d22701b7aceb50254216ad315c9c7235424e0bba5bd261e1621a976c75bb
+    referencias/pmid-33382159.yaml: c062ec9a3ced78cf64262a9465f988cb92e10dc1809d45d63086b637431520d5
 grounding:
   condicion_id: HM:6010
   condicion_nombre: Síncope cardíaco
@@ -267,7 +270,11 @@ síncope arrítmico
 
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 788877005; Cie10: R55
+
+## Probabilidad basal
+
+Valor: 0.095; Población: 822 participantes del Framingham Heart Study que refirieron síncope durante un seguimiento medio de 17 años (población general, 1971-1998); Nota: proporción de síncopes atribuidos a causa cardíaca en la comunidad; el 36.6% quedó sin causa identificada. No es la población de urgencias ni de consulta especializada en la que se midieron los cocientes; ver pendiente; Referencia: pmid:12239256
 
 ## Hallazgos clínicos
 
@@ -423,12 +430,24 @@ Nombre: EGSYS; Componentes declarados: seis variables clínicas, electrocardiogr
 
 Los biomarcadores cardíacos muestran exactitud prometedora según la fuente, pero sus umbrales diagnósticos aún requieren validación. No se registran.
 
+Probabilidad base en urgencias. Toarta 2018 (pmid:29136314; 5010 adultos en seis servicios de urgencias) da un 5.4% de síncopes de presunta causa cardíaca, pero es la impresión del médico al final de la visita, no un diagnóstico contra un patrón de referencia. No se transcribe como probabilidad base.
+
+Búsqueda en PubMed del 2026-09-24. Consulta «syncope AND (history OR clinical features OR clinical examination) AND (cardiac OR arrhythmic) AND (diagnostic accuracy OR likelihood ratio)», filtrada a revisiones sistemáticas y metaanálisis desde 2019-06: 16 resultados, cribados por título y resumen. Ninguno actualiza la exactitud de la anamnesis para el síncope cardíaco. Sweanor 2021 (pmid:33382159) evalúa escalas multivariables, pero contra eventos adversos a 30 días, no contra el origen cardíaco.
+
+Factores de riesgo. Búsqueda en PubMed del 2026-09-24. Consulta «cardiac syncope[Title/Abstract] AND (risk factor OR predictors)»: 97 resultados, cribados por título los 20 primeros. No aparece ninguna fuente con grupo control que dé OR o RR de síncope cardíaco. Lo que Albassam 2019 cuantifica como cociente (edad, fibrilación auricular, cardiopatía estructural) ya está en las aristas.
+
 ## Conclusión de la fuente
 
 La exploración clínica, con el electrocardiograma dentro de puntuaciones multivariable, puede identificar con precisión a los pacientes con y sin síncope cardíaco.
 
 ## Referencias y procedencia
 
+**pmid:12239256:** Incidence and prognosis of syncope. N Engl J Med, 2002. DOI: 10.1056/NEJMoa012407.
+
+**pmid:29136314:** Syncope Prognosis Based on Emergency Department Diagnosis: A Prospective Cohort Study. Acad Emerg Med, 2018. DOI: 10.1111/acem.13346.
+
 **pmid:31237649:** Did This Patient Have Cardiac Syncope?: The Rational Clinical Examination Systematic Review. JAMA, 2019. DOI: 10.1001/jama.2019.8001.
+
+**pmid:33382159:** Multivariable risk scores for predicting short-term outcomes for emergency department patients with unexplained syncope: A systematic review. Acad Emerg Med, 2021. DOI: 10.1111/acem.14203.
 
 Fuente clínica: medsemiotics-db, condición HM:6010.

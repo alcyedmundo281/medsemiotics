@@ -106,7 +106,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "1d33074a25224a006e43e010c4be6ad39a771e7e",
+    "revision": "fbd5cbf59e75e77b70a630f881ac1c1754e1e063",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
     "archivos": {
@@ -250,7 +250,7 @@
       "ultima_revision": "2026-09-21",
       "revisiones": []
     },
-    "fuente_revision": "1d33074a25224a006e43e010c4be6ad39a771e7e",
+    "fuente_revision": "fbd5cbf59e75e77b70a630f881ac1c1754e1e063",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",

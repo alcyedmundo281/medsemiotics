@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
+  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6020-intubacion-dificil.yaml
   archivos:
