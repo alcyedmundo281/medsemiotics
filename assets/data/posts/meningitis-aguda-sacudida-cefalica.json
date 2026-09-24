@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-20",
   "fecha_publicacion": "2026-08-20",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-09-24",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "neurologia",
   "category_label": "Neurología",
@@ -268,6 +268,345 @@
       ]
     }
   ],
-  "caso": null,
+  "caso": {
+    "condicion_id": "HM:6004",
+    "slug": "meningitis-aguda-sacudida-cefalica",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-09-24",
+      "version": 1,
+      "ultima_revision": "2026-09-24",
+      "revisiones": []
+    },
+    "fuente_revision": "1d33074a25224a006e43e010c4be6ad39a771e7e",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Reconocer que un cociente de verosimilitud próximo a la unidad indica que el hallazgo no modifica la probabilidad diagnóstica.",
+      "Distinguir un hallazgo con sensibilidad y especificidad publicadas de un hallazgo con cociente calculable, y explicar por qué la base no lo calcula.",
+      "Justificar por qué una exploración meníngea negativa no permite descartar una meningitis aguda.",
+      "Aplicar la regla de la tríada clásica que registra el artículo y reconocer su advertencia sobre el riesgo clínico alto.",
+      "Decidir la indicación y la secuencia de la punción lumbar y del tratamiento empírico sin esperar a la confirmación."
+    ],
+    "vineta": {
+      "titulo": "Fiebre y dolor de cabeza con un cuello que se mueve bien",
+      "texto": "Varón de 34 años, sin antecedentes, que acude a urgencias por dolor de cabeza intenso y continuo desde hace dieciocho horas, distinto de cualquier otro que recuerde, con fiebre y malestar general. Ha vomitado tres veces esta mañana y no tolera la luz de la sala. Está alerta, contesta con normalidad y colabora en toda la exploración. No ha tenido traumatismo craneal, no toma medicación, no refiere cuadro respiratorio previo ni contacto con enfermos conocidos. No hay lesiones cutáneas.",
+      "datos": [
+        {
+          "etiqueta": "Temperatura",
+          "valor": "38.7 °C"
+        },
+        {
+          "etiqueta": "Frecuencia cardíaca",
+          "valor": "104 lpm"
+        },
+        {
+          "etiqueta": "Presión arterial",
+          "valor": "128/74 mmHg"
+        },
+        {
+          "etiqueta": "Escala de coma de Glasgow",
+          "valor": "15 puntos"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "Lo primero que piensas en la puerta de urgencias",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "Fiebre y la peor cefalea de su vida en un adulto joven. ¿Qué diagnósticos no te puedes permitir pasar por alto y con qué urgencia?",
+            "clave": "La meningitis aguda bacteriana encabeza la lista porque el retraso en tratarla empeora el pronóstico en horas. También hay que considerar la encefalitis, la hemorragia subaracnoidea, el absceso cerebral y la trombosis de senos venosos, y en un paciente febril con cefalea intensa conviene pensar en la sinusitis complicada y en la otomastoiditis como foco. La prioridad no es el diagnóstico más probable, sino el más grave y tratable: el razonamiento aquí es de umbral de acción, no de certeza."
+          },
+          {
+            "pregunta": "Antes de explorarlo, ¿qué esperas que la exploración física te aporte? Anótalo y compáralo al final del caso.",
+            "clave": "Lo habitual es esperar mucho: la enseñanza clásica presenta los signos meníngeos como la clave del diagnóstico. Guarda esa expectativa. La evidencia que registra el artículo va a contradecirla, y el valor docente del caso está precisamente en ese contraste. La exploración aquí sirve para decidir la actuación, no para confirmar ni descartar la enfermedad."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "Lo que el paciente refiere",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "El paciente describe una cefalea holocraneal, intensa y persistente, con náuseas y vómitos de repetición desde esta mañana. También le molesta la luz.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0207",
+            "nombre": "Cefalea",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [
+              "sensibilidad 0.5"
+            ],
+            "decision": null,
+            "motivo": "la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract",
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0301",
+            "nombre": "Náuseas",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [
+              "sensibilidad 0.3"
+            ],
+            "decision": null,
+            "motivo": "sensibilidad agrupada sin especificidad; LR no calculable",
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0302",
+            "nombre": "Vómitos",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [
+              "sensibilidad 0.3"
+            ],
+            "decision": null,
+            "motivo": "la fuente agrupa náuseas y vómitos en una sola estimación",
+            "advertencia": null,
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Estos tres síntomas orientan a una irritación meníngea. ¿Cuánto aumentan la probabilidad de meningitis? Mira su estado en las fichas antes de responder.",
+            "clave": "No lo sabemos, y la base lo dice con precisión en lugar de rellenar el hueco. La cefalea tiene una sensibilidad 0.5 publicada, y las náuseas y los vómitos tienen la suya, pero las tres quedan como hallazgos LR no medido: la fuente publica la sensibilidad agrupada y no la especificidad, de modo que el cociente no es calculable desde el resumen. Sin especificidad no hay cociente, porque el cociente compara la frecuencia del hallazgo en enfermos con su frecuencia en no enfermos. Fíjate además en que la fuente agrupa las náuseas y los vómitos en una sola estimación: no son dos datos independientes que puedas sumar."
+          },
+          {
+            "pregunta": "Si esa sensibilidad 0.5 fuera todo lo que supieras, ¿qué harías con un paciente febril que no tiene dolor de cabeza?",
+            "clave": "Seguir considerando la meningitis. Una sensibilidad de ese orden significa que una proporción importante de los enfermos no presenta el síntoma, así que su ausencia no autoriza a cerrar el diagnóstico. Es la trampa habitual: se recuerdan los síntomas como si fueran constantes y se descarta la enfermedad cuando falta alguno."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "La tríada clásica, componente por componente",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "Registras fiebre de 38.7 °C. El paciente está alerta y orientado en las tres esferas, con lenguaje normal: no hay alteración del nivel de conciencia.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0101",
+            "nombre": "Fiebre",
+            "rol": "Prueba sensible",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "forma parte de la tríada fiebre + rigidez de nuca + alteración del estado mental, cuya presencia de al menos uno tiene sensibilidad del 99-100%. La fuente no desglosa el cociente de cada componente por separado.",
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0501",
+            "nombre": "Alteración del nivel de conciencia",
+            "rol": "Prueba sensible",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "componente de la tríada; la fuente no publica su cociente aislado",
+            "advertencia": null,
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "El artículo registra una regla clínica construida sobre la fiebre, la rigidez de nuca y la alteración del estado mental. Búscala en el artículo: ¿qué afirma exactamente y qué no afirma?",
+            "clave": "Afirma que la ausencia simultánea de los tres descarta la meningitis en la práctica, porque la presencia de al menos uno tiene una sensibilidad prácticamente total. Es una regla para **descartar**, no para confirmar: tener fiebre no confirma nada, y este paciente ya tiene uno de los tres componentes, de modo que la regla no lo excluye y el estudio sigue adelante. Lee también su advertencia registrada: ante un riesgo clínico alto se va directamente a la punción lumbar, sin apoyarse en la exploración. La regla no está para ahorrar pruebas en el paciente que preocupa."
+          },
+          {
+            "pregunta": "¿Por qué la base deja la fiebre y la alteración del nivel de conciencia como hallazgos LR no medido si la regla que los usa sí tiene cifras?",
+            "clave": "Porque la fuente mide el conjunto y no cada componente por separado: publica la sensibilidad de que al menos uno de los tres esté presente, no el cociente aislado de la fiebre ni el de la alteración de la conciencia. La base respeta esa diferencia en lugar de repartir el resultado del grupo entre sus partes. Es un hábito que conviene llevarse: el rendimiento de una regla combinada no se hereda a sus componentes."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Los signos meníngeos que te enseñaron",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Exploras el cuello con el paciente en decúbito supino: la flexión cervical es libre y no duele, es decir que no hay rigidez de nuca. Buscas el signo de Kernig y el signo de Brudzinski, y ambos son negativos.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3005",
+            "nombre": "Rigidez de nuca",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 0.94",
+              "sensibilidad 0.3"
+            ],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:12060874"
+            ]
+          },
+          {
+            "id": "HM:3238",
+            "nombre": "Signo de Kernig",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 0.97",
+              "sensibilidad 0.05"
+            ],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:12060874"
+            ]
+          },
+          {
+            "id": "HM:3239",
+            "nombre": "Signo de Brudzinski",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 0.97",
+              "sensibilidad 0.05"
+            ],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:12060874"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Compara los tres cocientes de esta etapa. ¿Qué significa un cociente que vale prácticamente uno?",
+            "clave": "Que el hallazgo no aporta información. La rigidez de nuca tiene LR+ 0.94, el signo de Kernig tiene LR+ 0.97 y el signo de Brudzinski, LR+ 0.97. Un cociente igual a la unidad deja la probabilidad donde estaba: encontrar el signo no acerca al diagnóstico y no encontrarlo tampoco aleja. Comprueba en la calculadora bayesiana del artículo que la probabilidad no se mueve. Es un resultado incómodo, porque son los signos que más se practican en la cabecera; conviene leer la nota de la ficha, que precisa que la fuente solo les halló valor en los pocos pacientes con una pleocitosis muy intensa en el líquido cefalorraquídeo."
+          },
+          {
+            "pregunta": "Este paciente tiene los tres signos negativos. ¿Puedes descartar la meningitis y mandarlo a casa con analgesia?",
+            "clave": "No, y aquí conviene ser categórico. Además del cociente cercano a la unidad, mira la sensibilidad: la rigidez de nuca tiene sensibilidad 0.3 y el signo de Kernig y el signo de Brudzinski, sensibilidad 0.05. La mayoría de los pacientes con meningitis confirmada no presenta estos signos, así que su ausencia es lo esperable incluso cuando la enfermedad está presente. Descartar una meningitis por un cuello que se mueve bien es uno de los errores clásicos, y este artículo existe en buena medida para desmontarlo."
+          },
+          {
+            "pregunta": "Si no discriminan, ¿tiene sentido seguir explorándolos?",
+            "clave": "Sí, por dos motivos honestos. Documentan el estado del paciente en un momento dado, lo que permite detectar un cambio en la reevaluación, y su presencia refuerza la urgencia cuando aparecen en el paciente muy sintomático. Lo que no hacen es decidir: la decisión de puncionar no depende de ellos. Explorarlos como gesto de cribado para evitar la punción lumbar es usarlos para algo que la evidencia no sostiene."
+          }
+        ]
+      },
+      {
+        "numero": 5,
+        "titulo": "La sacudida cefálica",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Le pides que gire la cabeza horizontalmente dos o tres veces por segundo y refiere que el dolor empeora claramente: hay acentuación de la cefalea con la sacudida cefálica.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3006",
+            "nombre": "Acentuación de la cefalea con la sacudida cefálica",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [
+              "sensibilidad 0.653",
+              "especificidad 0.704"
+            ],
+            "decision": "una prueba negativa no excluye la meningitis; no evita la punción lumbar",
+            "motivo": "la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí",
+            "advertencia": null,
+            "referencias": [
+              "pmid:32524581"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Esta maniobra sí tiene cifras de rendimiento en la base. ¿Por qué entonces su estado es LR no medido y no un cociente?",
+            "clave": "Porque la revisión sistemática que la mide publica las estimaciones agrupadas de sensibilidad 0.653 y especificidad 0.704, con una certeza de la evidencia muy baja, pero no el cociente, y la base no lo calcula por su cuenta. Podría hacerse la aritmética, pero derivar un cociente de dos estimaciones agrupadas por separado, procedentes de estudios distintos y con esa incertidumbre, produciría un número de apariencia sólida y fundamento frágil. La nota de la ficha añade algo importante: la medición cambia al restringirla a los pacientes sin alteración de la conciencia, que es el escenario en el que la maniobra tiene sentido, y sustituye a un cociente antiguo que provenía de un único estudio."
+          },
+          {
+            "pregunta": "La maniobra es positiva en tu paciente. ¿Qué haces? ¿Y si hubiera sido negativa?",
+            "clave": "En los dos casos, la punción lumbar. Con una especificidad de ese orden, un resultado positivo deja bastantes falsos positivos y no confirma nada por sí solo; y la decisión registrada en la base para este hallazgo es explícita en el otro sentido: una prueba negativa no excluye la meningitis y no evita la punción lumbar. Es el resumen del caso: ninguna maniobra de cabecera sustituye al análisis del líquido cefalorraquídeo."
+          }
+        ]
+      },
+      {
+        "numero": 6,
+        "titulo": "Lo que decides en la siguiente hora",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": "El hemograma muestra leucocitosis con neutrofilia y la proteína C reactiva está elevada. No hay focalidad neurológica, ni crisis, ni inmunodepresión conocida, ni papiledema en el fondo de ojo.",
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "Ordena las actuaciones de la próxima hora y justifica el orden.",
+            "clave": "Hemocultivos y punción lumbar sin demora, y tratamiento antibiótico empírico inmediatamente después de la punción; si la punción se va a retrasar por cualquier motivo, el antibiótico va primero, porque el retraso en tratar es lo que empeora el pronóstico y los hemocultivos ya extraídos mantienen alguna rentabilidad microbiológica. En la sospecha de meningitis bacteriana del adulto se administra dexametasona junto con la primera dosis, según el protocolo local. En este paciente, sin focalidad, sin crisis, sin inmunodepresión y con nivel de conciencia normal, no es necesaria una tomografía previa: pedirla solo añade retraso."
+          },
+          {
+            "pregunta": "Vuelve a la nota que escribiste al principio sobre lo que esperabas de la exploración física. ¿Qué cambiarías?",
+            "clave": "Que la exploración meníngea no es una prueba diagnóstica: es parte de la valoración clínica que sostiene la sospecha y documenta el estado del paciente, pero no mueve la probabilidad de forma útil ni autoriza a prescindir de la punción lumbar. El hallazgo que en este cuadro realmente decide no está en las manos del explorador, sino en el recuento celular del líquido. Saber eso cambia la conducta: se punciona antes y se trata antes."
+          },
+          {
+            "pregunta": "¿Qué límites tiene todo lo que has usado en este caso?",
+            "clave": "El artículo no registra una probabilidad basal: ninguna de las fuentes publica la prevalencia en su población, así que la calculadora bayesiana solo permite ver el efecto de un hallazgo sobre la probabilidad que tú estimes, no partir de una cifra de la base. Las mediciones de los signos clásicos proceden de adultos con sospecha de meningitis explorados antes de la punción, con un umbral concreto de celularidad para definir la enfermedad, y no se trasladan sin más a niños, a inmunodeprimidos ni al paciente ya tratado con antibióticos. Y la evidencia de la sacudida cefálica es de certeza muy baja, lo que significa que futuras revisiones pueden cambiar la estimación."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "La meningitis aguda es el ejemplo más claro de un artículo cuya lección es negativa. Los signos meníngeos clásicos tienen cocientes que rondan la unidad y sensibilidades bajas: no confirman, y su ausencia no descarta. La sacudida cefálica tiene sensibilidad y especificidad publicadas, pero de certeza muy baja y sin cociente calculable, y su negatividad no evita la punción lumbar. Lo único con poder para descartar es la ausencia simultánea de los tres componentes de la tríada clásica, con la advertencia de que, ante un riesgo clínico alto, se punciona igual. La conclusión práctica no es explorar mejor, sino puncionar y tratar antes.",
+      "necesidades_aprendizaje": [
+        "Probabilidad basal de meningitis aguda entre los pacientes que consultan por cefalea y fiebre en urgencias, que ninguna de las fuentes del artículo publica.",
+        "Indicaciones de tomografía craneal previa a la punción lumbar y contraindicaciones del procedimiento, que la base no documenta.",
+        "Rendimiento de los parámetros del líquido cefalorraquídeo y de la reacción en cadena de la polimerasa, que es donde reside el diagnóstico y que el artículo no cubre.",
+        "Pauta antibiótica empírica según la edad y el factor de riesgo, y el papel de la dexametasona, en farmacosemiotics.",
+        "Presentación de la meningitis en el lactante y en el anciano, poblaciones a las que no se aplican las mediciones de este artículo."
+      ]
+    },
+    "omitidos": [],
+    "referencias": [
+      {
+        "id": "pmid:12060874",
+        "cita": "The diagnostic accuracy of Kernig's sign, Brudzinski's sign, and nuchal rigidity in adults with suspected meningitis. Clin Infect Dis, 2002. DOI: 10.1086/340979."
+      },
+      {
+        "id": "pmid:32524581",
+        "cita": "Diagnostic test accuracy of jolt accentuation for headache in acute meningitis in the emergency setting. Cochrane Database Syst Rev, 2020. DOI: 10.1002/14651858.CD012824.pub2."
+      }
+    ]
+  },
   "body": "# Meningitis aguda\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAcute meningitis\n\n## Códigos\n\nSnomed: 822031000000101; Cie10: G03.9\n\n## Hallazgos clínicos\n\n### Acentuación de la cefalea con la sacudida cefálica (HM:3006)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n**Sensibilidad:** 0.653\n\n**Ic95 sensibilidad:** 0.373 / 0.856\n\n**Especificidad:** 0.704\n\n**Ic95 especificidad:** 0.477 / 0.861\n\n**Población:** pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR\n\n**Referencia:** pmid:32524581\n\n**Motivo:** la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí\n\n**Nota:** sin alteración de la conciencia (8 estudios, 921 participantes), Se 0.752 (IC95% 0.543-0.886) y Sp 0.608 (IC95% 0.434-0.759). Sustituye al LR+ 2.2 y LR− 0 de Attia 1999 (pmid:10411200), que venían de un único estudio de 1991\n\n**Decisión:** una prueba negativa no excluye la meningitis; no evita la punción lumbar\n\n### Cefalea (HM:0207)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n**Sensibilidad:** 0.5\n\n**Ic95 sensibilidad:** 0.32 / 0.68\n\n**Ref rendimiento:** pmid:10411200\n\n**Motivo:** la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract\n\n### Náuseas (HM:0301)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n**Sensibilidad:** 0.3\n\n**Ic95 sensibilidad:** 0.22 / 0.38\n\n**Ref rendimiento:** pmid:10411200\n\n**Motivo:** sensibilidad agrupada sin especificidad; LR no calculable\n\n### Vómitos (HM:0302)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n**Sensibilidad:** 0.3\n\n**Ic95 sensibilidad:** 0.22 / 0.38\n\n**Ref rendimiento:** pmid:10411200\n\n**Motivo:** la fuente agrupa náuseas y vómitos en una sola estimación\n\n### Fiebre (HM:0101)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR no medido\n\n**Motivo:** forma parte de la tríada fiebre + rigidez de nuca + alteración del estado mental, cuya presencia de al menos uno tiene sensibilidad del 99-100%. La fuente no desglosa el cociente de cada componente por separado.\n\n### Rigidez de nuca (HM:3005)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.3\n\n**LR positivo:** Valor: 0.94; Referencia: pmid:12060874; Población: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR\n\n**Referencia:** pmid:12060874\n\n**Nota:** Attia 1999 (pmid:10411200) no publica su cociente aislado; este es de Thomas 2002. La fuente solo le halla valor en los 4 pacientes con ≥ 1000 leucocitos en el LCR\n\n### Signo de Kernig (HM:3238)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.05\n\n**LR positivo:** Valor: 0.97; Referencia: pmid:12060874; Población: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR\n\n**Referencia:** pmid:12060874\n\n### Signo de Brudzinski (HM:3239)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.05\n\n**LR positivo:** Valor: 0.97; Referencia: pmid:12060874; Población: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR\n\n**Referencia:** pmid:12060874\n\n### Alteración del nivel de conciencia (HM:0501)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR no medido\n\n**Motivo:** componente de la tríada; la fuente no publica su cociente aislado\n\n## Reglas clínicas\n\nNombre: Ausencia de la tríada clásica; Componentes: Fiebre / Rigidez de nuca / Alteración del nivel de conciencia; Criterio: ninguno de los tres presente; Sensibilidad de la presencia: 0.99 / 1.0; Referencia: pmid:10411200; Decisión: la ausencia simultánea de fiebre, rigidez de nuca y alteración del estado mental descarta la meningitis en la práctica; Advertencia: la fuente matiza que ante alto riesgo clínico hay que ir directamente a la punción lumbar, sin apoyarse en la exploración\n\n## Aspectos pendientes de documentación\n\nSin probabilidad_base: Attia 1999 no publica prevalencia, y los resúmenes de Thomas 2002 y de Iguchi 2020 tampoco.\n\n## Referencias y procedencia\n\n**pmid:10411200:** The rational clinical examination. Does this adult patient have acute meningitis?. JAMA, 1999. DOI: 10.1001/jama.282.2.175.\n\n**pmid:12060874:** The diagnostic accuracy of Kernig's sign, Brudzinski's sign, and nuchal rigidity in adults with suspected meningitis. Clin Infect Dis, 2002. DOI: 10.1086/340979.\n\n**pmid:32524581:** Diagnostic test accuracy of jolt accentuation for headache in acute meningitis in the emergency setting. Cochrane Database Syst Rev, 2020. DOI: 10.1002/14651858.CD012824.pub2.\n\nFuente clínica: medsemiotics-db, condición HM:6004."
 }
