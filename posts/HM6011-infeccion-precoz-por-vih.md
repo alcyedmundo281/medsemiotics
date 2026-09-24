@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
+  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6011-infeccion-precoz-por-vih.yaml
   archivos:
@@ -32,9 +32,10 @@ fuente:
     conceptos/HM3039-ulceras-genitales.yaml: 8d597fccd98b8a83f14956f25483e0c0d5b2e10c73bb1dc3c849e10160f1245a
     conceptos/HM3040-adenopatias-referidas.yaml: ac43dcc86eab8dbe3ebbe9334eedf4bf57ba830257d2b3f5cfa6f008634e7643
     condiciones/HM6003-mononucleosis-infecciosa.yaml: fdd67306d3d26ce5724613adc81b59ab01bd965186ce7c3d82ca67bf267ce2e9
-    condiciones/HM6011-infeccion-precoz-por-vih.yaml: da3f12b7d2d61192612c0bc2de23c0f8bb38cf47d7f94c19d50712de89160d80
+    condiciones/HM6011-infeccion-precoz-por-vih.yaml: a71def38cb1871842077cb6d42b8ed65ae7ddea9e29ead3eb2a7687417de7057
     referencias/pmid-25027143.yaml: 9b6cbb935f7a83c37d6ec407afb0d65294b8b4cc753e02096259ca180ee189f0
     referencias/pmid-27929264.yaml: e81a2145a034e9bc8da32cec5e2648fd1bc2ebd2f180fe99434e3da94d8a8810
+    referencias/pmid-33000916.yaml: c91277324db28ef922aee7d0fab5fd9782ac725df78c1a83a1245614413b7b57
 grounding:
   condicion_id: HM:6011
   condicion_nombre: Infección precoz por VIH
@@ -188,11 +189,13 @@ Early HIV infection
 
 primoinfección por VIH
 
-infección aguda por VIH
-
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 1142045004; Cie10: No documentado.
+
+## Probabilidad basal
+
+Valor: 0.063; IC del 95 %: 0.021 / 0.124; Población: hombres que tienen sexo con hombres movilizados para cribado de infección aguda y precoz por VIH; metaanálisis de 5 estudios; Nota: rendimiento del cribado por visita, no por paciente, con heterogeneidad muy alta (I² 94.9%). Del 11.1% (IC95% 5.9-17.6) con estrategias dirigidas y del 1.6% (IC95% 0.8-2.4) con cribado universal. No vale para otras poblaciones; Referencia: pmid:33000916
 
 ## Hallazgos clínicos
 
@@ -264,6 +267,14 @@ Snomed: No documentado.; Cie10: No documentado.
 
 Nombre: Ausencia de todo hallazgo; Componentes: Úlceras genitales / Pérdida de peso / Vómitos / Adenopatías referidas por el paciente / Fiebre / Adenopatías; Criterio: ninguno de los hallazgos considerados presente; LR negativo: 0.47; IC del 95 %: 0.38 / 0.58; Referencia: pmid:25027143; Decisión: ni siquiera no encontrar NADA descarta la infección: la probabilidad baja a menos de la mitad, no a cero; Nota: calculado sobre estudios que consideraban combinaciones de 4 a 17 hallazgos posibles
 
+## Aspectos pendientes de documentación
+
+Probabilidad base fuera de hombres que tienen sexo con hombres. Wood 2014 reúne 1253 casos entre 24 745 pacientes de 16 estudios, pero no publica una prevalencia agrupada en su resumen, y el cociente no se calcula. Falta una estimación para la población general adulta que consulta.
+
+Búsqueda en PubMed del 2026-09-24. Consulta «(acute HIV[Title] OR early HIV[Title] OR primary HIV[Title] OR acute retroviral syndrome[Title]) AND (symptoms OR signs OR clinical presentation) AND (systematic review OR meta-analysis)», desde 2014-06: 2 resultados, Wood 2014 y Palmer 2020. Palmer 2020 evalúa escalas de riesgo y síntomas por su área bajo la curva (0.51-0.88 en validación), sin cocientes por hallazgo. Ninguna revisión posterior actualiza los cocientes de Wood 2014.
+
+Factores de riesgo. Palmer 2020 enumera las variables de las escalas de riesgo (edad, número de parejas sexuales, coito anal receptivo sin preservativo, pareja con VIH, otra infección de transmisión sexual, drogas ilícitas), pero su resumen no da OR ni RR. Falta una fuente con grupo control que los cuantifique.
+
 ## Conclusión de la fuente
 
 La utilidad limitada de la exploración clínica para detectar o descartar la infección precoz por VIH subraya la importancia del cribado sistemático en adultos.
@@ -271,6 +282,8 @@ La utilidad limitada de la exploración clínica para detectar o descartar la in
 ## Referencias y procedencia
 
 **pmid:25027143:** Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5954.
+
+**pmid:33000916:** Acute and early HIV infection screening among men who have sex with men, a systematic review and meta-analysis. J Int AIDS Soc, 2020. DOI: 10.1002/jia2.25590.
 
 **pmid:27929264:** Unexplained Lymphadenopathy: Evaluation and Differential Diagnosis. Am Fam Physician, 2016. DOI: no documentado.
 
