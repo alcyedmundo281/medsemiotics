@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "fecha_publicacion": "2026-08-21",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-09-24",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "infectologia",
   "category_label": "Infectología y Medicina Interna",
@@ -287,12 +287,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": null,
-  "image_source": null,
-  "image_license": null,
-  "image_title": null,
-  "image_alt": null,
-  "image_author": null,
+  "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Cervical_lymphadenopathy.jpg/1280px-Cervical_lymphadenopathy.jpg",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Cervical_lymphadenopathy.jpg",
+  "image_license": "CC0",
+  "image_title": "Cervical lymphadenopathy.jpg",
+  "image_alt": "Tumefacción ganglionar visible en la región cervical posterior, por detrás del músculo esternocleidomastoideo",
+  "image_author": "Whispyhistory",
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Adenopatías palpables en la cadena cervical posterior, por detrás del músculo esternocleidomastoideo; es una de las características clínicas de la mononucleosis infecciosa (pmid:36689975).",
@@ -389,6 +389,402 @@
       ]
     }
   ],
-  "caso": null,
+  "caso": {
+    "condicion_id": "HM:6003",
+    "slug": "mononucleosis-infecciosa-adenopatias-linfocitos-atipicos",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-09-24",
+      "version": 1,
+      "ultima_revision": "2026-09-24",
+      "revisiones": []
+    },
+    "fuente_revision": "1d33074a25224a006e43e010c4be6ad39a771e7e",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Distinguir la faringitis estreptocócica de la mononucleosis infecciosa por la anamnesis y la topografía de las adenopatías.",
+      "Explicar por qué un síntoma presente en casi todos los enfermos puede no modificar la probabilidad diagnóstica.",
+      "Comparar cuánto desplazan la probabilidad la adenopatía cervical posterior, las petequias en paladar, la esplenomegalia y la linfocitosis atípica.",
+      "Interpretar un rango entre estudios como medida de incertidumbre y de dependencia del explorador, no como una estimación puntual.",
+      "Decidir la confirmación, la restricción deportiva y las advertencias terapéuticas reconociendo los límites de la evidencia registrada."
+    ],
+    "vineta": {
+      "titulo": "Diez días de garganta y un cansancio que no cede",
+      "texto": "Mujer de 19 años, estudiante universitaria que vive en una residencia. Consulta por dolor de garganta desde hace diez días, con fiebre diaria vespertina y un cansancio tan intenso que ha dejado de asistir a clases y duerme gran parte del día. No tiene tos, ni rinorrea, ni disnea. Come poco porque tragar le molesta. No ha recibido antibióticos. No refiere viajes recientes, contacto con animales, consumo de drogas ni conductas sexuales de riesgo. Una compañera de habitación tuvo un cuadro parecido el mes pasado.",
+      "datos": [
+        {
+          "etiqueta": "Temperatura",
+          "valor": "38.2 °C"
+        },
+        {
+          "etiqueta": "Frecuencia cardíaca",
+          "valor": "96 lpm"
+        },
+        {
+          "etiqueta": "Presión arterial",
+          "valor": "112/70 mmHg"
+        },
+        {
+          "etiqueta": "Saturación de oxígeno",
+          "valor": "98 % al aire ambiente"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "Antes de tocar a la paciente",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Qué cuadros explican dolor de garganta con fiebre y cansancio prolongado en una persona de esta edad? ¿Con qué probabilidad de partida trabajas antes de explorarla?",
+            "clave": "El diferencial razonable incluye la faringitis viral inespecífica, la faringitis estreptocócica, la mononucleosis infecciosa, la infección por citomegalovirus, la toxoplasmosis y la infección aguda por el virus de la inmunodeficiencia humana, que conviene preguntar siempre. Lo que inclina hacia la mononucleosis en este relato es la duración: una faringitis estreptocócica no suele dejar diez días de postración. La probabilidad de partida no es una intuición: el artículo registra la probabilidad basal medida en pacientes de esta edad que consultan por dolor de garganta, y sobre ella actuarán después los hallazgos. Búscala antes de seguir, porque sin ella ningún cociente sirve para nada."
+          },
+          {
+            "pregunta": "¿Qué esperas encontrar en el cuello de una faringitis estreptocócica y qué esperas encontrar en el de una mononucleosis? ¿Por qué la diferencia importa?",
+            "clave": "En la faringitis estreptocócica predominan los ganglios cervicales anteriores, dolorosos y del lado del drenaje amigdalino. En la mononucleosis la afectación es típicamente posterior, por detrás del esternocleidomastoideo, y a menudo bilateral, porque el virus replica primero en la nasofaringe y el drenaje de esa región va a esa cadena. La diferencia importa porque convierte un gesto de exploración de treinta segundos en información diagnóstica: no basta con anotar «adenopatías», hay que anotar dónde."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "Lo que cuenta la paciente",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "La paciente describe odinofagia que le impide comer sólidos y una astenia que no mejora con el reposo y que lleva más de una semana. Ambos son, con diferencia, sus motivos de consulta.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0211",
+            "nombre": "Odinofagia",
+            "rol": "Manifestación",
+            "estado_lr": "sin_efecto",
+            "estado": "sin efecto discriminativo",
+            "poblacion": null,
+            "cifras": [
+              "sensibilidad 0.81"
+            ],
+            "decision": null,
+            "motivo": "«symptoms are of limited value»: sensible (0.81-0.83) pero inespecífico. La fuente no publica cociente porque no discrimina.",
+            "advertencia": null,
+            "referencias": []
+          },
+          {
+            "id": "HM:0801",
+            "nombre": "Astenia",
+            "rol": "Manifestación",
+            "estado_lr": "sin_efecto",
+            "estado": "sin efecto discriminativo",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "sensible (0.81-0.83) pero inespecífico; la fuente no publica cociente",
+            "advertencia": null,
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Los dos síntomas están presentes en la gran mayoría de los pacientes con mononucleosis. ¿Cuánto aumentan entonces la probabilidad de que esta paciente la tenga?",
+            "clave": "Casi nada, y esa es la lección. La base le atribuye a la odinofagia una sensibilidad 0.81 y, pese a ello, la clasifica como un hallazgo sin efecto discriminativo; la astenia queda igualmente como un hallazgo sin efecto discriminativo. Un hallazgo muy sensible aparece en casi todos los enfermos, pero si también aparece en casi todos los que consultan por dolor de garganta sin mononucleosis, no separa a unos de otros. La revisión de la que proceden estas cifras lo dice de forma explícita al concluir que los síntomas tienen un valor limitado. Sirven para sospechar y para decidir a quién se explora con cuidado; no para confirmar."
+          },
+          {
+            "pregunta": "Si los síntomas no discriminan, ¿qué hacemos con ellos? ¿Tiene sentido seguir preguntándolos?",
+            "clave": "Sí, por tres razones. Definen la población en la que los cocientes fueron medidos: los estudios se hicieron en pacientes que consultaban por dolor de garganta, así que aplicar esos números a un paciente sin ese síntoma es extrapolar. Fijan el curso temporal, que aquí es lo que primero aparta de la faringitis bacteriana. Y orientan el cuidado del paciente, que es un fin en sí mismo. Lo que no debe hacerse es sumarlos como si cada uno empujara la probabilidad."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "El cuello, las axilas y las ingles",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "A la exploración hay adenopatías generalizadas: ganglios de aproximadamente un centímetro y medio, móviles y algo dolorosos, por detrás del esternocleidomastoideo en ambos lados, es decir adenopatía cervical posterior, y ganglios pequeños en axilas e ingles, es decir adenopatía inguinal o axilar. La faringe está eritematosa con exudado amigdalino bilateral.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0607",
+            "nombre": "Adenopatías",
+            "rol": "Prueba sensible",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR− entre 0.23 y 0.44 (rango entre estudios, sin estimación puntual)",
+              "sensibilidad 0.91"
+            ],
+            "decision": "su ausencia reduce la probabilidad; es el hallazgo que más descarta",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:27115266"
+            ]
+          },
+          {
+            "id": "HM:3001",
+            "nombre": "Adenopatía cervical posterior",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 3.1 (IC 95 %: 1.6–5.9)",
+              "especificidad 0.87"
+            ],
+            "decision": "aumenta la probabilidad; por sí sola no confirma",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:27115266"
+            ]
+          },
+          {
+            "id": "HM:3001",
+            "nombre": "Adenopatía cervical posterior",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": "metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas",
+            "cifras": [
+              "LR+ 3.16 (IC 95 %: 1.45–5.2)"
+            ],
+            "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:34772769"
+            ]
+          },
+          {
+            "id": "HM:3002",
+            "nombre": "Adenopatía inguinal o axilar",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ entre 3.0 y 3.1 (rango entre estudios, sin estimación puntual)"
+            ],
+            "decision": "aumenta la probabilidad de forma similar a la cervical posterior",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:27115266"
+            ]
+          },
+          {
+            "id": "HM:3002",
+            "nombre": "Adenopatía inguinal o axilar",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": "metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas",
+            "cifras": [
+              "LR+ 3.05 (IC 95 %: 1.85–4.7)"
+            ],
+            "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:34772769"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Imagina el escenario contrario: no palpas ningún ganglio. ¿Qué harías con el diagnóstico de mononucleosis?",
+            "clave": "Casi apartarlo, y es el único hallazgo de la base que permite algo así. Las adenopatías tienen sensibilidad 0.91, y su ausencia da LR− entre 0.23 y 0.44 (rango entre estudios, sin estimación puntual). Conviene leer la nota de la ficha: la fuente publica el cociente positivo de la ausencia de adenopatías, que es el cociente negativo del hallazgo, y la base lo registra así para que no se confunda con el poder de confirmación. Es el hallazgo que más descarta, aunque un rango de esa amplitud no autoriza a cerrar el caso por sí solo."
+          },
+          {
+            "pregunta": "Palpas ganglios posteriores y también axilares e inguinales. ¿Cuánto aporta cada localización y por qué la distinción anterior/posterior no es una pedantería?",
+            "clave": "La adenopatía cervical posterior desplaza la probabilidad de forma moderada: LR+ 3.1 (IC 95 %: 1.6–5.9), con especificidad 0.87. La adenopatía inguinal o axilar aporta algo muy parecido: LR+ entre 3.0 y 3.1 (rango entre estudios, sin estimación puntual). Ninguna confirma sola, pero ambas empujan en la misma dirección y, sobre todo, la posterior apunta al territorio de drenaje de la nasofaringe, mientras que la anterior es compatible con una amigdalitis bacteriana banal. Fíjate además en la lista de falsos positivos de la ficha: una adenopatía submandibular confundida con una posterior, o una masa del propio esternocleidomastoideo, bastan para que el cociente que estás aplicando no corresponda a lo que realmente tienes bajo los dedos."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Dos signos que dependen de quién explora",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Al revisar la boca con buena luz encuentras petequias en paladar, en la unión del paladar duro con el blando. En decúbito lateral derecho palpas el polo del bazo por debajo del reborde costal izquierdo, con matidez en el espacio de Traube, es decir esplenomegalia.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3003",
+            "nombre": "Petequias en paladar",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 5.3 (IC 95 %: 2.1–13)",
+              "especificidad 0.95"
+            ],
+            "decision": "el hallazgo exploratorio que más aumenta la probabilidad",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:27115266"
+            ]
+          },
+          {
+            "id": "HM:3003",
+            "nombre": "Petequias en paladar",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": "metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas",
+            "cifras": [
+              "LR+ entre 1.32 y 11.4 (rango entre estudios, sin estimación puntual)"
+            ],
+            "decision": "moderadamente útil para confirmar, con una incertidumbre mucho mayor que la medición anterior",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:34772769"
+            ]
+          },
+          {
+            "id": "HM:0603",
+            "nombre": "Esplenomegalia",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ entre 1.9 y 6.6 (rango entre estudios, sin estimación puntual)"
+            ],
+            "decision": "apoya el diagnóstico y condiciona el consejo de evitar deporte de contacto",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:27115266"
+            ]
+          },
+          {
+            "id": "HM:0603",
+            "nombre": "Esplenomegalia",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": "metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas",
+            "cifras": [
+              "LR+ 2.39 (IC 95 %: 1.11–5.51)"
+            ],
+            "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:34772769"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "De todo lo que has encontrado explorando, ¿qué hallazgo desplaza más la probabilidad? Compáralo con lo que aportaba el cuello.",
+            "clave": "Las petequias en paladar son el hallazgo exploratorio más potente que registra la base para este cuadro: LR+ 5.3 (IC 95 %: 2.1–13), con especificidad 0.95. Frente al LR+ 3.1 (IC 95 %: 1.6–5.9) de la adenopatía posterior, la diferencia es sustancial, y se entiende: los ganglios cervicales son frecuentes en cualquier faringitis, las petequias palatinas lo son mucho menos. Aun así, la ficha enumera sus falsos positivos, que incluyen la propia faringitis estreptocócica, el traumatismo local por vómitos o tos, y la trombocitopenia de otra causa. Un hallazgo muy específico no es un hallazgo infalible."
+          },
+          {
+            "pregunta": "La base registra dos mediciones distintas para cada uno de estos signos, y no coinciden: compáralas en las fichas de esta etapa. ¿Cuál usas y qué significa que una fuente dé un rango entre estudios en lugar de una cifra?",
+            "clave": "No se elige la más favorable: se comunica la incertidumbre. Un rango entre estudios no es una estimación puntual ni un intervalo de confianza; es la dispersión de resultados entre trabajos distintos, y su amplitud dice que el hallazgo se comporta de manera muy diferente según quién lo busque y en qué población. En la esplenomegalia eso es literal: la nota de la ficha señala que la especificidad varía enormemente entre estudios, porque palpar un bazo depende del explorador, de la constitución del paciente y de la maniobra empleada. La lectura honesta es que ambos signos apoyan el diagnóstico, que las petequias lo apoyan más, y que ninguno de los dos merece un número presentado con más precisión de la que tiene."
+          },
+          {
+            "pregunta": "Aunque el bazo palpable no fuera el signo más discriminativo, ¿por qué cambia hoy mismo lo que le vas a decir a esta paciente?",
+            "clave": "Porque deja de ser solo un dato diagnóstico y pasa a ser un dato de seguridad. La decisión registrada en la base para este hallazgo va justamente en esa dirección: apoya el diagnóstico y condiciona el consejo de evitar el deporte de contacto, por el riesgo de rotura esplénica. Es un buen ejemplo de que el valor de un signo no se agota en cuánto mueve la probabilidad."
+          }
+        ]
+      },
+      {
+        "numero": 5,
+        "titulo": "El frotis de sangre periférica",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "El hemograma muestra leucocitos de 12.8 ×10⁹/L con predominio linfocitario del 62 %, y el laboratorio informa un 18 % de linfocitos de gran tamaño, con citoplasma abundante y núcleo irregular: linfocitosis atípica. Las transaminasas están moderadamente elevadas.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3004",
+            "nombre": "Linfocitosis atípica",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 11.4 (IC 95 %: 2.7–35), con umbral «linfocitos atípicos ≥ 10%»"
+            ],
+            "decision": "a partir del 10% ya desplaza la probabilidad con fuerza",
+            "motivo": null,
+            "advertencia": null,
+            "referencias": [
+              "pmid:27115266"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "¿Cuánto cambia este resultado tu probabilidad? ¿Y si el laboratorio hubiera informado una proporción mucho mayor de células atípicas?",
+            "clave": "La linfocitosis atípica es el hallazgo más potente de todo el artículo: LR+ 11.4 (IC 95 %: 2.7–35), con umbral «linfocitos atípicos ≥ 10%». Y no es una prueba de sí o no: la base la registra como un hallazgo graduado y acumulativo, con tramos sucesivos cuyo cociente crece conforme sube la proporción de células atípicas, hasta un criterio combinado con la linfocitosis total. Consulta esos tramos en la ficha de evidencia y, sobre todo, mira la amplitud de sus intervalos: el poder aumenta, pero también la imprecisión, porque los tramos altos se apoyan en menos pacientes."
+          },
+          {
+            "pregunta": "¿Puedes multiplicar los cocientes de las adenopatías, las petequias, el bazo y el frotis para obtener la probabilidad final? Usa la calculadora bayesiana del artículo y discute el resultado.",
+            "clave": "Multiplicar supone que cada hallazgo aporta información independiente de los demás, y aquí eso es dudoso: las adenopatías generalizadas, la esplenomegalia y la linfocitosis atípica son manifestaciones del mismo proceso, la proliferación linfoide frente al virus de Epstein-Barr, de modo que tienden a aparecer juntas. Encadenarlos sin más exagera la certeza. La calculadora del artículo sirve para ver la magnitud del desplazamiento de un hallazgo sobre la probabilidad basal, que es precisamente lo que cuesta intuir; en la cabecera del paciente, el uso razonable es aplicar el hallazgo más potente y comprobar si la conclusión cambiaría con los demás."
+          }
+        ]
+      },
+      {
+        "numero": 6,
+        "titulo": "Qué haces con esta paciente",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": "La probabilidad de mononucleosis infecciosa es ahora alta. La paciente pregunta si puede volver al entrenamiento de baloncesto la semana que viene y si le vas a dar un antibiótico para la garganta.",
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Pides una prueba de confirmación o tratas con lo que ya tienes? ¿Qué le aporta y qué no?",
+            "clave": "Con este conjunto de hallazgos la probabilidad ya es alta, pero la confirmación sigue siendo razonable porque cambia el consejo que vas a dar y cierra el diferencial con otras causas. Lo habitual es la prueba de anticuerpos heterófilos y, si es negativa con sospecha alta, la serología específica frente al virus de Epstein-Barr, porque los heterófilos pueden ser negativos en los primeros días de la enfermedad y en niños pequeños. Conviene notar un límite del artículo: la base registra el rendimiento de los hallazgos clínicos y del frotis, no el de las pruebas serológicas, así que ese razonamiento no está respaldado por cifras aquí."
+          },
+          {
+            "pregunta": "Responde a sus dos preguntas: el baloncesto y el antibiótico.",
+            "clave": "El deporte de contacto se suspende mientras persista la esplenomegalia y durante las primeras semanas de la enfermedad, por el riesgo de rotura esplénica, que es infrecuente pero grave; conviene explicarle que un dolor abdominal intenso o un dolor referido al hombro izquierdo obligan a consultar de inmediato. En cuanto al antibiótico, no hay infección bacteriana que tratar, y las aminopenicilinas se asocian además a un exantema generalizado en este contexto, de modo que prescribirlas sin necesidad añade un daño evitable. El tratamiento es de soporte: analgesia, hidratación y reposo relativo, con seguimiento del cansancio, que puede durar semanas."
+          },
+          {
+            "pregunta": "¿Qué te haría reconsiderar todo el razonamiento?",
+            "clave": "Una prueba de confirmación negativa con serología específica también negativa obliga a volver al diferencial: citomegalovirus, toxoplasmosis e infección aguda por el virus de la inmunodeficiencia humana producen cuadros indistinguibles, y esta última tiene consecuencias inmediatas para la paciente y para terceros. Adenopatías que no ceden en semanas, pérdida de peso, sudoración nocturna o un hemograma con citopenias apuntan a una enfermedad linfoproliferativa y exigen estudio. Ninguno de esos escenarios está cubierto por los cocientes del artículo, que solo hablan de mononucleosis frente a las demás causas de dolor de garganta."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "En la mononucleosis infecciosa, lo que el paciente cuenta orienta pero no discrimina, y lo que el médico busca deliberadamente sí lo hace: la topografía posterior de las adenopatías, las petequias en el paladar, el bazo palpable y, por encima de todo, el frotis de sangre periférica. La ausencia de adenopatías es el único dato que permite alejar el diagnóstico con cierta fuerza. Y donde la base ofrece rangos en lugar de cifras únicas, está diciendo algo clínicamente útil: que ese signo depende de quién explora.",
+      "necesidades_aprendizaje": [
+        "Rendimiento de los anticuerpos heterófilos y de la serología frente al virus de Epstein-Barr, y su comportamiento según el momento de la enfermedad; la base registra hallazgos clínicos y hematológicos, no pruebas serológicas.",
+        "Criterios y duración recomendada de la restricción deportiva tras la mononucleosis, que la base no documenta.",
+        "Cortes de linfocitosis absoluta y criterio combinado de Cai y Ebell 2021, pendientes de incorporar a la base porque requieren el texto completo del artículo.",
+        "Diagnóstico diferencial del síndrome mononucleósico por citomegalovirus, toxoplasmosis e infección aguda por el virus de la inmunodeficiencia humana, sin cocientes registrados en esta condición."
+      ]
+    },
+    "omitidos": [],
+    "referencias": [
+      {
+        "id": "pmid:27115266",
+        "cita": "Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review. JAMA, 2016. DOI: 10.1001/jama.2016.2111."
+      },
+      {
+        "id": "pmid:34772769",
+        "cita": "Accuracy of Signs, Symptoms, and Hematologic Parameters for the Diagnosis of Infectious Mononucleosis: A Systematic Review and Meta-Analysis. J Am Board Fam Med, 2021. DOI: 10.3122/jabfm.2021.06.210217."
+      }
+    ]
+  },
   "body": "# Mononucleosis infecciosa\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nInfectious mononucleosis\n\n## Sinónimos\n\nmononucleosis\n\nenfermedad del beso\n\n## Códigos\n\nSnomed: 271558008; Cie10: B27\n\n## Probabilidad basal\n\nValor: 0.077; Población: pacientes de 16 a 20 años que consultan por odinofagia; Referencia: pmid:27115266\n\n## Factores de riesgo\n\nFactor: Edad entre 5 y 25 años; Referencia: pmid:27115266; Nota: máxima frecuencia entre los 16 y 20 años\n\n## Hallazgos clínicos\n\n### Adenopatía cervical posterior (HM:3001)\n\n**Significante:** Adenopatías palpables en la cadena cervical posterior, por detrás del músculo esternocleidomastoideo; es una de las características clínicas de la mononucleosis infecciosa (pmid:36689975).\n\n**Significado:** Hiperplasia ganglionar reactiva en el territorio de drenaje de la nasofaringe, sitio inicial de replicación del virus de Epstein-Barr (pmid:25774295). A diferencia de la adenopatía cervical anterior, más propia de la faringitis bacteriana, es la posterior la que orienta a la mononucleosis (pmid:36689975).\n\n**Falsos positivos:** Adenopatía cervical anterior o submandibular confundida con la posterior / Masa del músculo esternocleidomastoideo o de la piel del cuello\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.87\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 1.6 / 5.9; Referencia: pmid:27115266\n\n**Decisión:** aumenta la probabilidad; por sí sola no confirma\n\n### Adenopatía cervical posterior (HM:3001)\n\n**Significante:** Adenopatías palpables en la cadena cervical posterior, por detrás del músculo esternocleidomastoideo; es una de las características clínicas de la mononucleosis infecciosa (pmid:36689975).\n\n**Significado:** Hiperplasia ganglionar reactiva en el territorio de drenaje de la nasofaringe, sitio inicial de replicación del virus de Epstein-Barr (pmid:25774295). A diferencia de la adenopatía cervical anterior, más propia de la faringitis bacteriana, es la posterior la que orienta a la mononucleosis (pmid:36689975).\n\n**Falsos positivos:** Adenopatía cervical anterior o submandibular confundida con la posterior / Masa del músculo esternocleidomastoideo o de la piel del cuello\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas\n\n**LR positivo:** Valor: 3.16; IC del 95 %: 1.45 / 5.2; Referencia: pmid:34772769\n\n**Decisión:** moderadamente útil para confirmar; su ausencia apenas descarta\n\n### Adenopatía inguinal o axilar (HM:3002)\n\n**Significante:** Adenopatías palpables en las regiones axilares o inguinales. Su presencia junto con la cervical define una adenopatía generalizada, que afecta dos o más regiones (pmid:27929264).\n\n**Significado:** Afectación ganglionar fuera del territorio cervical, propia de una infección o enfermedad sistémica y no de un proceso limitado a la faringe (pmid:27929264).\n\n**Falsos positivos:** Ganglios inguinales pequeños y móviles, habituales en adultos sanos / Lesiones cutáneas o infecciones de miembros que explican una adenopatía regional\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 3.0 / 3.1; Referencia: pmid:27115266; Nota: rango entre estudios; la fuente no da estimación resumida\n\n**Decisión:** aumenta la probabilidad de forma similar a la cervical posterior\n\n### Adenopatía inguinal o axilar (HM:3002)\n\n**Significante:** Adenopatías palpables en las regiones axilares o inguinales. Su presencia junto con la cervical define una adenopatía generalizada, que afecta dos o más regiones (pmid:27929264).\n\n**Significado:** Afectación ganglionar fuera del territorio cervical, propia de una infección o enfermedad sistémica y no de un proceso limitado a la faringe (pmid:27929264).\n\n**Falsos positivos:** Ganglios inguinales pequeños y móviles, habituales en adultos sanos / Lesiones cutáneas o infecciones de miembros que explican una adenopatía regional\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas\n\n**LR positivo:** Valor: 3.05; IC del 95 %: 1.85 / 4.7; Referencia: pmid:34772769; Nota: la fuente la denomina adenopatía axilar o inguinal\n\n**Decisión:** moderadamente útil para confirmar; su ausencia apenas descarta\n\n### Petequias en paladar (HM:3003)\n\n**Significante:** Petequias en la mucosa del paladar, típicamente en la unión del paladar duro y el blando; forman parte del cuadro que debe hacer sospechar mononucleosis infecciosa (pmid:25822555).\n\n**Significado:** Pequeñas hemorragias de la mucosa palatina en el contexto de la inflamación faríngea de la infección aguda (pmid:25822555).\n\n**Falsos positivos:** Petequias palatinas de la faringitis estreptocócica o de otras infecciones virales / Petequias por traumatismo local, tos o vómitos intensos / Petequias por trombocitopenia de otra causa\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.95\n\n**LR positivo:** Valor: 5.3; IC del 95 %: 2.1 / 13; Referencia: pmid:27115266\n\n**Decisión:** el hallazgo exploratorio que más aumenta la probabilidad\n\n### Petequias en paladar (HM:3003)\n\n**Significante:** Petequias en la mucosa del paladar, típicamente en la unión del paladar duro y el blando; forman parte del cuadro que debe hacer sospechar mononucleosis infecciosa (pmid:25822555).\n\n**Significado:** Pequeñas hemorragias de la mucosa palatina en el contexto de la inflamación faríngea de la infección aguda (pmid:25822555).\n\n**Falsos positivos:** Petequias palatinas de la faringitis estreptocócica o de otras infecciones virales / Petequias por traumatismo local, tos o vómitos intensos / Petequias por trombocitopenia de otra causa\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas\n\n**LR positivo:** Rango documentado: 1.32 / 11.4; Referencia: pmid:34772769; Nota: rango entre estudios en el abstract; no da estimación resumida\n\n**Decisión:** moderadamente útil para confirmar, con una incertidumbre mucho mayor que la medición anterior\n\n### Esplenomegalia (HM:0603)\n\n**Significante:** Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).\n\n**Significado:** Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.\n\n**Falsos positivos:** Ptosis esplénica (bazo móvil o desplazado caudalmente sin incremento de masa) / Masa en polo inferior de riñón izquierdo o hidronefrosis / Tumor retroperitoneal o masa dependiente del ángulo esplénico del colon\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 1.9 / 6.6; Referencia: pmid:27115266; Nota: rango entre estudios, con especificidad de 0.71 a 0.99. La amplitud refleja lo mucho que depende del explorador.\n\n**Decisión:** apoya el diagnóstico y condiciona el consejo de evitar deporte de contacto\n\n### Esplenomegalia (HM:0603)\n\n**Significante:** Polo inferior del bazo palpable por debajo del reborde costal izquierdo en decúbito supino o decúbito lateral derecho (maniobra bimanual o de Middleton), o percusión mate anormal en el área esplénica (Matidez en el espacio de Traube, Signo de percusión de Castell).\n\n**Significado:** Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.\n\n**Falsos positivos:** Ptosis esplénica (bazo móvil o desplazado caudalmente sin incremento de masa) / Masa en polo inferior de riñón izquierdo o hidronefrosis / Tumor retroperitoneal o masa dependiente del ángulo esplénico del colon\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Población:** metaanálisis bivariado de 17 estudios en pacientes con sospecha de mononucleosis, con prevalencias de 2.1% a 80% en las cohortes prospectivas\n\n**LR positivo:** Valor: 2.39; IC del 95 %: 1.11 / 5.51; Referencia: pmid:34772769\n\n**Decisión:** moderadamente útil para confirmar; su ausencia apenas descarta\n\n### Adenopatías (HM:0607)\n\n**Significante:** Ganglios linfáticos palpables de tamaño o consistencia anormales. Se describen por región, tamaño, consistencia, sensibilidad y movilidad; se clasifican como localizadas o generalizadas, cuando afectan dos o más regiones (pmid:27929264).\n\n**Significado:** Respuesta de los ganglios a infección, inflamación o infiltración neoplásica. Las localizadas orientan a la región que drenan; las generalizadas suelen indicar una enfermedad sistémica (pmid:27929264).\n\n**Falsos positivos:** Ganglios pequeños, blandos y móviles de tamaño normal, frecuentes en cuello e ingle / Masas no ganglionares como lipomas, quistes o glándulas salivales\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Sensibilidad:** 0.91\n\n**LR negativo:** Rango documentado: 0.23 / 0.44; Referencia: pmid:27115266; Nota: la fuente lo expresa como el LR positivo de la AUSENCIA de adenopatías, que es el cociente negativo del hallazgo.\n\n**Decisión:** su ausencia reduce la probabilidad; es el hallazgo que más descarta\n\n### Odinofagia (HM:0211)\n\n**Significante:** Dolor al tragar referido por el paciente, habitualmente localizado en la garganta; es el motivo de consulta más frecuente de la mononucleosis infecciosa y de las faringitis (pmid:25822555).\n\n**Significado:** Inflamación o lesión de la mucosa orofaríngea o esofágica que se estimula con la deglución; en la mononucleosis refleja la replicación viral inicial en la orofaringe (pmid:25774295).\n\n**Falsos positivos:** Disfagia sin dolor, que indica dificultad para tragar y no dolor / Dolor cervical musculoesquelético que el paciente refiere a la garganta\n\n**Rol:** Manifestación\n\n**Estado del LR:** Sin efecto discriminativo\n\n**Sensibilidad:** 0.81\n\n**Ref rendimiento:** pmid:27115266\n\n**Motivo:** «symptoms are of limited value»: sensible (0.81-0.83) pero inespecífico. La fuente no publica cociente porque no discrimina.\n\n### Astenia (HM:0801)\n\n**Significante:** Cansancio o falta de energía referida por el paciente, desproporcionada al esfuerzo y que no mejora del todo con el descanso; se clasifica como fisiológica, secundaria o crónica (pmid:37440739).\n\n**Significado:** Síntoma inespecífico que acompaña a infecciones, enfermedades sistémicas, trastornos del ánimo o del sueño y a la falta de descanso; la historia y la exploración orientan su causa (pmid:37440739).\n\n**Falsos positivos:** Debilidad muscular objetiva, que es un signo neurológico y no fatiga / Somnolencia diurna por un trastorno del sueño\n\n**Rol:** Manifestación\n\n**Estado del LR:** Sin efecto discriminativo\n\n**Motivo:** sensible (0.81-0.83) pero inespecífico; la fuente no publica cociente\n\n### Linfocitosis atípica (HM:3004)\n\n**Significante:** Linfocitos de tamaño aumentado, con citoplasma abundante y núcleo irregular (células de Downey), en el frotis de sangre periférica. Se expresa como porcentaje de los leucocitos; en la valoración inicial se busca más de un 10 % de atípicos (pmid:36689975).\n\n**Significado:** Expansión extraordinaria de linfocitos T CD8+ dirigidos contra los linfocitos B infectados por el virus de Epstein-Barr durante la infección aguda (pmid:25774295).\n\n**Falsos positivos:** Linfocitos reactivos de otras infecciones virales, como citomegalovirus / Linfocitos atípicos en reacciones a fármacos / Células de una neoplasia linfoide confundidas con linfocitos reactivos\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 11.4; IC del 95 %: 2.7 / 35; Umbral: linfocitos atípicos ≥ 10%; Referencia: pmid:27115266\n\n**Decisión:** a partir del 10% ya desplaza la probabilidad con fuerza\n\n**Graduación:** Parámetro: Linfocitos atípicos; Unidad: %; Lectura: acumulativo\n\n**Tramos:** Umbral: linfocitos atípicos ≥ 10%; Desde: 10; LR positivo: 11.4; IC del 95 %: 2.7 / 35; Referencia: pmid:27115266 / Umbral: linfocitos atípicos ≥ 20%; Desde: 20; LR positivo: 26; IC del 95 %: 9.6 / 68; Referencia: pmid:27115266 / Umbral: linfocitos atípicos ≥ 40%; Desde: 40; LR positivo: 50; IC del 95 %: 38 / 64; Referencia: pmid:27115266 / Umbral: linfocitos > 50% y atípicos > 10%; LR positivo: 54; IC del 95 %: 8.4 / 189; Especificidad: 0.99; Referencia: pmid:27115266\n\n## Aspectos pendientes de documentación\n\nCai y Ebell 2021 (pmid:34772769) se registra como segunda medición de la adenopatía cervical posterior, la adenopatía axilar o inguinal, las petequias en paladar y la esplenomegalia, junto a pmid:27115266, que no se sustituye. Falta incorporar su criterio combinado (linfocitos > 50% y atípicos > 10%, LR+ 50.40, IC95% 8.43-162) como tramo de linfocitosis atípica, y los cortes de linfocitos > 4 × 10⁹/L y > 40-50%, que el abstract menciona sin cifras: requiere el texto completo. La fuente concluye además que la ausencia de un hallazgo aislado apenas sirve para descartar.\n\n## Referencias y procedencia\n\n**pmid:27115266:** Does This Patient Have Infectious Mononucleosis?: The Rational Clinical Examination Systematic Review. JAMA, 2016. DOI: 10.1001/jama.2016.2111.\n\n**pmid:34772769:** Accuracy of Signs, Symptoms, and Hematologic Parameters for the Diagnosis of Infectious Mononucleosis: A Systematic Review and Meta-Analysis. J Am Board Fam Med, 2021. DOI: 10.3122/jabfm.2021.06.210217.\n\n**pmid:25774295:** Infectious mononucleosis. Clin Transl Immunology, 2015. DOI: 10.1038/cti.2015.1.\n\n**pmid:25822555:** Common questions about infectious mononucleosis. Am Fam Physician, 2015. DOI: no documentado.\n\n**pmid:27929264:** Unexplained Lymphadenopathy: Evaluation and Differential Diagnosis. Am Fam Physician, 2016. DOI: no documentado.\n\n**pmid:37440739:** Fatigue in Adults: Evaluation and Management. Am Fam Physician, 2023. DOI: no documentado.\n\n**pmid:36689975:** Infectious Mononucleosis: Rapid Evidence Review. Am Fam Physician, 2023. DOI: no documentado.\n\nFuente clínica: medsemiotics-db, condición HM:6003."
 }
