@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6002-sindrome-intestino-irritable.yaml
   archivos:
@@ -33,14 +33,16 @@ fuente:
     conceptos/HM0800-sintoma-general.yaml: 39761069b5de091733e7864bb0c96f68755b6d3fa5e59003f5f8c7949b0c4827
     conceptos/HM0803-perdida-de-peso.yaml: 78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e
     conceptos/HM3060-hematoquecia.yaml: 3859f875c15207194d1bc498152f293a810c21faeb51c3ae1ce78ba459cbd338
-    condiciones/HM6002-sindrome-intestino-irritable.yaml: 91c7f09f57b2be77b8bc5ea732b1ac712c6c0e587dd230ec8587f8a5e3dbf04b
+    condiciones/HM6002-sindrome-intestino-irritable.yaml: 361961cdc2583861c1d77bb2ee3c1557c2ebfb096681ba3d806ee565145f69db
     referencias/pmid-15082584.yaml: bed79febe6875717f56dda071ab3d22da080c14d2f6552a0c7803e9eb9dc4a27
     referencias/pmid-18441863.yaml: d9f899b7a68ba1799bfaae19fadfcc97108841be6db29c7632e00ce769237478
     referencias/pmid-18854541.yaml: 346d1ed8a98252e1510532df3d42fe94cc4f1f615405c73ae66d6f1103365c3c
     referencias/pmid-20697190.yaml: 5acfa5ff915443623dc06031e8065400f6ab0f27d72e95e35e365d825b88b3ad
+    referencias/pmid-22426087.yaml: c87b06190f964b235168dbd5ca0ac3c084d4c23daee34d716735dd5cfd1fb271
     referencias/pmid-23055768.yaml: 6ff183a65d1b0bb695846f2ae115ec0e7c0b18ca72b18f8cf6eb2ae158f926ec
     referencias/pmid-26076071.yaml: a61301d02454279af8cff7bb3563a08720b970345e5cf0c0366ffedf07c2364f
     referencias/pmid-27144627.yaml: 8fee779f41d1a67e9a989383a7d43687d62c6d28617e004730efe3b075dafadf
+    referencias/pmid-28069350.yaml: d714a89eb710f87b3d1a5bd391780c6800b7dee436021a91d9a3609d3e85587d
     referencias/pmid-9299672.yaml: 54cb78bb9753e2087083d3becc6b105739fa364217c5a12c140c127f50a3a94d
 grounding:
   condicion_id: HM:6002
@@ -148,11 +150,19 @@ intestino irritable
 
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 10743008; Cie10: K58
 
 ## Probabilidad basal
 
 Valor: 0.57; Población: adultos con síntomas gastrointestinales bajos estudiados antes de su investigación (10 estudios prospectivos, 2355 pacientes); prevalencia resumida de SII tras la investigación del tracto gastrointestinal bajo; Referencia: pmid:18854541
+
+## Factores de riesgo
+
+Factor: Enteritis infecciosa en los 12 meses previos; Referencia: pmid:28069350; Nota: riesgo relativo 4.2 (IC95% 3.1-5.7) frente a quien no la tuvo; 2.3 (IC95% 1.8-3.0) si fue hace más de 12 meses. Metaanálisis de 45 estudios de cohortes
+
+Factor: Sexo femenino; Referencia: pmid:22426087; Nota: OR 1.67 (IC95% 1.53-1.82) frente a varones en la población general; 80 poblaciones, 260 960 adultos
+
+Factor: Edad menor de 50 años; Referencia: pmid:22426087; Nota: en mayores de 50 años la prevalencia es menor, OR 0.75 (IC95% 0.62-0.92) frente a menores de 50
 
 ## Hallazgos clínicos
 
@@ -268,9 +278,13 @@ Los síntomas individuales tienen LR+ de 1.2 a 2.1 y LR− de 0.29 a 0.88 (pmid:
 
 **pmid:20697190:** [Diagnosis of irritable bowel syndrome: a systematic review]. Korean J Gastroenterol, 2010. DOI: 10.4166/kjg.2010.55.5.308.
 
+**pmid:22426087:** Global prevalence of and risk factors for irritable bowel syndrome: a meta-analysis. Clin Gastroenterol Hepatol, 2012. DOI: 10.1016/j.cgh.2012.02.029.
+
 **pmid:26076071:** Systematic review with meta-analysis: the accuracy of diagnosing irritable bowel syndrome with symptoms, biomarkers and/or psychological markers. Aliment Pharmacol Ther, 2015. DOI: 10.1111/apt.13283.
 
 **pmid:27144627:** Bowel Disorders. Gastroenterology, 2016. DOI: 10.1053/j.gastro.2016.02.031.
+
+**pmid:28069350:** Prevalence, Risk Factors, and Outcomes of Irritable Bowel Syndrome After Infectious Enteritis: A Systematic Review and Meta-analysis. Gastroenterology, 2017. DOI: 10.1053/j.gastro.2016.12.039.
 
 **pmid:18441863:** Evaluation of acute abdominal pain in adults. Am Fam Physician, 2008. DOI: no documentado.
 

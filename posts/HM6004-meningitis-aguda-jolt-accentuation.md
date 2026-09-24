@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6004-meningitis-aguda.yaml
   archivos:
@@ -32,45 +32,49 @@ fuente:
     conceptos/HM0501-alteracion-del-nivel-de-conciencia.yaml: c3d0515c056d2458152b77498e02ec985a7f67d31c63bec961722da48ac6d980
     conceptos/HM3005-rigidez-de-nuca.yaml: acf2a79e35697ca46f2a084ef549f5345ad4d40e9014474088cb2f897f43e9c7
     conceptos/HM3006-acentuacion-cefalea-sacudida.yaml: b7e237eb2e3f5ead09a07aff8832f8b79afc05a258a7649cc778aba725441a12
-    condiciones/HM6004-meningitis-aguda.yaml: 094b0b47f35478cc7db439647a545a988f3804088f1bfbc0df379019c3efb45a
+    conceptos/HM3238-signo-de-kernig.yaml: 97a5f88234b70ede1cfe5c8adb4c99c64c38397f63af19a502c9fcc41acfa529
+    conceptos/HM3239-signo-de-brudzinski.yaml: 8550100892b0b06d7f506a534f89c5266e9fbd7d65a416ebb7e99807a25195b8
+    condiciones/HM6004-meningitis-aguda.yaml: 75f24c5863a0e807a47f41927ea1e36cb60684368c277d1a5c2a3dd59e787893
     referencias/pmid-10411200.yaml: 8b029e69cf573d005a0416d103199e091dfd7156895fad9de3768aebf43a5eab
+    referencias/pmid-12060874.yaml: d3b3a5af84554f3adb5d3e92fa97d6422410beaa5173f8b29388b47cec1e99bf
+    referencias/pmid-32524581.yaml: 5678973f38f01ba507942f774c9e5017c7f05fb3673b8de2be79063ca172571b
 grounding:
   condicion_id: HM:6004
   condicion_nombre: Meningitis aguda
-  concepto_id: HM:3006
-  concepto_nombre: Acentuación de la cefalea con la sacudida cefálica
+  concepto_id: HM:3005
+  concepto_nombre: Rigidez de nuca
   estado_lr: medido
-  lr_positivo: 2.2
-  lr_negativo: 0.0
+  lr_positivo: 0.94
+  lr_negativo: null
   lr_positivo_rango: null
   lr_negativo_rango: null
   poblacion: null
-  referencia_id: pmid:10411200
-  referencia_cita: Attia J, Hatala R, Cook DJ, Wong JG The rational clinical examination. Does this adult patient have acute meningitis? JAMA 1999
-  pmid: '10411200'
-  doi: 10.1001/jama.282.2.175
-  sensibilidad: 1.0
-  especificidad: 0.54
+  referencia_id: pmid:12060874
+  referencia_cita: Thomas KE, Hasbun R, Jekel J, Quagliarello VJ The diagnostic accuracy of Kernig's sign, Brudzinski's sign, and nuchal rigidity in adults with suspected meningitis Clin Infect Dis 2002
+  pmid: '12060874'
+  doi: 10.1086/340979
+  sensibilidad: 0.3
 triada:
-  significante: Acentuación de la cefalea con la sacudida cefálica
+  significante: Rigidez de nuca
   significado: El mecanismo fisiopatológico no está documentado en esta fuente.
-  decision: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda
+  decision: La fuente no documenta una decisión específica para este hallazgo.
 evidencia:
 - concepto: HM:3006
-  rol: prueba_sensible
-  estado_lr: medido
-  sensibilidad: 1.0
-  especificidad: 0.54
-  lr_positivo: &id001
-    valor: 2.2
-    ref: pmid:10411200
-    poblacion: pacientes que ya presentan fiebre y cefalea
-  lr_negativo:
-    valor: 0.0
-    ref: pmid:10411200
-    poblacion: pacientes que ya presentan fiebre y cefalea
-    nota: 'un LR− de 0 procede de una sensibilidad del 100% en la serie estudiada. Tratarlo como certeza absoluta sería un error de lectura: es el resultado de una muestra, no una imposibilidad.'
-  decision: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda
+  rol: apoyo
+  estado_lr: no_medido
+  sensibilidad: 0.653
+  ic95_sensibilidad:
+  - 0.373
+  - 0.856
+  especificidad: 0.704
+  ic95_especificidad:
+  - 0.477
+  - 0.861
+  poblacion: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR
+  ref: pmid:32524581
+  motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí
+  nota: sin alteración de la conciencia (8 estudios, 921 participantes), Se 0.752 (IC95% 0.543-0.886) y Sp 0.608 (IC95% 0.434-0.759). Sustituye al LR+ 2.2 y LR− 0 de Attia 1999 (pmid:10411200), que venían de un único estudio de 1991
+  decision: una prueba negativa no excluye la meningitis; no evita la punción lumbar
 - concepto: HM:0207
   rol: manifestacion
   estado_lr: no_medido
@@ -78,6 +82,7 @@ evidencia:
   ic95_sensibilidad:
   - 0.32
   - 0.68
+  ref_rendimiento: pmid:10411200
   motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract
 - concepto: HM:0301
   rol: manifestacion
@@ -86,6 +91,7 @@ evidencia:
   ic95_sensibilidad:
   - 0.22
   - 0.38
+  ref_rendimiento: pmid:10411200
   motivo: sensibilidad agrupada sin especificidad; LR no calculable
 - concepto: HM:0302
   rol: manifestacion
@@ -94,74 +100,99 @@ evidencia:
   ic95_sensibilidad:
   - 0.22
   - 0.38
+  ref_rendimiento: pmid:10411200
   motivo: la fuente agrupa náuseas y vómitos en una sola estimación
 - concepto: HM:0101
   rol: prueba_sensible
   estado_lr: no_medido
   motivo: forma parte de la tríada fiebre + rigidez de nuca + alteración del estado mental, cuya presencia de al menos uno tiene sensibilidad del 99-100%. La fuente no desglosa el cociente de cada componente por separado.
 - concepto: HM:3005
-  rol: prueba_sensible
-  estado_lr: no_medido
-  motivo: componente de la tríada; la fuente no publica su cociente aislado
+  rol: apoyo
+  estado_lr: medido
+  sensibilidad: 0.3
+  lr_positivo: &id001
+    valor: 0.94
+    ref: pmid:12060874
+    poblacion: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
+  ref: pmid:12060874
+  nota: Attia 1999 (pmid:10411200) no publica su cociente aislado; este es de Thomas 2002. La fuente solo le halla valor en los 4 pacientes con ≥ 1000 leucocitos en el LCR
+- concepto: HM:3238
+  rol: apoyo
+  estado_lr: medido
+  sensibilidad: 0.05
+  lr_positivo:
+    valor: 0.97
+    ref: pmid:12060874
+    poblacion: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
+  ref: pmid:12060874
+- concepto: HM:3239
+  rol: apoyo
+  estado_lr: medido
+  sensibilidad: 0.05
+  lr_positivo:
+    valor: 0.97
+    ref: pmid:12060874
+    poblacion: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
+  ref: pmid:12060874
 - concepto: HM:0501
   rol: prueba_sensible
   estado_lr: no_medido
   motivo: componente de la tríada; la fuente no publica su cociente aislado
 autoevaluacion:
 - id: q1
-  pregunta: En Meningitis aguda, ¿cuál es el resultado documentado del LR positivo para «Acentuación de la cefalea con la sacudida cefálica»?
-  concepto_id: HM:3006
-  referencia_id: pmid:10411200
-  pmid: '10411200'
-  doi: 10.1001/jama.282.2.175
+  pregunta: En Meningitis aguda, ¿cuál es el resultado documentado del LR positivo para «Rigidez de nuca»?
+  concepto_id: HM:3005
+  referencia_id: pmid:12060874
+  pmid: '12060874'
+  doi: 10.1086/340979
   fuente_doi: 10.5281/zenodo.22064424
   evidencia:
     condicion_id: HM:6004
-    concepto_id: HM:3006
+    concepto_id: HM:3005
     estado_lr: medido
     campo: lr_positivo
     dato: *id001
     poblacion: null
     motivo: null
-    decision: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda
+    decision: null
     advertencia: null
   opciones:
   - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'Sí hay una medición documentada: LR positivo: 2.2. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda.'
-  - texto: 'LR positivo: 2.2.'
+    feedback: 'Sí hay una medición documentada: LR positivo: 0.94. LR positivo: 0.94.'
+  - texto: 'LR positivo: 0.94.'
     correcta: true
-    feedback: 'LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda.'
-  - texto: El valor 2.2 corresponde al LR negativo y no al LR positivo.
+    feedback: 'LR positivo: 0.94.'
+  - texto: El valor 0.94 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.2. Interpretación registrada: maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 0.94.'
 - id: q2
-  pregunta: En Meningitis aguda, ¿qué estado de la evidencia corresponde a «Cefalea» según la fuente?
-  concepto_id: HM:0207
-  referencia_id: null
-  pmid: null
-  doi: null
+  pregunta: En Meningitis aguda, ¿qué estado de la evidencia corresponde a «Acentuación de la cefalea con la sacudida cefálica» según la fuente?
+  concepto_id: HM:3006
+  referencia_id: pmid:32524581
+  pmid: '32524581'
+  doi: 10.1002/14651858.CD012824.pub2
   fuente_doi: 10.5281/zenodo.22064424
   evidencia:
     condicion_id: HM:6004
-    concepto_id: HM:0207
+    concepto_id: HM:3006
     estado_lr: no_medido
     campo: null
     dato: null
-    poblacion: null
-    motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract
-    decision: null
+    poblacion: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR
+    motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí
+    decision: una prueba negativa no excluye la meningitis; no evita la punción lumbar
     advertencia: null
   opciones:
   - texto: LR no medido
     correcta: true
-    feedback: 'LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract.'
+    feedback: 'LR no medido Población: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR. Motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí. Interpretación registrada: una prueba negativa no excluye la meningitis; no evita la punción lumbar.'
   - texto: LR no medible
     correcta: false
-    feedback: 'La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract.'
+    feedback: 'La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR. Motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí. Interpretación registrada: una prueba negativa no excluye la meningitis; no evita la punción lumbar.'
   - texto: Sin efecto discriminativo
     correcta: false
-    feedback: 'La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract.'
+    feedback: 'La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR. Motivo: la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí. Interpretación registrada: una prueba negativa no excluye la meningitis; no evita la punción lumbar.'
 ---
 
 # Meningitis aguda
@@ -172,33 +203,35 @@ Hallazgos, cocientes documentados y límites de la evidencia.
 
 Acute meningitis
 
-## Sinónimos
-
-meningitis bacteriana aguda
-
-meningitis vírica aguda
-
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 822031000000101; Cie10: G03.9
 
 ## Hallazgos clínicos
 
 ### Acentuación de la cefalea con la sacudida cefálica (HM:3006)
 
-**Rol:** Prueba sensible
+**Rol:** Apoyo diagnóstico
 
-**Estado del LR:** LR medido
+**Estado del LR:** LR no medido
 
-**Sensibilidad:** 1.0
+**Sensibilidad:** 0.653
 
-**Especificidad:** 0.54
+**Ic95 sensibilidad:** 0.373 / 0.856
 
-**LR positivo:** Valor: 2.2; Referencia: pmid:10411200; Población: pacientes que ya presentan fiebre y cefalea
+**Especificidad:** 0.704
 
-**LR negativo:** Valor: 0.0; Referencia: pmid:10411200; Población: pacientes que ya presentan fiebre y cefalea; Nota: un LR− de 0 procede de una sensibilidad del 100% en la serie estudiada. Tratarlo como certeza absoluta sería un error de lectura: es el resultado de una muestra, no una imposibilidad.
+**Ic95 especificidad:** 0.477 / 0.861
 
-**Decisión:** maniobra adjunta útil en quien ya tiene fiebre y cefalea; su negatividad es lo que más ayuda
+**Población:** pacientes con sospecha de meningitis en urgencias, 9 estudios y 1161 participantes; patrón de referencia, la pleocitosis en el LCR
+
+**Referencia:** pmid:32524581
+
+**Motivo:** la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí
+
+**Nota:** sin alteración de la conciencia (8 estudios, 921 participantes), Se 0.752 (IC95% 0.543-0.886) y Sp 0.608 (IC95% 0.434-0.759). Sustituye al LR+ 2.2 y LR− 0 de Attia 1999 (pmid:10411200), que venían de un único estudio de 1991
+
+**Decisión:** una prueba negativa no excluye la meningitis; no evita la punción lumbar
 
 ### Cefalea (HM:0207)
 
@@ -209,6 +242,8 @@ Snomed: No documentado.; Cie10: No documentado.
 **Sensibilidad:** 0.5
 
 **Ic95 sensibilidad:** 0.32 / 0.68
+
+**Ref rendimiento:** pmid:10411200
 
 **Motivo:** la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract
 
@@ -222,6 +257,8 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Ic95 sensibilidad:** 0.22 / 0.38
 
+**Ref rendimiento:** pmid:10411200
+
 **Motivo:** sensibilidad agrupada sin especificidad; LR no calculable
 
 ### Vómitos (HM:0302)
@@ -233,6 +270,8 @@ Snomed: No documentado.; Cie10: No documentado.
 **Sensibilidad:** 0.3
 
 **Ic95 sensibilidad:** 0.22 / 0.38
+
+**Ref rendimiento:** pmid:10411200
 
 **Motivo:** la fuente agrupa náuseas y vómitos en una sola estimación
 
@@ -246,11 +285,41 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ### Rigidez de nuca (HM:3005)
 
-**Rol:** Prueba sensible
+**Rol:** Apoyo diagnóstico
 
-**Estado del LR:** LR no medido
+**Estado del LR:** LR medido
 
-**Motivo:** componente de la tríada; la fuente no publica su cociente aislado
+**Sensibilidad:** 0.3
+
+**LR positivo:** Valor: 0.94; Referencia: pmid:12060874; Población: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
+
+**Referencia:** pmid:12060874
+
+**Nota:** Attia 1999 (pmid:10411200) no publica su cociente aislado; este es de Thomas 2002. La fuente solo le halla valor en los 4 pacientes con ≥ 1000 leucocitos en el LCR
+
+### Signo de Kernig (HM:3238)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR medido
+
+**Sensibilidad:** 0.05
+
+**LR positivo:** Valor: 0.97; Referencia: pmid:12060874; Población: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
+
+**Referencia:** pmid:12060874
+
+### Signo de Brudzinski (HM:3239)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR medido
+
+**Sensibilidad:** 0.05
+
+**LR positivo:** Valor: 0.97; Referencia: pmid:12060874; Población: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
+
+**Referencia:** pmid:12060874
 
 ### Alteración del nivel de conciencia (HM:0501)
 
@@ -264,8 +333,16 @@ Snomed: No documentado.; Cie10: No documentado.
 
 Nombre: Ausencia de la tríada clásica; Componentes: Fiebre / Rigidez de nuca / Alteración del nivel de conciencia; Criterio: ninguno de los tres presente; Sensibilidad de la presencia: 0.99 / 1.0; Referencia: pmid:10411200; Decisión: la ausencia simultánea de fiebre, rigidez de nuca y alteración del estado mental descarta la meningitis en la práctica; Advertencia: la fuente matiza que ante alto riesgo clínico hay que ir directamente a la punción lumbar, sin apoyarse en la exploración
 
+## Aspectos pendientes de documentación
+
+Sin probabilidad_base: Attia 1999 no publica prevalencia, y los resúmenes de Thomas 2002 y de Iguchi 2020 tampoco.
+
 ## Referencias y procedencia
 
 **pmid:10411200:** The rational clinical examination. Does this adult patient have acute meningitis?. JAMA, 1999. DOI: 10.1001/jama.282.2.175.
+
+**pmid:12060874:** The diagnostic accuracy of Kernig's sign, Brudzinski's sign, and nuchal rigidity in adults with suspected meningitis. Clin Infect Dis, 2002. DOI: 10.1086/340979.
+
+**pmid:32524581:** Diagnostic test accuracy of jolt accentuation for headache in acute meningitis in the emergency setting. Cochrane Database Syst Rev, 2020. DOI: 10.1002/14651858.CD012824.pub2.
 
 Fuente clínica: medsemiotics-db, condición HM:6004.

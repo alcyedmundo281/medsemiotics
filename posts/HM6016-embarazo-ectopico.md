@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6016-embarazo-ectopico.yaml
   archivos:
@@ -34,7 +34,7 @@ fuente:
     conceptos/HM3069-sangrado-vaginal-en-la-gestacion-precoz.yaml: a7c6df28b077ba236b0c2784d246ad30c7e10e5bc9eae7d10725927d836273ee
     conceptos/HM3165-embarazo-intrauterino-confirmado.yaml: 9526f85850a91e95243c5eafb04dfccb263eb8b37fd37855676a65616a9466c5
     conceptos/HM3189-hcg-serica-cuantitativa.yaml: 5df98b5d3d6b165b99abf2ef3341ec5d3ad35cf3c7ef75877e7acedb2912b167
-    condiciones/HM6002-sindrome-intestino-irritable.yaml: 91c7f09f57b2be77b8bc5ea732b1ac712c6c0e587dd230ec8587f8a5e3dbf04b
+    condiciones/HM6002-sindrome-intestino-irritable.yaml: 361961cdc2583861c1d77bb2ee3c1557c2ebfb096681ba3d806ee565145f69db
     condiciones/HM6016-embarazo-ectopico.yaml: fb1d6c98506158df5d8cf54771883ac68297f2937ea1e6e5ca9e9396da865d01
     referencias/pmid-16308901.yaml: 7d83fd01af208b65e0e2e48604c19ee7e3ae2580a9e25c9dcca9a94de5e970f9
     referencias/pmid-18441863.yaml: d9f899b7a68ba1799bfaae19fadfcc97108841be6db29c7632e00ce769237478

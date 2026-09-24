@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6011-infeccion-precoz-por-vih.yaml
   archivos:
@@ -26,13 +26,15 @@ fuente:
     conceptos/HM0300-sintoma-digestivo.yaml: 2c9dfe41462c5927070d1020039bd0dac823bcf998d53ac0a7d8e04ccab240aa
     conceptos/HM0302-vomitos.yaml: c2a3e83028a5dbb8b5d22771c6f413648cbe087e1f3dffa381f416e6bc5a12c9
     conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
-    conceptos/HM0607-adenopatias.yaml: f06993f52d4da10988e367f6b1f9de12b802d261ce4cf6c6c9879a4761f0e561
+    conceptos/HM0607-adenopatias.yaml: 849fe51a52fd503725ed3d2da2115ed0f2dab016bd0150088c7a5c079a718a10
     conceptos/HM0800-sintoma-general.yaml: 39761069b5de091733e7864bb0c96f68755b6d3fa5e59003f5f8c7949b0c4827
     conceptos/HM0803-perdida-de-peso.yaml: 78cd9514f8137e60f123c191cb3939fa57bc11c77dcda85c914e82e8eac1d22e
     conceptos/HM3039-ulceras-genitales.yaml: 8d597fccd98b8a83f14956f25483e0c0d5b2e10c73bb1dc3c849e10160f1245a
     conceptos/HM3040-adenopatias-referidas.yaml: ac43dcc86eab8dbe3ebbe9334eedf4bf57ba830257d2b3f5cfa6f008634e7643
+    condiciones/HM6003-mononucleosis-infecciosa.yaml: fdd67306d3d26ce5724613adc81b59ab01bd965186ce7c3d82ca67bf267ce2e9
     condiciones/HM6011-infeccion-precoz-por-vih.yaml: da3f12b7d2d61192612c0bc2de23c0f8bb38cf47d7f94c19d50712de89160d80
     referencias/pmid-25027143.yaml: 9b6cbb935f7a83c37d6ec407afb0d65294b8b4cc753e02096259ca180ee189f0
+    referencias/pmid-27929264.yaml: e81a2145a034e9bc8da32cec5e2648fd1bc2ebd2f180fe99434e3da94d8a8810
 grounding:
   condicion_id: HM:6011
   condicion_nombre: Infección precoz por VIH
@@ -242,6 +244,12 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ### Adenopatías (HM:0607)
 
+**Significante:** Ganglios linfáticos palpables de tamaño o consistencia anormales. Se describen por región, tamaño, consistencia, sensibilidad y movilidad; se clasifican como localizadas o generalizadas, cuando afectan dos o más regiones (pmid:27929264).
+
+**Significado:** Respuesta de los ganglios a infección, inflamación o infiltración neoplásica. Las localizadas orientan a la región que drenan; las generalizadas suelen indicar una enfermedad sistémica (pmid:27929264).
+
+**Falsos positivos:** Ganglios pequeños, blandos y móviles de tamaño normal, frecuentes en cuello e ingle / Masas no ganglionares como lipomas, quistes o glándulas salivales
+
 **Rol:** Prueba específica
 
 **Estado del LR:** LR medido
@@ -263,5 +271,7 @@ La utilidad limitada de la exploración clínica para detectar o descartar la in
 ## Referencias y procedencia
 
 **pmid:25027143:** Does this adult patient have early HIV infection?: The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5954.
+
+**pmid:27929264:** Unexplained Lymphadenopathy: Evaluation and Differential Diagnosis. Am Fam Physician, 2016. DOI: no documentado.
 
 Fuente clínica: medsemiotics-db, condición HM:6011.

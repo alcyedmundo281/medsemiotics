@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Avanzado
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6015-enfermedad-de-parkinson.yaml
   archivos:
@@ -26,7 +26,7 @@ fuente:
     conceptos/HM3061-bradicinesia.yaml: 623f4a414f90755471fd23933757b9118848638e618f5a63fa01a4ab626182a0
     conceptos/HM3062-temblor-de-reposo.yaml: b181c4353fd0a2b46cc1bb9b46e240e468ab0e4de27f1aeedf8d081851671027
     conceptos/HM3063-rigidez-parkinsoniana.yaml: 97ec764a6867749d77971a91cde2028ec1cb43e13d7504e12308094528a43de5
-    condiciones/HM6002-sindrome-intestino-irritable.yaml: 91c7f09f57b2be77b8bc5ea732b1ac712c6c0e587dd230ec8587f8a5e3dbf04b
+    condiciones/HM6002-sindrome-intestino-irritable.yaml: 361961cdc2583861c1d77bb2ee3c1557c2ebfb096681ba3d806ee565145f69db
     condiciones/HM6015-enfermedad-de-parkinson.yaml: da6f3cf1eb93f27411eda8f603aac72d4a94af776a79c05e94afffd30ee5768c
     referencias/pmid-26474316.yaml: 409c161aa7d66ee82f74cac52519280375172cc5fe2c388633ab2b80dbbf38dc
 grounding:

@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6008-hipovolemia.yaml
   archivos:
@@ -32,7 +32,7 @@ fuente:
     conceptos/HM3023-lengua-sin-surcos.yaml: decc68cdb2fe02a5054c683e556a871ebd6dac53df6296564ca02187212733fe
     conceptos/HM3024-relleno-capilar-prolongado.yaml: 647c5f4a82265f763418f74807a155f0e30670423b924cca188582dd017568ce
     conceptos/HM3025-turgencia-cutanea-disminuida.yaml: cacb1862872bbc6670f0e6576b796837289f8c1b42740224ed31d21bab9ab1d4
-    condiciones/HM6008-hipovolemia.yaml: 46d0a8360a8a324654ea420239ab9f2348ab5223c33df7c90ad6deeaa9302fba
+    condiciones/HM6008-hipovolemia.yaml: 72762f4707de1ed85ac8ffa9ca68bc04e2da4290b8cf468aa5d62f2b904323d8
     referencias/pmid-10086438.yaml: b63336db28ca997d4e2c31dc9518c172e2261fd09055c3902a5ff7236d038cd0
 grounding:
   condicion_id: HM:6008
@@ -62,6 +62,7 @@ evidencia:
   ic95_especificidad:
   - 0.97
   - 0.99
+  ref_rendimiento: pmid:10086438
   sensibilidad_por_gravedad:
   - perdida: moderada
     sensibilidad: 0.22
@@ -217,7 +218,7 @@ hipovolemia aguda
 
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 816082000; Cie10: E86
 
 ## Hallazgos clínicos
 
@@ -232,6 +233,8 @@ Snomed: No documentado.; Cie10: No documentado.
 **Especificidad:** 0.98
 
 **Ic95 especificidad:** 0.97 / 0.99
+
+**Ref rendimiento:** pmid:10086438
 
 **Sensibilidad por gravedad:** Perdida: moderada; Sensibilidad: 0.22; IC del 95 %: 0.06 / 0.48; Referencia: pmid:10086438 / Perdida: grande; Sensibilidad: 0.97; IC del 95 %: 0.91 / 1.0; Referencia: pmid:10086438
 

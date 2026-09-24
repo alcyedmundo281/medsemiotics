@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9c9015322734168fe0328362950237f8ad296a55
+  revision: 1d33074a25224a006e43e010c4be6ad39a771e7e
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6005-derrame-pleural-exudativo.yaml
   archivos:
@@ -29,8 +29,9 @@ fuente:
     conceptos/HM3010-cociente-colesterol-pleural-suero.yaml: 43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180
     conceptos/HM3011-criterios-de-light.yaml: 7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f
     conceptos/HM3148-lineas-b-pulmonares-bilaterales.yaml: bf438bf8faf27db643fbcfa947ad803782ce7e30b057ddcd3e21790d952d516e
-    condiciones/HM6005-derrame-pleural-exudativo.yaml: be323c90b632013bda6e773b21184abc9afb8f77d920168ca036ee2b17c18d44
+    condiciones/HM6005-derrame-pleural-exudativo.yaml: 0e8b529637113d3e77650e09fafa6166ab43e58e3d62a252ee05990cda61e9dc
     referencias/pmid-22392031.yaml: 167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b
+    referencias/pmid-24360987.yaml: 8378261ca47f282fed9721d99f26ed84b33e42267908a065babf6ab0095501b2
     referencias/pmid-24938565.yaml: e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc
     referencias/pmid-26218493.yaml: 6d5857478ed53b16e1e807535dfd875a1268ced08bfca4be21a703991508150f
 grounding:
@@ -174,7 +175,7 @@ derrame pleural tipo exudado
 
 ## Códigos
 
-Snomed: No documentado.; Cie10: No documentado.
+Snomed: 13841000119107; Cie10: J90
 
 ## Hallazgos clínicos
 
@@ -232,7 +233,13 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Motivo:** es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado
 
+## Aspectos pendientes de documentación
+
+Sin probabilidad_base. Búsqueda en PubMed del 2026-09-23 de series de toracocentesis consecutivas: Porcel 2014 (pmid:24360987; 3077 pacientes) da las causas del derrame pero no la proporción de exudados en su resumen, y Wilcox 2014 (pmid:24938565) tampoco. Sumar las causas que suelen dar exudado sería inferir la cifra, no transcribirla. Falta leer el texto completo de Porcel 2014.
+
 ## Referencias y procedencia
+
+**pmid:24360987:** Etiology of pleural effusions: analysis of more than 3,000 consecutive thoracenteses. Arch Bronconeumol, 2014. DOI: 10.1016/j.arbres.2013.11.007.
 
 **pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.
 
