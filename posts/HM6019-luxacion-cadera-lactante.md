@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
+  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6019-luxacion-cadera-lactante.yaml
   archivos:
@@ -24,7 +24,8 @@ fuente:
     conceptos/HM3075-maniobras-de-barlow-y-ortolani.yaml: 43c819ea911471811bf4a17ff48eea18f4e84b64b57238a996fc999ddc4bca43
     conceptos/HM3076-limitacion-abduccion-cadera-lactante.yaml: 9573e001bae058b99488d56515e007eb920038be62889c2e83e4a37b2caca157
     conceptos/HM3077-chasquido-articular-cadera-lactante.yaml: ca91e3bf119a83bd0546f000c7203a50cd7595f1e4921202d0cc03b9d63bfa33
-    condiciones/HM6019-luxacion-cadera-lactante.yaml: a59d5752344e43911133e92639cd19bb048fed52922287102d7a392dd360b47f
+    condiciones/HM6019-luxacion-cadera-lactante.yaml: 945a3a6455a640a8ef991bd4e306e8d44ffdf42483dacf3cf219abb914571923
+    referencias/pmid-38355007.yaml: 3f2acfde9d674e4b8602c41a2e9ab2ad7d469145a45d9b569bef2653ea5debfa
     referencias/pmid-38619828.yaml: 4d7ba894e0678354a11cec41782b767ceebd056d308c1ff8edde131894a71268
 grounding:
   condicion_id: HM:6019
@@ -188,11 +189,11 @@ Valor: 0.0094; Población: lactantes de 3 meses o menores cribados con examen cl
 
 ## Factores de riesgo
 
-Factor: Presentación podálica al nacer
+Factor: Presentación podálica al nacer; Referencia: pmid:38355007; Nota: OR 4.14 (IC95% 3.09-5.54) para el parto de nalgas; metaanálisis de cohortes
 
-Factor: Sexo femenino
+Factor: Sexo femenino; Referencia: pmid:38355007; Nota: OR 6.97 (IC95% 5.18-9.39); metaanálisis de cohortes
 
-Factor: Antecedente familiar de displasia de cadera
+Factor: Antecedente familiar de displasia de cadera; Referencia: pmid:38355007; Nota: OR 4.07 (IC95% 2.20-7.52); metaanálisis de cohortes
 
 ## Hallazgos clínicos
 
@@ -255,6 +256,8 @@ Factor: Antecedente familiar de displasia de cadera
 En lactantes evaluados para displasia del desarrollo de la cadera, la prevalencia de luxación es de 0.94%. Las maniobras de Barlow y Ortolani positivas son el hallazgo más fuertemente asociado (LR+ 52). La abducción limitada o el chasquido aislado carecen de utilidad diagnóstica clara.
 
 ## Referencias y procedencia
+
+**pmid:38355007:** Risk factors of developmental dysplasia of the hip in infants: A meta-analysis based on cohort studies. Orthop Traumatol Surg Res, 2024. DOI: 10.1016/j.otsr.2024.103836.
 
 **pmid:38619828:** Does This Infant Have a Dislocated Hip?: The Rational Clinical Examination Systematic Review. JAMA, 2024. DOI: 10.1001/jama.2024.2404.
 

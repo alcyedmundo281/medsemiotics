@@ -47,7 +47,7 @@
         ],
         "umbral": "colesterol pleural > 55 mg/dL",
         "ref": "pmid:24938565",
-        "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+        "nota": "rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor"
       },
       "decision": "el indicador aislado más potente para clasificar el derrame"
     },
@@ -105,7 +105,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "fbd5cbf59e75e77b70a630f881ac1c1754e1e063",
+    "revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
     "archivos": {
@@ -119,7 +119,7 @@
       "conceptos/HM3010-cociente-colesterol-pleural-suero.yaml": "43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180",
       "conceptos/HM3011-criterios-de-light.yaml": "7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f",
       "conceptos/HM3148-lineas-b-pulmonares-bilaterales.yaml": "bf438bf8faf27db643fbcfa947ad803782ce7e30b057ddcd3e21790d952d516e",
-      "condiciones/HM6005-derrame-pleural-exudativo.yaml": "0e8b529637113d3e77650e09fafa6166ab43e58e3d62a252ee05990cda61e9dc",
+      "condiciones/HM6005-derrame-pleural-exudativo.yaml": "b94b577d31df9901adac0d2a89e9229e9ae82dcd8e242db6e1f0da9b75a156e8",
       "referencias/pmid-22392031.yaml": "167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b",
       "referencias/pmid-24360987.yaml": "8378261ca47f282fed9721d99f26ed84b33e42267908a065babf6ab0095501b2",
       "referencias/pmid-24938565.yaml": "e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc",
@@ -210,7 +210,7 @@
           ],
           "umbral": "colesterol pleural > 55 mg/dL",
           "ref": "pmid:24938565",
-          "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+          "nota": "rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor"
         },
         "poblacion": null,
         "motivo": null,
@@ -221,17 +221,17 @@
         {
           "texto": "LR positivo: 7.1, como estimación puntual única.",
           "correcta": false,
-          "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+          "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         },
         {
           "texto": "LR positivo: 250, como estimación puntual única.",
           "correcta": false,
-          "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+          "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         },
         {
           "texto": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única.",
           "correcta": true,
-          "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+          "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         }
       ]
     }
@@ -250,7 +250,7 @@
       "ultima_revision": "2026-09-24",
       "revisiones": []
     },
-    "fuente_revision": "fbd5cbf59e75e77b70a630f881ac1c1754e1e063",
+    "fuente_revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -506,5 +506,5 @@
       }
     ]
   },
-  "body": "# Derrame pleural exudativo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nExudative pleural effusion\n\n## Sinónimos\n\nexudado pleural\n\nderrame pleural tipo exudado\n\n## Códigos\n\nSnomed: 13841000119107; Cie10: J90\n\n## Hallazgos clínicos\n\n### Colesterol elevado en líquido pleural (HM:3008)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor.\n\n**Decisión:** el indicador aislado más potente para clasificar el derrame\n\n### LDH elevada en líquido pleural (HM:3009)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 18; IC del 95 %: 6.8 / 46; Umbral: LDH pleural > 200 U/L; Referencia: pmid:24938565\n\n**Decisión:** confirma exudado con un intervalo estrecho y reproducible\n\n### Cociente colesterol pleural/sérico elevado (HM:3010)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14; IC del 95 %: 5.5 / 38; Umbral: cociente > 0.3; Referencia: pmid:24938565\n\n**Decisión:** alternativa al colesterol absoluto cuando se dispone del sérico\n\n### Criterios de Light (HM:3011)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.02 / 0.11; Umbral: ausencia de los tres criterios; Referencia: pmid:24938565\n\n**Decisión:** su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado\n\n### Derrame pleural (HM:3007)\n\n**Significante:** Espacio anecoico entre la pared torácica y el pulmón, sobre el diafragma.\n\n**Significado:** Líquido en el espacio pleural.\n\n**Falsos positivos:** Ascitis subdiafragmática / Consolidación pulmonar / Órgano sólido / Engrosamiento o masa pleural / Derrame pericárdico / Ventana mala\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado\n\n## Aspectos pendientes de documentación\n\nSin probabilidad_base. Búsqueda en PubMed del 2026-09-23 de series de toracocentesis consecutivas: Porcel 2014 (pmid:24360987; 3077 pacientes) da las causas del derrame pero no la proporción de exudados en su resumen, y Wilcox 2014 (pmid:24938565) tampoco. Sumar las causas que suelen dar exudado sería inferir la cifra, no transcribirla. Falta leer el texto completo de Porcel 2014.\n\n## Referencias y procedencia\n\n**pmid:24360987:** Etiology of pleural effusions: analysis of more than 3,000 consecutive thoracenteses. Arch Bronconeumol, 2014. DOI: 10.1016/j.arbres.2013.11.007.\n\n**pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.\n\n**pmid:22392031:** International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med, 2012. DOI: 10.1007/s00134-012-2513-4.\n\n**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.\n\nFuente clínica: medsemiotics-db, condición HM:6005."
+  "body": "# Derrame pleural exudativo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nExudative pleural effusion\n\n## Sinónimos\n\nexudado pleural\n\nderrame pleural tipo exudado\n\n## Códigos\n\nSnomed: 13841000119107; Cie10: J90\n\n## Hallazgos clínicos\n\n### Colesterol elevado en líquido pleural (HM:3008)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor\n\n**Decisión:** el indicador aislado más potente para clasificar el derrame\n\n### LDH elevada en líquido pleural (HM:3009)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 18; IC del 95 %: 6.8 / 46; Umbral: LDH pleural > 200 U/L; Referencia: pmid:24938565\n\n**Decisión:** confirma exudado con un intervalo estrecho y reproducible\n\n### Cociente colesterol pleural/sérico elevado (HM:3010)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14; IC del 95 %: 5.5 / 38; Umbral: cociente > 0.3; Referencia: pmid:24938565\n\n**Decisión:** alternativa al colesterol absoluto cuando se dispone del sérico\n\n### Criterios de Light (HM:3011)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.02 / 0.11; Umbral: ausencia de los tres criterios; Referencia: pmid:24938565\n\n**Decisión:** su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado\n\n### Derrame pleural (HM:3007)\n\n**Significante:** Espacio anecoico entre la pared torácica y el pulmón, sobre el diafragma.\n\n**Significado:** Líquido en el espacio pleural.\n\n**Falsos positivos:** Ascitis subdiafragmática / Consolidación pulmonar / Órgano sólido / Engrosamiento o masa pleural / Derrame pericárdico / Ventana mala\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado\n\n## Aspectos pendientes de documentación\n\nSin probabilidad_base. Búsqueda en PubMed del 2026-09-23 de series de toracocentesis consecutivas: Porcel 2014 (pmid:24360987; 3077 pacientes) da las causas del derrame pero no la proporción de exudados en su resumen, y Wilcox 2014 (pmid:24938565) tampoco. Sumar las causas que suelen dar exudado sería inferir la cifra, no transcribirla. Falta leer el texto completo de Porcel 2014.\n\nOrigen del rango 7.1-250 del colesterol pleural. El abstract de Wilcox 2014 no dice qué estudios dan cada extremo ni cuántos pacientes tienen. La nota anterior lo atribuía a «series pequeñas» sin fuente, y se retiró el 2026-09-24. Falta leer el texto completo, que no está en PMC.\n\n## Referencias y procedencia\n\n**pmid:24360987:** Etiology of pleural effusions: analysis of more than 3,000 consecutive thoracenteses. Arch Bronconeumol, 2014. DOI: 10.1016/j.arbres.2013.11.007.\n\n**pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.\n\n**pmid:22392031:** International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med, 2012. DOI: 10.1007/s00134-012-2513-4.\n\n**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.\n\nFuente clínica: medsemiotics-db, condición HM:6005."
 }
