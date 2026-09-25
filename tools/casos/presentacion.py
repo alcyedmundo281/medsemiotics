@@ -37,7 +37,16 @@ def markdown(caso: dict[str, Any]) -> str:
             lineas.append(
                 f"- **[medsemiotics-db] {h['nombre']}** ({h['rol']}): {cifras}"
                 + (f". {h['decision']}" if h["decision"] else "")
+                + (f". **Advertencia:** {h['advertencia']}" if h["advertencia"] else "")
             )
+            if h["tramos"]:
+                # Numerados como en el token: {{lr+ HM:3012#2}} cita el tramo 2.
+                tramos = [f"  Tramos · {h['graduacion'] or 'sin graduación declarada'}:"]
+                tramos += [
+                    f"  {i}. {t['etiqueta']}: {'; '.join(t['cifras'])}"
+                    for i, t in enumerate(h["tramos"], 1)
+                ]
+                lineas.append("\n".join(tramos))
         for p in etapa["preguntas"]:
             lineas += [f"**Pregunta:** {p['pregunta']}", f"*Clave docente:* {p['clave']}"]
     lineas += [

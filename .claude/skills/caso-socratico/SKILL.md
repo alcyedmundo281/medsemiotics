@@ -20,6 +20,16 @@ Se trabaja **un artículo por vez**, en una rama de trabajo, y con un commit por
   escriben a mano. Se usan `{{lr+ HM:####}}`, `{{lr- HM:####}}`, `{{sens HM:####}}`,
   `{{esp HM:####}}`, `{{hallazgo HM:####}}` y `{{estado HM:####}}`, que se resuelven contra la
   base con su IC 95 % o su rango. Si la base corrige un valor, el caso se actualiza solo.
+  Cada cifra sale con aquello contra lo que se midió: su umbral, la definición de la
+  condición (`umbral_condicion`) o la población.
+- **Varias mediciones y tramos.** Si la base mide un hallazgo en varias poblaciones,
+  `{{lr+ HM:####@2}}` cita solo la segunda medición (sin índice se citan todas). Si la medición
+  tiene `tramos` (cortes de un hallazgo graduado, o la misma prueba evaluada contra varias
+  definiciones de la condición, como la palpación del aneurisma de 3 cm o de 4 cm),
+  `{{lr+ HM:#####2}}` cita el segundo tramo, y con varias mediciones `{{lr+ HM:####@1#2}}`.
+  `lr+`, `lr-`, `sens` y `esp` admiten tramo; `hallazgo` y `estado`, no. La vista previa
+  numera los tramos de cada ficha en el mismo orden. Cuando la probabilidad basal del
+  artículo corresponde a un tramo, el caso debe citar ese tramo, no el primero.
 - **Cobertura total.** Todo hallazgo de la evidencia del artículo aparece en alguna etapa
   (`hallazgos:`) o en `omitidos:` con un motivo docente. El hallazgo principal del artículo
   (el de la calculadora) debe revelarse siempre.

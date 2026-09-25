@@ -244,6 +244,109 @@ def test_hallazgo_medido_en_varias_poblaciones(raiz: Path) -> None:
         compilado(raiz, datos)
 
 
+def _con_tramos(raiz: Path) -> None:
+    """HM:0001 como la palpación del aneurisma: una prueba evaluada contra dos definiciones."""
+    frontmatter = copy.deepcopy(FRONTMATTER)
+    primera = frontmatter["evidencia"][0]
+    primera["lr_positivo"]["umbral_condicion"] = "aneurisma de 3.0 cm o mayor"
+    primera["lr_negativo"] = {"valor": 0.72, "ic95": [0.65, 0.81], "ref": "pmid:111"}
+    primera["advertencia"] = "no excluye el aneurisma"
+    primera["graduacion"] = {"parametro": "Diámetro", "unidad": "cm", "lectura": "acumulativo"}
+    primera["tramos"] = [
+        {
+            "umbral_condicion": "aneurisma de 3.0 cm o mayor",
+            "lr_positivo": 12.0,
+            "ic95": [7.4, 19.5],
+            "lr_negativo": 0.72,
+            "ic95_negativo": [0.65, 0.81],
+            "ref": "pmid:111",
+        },
+        {
+            "umbral": "diámetro palpado ≥ 4 cm",
+            "lr_positivo": 15.6,
+            "especificidad": 0.95,
+            "ref": "pmid:111",
+        },
+    ]
+    texto = "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True) + "---\n" + CUERPO
+    (raiz / "posts" / "HM9999-tema.md").write_text(texto, encoding="utf-8")
+
+
+def test_el_cociente_dice_contra_que_diagnostico_se_mide(raiz: Path) -> None:
+    _con_tramos(raiz)
+    resultado = compilado(raiz, caso())
+    clave = resultado["etapas"][1]["preguntas"][0]["clave"]
+    assert "LR+ 3.1 (IC 95 %: 1.6–5.9), para el diagnóstico «aneurisma de 3.0 cm o mayor»" in clave
+
+
+def test_tramos_por_token(raiz: Path) -> None:
+    _con_tramos(raiz)
+    datos = caso()
+    datos["etapas"][1]["preguntas"][0]["clave"] = (
+        "Uno: {{lr- HM:0001#1}}. Dos: {{lr+ HM:0001#2}}, {{esp HM:0001#2}}."
+    )
+    clave = compilado(raiz, datos)["etapas"][1]["preguntas"][0]["clave"]
+    assert "Uno: LR− 0.72 (IC 95 %: 0.65–0.81), para el diagnóstico «aneurisma de 3.0 cm" in clave
+    assert "Dos: LR+ 15.6, con umbral «diámetro palpado ≥ 4 cm»" in clave
+    assert "especificidad 0.95, con umbral «diámetro palpado ≥ 4 cm»" in clave
+
+
+@pytest.mark.parametrize(
+    ("token", "mensaje"),
+    [
+        ("{{lr+ HM:0001#3}}", "2 tramo"),
+        ("{{lr- HM:0001#2}}", "no registra LR−"),
+        ("{{hallazgo HM:0001#1}}", "no admite tramo"),
+        ("{{lr+ HM:0002#1}}", "0 tramo"),
+    ],
+)
+def test_tramos_inexistentes(raiz: Path, token: str, mensaje: str) -> None:
+    _con_tramos(raiz)
+    datos = caso()
+    datos["etapas"][2]["preguntas"][0]["clave"] = f"Cita {token}."
+    with pytest.raises(ErrorDeCaso, match=mensaje):
+        compilado(raiz, datos)
+
+
+def test_un_tramo_con_varias_mediciones_exige_elegir_la_medicion(raiz: Path) -> None:
+    _con_tramos(raiz)
+    ruta = raiz / "posts" / "HM9999-tema.md"
+    _, frontmatter_texto, cuerpo = ruta.read_text(encoding="utf-8").split("---\n", 2)
+    frontmatter = yaml.safe_load(frontmatter_texto)
+    frontmatter["evidencia"][0]["poblacion"] = "cribado"
+    frontmatter["evidencia"].append({**frontmatter["evidencia"][0], "poblacion": "urgencias"})
+    texto = "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True) + "---\n" + cuerpo
+    ruta.write_text(texto, encoding="utf-8")
+    datos = caso()
+    datos["etapas"][1]["preguntas"][0]["clave"] = "Cita {{lr+ HM:0001#2}}."
+    with pytest.raises(ErrorDeCaso, match="@n#2"):
+        compilado(raiz, datos)
+    datos["etapas"][1]["preguntas"][0]["clave"] = "Cita {{lr+ HM:0001@2#2}}."
+    assert "LR+ 15.6" in compilado(raiz, datos)["etapas"][1]["preguntas"][0]["clave"]
+
+
+def test_la_ficha_muestra_tramos_y_advertencia(raiz: Path) -> None:
+    from casos.presentacion import markdown
+
+    _con_tramos(raiz)
+    resultado = compilado(raiz, caso())
+    ficha = resultado["etapas"][1]["hallazgos"][0]
+    assert ficha["advertencia"] == "no excluye el aneurisma"
+    assert ficha["graduacion"].startswith("Diámetro (cm), lectura acumulativa")
+    assert ficha["tramos"] == [
+        {
+            "etiqueta": "aneurisma de 3.0 cm o mayor",
+            "cifras": ["LR+ 12.0 (IC 95 %: 7.4–19.5)", "LR− 0.72 (IC 95 %: 0.65–0.81)"],
+        },
+        {"etiqueta": "diámetro palpado ≥ 4 cm", "cifras": ["LR+ 15.6", "especificidad 0.95"]},
+    ]
+    vista = markdown(resultado)
+    assert "**Advertencia:** no excluye el aneurisma" in vista
+    assert "  2. diámetro palpado ≥ 4 cm: LR+ 15.6; especificidad 0.95" in vista
+    # Sin tramos, la ficha lo dice con una lista vacía, no con una clave ausente.
+    assert resultado["etapas"][2]["hallazgos"][0]["tramos"] == []
+
+
 def test_nombres_en_minuscula_dentro_de_la_oracion() -> None:
     from casos.evidencia import _inicio_de_oracion, _minuscula_inicial
 

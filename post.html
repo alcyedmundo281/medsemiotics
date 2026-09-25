@@ -242,18 +242,39 @@
             Ajusta la probabilidad pre-test usando los cocientes documentados para <strong id="calculatorSign"></strong>: <strong id="calcLrPosBadge"></strong> / <strong id="calcLrNegBadge"></strong>.
           </p>
 
+          <!-- Una misma prueba puede tener varios tramos: cortes del hallazgo o definiciones distintas
+               de la condición. La probabilidad pre-test debe corresponder al tramo elegido. -->
+          <div id="calcTramoWrap" class="hidden mb-6">
+            <label for="calcTramo" class="block text-xs font-medium text-stone-300 mb-2">Tramo de la evidencia:</label>
+            <select id="calcTramo" class="w-full bg-stone-800 border border-stone-600 text-stone-100 text-sm rounded-lg p-2"></select>
+          </div>
+          <p id="calcCondicion" class="hidden text-xs text-amber-200 mb-6"></p>
+
           <div class="space-y-6">
             <div>
-              <div class="flex justify-between text-xs font-medium text-stone-300 mb-2">
-                <span>Probabilidad Pre-Test (Sospecha clínica basal):</span>
-                <span id="pretestValue" class="text-purple-400 font-bold text-sm">20%</span>
+              <div class="flex justify-between items-center text-xs font-medium text-stone-300 mb-2">
+                <label for="pretestInput">Probabilidad Pre-Test (Sospecha clínica basal):</label>
+                <span class="flex items-center gap-1">
+                  <input
+                    type="number"
+                    id="pretestInput"
+                    min="0.1"
+                    max="99.9"
+                    step="0.1"
+                    value="20"
+                    class="w-20 bg-stone-800 border border-stone-600 text-purple-300 font-bold text-sm text-right rounded px-1.5 py-0.5"
+                  />
+                  <span class="text-purple-400 font-bold text-sm">%</span>
+                </span>
               </div>
               <input
                 type="range"
                 id="pretestSlider"
-                min="1"
-                max="99"
+                min="0.1"
+                max="99.9"
+                step="0.1"
                 value="20"
+                aria-label="Probabilidad pre-test"
                 class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-purple-500"
               />
             </div>
@@ -421,17 +442,11 @@
         document.getElementById('triadaDecision').innerHTML = linkPmids(t.decision || '');
 
         // Bayesian calculator setup
-        const numericLR = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
-        const lrPos = g.estado_lr === 'medido' ? numericLR(g.lr_positivo) : null;
-        const lrNeg = g.estado_lr === 'medido' ? numericLR(g.lr_negativo) : null;
-        document.getElementById('calculatorSection').classList.toggle('hidden', lrPos === null && lrNeg === null);
+        const { opciones, inicial } = opcionesCalculadora(g, currentPost.evidencia || []);
+        document.getElementById('calculatorSection').classList.toggle('hidden',
+          !opciones.some(o => o.lrPos !== null || o.lrNeg !== null));
         document.getElementById('calculatorSign').textContent = g.concepto_nombre || '';
-        document.getElementById('calcLrPosBadge').textContent = `LR+ ${lrPos ?? 'no documentado'}`;
-        document.getElementById('calcLrNegBadge').textContent = `LR- ${lrNeg ?? 'no documentado'}`;
-        document.getElementById('posLrText').textContent = lrPos ?? 'no documentado';
-        document.getElementById('negLrText').textContent = lrNeg ?? 'no documentado';
-
-        setupCalculator(lrPos, lrNeg);
+        setupCalculator(opciones, inicial);
 
         // Caso socrático y ficha de evidencia
         renderCaso(currentPost.caso);
@@ -465,32 +480,84 @@
         }
       }
 
-      function setupCalculator(lrPos, lrNeg) {
+      const numericLR = value => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
+
+      // Cocientes que la calculadora puede aplicar. Si el hallazgo del grounding tiene tramos
+      // (cortes del hallazgo o definiciones distintas de la condición), cada tramo es una opción:
+      // la probabilidad pre-test tiene que corresponder al tramo elegido.
+      function opcionesCalculadora(g, evidencia) {
+        const medido = g.estado_lr === 'medido';
+        const principal = { lrPos: medido ? numericLR(g.lr_positivo) : null,
+          lrNeg: medido ? numericLR(g.lr_negativo) : null };
+        const items = medido ? evidencia.filter(e => e && e.concepto === g.concepto_id) : [];
+        const bloque = items[0] ? (items[0].lr_positivo || items[0].lr_negativo) : null;
+        principal.etiqueta = etiquetaCondicion(bloque);
+        const conTramos = items.find(e => Array.isArray(e.tramos) && e.tramos.length);
+        const tramos = (conTramos ? conTramos.tramos : [])
+          .map(t => ({ etiqueta: etiquetaCondicion(t) || 'Tramo sin umbral declarado',
+            lrPos: numericLR(t.lr_positivo), lrNeg: numericLR(t.lr_negativo) }))
+          .filter(o => o.lrPos !== null || o.lrNeg !== null);
+        if (tramos.length < 2) return { opciones: [principal], inicial: 0 };
+        const igual = tramos.findIndex(o => o.lrPos === principal.lrPos && o.lrNeg === principal.lrNeg);
+        if (igual >= 0) return { opciones: tramos, inicial: igual };
+        return { opciones: [{ ...principal, etiqueta: principal.etiqueta || 'Medición principal' }, ...tramos],
+          inicial: 0 };
+      }
+
+      function etiquetaCondicion(bloque) {
+        if (!bloque || typeof bloque !== 'object') return null;
+        if (bloque.umbral_condicion) return `Diagnóstico: ${bloque.umbral_condicion}`;
+        if (bloque.umbral) return `Umbral: ${bloque.umbral}`;
+        if (bloque.poblacion) return `Población: ${bloque.poblacion}`;
+        return null;
+      }
+
+      let calculadora = { opciones: [], inicial: 0 };
+
+      function setupCalculator(opciones, inicial) {
+        calculadora = { opciones, inicial };
         const slider = document.getElementById('pretestSlider');
-        const pretestVal = document.getElementById('pretestValue');
-        const posProbText = document.getElementById('postTestPosProb');
-        const negProbText = document.getElementById('postTestNegProb');
+        const input = document.getElementById('pretestInput');
+        const select = document.getElementById('calcTramo');
+        document.getElementById('calcTramoWrap').classList.toggle('hidden', opciones.length < 2);
+        select.innerHTML = opciones.map((o, i) =>
+          `<option value="${i}"${i === inicial ? ' selected' : ''}>${escapeHtml(o.etiqueta)}</option>`).join('');
+        select.value = String(inicial);
+        slider.addEventListener('input', () => { input.value = slider.value; actualizarCalculadora(); });
+        input.addEventListener('input', () => {
+          const valor = Number(input.value);
+          if (Number.isFinite(valor) && valor >= 0.1 && valor <= 99.9) {
+            slider.value = String(valor);
+            actualizarCalculadora();
+          }
+        });
+        select.addEventListener('change', actualizarCalculadora);
+        actualizarCalculadora();
+      }
 
-        function update() {
-          const p = Number(slider.value) / 100;
-          pretestVal.textContent = `${slider.value}%`;
+      function actualizarCalculadora() {
+        const { opciones, inicial } = calculadora;
+        const elegida = opciones[Number(document.getElementById('calcTramo').value)] || opciones[inicial];
+        const lrPos = elegida ? elegida.lrPos : null;
+        const lrNeg = elegida ? elegida.lrNeg : null;
+        document.getElementById('calcLrPosBadge').textContent = `LR+ ${lrPos ?? 'no documentado'}`;
+        document.getElementById('calcLrNegBadge').textContent = `LR- ${lrNeg ?? 'no documentado'}`;
+        document.getElementById('posLrText').textContent = lrPos ?? 'no documentado';
+        document.getElementById('negLrText').textContent = lrNeg ?? 'no documentado';
+        const condicion = document.getElementById('calcCondicion');
+        condicion.textContent = elegida && elegida.etiqueta
+          ? `Cocientes medidos para · ${elegida.etiqueta}. La probabilidad pre-test debe referirse a lo mismo.`
+          : '';
+        condicion.classList.toggle('hidden', !condicion.textContent);
 
-          // Odds = p / (1 - p)
-          const preOdds = p / (1 - p);
-
-          // Post Pos Odds = Pre Odds * LR+
-          const postPosOdds = preOdds * lrPos;
-          const postPosProb = (postPosOdds / (1 + postPosOdds)) * 100;
-          posProbText.textContent = lrPos === null ? 'No calculable' : `${postPosProb.toFixed(1)}%`;
-
-          // Post Neg Odds = Pre Odds * LR-
-          const postNegOdds = preOdds * lrNeg;
-          const postNegProb = (postNegOdds / (1 + postNegOdds)) * 100;
-          negProbText.textContent = lrNeg === null ? 'No calculable' : `${postNegProb.toFixed(1)}%`;
-        }
-
-        slider.addEventListener('input', update);
-        update();
+        const p = Number(document.getElementById('pretestSlider').value) / 100;
+        const preOdds = p / (1 - p);
+        const post = lr => {
+          const odds = preOdds * lr;
+          return `${((odds / (1 + odds)) * 100).toFixed(1)}%`;
+        };
+        document.getElementById('postTestPosProb').textContent = lrPos === null ? 'No calculable' : post(lrPos);
+        document.getElementById('postTestNegProb').textContent = lrNeg === null ? 'No calculable' : post(lrNeg);
       }
 
 
@@ -544,7 +611,13 @@
       function casoHallazgo(h) {
         const cifras = (h.cifras || []).map(c =>
           `<span class="inline-block font-mono text-[12px] bg-white border border-purple-200 text-purple-900 px-2 py-0.5 rounded">${escapeHtml(c)}</span>`).join(' ');
-        const nota = [h.decision, h.motivo, h.advertencia].filter(Boolean).map(escapeHtml).join(' · ');
+        const nota = [h.decision, h.motivo].filter(Boolean).map(escapeHtml).join(' · ');
+        const tramos = (h.tramos || []).length ? `
+            <div class="text-xs leading-relaxed text-stone-700 bg-white/70 border border-purple-100 rounded-lg p-2.5 mb-2">
+              <div class="font-semibold mb-1">Tramos${h.graduacion ? ` · ${escapeHtml(h.graduacion)}` : ''}</div>
+              ${h.tramos.map((t, i) =>
+                `<div class="mb-0.5">${i + 1}. <span class="font-medium">${escapeHtml(t.etiqueta)}</span>: <span class="font-mono">${t.cifras.map(escapeHtml).join('; ')}</span></div>`).join('')}
+            </div>` : '';
         return `
           <div class="bg-purple-50 border border-purple-200 rounded-xl p-4">
             <div class="flex flex-wrap items-center gap-2 mb-2">
@@ -554,7 +627,9 @@
             </div>
             ${h.poblacion ? `<p class="text-xs text-stone-600 mb-2">Población: ${escapeHtml(h.poblacion)}</p>` : ''}
             ${cifras ? `<div class="flex flex-wrap gap-1.5 mb-2">${cifras}</div>` : ''}
+            ${tramos}
             ${nota ? `<p class="text-sm text-purple-950">${nota}</p>` : ''}
+            ${h.advertencia ? `<p class="text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded px-2 py-1 mt-2">⚠ ${escapeHtml(h.advertencia)}</p>` : ''}
             ${(h.referencias || []).length ? `<p class="text-[11px] font-mono text-stone-500 mt-1">${h.referencias.map(linkPmids).join(' · ')}</p>` : ''}
           </div>`;
       }
