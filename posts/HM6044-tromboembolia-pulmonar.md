@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6044-tromboembolia-pulmonar.yaml
   archivos:
@@ -32,9 +32,13 @@ fuente:
     conceptos/HM3144-dimero-d-elevado.yaml: 562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2
     conceptos/HM3162-ventriculo-derecho-dilatado.yaml: bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134
     conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml: 8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621
-    condiciones/HM6044-tromboembolia-pulmonar.yaml: 1e40d97372e03221c49c3cad5669fc8b8e3b544924b78966385f46feaa10aed5
+    condiciones/HM6044-tromboembolia-pulmonar.yaml: 909e053b124aa84bde431c8e7747afbfd0d3b86feeda65fc0d0b653d0490d79b
+    referencias/pmid-10737280.yaml: 68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de
     referencias/pmid-16403932.yaml: a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789
+    referencias/pmid-19679614.yaml: 3a41f589222c75041e1f97433692e4e17afdee178eaddc867a0f74e4526b232c
     referencias/pmid-28495379.yaml: 94dd6cc6490001dc513f3e588d2b3b055644113f7874d72b9f9e244143affb93
+    referencias/pmid-31340984.yaml: 7479218e78af506da2353c13b7d7566606dbc4b34fedaa087c9d73cc2a0f37ed
+    referencias/pmid-38263123.yaml: 90ebccc0a9db40fd5631a3bfa5a7d565d6750482ac1092b4d7f8a413c2ac18ea
     referencias/pmid-9786377.yaml: a744bdfe061bea39eeebdfeb75c36d78c863cb9fb6a8a848d121b42024f1665f
 grounding:
   condicion_id: HM:6044
@@ -185,15 +189,17 @@ Snomed: 59282003; Cie10: I26.9
 
 ## Factores de riesgo
 
-trombosis venosa profunda previa o concomitante
+Factor: Trombosis venosa profunda previa o concomitante; Referencia: pmid:31340984; Nota: tras suspender la anticoagulación de una primera enfermedad tromboembólica no provocada, la recurrencia es de 10.3 por 100 personas-año el primer año (IC95% 8.6-12.1) y la incidencia acumulada del 36% a los 10 años (IC95% 28-45). Metaanálisis de 18 estudios con 7515 pacientes; sin grupo sin antecedente, así que es un riesgo absoluto. La fuente no trata la trombosis concomitante
 
-inmovilización prolongada o reposo en cama
+Factor: Ingreso hospitalario o en residencia; Referencia: pmid:10737280; Nota: OR 8.0 (IC95% 4.5-14.2), independiente de los demás factores. Casos y controles poblacional anidado de Olmsted County, 625 casos y 625 controles
 
-cirugía ortopédica o abdominopélvica reciente
+Factor: Cirugía reciente; Referencia: pmid:10737280; Nota: OR 21.7 (IC95% 9.4-49.9); el resumen no la desglosa por tipo. Traumatismo, OR 12.7 (IC95% 4.1-39.7)
 
-neoplasia maligna activa
+Factor: Neoplasia maligna activa; Referencia: pmid:10737280; Nota: OR 4.1 (IC95% 1.9-8.5) sin quimioterapia y 6.5 (IC95% 2.1-20.2) con ella
 
-terapia con estrógenos o anticonceptivos orales
+Factor: Anticonceptivos orales; Referencia: pmid:19679614; Nota: OR 5.0 (IC95% 4.2-5.8) frente a no usarlos; de 3.6 con levonorgestrel a 7.3 con desogestrel. Casos y controles MEGA: mujeres premenopáusicas menores de 50 años, 1524 casos y 1760 controles
+
+Factor: Terapia hormonal de la menopausia; Referencia: pmid:38263123; Nota: RR 1.86 (IC95% 1.39-2.50) frente a placebo o ningún tratamiento, sin diferencia entre estrógeno solo y combinado con progestágeno. Metaanálisis de 33 ensayos con 44 639 posmenopáusicas
 
 ## Hallazgos clínicos
 
@@ -273,9 +279,17 @@ La ecocardiografía a pie de cama muestra especificidad útil y sensibilidad baj
 
 ## Referencias y procedencia
 
+**pmid:10737280:** Risk factors for deep vein thrombosis and pulmonary embolism: a population-based case-control study. Arch Intern Med, 2000. DOI: 10.1001/archinte.160.6.809.
+
 **pmid:16403932:** Does this patient have deep vein thrombosis?. JAMA, 2006. DOI: 10.1001/jama.295.2.199.
 
+**pmid:19679614:** The venous thrombotic risk of oral contraceptives, effects of oestrogen dose and progestogen type: results of the MEGA case-control study. BMJ, 2009. DOI: 10.1136/bmj.b2921.
+
 **pmid:28495379:** Transthoracic Echocardiography for Diagnosing Pulmonary Embolism: A Systematic Review and Meta-Analysis. J Am Soc Echocardiogr, 2017. DOI: 10.1016/j.echo.2017.03.004.
+
+**pmid:31340984:** Long term risk of symptomatic recurrent venous thromboembolism after discontinuation of anticoagulant treatment for first unprovoked venous thromboembolism event: systematic review and meta-analysis. BMJ, 2019. DOI: 10.1136/bmj.l4363.
+
+**pmid:38263123:** The benefits and risks of menopause hormone therapy for the cardiovascular system in postmenopausal women: a systematic review and meta-analysis. BMC Womens Health, 2024. DOI: 10.1186/s12905-023-02788-0.
 
 **pmid:9786377:** The rational clinical examination. Is this patient having a myocardial infarction?. JAMA, 1998. DOI: 10.1001/jama.280.14.1256.
 

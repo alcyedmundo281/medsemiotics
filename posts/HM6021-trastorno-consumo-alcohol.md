@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6021-trastorno-consumo-alcohol.yaml
   archivos:
@@ -26,7 +26,11 @@ fuente:
     conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml: 2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406
     conceptos/HM3086-audit-postparto-puntuacion-4-o-mas.yaml: aaa992fc60e316a7203b23e37ff2d8e6f109ad56e0310cde66ad69fb875a0294
     conceptos/HM3087-tweak-t-ace-menor-2-postparto.yaml: 4b778da7722fe4d93254cea0e7d90d584d874ef12c531adbc35472dc7c1f0433
-    condiciones/HM6021-trastorno-consumo-alcohol.yaml: 17f70ee11c9f4f3d631beafc361a17b2d0c9261f099cd9171852292a627f86fc
+    condiciones/HM6021-trastorno-consumo-alcohol.yaml: e27cb171039f913be4df5fd8646d06ec7034a6b759233d30c2601c3265e6e0f1
+    referencias/pmid-28260680.yaml: 3c9e7951e8bea2137bcaee8e3b672eab36c4559c4dc3bbae2526ab2daef1630e
+    referencias/pmid-30054643.yaml: e8a4c756e190d16815d64191fd51436d2751ac2cc3908f63ae37c6a9912f8bb0
+    referencias/pmid-30689217.yaml: df7f0f540e52317f03d213889716bff60ebac9ece20e9bfe9ee4d31ed2b2d4ac
+    referencias/pmid-32213910.yaml: 91264a34f1c3d2ac36c9533a9ac31db364072355e9d9c576911b74159034f6ce
     referencias/pmid-38592385.yaml: 58bb53d39a0494342209a56cbc96e0c66000e96f4e960a6d0b9793ae0a7f7882
 grounding:
   condicion_id: HM:6021
@@ -185,11 +189,9 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Factores de riesgo
 
-Factor: Antecedente familiar de trastorno por consumo de sustancias
+Factor: Antecedente parental de trastorno por consumo de alcohol; Referencia: pmid:30689217; Nota: HR 2.21 (IC95% 2.07-2.36) si es el padre y 2.57 (IC95% 2.20-3.01) si es la madre, sin otro trastorno mental asociado. Cohorte de registros daneses: 15 477 hijos expuestos y 154 392 de referencia
 
-Factor: Inicio precoz del consumo de alcohol en la adolescencia
-
-Factor: Trastornos psiquiátricos comórbidos (depresión, ansiedad)
+Factor: Inicio precoz del consumo de alcohol en la adolescencia; Referencia: pmid:32213910; Nota: OR 11.83 en mujeres y 6.24 en varones para dependencia del alcohol, sin intervalo de confianza en el resumen. Cohorte de 5170 universitarios con seguimiento de 3 años
 
 ## Hallazgos clínicos
 
@@ -257,7 +259,19 @@ Factor: Trastornos psiquiátricos comórbidos (depresión, ansiedad)
 
 El cuestionario AUDIT (≥ 8) es la herramienta más útil para identificar trastorno por consumo de alcohol según el DSM-5 en adultos (LR+ 6.5; LR- 0.33). El AUDIT-C es adecuado para consumo de riesgo. En el postparto inmediato, el AUDIT ≥ 4 confirma (LR+ 6.4) y las herramientas TWEAK/T-ACE < 2 descartan con gran exactitud (LR- 0.05).
 
+## Aspectos pendientes de documentación
+
+Factor retirado: trastornos psiquiátricos comórbidos (depresión, ansiedad). Búsqueda en PubMed del 2026-09-24. Consulta «(depression[Title] OR anxiety[Title] OR psychiatric[Title] OR mental disorders[Title]) AND (alcohol use disorder[Title] OR alcohol dependence[Title]) AND (prospective OR longitudinal OR incident OR subsequent) AND meta-analysis»: 5 resultados, cribados por título y resumen. Ninguno da el riesgo de trastorno incidente tras depresión. Dos fuentes van en contra: Miloyan 2018 (pmid:30054643; NESARC y NCS, metaanálisis de participantes) no halla asociación entre la ansiedad social y el trastorno incidente, y Phillips 2017 (pmid:28260680; transversal, varones de China) da OR 0.4 (IC95% 0.2-0.8) con comorbilidad mental. Falta una cohorte que cuantifique la depresión y la ansiedad como factores.
+
 ## Referencias y procedencia
+
+**pmid:28260680:** Prevalence, correlates, comorbidity, and age of onset of alcohol use disorders in adult males from five provinces in China. Drug Alcohol Depend, 2017. DOI: 10.1016/j.drugalcdep.2016.12.026.
+
+**pmid:30054643:** Longitudinal association between social anxiety disorder and incident alcohol use disorder: results from two national samples of US adults. Soc Psychiatry Psychiatr Epidemiol, 2019. DOI: 10.1007/s00127-018-1569-z.
+
+**pmid:30689217:** Parental alcohol use disorder with and without other mental disorders and offspring alcohol use disorder. Acta Psychiatr Scand, 2019. DOI: 10.1111/acps.13002.
+
+**pmid:32213910:** Population Attributable Fraction of Early Age of Onset of Alcohol Use in Alcohol Abuse and Dependence: A 3-Year Follow-Up Study in University Students. Int J Environ Res Public Health, 2020. DOI: 10.3390/ijerph17062159.
 
 **pmid:38592385:** Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review. JAMA, 2024. DOI: 10.1001/jama.2024.3101.
 

@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Básico
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6009-faringitis-estreptococica.yaml
   archivos:

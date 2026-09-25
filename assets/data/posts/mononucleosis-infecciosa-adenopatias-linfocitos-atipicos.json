@@ -250,7 +250,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
+    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
     "archivos": {
@@ -271,7 +271,7 @@
       "conceptos/HM3184-matidez-en-espacio-de-traube.yaml": "aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9",
       "conceptos/HM3185-signo-de-percusion-de-castell.yaml": "493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f",
       "condiciones/HM6003-mononucleosis-infecciosa.yaml": "fdd67306d3d26ce5724613adc81b59ab01bd965186ce7c3d82ca67bf267ce2e9",
-      "condiciones/HM6047-esplenomegalia.yaml": "c29d0e9bdff4998849728513181ffe00fdb6e93d10ed797a7b969add69d0df0d",
+      "condiciones/HM6047-esplenomegalia.yaml": "62abb851775465a9520dccdb108d73114afb5ac5e7c5d516b1b22a7992153955",
       "referencias/pmid-25774295.yaml": "a22df30cf7f245df0ade141487ffe5a6ce5d9f7a45bf4833fbb030f249e7c7ab",
       "referencias/pmid-25822555.yaml": "a0e7997279e60745f64a2474332b4637d7d316a9dae025a6008c2af7ac5d2718",
       "referencias/pmid-27115266.yaml": "668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b",
@@ -403,7 +403,7 @@
       "ultima_revision": "2026-09-24",
       "revisiones": []
     },
-    "fuente_revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
+    "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",

@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6040-pancreatitis-aguda.yaml
   archivos:
@@ -33,8 +33,11 @@ fuente:
     conceptos/HM0732-hiperlipasemia.yaml: b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275
     conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml: 556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a
-    condiciones/HM6040-pancreatitis-aguda.yaml: 759d0dc1bb7e18c9083bff2e0e8a061c0d413da6fc48fc3417f9954a9d5407d5
+    condiciones/HM6040-pancreatitis-aguda.yaml: 94b5db0ea8c4f0d499e3eaf47866b480c8385aabda8242d591bde27b29636dad
     referencias/pmid-23100216.yaml: 43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd
+    referencias/pmid-25088919.yaml: b0be6e2c04299a8adea4085e3e6b28f10849d8bd0118e734da36efa36e1bef81
+    referencias/pmid-26844279.yaml: 6c58e2666a253432e0cfa871160a02df14cacdcfc95e2f1425a8c29071db45b9
+    referencias/pmid-27820614.yaml: 0d9f1a12fd2c091c5b8dceb4b30aa62f209df443d05df3417253626d2660b596
 grounding:
   condicion_id: HM:6040
   condicion_nombre: Pancreatitis aguda
@@ -162,13 +165,11 @@ Snomed: 197456007; Cie10: No documentado.
 
 ## Factores de riesgo
 
-Factor: Consumo de alcohol; Nota: el protocolo de holonmed le asigna un multiplicador de 2.8 que no entra aquí: no declara de dónde sale
+Factor: Consumo de alcohol por encima de 40 g/día; Referencia: pmid:26844279; Nota: relación dosis-respuesta monótona en varones y no lineal en mujeres. Por debajo de 40 g/día no aumenta el riesgo frente a la abstención: RR 1.1 (IC95% 0.69-1.74) en varones y 0.76 (IC95% 0.60-0.97) en mujeres; por encima, el riesgo crece. El resumen no da el RR de pancreatitis aguda a dosis altas. Metaanálisis de 7 estudios con 157 026 participantes
 
-Factor: Litiasis biliar, incluida la coledocolitiasis; Nota: multiplicador 3.2 en holonmed, el más alto de los cuatro, también sin procedencia
+Factor: Hipertrigliceridemia; Referencia: pmid:27820614; Nota: triglicéridos no en ayunas de 5 mmol/L o más frente a menos de 1 mmol/L, HR 8.7 (IC95% 3.7-20.0) ajustado; ya de 2.00 a 2.99 mmol/L, HR 2.3 (IC95% 1.3-4.0). HR 1.17 (IC95% 1.10-1.24) por cada 1 mmol/L. Dos cohortes de Copenhague con 116 550 personas y 434 casos
 
-Factor: Hipertrigliceridemia; Nota: multiplicador 2.2 en holonmed, sin procedencia
-
-Factor: Colangiopancreatografía retrógrada endoscópica previa; Nota: multiplicador 2.5 en holonmed, sin procedencia
+Factor: Colangiopancreatografía retrógrada endoscópica previa; Referencia: pmid:25088919; Nota: incidencia de pancreatitis tras la CPRE del 9.7% y del 14.7% en pacientes de alto riesgo, en los brazos placebo o sin prótesis de 108 ensayos (13 296 pacientes). La fuente no tiene grupo sin CPRE, así que es un riesgo absoluto, no un cociente
 
 ## Hallazgos clínicos
 
@@ -246,6 +247,8 @@ Lo único cuantificado que entra es la regla de Atlanta, que no es un cociente s
 
 ## Aspectos pendientes de documentación
 
+Factor retirado: litiasis biliar, incluida la coledocolitiasis. Es la causa más frecuente de pancreatitis aguda, pero no hay fuente con grupo control que la cuantifique como factor. Búsqueda en PubMed del 2026-09-24. Consulta «(gallstone disease OR gallstones OR cholelithiasis) AND (acute pancreatitis) AND (hazard ratio OR relative risk OR odds ratio) AND (population-based cohort OR prospective cohort OR UK Biobank OR Mendelian randomization)»: 125 resultados, cribados por título los 15 primeros. Ninguno da el riesgo de pancreatitis en portadores de litiasis frente a no portadores. Si se registra, será como causa, con la fuente que dé su frecuencia.
+
 LOS COCIENTES QUE HOLONMED USA Y AQUÍ NO ENTRAN, para que quien busque la fuente sepa qué busca: hiperlipasemia LR+ 26.6 y LR− 0.1; hiperamilasemia LR+ 12.5 y LR− 0.3; dolor epigástrico LR+ 2.1 y LR− 0.2; vómitos LR+ 1.6; irritación peritoneal LR+ 2.2; signo de Cullen LR+ 8.0; hallazgos de imagen LR+ 9.0. Se anotan aquí y NO en las aristas justamente para que no se lean como dato del índice.
 
 EL ORIGEN DE LOS SIETE YA NO ES UNA INCÓGNITA: GetTheDiagnosis.org, confirmado por el autor del protocolo el 16/09/2026. Lo que falta no es averiguar de dónde salieron, sino llegar al artículo que cada uno resume. GetTheDiagnosis cita sus fuentes por estudio, así que la vía es abrir la ficha de pancreatitis de ese sitio y recuperar el PMID de cada cociente.
@@ -263,5 +266,11 @@ El diagnóstico de pancreatitis aguda se establece con dos de tres criterios: do
 ## Referencias y procedencia
 
 **pmid:23100216:** Classification of acute pancreatitis--2012: revision of the Atlanta classification and definitions by international consensus. Gut, 2013. DOI: 10.1136/gutjnl-2012-302779.
+
+**pmid:25088919:** Incidence, severity, and mortality of post-ERCP pancreatitis: a systematic review by using randomized, controlled trials. Gastrointest Endosc, 2015. DOI: 10.1016/j.gie.2014.06.045.
+
+**pmid:26844279:** Alcohol Consumption as a Risk Factor for Acute and Chronic Pancreatitis: A Systematic Review and a Series of Meta-analyses. EBioMedicine, 2015. DOI: 10.1016/j.ebiom.2015.11.023.
+
+**pmid:27820614:** Nonfasting Mild-to-Moderate Hypertriglyceridemia and Risk of Acute Pancreatitis. JAMA Intern Med, 2016. DOI: 10.1001/jamainternmed.2016.6875.
 
 Fuente clínica: medsemiotics-db, condición HM:6040.

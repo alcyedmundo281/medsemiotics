@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6046-ascitis.yaml
   archivos:
@@ -35,7 +35,7 @@ fuente:
     conceptos/HM3182-signo-del-charco.yaml: 92c0039daac9acdb1bef8c264912a5eb55f16e337ab407a1a7108183377beaf1
     conceptos/HM3183-aumento-del-perimetro-abdominal.yaml: 9685963c37f2275c42b2434460a7bd284124f6134e419dd7c5d00619ad4e39a7
     conceptos/HM3186-ganancia-de-peso-reciente.yaml: a26bed1c90308f661c6d44f61910991cf8d7fcd68dd859234c459617fbb2fed4
-    condiciones/HM6046-ascitis.yaml: c8763a031f842e8e89f788d2a4997b74c2b3e0ecad63aba78f423b6e90cc2be8
+    condiciones/HM6046-ascitis.yaml: f0bdc09800cfaa915e8988bab6a442df8345627c799dbde310bbede6a4956d60
     referencias/pmid-1573754.yaml: c538baf13a73481c6db58f7c8616033cdb9681fe317192f2d980efa947cd6614
     referencias/pmid-26683569.yaml: 038c4e4117a7de3cd0979727661337993e29688c106e221ebf5ff05475e4addc
     referencias/pmid-36703099.yaml: 4ff0c4059ec7837a09a2c86a26f8da8d7c0ec6be30ed2a362e985bc0bc6fb9b9
@@ -257,18 +257,6 @@ líquido libre intraabdominal
 
 Snomed: 389026000; Cie10: R18
 
-## Factores de riesgo
-
-cirrosis hepática o hipertensión portal
-
-insuficiencia cardíaca congestiva
-
-síndrome nefrótico o hipoalbuminemia grave
-
-neoplasia maligna intraabdominal o carcinomatosis peritoneal
-
-pancreatitis crónica o aguda grave
-
 ## Hallazgos clínicos
 
 ### Líquido libre en receso hepatorrenal (espacio de Morrison) (HM:0902)
@@ -456,6 +444,10 @@ pancreatitis crónica o aguda grave
 **LR negativo:** Valor: 0.1; Referencia: pmid:1573754
 
 **Decisión:** la ausencia de edema en tobillos o piernas descarta ascitis con gran poder excluyente (LR- 0.10) en contexto de fallo sistémico o hipertensión portal
+
+## Aspectos pendientes de documentación
+
+Causas retiradas de factores_riesgo el 2026-09-24, por decisión del responsable clínico: son causas de la ascitis, no factores con grupo control, y no tenían ref. Eran: cirrosis hepática o hipertensión portal; insuficiencia cardíaca congestiva; síndrome nefrótico o hipoalbuminemia grave; neoplasia maligna intraabdominal o carcinomatosis peritoneal; pancreatitis crónica o aguda grave. Si se registran, será con la fuente que dé su frecuencia como causa, en un campo propio.
 
 ## Referencias y procedencia
 

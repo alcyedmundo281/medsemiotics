@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6047-esplenomegalia.yaml
   archivos:
@@ -25,7 +25,7 @@ fuente:
     conceptos/HM0603-esplenomegalia.yaml: d694a903ae98ee750e432f8b2f95e52b856440a67ebef8ea14396108447626a6
     conceptos/HM3184-matidez-en-espacio-de-traube.yaml: aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9
     conceptos/HM3185-signo-de-percusion-de-castell.yaml: 493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f
-    condiciones/HM6047-esplenomegalia.yaml: c29d0e9bdff4998849728513181ffe00fdb6e93d10ed797a7b969add69d0df0d
+    condiciones/HM6047-esplenomegalia.yaml: 62abb851775465a9520dccdb108d73114afb5ac5e7c5d516b1b22a7992153955
     referencias/pmid-8411607.yaml: cacb8c8bd67b1f8fe3b0d2d8c35cd177811366fa77deeb28650fe548c42e8efa
 grounding:
   condicion_id: HM:6047
@@ -173,16 +173,6 @@ bazo palpable
 
 Snomed: 16294009; Cie10: R16.1
 
-## Factores de riesgo
-
-hipertensión portal o cirrosis hepática
-
-síndrome linfoproliferativo, leucemia o linfoma
-
-infección sistémica aguda o subaguda (mononucleosis infecciosa, endocarditis bacteriana, leishmaniasis, paludismo)
-
-anemia hemolítica o hemoglobinopatía crónica
-
 ## Hallazgos clínicos
 
 ### Esplenomegalia (HM:0603)
@@ -264,6 +254,10 @@ anemia hemolítica o hemoglobinopatía crónica
 **Decisión:** el viraje de timpanismo espiratorio a matidez inspiratoria en la línea axilar anterior es la maniobra percutoria más sensible para detectar esplenomegalia incipiente
 
 **Advertencia:** requiere percusión suave y adecuada coordinación respiratoria con el paciente
+
+## Aspectos pendientes de documentación
+
+Causas retiradas de factores_riesgo el 2026-09-24, por decisión del responsable clínico: son causas de la esplenomegalia, no factores con grupo control, y no tenían ref. Eran: hipertensión portal o cirrosis hepática; síndrome linfoproliferativo, leucemia o linfoma; infección sistémica aguda o subaguda (mononucleosis infecciosa, endocarditis bacteriana, leishmaniasis, paludismo); anemia hemolítica o hemoglobinopatía crónica. Si se registran, será con la fuente que dé su frecuencia como causa, en un campo propio.
 
 ## Referencias y procedencia
 

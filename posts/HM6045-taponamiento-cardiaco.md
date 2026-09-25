@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6045-taponamiento-cardiaco.yaml
   archivos:
@@ -29,7 +29,7 @@ fuente:
     conceptos/HM3155-derrame-pericardico-en-ecografia.yaml: 049d32edd47c084b8b87549994e90e0b312f7c07a6c83683b35bd30eb35825c4
     conceptos/HM3162-ventriculo-derecho-dilatado.yaml: bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134
     conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml: 8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621
-    condiciones/HM6045-taponamiento-cardiaco.yaml: f5d4af69e7c3787c06e395761095795d135039952840a0b784923be90a1fc6c0
+    condiciones/HM6045-taponamiento-cardiaco.yaml: f150b6c3452f83d0f5c7abeb19e25028de32eee0a9b7bbd1bb122a31d2801aa7
     referencias/pmid-35696801.yaml: d2c0807fd4b21b2c1693489c411d348016f85e8b910cf65c9b8ae1afed98dcd2
     referencias/pmid-41729549.yaml: a3b8210b679e9dff1f5671c3127d08ad54fcd26329cfe6735e29183e0cc98937
 grounding:
@@ -149,20 +149,6 @@ compromiso hemodinámico por derrame pericárdico
 
 Snomed: 35304003; Cie10: I31.8
 
-## Factores de riesgo
-
-neoplasia maligna con metástasis pericárdicas
-
-pericarditis aguda o recurrente
-
-insuficiencia renal crónica terminal o uremia
-
-traumatismo torácico penetrante o cerrado
-
-procedimiento invasivo cardiovascular o cirugía cardíaca reciente
-
-disección aórtica tipo A con hemopericardio retrógrado
-
 ## Hallazgos clínicos
 
 ### Taponamiento cardíaco en ecografía (HM:3163)
@@ -228,6 +214,10 @@ RENDIMIENTO POR RANGOS DE LA REVISIÓN DE ALERHAND 2022 (pmid:35696801): el cola
 ## Conclusión de la fuente
 
 El colapso de cavidades derechas y la pletora de la vena cava inferior en presencia de derrame pericárdico son los pilares ecocardiográficos que definen la fisiología de taponamiento; integrados con la inestabilidad hemodinámica, guían la indicación de descompresión pericárdica urgente.
+
+## Aspectos pendientes de documentación
+
+Causas retiradas de factores_riesgo el 2026-09-24, por decisión del responsable clínico: son causas del taponamiento cardíaco, no factores con grupo control, y no tenían ref. Eran: neoplasia maligna con metástasis pericárdicas; pericarditis aguda o recurrente; insuficiencia renal crónica terminal o uremia; traumatismo torácico penetrante o cerrado; procedimiento invasivo cardiovascular o cirugía cardíaca reciente; disección aórtica tipo A con hemopericardio retrógrado. Si se registran, será con la fuente que dé su frecuencia como causa, en un campo propio.
 
 ## Referencias y procedencia
 

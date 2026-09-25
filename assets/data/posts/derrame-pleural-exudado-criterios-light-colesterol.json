@@ -105,7 +105,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
+    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
     "archivos": {
@@ -250,7 +250,7 @@
       "ultima_revision": "2026-09-24",
       "revisiones": []
     },
-    "fuente_revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
+    "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
