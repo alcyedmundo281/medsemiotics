@@ -205,6 +205,22 @@ def read_posts(root=POSTS):
     return result
 
 
+def render_factor(item, concepts):
+    """Un factor de riesgo se lee como contenido, no como un volcado de campos: el factor en
+    negrita, su referencia entre paréntesis (el sitio la enlaza a PubMed) y la nota detrás.
+
+    La base registra estos tres campos y nada más. Ante cualquier otro, se devuelve la prosa
+    genérica: perder un dato en silencio es peor que una línea con menos estilo."""
+    if not isinstance(item, dict) or set(item) - {"factor", "ref", "nota"} or not item.get("factor"):
+        return render_value(item, concepts)
+    texto = f"**{render_value(item['factor'], concepts).rstrip('.')}**"
+    if item.get("ref"):
+        texto += f" ({item['ref']})"
+    if item.get("nota"):
+        texto += f": {render_value(item['nota'], concepts)}"
+    return texto
+
+
 def render_value(value, concepts):
     """Prosa de presentación sobre datos literales; no calcula LR ni completa vacíos."""
     if value is None:
@@ -485,6 +501,8 @@ def make_post(source, condition_path, previous=None):
                                         render_value(definition[field], concepts))
                     body.extend("**" + LABELS.get(k, k.replace("_", " ").capitalize()) + ":** " +
                                 render_value(v, concepts) for k, v in item.items() if k != "concepto")
+                elif key == "factores_riesgo":
+                    body.append(render_factor(item, concepts))
                 else:
                     body.append(render_value(item, concepts))
         else:

@@ -165,11 +165,11 @@ Snomed: 197456007; Cie10: No documentado.
 
 ## Factores de riesgo
 
-Factor: Consumo de alcohol por encima de 40 g/día; Referencia: pmid:26844279; Nota: relación dosis-respuesta monótona en varones y no lineal en mujeres. Por debajo de 40 g/día no aumenta el riesgo frente a la abstención: RR 1.1 (IC95% 0.69-1.74) en varones y 0.76 (IC95% 0.60-0.97) en mujeres; por encima, el riesgo crece. El resumen no da el RR de pancreatitis aguda a dosis altas. Metaanálisis de 7 estudios con 157 026 participantes
+**Consumo de alcohol por encima de 40 g/día** (pmid:26844279): relación dosis-respuesta monótona en varones y no lineal en mujeres. Por debajo de 40 g/día no aumenta el riesgo frente a la abstención: RR 1.1 (IC95% 0.69-1.74) en varones y 0.76 (IC95% 0.60-0.97) en mujeres; por encima, el riesgo crece. El resumen no da el RR de pancreatitis aguda a dosis altas. Metaanálisis de 7 estudios con 157 026 participantes
 
-Factor: Hipertrigliceridemia; Referencia: pmid:27820614; Nota: triglicéridos no en ayunas de 5 mmol/L o más frente a menos de 1 mmol/L, HR 8.7 (IC95% 3.7-20.0) ajustado; ya de 2.00 a 2.99 mmol/L, HR 2.3 (IC95% 1.3-4.0). HR 1.17 (IC95% 1.10-1.24) por cada 1 mmol/L. Dos cohortes de Copenhague con 116 550 personas y 434 casos
+**Hipertrigliceridemia** (pmid:27820614): triglicéridos no en ayunas de 5 mmol/L o más frente a menos de 1 mmol/L, HR 8.7 (IC95% 3.7-20.0) ajustado; ya de 2.00 a 2.99 mmol/L, HR 2.3 (IC95% 1.3-4.0). HR 1.17 (IC95% 1.10-1.24) por cada 1 mmol/L. Dos cohortes de Copenhague con 116 550 personas y 434 casos
 
-Factor: Colangiopancreatografía retrógrada endoscópica previa; Referencia: pmid:25088919; Nota: incidencia de pancreatitis tras la CPRE del 9.7% y del 14.7% en pacientes de alto riesgo, en los brazos placebo o sin prótesis de 108 ensayos (13 296 pacientes). La fuente no tiene grupo sin CPRE, así que es un riesgo absoluto, no un cociente
+**Colangiopancreatografía retrógrada endoscópica previa** (pmid:25088919): incidencia de pancreatitis tras la CPRE del 9.7% y del 14.7% en pacientes de alto riesgo, en los brazos placebo o sin prótesis de 108 ensayos (13 296 pacientes). La fuente no tiene grupo sin CPRE, así que es un riesgo absoluto, no un cociente
 
 ## Hallazgos clínicos
 

@@ -203,7 +203,7 @@ Snomed: 76581006; Cie10: K81.0
 
 ## Factores de riesgo
 
-Factor: Colelitiasis conocida; Referencia: pmid:8480871; Nota: en la litiasis asintomática aparecen síntomas graves o complicaciones en el 1-2% de los pacientes al año, y en la levemente sintomática en el 1-3%; la colecistitis aguda es la complicación grave más frecuente. Revisión de series de seguimiento sin grupo sin litiasis, así que es un riesgo absoluto
+**Colelitiasis conocida** (pmid:8480871): en la litiasis asintomática aparecen síntomas graves o complicaciones en el 1-2% de los pacientes al año, y en la levemente sintomática en el 1-3%; la colecistitis aguda es la complicación grave más frecuente. Revisión de series de seguimiento sin grupo sin litiasis, así que es un riesgo absoluto
 
 ## Hallazgos clínicos
 

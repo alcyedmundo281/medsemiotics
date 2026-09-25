@@ -178,11 +178,11 @@ Snomed: 3716002; Cie10: E04.9
 
 ## Factores de riesgo
 
-Factor: Gestación o periodo puerperal; Referencia: pmid:8320430; Nota: en Bruselas, con aporte de yodo en el límite bajo, cerca del 10% de las gestantes tenía bocio en el parto, solo en parte reversible en el posparto. Sin grupo de no gestantes, así que es un riesgo absoluto en una zona con poco yodo
+**Gestación o periodo puerperal** (pmid:8320430): en Bruselas, con aporte de yodo en el límite bajo, cerca del 10% de las gestantes tenía bocio en el parto, solo en parte reversible en el posparto. Sin grupo de no gestantes, así que es un riesgo absoluto en una zona con poco yodo
 
-Factor: Edad avanzada; Referencia: pmid:16235152; Nota: asociación independiente con el bocio ecográfico en varones y en mujeres; el resumen no da su OR. SHIP, 3915 adultos de 20 a 79 años de una región antes deficiente en yodo
+**Edad avanzada** (pmid:16235152): asociación independiente con el bocio ecográfico en varones y en mujeres; el resumen no da su OR. SHIP, 3915 adultos de 20 a 79 años de una región antes deficiente en yodo
 
-Factor: Tabaquismo actual; Referencia: pmid:16235152; Nota: asociación independiente y, según la fuente, fuerte en varones y en mujeres; el resumen no da su OR. SHIP, 3915 adultos
+**Tabaquismo actual** (pmid:16235152): asociación independiente y, según la fuente, fuerte en varones y en mujeres; el resumen no da su OR. SHIP, 3915 adultos
 
 ## Hallazgos clínicos
 

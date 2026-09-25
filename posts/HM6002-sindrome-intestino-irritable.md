@@ -158,11 +158,11 @@ Valor: 0.57; Población: adultos con síntomas gastrointestinales bajos estudiad
 
 ## Factores de riesgo
 
-Factor: Enteritis infecciosa en los 12 meses previos; Referencia: pmid:28069350; Nota: riesgo relativo 4.2 (IC95% 3.1-5.7) frente a quien no la tuvo; 2.3 (IC95% 1.8-3.0) si fue hace más de 12 meses. Metaanálisis de 45 estudios de cohortes
+**Enteritis infecciosa en los 12 meses previos** (pmid:28069350): riesgo relativo 4.2 (IC95% 3.1-5.7) frente a quien no la tuvo; 2.3 (IC95% 1.8-3.0) si fue hace más de 12 meses. Metaanálisis de 45 estudios de cohortes
 
-Factor: Sexo femenino; Referencia: pmid:22426087; Nota: OR 1.67 (IC95% 1.53-1.82) frente a varones en la población general; 80 poblaciones, 260 960 adultos
+**Sexo femenino** (pmid:22426087): OR 1.67 (IC95% 1.53-1.82) frente a varones en la población general; 80 poblaciones, 260 960 adultos
 
-Factor: Edad menor de 50 años; Referencia: pmid:22426087; Nota: en mayores de 50 años la prevalencia es menor, OR 0.75 (IC95% 0.62-0.92) frente a menores de 50
+**Edad menor de 50 años** (pmid:22426087): en mayores de 50 años la prevalencia es menor, OR 0.75 (IC95% 0.62-0.92) frente a menores de 50
 
 ## Hallazgos clínicos
 

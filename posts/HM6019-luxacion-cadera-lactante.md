@@ -189,11 +189,11 @@ Valor: 0.0094; Población: lactantes de 3 meses o menores cribados con examen cl
 
 ## Factores de riesgo
 
-Factor: Presentación podálica al nacer; Referencia: pmid:38355007; Nota: OR 4.14 (IC95% 3.09-5.54) para el parto de nalgas; metaanálisis de cohortes
+**Presentación podálica al nacer** (pmid:38355007): OR 4.14 (IC95% 3.09-5.54) para el parto de nalgas; metaanálisis de cohortes
 
-Factor: Sexo femenino; Referencia: pmid:38355007; Nota: OR 6.97 (IC95% 5.18-9.39); metaanálisis de cohortes
+**Sexo femenino** (pmid:38355007): OR 6.97 (IC95% 5.18-9.39); metaanálisis de cohortes
 
-Factor: Antecedente familiar de displasia de cadera; Referencia: pmid:38355007; Nota: OR 4.07 (IC95% 2.20-7.52); metaanálisis de cohortes
+**Antecedente familiar de displasia de cadera** (pmid:38355007): OR 4.07 (IC95% 2.20-7.52); metaanálisis de cohortes
 
 ## Hallazgos clínicos
 

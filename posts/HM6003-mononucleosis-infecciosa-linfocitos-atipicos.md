@@ -298,7 +298,7 @@ Valor: 0.077; Población: pacientes de 16 a 20 años que consultan por odinofagi
 
 ## Factores de riesgo
 
-Factor: Edad entre 5 y 25 años; Referencia: pmid:27115266; Nota: máxima frecuencia entre los 16 y 20 años
+**Edad entre 5 y 25 años** (pmid:27115266): máxima frecuencia entre los 16 y 20 años
 
 ## Hallazgos clínicos
 

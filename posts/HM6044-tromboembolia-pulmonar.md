@@ -189,17 +189,17 @@ Snomed: 59282003; Cie10: I26.9
 
 ## Factores de riesgo
 
-Factor: Trombosis venosa profunda previa o concomitante; Referencia: pmid:31340984; Nota: tras suspender la anticoagulación de una primera enfermedad tromboembólica no provocada, la recurrencia es de 10.3 por 100 personas-año el primer año (IC95% 8.6-12.1) y la incidencia acumulada del 36% a los 10 años (IC95% 28-45). Metaanálisis de 18 estudios con 7515 pacientes; sin grupo sin antecedente, así que es un riesgo absoluto. La fuente no trata la trombosis concomitante
+**Trombosis venosa profunda previa o concomitante** (pmid:31340984): tras suspender la anticoagulación de una primera enfermedad tromboembólica no provocada, la recurrencia es de 10.3 por 100 personas-año el primer año (IC95% 8.6-12.1) y la incidencia acumulada del 36% a los 10 años (IC95% 28-45). Metaanálisis de 18 estudios con 7515 pacientes; sin grupo sin antecedente, así que es un riesgo absoluto. La fuente no trata la trombosis concomitante
 
-Factor: Ingreso hospitalario o en residencia; Referencia: pmid:10737280; Nota: OR 8.0 (IC95% 4.5-14.2), independiente de los demás factores. Casos y controles poblacional anidado de Olmsted County, 625 casos y 625 controles
+**Ingreso hospitalario o en residencia** (pmid:10737280): OR 8.0 (IC95% 4.5-14.2), independiente de los demás factores. Casos y controles poblacional anidado de Olmsted County, 625 casos y 625 controles
 
-Factor: Cirugía reciente; Referencia: pmid:10737280; Nota: OR 21.7 (IC95% 9.4-49.9); el resumen no la desglosa por tipo. Traumatismo, OR 12.7 (IC95% 4.1-39.7)
+**Cirugía reciente** (pmid:10737280): OR 21.7 (IC95% 9.4-49.9); el resumen no la desglosa por tipo. Traumatismo, OR 12.7 (IC95% 4.1-39.7)
 
-Factor: Neoplasia maligna activa; Referencia: pmid:10737280; Nota: OR 4.1 (IC95% 1.9-8.5) sin quimioterapia y 6.5 (IC95% 2.1-20.2) con ella
+**Neoplasia maligna activa** (pmid:10737280): OR 4.1 (IC95% 1.9-8.5) sin quimioterapia y 6.5 (IC95% 2.1-20.2) con ella
 
-Factor: Anticonceptivos orales; Referencia: pmid:19679614; Nota: OR 5.0 (IC95% 4.2-5.8) frente a no usarlos; de 3.6 con levonorgestrel a 7.3 con desogestrel. Casos y controles MEGA: mujeres premenopáusicas menores de 50 años, 1524 casos y 1760 controles
+**Anticonceptivos orales** (pmid:19679614): OR 5.0 (IC95% 4.2-5.8) frente a no usarlos; de 3.6 con levonorgestrel a 7.3 con desogestrel. Casos y controles MEGA: mujeres premenopáusicas menores de 50 años, 1524 casos y 1760 controles
 
-Factor: Terapia hormonal de la menopausia; Referencia: pmid:38263123; Nota: RR 1.86 (IC95% 1.39-2.50) frente a placebo o ningún tratamiento, sin diferencia entre estrógeno solo y combinado con progestágeno. Metaanálisis de 33 ensayos con 44 639 posmenopáusicas
+**Terapia hormonal de la menopausia** (pmid:38263123): RR 1.86 (IC95% 1.39-2.50) frente a placebo o ningún tratamiento, sin diferencia entre estrógeno solo y combinado con progestágeno. Metaanálisis de 33 ensayos con 44 639 posmenopáusicas
 
 ## Hallazgos clínicos
 
