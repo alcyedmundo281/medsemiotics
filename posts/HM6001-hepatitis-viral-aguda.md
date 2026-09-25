@@ -197,9 +197,9 @@ Valor: 0.09; Población: adultos con ictericia de nueva aparición (bilirrubina 
 
 ## Factores de riesgo
 
-Factor: Consumo de almejas u ostras crudas en los tres meses previos; Referencia: pmid:37652984; Nota: referido por 51 de 126 adultos con hepatitis A aguda (40.5%); la fuente no tiene grupo control
+**Consumo de almejas u ostras crudas en los tres meses previos** (pmid:37652984): referido por 51 de 126 adultos con hepatitis A aguda (40.5%); la fuente no tiene grupo control
 
-Factor: Conducta sexual de riesgo; Referencia: pmid:32663522; Nota: presente en el 79% de los casos de hepatitis A aguda de un servicio de urgencias de Barcelona, 2014-2018; la fuente no tiene grupo control
+**Conducta sexual de riesgo** (pmid:32663522): presente en el 79% de los casos de hepatitis A aguda de un servicio de urgencias de Barcelona, 2014-2018; la fuente no tiene grupo control
 
 ## Hallazgos clínicos
 

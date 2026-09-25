@@ -189,9 +189,9 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Factores de riesgo
 
-Factor: Antecedente parental de trastorno por consumo de alcohol; Referencia: pmid:30689217; Nota: HR 2.21 (IC95% 2.07-2.36) si es el padre y 2.57 (IC95% 2.20-3.01) si es la madre, sin otro trastorno mental asociado. Cohorte de registros daneses: 15 477 hijos expuestos y 154 392 de referencia
+**Antecedente parental de trastorno por consumo de alcohol** (pmid:30689217): HR 2.21 (IC95% 2.07-2.36) si es el padre y 2.57 (IC95% 2.20-3.01) si es la madre, sin otro trastorno mental asociado. Cohorte de registros daneses: 15 477 hijos expuestos y 154 392 de referencia
 
-Factor: Inicio precoz del consumo de alcohol en la adolescencia; Referencia: pmid:32213910; Nota: OR 11.83 en mujeres y 6.24 en varones para dependencia del alcohol, sin intervalo de confianza en el resumen. Cohorte de 5170 universitarios con seguimiento de 3 años
+**Inicio precoz del consumo de alcohol en la adolescencia** (pmid:32213910): OR 11.83 en mujeres y 6.24 en varones para dependencia del alcohol, sin intervalo de confianza en el resumen. Cohorte de 5170 universitarios con seguimiento de 3 años
 
 ## Hallazgos clínicos
 

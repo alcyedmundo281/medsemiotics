@@ -156,19 +156,19 @@ Valor: 0.014; Población: 73 451 veteranos de 50 a 79 años sin aneurisma conoci
 
 ## Factores de riesgo
 
-Factor: Tabaquismo; Referencia: pmid:9072929; Nota: OR 5.57 (IC95% 4.24-7.31) para aneurisma de 4.0 cm o mayor frente a aorta normal, en análisis multivariable. Crece con los años fumados y baja con los años sin fumar
+**Tabaquismo** (pmid:9072929): OR 5.57 (IC95% 4.24-7.31) para aneurisma de 4.0 cm o mayor frente a aorta normal, en análisis multivariable. Crece con los años fumados y baja con los años sin fumar
 
-Factor: Antecedente familiar de aneurisma de aorta abdominal; Referencia: pmid:9072929; Nota: OR 1.95 (IC95% 1.56-2.43) en análisis multivariable
+**Antecedente familiar de aneurisma de aorta abdominal** (pmid:9072929): OR 1.95 (IC95% 1.56-2.43) en análisis multivariable
 
-Factor: Edad; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+**Edad** (pmid:9072929): asociación independiente; el resumen no da su OR
 
-Factor: Talla alta; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+**Talla alta** (pmid:9072929): asociación independiente; el resumen no da su OR
 
-Factor: Enfermedad coronaria o aterosclerosis en otro territorio; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+**Enfermedad coronaria o aterosclerosis en otro territorio** (pmid:9072929): asociación independiente; el resumen no da su OR
 
-Factor: Hipercolesterolemia; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+**Hipercolesterolemia** (pmid:9072929): asociación independiente; el resumen no da su OR
 
-Factor: Hipertensión arterial; Referencia: pmid:9072929; Nota: asociación independiente; el resumen no da su OR
+**Hipertensión arterial** (pmid:9072929): asociación independiente; el resumen no da su OR
 
 ## Hallazgos clínicos
 

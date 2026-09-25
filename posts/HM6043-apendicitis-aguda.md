@@ -180,9 +180,9 @@ Snomed: 85189001; Cie10: K35.8
 
 ## Factores de riesgo
 
-Factor: Edad entre 10 y 19 años; Referencia: pmid:2239906; Nota: incidencia máxima de la vida, con 23.3 casos por 10 000 personas y año
+**Edad entre 10 y 19 años** (pmid:2239906): incidencia máxima de la vida, con 23.3 casos por 10 000 personas y año
 
-Factor: Sexo masculino; Referencia: pmid:2239906; Nota: razón de tasas global de 1.4:1 frente a mujeres, mayor en todos los grupos de edad; riesgo a lo largo de la vida del 8.6% en varones y del 6.7% en mujeres
+**Sexo masculino** (pmid:2239906): razón de tasas global de 1.4:1 frente a mujeres, mayor en todos los grupos de edad; riesgo a lo largo de la vida del 8.6% en varones y del 6.7% en mujeres
 
 ## Hallazgos clínicos
 

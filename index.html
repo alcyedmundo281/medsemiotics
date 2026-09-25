@@ -561,6 +561,21 @@
       let activeEvidence = 'all';
       let activeDifficulty = 'all';
 
+      // El banco se cuenta aparte del índice: si esta lectura falla, la portada conserva su
+      // cifra de respaldo en lugar de perder el catálogo entero.
+      async function actualizarContadorPreguntas() {
+        const el = document.getElementById('statQuizCount');
+        if (!el) return;
+        try {
+          const res = await fetch(`assets/data/quiz-bank.json?v=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) throw new Error('No se pudo cargar el banco de preguntas');
+          const banco = await res.json();
+          if (Array.isArray(banco)) el.innerText = `${banco.length}`;
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
       async function initHub() {
         try {
           const res = await fetch(`assets/data/blog-index.json?v=${Date.now()}`, { cache: 'no-store' });
@@ -570,6 +585,7 @@
           // Update counts
           const countEl = document.getElementById('statCasesCount');
           if (countEl) countEl.innerText = `${allPosts.length}`;
+          actualizarContadorPreguntas();
 
           buildCategoryFilters();
           renderPosts();
