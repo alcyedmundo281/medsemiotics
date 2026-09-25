@@ -1,0 +1,229 @@
+# Caso socrático para Aneurisma de aorta abdominal (HM:6006).
+# El artículo tiene un solo hallazgo, la palpación, y toda su dificultad está en leerlo
+# bien. Sus dos tramos no gradúan la maniobra: la evalúan contra dos diagnósticos
+# distintos (aneurisma de 3 cm o mayor y de 4 cm o mayor), y la probabilidad basal que
+# registra la base corresponde solo al segundo. Los tramos se citan por token (#1, #2),
+# que dicen contra qué diagnóstico se midió cada cociente. La sensibilidad por diámetro
+# no tiene token: el caso la describe sin cifras y remite al artículo.
+condicion_id: HM:6006
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-09-24
+nivel: Pregrado
+duracion_min: 40
+objetivos:
+  - Identificar a qué población y a qué definición de aneurisma corresponde la probabilidad basal que registra el artículo.
+  - Explicar por qué los dos tramos de la palpación no son dos intensidades del signo, sino la misma maniobra evaluada contra dos diagnósticos distintos.
+  - Estimar con la calculadora bayesiana la probabilidad tras una palpación positiva, emparejando la probabilidad basal con el tramo que le corresponde.
+  - Justificar por qué una palpación negativa no descarta un aneurisma, a partir de su cociente negativo, de la sensibilidad por diámetro y del efecto de la obesidad abdominal.
+  - Decidir la prueba de confirmación y la conducta ante una palpación positiva, y reconocer cuándo la palpación no tiene lugar en la decisión.
+vineta:
+  titulo: Una consulta de control
+  texto: >-
+    Varón de 71 años que acude a su control semestral de hipertensión arterial. Fuma
+    desde los 18 años, alrededor de un paquete diario, y no ha conseguido dejarlo. Hace
+    seis años tuvo un infarto de miocardio tratado con un stent coronario y toma aspirina,
+    una estatina por hipercolesterolemia y dos antihipertensivos. Mide 1.84 m y es
+    delgado. Su hermano mayor fue operado de un aneurisma de aorta abdominal hace tres
+    años. Hoy no refiere ningún
+    síntoma: ni dolor abdominal, ni dolor lumbar, ni cambios en su tolerancia al esfuerzo.
+    Nunca se le ha hecho una ecografía abdominal.
+  datos:
+    - etiqueta: Presión arterial
+      valor: 146/84 mmHg
+    - etiqueta: Frecuencia cardíaca
+      valor: 68 lpm
+    - etiqueta: Índice de masa corporal
+      valor: 23 kg/m²
+    - etiqueta: Perímetro abdominal
+      valor: 88 cm
+etapas:
+  - titulo: Por qué pensar en la aorta de un paciente sin síntomas
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          El paciente viene por su tensión y no se queja de nada. ¿Por qué este es un buen
+          momento para pensar en su aorta abdominal?
+        clave: >-
+          Porque el aneurisma de aorta abdominal casi nunca da síntomas hasta que se
+          complica, y su complicación temida, la rotura, tiene una mortalidad muy alta. Se
+          busca en el paciente asintomático que tiene riesgo, no en el que ya tiene dolor.
+          Y este paciente acumula casi todos los factores que registra el artículo: es
+          fumador activo (el factor con más peso en la fuente, que además crece con los
+          años fumados), tiene más de setenta años, es alto, tiene enfermedad coronaria,
+          hipertensión e hipercolesterolemia tratada, y un hermano operado de un aneurisma.
+      - pregunta: >-
+          Busca en el artículo la probabilidad basal. ¿A qué pacientes y a qué aneurisma
+          se refiere exactamente?
+        clave: >-
+          A veteranos de 50 a 79 años sin aneurisma conocido, cribados con ecografía, y a
+          aneurismas de 4 cm o mayores, no a cualquier aneurisma. La propia nota de la base
+          lo advierte: la fuente no publica en su resumen la prevalencia de los de 3 cm o
+          mayores. Esto importa por dos motivos. Primero, esa cifra es la de una población
+          de cribado, y tu paciente tiene más riesgo que la media de esa población, así que
+          tu probabilidad de partida razonable es mayor. Segundo, la probabilidad basal
+          solo puede combinarse con un cociente medido contra el mismo diagnóstico: si
+          partes de la prevalencia de aneurismas de 4 cm o más, tienes que aplicar el
+          cociente del aneurisma de 4 cm o más.
+  - titulo: Antes de poner las manos
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          La palpación no mide centímetros. Entonces, ¿qué pregunta responde?
+        clave: >-
+          Responde a si la aorta parece más ancha de lo normal, no a cuánto mide. Por eso
+          la fuente la evalúa contra una definición de aneurisma elegida de antemano (un
+          diámetro mínimo medido con ecografía) y obtiene un cociente distinto para cada
+          definición. Antes de palpar conviene decidir qué quieres saber: si hay cualquier
+          dilatación o si hay un aneurisma del tamaño que obliga a vigilarlo de cerca o a
+          operarlo.
+      - pregunta: >-
+          ¿Qué esperas que ocurra con el rendimiento de la palpación en un paciente como
+          este, alto y delgado, frente a uno con obesidad abdominal?
+        clave: >-
+          Que sea mejor en el delgado. La base registra la obesidad abdominal como un
+          modificador que reduce la sensibilidad de la palpación, aunque la fuente lo
+          respalda con datos limitados: cuanto más tejido hay entre la mano y la aorta,
+          más aneurismas se escapan. Este paciente es el escenario favorable de la
+          maniobra, y conviene tenerlo presente al generalizar lo que aprendas en él.
+  - titulo: La palpación
+    fase: discriminacion
+    hallazgos: [HM:3012]
+    informacion: >-
+      Con el paciente en decúbito supino, las rodillas flexionadas y el abdomen relajado,
+      palpas con las dos manos por encima del ombligo, algo a la izquierda de la línea
+      media. Notas una pulsación expansiva, que separa tus dedos en cada latido, y que es
+      claramente más ancha de lo esperable: hay {{hallazgo HM:3012}}. No es dolorosa y
+      no hay soplo abdominal.
+    preguntas:
+      - pregunta: >-
+          La palpación tiene dos cocientes positivos en el artículo. ¿Quiere decir que una
+          pulsación más ancha tiene un cociente mayor?
+        clave: >-
+          No. Mira contra qué se midió cada uno. El primer tramo es {{lr+ HM:3012#1}}, y el
+          segundo, {{lr+ HM:3012#2}}. Los dos son cocientes positivos altos, con intervalos
+          que quedan enteros muy por encima de la unidad: una palpación positiva desplaza
+          con fuerza hacia el diagnóstico. Pero no son dos grados de la palpación: son la
+          misma maniobra, con el mismo resultado, evaluada contra dos diagnósticos
+          distintos. Que el cociente crezca en el segundo tramo refleja que la palpación
+          detecta mejor los aneurismas grandes, no que haya una palpación «más positiva».
+      - pregunta: >-
+          La calculadora bayesiana del artículo te pide elegir un tramo. Si partes de la
+          probabilidad basal registrada, ¿cuál eliges? Hazlo y comenta el resultado.
+        clave: >-
+          El del aneurisma de 4 cm o mayor, porque la probabilidad basal registrada es la de
+          ese diagnóstico. Escríbela en la calculadora, que admite probabilidades por debajo
+          del 1 %, y aplica {{lr+ HM:3012#2}}. Si dejaras el primer tramo con esa misma
+          probabilidad de partida, mezclarías dos preguntas y el resultado no correspondería
+          a ningún diagnóstico concreto. Para usar el primer tramo tendrías que partir de una
+          probabilidad estimada por ti para el aneurisma de 3 cm o mayor, que tiene que ser
+          más alta que la registrada, porque incluye además los aneurismas pequeños. Con el
+          emparejamiento correcto verás que la probabilidad sube mucho en términos
+          relativos, pero desde una cifra de partida baja, así que queda lejos de la
+          certeza. Es lo que
+          cuenta la nota de uso del artículo sobre el valor predictivo positivo en las
+          series de la fuente: muchas palpaciones positivas no se confirman con la
+          ecografía. En tu paciente, que parte de un riesgo mayor que la población de
+          cribado, la probabilidad final será más alta, pero el mensaje no cambia: la
+          palpación positiva no diagnostica, indica la ecografía.
+      - pregunta: >-
+          Imagina que la palpación hubiera sido negativa. ¿Podrías decirle que no tiene un
+          aneurisma?
+        clave: >-
+          No. El cociente negativo del primer tramo, {{lr- HM:3012#1}}, está muy cerca de la
+          unidad: deja la probabilidad casi donde estaba. Incluso en el segundo tramo,
+          {{lr- HM:3012#2}}, el descenso es insuficiente para descartar. La
+          advertencia del artículo es explícita: la palpación no puede usarse para excluir
+          el aneurisma. La razón está en la sensibilidad por diámetro que registra el
+          artículo: crece con el tamaño, de modo que la mayoría de los aneurismas pequeños se
+          escapan a la mano, y aun entre los de 5 cm o más una parte no se palpa. En un
+          paciente con obesidad abdominal se escaparían todavía más.
+      - pregunta: >-
+          Un compañero te dice que no palpe con fuerza una aorta dilatada porque puede
+          romperse. ¿Qué le contestas?
+        clave: >-
+          Que la base recoge lo contrario como nota de uso: no se ha descrito que la
+          palpación precipite la rotura. Es un temor muy extendido que hace que la
+          maniobra se omita o se haga con tanta timidez que pierde su valor. Se palpa con
+          firmeza y con el abdomen relajado.
+  - titulo: Lo que haces con una palpación positiva
+    fase: decision
+    informacion: >-
+      La ecografía abdominal muestra una aorta infrarrenal con un diámetro máximo de
+      4.6 cm, con trombo mural y sin signos de complicación.
+    preguntas:
+      - pregunta: >-
+          ¿La ecografía estaba indicada solo por la palpación positiva?
+        clave: >-
+          No: la habrías pedido igual. Un varón de 65 a 75 años que ha fumado alguna vez es
+          candidato al cribado ecográfico del aneurisma, y la ecografía es la prueba que
+          confirma el diagnóstico y mide el diámetro. La palpación positiva añade
+          urgencia y cambia la conversación con el paciente, pero la decisión de mirar la
+          aorta no dependía de ella. Y si hubiera sido negativa, la ecografía seguiría
+          siendo necesaria, por todo lo que dice su cociente negativo.
+      - pregunta: >-
+          Con un aneurisma de 4.6 cm, ¿qué le propones al paciente?
+        clave: >-
+          Derivarlo a cirugía vascular para decidir el seguimiento, con ecografías
+          periódicas para vigilar el crecimiento, porque en un varón el diámetro está por
+          debajo del umbral habitual de reparación electiva. Pero el tratamiento empieza
+          hoy: dejar de fumar es la medida más importante, porque el tabaco se asocia al
+          crecimiento y a la rotura del aneurisma; además, control estricto de la presión
+          arterial y mantener la estatina y la aspirina por su enfermedad coronaria. Hay
+          que explicarle los síntomas que obligan a acudir a urgencias, y como su hermano
+          también tuvo un aneurisma, conviene plantear el cribado de sus otros familiares
+          de primer grado.
+      - pregunta: >-
+          Otro día, en urgencias, un paciente obeso de 74 años llega con dolor lumbar
+          súbito, sudoroso y con la presión arterial baja. No consigues palpar la aorta.
+          ¿Qué papel tiene ahí la palpación?
+        clave: >-
+          Ninguno en la decisión. Es exactamente la situación de la advertencia del
+          artículo: la palpación no puede excluir el aneurisma, y menos cuando la rotura
+          entra en el diferencial. En un paciente obeso, además, su sensibilidad es menor.
+          Ante la sospecha de rotura se avisa a cirugía vascular y se hace de inmediato
+          una ecografía a pie de cama o, si el paciente está estable, una tomografía; no se
+          pierde tiempo en una maniobra cuyo resultado negativo no cambiaría nada.
+      - pregunta: >-
+          ¿Qué límites tiene todo lo que has usado en este caso?
+        clave: >-
+          La probabilidad basal procede de veteranos estadounidenses de 50 a 79 años
+          cribados en los años noventa, y solo da la prevalencia de los aneurismas de 4 cm o
+          mayores: no hay una cifra para los de 3 cm y no se aplica tal cual a las mujeres
+          ni a poblaciones con otro consumo de tabaco. Los cocientes proceden del resumen
+          de una revisión de estudios de cribado en pacientes sin diagnóstico previo, no
+          del texto completo, y no se trasladan al paciente con dolor en el que se sospecha
+          una rotura. El efecto de la obesidad abdominal se apoya en datos limitados, y los
+          factores de riesgo de la fuente tienen su propio peso cada uno, pero el artículo
+          no da una forma de combinarlos en una probabilidad individual.
+cierre:
+  sintesis: >-
+    La palpación abdominal es una prueba específica para el aneurisma de aorta: positiva,
+    desplaza con fuerza hacia el diagnóstico; negativa, apenas descarta, porque su
+    sensibilidad crece con el diámetro y se escapan la mayoría de los aneurismas pequeños,
+    sobre todo en pacientes con obesidad abdominal. Sus dos tramos no son grados del
+    signo, sino dos definiciones de aneurisma, y la probabilidad basal que registra el
+    artículo corresponde solo a la de 4 cm o mayor: el cociente que se aplique debe ser el
+    del mismo diagnóstico. En el paciente de riesgo, la palpación positiva adelanta la
+    ecografía, pero no la sustituye; y cuando se sospecha una rotura, la palpación no
+    tiene lugar en la decisión.
+  necesidades_aprendizaje:
+    - >-
+      Prevalencia de aneurisma de 3 cm o mayor en la población de cribado, que la fuente no
+      publica en su resumen.
+    - >-
+      Recomendaciones de cribado ecográfico del aneurisma según el sexo, la edad y el
+      tabaquismo, y su aplicación a las mujeres, poco representadas en las fuentes.
+    - >-
+      Rendimiento de la ecografía y de la tomografía para medir la aorta y para
+      diagnosticar la rotura, que el artículo no cubre.
+    - >-
+      Velocidad de crecimiento, riesgo de rotura según el diámetro y umbrales de reparación
+      electiva, que la base no documenta.
+    - >-
+      Presentación clínica del aneurisma roto y rendimiento de sus signos, que sería otra
+      condición con otra pregunta diagnóstica.
+omitidos: []
