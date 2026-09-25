@@ -347,6 +347,24 @@ def test_la_ficha_muestra_tramos_y_advertencia(raiz: Path) -> None:
     assert resultado["etapas"][2]["hallazgos"][0]["tramos"] == []
 
 
+def test_mediciones_de_fuentes_distintas_se_citan_por_referencia(raiz: Path) -> None:
+    frontmatter = copy.deepcopy(FRONTMATTER)
+    segunda = copy.deepcopy(frontmatter["evidencia"][0])
+    segunda["lr_positivo"] = {"rango": [1.32, 11.4], "ref": "pmid:222"}
+    segunda["poblacion"] = "metaanálisis posterior"
+    frontmatter["evidencia"].insert(1, segunda)
+    texto = "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True) + "---\n" + CUERPO
+    texto += "\n**pmid:222:** Metaanálisis. JABFM, 2021. DOI: 10.1/y.\n"
+    (raiz / "posts" / "HM9999-tema.md").write_text(texto, encoding="utf-8")
+    datos = caso()
+    datos["etapas"][1]["preguntas"][0]["clave"] = "Ambas: {{lr+ HM:0001}}."
+    clave = compilado(raiz, datos)["etapas"][1]["preguntas"][0]["clave"]
+    assert clave == (
+        "Ambas: LR+ 3.1 (IC 95 %: 1.6–5.9) (pmid:111); LR+ entre 1.32 y 11.4 "
+        "(rango entre estudios, sin estimación puntual) (pmid:222)."
+    )
+
+
 def test_nombres_en_minuscula_dentro_de_la_oracion() -> None:
     from casos.evidencia import _inicio_de_oracion, _minuscula_inicial
 
