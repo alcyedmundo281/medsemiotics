@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
+  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6020-intubacion-dificil.yaml
   archivos:
@@ -26,7 +26,10 @@ fuente:
     conceptos/HM3080-retrognatia.yaml: e0426d5c59bdb9bb724ba58534dde9467384985e631ab5ec912f8ec2a7a8c54b
     conceptos/HM3081-mallampati-clase-3-o-4.yaml: 366c0d1c97f6fa6e8742157e005d8058c19a3df9b131b41cdef47fd1360ae170
     conceptos/HM3082-score-de-wilson.yaml: a6c034805fc5b741f39efffe0d2d933c1737147705c7fb53b518bd8b3e34ffa0
-    condiciones/HM6020-intubacion-dificil.yaml: ff9a4c558137006cb089f056c8f5bf3a48d9ec9bd951225ca5502a571b871704
+    condiciones/HM6020-intubacion-dificil.yaml: fef26d1b870dc9051191158363f399719576d70131e223d97c5bd6bd17282eb7
+    referencias/pmid-18362772.yaml: 27542a5b62cf259b4f2c7bc102bfce3697342152dc17a8f0561afcd39cdd25f5
+    referencias/pmid-19194154.yaml: bdb4113eacba813f8cd62099ee0a898b53a12f69a78aa2ecb1addc352b8917b7
+    referencias/pmid-19735399.yaml: ff5316ea70a909aa6f6ab17f12b0751885ec21807629151a82fdef5d5fcdde2f
     referencias/pmid-30721300.yaml: ad82c0d43425b8e7808e9c35f6c5c8e3a626e0af90641b3673f7469cb13fc9ea
 grounding:
   condicion_id: HM:6020
@@ -192,11 +195,11 @@ Valor: 0.1; Población: pacientes adultos quirúrgicos generales candidatos a in
 
 ## Factores de riesgo
 
-Factor: Obesidad con IMC elevado
+Factor: Obesidad con IMC elevado; Referencia: pmid:19194154; Nota: IMC de 35 o más, OR 1.34 (IC95% 1.19-1.51) ajustado por las demás covariables; cohorte de 91 332 pacientes consecutivos del registro danés de anestesia. La fuente lo califica de predictor débil
 
-Factor: Movilidad cervical limitada o artropatía cervical
+Factor: Movilidad cervical limitada o artropatía cervical; Referencia: pmid:18362772; Nota: aumento estadísticamente significativo de la intubación difícil en las dos franjas de edad (menores y mayores de 60 años); cohorte retrospectiva de 14 053 pacientes. El resumen no da su OR
 
-Factor: Antecedente personal de intubación difícil
+Factor: Antecedente personal de intubación difícil; Referencia: pmid:19735399; Nota: antecedente documentado; la fuente lo califica de predictor fuerte e identifica al 30% de las intubaciones difíciles posteriores. 15 499 pacientes anestesiados más de una vez, registro danés de anestesia. El resumen no da su OR
 
 ## Hallazgos clínicos
 
@@ -275,6 +278,12 @@ Factor: Antecedente personal de intubación difícil
 Varios hallazgos de exploración física simple permiten identificar a pacientes con alta probabilidad de intubación difícil (especialmente el test de mordida del labio superior, LR+ 14), pero ningún hallazgo clínico permite excluir de forma fiable una vía aérea difícil.
 
 ## Referencias y procedencia
+
+**pmid:18362772:** Predictors of difficult intubation in patients with cervical spine limitations. J Neurosurg Anesthesiol, 2008. DOI: 10.1097/ANA.0b013e318166dd00.
+
+**pmid:19194154:** High body mass index is a weak predictor for difficult and failed tracheal intubation: a cohort study of 91,332 consecutive patients scheduled for direct laryngoscopy registered in the Danish Anesthesia Database. Anesthesiology, 2009. DOI: 10.1097/ALN.0b013e318194cac8.
+
+**pmid:19735399:** A documented previous difficult tracheal intubation as a prognostic test for a subsequent difficult tracheal intubation in adults. Anaesthesia, 2009. DOI: 10.1111/j.1365-2044.2009.06057.x.
 
 **pmid:30721300:** Will This Patient Be Difficult to Intubate?: The Rational Clinical Examination Systematic Review. JAMA, 2019. DOI: 10.1001/jama.2018.21413.
 

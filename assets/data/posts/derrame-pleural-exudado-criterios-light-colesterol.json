@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "fecha_publicacion": "2026-08-21",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-09-24",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "neumologia",
   "category_label": "Neumología y Medicina Interna",
@@ -47,7 +47,7 @@
         ],
         "umbral": "colesterol pleural > 55 mg/dL",
         "ref": "pmid:24938565",
-        "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+        "nota": "rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor"
       },
       "decision": "el indicador aislado más potente para clasificar el derrame"
     },
@@ -105,7 +105,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "fbd5cbf59e75e77b70a630f881ac1c1754e1e063",
+    "revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
     "archivos": {
@@ -119,7 +119,7 @@
       "conceptos/HM3010-cociente-colesterol-pleural-suero.yaml": "43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180",
       "conceptos/HM3011-criterios-de-light.yaml": "7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f",
       "conceptos/HM3148-lineas-b-pulmonares-bilaterales.yaml": "bf438bf8faf27db643fbcfa947ad803782ce7e30b057ddcd3e21790d952d516e",
-      "condiciones/HM6005-derrame-pleural-exudativo.yaml": "0e8b529637113d3e77650e09fafa6166ab43e58e3d62a252ee05990cda61e9dc",
+      "condiciones/HM6005-derrame-pleural-exudativo.yaml": "b94b577d31df9901adac0d2a89e9229e9ae82dcd8e242db6e1f0da9b75a156e8",
       "referencias/pmid-22392031.yaml": "167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b",
       "referencias/pmid-24360987.yaml": "8378261ca47f282fed9721d99f26ed84b33e42267908a065babf6ab0095501b2",
       "referencias/pmid-24938565.yaml": "e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc",
@@ -132,12 +132,12 @@
   },
   "has_quiz": true,
   "quiz_count": 2,
-  "featured_image": null,
-  "image_source": null,
-  "image_license": null,
-  "image_title": null,
-  "image_alt": null,
-  "image_author": null,
+  "featured_image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Thoracentesis.jpg",
+  "image_source": "https://commons.wikimedia.org/wiki/File:Thoracentesis.jpg",
+  "image_license": "Public domain",
+  "image_title": "Thoracentesis.jpg",
+  "image_alt": "Ilustración de una toracocentesis: el paciente, sentado e inclinado sobre una mesa, tiene el espacio pleural izquierdo ocupado por líquido, que se extrae con una aguja por la espalda y se recoge en una bolsa.",
+  "image_author": "National Heart, Lung and Blood Institute",
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "LDH elevada en líquido pleural",
@@ -210,7 +210,7 @@
           ],
           "umbral": "colesterol pleural > 55 mg/dL",
           "ref": "pmid:24938565",
-          "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+          "nota": "rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor"
         },
         "poblacion": null,
         "motivo": null,
@@ -221,21 +221,300 @@
         {
           "texto": "LR positivo: 7.1, como estimación puntual única.",
           "correcta": false,
-          "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+          "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         },
         {
           "texto": "LR positivo: 250, como estimación puntual única.",
           "correcta": false,
-          "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+          "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         },
         {
           "texto": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única.",
           "correcta": true,
-          "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+          "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
         }
       ]
     }
   ],
-  "caso": null,
-  "body": "# Derrame pleural exudativo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nExudative pleural effusion\n\n## Sinónimos\n\nexudado pleural\n\nderrame pleural tipo exudado\n\n## Códigos\n\nSnomed: 13841000119107; Cie10: J90\n\n## Hallazgos clínicos\n\n### Colesterol elevado en líquido pleural (HM:3008)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor.\n\n**Decisión:** el indicador aislado más potente para clasificar el derrame\n\n### LDH elevada en líquido pleural (HM:3009)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 18; IC del 95 %: 6.8 / 46; Umbral: LDH pleural > 200 U/L; Referencia: pmid:24938565\n\n**Decisión:** confirma exudado con un intervalo estrecho y reproducible\n\n### Cociente colesterol pleural/sérico elevado (HM:3010)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14; IC del 95 %: 5.5 / 38; Umbral: cociente > 0.3; Referencia: pmid:24938565\n\n**Decisión:** alternativa al colesterol absoluto cuando se dispone del sérico\n\n### Criterios de Light (HM:3011)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.02 / 0.11; Umbral: ausencia de los tres criterios; Referencia: pmid:24938565\n\n**Decisión:** su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado\n\n### Derrame pleural (HM:3007)\n\n**Significante:** Espacio anecoico entre la pared torácica y el pulmón, sobre el diafragma.\n\n**Significado:** Líquido en el espacio pleural.\n\n**Falsos positivos:** Ascitis subdiafragmática / Consolidación pulmonar / Órgano sólido / Engrosamiento o masa pleural / Derrame pericárdico / Ventana mala\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado\n\n## Aspectos pendientes de documentación\n\nSin probabilidad_base. Búsqueda en PubMed del 2026-09-23 de series de toracocentesis consecutivas: Porcel 2014 (pmid:24360987; 3077 pacientes) da las causas del derrame pero no la proporción de exudados en su resumen, y Wilcox 2014 (pmid:24938565) tampoco. Sumar las causas que suelen dar exudado sería inferir la cifra, no transcribirla. Falta leer el texto completo de Porcel 2014.\n\n## Referencias y procedencia\n\n**pmid:24360987:** Etiology of pleural effusions: analysis of more than 3,000 consecutive thoracenteses. Arch Bronconeumol, 2014. DOI: 10.1016/j.arbres.2013.11.007.\n\n**pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.\n\n**pmid:22392031:** International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med, 2012. DOI: 10.1007/s00134-012-2513-4.\n\n**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.\n\nFuente clínica: medsemiotics-db, condición HM:6005."
+  "caso": {
+    "condicion_id": "HM:6005",
+    "slug": "derrame-pleural-exudado-criterios-light-colesterol",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-09-24",
+      "version": 1,
+      "ultima_revision": "2026-09-24",
+      "revisiones": []
+    },
+    "fuente_revision": "22c5b2fce06af1f9f795698b328c074355dc9b3f",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Distinguir la pregunta diagnóstica «¿hay derrame?» de la pregunta «¿este derrame es un exudado?» y reconocer qué pruebas responden a cada una.",
+      "Interpretar los criterios de Light como una prueba para descartar, a partir del único cociente que registra la base.",
+      "Comparar el poder confirmatorio de la LDH pleural, el colesterol pleural y el cociente de colesterol pleural/sérico, y explicar por qué un rango entre estudios no es una estimación puntual.",
+      "Estimar con la calculadora bayesiana cómo cambia la probabilidad de exudado, y reconocer por qué no se encadenan cocientes de pruebas que miden el mismo líquido.",
+      "Decidir el estudio etiológico siguiente ante un exudado en un paciente con insuficiencia cardíaca conocida."
+    ],
+    "vineta": {
+      "titulo": "El derrame de siempre, o no",
+      "texto": "Varón de 68 años, exfumador, con insuficiencia cardíaca con fracción de eyección reducida en tratamiento con furosemida diaria, que acude a consulta por disnea de esfuerzo progresiva desde hace cinco semanas. Ahora se ahoga al subir un piso. Refiere tos seca, un dolor sordo en el costado derecho y una pérdida de unos cuatro kilos que no ha buscado. No ha tenido fiebre. Dice que el diurético «ya no le hace efecto»: no ha ganado peso, no ha aumentado la hinchazón de las piernas y duerme con la misma almohada de siempre. La radiografía de tórax muestra un derrame derecho que ocupa algo menos de la mitad del hemitórax, sin derrame izquierdo.",
+      "datos": [
+        {
+          "etiqueta": "Temperatura",
+          "valor": "36.8 °C"
+        },
+        {
+          "etiqueta": "Frecuencia cardíaca",
+          "valor": "92 lpm"
+        },
+        {
+          "etiqueta": "Frecuencia respiratoria",
+          "valor": "22 rpm"
+        },
+        {
+          "etiqueta": "Presión arterial",
+          "valor": "118/72 mmHg"
+        },
+        {
+          "etiqueta": "Saturación de oxígeno",
+          "valor": "93 % con aire ambiente"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "Antes de tocar al paciente",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "Tiene insuficiencia cardíaca y un derrame pleural. ¿Por qué no basta con aumentar el diurético y citarlo en dos semanas?",
+            "clave": "Porque el cuadro no se comporta como una descompensación. El derrame de la insuficiencia cardíaca suele ser bilateral y, cuando es unilateral, suele ser derecho, así que el lado no basta para sospechar otra cosa. Lo que no encaja es el resto: aparece sin signos de congestión (ni aumento de peso, ni más edemas, ni ortopnea nueva), con dolor en el costado y con una pérdida de peso no buscada. Tener una causa conocida de trasudado no protege de tener además un exudado, y un paciente exfumador que adelgaza obliga a pensar en otras causas."
+          },
+          {
+            "pregunta": "Antes de pedir nada, formula la pregunta diagnóstica que quieres responder. ¿Es «¿tiene derrame?»?",
+            "clave": "No: el derrame ya se ve en la radiografía. La pregunta es si ese líquido es un trasudado (un desequilibrio de presiones con la pleura sana, como en la insuficiencia cardíaca) o un exudado (la pleura o sus vasos están afectados: infección, neoplasia, tuberculosis, embolia, enfermedad inflamatoria). Esa clasificación decide todo lo que viene después: un trasudado se trata tratando la causa, y un exudado exige buscarla. Toda la evidencia del artículo responde a esta segunda pregunta, y ninguna prueba de esta etapa se hace a la cabecera."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "Confirmar el líquido y obtenerlo",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "En la base derecha hay matidez a la percusión, disminución de las vibraciones vocales y abolición del murmullo vesicular. La ecografía a pie de cama muestra un espacio anecoico entre la pared torácica y el pulmón, por encima del diafragma: derrame pleural, sin tabiques y con el pulmón flotando dentro. Se hace una toracocentesis diagnóstica guiada por ecografía y se obtiene un líquido amarillo turbio. Al mismo tiempo se extrae una muestra de sangre.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3007",
+            "nombre": "Derrame pleural",
+            "rol": "Manifestación",
+            "estado_lr": "no_medible",
+            "estado": "LR no medible",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado",
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "La ficha del derrame pleural dice que su estado es LR no medible. ¿Por qué no tiene cociente de verosimilitud en este artículo?",
+            "clave": "Porque en este artículo no es una prueba, sino la condición previa: sin derrame no hay nada que clasificar como exudado o trasudado. Un cociente mide cuánto cambia un hallazgo la probabilidad de una enfermedad; aquí todos los pacientes tienen derrame, así que el hallazgo no puede distinguir a unos de otros. Es un buen recordatorio de que el cociente de un hallazgo depende de la pregunta que se hace: la ecografía sí tiene rendimiento para detectar un derrame, pero esa es otra pregunta y otro artículo."
+          },
+          {
+            "pregunta": "La ficha enumera varios falsos positivos de la ecografía. ¿Cuál te preocuparía más en la base derecha y cómo lo evitarías?",
+            "clave": "Confundir el derrame con una ascitis por debajo del diafragma, con el hígado o con una consolidación del pulmón, que en la base derecha están muy cerca. Se evita identificando siempre el diafragma y situando el líquido por encima de él, y comprobando que el pulmón se mueve dentro del líquido. No es un detalle técnico: puncionar el hígado creyendo que es un derrame es una complicación grave. Por eso la toracocentesis se guía por ecografía."
+          },
+          {
+            "pregunta": "¿Por qué se extrae sangre al mismo tiempo que el líquido pleural?",
+            "clave": "Porque varias de las pruebas que vas a interpretar son cocientes entre el líquido y el suero (proteínas y LDH en los criterios de Light, y el colesterol en una de las pruebas específicas), y para compararlos las dos muestras tienen que ser del mismo momento. Una prueba que necesita el valor sérico no se puede interpretar con una analítica de hace semanas."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "Llegan los criterios de Light",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "El laboratorio informa: proteínas pleurales de 4.1 g/dL con proteínas séricas de 6.8 g/dL, y LDH pleural de 310 U/L con LDH sérica de 220 U/L (límite superior de la normalidad del laboratorio: 250 U/L). Se cumplen los tres criterios de Light. La LDH pleural supera además el umbral absoluto del artículo: hay LDH elevada en líquido pleural.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3011",
+            "nombre": "Criterios de Light",
+            "rol": "Prueba sensible",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR− 0.04 (IC 95 %: 0.02–0.11), con umbral «ausencia de los tres criterios»"
+            ],
+            "decision": "su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:24938565"
+            ]
+          },
+          {
+            "id": "HM:3009",
+            "nombre": "LDH elevada en líquido pleural",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 18 (IC 95 %: 6.8–46), con umbral «LDH pleural > 200 U/L»"
+            ],
+            "decision": "confirma exudado con un intervalo estrecho y reproducible",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:24938565"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Calcula tú los tres criterios de Light con estos datos. ¿Cuáles se cumplen?",
+            "clave": "Los tres. El cociente de proteínas pleura/suero es de 0.6, que supera el umbral de 0.5. El cociente de LDH pleura/suero es de 1.4, que supera el umbral de 0.6. Y la LDH pleural supera los dos tercios del límite superior normal de la LDH sérica. Basta con que se cumpla uno para clasificar el líquido como exudado según Light, pero hacer el cálculo uno mismo evita confiar en la etiqueta del informe."
+          },
+          {
+            "pregunta": "Busca en la ficha de los criterios de Light qué cociente registra la base. ¿Qué conclusión te permite sacar en este paciente?",
+            "clave": "Solo registra el negativo: LR− 0.04 (IC 95 %: 0.02–0.11), con umbral «ausencia de los tres criterios». Es decir, la fuerza de la regla está en el caso contrario: si no se cumple ninguno de los tres criterios, el exudado queda prácticamente descartado. En este paciente se cumplen, y para ese resultado la base no te da una cifra en la que apoyarte. Es la definición de una prueba sensible: casi todos los exudados cumplen algún criterio, pero no todo lo que cumple un criterio es exudado. Un resultado positivo en una prueba sensible te dice que no puedes descartar, no que hayas confirmado."
+          },
+          {
+            "pregunta": "¿Por qué, precisamente en este paciente, deberías desconfiar un poco de un Light positivo?",
+            "clave": "Porque toma diuréticos. Al sacar agua del espacio pleural, el diurético concentra las proteínas y la LDH del líquido, y un trasudado cardíaco puede acabar cumpliendo algún criterio de Light. Es la situación clásica en la que Light clasifica como exudado lo que no lo es. La base no registra cuánto ocurre, así que aquí no hay cifra: hay un motivo clínico para pedir una prueba que confirme."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Pruebas para confirmar",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Pides al laboratorio el colesterol de las dos muestras: 78 mg/dL en el líquido pleural y 190 mg/dL en el suero. Hay colesterol elevado en líquido pleural y, con el sérico, el cociente colesterol pleural/sérico elevado, que es de 0.41.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3008",
+            "nombre": "Colesterol elevado en líquido pleural",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ entre 7.1 y 250 (rango entre estudios, sin estimación puntual), con umbral «colesterol pleural > 55 mg/dL»"
+            ],
+            "decision": "el indicador aislado más potente para clasificar el derrame",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:24938565"
+            ]
+          },
+          {
+            "id": "HM:3010",
+            "nombre": "Cociente colesterol pleural/sérico elevado",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 14 (IC 95 %: 5.5–38), con umbral «cociente > 0.3»"
+            ],
+            "decision": "alternativa al colesterol absoluto cuando se dispone del sérico",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:24938565"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Ordena las tres pruebas específicas por su poder para confirmar un exudado. ¿Cuál es más fiable y cuál desplaza más?",
+            "clave": "La LDH elevada en líquido pleural tiene LR+ 18 (IC 95 %: 6.8–46), con umbral «LDH pleural > 200 U/L»; el cociente colesterol pleural/sérico elevado, LR+ 14 (IC 95 %: 5.5–38), con umbral «cociente > 0.3»; y el colesterol elevado en líquido pleural, LR+ entre 7.1 y 250 (rango entre estudios, sin estimación puntual), con umbral «colesterol pleural > 55 mg/dL». Las dos primeras tienen una estimación puntual con su intervalo, y los dos intervalos, aunque anchos, quedan enteros muy por encima de la unidad: incluso en el peor caso, las dos confirman. El colesterol pleural no tiene estimación puntual, sino un rango entre estudios. Su extremo inferior ya es un cociente alto, así que desplaza mucho la probabilidad en cualquier estudio; pero no puedes escoger un número del rango y decir que es «el» cociente del colesterol. Por eso la decisión de la base lo llama el indicador aislado más potente sin darle un valor único."
+          },
+          {
+            "pregunta": "Un compañero dice que el cociente de verosimilitud positivo del colesterol pleural «es de 250». ¿Qué le contestas?",
+            "clave": "Que eso es el extremo superior de un rango entre estudios, no una estimación. Un rango así dice que distintos estudios obtuvieron resultados muy diferentes, y el resumen de la fuente no dice qué estudios dan cada extremo ni con cuántos pacientes. Por eso la base lo registra como rango y no como valor. La lectura honesta es la más prudente: cualquier valor del rango confirma de forma clara, y el extremo superior no debe usarse para presumir de certeza."
+          },
+          {
+            "pregunta": "Con la calculadora bayesiana del artículo, parte de una probabilidad de exudado que te parezca razonable para este paciente y aplica el cociente de la LDH pleural. Después, ¿aplicarías encima el del colesterol y el del cociente de colesterol?",
+            "clave": "El cociente de la LDH, por sí solo, lleva una probabilidad intermedia a valores altos, y ese es el cálculo defendible. Encadenar además los del colesterol y el cociente de colesterol daría una certeza artificial: multiplicar cocientes supone que las pruebas son independientes, y estas no lo son, porque miden el mismo líquido con el mismo proceso de fondo (la permeabilidad de la pleura). El colesterol pleural y su cociente con el sérico, además, son casi la misma medida. Que las pruebas coincidan refuerza tu confianza, pero no la multiplica."
+          },
+          {
+            "pregunta": "Imagina el caso contrario: no se cumple ningún criterio de Light y el colesterol pleural es bajo. ¿Qué harías con el diagnóstico de exudado?",
+            "clave": "Descartarlo en la práctica. Los criterios de Light, con LR− 0.04 (IC 95 %: 0.02–0.11), con umbral «ausencia de los tres criterios», bajan cualquier probabilidad razonable a valores muy pequeños: pruébalo en la calculadora. Pero cuidado con el colesterol bajo: la base solo registra su cociente positivo, así que un colesterol normal no tiene aquí una cifra que añadir. Lo que descarta es la ausencia de los tres criterios de Light, no el colesterol. Cada prueba de este artículo sirve en una dirección, y usarla en la otra es darle un poder que la evidencia no le reconoce."
+          }
+        ]
+      },
+      {
+        "numero": 5,
+        "titulo": "Qué haces con un exudado",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": "El líquido pleural tiene predominio de linfocitos, glucosa normal y un pH de 7.38. La tinción de Gram es negativa. El paciente sigue afebril.",
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Cuál es tu conclusión sobre el líquido y qué cambia en el plan del paciente?",
+            "clave": "Es un exudado: los criterios de Light positivos no bastaban en un paciente con diurético, pero la LDH pleural y el colesterol confirman en la misma dirección. Lo que cambia es la actitud: ya no basta con ajustar el diurético, porque el derrame no se explica por la insuficiencia cardíaca, o no solo por ella. Hay que buscar la causa."
+          },
+          {
+            "pregunta": "Exudado linfocitario, sin fiebre, en un exfumador que adelgaza. ¿Qué causas encabezan tu lista y qué pides?",
+            "clave": "La neoplasia (un cáncer de pulmón o una metástasis pleural) y la tuberculosis pleural, que en nuestro medio no puede faltar en la lista de un exudado linfocitario. Se piden la citología del líquido, el cultivo para micobacterias y la adenosina desaminasa, y una tomografía de tórax con contraste, idealmente tras evacuar el líquido para ver el pulmón. Si la citología no es concluyente, se plantea la biopsia pleural. El pH y la glucosa normales, junto con la ausencia de fiebre, hacen menos probable un derrame paraneumónico complicado."
+          },
+          {
+            "pregunta": "¿Qué límites tiene todo lo que has usado en este caso?",
+            "clave": "El artículo no registra una probabilidad basal de exudado, y la base explica por qué: la fuente de causas del derrame no publica esa proporción en su resumen, y sumar las causas sería inventar la cifra. Así que la calculadora parte de la probabilidad que tú estimes. Los cocientes proceden del resumen de una revisión sistemática en adultos sometidos a toracocentesis, no del texto completo, y del rango del colesterol pleural no se sabe qué estudios dan cada extremo. Y la base no registra cómo cambian las pruebas con los diuréticos, que es precisamente la duda de este paciente: lo sabes por conocimiento clínico, no por una cifra del artículo."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "Clasificar un derrame pleural es una pregunta distinta de encontrarlo, y todas sus pruebas se hacen sobre el líquido. Cada una sirve en una dirección: los criterios de Light son sensibles y su valor está en el negativo, porque si no se cumple ninguno el exudado queda prácticamente descartado; la LDH pleural, el colesterol pleural y el cociente de colesterol son específicos y sirven para confirmar. En un paciente con diurético, un Light positivo pide confirmación. El colesterol pleural se registra como un rango entre estudios, no como un valor, y las pruebas que miden el mismo líquido no se multiplican. Un exudado cambia la conducta: obliga a buscar su causa.",
+      "necesidades_aprendizaje": [
+        "Probabilidad basal de exudado entre los pacientes a los que se hace una toracocentesis, que la base tiene pendiente de extraer del texto completo de la serie de causas del derrame.",
+        "Origen del rango del cociente positivo del colesterol pleural: qué estudios dan cada extremo y con cuántos pacientes.",
+        "Efecto de los diuréticos sobre los criterios de Light y rendimiento del gradiente de albúmina y de proteínas suero-pleura para reclasificar un falso exudado, que la base no documenta.",
+        "Rendimiento de las pruebas etiológicas del exudado (citología, adenosina desaminasa, cultivo de micobacterias, biopsia pleural), que el artículo no cubre.",
+        "Rendimiento de la ecografía para detectar el derrame, que es otra pregunta diagnóstica y otro artículo."
+      ]
+    },
+    "omitidos": [],
+    "referencias": [
+      {
+        "id": "pmid:24938565",
+        "cita": "Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552."
+      }
+    ]
+  },
+  "body": "# Derrame pleural exudativo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nExudative pleural effusion\n\n## Sinónimos\n\nexudado pleural\n\nderrame pleural tipo exudado\n\n## Códigos\n\nSnomed: 13841000119107; Cie10: J90\n\n## Hallazgos clínicos\n\n### Colesterol elevado en líquido pleural (HM:3008)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor\n\n**Decisión:** el indicador aislado más potente para clasificar el derrame\n\n### LDH elevada en líquido pleural (HM:3009)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 18; IC del 95 %: 6.8 / 46; Umbral: LDH pleural > 200 U/L; Referencia: pmid:24938565\n\n**Decisión:** confirma exudado con un intervalo estrecho y reproducible\n\n### Cociente colesterol pleural/sérico elevado (HM:3010)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 14; IC del 95 %: 5.5 / 38; Umbral: cociente > 0.3; Referencia: pmid:24938565\n\n**Decisión:** alternativa al colesterol absoluto cuando se dispone del sérico\n\n### Criterios de Light (HM:3011)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR negativo:** Valor: 0.04; IC del 95 %: 0.02 / 0.11; Umbral: ausencia de los tres criterios; Referencia: pmid:24938565\n\n**Decisión:** su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado\n\n### Derrame pleural (HM:3007)\n\n**Significante:** Espacio anecoico entre la pared torácica y el pulmón, sobre el diafragma.\n\n**Significado:** Líquido en el espacio pleural.\n\n**Falsos positivos:** Ascitis subdiafragmática / Consolidación pulmonar / Órgano sólido / Engrosamiento o masa pleural / Derrame pericárdico / Ventana mala\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado\n\n## Aspectos pendientes de documentación\n\nSin probabilidad_base. Búsqueda en PubMed del 2026-09-23 de series de toracocentesis consecutivas: Porcel 2014 (pmid:24360987; 3077 pacientes) da las causas del derrame pero no la proporción de exudados en su resumen, y Wilcox 2014 (pmid:24938565) tampoco. Sumar las causas que suelen dar exudado sería inferir la cifra, no transcribirla. Falta leer el texto completo de Porcel 2014.\n\nOrigen del rango 7.1-250 del colesterol pleural. El abstract de Wilcox 2014 no dice qué estudios dan cada extremo ni cuántos pacientes tienen. La nota anterior lo atribuía a «series pequeñas» sin fuente, y se retiró el 2026-09-24. Falta leer el texto completo, que no está en PMC.\n\n## Referencias y procedencia\n\n**pmid:24360987:** Etiology of pleural effusions: analysis of more than 3,000 consecutive thoracenteses. Arch Bronconeumol, 2014. DOI: 10.1016/j.arbres.2013.11.007.\n\n**pmid:24938565:** Does this patient have an exudative pleural effusion? The Rational Clinical Examination systematic review. JAMA, 2014. DOI: 10.1001/jama.2014.5552.\n\n**pmid:22392031:** International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med, 2012. DOI: 10.1007/s00134-012-2513-4.\n\n**pmid:26218493:** Ultrasound in the diagnosis and management of pleural effusions. J Hosp Med, 2015. DOI: 10.1002/jhm.2434.\n\nFuente clínica: medsemiotics-db, condición HM:6005."
 }

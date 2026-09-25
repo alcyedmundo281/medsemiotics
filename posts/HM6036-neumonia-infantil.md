@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
+  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6036-neumonia-infantil.yaml
   archivos:
