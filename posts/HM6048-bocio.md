@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6048-bocio.yaml
   archivos:
@@ -23,8 +23,11 @@ fuente:
     conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3187-agrandamiento-tiroideo-palpable-en-posicion-neutra.yaml: 1d793434c05ab2831964fc1d1f654b97e7d3e2996836348af6071f283928d41a
     conceptos/HM3188-lobulo-tiroideo-mayor-que-falange-distal.yaml: 599c45292d1527aa32bc82a0cbbc70ee66839078b4760da97143be6d5e596773
-    condiciones/HM6048-bocio.yaml: 1785df54bf631b90590429f6217ff1cc0bbc6aa6d3c71bae4eb439d3ca8497b5
+    condiciones/HM6048-bocio.yaml: 2c4123fde69dc3715157657e067345e9c99cd25d3ddb88cc687380b17bc6af65
+    referencias/pmid-16235152.yaml: 8441106cf5ae24c229b62b6ad50fed3c8eaf1cccd1c74b47161db7ee24c9366f
+    referencias/pmid-21893493.yaml: 0762e0c6ff44a424aac80b4deb12f696850bdbe52cb5e894737569672b5f8d1f
     referencias/pmid-7861577.yaml: 0632453a74ec44556429ab0cc29797121a1498a85c42e5b9464c630c101343e5
+    referencias/pmid-8320430.yaml: 1ccc4de90821e8ea3d3fbec6d265de5b8efaa3f2dd4a330e489e927e173a9e93
 grounding:
   condicion_id: HM:6048
   condicion_nombre: Bocio
@@ -175,13 +178,11 @@ Snomed: 3716002; Cie10: E04.9
 
 ## Factores de riesgo
 
-deficiencia crónica de yodo en la dieta
+Factor: Gestación o periodo puerperal; Referencia: pmid:8320430; Nota: en Bruselas, con aporte de yodo en el límite bajo, cerca del 10% de las gestantes tenía bocio en el parto, solo en parte reversible en el posparto. Sin grupo de no gestantes, así que es un riesgo absoluto en una zona con poco yodo
 
-sexo femenino
+Factor: Edad avanzada; Referencia: pmid:16235152; Nota: asociación independiente con el bocio ecográfico en varones y en mujeres; el resumen no da su OR. SHIP, 3915 adultos de 20 a 79 años de una región antes deficiente en yodo
 
-antecedentes familiares de patología tiroidea o autoinmune
-
-gestación o periodo puerperal
+Factor: Tabaquismo actual; Referencia: pmid:16235152; Nota: asociación independiente y, según la fuente, fuerte en varones y en mujeres; el resumen no da su OR. SHIP, 3915 adultos
 
 ## Hallazgos clínicos
 
@@ -253,8 +254,20 @@ gestación o periodo puerperal
 
 **Decisión:** en gestantes, la ausencia de lóbulos tiroideos que superen la falange distal descarta bocio con excelente fiabilidad (LR- 0.08)
 
+## Aspectos pendientes de documentación
+
+Factor retirado por ser causa y no factor con grupo control: deficiencia crónica de yodo en la dieta. Vanderpump 2011 (pmid:21893493) la da como la causa más frecuente de enfermedad tiroidea en el mundo, que lleva al bocio, sin medida de riesgo. Si se registra, será como causa.
+
+Factores retirados: sexo femenino y antecedentes familiares de patología tiroidea o autoinmune. Búsqueda en PubMed del 2026-09-24. Consulta «(goiter[Title] OR goitre[Title] OR thyroid nodules[Title]) AND (prevalence[Title] OR risk factors[Title]) AND (population-based OR Study of Health in Pomerania OR ultrasound survey) AND (women OR female sex)»: 27 resultados, cribados por título los 10 primeros. Völzke 2005 (pmid:16235152; SHIP, 3915 adultos de una región antes deficiente en yodo) analiza por separado a varones y mujeres, y solo halla la edad avanzada y el tabaquismo actual como factores independientes en ambos sexos, que entran como factores; el resumen no da sus OR. Ninguna fuente cuantifica el sexo ni el antecedente familiar para el bocio.
+
 ## Referencias y procedencia
 
+**pmid:16235152:** Risk factors for goiter in a previously iodine-deficient region. Exp Clin Endocrinol Diabetes, 2005. DOI: 10.1055/s-2005-865741.
+
+**pmid:21893493:** The epidemiology of thyroid disease. Br Med Bull, 2011. DOI: 10.1093/bmb/ldr030.
+
 **pmid:7861577:** The rational clinical examination. Does this patient have a goiter?. JAMA, 1995. DOI: no documentado.
+
+**pmid:8320430:** Maternal thyroid function in pregnancy. J Endocrinol Invest, 1993. DOI: 10.1007/BF03348861.
 
 Fuente clínica: medsemiotics-db, condición HM:6048.

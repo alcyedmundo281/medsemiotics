@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6042-colecistitis-aguda.yaml
   archivos:
@@ -34,7 +34,7 @@ fuente:
     conceptos/HM0903-litiasis-biliar-en-imagen.yaml: 3685adff80e1bf7890deb6f1fb7d391636534657e9bc32821b198df491f6803c
     conceptos/HM3175-signo-ecografico-de-colecistitis-aguda.yaml: 07916c2b27fb3a3d2e301a7f222a8091061c97b47ddd8c7480939deec0efbefb
     conceptos/HM3176-dilatacion-del-conducto-biliar-comun.yaml: 8a3cadfca4f59863f8c04b232527efa4676e5d0c38b6befa222eab3eb24c3983
-    condiciones/HM6042-colecistitis-aguda.yaml: 0ac2baac25de13e7bd10400b7ea461aed65dba5dec8175c6fe76f75590861cf5
+    condiciones/HM6042-colecistitis-aguda.yaml: 5891ad295af8ab96819559cb83afb058efa30bf56679bd0c55544045686ccfe6
     referencias/pmid-20138397.yaml: 30eb58a7de689c93d3a9869b99651834ad8abcedf4566b724a461adafbbfa1ce
     referencias/pmid-2017956.yaml: 480d4b64ecf137f52a48f863c98c86758f05013602fcc483c7d515ff283fd90a
     referencias/pmid-29032636.yaml: a77b3719b285b6edb4307d945f955e44fd05285066b2774f69ad6c36014307de
@@ -44,6 +44,7 @@ fuente:
     referencias/pmid-37855790.yaml: 25ec6b51ae1281aa6d5c454d1f87791cecc99f62408856ac69fe0f3f43334c91
     referencias/pmid-38037062.yaml: fdc210aa5789fd196aa7fca5111f661c96213f727c4331dad32ada42e70b0ce6
     referencias/pmid-41928009.yaml: cca81feed444f923825fb0866882dd456dad95a6f1075b6a5d91be03bd283685
+    referencias/pmid-8480871.yaml: 5609369a419fbc84b5fc5baa8d9b0e9bba184831814f277f213dae6788be33c2
 grounding:
   condicion_id: HM:6042
   condicion_nombre: Colecistitis aguda
@@ -202,13 +203,7 @@ Snomed: 76581006; Cie10: K81.0
 
 ## Factores de riesgo
 
-colelitiasis conocida
-
-sexo femenino
-
-edad mayor de 50 años
-
-nutrición parenteral total o ayuno prolongado en paciente crítico
+Factor: Colelitiasis conocida; Referencia: pmid:8480871; Nota: en la litiasis asintomática aparecen síntomas graves o complicaciones en el 1-2% de los pacientes al año, y en la levemente sintomática en el 1-3%; la colecistitis aguda es la complicación grave más frecuente. Revisión de series de seguimiento sin grupo sin litiasis, así que es un riesgo absoluto
 
 ## Hallazgos clínicos
 
@@ -318,11 +313,17 @@ CRITERIOS DE TOKIO 2018 (TG18, pmid:29032636): el diagnóstico definitivo requie
 
 El POCUS en urgencias tiene alta especificidad (94.4%) y sensibilidad moderada (70.9%) para confirmar colecistitis aguda en pacientes con sospecha clínica, permitiendo acelerar la resolución quirúrgica definitiva.
 
+## Aspectos pendientes de documentación
+
+Factores retirados: sexo femenino, edad mayor de 50 años y nutrición parenteral total o ayuno prolongado en paciente crítico. Los dos primeros son factores de riesgo de la litiasis biliar, no de la colecistitis; el tercero es causa de la colecistitis alitiásica, no un factor con grupo control. Búsqueda en PubMed del 2026-09-24. Consulta «(acute cholecystitis[Title]) AND (risk factors[Title] OR incidence[Title]) AND (cohort OR population-based OR meta-analysis)»: 7 resultados, cribados por título y resumen. Ninguno cuantifica esos tres factores para la colecistitis aguda en la población general.
+
 ## Referencias y procedencia
 
 **pmid:29032636:** Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholecystitis (with videos). J Hepatobiliary Pancreat Sci, 2018. DOI: 10.1002/jhbp.515.
 
 **pmid:37855790:** Test Characteristics of Emergency Medicine-Performed Point-of-Care Ultrasound for the Diagnosis of Acute Cholecystitis: A Systematic Review and Meta-analysis. Ann Emerg Med, 2024. DOI: 10.1016/j.annemergmed.2023.09.005.
+
+**pmid:8480871:** Natural history of asymptomatic and symptomatic gallstones. Am J Surg, 1993. DOI: 10.1016/s0002-9610(05)80930-4.
 
 **pmid:20138397:** A prospective evaluation of emergency department bedside ultrasonography for the detection of acute cholecystitis. Ann Emerg Med, 2010. DOI: 10.1016/j.annemergmed.2010.01.014.
 

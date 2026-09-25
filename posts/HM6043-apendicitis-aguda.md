@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
+  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6043-apendicitis-aguda.yaml
   archivos:
@@ -30,7 +30,8 @@ fuente:
     conceptos/HM0712-leucocitosis.yaml: 2e5c508b2e66972503180b4cfced57952439dbca740f2bfa1cbb9dbc6a25b158
     conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3177-signo-ecografico-de-apendicitis-aguda.yaml: 8af710d0fc65e8203a82946be611bed521b330ae00b5ea647d9d6de7a55c6f96
-    condiciones/HM6043-apendicitis-aguda.yaml: b0a473b4952302c66f6cb8c65a8451e3b133eb1d30ef978f2a0f0c87d59073ce
+    condiciones/HM6043-apendicitis-aguda.yaml: 733af9cd1018b0bf62aef6cbe0fa920f8e075d1c5db17e79c29c92ddfec096ab
+    referencias/pmid-2239906.yaml: 143382d1babcce9d2979ae48bc7841efd23eb5b8492b7a520130a81308c11781
     referencias/pmid-24113477.yaml: 371db850598e103d5be3697f876a8e8501122f3de0f8f20893ccd9c8bd75ffb2
     referencias/pmid-28826614.yaml: b630a135237dd8eaacc00d6ecaf1d746a89e60945aa88993984831c6d9fe8ce2
     referencias/pmid-2934762.yaml: b939d65a8573f1a8a5e6a756ae588f8ece263d4a8ff4f2e34b6fc1a6fbb82b5a
@@ -179,9 +180,9 @@ Snomed: 85189001; Cie10: K35.8
 
 ## Factores de riesgo
 
-edad entre 10 y 30 años
+Factor: Edad entre 10 y 19 años; Referencia: pmid:2239906; Nota: incidencia máxima de la vida, con 23.3 casos por 10 000 personas y año
 
-sexo masculino
+Factor: Sexo masculino; Referencia: pmid:2239906; Nota: razón de tasas global de 1.4:1 frente a mujeres, mayor en todos los grupos de edad; riesgo a lo largo de la vida del 8.6% en varones y del 6.7% en mujeres
 
 ## Hallazgos clínicos
 
@@ -250,6 +251,8 @@ VARIABILIDAD SEGÚN OPERADOR Y PROTOCOLO: mientras que el POCUS general de urgen
 La ecografía a pie de cama es moderadamente precisa para la sospecha de apendicitis en urgencias; acelera la decisión quirúrgica ante hallazgo positivo inequívoco pero requiere confirmación tomográfica cuando el apéndice no es visualizado.
 
 ## Referencias y procedencia
+
+**pmid:2239906:** The epidemiology of appendicitis and appendectomy in the United States. Am J Epidemiol, 1990. DOI: 10.1093/oxfordjournals.aje.a115734.
 
 **pmid:34420255:** A prospective, multicenter evaluation of point-of-care ultrasound for appendicitis in the emergency department. Acad Emerg Med, 2022. DOI: 10.1111/acem.14378.
 
