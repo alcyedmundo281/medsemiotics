@@ -300,6 +300,8 @@
             "decision": null,
             "motivo": "la fuente da la frecuencia en los casos pero no en las hepatitis agudas no víricas, así que no hay especificidad ni cociente",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:37652984"
             ]
@@ -315,6 +317,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -330,6 +334,8 @@
             "decision": null,
             "motivo": "la fuente da la frecuencia en los casos pero no en las hepatitis agudas no víricas, así que no hay especificidad ni cociente",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:37652984"
             ]
@@ -363,6 +369,8 @@
             "decision": "orienta a medir bilirrubina fraccionada, pruebas hepáticas y serología de hepatitis infecciosa; por sí sola no cuantifica la probabilidad",
             "motivo": "no se halló ningún estudio que la compare con hepatitis agudas no víricas frente a un patrón serológico",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:14765767"
             ]
@@ -378,6 +386,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -391,6 +401,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -404,6 +416,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -417,6 +431,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           }
         ],
@@ -471,6 +487,8 @@
             "decision": null,
             "motivo": "forma parte de la definición de caso; sesgo de incorporación",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -484,6 +502,8 @@
             "decision": null,
             "motivo": "forma parte de la definición de caso; sesgo de incorporación",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           }
         ],

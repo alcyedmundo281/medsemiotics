@@ -477,6 +477,8 @@
             "decision": null,
             "motivo": "«symptoms are of limited value»: sensible (0.81-0.83) pero inespecífico. La fuente no publica cociente porque no discrimina.",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -490,6 +492,8 @@
             "decision": null,
             "motivo": "sensible (0.81-0.83) pero inespecífico; la fuente no publica cociente",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           }
         ],
@@ -526,6 +530,8 @@
             "decision": "su ausencia reduce la probabilidad; es el hallazgo que más descarta",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:27115266"
             ]
@@ -544,6 +550,8 @@
             "decision": "aumenta la probabilidad; por sí sola no confirma",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:27115266"
             ]
@@ -561,6 +569,8 @@
             "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:34772769"
             ]
@@ -578,6 +588,8 @@
             "decision": "aumenta la probabilidad de forma similar a la cervical posterior",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:27115266"
             ]
@@ -595,6 +607,8 @@
             "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:34772769"
             ]
@@ -633,6 +647,8 @@
             "decision": "el hallazgo exploratorio que más aumenta la probabilidad",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:27115266"
             ]
@@ -650,6 +666,8 @@
             "decision": "moderadamente útil para confirmar, con una incertidumbre mucho mayor que la medición anterior",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:34772769"
             ]
@@ -667,6 +685,8 @@
             "decision": "apoya el diagnóstico y condiciona el consejo de evitar deporte de contacto",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:27115266"
             ]
@@ -684,6 +704,8 @@
             "decision": "moderadamente útil para confirmar; su ausencia apenas descarta",
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:34772769"
             ]
@@ -725,6 +747,34 @@
             "decision": "a partir del 10% ya desplaza la probabilidad con fuerza",
             "motivo": null,
             "advertencia": null,
+            "graduacion": "Linfocitos atípicos (%), lectura acumulativa: cada umbral cuenta los valores que lo superan",
+            "tramos": [
+              {
+                "etiqueta": "linfocitos atípicos ≥ 10%",
+                "cifras": [
+                  "LR+ 11.4 (IC 95 %: 2.7–35)"
+                ]
+              },
+              {
+                "etiqueta": "linfocitos atípicos ≥ 20%",
+                "cifras": [
+                  "LR+ 26 (IC 95 %: 9.6–68)"
+                ]
+              },
+              {
+                "etiqueta": "linfocitos atípicos ≥ 40%",
+                "cifras": [
+                  "LR+ 50 (IC 95 %: 38–64)"
+                ]
+              },
+              {
+                "etiqueta": "linfocitos > 50% y atípicos > 10%",
+                "cifras": [
+                  "LR+ 54 (IC 95 %: 8.4–189)",
+                  "especificidad 0.99"
+                ]
+              }
+            ],
             "referencias": [
               "pmid:27115266"
             ]

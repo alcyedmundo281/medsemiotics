@@ -10,6 +10,11 @@ Sintaxis: ``{{tipo HM:####}}``. Tipos:
 Si la base mide un hallazgo en varias poblaciones, ``{{lr+ HM:####@2}}`` cita solo la
 segunda medición; sin índice se citan todas con su población.
 
+Si la medición tiene ``tramos`` (cortes de un hallazgo graduado, o la misma prueba evaluada
+contra varias definiciones de la condición), ``{{lr+ HM:3012#2}}`` cita el segundo tramo con
+su umbral. Con varias mediciones, el tramo exige elegir antes la medición:
+``{{lr+ HM:3004@1#2}}``. Los tokens ``hallazgo`` y ``estado`` no admiten tramo.
+
 Fuera de los tokens, el texto no puede escribir cocientes, sensibilidades, IC ni
 identificadores: así una corrección en medsemiotics-db se propaga sola al caso.
 """
@@ -26,7 +31,9 @@ if TYPE_CHECKING:
 
     from casos.articulo import Articulo
 
-TOKEN = re.compile(r"\{\{\s*(?P<tipo>[a-z+\-]+)\s+(?P<id>HM:\d+)(?:@(?P<n>\d+))?\s*\}\}")
+TOKEN = re.compile(
+    r"\{\{\s*(?P<tipo>[a-z+\-]+)\s+(?P<id>HM:\d+)(?:@(?P<n>\d+))?(?:#(?P<t>\d+))?\s*\}\}"
+)
 LLAVES = re.compile(r"\{\{.*?\}\}|\{\{|\}\}")
 TIPOS = frozenset({"lr+", "lr-", "sens", "esp", "hallazgo", "estado"})
 
@@ -94,8 +101,21 @@ def _cociente(etiqueta: str, bloque: Any, concepto: str) -> str:
         )
     else:
         raise ErrorDeCaso(f"{concepto}: {etiqueta} sin valor ni rango en la base.")
+    return texto + _condiciones(bloque)
+
+
+def _condiciones(bloque: dict[str, Any], tramo: bool = False) -> str:
+    """Contra qué se midió la cifra: el umbral del hallazgo, la definición de la condición
+    (``umbral_condicion``) o, en un tramo, su población. Sin esto, dos cifras de la misma prueba
+    parecen intercambiables cuando responden a preguntas distintas. La población de una
+    medición no se repite en cada cifra: la ficha y los tokens sin ``@n`` ya la muestran."""
+    texto = ""
     if bloque.get("umbral"):
         texto += f", con umbral «{bloque['umbral']}»"
+    if bloque.get("umbral_condicion"):
+        texto += f", para el diagnóstico «{bloque['umbral_condicion']}»"
+    if tramo and bloque.get("poblacion"):
+        texto += f", en «{bloque['poblacion']}»"
     return texto
 
 
@@ -126,18 +146,71 @@ def _valor(tipo: str, concepto: str, item: dict[str, Any]) -> str:
     return _proporcion(campo, item.get(campo), concepto)
 
 
-def resolver_token(tipo: str, concepto: str, articulo: Articulo, numero: int | None = None) -> str:
+CAMPOS_TRAMO = {
+    "lr+": ("lr_positivo", "ic95", "LR+"),
+    "lr-": ("lr_negativo", "ic95_negativo", "LR−"),
+}
+
+
+def _valor_tramo(tipo: str, concepto: str, tramo: dict[str, Any], condiciones: bool) -> str:
+    """Cifra de un tramo. En los tramos, los cocientes son números sueltos y su IC va aparte."""
+    if tipo in CAMPOS_TRAMO:
+        campo, campo_ic, etiqueta = CAMPOS_TRAMO[tipo]
+        if not _numero(tramo.get(campo)):
+            raise ErrorDeCaso(f"{concepto}: el tramo no registra {etiqueta}.")
+        texto = _cociente(etiqueta, {"valor": tramo[campo], "ic95": tramo.get(campo_ic)}, concepto)
+    else:
+        campo = "sensibilidad" if tipo == "sens" else "especificidad"
+        texto = _proporcion(campo, tramo.get(campo), concepto)
+    return texto + _condiciones(tramo, tramo=True) if condiciones else texto
+
+
+def tramos_de(item: dict[str, Any]) -> list[dict[str, Any]]:
+    tramos = item.get("tramos")
+    return [t for t in tramos if isinstance(t, dict)] if isinstance(tramos, list) else []
+
+
+def _etiqueta_tramo(tramo: dict[str, Any]) -> str:
+    for campo in ("umbral_condicion", "umbral", "poblacion"):
+        if tramo.get(campo):
+            return str(tramo[campo])
+    return "tramo sin umbral declarado"
+
+
+def resolver_token(
+    tipo: str,
+    concepto: str,
+    articulo: Articulo,
+    numero: int | None = None,
+    tramo: int | None = None,
+) -> str:
     """Resuelve un token. Si la base mide el hallazgo en varias poblaciones, ``@n`` elige una;
-    sin índice se citan todas, cada una con su población."""
+    sin índice se citan todas, cada una con su población. ``#m`` cita el tramo m."""
     if tipo not in TIPOS:
         raise ErrorDeCaso(f"Token desconocido «{tipo}»; tipos válidos: {sorted(TIPOS)}")
     items = mediciones(concepto, articulo)
+    if tramo is not None and tipo in ("hallazgo", "estado"):
+        raise ErrorDeCaso(f"{concepto}#{tramo}: el token «{tipo}» no admite tramo.")
     if tipo == "hallazgo":
         return articulo.nombres[concepto]
     if numero is not None:
         if not 1 <= numero <= len(items):
             raise ErrorDeCaso(f"{concepto}@{numero}: la base registra {len(items)} medición(es).")
         items = [items[numero - 1]]
+    if tramo is not None:
+        if len(items) > 1:
+            raise ErrorDeCaso(
+                f"{concepto}#{tramo}: la base mide el hallazgo {len(items)} veces; "
+                f"elija la medición con {concepto}@n#{tramo}."
+            )
+        tramos = tramos_de(items[0])
+        if not 1 <= tramo <= len(tramos):
+            raise ErrorDeCaso(f"{concepto}#{tramo}: la medición registra {len(tramos)} tramo(s).")
+        if tipo in CAMPOS_TRAMO and items[0].get("estado_lr") != "medido":
+            raise ErrorDeCaso(
+                f"{concepto}: no hay LR medido que citar ({items[0].get('estado_lr')})."
+            )
+        return _valor_tramo(tipo, concepto, tramos[tramo - 1], condiciones=True)
     if len(items) == 1:
         return _valor(tipo, concepto, items[0])
     return "; ".join(
@@ -171,7 +244,13 @@ def resolver(texto: str, articulo: Articulo, permitidos: Collection[str], donde:
         raise ErrorDeCaso("\n".join(errores))
 
     def sustituir(m: re.Match[str]) -> str:
-        valor = resolver_token(m["tipo"], m["id"], articulo, int(m["n"]) if m["n"] else None)
+        valor = resolver_token(
+            m["tipo"],
+            m["id"],
+            articulo,
+            int(m["n"]) if m["n"] else None,
+            int(m["t"]) if m["t"] else None,
+        )
         if m["tipo"] == "hallazgo" and not _inicio_de_oracion(texto, m.start()):
             return _minuscula_inicial(valor)
         return valor
@@ -218,10 +297,42 @@ def resumen(concepto: str, articulo: Articulo) -> list[dict[str, Any]]:
                 "decision": item.get("decision"),
                 "motivo": item.get("motivo"),
                 "advertencia": item.get("advertencia"),
+                "graduacion": _graduacion(item.get("graduacion")),
+                "tramos": [
+                    {
+                        "etiqueta": _etiqueta_tramo(tramo),
+                        "cifras": [
+                            _valor_tramo(tipo, concepto, tramo, condiciones=False)
+                            for tipo, campo in TIPOS_TRAMO
+                            if _numero(tramo.get(campo))
+                        ],
+                    }
+                    for tramo in tramos_de(item)
+                ],
                 "referencias": sorted(referencias_de(item)),
             }
         )
     return fichas
+
+
+TIPOS_TRAMO = (
+    ("lr+", "lr_positivo"),
+    ("lr-", "lr_negativo"),
+    ("sens", "sensibilidad"),
+    ("esp", "especificidad"),
+)
+
+
+def _graduacion(graduacion: Any) -> str | None:
+    """«Diámetro aórtico máximo (cm), lectura acumulativa»: qué eje ordena los tramos."""
+    if not isinstance(graduacion, dict) or not graduacion.get("parametro"):
+        return None
+    texto = str(graduacion["parametro"])
+    if graduacion.get("unidad"):
+        texto += f" ({graduacion['unidad']})"
+    if graduacion.get("lectura") == "acumulativo":
+        texto += ", lectura acumulativa: cada umbral cuenta los valores que lo superan"
+    return texto
 
 
 def referencias_de(item: Any) -> set[str]:

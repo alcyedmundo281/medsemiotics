@@ -115,6 +115,42 @@ for (const [name, pos, neg, state, visible, positive, negative] of [
   });
 }
 
+test('Calculadora: elige el tramo y admite probabilidades menores del 1 %', async () => {
+  const { context, element } = browser();
+  context.fixture = { slug: 'prueba', title: 'Prueba', body: '',
+    grounding: { estado_lr: 'medido', concepto_id: 'HM:1', lr_positivo: 12, lr_negativo: 0.72 },
+    evidencia: [{ concepto: 'HM:1', estado_lr: 'medido',
+      lr_positivo: { valor: 12, umbral_condicion: 'aneurisma de 3.0 cm o mayor' },
+      tramos: [
+        { umbral_condicion: 'aneurisma de 3.0 cm o mayor', lr_positivo: 12, lr_negativo: 0.72 },
+        { umbral_condicion: 'aneurisma <b>de 4.0 cm</b> o mayor', lr_positivo: 15.6, lr_negativo: 0.51 },
+      ] }] };
+  await vm.runInContext('currentPost = fixture; renderPost()', context);
+  assert.equal(element('calcTramoWrap').classList.contains('hidden'), false);
+  assert.ok(element('calcTramo').innerHTML.includes('Diagnóstico: aneurisma de 3.0 cm o mayor'));
+  assert.ok(element('calcTramo').innerHTML.includes('&lt;b&gt;de 4.0 cm'));
+  // Por defecto, el tramo que coincide con el grounding.
+  assert.equal(element('calcTramo').value, '0');
+  assert.equal(element('postTestPosProb').textContent, '75.0%');
+  assert.ok(element('calcCondicion').textContent.includes('aneurisma de 3.0 cm o mayor'));
+  element('calcTramo').value = '1';
+  element('pretestSlider').value = '1.4';
+  vm.runInContext('actualizarCalculadora()', context);
+  assert.equal(element('calcLrPosBadge').textContent, 'LR+ 15.6');
+  assert.equal(element('postTestPosProb').textContent, '18.1%');
+  assert.equal(element('postTestNegProb').textContent, '0.7%');
+});
+
+test('Calculadora: sin tramos no muestra el selector', async () => {
+  const { context, element } = browser();
+  context.fixture = { slug: 'prueba', title: 'Prueba', body: '',
+    grounding: { estado_lr: 'medido', concepto_id: 'HM:1', lr_positivo: 18 },
+    evidencia: [{ concepto: 'HM:1', lr_positivo: { valor: 18, umbral: 'LDH pleural > 200 U/L' } }] };
+  await vm.runInContext('currentPost = fixture; renderPost()', context);
+  assert.equal(element('calcTramoWrap').classList.contains('hidden'), true);
+  assert.ok(element('calcCondicion').textContent.includes('Umbral: LDH pleural > 200 U/L'));
+});
+
 test('El filtro bayesiano no considera que tener un ID HM sea evidencia cuantitativa', () => {
   const html = read('index.html');
   const block = html.slice(html.indexOf("if (activeEvidence === 'confirmatorio')"),
@@ -140,7 +176,9 @@ test('El caso socrático se incorpora al artículo y su texto se escapa', async 
   }
   const { context, element } = browser();
   const hallazgo = { nombre: '<img onerror=x>', rol: 'Prueba', estado: 'LR medido',
-    cifras: ['LR+ 3.1 (IC 95 %: 1.6–5.9)'], decision: 'aumenta', referencias: ['pmid:1'] };
+    cifras: ['LR+ 3.1 (IC 95 %: 1.6–5.9)'], decision: 'aumenta', referencias: ['pmid:1'],
+    advertencia: 'no <i>excluye</i>', graduacion: 'Diámetro (cm)',
+    tramos: [{ etiqueta: 'aneurisma de 4.0 cm o mayor', cifras: ['LR+ 15.6 (IC 95 %: 8.6–28.5)'] }] };
   context.fixture = { slug: 'prueba', title: 'Prueba', body: '', fecha_publicacion: '2026-08-21',
     fecha_revision: '2026-09-21', version: 2, grounding: {},
     caso: { nivel: 'Pregrado', duracion_min: 45, aviso: 'Ficticio', publicacion: { version: 2 },
@@ -153,6 +191,8 @@ test('El caso socrático se incorpora al artículo y su texto se escapa', async 
   assert.equal(element('casoSection').classList.contains('hidden'), false);
   assert.ok(html.includes('LR+ 3.1 (IC 95 %: 1.6–5.9)'));
   assert.ok(html.includes('medsemiotics-db'));
+  assert.ok(html.includes('1. <span class="font-medium">aneurisma de 4.0 cm o mayor</span>: <span class="font-mono">LR+ 15.6'));
+  assert.ok(html.includes('⚠ no &lt;i&gt;excluye&lt;/i&gt;'));
   assert.ok(!html.includes('<script>') && !html.includes('<img') && !html.includes('<b>obj'));
   assert.equal(element('postRevised').textContent, '2026-09-21');
   assert.equal(element('metaCitationDate').content, '2026/08/21');

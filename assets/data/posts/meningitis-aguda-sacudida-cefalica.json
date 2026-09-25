@@ -282,7 +282,7 @@
       "ultima_revision": "2026-09-24",
       "revisiones": []
     },
-    "fuente_revision": "1d33074a25224a006e43e010c4be6ad39a771e7e",
+    "fuente_revision": "fbd5cbf59e75e77b70a630f881ac1c1754e1e063",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -356,6 +356,8 @@
             "decision": null,
             "motivo": "la fuente publica sensibilidad agrupada pero no especificidad, así que el cociente no es calculable desde el abstract",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -371,6 +373,8 @@
             "decision": null,
             "motivo": "sensibilidad agrupada sin especificidad; LR no calculable",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -386,6 +390,8 @@
             "decision": null,
             "motivo": "la fuente agrupa náuseas y vómitos en una sola estimación",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           }
         ],
@@ -419,6 +425,8 @@
             "decision": null,
             "motivo": "forma parte de la tríada fiebre + rigidez de nuca + alteración del estado mental, cuya presencia de al menos uno tiene sensibilidad del 99-100%. La fuente no desglosa el cociente de cada componente por separado.",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           },
           {
@@ -432,6 +440,8 @@
             "decision": null,
             "motivo": "componente de la tríada; la fuente no publica su cociente aislado",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": []
           }
         ],
@@ -468,6 +478,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:12060874"
             ]
@@ -486,6 +498,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:12060874"
             ]
@@ -504,6 +518,8 @@
             "decision": null,
             "motivo": null,
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:12060874"
             ]
@@ -546,6 +562,8 @@
             "decision": "una prueba negativa no excluye la meningitis; no evita la punción lumbar",
             "motivo": "la revisión publica sensibilidad y especificidad agrupadas, con certeza muy baja, pero no el cociente. No se calcula aquí",
             "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
             "referencias": [
               "pmid:32524581"
             ]
