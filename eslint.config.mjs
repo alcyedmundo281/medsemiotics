@@ -24,6 +24,8 @@ export default [
       '**/*.bundle.js',
       'gastroenterologia/pancreatitis_aguda/assets/',
       'medicina_y_datos/estadisticos_descubiertos/assets/',
+      '**/.venv/',
+      '**/Whatsapp/',
     ],
   },
   ...compat.extends('eslint:recommended'),
