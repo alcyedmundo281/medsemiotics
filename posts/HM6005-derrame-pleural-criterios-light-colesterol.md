@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: fbd5cbf59e75e77b70a630f881ac1c1754e1e063
+  revision: 22c5b2fce06af1f9f795698b328c074355dc9b3f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6005-derrame-pleural-exudativo.yaml
   archivos:
@@ -29,7 +29,7 @@ fuente:
     conceptos/HM3010-cociente-colesterol-pleural-suero.yaml: 43eab803b2a803b5ab218164c56656161a0ceb952695913661ee48c75f443180
     conceptos/HM3011-criterios-de-light.yaml: 7eabb4a95b5af5e3287e70f2a81c8813560748ce04688c042675e12bd1dfa94f
     conceptos/HM3148-lineas-b-pulmonares-bilaterales.yaml: bf438bf8faf27db643fbcfa947ad803782ce7e30b057ddcd3e21790d952d516e
-    condiciones/HM6005-derrame-pleural-exudativo.yaml: 0e8b529637113d3e77650e09fafa6166ab43e58e3d62a252ee05990cda61e9dc
+    condiciones/HM6005-derrame-pleural-exudativo.yaml: b94b577d31df9901adac0d2a89e9229e9ae82dcd8e242db6e1f0da9b75a156e8
     referencias/pmid-22392031.yaml: 167a3ea8e8037ca94a29ecff6c379200f402babf474159c1a9b6a94336ee5e7b
     referencias/pmid-24360987.yaml: 8378261ca47f282fed9721d99f26ed84b33e42267908a065babf6ab0095501b2
     referencias/pmid-24938565.yaml: e486bbf283c8e3791fee065bb75aa0dad8434e5930583c00d3ca456c255614dc
@@ -63,7 +63,7 @@ evidencia:
     - 250
     umbral: colesterol pleural > 55 mg/dL
     ref: pmid:24938565
-    nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor.
+    nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor
   decision: el indicador aislado más potente para clasificar el derrame
 - concepto: HM:3009
   rol: prueba_especifica
@@ -150,13 +150,13 @@ autoevaluacion:
   opciones:
   - texto: 'LR positivo: 7.1, como estimación puntual única.'
     correcta: false
-    feedback: '7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame.'
+    feedback: '7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame.'
   - texto: 'LR positivo: 250, como estimación puntual única.'
     correcta: false
-    feedback: '250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame.'
+    feedback: '250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame.'
   - texto: 'LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única.'
     correcta: true
-    feedback: 'LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame.'
+    feedback: 'LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame.'
 ---
 
 # Derrame pleural exudativo
@@ -185,7 +185,7 @@ Snomed: 13841000119107; Cie10: J90
 
 **Estado del LR:** LR medido
 
-**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor.
+**LR positivo:** Rango documentado: 7.1 / 250; Umbral: colesterol pleural > 55 mg/dL; Referencia: pmid:24938565; Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor
 
 **Decisión:** el indicador aislado más potente para clasificar el derrame
 
@@ -236,6 +236,8 @@ Snomed: 13841000119107; Cie10: J90
 ## Aspectos pendientes de documentación
 
 Sin probabilidad_base. Búsqueda en PubMed del 2026-09-23 de series de toracocentesis consecutivas: Porcel 2014 (pmid:24360987; 3077 pacientes) da las causas del derrame pero no la proporción de exudados en su resumen, y Wilcox 2014 (pmid:24938565) tampoco. Sumar las causas que suelen dar exudado sería inferir la cifra, no transcribirla. Falta leer el texto completo de Porcel 2014.
+
+Origen del rango 7.1-250 del colesterol pleural. El abstract de Wilcox 2014 no dice qué estudios dan cada extremo ni cuántos pacientes tienen. La nota anterior lo atribuía a «series pequeñas» sin fuente, y se retiró el 2026-09-24. Falta leer el texto completo, que no está en PMC.
 
 ## Referencias y procedencia
 

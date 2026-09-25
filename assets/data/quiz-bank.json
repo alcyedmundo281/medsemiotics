@@ -487,7 +487,7 @@
         ],
         "umbral": "colesterol pleural > 55 mg/dL",
         "ref": "pmid:24938565",
-        "nota": "rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor."
+        "nota": "rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor"
       },
       "poblacion": null,
       "motivo": null,
@@ -509,17 +509,17 @@
       {
         "texto": "LR positivo: 7.1, como estimación puntual única.",
         "correcta": false,
-        "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+        "feedback": "7.1 es el límite inferior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
       },
       {
         "texto": "LR positivo: 250, como estimación puntual única.",
         "correcta": false,
-        "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+        "feedback": "250 es el límite superior del rango documentado, no una estimación puntual. LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
       },
       {
         "texto": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única.",
         "correcta": true,
-        "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, muy amplio. El extremo superior refleja series pequeñas; conviene leerlo como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
+        "feedback": "LR positivo: rango de 7.1 a 250; no se registra una estimación puntual única. Umbral: colesterol pleural > 55 mg/dL. Nota: rango entre estudios, sin estimación agrupada ni intervalo de confianza en el abstract. Se lee como «desplaza mucho», no como un valor. Interpretación registrada: el indicador aislado más potente para clasificar el derrame."
       }
     ]
   },
