@@ -6,10 +6,12 @@
 # que dicen contra qué diagnóstico se midió cada cociente. La sensibilidad por diámetro
 # no tiene token: el caso la describe sin cifras y remite al artículo.
 condicion_id: HM:6006
-estado: borrador
+estado: publicado
 autoria:
   autor: Dr. Alcy Torres
-  revisor: null
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-09-24
 nivel: Pregrado
 duracion_min: 40
 objetivos:
