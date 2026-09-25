@@ -1,0 +1,270 @@
+# Caso socrático para Derrame pleural exudativo (HM:6005).
+# El artículo no trata de encontrar el derrame, sino de clasificar un líquido ya obtenido.
+# Toda la evidencia son pruebas sobre el líquido pleural, y cada una sirve en una sola
+# dirección: los criterios de Light solo tienen registrado el cociente negativo (sirven para
+# descartar) y la LDH y el colesterol solo el positivo (sirven para confirmar). El paciente
+# tiene insuficiencia cardíaca y toma diurético a propósito: obliga a preguntarse si el
+# derrame es «el de siempre» y a no quedarse con unos criterios de Light positivos.
+condicion_id: HM:6005
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-09-24
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Distinguir la pregunta diagnóstica «¿hay derrame?» de la pregunta «¿este derrame es un exudado?» y reconocer qué pruebas responden a cada una.
+  - Interpretar los criterios de Light como una prueba para descartar, a partir del único cociente que registra la base.
+  - Comparar el poder confirmatorio de la LDH pleural, el colesterol pleural y el cociente de colesterol pleural/sérico, y explicar por qué un rango entre estudios no es una estimación puntual.
+  - Estimar con la calculadora bayesiana cómo cambia la probabilidad de exudado, y reconocer por qué no se encadenan cocientes de pruebas que miden el mismo líquido.
+  - Decidir el estudio etiológico siguiente ante un exudado en un paciente con insuficiencia cardíaca conocida.
+vineta:
+  titulo: El derrame de siempre, o no
+  texto: >-
+    Varón de 68 años, exfumador, con insuficiencia cardíaca con fracción de eyección
+    reducida en tratamiento con furosemida diaria, que acude a consulta por disnea de
+    esfuerzo progresiva desde hace cinco semanas. Ahora se ahoga al subir un piso. Refiere
+    tos seca, un dolor sordo en el costado derecho y una pérdida de unos cuatro kilos que
+    no ha buscado. No ha tenido fiebre. Dice que el diurético «ya no le hace efecto»: no ha
+    ganado peso, no ha aumentado la hinchazón de las piernas y duerme con la misma almohada
+    de siempre. La radiografía de tórax muestra un derrame derecho que ocupa algo menos de
+    la mitad del hemitórax, sin derrame izquierdo.
+  datos:
+    - etiqueta: Temperatura
+      valor: 36.8 °C
+    - etiqueta: Frecuencia cardíaca
+      valor: 92 lpm
+    - etiqueta: Frecuencia respiratoria
+      valor: 22 rpm
+    - etiqueta: Presión arterial
+      valor: 118/72 mmHg
+    - etiqueta: Saturación de oxígeno
+      valor: 93 % con aire ambiente
+etapas:
+  - titulo: Antes de tocar al paciente
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          Tiene insuficiencia cardíaca y un derrame pleural. ¿Por qué no basta con
+          aumentar el diurético y citarlo en dos semanas?
+        clave: >-
+          Porque el cuadro no se comporta como una descompensación. El derrame de la
+          insuficiencia cardíaca suele ser bilateral y, cuando es unilateral, suele ser
+          derecho, así que el lado no basta para sospechar otra cosa. Lo que no encaja es el
+          resto: aparece sin signos de congestión (ni aumento de peso, ni más edemas, ni
+          ortopnea nueva), con dolor en el costado y con una pérdida de peso no buscada.
+          Tener una causa conocida de trasudado no protege de tener además un exudado, y un
+          paciente exfumador que adelgaza obliga a pensar en otras causas.
+      - pregunta: >-
+          Antes de pedir nada, formula la pregunta diagnóstica que quieres responder. ¿Es
+          «¿tiene derrame?»?
+        clave: >-
+          No: el derrame ya se ve en la radiografía. La pregunta es si ese líquido es un
+          trasudado (un desequilibrio de presiones con la pleura sana, como en la
+          insuficiencia cardíaca) o un exudado (la pleura o sus vasos están afectados:
+          infección, neoplasia, tuberculosis, embolia, enfermedad inflamatoria). Esa
+          clasificación decide todo lo que viene después: un trasudado se trata tratando la
+          causa, y un exudado exige buscarla. Toda la evidencia del artículo responde a esta
+          segunda pregunta, y ninguna prueba de esta etapa se hace a la cabecera.
+  - titulo: Confirmar el líquido y obtenerlo
+    fase: exploracion
+    hallazgos: [HM:3007]
+    informacion: >-
+      En la base derecha hay matidez a la percusión, disminución de las vibraciones
+      vocales y abolición del murmullo vesicular. La ecografía a pie de cama muestra un
+      espacio anecoico entre la pared torácica y el pulmón, por encima del diafragma:
+      {{hallazgo HM:3007}}, sin tabiques y con el pulmón flotando dentro. Se hace una
+      toracocentesis diagnóstica guiada por ecografía y se obtiene un líquido amarillo
+      turbio. Al mismo tiempo se extrae una muestra de sangre.
+    preguntas:
+      - pregunta: >-
+          La ficha del {{hallazgo HM:3007}} dice que su estado es {{estado HM:3007}}.
+          ¿Por qué no tiene cociente de verosimilitud en este artículo?
+        clave: >-
+          Porque en este artículo no es una prueba, sino la condición previa: sin derrame
+          no hay nada que clasificar como exudado o trasudado. Un cociente mide cuánto
+          cambia un hallazgo la probabilidad de una enfermedad; aquí todos los pacientes
+          tienen derrame, así que el hallazgo no puede distinguir a unos de otros. Es un
+          buen recordatorio de que el cociente de un hallazgo depende de la pregunta que se
+          hace: la ecografía sí tiene rendimiento para detectar un derrame, pero esa es otra
+          pregunta y otro artículo.
+      - pregunta: >-
+          La ficha enumera varios falsos positivos de la ecografía. ¿Cuál te preocuparía
+          más en la base derecha y cómo lo evitarías?
+        clave: >-
+          Confundir el derrame con una ascitis por debajo del diafragma, con el hígado o
+          con una consolidación del pulmón, que en la base derecha están muy cerca. Se evita
+          identificando siempre el diafragma y situando el líquido por encima de él, y
+          comprobando que el pulmón se mueve dentro del líquido. No es un detalle técnico:
+          puncionar el hígado creyendo que es un derrame es una complicación grave. Por eso
+          la toracocentesis se guía por ecografía.
+      - pregunta: >-
+          ¿Por qué se extrae sangre al mismo tiempo que el líquido pleural?
+        clave: >-
+          Porque varias de las pruebas que vas a interpretar son cocientes entre el líquido
+          y el suero (proteínas y LDH en los criterios de Light, y el colesterol en una de
+          las pruebas específicas), y para compararlos las dos muestras tienen que ser del
+          mismo momento. Una prueba que necesita el valor sérico no se puede interpretar con
+          una analítica de hace semanas.
+  - titulo: Llegan los criterios de Light
+    fase: exploracion
+    hallazgos: [HM:3011, HM:3009]
+    informacion: >-
+      El laboratorio informa: proteínas pleurales de 4.1 g/dL con proteínas séricas de
+      6.8 g/dL, y LDH pleural de 310 U/L con LDH sérica de 220 U/L (límite superior de la
+      normalidad del laboratorio: 250 U/L). Se cumplen los tres {{hallazgo HM:3011}}. La
+      LDH pleural supera además el umbral absoluto del artículo: hay
+      {{hallazgo HM:3009}}.
+    preguntas:
+      - pregunta: >-
+          Calcula tú los tres criterios de Light con estos datos. ¿Cuáles se cumplen?
+        clave: >-
+          Los tres. El cociente de proteínas pleura/suero es de 0.6, que supera el umbral
+          de 0.5. El cociente de LDH pleura/suero es de 1.4, que supera el umbral de 0.6. Y
+          la LDH pleural supera los dos tercios del límite superior normal de la LDH
+          sérica. Basta con que se cumpla uno para clasificar el líquido como exudado según
+          Light, pero hacer el cálculo uno mismo evita confiar en la etiqueta del informe.
+      - pregunta: >-
+          Busca en la ficha de los {{hallazgo HM:3011}} qué cociente registra la base.
+          ¿Qué conclusión te permite sacar en este paciente?
+        clave: >-
+          Solo registra el negativo: {{lr- HM:3011}}. Es decir, la fuerza de la regla está
+          en el caso contrario: si no se cumple ninguno de los tres criterios, el exudado
+          queda prácticamente descartado. En este paciente se cumplen, y para ese resultado
+          la base no te da una cifra en la que apoyarte. Es la definición de una prueba
+          sensible: casi todos los exudados cumplen algún criterio, pero no todo lo que
+          cumple un criterio es exudado. Un resultado positivo en una prueba sensible te
+          dice que no puedes descartar, no que hayas confirmado.
+      - pregunta: >-
+          ¿Por qué, precisamente en este paciente, deberías desconfiar un poco de un Light
+          positivo?
+        clave: >-
+          Porque toma diuréticos. Al sacar agua del espacio pleural, el diurético concentra
+          las proteínas y la LDH del líquido, y un trasudado cardíaco puede acabar
+          cumpliendo algún criterio de Light. Es la situación clásica en la que Light
+          clasifica como exudado lo que no lo es. La base no registra cuánto ocurre, así que
+          aquí no hay cifra: hay un motivo clínico para pedir una prueba que confirme.
+  - titulo: Pruebas para confirmar
+    fase: discriminacion
+    hallazgos: [HM:3008, HM:3010]
+    informacion: >-
+      Pides al laboratorio el colesterol de las dos muestras: 78 mg/dL en el líquido
+      pleural y 190 mg/dL en el suero. Hay {{hallazgo HM:3008}} y, con el sérico, el
+      {{hallazgo HM:3010}}, que es de 0.41.
+    preguntas:
+      - pregunta: >-
+          Ordena las tres pruebas específicas por su poder para confirmar un exudado. ¿Cuál
+          es más fiable y cuál desplaza más?
+        clave: >-
+          La {{hallazgo HM:3009}} tiene {{lr+ HM:3009}}; el
+          {{hallazgo HM:3010}}, {{lr+ HM:3010}}; y el {{hallazgo HM:3008}}, {{lr+ HM:3008}}.
+          Las dos primeras tienen una estimación puntual con su intervalo, y los dos
+          intervalos, aunque anchos, quedan enteros muy por encima de la unidad: incluso en
+          el peor caso, las dos confirman. El colesterol pleural no tiene estimación
+          puntual, sino un rango entre estudios. Su extremo inferior ya es un cociente
+          alto, así que desplaza mucho la probabilidad en cualquier estudio; pero no puedes
+          escoger un número del rango y decir que es «el» cociente del colesterol. Por eso
+          la decisión de la base lo llama el indicador aislado más potente sin darle un
+          valor único.
+      - pregunta: >-
+          Un compañero dice que el cociente de verosimilitud positivo del colesterol pleural «es de
+          250». ¿Qué le contestas?
+        clave: >-
+          Que eso es el extremo superior de un rango entre estudios, no una estimación. Un
+          rango así dice que distintos estudios obtuvieron resultados muy diferentes, y el
+          resumen de la fuente no dice qué estudios dan cada extremo ni con cuántos
+          pacientes. Por eso la base lo registra como rango y no como valor. La lectura
+          honesta es la más prudente: cualquier
+          valor del rango confirma de forma clara, y el extremo superior no debe usarse para
+          presumir de certeza.
+      - pregunta: >-
+          Con la calculadora bayesiana del artículo, parte de una probabilidad de exudado
+          que te parezca razonable para este paciente y aplica el cociente de la LDH
+          pleural. Después, ¿aplicarías encima el del colesterol y el del cociente de
+          colesterol?
+        clave: >-
+          El cociente de la LDH, por sí solo, lleva una probabilidad intermedia a valores
+          altos, y ese es el cálculo defendible. Encadenar además los del colesterol y el
+          cociente de colesterol daría una certeza artificial: multiplicar cocientes
+          supone que las pruebas son independientes, y estas no lo son, porque miden el
+          mismo líquido con el mismo proceso de fondo (la permeabilidad de la pleura). El
+          colesterol pleural y su cociente con el sérico, además, son casi la misma
+          medida. Que las pruebas coincidan refuerza tu confianza, pero no la multiplica.
+      - pregunta: >-
+          Imagina el caso contrario: no se cumple ningún criterio de Light y el colesterol
+          pleural es bajo. ¿Qué harías con el diagnóstico de exudado?
+        clave: >-
+          Descartarlo en la práctica. Los criterios de Light, con {{lr- HM:3011}}, bajan
+          cualquier probabilidad razonable a valores muy pequeños: pruébalo en la
+          calculadora. Pero cuidado con el colesterol bajo: la base solo registra su
+          cociente positivo, así que un colesterol normal no tiene aquí una cifra que
+          añadir. Lo que descarta es la ausencia de los tres criterios de Light, no el
+          colesterol. Cada prueba de este artículo sirve en una dirección, y usarla en la
+          otra es darle un poder que la evidencia no le reconoce.
+  - titulo: Qué haces con un exudado
+    fase: decision
+    informacion: >-
+      El líquido pleural tiene predominio de linfocitos, glucosa normal y un pH de 7.38.
+      La tinción de Gram es negativa. El paciente sigue afebril.
+    preguntas:
+      - pregunta: >-
+          ¿Cuál es tu conclusión sobre el líquido y qué cambia en el plan del paciente?
+        clave: >-
+          Es un exudado: los criterios de Light positivos no bastaban en un paciente con
+          diurético, pero la LDH pleural y el colesterol confirman en la misma dirección.
+          Lo que cambia es la actitud: ya no basta con ajustar el diurético, porque el
+          derrame no se explica por la insuficiencia cardíaca, o no solo por ella. Hay que
+          buscar la causa.
+      - pregunta: >-
+          Exudado linfocitario, sin fiebre, en un exfumador que adelgaza. ¿Qué causas
+          encabezan tu lista y qué pides?
+        clave: >-
+          La neoplasia (un cáncer de pulmón o una metástasis pleural) y la tuberculosis
+          pleural, que en nuestro medio no puede faltar en la lista de un exudado
+          linfocitario. Se piden la citología del líquido, el cultivo para micobacterias y
+          la adenosina desaminasa, y una tomografía de tórax con contraste, idealmente tras
+          evacuar el líquido para ver el pulmón. Si la citología no es concluyente, se
+          plantea la biopsia pleural. El pH y la glucosa normales, junto con la ausencia de
+          fiebre, hacen menos probable un derrame paraneumónico complicado.
+      - pregunta: >-
+          ¿Qué límites tiene todo lo que has usado en este caso?
+        clave: >-
+          El artículo no registra una probabilidad basal de exudado, y la base explica por
+          qué: la fuente de causas del derrame no publica esa proporción en su resumen, y
+          sumar las causas sería inventar la cifra. Así que la calculadora parte de la
+          probabilidad que tú estimes. Los cocientes proceden del resumen de una revisión
+          sistemática en adultos sometidos a toracocentesis, no del texto completo, y del
+          rango del colesterol pleural no se sabe qué estudios dan cada extremo. Y la base no registra
+          cómo cambian las pruebas con los diuréticos, que es precisamente la duda de este
+          paciente: lo sabes por conocimiento clínico, no por una cifra del artículo.
+cierre:
+  sintesis: >-
+    Clasificar un derrame pleural es una pregunta distinta de encontrarlo, y todas sus
+    pruebas se hacen sobre el líquido. Cada una sirve en una dirección: los criterios de
+    Light son sensibles y su valor está en el negativo, porque si no se cumple ninguno el
+    exudado queda prácticamente descartado; la LDH pleural, el colesterol pleural y el
+    cociente de colesterol son específicos y sirven para confirmar. En un paciente con
+    diurético, un Light positivo pide confirmación. El colesterol pleural se registra como
+    un rango entre estudios, no como un valor, y las pruebas que miden el mismo líquido no
+    se multiplican. Un exudado cambia la conducta: obliga a buscar su causa.
+  necesidades_aprendizaje:
+    - >-
+      Probabilidad basal de exudado entre los pacientes a los que se hace una
+      toracocentesis, que la base tiene pendiente de extraer del texto completo de la serie
+      de causas del derrame.
+    - >-
+      Origen del rango del cociente positivo del colesterol pleural: qué estudios dan cada
+      extremo y con cuántos pacientes.
+    - >-
+      Efecto de los diuréticos sobre los criterios de Light y rendimiento del gradiente de
+      albúmina y de proteínas suero-pleura para reclasificar un falso exudado, que la base
+      no documenta.
+    - >-
+      Rendimiento de las pruebas etiológicas del exudado (citología, adenosina desaminasa,
+      cultivo de micobacterias, biopsia pleural), que el artículo no cubre.
+    - >-
+      Rendimiento de la ecografía para detectar el derrame, que es otra pregunta
+      diagnóstica y otro artículo.
+omitidos: []
