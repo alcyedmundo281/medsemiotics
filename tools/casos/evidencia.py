@@ -7,8 +7,9 @@ Sintaxis: ``{{tipo HM:####}}``. Tipos:
 - ``hallazgo``: nombre del hallazgo.
 - ``estado``: estado del LR (medido, no medido, no medible, sin efecto).
 
-Si la base mide un hallazgo en varias poblaciones, ``{{lr+ HM:####@2}}`` cita solo la
-segunda medición; sin índice se citan todas con su población.
+Si la base mide un hallazgo varias veces, ``{{lr+ HM:####@2}}`` cita solo la segunda
+medición; sin índice se citan todas, etiquetadas por su referencia si vienen de fuentes
+distintas y por su población si comparten fuente.
 
 Si la medición tiene ``tramos`` (cortes de un hallazgo graduado, o la misma prueba evaluada
 contra varias definiciones de la condición), ``{{lr+ HM:3012#2}}`` cita el segundo tramo con
@@ -184,8 +185,9 @@ def resolver_token(
     numero: int | None = None,
     tramo: int | None = None,
 ) -> str:
-    """Resuelve un token. Si la base mide el hallazgo en varias poblaciones, ``@n`` elige una;
-    sin índice se citan todas, cada una con su población. ``#m`` cita el tramo m."""
+    """Resuelve un token. Si la base mide el hallazgo varias veces, ``@n`` elige una; sin índice
+    se citan todas, cada una por su referencia si vienen de fuentes distintas y por su población
+    si comparten fuente. ``#m`` cita el tramo m."""
     if tipo not in TIPOS:
         raise ErrorDeCaso(f"Token desconocido «{tipo}»; tipos válidos: {sorted(TIPOS)}")
     items = mediciones(concepto, articulo)
@@ -213,9 +215,14 @@ def resolver_token(
         return _valor_tramo(tipo, concepto, tramos[tramo - 1], condiciones=True)
     if len(items) == 1:
         return _valor(tipo, concepto, items[0])
+    # Mediciones de fuentes distintas se identifican por su referencia; de la misma
+    # fuente en poblaciones distintas, por la población.
+    fuentes = [sorted(referencias_de(item)) for item in items]
+    por_fuente = len({tuple(f) for f in fuentes}) == len(items)
     return "; ".join(
-        f"{_valor(tipo, concepto, item)} ({item.get('poblacion') or f'medición {i}'})"
-        for i, item in enumerate(items, 1)
+        f"{_valor(tipo, concepto, item)} "
+        f"({', '.join(fuente) if por_fuente else item.get('poblacion') or f'medición {i}'})"
+        for i, (item, fuente) in enumerate(zip(items, fuentes, strict=True), 1)
     )
 
 
