@@ -88,6 +88,8 @@
           "decision": null,
           "motivo": "es la condición previa, no una prueba: sin derrame no hay nada que clasificar como exudado o trasudado",
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": []
         }
       ],
@@ -127,6 +129,8 @@
           "decision": "su valor está en el negativo: si no se cumple ninguno de los tres, el exudado queda prácticamente descartado",
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": [
             "pmid:24938565"
           ]
@@ -144,6 +148,8 @@
           "decision": "confirma exudado con un intervalo estrecho y reproducible",
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": [
             "pmid:24938565"
           ]
@@ -185,6 +191,8 @@
           "decision": "el indicador aislado más potente para clasificar el derrame",
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": [
             "pmid:24938565"
           ]
@@ -202,6 +210,8 @@
           "decision": "alternativa al colesterol absoluto cuando se dispone del sérico",
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": [
             "pmid:24938565"
           ]

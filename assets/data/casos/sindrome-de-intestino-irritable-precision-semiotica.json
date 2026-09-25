@@ -75,6 +75,8 @@
           "decision": "su relación con la defecación y con los cambios del hábito intestinal es el núcleo de los criterios diagnósticos; por sí solo no cuantifica la probabilidad",
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": [
             "pmid:27144627"
           ]
@@ -106,6 +108,8 @@
           "decision": null,
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": []
         },
         {
@@ -119,6 +123,8 @@
           "decision": null,
           "motivo": null,
           "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
           "referencias": []
         }
       ],
