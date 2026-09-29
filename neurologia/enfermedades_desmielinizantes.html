@@ -85,6 +85,18 @@
         background-color: #cbd5e1;
         border-radius: 20px;
       }
+
+      @media print {
+        @page { margin: 1.4cm; }
+        body { background: white !important; }
+        header, aside, body > .container > .text-center, .no-print { display: none !important; }
+        body > .container, main, #content-container { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; box-shadow: none !important; border: 0 !important; }
+        .module-section { display: none !important; }
+        #section-abp.active { display: block !important; }
+        .abp-question, .abp-deliverable { break-inside: avoid; box-shadow: none !important; }
+        textarea { min-height: 7rem !important; overflow: visible !important; resize: none !important; }
+        input, textarea { border-color: #94a3b8 !important; }
+      }
     </style>
   </head>
   <body class="font-['Inter'] bg-slate-50 text-slate-800 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50/70 min-h-screen">
@@ -408,6 +420,24 @@
           </h2>
       </div>
       <div id="abp-container">
+        <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-6 mb-8">
+          <h3 class="text-xl font-bold text-indigo-900 mb-3">Guía de entrega: un solo PDF</h3>
+          <p class="text-slate-700 mb-3">Complete en equipo las 12 preguntas de <strong>KNOW → REASON → ACT</strong>. Después, cada estudiante completa su ticket de salida y la conclusión clínica. El botón al final abre la impresión del navegador: seleccione <strong>Guardar como PDF</strong>.</p>
+          <ul class="list-disc pl-6 text-slate-700 space-y-1">
+            <li>Diferencie siempre <strong>dato del caso</strong>, <strong>interpretación</strong> y <strong>propuesta</strong>.</li>
+            <li>Los criterios de McDonald 2024 se aplican para sustentar EM; no convierten por sí solos una bandera roja de NMOSD o MOGAD en EM.</li>
+            <li>No incluya datos de pacientes reales ni información personal de terceros.</li>
+          </ul>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-8 abp-deliverable">
+          <label class="font-semibold text-slate-700">Integrantes del equipo
+            <input id="abp-team" type="text" class="mt-2 w-full p-3 border border-slate-300 rounded-lg bg-white" placeholder="Nombres de los integrantes" />
+          </label>
+          <label class="font-semibold text-slate-700">Estudiante que entrega
+            <input id="abp-student" type="text" class="mt-2 w-full p-3 border border-slate-300 rounded-lg bg-white" placeholder="Nombre y apellido" />
+          </label>
+        </div>
         <div class="bg-gradient-to-r from-rose-50 to-orange-50 p-6 md:p-8 rounded-2xl mb-8 border border-rose-100 shadow-sm relative overflow-hidden">
           <div class="absolute -right-4 -top-4 text-rose-100 opacity-50 transform rotate-12">
              <i class="fas fa-clipboard-list text-8xl"></i>
@@ -420,37 +450,30 @@
           </p>
         </div>
         
-        <div class="space-y-6" id="abp-steps-container">
-          <!-- ABP steps will be rendered here -->
-        </div>
+        <div class="space-y-8" id="abp-steps-container"></div>
 
-        <div id="abp-decision-section" class="mt-10 pt-8 border-t-2 border-dashed border-slate-200">
-          <h3 class="text-2xl font-bold text-slate-800 mb-5">
-            Decisión Clínica Definitiva
-          </h3>
-          <p class="mb-4 text-slate-600 font-medium">
-            Basado en la integración sindrómica de los hallazgos, ¿cuál es su diagnóstico primario y acción inmediata?
-          </p>
-          <div class="grid gap-3">
-             <label class="flex items-center p-5 border border-slate-200 bg-white rounded-xl hover:border-rose-400 shadow-sm cursor-pointer transition-colors group">
-                <input type="radio" name="abp_diagnosis" value="em" class="h-5 w-5 text-rose-600 focus:ring-rose-500" />
-                <span class="ml-4 font-semibold text-slate-700 group-hover:text-rose-700">Esclerosis Múltiple (EM). Iniciar Interferón.</span>
-             </label>
-             <label class="flex items-center p-5 border border-slate-200 bg-white rounded-xl hover:border-rose-400 shadow-sm cursor-pointer transition-colors group">
-                <input type="radio" name="abp_diagnosis" value="tenmo" class="h-5 w-5 text-rose-600 focus:ring-rose-500" />
-                <span class="ml-4 font-semibold text-slate-700 group-hover:text-rose-700">Trastorno Espectro NMOSD. Solicitar anti-AQP4.</span>
-             </label>
-             <label class="flex items-center p-5 border border-slate-200 bg-white rounded-xl hover:border-rose-400 shadow-sm cursor-pointer transition-colors group">
-                <input type="radio" name="abp_diagnosis" value="mogad" class="h-5 w-5 text-rose-600 focus:ring-rose-500" />
-                <span class="ml-4 font-semibold text-slate-700 group-hover:text-rose-700">Enfermedad MOGAD. Solicitar anti-MOG.</span>
-             </label>
+        <div class="mt-10 pt-8 border-t-2 border-dashed border-slate-200">
+          <div class="abp-deliverable bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-6">
+            <h3 class="text-2xl font-bold text-amber-900 mb-2">Producto individual: ticket de salida</h3>
+            <p class="text-amber-900/80 mb-5">Redacte esta sección individualmente y con sus propias palabras.</p>
+            <div id="abp-ticket-container" class="space-y-5"></div>
           </div>
-          <div class="text-center mt-8">
-            <button class="bg-rose-600 text-white font-bold py-3 px-12 rounded-full hover:bg-rose-700 transition-all shadow-lg hover:-translate-y-1" onclick="confirmAbpDiagnosis()">
-              <i class="fas fa-clipboard-check mr-2"></i> Emitir Diagnóstico
-            </button>
+
+          <div class="abp-deliverable bg-white border border-slate-200 rounded-2xl p-6">
+            <h3 class="text-2xl font-bold text-slate-800 mb-2">Conclusión clínica</h3>
+            <p class="text-slate-600 mb-5">Integre el razonamiento; no se limite a nombrar un diagnóstico.</p>
+            <div id="abp-conclusion-container" class="space-y-5"></div>
           </div>
-          <div id="abp_feedback" class="mt-6 p-6 rounded-xl text-md font-medium shadow-sm transition-all text-center" style="display: none"></div>
+
+          <div class="no-print mt-8 bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p id="abp-progress" class="font-semibold text-slate-700" aria-live="polite">0 de 19 apartados completados</p>
+              <button class="bg-rose-600 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-700 transition-all shadow-lg" onclick="printAbpSubmission()">
+                <i class="fas fa-file-pdf mr-2"></i> Preparar entrega en PDF
+              </button>
+            </div>
+            <p id="abp-print-warning" class="hidden mt-4 text-sm font-semibold text-rose-700"></p>
+          </div>
         </div>
       </div>
     </template>
@@ -462,7 +485,7 @@
             5. Autoevaluación Integral (USMLE Style)
           </h2>
       </div>
-      <p class="text-slate-600 font-medium mb-8">Preguntas orientadas a integrar el reconocimiento de síndromes desmielinizantes, basadas en los Criterios de McDonald 2017 y las actualizaciones clínicas.</p>
+      <p class="text-slate-600 font-medium mb-8">Preguntas orientadas a integrar el reconocimiento de síndromes desmielinizantes y a distinguir los criterios de McDonald 2024 para EM de los hallazgos sugerentes de NMOSD o MOGAD.</p>
       <div id="quiz-questions"></div>
     </template>
 
@@ -681,45 +704,113 @@
 
       // --- ABP Logic ---
       function setupAbp(container) {
-        const stepsData = [
+        const stages = [
           {
-            title: '1. Reconocimiento de Patrones (Síndrome)',
-            placeholder: 'Ej: Presencia de Mielitis transversa extensa (LETM) porque abarca de C4 a T2 (7 segmentos medulares). Presencia adicional de vómitos...',
+            name: 'KNOW',
+            subtitle: 'Caracterizar antes de etiquetar',
+            badgeClass: 'bg-indigo-100 text-indigo-800',
+            questions: [
+              '1. Separe los datos positivos, los negativos y los datos todavía desconocidos del caso.',
+              '2. Defina el síndrome neurológico principal y localice anatómicamente la lesión. Justifique ambos.',
+              '3. ¿El episodio previo de hipo y vómitos puede considerarse un ataque desmielinizante? Explique qué falta para afirmarlo.',
+              '4. Formule una definición operativa de brote y aplíquela, con cautela, a cada episodio de la viñeta.'
+            ]
           },
           {
-            title: '2. Determinación de Banderas Rojas',
-            placeholder: 'Ej: El antecedente de vómitos incoercibles corresponde al Síndrome de Área Postrema. Los hallazgos radiculares espinales de larga extensión no encajan con EM...',
+            name: 'REASON',
+            subtitle: 'Comparar hipótesis y buscar contradicciones',
+            badgeClass: 'bg-violet-100 text-violet-800',
+            questions: [
+              '5. Construya los argumentos a favor y en contra de esclerosis múltiple (EM).',
+              '6. Construya los argumentos a favor y en contra de NMOSD asociado a AQP4-IgG.',
+              '7. Construya los argumentos a favor y en contra de MOGAD.',
+              '8. Explique el valor discriminante —y las limitaciones— de combinar síndrome de área postrema, mielitis longitudinalmente extensa y RM cerebral normal.'
+            ]
+          },
+          {
+            name: 'ACT',
+            subtitle: 'Discriminar, proteger y decidir',
+            badgeClass: 'bg-rose-100 text-rose-800',
+            questions: [
+              '9. Priorice los estudios discriminantes. Para cada uno indique qué hipótesis evalúa y cómo cambiaría su conducta.',
+              '10. Evalúe si los criterios de McDonald 2024 pueden aplicarse con los datos disponibles. Distinga criterio diagnóstico, dato de apoyo y hallazgo solamente sugerente.',
+              '11. Identifique señales de alarma y proponga estabilización, derivación y tratamiento agudo según gravedad y bajo supervisión especializada; evite respuestas farmacológicas automáticas.',
+              '12. Proponga la conducta inicial completa y los puntos de reevaluación si AQP4-IgG y MOG-IgG resultan negativos o discordantes con el fenotipo.'
+            ]
           }
+        ];
+
+        const ticketQuestions = [
+          'Definición operativa de brote desmielinizante.',
+          'Dos banderas rojas del caso que orientan a NMOSD o MOGAD, con su justificación.',
+          'Técnica paso a paso para evaluar el defecto pupilar aferente relativo (DPAR).'
+        ];
+
+        const conclusionQuestions = [
+          'Síndrome y localización final.',
+          'Diagnóstico diferencial jerarquizado: argumentos a favor y en contra de EM, NMOSD y MOGAD.',
+          'Datos faltantes, estudios discriminantes y conducta inicial justificada.',
+          'Fuentes consultadas: cite este módulo y las fuentes adicionales utilizadas.'
         ];
         
         const stepsContainer = container.querySelector('#abp-steps-container');
-        stepsContainer.innerHTML = stepsData
-          .map((step, i) => `
-                <div class="bg-white p-6 border border-slate-200 rounded-xl shadow-sm relative z-10 transition-shadow focus-within:shadow-md focus-within:border-indigo-300 pl-16">
-                    <div class="absolute left-6 top-6 bg-slate-100 text-slate-500 rounded-md w-6 h-6 flex items-center justify-center font-bold text-sm">${i+1}</div>
-                    <h4 class="text-lg font-bold text-slate-700 mb-3">${step.title}</h4>
-                    <textarea class="w-full p-4 border border-slate-200 rounded-lg bg-slate-50 focus:bg-white focus:ring-2 focus:ring-indigo-100 outline-none resize-y min-h-[100px] text-slate-700 font-medium" placeholder="${step.placeholder}"></textarea>
-                </div>
-            `).join('');
+        stepsContainer.innerHTML = stages.map(stage => `
+          <section class="abp-stage">
+            <div class="mb-4">
+              <span class="inline-block ${stage.badgeClass} text-sm font-black tracking-widest rounded-full px-4 py-2">${stage.name}</span>
+              <h3 class="text-xl font-bold text-slate-800 mt-2">${stage.subtitle}</h3>
+            </div>
+            <div class="space-y-5">
+              ${stage.questions.map(question => answerField(question, 'Respuesta razonada; cite los datos del caso que sostienen su análisis.')).join('')}
+            </div>
+          </section>
+        `).join('');
+
+        container.querySelector('#abp-ticket-container').innerHTML = ticketQuestions
+          .map(question => answerField(question, 'Respuesta individual.')).join('');
+        container.querySelector('#abp-conclusion-container').innerHTML = conclusionQuestions
+          .map(question => answerField(question, 'Síntesis argumentada.')).join('');
+
+        container.querySelectorAll('textarea').forEach(field => {
+          field.addEventListener('input', () => {
+            autoGrowAbpField(field);
+            updateAbpProgress();
+          });
+        });
+        updateAbpProgress();
       }
 
-      function confirmAbpDiagnosis() {
-        const selected = document.querySelector('input[name="abp_diagnosis"]:checked');
-        const feedbackEl = document.getElementById('abp_feedback');
-        if (!selected) {
-           feedbackEl.innerHTML = '<i class="fas fa-exclamation mr-2"></i> Selecciona un curso de acción de la lista antes de emitir tu diagnóstico.';
-           feedbackEl.className = 'mt-6 p-5 rounded-xl text-md font-bold text-center bg-slate-100 text-slate-600 border border-slate-300 shadow-inner block animate-[fadeIn_0.3s_ease-out]';
-           return;
-        }
-        if (selected.value === 'tenmo') {
-           feedbackEl.innerHTML = `<h4 class="text-2xl mb-2"><i class="fas fa-microscope"></i> ¡Impecable!</h4>
-             <p>Asociaste el <strong>Síndrome Clínico de Área Postrema (Vómitos)</strong> y el <strong>Patrón LETM Radiológico (C4-T2)</strong>. Ambos son componentes *High Yield* definitivos para Trastorno de Espectro Neuromielitis Óptica (NMOSD). Administrar un modificador como Interferón que se usa en EM convencional sería <strong>dañino</strong> en este paciente. Solicitar anti-AQP4 es lo correcto.</p>`;
-           feedbackEl.className = 'mt-6 p-6 rounded-xl text-md text-left bg-emerald-100 text-emerald-800 border-[2px] border-emerald-400 shadow-lg block animate-[fadeIn_0.5s_ease-out]';
+      function answerField(question, placeholder) {
+        return `<label class="abp-question block bg-white p-5 border border-slate-200 rounded-xl shadow-sm">
+          <span class="block text-lg font-bold text-slate-800 mb-3">${question}</span>
+          <textarea class="abp-answer w-full p-4 border border-slate-300 rounded-lg bg-slate-50 focus:bg-white focus:ring-2 focus:ring-indigo-100 outline-none resize-y min-h-[120px] text-slate-700" placeholder="${placeholder}"></textarea>
+        </label>`;
+      }
+
+      function updateAbpProgress() {
+        const fields = Array.from(document.querySelectorAll('#abp-container .abp-answer'));
+        const completed = fields.filter(field => field.value.trim().length > 0).length;
+        const progress = document.getElementById('abp-progress');
+        if (progress) progress.textContent = `${completed} de ${fields.length} apartados completados`;
+      }
+
+      function autoGrowAbpField(field) {
+        field.style.height = 'auto';
+        field.style.height = `${Math.max(field.scrollHeight, 120)}px`;
+      }
+
+      function printAbpSubmission() {
+        const fields = Array.from(document.querySelectorAll('#abp-container .abp-answer'));
+        fields.forEach(autoGrowAbpField);
+        const missing = fields.filter(field => !field.value.trim()).length;
+        const warning = document.getElementById('abp-print-warning');
+        if (missing > 0) {
+          warning.textContent = `Faltan ${missing} apartados. Puede guardarlo como borrador, pero la entrega solicitada requiere todos los campos.`;
+          warning.classList.remove('hidden');
         } else {
-           feedbackEl.innerHTML = `<h4 class="text-xl mb-2"><i class="fas fa-times-circle"></i> Repensar Abordaje</h4>
-             <p>Este paciente posee lesiones <strong>LETM</strong> de gran amplitud de segmentos espinales combinados con compromiso histórico del <strong>Suelo del 4to Ventrículo</strong> (Hipo/vómitos). Estos cuadros no son característicos ni de EM pura ni de MOGAD en adultos iniciales, son señales del eslabón NMOSD-AQP4. <br><br><span class="text-rose-900 font-bold">Peligro clínico:</span> usar Terapia Modificadora de Enfermedad de EM en esta paciente (Interferón) podría desencadenar parálisis fatal.</p>`;
-           feedbackEl.className = 'mt-6 p-6 rounded-xl text-md text-left bg-rose-50 text-rose-800 border-[2px] border-rose-300 shadow-md block animate-[fadeIn_0.5s_ease-out]';
+          warning.classList.add('hidden');
         }
+        window.print();
       }
 
       // --- Quiz Logic ---
