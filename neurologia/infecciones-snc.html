@@ -357,16 +357,206 @@
                 </div>
 
                 <!-- Terapia Empírica -->
-                <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5">
-                  <h3 class="text-xl font-bold text-indigo-900 mb-3 flex items-center gap-2">
-                    <i class="fas fa-pills text-indigo-600"></i> Esquemas Empíricos en Adultos (UpToDate / Protocolo HCAM)
-                  </h3>
-                  <div class="space-y-3 text-sm">
-                    <p><strong>1. Adulto &lt; 50 años inmunocompetente:</strong> Ceftriaxona 2 g IV c/12 h + Vancomicina 15–20 mg/kg IV c/8–12 h + Dexametasona 10 mg IV c/6 h.</p>
-                    <p><strong>2. Adulto ≥ 50 años o Inmunodeprimido:</strong> Añadir <strong>Ampicilina 2 g IV c/4 h</strong> (cobertura obligada de <em>Listeria monocytogenes</em> resistente a cefalosporinas).</p>
-                    <p><strong>3. Sospecha de Encefalitis (conducta alterada, crisis, fiebre):</strong> Añadir <strong>Aciclovir 10 mg/kg IV c/8 h</strong> de inmediato.</p>
-                    <p><strong>4. Dexametasona (De Gans & van de Beek):</strong> 10 mg IV c/6 h por 4 días. Iniciar 15–20 min antes o junto con la primera dosis de antibiótico. Mantener solo si el cultivo revela <em>Streptococcus pneumoniae</em>.</p>
+                                <!-- Terapia Empírica Completa UpToDate -->
+                <div class="space-y-6">
+                  
+                  <!-- Tabla 1: Empírico por edad y condición -->
+                  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                      <i class="fas fa-pills text-indigo-600"></i> 1. Terapia Antimicrobiana Empírica según Edad y Condición Predisponente (UpToDate / IDSA)
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-4">Recomendaciones estándar de UpToDate basadas en Tunkel AR et al. Clin Infect Dis 2004.</p>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                      <table class="w-full text-xs md:text-sm text-left">
+                        <thead class="bg-indigo-50 text-indigo-950 font-bold border-b border-indigo-100">
+                          <tr>
+                            <th class="p-3">Factor Predisponente / Edad</th>
+                            <th class="p-3">Patógenos Bacterianos Comunes</th>
+                            <th class="p-3">Terapia Antimicrobiana Empírica Recomendada</th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">&lt; 1 mes (Neonatos)</td>
+                            <td class="p-3"><em>S. agalactiae, E. coli, Listeria monocytogenes</em></td>
+                            <td class="p-3 font-semibold text-indigo-900">Ampicilina + Cefotaxima; <strong>O</strong> Ampicilina + Aminoglucósido</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">1 a 23 meses (Lactantes)</td>
+                            <td class="p-3"><em>S. pneumoniae, N. meningitidis, S. agalactiae, H. influenzae, E. coli</em></td>
+                            <td class="p-3 font-semibold text-indigo-900">Vancomicina + Cefalosporina de 3.ª gen (Ceftriaxona o Cefotaxima)</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50 bg-slate-50/50">
+                            <td class="p-3 font-bold text-indigo-900">2 a 50 años (Adultos jóvenes)</td>
+                            <td class="p-3"><em>N. meningitidis, Streptococcus pneumoniae</em></td>
+                            <td class="p-3 font-bold text-indigo-700">Vancomicina + Cefalosporina de 3.ª gen (Ceftriaxona 2 g IV c/12h)</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50 bg-amber-50/40">
+                            <td class="p-3 font-bold text-amber-950">&gt; 50 años</td>
+                            <td class="p-3"><em>S. pneumoniae, N. meningitidis, L. monocytogenes</em>, bacilos gramnegativos aerobios</td>
+                            <td class="p-3 font-bold text-amber-900">Vancomicina + Ampicilina (2 g IV c/4h) + Cefalosporina de 3.ª gen</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Trauma craneal: Fractura de base</td>
+                            <td class="p-3"><em>S. pneumoniae, H. influenzae</em>, estreptococos beta-hemolíticos grupo A</td>
+                            <td class="p-3 font-semibold text-slate-900">Vancomicina + Cefalosporina de 3.ª gen</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Trauma penetrante de cráneo</td>
+                            <td class="p-3"><em>S. aureus</em>, estafilococos coagulasa negativos (<em>S. epidermidis</em>), bacilos gramnegativos (<em>P. aeruginosa</em>)</td>
+                            <td class="p-3 font-semibold text-slate-900">Vancomicina + Cefepima; <strong>O</strong> Vancomicina + Ceftazidima; <strong>O</strong> Vancomicina + Meropenem</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Postneurocirugía</td>
+                            <td class="p-3">Bacilos gramnegativos aerobios (<em>P. aeruginosa</em>), <em>S. aureus</em>, estafilococos coagulasa negativos</td>
+                            <td class="p-3 font-semibold text-slate-900">Vancomicina + Cefepima; <strong>O</strong> Vancomicina + Ceftazidima; <strong>O</strong> Vancomicina + Meropenem</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50 bg-rose-50/40">
+                            <td class="p-3 font-bold text-rose-950">Inmunocomprometidos</td>
+                            <td class="p-3"><em>S. pneumoniae, N. meningitidis, L. monocytogenes</em>, bacilos gramnegativos (<em>P. aeruginosa</em>)</td>
+                            <td class="p-3 font-bold text-rose-900">Vancomicina + Ampicilina + Cefepima; <strong>O</strong> Vancomicina + Meropenem</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
+
+                  <!-- Tabla 2: Dosificación exacta en adultos -->
+                  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                      <i class="fas fa-syringe text-cyan-600"></i> 2. Dosificación Intravenosa Recomendada en Adultos con Función Renal Normal (UpToDate)
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-4">Posología para penetración en SNC y concentraciones bactericidas en LCR.</p>
+                    <div class="overflow-x-auto rounded-xl border border-slate-200">
+                      <table class="w-full text-xs md:text-sm text-left">
+                        <thead class="bg-cyan-900 text-white font-bold">
+                          <tr>
+                            <th class="p-3">Fármaco Antimicrobiano</th>
+                            <th class="p-3">Dosis IV Adultos</th>
+                            <th class="p-3">Perlas Farmacoclínicas y Monitoreo</th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-900">Ceftriaxona</td>
+                            <td class="p-3 font-bold text-indigo-700">2 g IV cada 12 horas</td>
+                            <td class="p-3 text-xs">Dosis meníngea duplica la estándar de sepsis (1-2 g c/24h). Excelente penetración en meninges inflamadas.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-900">Vancomicina</td>
+                            <td class="p-3 font-bold text-indigo-700">15 a 20 mg/kg IV cada 8 a 12 horas</td>
+                            <td class="p-3 text-xs">Carga de 20-35 mg/kg en paciente crítico (máx 3.000 mg). Meta valle: <strong>15 a 20 mcg/mL</strong>.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-900">Ampicilina</td>
+                            <td class="p-3 font-bold text-amber-700">2 g IV cada 4 horas</td>
+                            <td class="p-3 text-xs">Cobertura obligada de <em>Listeria monocytogenes</em> (resistente intrínseca a cefalosporinas).</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Cefepima</td>
+                            <td class="p-3 font-bold text-slate-800">2 g IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Cefalosporina 4.ª gen antipseudomónica para trauma penetrante, postneurocirugía o inmunodepresión.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Meropenem</td>
+                            <td class="p-3 font-bold text-slate-800">2 g IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Carbapenémico de elección para bacilos multirresistentes o anafilaxia previa a penicilinas.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Ceftazidima</td>
+                            <td class="p-3 font-bold text-slate-800">2 g IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Alternativa antipseudomónica específica en infecciones asociadas a cuidados de la salud.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Cefotaxima</td>
+                            <td class="p-3 font-bold text-slate-800">2 g IV cada 4 a 6 horas</td>
+                            <td class="p-3 text-xs">Alternativa a ceftriaxona; de elección en neonatos por menor riesgo de hiperbilirrubinemia/kernicterus.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Aciclovir</td>
+                            <td class="p-3 font-bold text-rose-700">10 mg/kg IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Infundir en 1 hora. Ajustar por peso ideal e hidratar para prevenir nefropatía por cristaluria.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50 bg-indigo-50/50">
+                            <td class="p-3 font-bold text-indigo-950">Dexametasona</td>
+                            <td class="p-3 font-bold text-indigo-700">10 mg IV cada 6 horas por 4 días</td>
+                            <td class="p-3 text-xs font-semibold">15–20 min antes o con la 1.ª dosis de antibiótico. Mantener solo si se confirma <em>S. pneumoniae</em>.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Rifampicina</td>
+                            <td class="p-3 font-bold text-slate-800">600 mg IV/VO cada 24 horas</td>
+                            <td class="p-3 text-xs">Coadyuvante en sospecha de neumococo con alta resistencia o infecciones de shunts.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">TMP-SMX</td>
+                            <td class="p-3 font-bold text-slate-800">5 mg/kg (TMP) IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Alternativa de rescate para <em>Listeria monocytogenes</em> en alergia severa a penicilina.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Amikacina</td>
+                            <td class="p-3 font-bold text-slate-800">5 mg/kg IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Aminoglucósido; pico 25–40 mcg/mL, valle &lt; 4–8 mcg/mL.</td>
+                          </tr>
+                          <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-800">Gentamicina / Tobramicina</td>
+                            <td class="p-3 font-bold text-slate-800">1.7 mg/kg IV cada 8 horas</td>
+                            <td class="p-3 text-xs">Pico 7–9 mcg/mL, valle &lt; 1–2 mcg/mL.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- Tabla 3: Meningitis Aséptica Diferencial -->
+                  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                      <i class="fas fa-diagnoses text-purple-600"></i> 3. Diagnóstico Diferencial de Meningitis Aséptica (Connolly KJ & Hammer SM / UpToDate)
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-4">Causas no purulentas con pleocitosis que deben considerarse ante cultivo bacteriano negativo.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+                      <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-indigo-900 text-sm mb-2 flex items-center gap-1.5">
+                          <i class="fas fa-virus text-indigo-600"></i> Causas Virales
+                        </h4>
+                        <ul class="space-y-1 text-slate-700">
+                          <li>• <strong>Enterovirus</strong> (Coxsackie A/B, Echovirus - 80% de casos)</li>
+                          <li>• <strong>Virus Herpes Simple</strong> (VHS-1, VHS-2)</li>
+                          <li>• <strong>Varicela-Zóster (VZV)</strong></li>
+                          <li>• <strong>VIH</strong> (infección aguda / seroconversión)</li>
+                          <li>• <strong>Citomegalovirus (CMV)</strong> / <strong>Epstein-Barr (EBV)</strong></li>
+                          <li>• Arbovirus, Parotiditis (Mumps), Coriomeningitis linfocítica (LCMV)</li>
+                        </ul>
+                      </div>
+
+                      <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-indigo-900 text-sm mb-2 flex items-center gap-1.5">
+                          <i class="fas fa-bacterium text-amber-600"></i> Bacterias No Purulentas & Fúngicas
+                        </h4>
+                        <ul class="space-y-1 text-slate-700">
+                          <li>• <em>Borrelia burgdorferi</em> (Enfermedad de Lyme)</li>
+                          <li>• <em>Treponema pallidum</em> (Neurosífilis)</li>
+                          <li>• <em>Mycobacterium tuberculosis</em> (Meningitis TBC)</li>
+                          <li>• <em>Mycoplasma pneumoniae, Leptospira</em></li>
+                          <li>• Foco parameníngeo / Meningitis bacteriana parcialmente tratada</li>
+                          <li>• <em>Cryptococcus neoformans/gattii, Histoplasma, Coccidioides</em></li>
+                        </ul>
+                      </div>
+
+                      <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-indigo-900 text-sm mb-2 flex items-center gap-1.5">
+                          <i class="fas fa-capsules text-rose-600"></i> Fármacos, Autoinmune & Malignidad
+                        </h4>
+                        <ul class="space-y-1 text-slate-700">
+                          <li>• <strong>AINEs</strong> (especialmente Ibuprofeno en colagenopatías)</li>
+                          <li>• <strong>TMP-SMX</strong>, Azatioprina, Anti-CD3</li>
+                          <li>• <strong>Autoinmunes:</strong> Enfermedad de Behçet, Neurosarcoidosis, LES</li>
+                          <li>• <strong>Síndrome de Vogt-Koyanagi-Harada</strong></li>
+                          <li>• <strong>Malignidad:</strong> Carcinomatosis meníngea, Linfoma, Leucemia</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
