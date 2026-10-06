@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infecciones del SNC: Meningitis, Encefalitis y Abscesos — PowerSemiotics</title>
+    <link rel="canonical" href="https://powersemiotics.com/medsemiotics/neurologia/infecciones-snc.html" />
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css" />
+    <link href="../assets/fonts/fonts.css" rel="stylesheet" />
+    <link href="../assets/tailwind.css" rel="stylesheet" />
+    <style>
+      .module-section {
+        display: none;
+      }
+      .module-section.active {
+        display: block;
+        animation: fadeIn 0.45s ease-out;
+      }
+      .slide {
+        display: none;
+      }
+      .slide.active {
+        display: block;
+        animation: fadeIn 0.35s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* 3D Flashcards */
+      .card-container {
+        perspective: 1000px;
+        height: 270px;
+      }
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+      .card-inner.flipped {
+        transform: rotateY(180deg);
+      }
+      .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: 1rem;
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="font-['Inter'] bg-slate-50 text-slate-800 bg-gradient-to-br from-slate-50 via-indigo-50/40 to-cyan-50/50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/85 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-indigo-100/60">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="../neurologia.html" class="text-base font-bold text-indigo-700 hover:text-indigo-900 transition-colors flex items-center gap-2">
+          <i class="fas fa-arrow-left"></i> Volver al Hub de Neurología
+        </a>
+        <div class="flex items-center gap-3">
+          <span class="hidden md:inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full border border-indigo-200">
+            Semana 16 · Semestre 2026-2
+          </span>
+          <a href="../index.html" class="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-cyan-600 hover:to-indigo-800 transition-colors">
+            Power Semiotics
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 md:p-8">
+      <!-- Title & Hero -->
+      <div class="text-center mb-8 max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-100/80 text-cyan-900 text-xs font-bold uppercase tracking-wider mb-3 border border-cyan-200">
+          <i class="fas fa-shield-virus text-cyan-600"></i> Neurología Clínica y Semiótica · HCAM
+        </div>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-3 tracking-tight leading-tight">
+          Infecciones del <span class="gradient-text">Sistema Nervioso Central</span>
+        </h1>
+        <p class="text-base md:text-lg text-slate-600 font-medium max-w-2xl mx-auto">
+          Meningitis Aguda, la Trampa del Cuello Flexible, Criterios de TC, Manejo Door-to-Antibiotic y Diferencial de Encefalitis
+        </p>
+
+        <!-- Video Pills Bar -->
+        <div class="mt-6 flex flex-wrap justify-center items-center gap-3">
+          <a
+            href="https://www.youtube.com/watch?v=KJDO0J_UNsY"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 hover:bg-red-100 rounded-full text-xs md:text-sm font-semibold border border-red-200 shadow-sm transition-all hover:scale-105"
+          >
+            <i class="fab fa-youtube text-red-600"></i> Video 1: Meningitis Aguda Bacteriana
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=6nFAjsgN9Sk"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 text-amber-800 hover:bg-amber-100 rounded-full text-xs md:text-sm font-semibold border border-amber-200 shadow-sm transition-all hover:scale-105"
+          >
+            <i class="fab fa-youtube text-amber-600"></i> Video 2: La Trampa del Cuello Flexible
+          </a>
+          <a
+            href="../post.html?slug=meningitis-aguda-sacudida-cefalica"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-full text-xs md:text-sm font-semibold border border-indigo-200 shadow-sm transition-all hover:scale-105"
+          >
+            <i class="fas fa-calculator text-indigo-600"></i> Calculadora Bayesiana Web
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Layout: Content + Sticky Sidebar -->
+      <div class="flex flex-col-reverse lg:flex-row gap-8 items-start max-w-7xl mx-auto">
+        
+        <!-- Left: Interactive Content Panes -->
+        <main class="w-full lg:w-3/4">
+          <div class="bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200 shadow-xl shadow-slate-100 p-6 md:p-10">
+            
+            <!-- SECTION 1: GUIA CLINICA Y TEORIA -->
+            <section id="section-guia" class="module-section active">
+              <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                <div class="bg-indigo-100 text-indigo-700 p-3 rounded-xl"><i class="fas fa-book-medical text-xl"></i></div>
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">1. Guía Clínica & Decisiones de Cabecera</h2>
+                  <p class="text-sm text-slate-500">Fundamentos fisiopatológicos, semiología bayesiana y protocolos IDSA / UpToDate</p>
+                </div>
+              </div>
+
+              <div class="space-y-8 text-slate-700 leading-relaxed">
+                
+                <!-- Alerta: Regla Cardinal -->
+                <div class="bg-gradient-to-r from-rose-50 to-amber-50 border-l-4 border-rose-500 rounded-xl p-5 shadow-sm">
+                  <h3 class="text-lg font-bold text-rose-900 flex items-center gap-2 mb-2">
+                    <i class="fas fa-exclamation-triangle text-rose-600"></i> Desmonte de Dogmas: La Trampa del Cuello Flexible
+                  </h3>
+                  <p class="text-slate-700 text-sm md:text-base">
+                    La rigidez de nuca, el signo de Kernig y el de Brudzinski <strong>NO confirman ni descartan meningitis</strong>. Presentan cocientes de verosimilitud positivos (LR+) cercanos a <strong>1.0</strong> (0.94 y 0.97) y sensibilidades muy pobres (30% y 5%). Un paciente febril con dolor de cabeza que mueve el cuello libremente <strong>PUEDE TENER MENINGITIS BACTERIANA AGUDA</strong>. La conducta correcta es el umbral de acción temprano: <em>puncionar y tratar antes</em>.
+                  </p>
+                </div>
+
+                <!-- Tabla de Evidencia -->
+                <div>
+                  <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fas fa-chart-line text-indigo-600"></i> Evidencia Diagnóstica del Examen Meníngeo (Thomas 2002 / Cochrane 2020)
+                  </h3>
+                  <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                    <table class="w-full text-sm text-left">
+                      <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+                        <tr>
+                          <th class="p-3.5">Signo o Hallazgo</th>
+                          <th class="p-3.5 text-center">Sensibilidad</th>
+                          <th class="p-3.5 text-center">Especificidad</th>
+                          <th class="p-3.5 text-center">LR+</th>
+                          <th class="p-3.5">Implicación Bayesiana</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-slate-100 text-slate-700">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                          <td class="p-3.5 font-bold text-slate-800">Rigidez de Nuca</td>
+                          <td class="p-3.5 text-center font-semibold text-rose-600">0.30 (30%)</td>
+                          <td class="p-3.5 text-center">Alta (0.68)</td>
+                          <td class="p-3.5 text-center font-black text-indigo-600">0.94</td>
+                          <td class="p-3.5 text-xs text-slate-600">LR ≈ 1: apenas altera la probabilidad pre-test. Su ausencia no descarta.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                          <td class="p-3.5 font-bold text-slate-800">Signo de Kernig</td>
+                          <td class="p-3.5 text-center font-semibold text-rose-600">0.05 (5%)</td>
+                          <td class="p-3.5 text-center">0.95</td>
+                          <td class="p-3.5 text-center font-black text-indigo-600">0.97</td>
+                          <td class="p-3.5 text-xs text-slate-600">Presente en solo 1 de cada 20 pacientes confirmados por PL.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                          <td class="p-3.5 font-bold text-slate-800">Signo de Brudzinski</td>
+                          <td class="p-3.5 text-center font-semibold text-rose-600">0.05 (5%)</td>
+                          <td class="p-3.5 text-center">0.95</td>
+                          <td class="p-3.5 text-center font-black text-indigo-600">0.97</td>
+                          <td class="p-3.5 text-xs text-slate-600">Idéntico a Kernig: no discrimina en el punto de corte usual.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                          <td class="p-3.5 font-bold text-slate-800">Sacudida Cefálica (Jolt)</td>
+                          <td class="p-3.5 text-center">0.65 – 0.75</td>
+                          <td class="p-3.5 text-center">0.60 – 0.70</td>
+                          <td class="p-3.5 text-center italic text-slate-500">No medido</td>
+                          <td class="p-3.5 text-xs text-slate-600">2-3 giros/seg; sensibilidad superior pero certeza baja (Cochrane).</td>
+                        </tr>
+                        <tr class="bg-indigo-50/50 hover:bg-indigo-50 transition-colors">
+                          <td class="p-3.5 font-bold text-indigo-900">Tríada Clásica (Al menos 1)</td>
+                          <td class="p-3.5 text-center font-black text-emerald-600">0.99 – 1.0</td>
+                          <td class="p-3.5 text-center text-slate-500">Baja</td>
+                          <td class="p-3.5 text-center">—</td>
+                          <td class="p-3.5 text-xs text-indigo-900 font-semibold">Fiebre + Rigidez + Alteración mental. Si faltan los 3, meningitis es improbable.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Algoritmo de la Primera Hora -->
+                <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/70">
+                  <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fas fa-stopwatch text-amber-500"></i> Secuencia Tiempo-Dependiente (Door-to-Antibiotic)
+                  </h3>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
+                      <h4 class="font-bold text-emerald-900 text-sm flex items-center gap-2 mb-2">
+                        <i class="fas fa-check-circle text-emerald-600"></i> Vía Rápida: Sin Criterios de TC
+                      </h4>
+                      <ol class="text-xs md:text-sm text-emerald-950 space-y-2 list-decimal list-inside font-medium">
+                        <li><strong>Hemocultivos inmediatos</strong> (2 frascos sin retraso).</li>
+                        <li><strong>Punción Lumbar (PL) inmediata</strong> en box de agudos.</li>
+                        <li><strong>Dexametasona 10 mg IV</strong> + <strong>Antibióticos empíricos</strong> inmediatamente tras el LCR.</li>
+                      </ol>
+                    </div>
+
+                    <div class="bg-rose-50 border border-rose-200 rounded-xl p-4">
+                      <h4 class="font-bold text-rose-900 text-sm flex items-center gap-2 mb-2">
+                        <i class="fas fa-radiation text-rose-600"></i> Vía Alarma: Con Criterios de TC
+                      </h4>
+                      <ol class="text-xs md:text-sm text-rose-950 space-y-2 list-decimal list-inside font-medium">
+                        <li><strong>Hemocultivos inmediatos</strong>.</li>
+                        <li><strong>Dexametasona IV + Antibióticos empíricos AHORA</strong> (antes de mover a imagen).</li>
+                        <li><strong>TC de cráneo</strong> para descartar herniación cerebral.</li>
+                        <li><strong>Punción Lumbar</strong> si la TC no muestra contraindicación.</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <p class="text-xs text-rose-700 font-semibold mt-3 italic">
+                    * Regla de Oro UpToDate / IDSA: La TC JAMÁS debe retrasar la infusión de antibióticos ni la dexametasona.
+                  </p>
+                </div>
+
+                <!-- Criterios IDSA de TC -->
+                <div>
+                  <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fas fa-stethoscope text-indigo-600"></i> Criterios de TC de Cráneo antes de Punción Lumbar (Hasbun R / IDSA)
+                  </h3>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                    <li class="p-3 bg-white border border-slate-200 rounded-lg flex items-start gap-2 shadow-xs">
+                      <i class="fas fa-dot-circle text-rose-500 mt-1"></i>
+                      <span><strong>Déficit neurológico focal</strong> nuevo (paresia, pares craneales motores, asimetría).</span>
+                    </li>
+                    <li class="p-3 bg-white border border-slate-200 rounded-lg flex items-start gap-2 shadow-xs">
+                      <i class="fas fa-dot-circle text-rose-500 mt-1"></i>
+                      <span><strong>Alteración del estado mental</strong> (Glasgow &lt; 15, letargia o coma).</span>
+                    </li>
+                    <li class="p-3 bg-white border border-slate-200 rounded-lg flex items-start gap-2 shadow-xs">
+                      <i class="fas fa-dot-circle text-rose-500 mt-1"></i>
+                      <span><strong>Crisis convulsiva reciente</strong> (en los últimos 7 días).</span>
+                    </li>
+                    <li class="p-3 bg-white border border-slate-200 rounded-lg flex items-start gap-2 shadow-xs">
+                      <i class="fas fa-dot-circle text-rose-500 mt-1"></i>
+                      <span><strong>Papiledema</strong> comprobado en el fondo de ojo.</span>
+                    </li>
+                    <li class="p-3 bg-white border border-slate-200 rounded-lg flex items-start gap-2 shadow-xs">
+                      <i class="fas fa-dot-circle text-rose-500 mt-1"></i>
+                      <span><strong>Inmunocompromiso grave</strong> (VIH avanzado, trasplante, quimioterapia).</span>
+                    </li>
+                    <li class="p-3 bg-white border border-slate-200 rounded-lg flex items-start gap-2 shadow-xs">
+                      <i class="fas fa-dot-circle text-rose-500 mt-1"></i>
+                      <span><strong>Enfermedad conocida del SNC</strong> previa (masa, neurocirugía, ACV previo).</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Perfiles de LCR -->
+                <div>
+                  <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fas fa-vial text-cyan-600"></i> Interpretación Comparativa del Líquido Cefalorraquídeo
+                  </h3>
+                  <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                    <table class="w-full text-sm text-left">
+                      <thead class="bg-cyan-900 text-white font-bold">
+                        <tr>
+                          <th class="p-3">Patrón</th>
+                          <th class="p-3 text-center">Presión (mmH₂O)</th>
+                          <th class="p-3 text-center">Leucocitos / mm³</th>
+                          <th class="p-3 text-center">Predominio</th>
+                          <th class="p-3 text-center">Cociente Glucosa LCR/Suero</th>
+                          <th class="p-3 text-center">Proteínas (mg/dL)</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-slate-200 text-slate-700">
+                        <tr class="bg-rose-50/60 font-semibold hover:bg-rose-100/50">
+                          <td class="p-3 font-bold text-rose-900">Bacteriana Aguda</td>
+                          <td class="p-3 text-center text-rose-800">&gt; 200–300</td>
+                          <td class="p-3 text-center text-rose-800">1.000 – 10.000+</td>
+                          <td class="p-3 text-center text-rose-800">Neutrófilos (&gt;80%)</td>
+                          <td class="p-3 text-center font-black text-rose-700">&lt; 0.4 (&lt; 40 mg/dL)</td>
+                          <td class="p-3 text-center text-rose-800">&gt; 100–500+</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                          <td class="p-3 font-bold text-slate-800">Viral (Aséptica)</td>
+                          <td class="p-3 text-center">Normal o leve ↑</td>
+                          <td class="p-3 text-center">50 – 500</td>
+                          <td class="p-3 text-center">Linfocitos</td>
+                          <td class="p-3 text-center text-emerald-700 font-bold">&gt; 0.6 (Normal)</td>
+                          <td class="p-3 text-center">50 – 100</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                          <td class="p-3 font-bold text-amber-900">Encefalitis VHS</td>
+                          <td class="p-3 text-center">Normal o leve ↑</td>
+                          <td class="p-3 text-center">50 – 500 (+ hematíes)</td>
+                          <td class="p-3 text-center">Linfocitos</td>
+                          <td class="p-3 text-center font-bold text-emerald-700">&gt; 0.6 (Normal)</td>
+                          <td class="p-3 text-center">60 – 150 (PCR +)</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                          <td class="p-3 font-bold text-slate-800">Tuberculosa / Fúngica</td>
+                          <td class="p-3 text-center">&gt; 250</td>
+                          <td class="p-3 text-center">100 – 500</td>
+                          <td class="p-3 text-center">Linfocitos</td>
+                          <td class="p-3 text-center font-black text-rose-700">&lt; 0.3 (Muy baja)</td>
+                          <td class="p-3 text-center font-bold text-indigo-700">&gt; 100–500+</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Terapia Empírica -->
+                <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-5">
+                  <h3 class="text-xl font-bold text-indigo-900 mb-3 flex items-center gap-2">
+                    <i class="fas fa-pills text-indigo-600"></i> Esquemas Empíricos en Adultos (UpToDate / Protocolo HCAM)
+                  </h3>
+                  <div class="space-y-3 text-sm">
+                    <p><strong>1. Adulto &lt; 50 años inmunocompetente:</strong> Ceftriaxona 2 g IV c/12 h + Vancomicina 15–20 mg/kg IV c/8–12 h + Dexametasona 10 mg IV c/6 h.</p>
+                    <p><strong>2. Adulto ≥ 50 años o Inmunodeprimido:</strong> Añadir <strong>Ampicilina 2 g IV c/4 h</strong> (cobertura obligada de <em>Listeria monocytogenes</em> resistente a cefalosporinas).</p>
+                    <p><strong>3. Sospecha de Encefalitis (conducta alterada, crisis, fiebre):</strong> Añadir <strong>Aciclovir 10 mg/kg IV c/8 h</strong> de inmediato.</p>
+                    <p><strong>4. Dexametasona (De Gans & van de Beek):</strong> 10 mg IV c/6 h por 4 días. Iniciar 15–20 min antes o junto con la primera dosis de antibiótico. Mantener solo si el cultivo revela <em>Streptococcus pneumoniae</em>.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- SECTION 2: FLASHCARDS USMLE -->
+            <section id="section-flashcards" class="module-section">
+              <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                <div class="bg-yellow-100 text-yellow-600 p-3 rounded-xl"><i class="fas fa-bolt text-xl"></i></div>
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">2. Flashcards High Yield (Boards USMLE)</h2>
+                  <p class="text-sm text-slate-500">Toca cada tarjeta para voltearla y poner a prueba tus conceptos clave de cabecera.</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="flashcards-grid">
+                <!-- Injected via JS -->
+              </div>
+            </section>
+
+            <!-- SECTION 3: PRESENTACION / DIAPOSITIVAS -->
+            <section id="section-presentacion" class="module-section">
+              <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                <div class="bg-purple-100 text-purple-600 p-3 rounded-xl"><i class="fas fa-chalkboard-teacher text-xl"></i></div>
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">3. Presentación Interactiva (Diapositivas)</h2>
+                  <p class="text-sm text-slate-500">Recorre los conceptos nucleares de la clase en formato de diapositivas interactivas.</p>
+                </div>
+              </div>
+
+              <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 relative min-h-[360px] flex flex-col justify-between shadow-2xl">
+                <div id="slides-container" class="mb-6">
+                  <!-- Slides injected by JS -->
+                </div>
+                
+                <div class="flex items-center justify-between border-t border-slate-800 pt-4">
+                  <button id="prev-slide-btn" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold rounded-lg transition-colors flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> Anterior
+                  </button>
+                  <span id="slide-indicator" class="text-xs text-slate-400 font-mono">1 / 6</span>
+                  <button id="next-slide-btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg transition-colors flex items-center gap-2">
+                    Siguiente <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 4: HERRAMIENTAS CLINICAS -->
+            <section id="section-herramienta" class="module-section">
+              <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                <div class="bg-cyan-100 text-cyan-700 p-3 rounded-xl"><i class="fas fa-calculator text-xl"></i></div>
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">4. Herramientas Clínicas & Calculadoras</h2>
+                  <p class="text-sm text-slate-500">Calculadora bayesiana, verificador de TC previa a PL e interpretador de LCR.</p>
+                </div>
+              </div>
+
+              <!-- Tool 1: Criterios TC Check -->
+              <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                  <i class="fas fa-tasks text-cyan-600"></i> A. Comprobador de Criterios de TC Previa a Punción Lumbar (IDSA)
+                </h3>
+                <p class="text-xs text-slate-500 mb-4">Marca si el paciente presenta cualquiera de las siguientes alertas:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mb-4" id="ct-criteria-form">
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="ct-check h-4 w-4 text-indigo-600 rounded" value="focal">
+                    <span>Déficit neurológico focal nuevo</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="ct-check h-4 w-4 text-indigo-600 rounded" value="altered_mental">
+                    <span>Alteración de conciencia (Glasgow &lt; 15)</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="ct-check h-4 w-4 text-indigo-600 rounded" value="seizure">
+                    <span>Crisis epiléptica reciente (&lt; 7 días)</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="ct-check h-4 w-4 text-indigo-600 rounded" value="papilledema">
+                    <span>Papiledema evidente</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="ct-check h-4 w-4 text-indigo-600 rounded" value="immunosuppression">
+                    <span>Inmunocompromiso severo (VIH / trasplante)</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" class="ct-check h-4 w-4 text-indigo-600 rounded" value="cns_history">
+                    <span>Antecedente conocido de lesión SNC</span>
+                  </label>
+                </div>
+
+                <div id="ct-recommendation" class="p-4 rounded-xl text-sm font-medium border bg-emerald-50 text-emerald-900 border-emerald-300">
+                  <i class="fas fa-check-circle text-emerald-600 mr-2"></i>
+                  <strong>Sin criterios de TC:</strong> Proceder a Hemocultivos inmediatos y Punción Lumbar directa en box de urgencias. Iniciar antibióticos y dexametasona inmediatamente al obtener LCR.
+                </div>
+              </div>
+
+              <!-- Tool 2: Calculadora Bayesiana -->
+              <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm mb-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                  <i class="fas fa-calculator text-indigo-600"></i> B. Calculadora Bayesiana de Meningitis (LR+ Thomas 2002)
+                </h3>
+                <p class="text-xs text-slate-500 mb-4">Visualiza cómo los signos clásicos prácticamente no mueven la aguja diagnóstica:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Probabilidad Pre-test (%):</label>
+                    <input type="range" id="pretest-slider" min="1" max="99" value="25" class="w-full h-2 bg-slate-200 rounded-lg cursor-pointer">
+                    <span id="pretest-val" class="text-sm font-bold text-indigo-700">25%</span>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Hallazgo Físico Evaluado:</label>
+                    <select id="lr-select" class="w-full text-xs p-2 border border-slate-300 rounded-lg bg-white">
+                      <option value="0.94">Rigidez de Nuca (LR+ 0.94)</option>
+                      <option value="0.97">Signo de Kernig (LR+ 0.97)</option>
+                      <option value="0.97">Signo de Brudzinski (LR+ 0.97)</option>
+                      <option value="1.6">Sacudida Cefálica Jolt (LR+ est. 1.6)</option>
+                      <option value="0.05">Tríada Clásica Ausente (LR- 0.05)</option>
+                    </select>
+                  </div>
+                  <div class="bg-indigo-50 rounded-xl p-3 border border-indigo-200 flex flex-col justify-center text-center">
+                    <span class="text-xs text-indigo-800 font-bold uppercase">Probabilidad Post-Test</span>
+                    <span id="posttest-val" class="text-2xl font-black text-indigo-900">23.9%</span>
+                    <span id="bayes-comment" class="text-[11px] text-indigo-700 mt-1">Casi no cambia (LR ≈ 1.0)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tool 3: LCR Classifier -->
+              <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                <h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+                  <i class="fas fa-microscope text-cyan-600"></i> C. Simulador Citoquímico de LCR
+                </h3>
+                <p class="text-xs text-slate-500 mb-4">Introduce los valores para clasificar el patrón etiológico orientativo:</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs mb-4">
+                  <div>
+                    <label class="font-bold text-slate-700">Leucocitos / mm³:</label>
+                    <input type="number" id="lcr-leucos" value="3500" class="w-full p-2 border border-slate-300 rounded-lg mt-1">
+                  </div>
+                  <div>
+                    <label class="font-bold text-slate-700">% Neutrófilos (PMN):</label>
+                    <input type="number" id="lcr-pmn" value="85" class="w-full p-2 border border-slate-300 rounded-lg mt-1">
+                  </div>
+                  <div>
+                    <label class="font-bold text-slate-700">Cociente LCR/Suero:</label>
+                    <input type="number" step="0.05" id="lcr-ratio" value="0.25" class="w-full p-2 border border-slate-300 rounded-lg mt-1">
+                  </div>
+                  <div>
+                    <label class="font-bold text-slate-700">Proteínas (mg/dL):</label>
+                    <input type="number" id="lcr-prot" value="260" class="w-full p-2 border border-slate-300 rounded-lg mt-1">
+                  </div>
+                </div>
+                <button id="classify-lcr-btn" class="w-full py-2.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-bold text-xs transition-colors">
+                  Analizar Patrón de LCR
+                </button>
+                <div id="lcr-result" class="mt-3 p-3.5 rounded-lg text-xs font-semibold bg-rose-50 border border-rose-300 text-rose-900">
+                  Patrón sugerido: <strong>Meningitis Bacteriana Aguda</strong> (Leucocitosis marcada con predominio PMN, hipoglucorraquia severa &lt; 0.4 e hiperproteinorraquia).
+                </div>
+              </div>
+
+            </section>
+
+            <!-- SECTION 5: ABP CASO CLINICO -->
+            <section id="section-abp" class="module-section">
+              <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                <div class="bg-rose-100 text-rose-600 p-3 rounded-xl"><i class="fas fa-user-injured text-xl"></i></div>
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">5. Caso Clínico Socrático (ABP)</h2>
+                  <p class="text-sm text-slate-500">Varón de 34 años con fiebre y cefalea intensa... con cuello flexible. Análisis en 6 etapas.</p>
+                </div>
+              </div>
+
+              <!-- Viñeta inicial -->
+              <div class="bg-slate-50 border-l-4 border-indigo-500 rounded-r-xl p-5 mb-6 text-sm text-slate-700 leading-relaxed shadow-xs">
+                <h3 class="font-bold text-slate-900 text-base mb-2">Viñeta Clínica de Emergencia</h3>
+                <p>
+                  Varón de 34 años, sin antecedentes médicos relevantes, que acude a urgencias con cefalea holocraneal de 18 horas de evolución, continua e intensa, con fiebre cuantificada en 38.7 °C, fotofobia y 3 episodios de vómitos matutinos. Está alerta y colabora en el interrogatorio (Glasgow 15). Presión arterial 128/74 mmHg, FC 104 lpm. <strong>Examen físico: Flexión cervical libre e indolora. Kernig y Brudzinski negativos.</strong>
+                </p>
+              </div>
+
+              <div class="space-y-6" id="socratic-stages-container">
+                <!-- Socratic stages injected via JS -->
+              </div>
+            </section>
+
+            <!-- SECTION 6: AUTOEVALUACION QUIZ -->
+            <section id="section-autoevaluacion" class="module-section">
+              <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                <div class="bg-emerald-100 text-emerald-600 p-3 rounded-xl"><i class="fas fa-graduation-cap text-xl"></i></div>
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">6. Autoevaluación Interactiva (Quiz)</h2>
+                  <p class="text-sm text-slate-500">Preguntas de razonamiento clínico tipo Board con justificación inmediata.</p>
+                </div>
+              </div>
+
+              <div id="quiz-container">
+                <div id="quiz-questions"></div>
+              </div>
+            </section>
+
+          </div>
+        </main>
+
+        <!-- Right: Sticky Sidebar Navigation -->
+        <aside class="w-full lg:w-1/4 lg:sticky lg:top-24 h-fit max-h-[calc(100vh-8rem)] overflow-y-auto custom-scrollbar self-start">
+          <div class="bg-white/90 backdrop-blur-xl border border-slate-200 p-5 rounded-2xl shadow-xl shadow-slate-100">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+              <i class="fas fa-compass text-indigo-500"></i> Navegación del Módulo
+            </h3>
+            
+            <nav id="module-nav" class="space-y-1.5 text-sm">
+              <a href="#guia" class="nav-link active flex items-center gap-3 p-3 rounded-xl transition-all font-semibold text-indigo-700 bg-indigo-50">
+                <i class="fas fa-book-medical text-indigo-600 w-5"></i>
+                <span>1. Guía de Conocimiento</span>
+              </a>
+              <a href="#flashcards" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                <i class="fas fa-bolt text-yellow-500 w-5"></i>
+                <span>2. Flashcards High Yield</span>
+              </a>
+              <a href="#presentacion" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                <i class="fas fa-chalkboard-teacher text-purple-500 w-5"></i>
+                <span>3. Presentación (Diapos)</span>
+              </a>
+              <a href="#herramienta" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                <i class="fas fa-calculator text-cyan-500 w-5"></i>
+                <span>4. Herramientas Clínicas</span>
+              </a>
+              <a href="#abp" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                <i class="fas fa-user-injured text-rose-500 w-5"></i>
+                <span>5. Caso Socrático (ABP)</span>
+              </a>
+              <a href="#autoevaluacion" class="nav-link flex items-center gap-3 p-3 rounded-xl transition-all font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                <i class="fas fa-graduation-cap text-emerald-500 w-5"></i>
+                <span>6. Autoevaluación</span>
+              </a>
+            </nav>
+
+            <hr class="my-5 border-slate-200" />
+
+            <!-- Document Download Box -->
+            <div class="bg-gradient-to-br from-indigo-50 to-cyan-50 rounded-xl p-4 border border-indigo-100">
+              <h4 class="text-xs font-bold text-indigo-900 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <i class="fas fa-file-alt text-indigo-600"></i> Material Docente
+              </h4>
+              <p class="text-xs text-slate-600 mb-3">Guía docente y caso del estudiante listos para imprimir y revisar en clase.</p>
+              <a
+                href="../post.html?slug=meningitis-aguda-sacudida-cefalica"
+                target="_blank"
+                class="block w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-center text-xs font-bold rounded-lg shadow-sm transition-colors"
+              >
+                Abrir Caso Web Completo
+              </a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-20 py-8 text-center text-xs text-slate-500">
+      <div class="container mx-auto px-6 space-y-2">
+        <p class="font-medium text-slate-700">Cátedra de Neurología Clínica y Semiótica · Semestre 2026-2 · HCAM</p>
+        <p>PowerSemiotics Open Clinical Curriculum. Casos clínicos ficticios estructurados con fines formativos.</p>
+        <p>Evidencia empírica proveniente de medsemiotics-db (DOI 10.5281/zenodo.22064424).</p>
+      </div>
+    </footer>
+
+    <!-- Interactive JavaScript Scripts -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        initNavigation();
+        initFlashcards();
+        initSlides();
+        initClinicalTools();
+        initSocraticCase();
+        initQuiz();
+      });
+
+      // --- Navigation Tabs ---
+      function initNavigation() {
+        const links = document.querySelectorAll('#module-nav .nav-link');
+        const sections = document.querySelectorAll('.module-section');
+
+        function switchSection(targetId) {
+          sections.forEach(sec => {
+            sec.classList.remove('active');
+            if (sec.id === `section-${targetId}`) {
+              sec.classList.add('active');
+            }
+          });
+          links.forEach(l => {
+            l.classList.remove('active', 'font-semibold', 'text-indigo-700', 'bg-indigo-50');
+            l.classList.add('text-slate-600');
+            if (l.getAttribute('href') === `#${targetId}`) {
+              l.classList.add('active', 'font-semibold', 'text-indigo-700', 'bg-indigo-50');
+              l.classList.remove('text-slate-600');
+            }
+          });
+          window.scrollTo({ top: 180, behavior: 'smooth' });
+        }
+
+        links.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            switchSection(targetId);
+          });
+        });
+
+        // Hash in URL
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(`section-${hash}`)) {
+          switchSection(hash);
+        }
+      }
+
+      // --- 3D Flashcards ---
+      function initFlashcards() {
+        const flashcardsData = [
+          {
+            frontIcon: 'fa-user-ninja',
+            frontTitle: 'La Trampa del Cuello Flexible',
+            frontText: '¿Descarta la ausencia de rigidez de nuca la meningitis en un adulto febril?',
+            backTitle: '¡NUNCA DESCARTA!',
+            backText: 'La rigidez de nuca tiene LR+ 0.94 y Sensibilidad de apenas 30%. Dos tercios de los pacientes con meningitis tienen cuello libre. No descarta nada: puncionar y tratar antes.'
+          },
+          {
+            frontIcon: 'fa-brain',
+            frontTitle: 'Regla de la Tríada Clásica',
+            frontText: 'Fiebre + Rigidez + Alteración mental: ¿Cuál es su utilidad real?',
+            backTitle: 'Regla para Descartar',
+            backText: 'Tener al menos 1 de los 3 síntomas tiene Sensibilidad 99-100%. Si faltan los 3 simultáneamente, la meningitis es muy improbable. (Attia 1999).'
+          },
+          {
+            frontIcon: 'fa-x-ray',
+            frontTitle: 'TC vs Antibióticos en la 1.ª Hora',
+            frontText: 'Si el paciente tiene indicación de TC previa a punción lumbar, ¿en qué orden se actúa?',
+            backTitle: '¡Antibiótico Primero!',
+            backText: '1) Hemocultivos inmediatos -> 2) Dexametasona IV + Antibióticos empíricos -> 3) Traslado a TC de cráneo -> 4) Punción Lumbar. La imagen JAMÁS retrasa los antimicrobianos.'
+          },
+          {
+            frontIcon: 'fa-syringe',
+            frontTitle: 'Momento de la Dexametasona',
+            frontText: '¿Cuándo se debe infundir la dexametasona y cuál es su ventana?',
+            backTitle: '15-20 min Antes o Con el ATB',
+            backText: 'De Gans 2002: Debe administrarse antes o con la 1.ª dosis de antibiótico. La lisis bacteriana libera citoquinas inflamatorias lesivas. Horas después ya no tiene beneficio.'
+          },
+          {
+            frontIcon: 'fa-vial',
+            frontTitle: 'Cociente Glucosa LCR/Suero',
+            frontText: '¿Cuál es el valor crítico de cociente LCR/suero en meningitis bacteriana aguda?',
+            backTitle: 'Cociente < 0.4',
+            backText: 'Cociente LCR/glucemia < 0.4 (frecuentemente < 0.2 o no detectable) con PMN > 80% y proteínas elevadas (> 100-500 mg/dL). En meningitis viral el cociente es normal (> 0.6).'
+          },
+          {
+            frontIcon: 'fa-shield-virus',
+            frontTitle: 'Encefalitis por VHS',
+            frontText: '¿Qué signos clínicos la diferencian de una meningitis pura y qué estudio pedir?',
+            backTitle: 'Conducta Alterada + Aciclovir',
+            backText: 'Encefalitis = Alteración mental/afasia + crisis + fiebre (lóbulo temporal). El LCR muestra pleocitosis linfocítica con hematíes. Pedir RM y PCR VHS, e iniciar Aciclovir IV 10 mg/kg c/8h.'
+          }
+        ];
+
+        const grid = document.getElementById('flashcards-grid');
+        grid.innerHTML = flashcardsData.map((c, i) => `
+          <div class="card-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+            <div class="card-inner">
+              <div class="card-front bg-gradient-to-br from-white to-slate-50 border border-slate-200 shadow-md">
+                <i class="fas ${c.frontIcon} text-3xl text-indigo-600 mb-3"></i>
+                <h4 class="font-bold text-slate-800 text-base mb-2">${c.frontTitle}</h4>
+                <p class="text-xs text-slate-600">${c.frontText}</p>
+                <span class="mt-4 text-[10px] uppercase tracking-wider text-indigo-500 font-bold">Clic para voltear</span>
+              </div>
+              <div class="card-back bg-gradient-to-br from-indigo-900 to-slate-900 text-white shadow-xl">
+                <i class="fas fa-lightbulb text-2xl text-amber-400 mb-2"></i>
+                <h4 class="font-bold text-amber-300 text-sm mb-2">${c.backTitle}</h4>
+                <p class="text-xs text-slate-200 leading-relaxed">${c.backText}</p>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // --- Presentation Slides ---
+      function initSlides() {
+        const slidesData = [
+          {
+            badge: 'Diapositiva 1 · Emergencia Médica',
+            title: 'Meningitis Bacteriana: Una Emergencia Tiempo-Dependiente',
+            content: 'Cada hora de demora en iniciar antibióticos empíricos se correlaciona con incremento directo de la morbimortalidad y secuelas auditivas o cognitivas. El objetivo de cabecera es iniciar el tratamiento antes de 60 minutos (Door-to-Antibiotic).'
+          },
+          {
+            badge: 'Diapositiva 2 · Semiología Racional',
+            title: 'Por qué los Signos Clásicos Fallan',
+            content: 'Kernig y Brudzinski datan del siglo XIX en pacientes con enfermedad terminal avanzada. En adultos modernos antes de la PL (Thomas 2002), la sensibilidad es de apenas 5% y el LR+ es 0.97. Un LR próximo a 1 no modifica en absoluto la probabilidad.'
+          },
+          {
+            badge: 'Diapositiva 3 · El Dilema de la TC',
+            title: '¿Cuándo se Pide Tomografía de Cráneo?',
+            content: 'Solo ante criterios de Hasbun R / IDSA: déficit focal nuevo, alteración del estado mental, crisis reciente, papiledema, inmunocompromiso o antecedente de lesión del SNC. ¡Si requiere TC, infundir antibióticos ANTES de ir al tomógrafo!'
+          },
+          {
+            badge: 'Diapositiva 4 · Terapia Adyuvante',
+            title: 'Dexametasona: Timing Crítico',
+            content: 'Ensayo De Gans & van de Beek (NEJM): 10 mg IV c/6h por 4 días. Debe iniciarse con la primera dosis de antibiótico para prevenir la cascada inflamatoria desencadenada por la lisis bacteriana inicial.'
+          },
+          {
+            badge: 'Diapositiva 5 · Diagnóstico de LCR',
+            title: 'Líquido Cefalorraquídeo: El Marcador Clave',
+            content: 'La hipoglucorraquia con cociente LCR/suero < 0.4 y pleocitosis neutrofílica definen el patrón bacteriano. Encefalitis herpética muestra predominio linfocitario, hematíes por necrosis temporal y glucosa normal.'
+          },
+          {
+            badge: 'Diapositiva 6 · Tratamiento Empírico',
+            title: 'Esquema Inicial del Adulto',
+            content: 'Ceftriaxona 2g c/12h + Vancomicina 15-20 mg/kg c/8-12h. Si tiene ≥ 50 años o está inmunodeprimido, añadir Ampicilina 2g c/4h para Listeria. Si hay sospecha de encefalitis, añadir Aciclovir 10 mg/kg c/8h.'
+          }
+        ];
+
+        let currentSlide = 0;
+        const container = document.getElementById('slides-container');
+        const indicator = document.getElementById('slide-indicator');
+        const prevBtn = document.getElementById('prev-slide-btn');
+        const nextBtn = document.getElementById('next-slide-btn');
+
+        function renderSlide() {
+          const s = slidesData[currentSlide];
+          container.innerHTML = `
+            <div class="slide active">
+              <span class="inline-block px-2.5 py-1 bg-indigo-500/30 text-indigo-300 text-[11px] font-bold rounded-md uppercase tracking-wider mb-3">
+                ${s.badge}
+              </span>
+              <h3 class="text-xl md:text-2xl font-black text-white mb-3">${s.title}</h3>
+              <p class="text-slate-300 text-sm md:text-base leading-relaxed">${s.content}</p>
+            </div>
+          `;
+          indicator.textContent = `${currentSlide + 1} / ${slidesData.length}`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+          if (currentSlide > 0) {
+            currentSlide--;
+            renderSlide();
+          }
+        });
+        nextBtn.addEventListener('click', () => {
+          if (currentSlide < slidesData.length - 1) {
+            currentSlide++;
+            renderSlide();
+          }
+        });
+
+        renderSlide();
+      }
+
+      // --- Clinical Tools ---
+      function initClinicalTools() {
+        // Tool 1: CT Check
+        const checkboxes = document.querySelectorAll('.ct-check');
+        const recBox = document.getElementById('ct-recommendation');
+
+        function updateCTRec() {
+          const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+          if (anyChecked) {
+            recBox.className = 'p-4 rounded-xl text-sm font-medium border bg-rose-50 text-rose-950 border-rose-300';
+            recBox.innerHTML = `
+              <i class="fas fa-exclamation-circle text-rose-600 mr-2"></i>
+              <strong>¡REQUIERE TC DE CRÁNEO PREVIA A PL!</strong> 
+              <br><span class="text-xs">Conducta mandatoria:</span> 
+              1) Hemocultivos inmediatos. 
+              2) <strong>Dexametasona IV + Antimicrobianos empíricos AHORA</strong> (antes de salir hacia imagen). 
+              3) Traslado a TC de cráneo para descartar efecto de masa. 
+              4) Punción Lumbar tras confirmar seguridad tomográfica.
+            `;
+          } else {
+            recBox.className = 'p-4 rounded-xl text-sm font-medium border bg-emerald-50 text-emerald-900 border-emerald-300';
+            recBox.innerHTML = `
+              <i class="fas fa-check-circle text-emerald-600 mr-2"></i>
+              <strong>Sin criterios de TC:</strong> Proceder a Hemocultivos inmediatos y Punción Lumbar directa en box de urgencias. No demorar la obtención de LCR ni los antimicrobianos.
+            `;
+          }
+        }
+        checkboxes.forEach(cb => cb.addEventListener('change', updateCTRec));
+
+        // Tool 2: Bayesian Calculator
+        const slider = document.getElementById('pretest-slider');
+        const preVal = document.getElementById('pretest-val');
+        const select = document.getElementById('lr-select');
+        const postVal = document.getElementById('posttest-val');
+        const comment = document.getElementById('bayes-comment');
+
+        function updateBayes() {
+          const pre = parseFloat(slider.value) / 100.0;
+          preVal.textContent = `${slider.value}%`;
+          const lr = parseFloat(select.value);
+
+          const preOdds = pre / (1.0 - pre);
+          const postOdds = preOdds * lr;
+          const post = (postOdds / (1.0 + postOdds)) * 100.0;
+
+          postVal.textContent = `${post.toFixed(1)}%`;
+          if (Math.abs(post - (pre * 100)) < 4) {
+            comment.textContent = 'Casi no cambia la probabilidad (LR ≈ 1.0)';
+            comment.className = 'text-[11px] text-amber-700 mt-1 font-semibold';
+          } else if (post > (pre * 100)) {
+            comment.textContent = 'Incrementa probabilidad post-test';
+            comment.className = 'text-[11px] text-emerald-700 mt-1 font-semibold';
+          } else {
+            comment.textContent = 'Disminuye probabilidad (descarte)';
+            comment.className = 'text-[11px] text-indigo-700 mt-1 font-semibold';
+          }
+        }
+
+        slider.addEventListener('input', updateBayes);
+        select.addEventListener('change', updateBayes);
+        updateBayes();
+
+        // Tool 3: LCR Classifier
+        const btnLCR = document.getElementById('classify-lcr-btn');
+        const resLCR = document.getElementById('lcr-result');
+
+        btnLCR.addEventListener('click', () => {
+          const leucos = parseFloat(document.getElementById('lcr-leucos').value) || 0;
+          const pmn = parseFloat(document.getElementById('lcr-pmn').value) || 0;
+          const ratio = parseFloat(document.getElementById('lcr-ratio').value) || 0.6;
+          const prot = parseFloat(document.getElementById('lcr-prot').value) || 30;
+
+          if (leucos > 500 && pmn > 60 && ratio < 0.4) {
+            resLCR.className = 'mt-3 p-3.5 rounded-lg text-xs font-semibold bg-rose-50 border border-rose-300 text-rose-900';
+            resLCR.innerHTML = 'Patrón sugerido: <strong>Meningitis Bacteriana Aguda</strong> (Leucocitosis marcada con predominio PMN, hipoglucorraquia severa ratio &lt; 0.4 e hiperproteinorraquia). Cobertura Ceftriaxona + Vancomicina + Dexametasona.';
+          } else if (leucos > 20 && pmn < 40 && ratio >= 0.5) {
+            resLCR.className = 'mt-3 p-3.5 rounded-lg text-xs font-semibold bg-emerald-50 border border-emerald-300 text-emerald-900';
+            resLCR.innerHTML = 'Patrón sugerido: <strong>Meningitis Viral (Aséptica)</strong> (Pleocitosis moderada linfocítica, glucosa normal ratio &gt; 0.5 y proteínas discretamente elevadas).';
+          } else if (leucos > 50 && pmn < 40 && ratio < 0.35) {
+            resLCR.className = 'mt-3 p-3.5 rounded-lg text-xs font-semibold bg-amber-50 border border-amber-300 text-amber-900';
+            resLCR.innerHTML = 'Patrón sugerido: <strong>Meningitis Tuberculosa o Fúngica</strong> (Predominio linfocítico con hipoglucorraquia marcada &lt; 0.35 y proteínas muy elevadas).';
+          } else {
+            resLCR.className = 'mt-3 p-3.5 rounded-lg text-xs font-semibold bg-slate-100 border border-slate-300 text-slate-800';
+            resLCR.innerHTML = 'Patrón mixto o inespecífico. Correlacionar con PCR viral, tinción de Gram, cultivo y estado clínico del paciente.';
+          }
+        });
+      }
+
+      // --- Socratic Case ---
+      function initSocraticCase() {
+        const stages = [
+          {
+            num: 1,
+            title: 'En la puerta de urgencias',
+            question: 'Varón de 34 años con fiebre alta y la peor cefalea de su vida, pero con cuello libre. ¿Lo mandas a casa pensando en cefalea tensional o gripe?',
+            clue: '¡Bajo ninguna circunstancia! La presencia de fiebre y cefalea intensa aguda es una bandera roja mayor. Un cuello flexible tiene una sensibilidad de apenas 30% en meningitis: dos de cada tres pacientes con infección grave no tienen rigidez de nuca inicial.'
+          },
+          {
+            num: 2,
+            title: 'Lo que el paciente refiere',
+            question: 'El paciente tiene vómitos, náuseas y fotofobia. ¿Cuánto aumentan estos síntomas la probabilidad de meningitis?',
+            clue: 'La cefalea y los vómitos tienen alta sensibilidad pero especificidad baja. Quedan como "LR no medido" de forma aislada; orientan sospecha sindrómica pero no definen por sí mismos el diagnóstico sin el estudio del LCR.'
+          },
+          {
+            num: 3,
+            title: 'La regla de la tríada clásica',
+            question: 'Tiene fiebre, pero no rigidez ni alteración mental. ¿Se descarta meningitis bacteriana?',
+            clue: 'La tríada clásica completa (fiebre + rigidez + alteración de conciencia) solo está presente en el 44% de los casos. Lo que tiene alta sensibilidad (99-100%) es tener AL MENOS UNO de los 3 signos. Al tener fiebre, NO se descarta; la regla exige estudio ante sospecha clínica fundamentada.'
+          },
+          {
+            num: 4,
+            title: 'Los signos meníngeos que te enseñaron',
+            question: 'Kernig y Brudzinski negativos: ¿Qué significa un cociente de verosimilitud de 0.97?',
+            clue: 'Un LR de 0.97 significa que el hallazgo no mueve la probabilidad diagnóstica en absoluto. Que salgan negativos es lo habitual (sensibilidad 5%). El médico inexperto se confía; el clínico bayesiano sabe que no descartan nada.'
+          },
+          {
+            num: 5,
+            title: 'Sacudida cefálica (Jolt Accentuation)',
+            question: 'Al girar la cabeza 2-3 veces por segundo la cefalea empeora marcadamente. ¿Evita esto la punción lumbar si saliera negativo?',
+            clue: 'No. Aunque la sacudida cefálica tiene mayor sensibilidad reportada (65-75%), la evidencia de la revisión Cochrane 2020 determinó que su certeza diagnóstica es muy baja. Una prueba negativa no sustituye ni evita el análisis de LCR.'
+          },
+          {
+            num: 6,
+            title: 'Secuencia de acción en la primera hora',
+            question: 'No tiene déficit focal, está en Glasgow 15, no tiene crisis ni inmunodepresión. ¿Cuál es el orden cronológico estricto de manejo?',
+            clue: '1) Hemocultivos inmediatos -> 2) Punción lumbar directa sin TC previa -> 3) Dexametasona 10 mg IV + Ceftriaxona 2 g IV + Vancomicina 15-20 mg/kg IV inmediatamente al terminar la punción. ¡Door-to-Antibiotic < 60 minutos!'
+          }
+        ];
+
+        const container = document.getElementById('socratic-stages-container');
+        container.innerHTML = stages.map(s => `
+          <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-xs">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center">${s.num}</span>
+              <h4 class="font-bold text-slate-800 text-base">Etapa ${s.num}: ${s.title}</h4>
+            </div>
+            <p class="text-sm text-slate-700 font-medium mb-3 pl-10">${s.question}</p>
+            <div class="pl-10">
+              <button class="reveal-btn text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 focus:outline-none">
+                <i class="fas fa-lightbulb"></i> <span>Ver Clave Docente & Perla Socrática</span>
+              </button>
+              <div class="clue-content hidden mt-3 p-3.5 bg-indigo-50/70 border border-indigo-200 rounded-lg text-xs text-indigo-950 leading-relaxed">
+                ${s.clue}
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        container.querySelectorAll('.reveal-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const clue = btn.nextElementSibling;
+            clue.classList.toggle('hidden');
+            btn.querySelector('span').textContent = clue.classList.contains('hidden') 
+              ? 'Ver Clave Docente & Perla Socrática' 
+              : 'Ocultar Clave';
+          });
+        });
+      }
+
+      // --- Quiz Section ---
+      function initQuiz() {
+        const quizData = [
+          {
+            question: 'Un paciente de 28 años acude por fiebre de 39 °C y cefalea intensa de inicio agudo. La flexión cervical es completa, y los signos de Kernig y Brudzinski son negativos. ¿Cuál es la interpretación diagnóstica bayesiana correcta?',
+            options: [
+              'La ausencia de rigidez de nuca y signos meníngeos excluye con certeza meningitis bacteriana aguda.',
+              'Los signos meníngeos tienen un LR+ cercano a 1.0 y baja sensibilidad; su ausencia no descarta la infección y se debe proceder con la punción lumbar.',
+              'Debe solicitarse primero una resonancia magnética para confirmar inflamación de las meninges antes de puncionar.',
+              'Se debe catalogar como cefalea tensional febril y dar el alta con analgésicos y control en 48 horas.'
+            ],
+            correct: 1,
+            justification: 'Thomas 2002 demostró que rigidez de nuca (LR+ 0.94, Se 30%), Kernig (LR+ 0.97, Se 5%) y Brudzinski (LR+ 0.97, Se 5%) tienen LR prácticamente iguales a 1. Su ausencia no descarta meningitis en absoluto.'
+          },
+          {
+            question: 'Una paciente de 52 años acude por sospecha de meningitis bacteriana. Al examen físico presenta hemiparesia braquiocrural derecha leve (fuerza 4/5) y somnolencia (Glasgow 13). ¿Cuál es la conducta terapéutica correcta?',
+            options: [
+              'Realizar punción lumbar inmediata en la cama del paciente y luego iniciar antibióticos.',
+              'Trasladar inmediatamente a la sala de tomografía sin colocar ningún medicamento para no alterar el líquido.',
+              'Tomar hemocultivos inmediatos, administrar dexametasona IV más antibióticos empíricos AHORA, y luego trasladar a TC de cráneo antes de la punción lumbar.',
+              'Omitir la punción lumbar de forma definitiva y mantener solo tratamiento oral en observación.'
+            ],
+            correct: 2,
+            justification: 'Por presentar déficit focal y alteración de conciencia, cumple criterios de TC previa a PL. Sin embargo, la TC JAMÁS debe demorar los antibióticos: se toman hemocultivos y se infunden antibióticos + dexametasona antes de mover a la paciente a imagen.'
+          },
+          {
+            question: 'Varón de 56 años con fiebre de 3 días, confusión progresiva, afasia de comprensión y una crisis epiléptica focal con generalización secundaria. ¿Qué fármaco antimicrobiano adicional es imperativo incluir en el tratamiento empírico de urgencia?',
+            options: [
+              'Aciclovir intravenoso 10 mg/kg cada 8 horas.',
+              'Ganciclovir intravenoso para citomegalovirus.',
+              'Ciprofloxacino oral para cobertura de bacilos entéricos.',
+              'Anfotericina B para criptococo.'
+            ],
+            correct: 0,
+            justification: 'La combinación de fiebre, alteración del estado mental/conducta o afasia y crisis convulsivas orienta con fuerza hacia Encefalitis Viral (especialmente VHS tipo 1 con necrosis del lóbulo temporal). El inicio inmediato de Aciclovir IV reduce drásticamente la mortalidad y secuelas.'
+          },
+          {
+            question: 'Respecto a la dexametasona adyuvante en la meningitis bacteriana del adulto, ¿cuál de las siguientes afirmaciones es correcta?',
+            options: [
+              'Debe administrarse 24 horas después de iniciado el antibiótico para evaluar primero la respuesta clínica.',
+              'Debe administrarse 15 a 20 minutos antes o simultáneamente con la primera dosis de antibiótico, manteniéndose si se confirma Streptococcus pneumoniae.',
+              'Está formalmente contraindicada porque disminuye la penetración de todos los antibióticos al LCR.',
+              'Solo se utiliza en pacientes pediátricos y se prohíbe en adultos mayores de 18 años.'
+            ],
+            correct: 1,
+            justification: 'El ensayo de De Gans & van de Beek (2002) probó que 10 mg IV de dexametasona c/6h administrados antes o con la 1.ª dosis de antibiótico mitiga la respuesta inflamatoria lesiva de la lisis bacteriana inicial, mejorando la sobrevida y reduciendo la pérdida auditiva en neumococo.'
+          }
+        ];
+
+        const container = document.getElementById('quiz-questions');
+        container.innerHTML = quizData.map((q, i) => `
+          <div class="question-block mb-8 p-5 md:p-7 border border-slate-200 rounded-2xl bg-white shadow-xs">
+            <div class="flex items-start gap-3 mb-4">
+              <span class="bg-indigo-100 text-indigo-700 font-black rounded-lg w-8 h-8 flex shrink-0 items-center justify-center text-sm">${i+1}</span>
+              <p class="font-bold text-slate-800 text-sm md:text-base leading-relaxed pt-0.5">${q.question}</p>
+            </div>
+            <div class="options-container space-y-2.5 pl-11">
+              ${q.options.map((opt, j) => `
+                <button class="option-btn w-full text-left p-3.5 border border-slate-200 rounded-xl hover:border-indigo-400 focus:outline-none transition-all text-xs md:text-sm font-medium text-slate-700 bg-slate-50 relative overflow-hidden group" data-correct="${j === q.correct}" data-feedback="${q.justification}">
+                  <span class="font-bold text-indigo-400 mr-2">${String.fromCharCode(65 + j)}.</span> ${opt}
+                </button>
+              `).join('')}
+            </div>
+            <div class="feedback mt-4 ml-11 rounded-xl text-xs md:text-sm transition-all font-medium border" style="display: none;"></div>
+          </div>
+        `).join('');
+
+        container.querySelectorAll('.option-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const isCorrect = btn.dataset.correct === 'true';
+            const feedback = btn.dataset.feedback;
+            const block = btn.closest('.question-block');
+            const feedbackEl = block.querySelector('.feedback');
+
+            block.querySelectorAll('.option-btn').forEach(opt => {
+              opt.disabled = true;
+              opt.classList.remove('hover:border-indigo-400', 'group');
+              opt.classList.add('opacity-60', 'cursor-default');
+              if (opt.dataset.correct === 'true') {
+                opt.classList.remove('bg-slate-50', 'border-slate-200', 'opacity-60');
+                opt.classList.add('bg-emerald-50', 'border-emerald-400', 'text-emerald-900', 'font-bold');
+              }
+            });
+
+            if (isCorrect) {
+              feedbackEl.innerHTML = `<div class="p-4 flex gap-3"><i class="fas fa-check-circle text-xl text-emerald-600 mt-0.5"></i><div><strong class="block text-emerald-800 font-bold mb-0.5">¡Correcto!</strong> <span class="text-emerald-950">${feedback}</span></div></div>`;
+              feedbackEl.className = 'feedback mt-4 ml-11 rounded-xl text-xs md:text-sm bg-emerald-50 border-emerald-300 font-medium block animate-[fadeIn_0.3s_ease-out] shadow-xs';
+            } else {
+              btn.classList.remove('opacity-60', 'bg-slate-50');
+              btn.classList.add('bg-rose-50', 'border-rose-400', 'text-rose-900', 'opacity-100');
+              feedbackEl.innerHTML = `<div class="p-4 flex gap-3"><i class="fas fa-times-circle text-xl text-rose-600 mt-0.5"></i><div><strong class="block text-rose-800 font-bold mb-0.5">Incorrecto</strong> <span class="text-rose-950">${feedback}</span></div></div>`;
+              feedbackEl.className = 'feedback mt-4 ml-11 rounded-xl text-xs md:text-sm bg-rose-50 border-rose-300 font-medium block animate-[fadeIn_0.3s_ease-out] shadow-xs';
+            }
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
