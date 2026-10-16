@@ -5,10 +5,12 @@
 # de la misma escala de Glasgow y no se pueden multiplicar. Sirve a la sesión 11 del curso
 # (reglas de decisión clínica, puntos de corte y curvas ROC).
 condicion_id: HM:6038
-estado: borrador
+estado: publicado
 autoria:
   autor: Dr. Alcy Torres
-  revisor: null
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
 nivel: Pregrado
 duracion_min: 45
 objetivos:
