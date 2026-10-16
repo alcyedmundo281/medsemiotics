@@ -9,6 +9,8 @@ curso:
   hora_inicio: "20:00"
   duracion_min: 90
   base_url: "https://powersemiotics.com/medsemiotics/"
+  classroom_url: "https://classroom.google.com/c/ODgyOTUwMDI5NDc3"
+  silabo_pdf: "medicina_y_datos/Silabo_Medicina_y_Ciencia_UCE_2026-2027.pdf"
   recesos: ["2026-12-23", "2026-12-30"]
 
 unidades:
@@ -51,10 +53,11 @@ rubricas:
       - {titulo: "Valoración crítica de la evidencia (IC, calidad, aplicabilidad)", puntos: 4}
       - {titulo: "Decisión clínica, comunicación y referencias verificables", puntos: 4}
 
-# `propuesta: true` = el sílabo no fija cuántas ni cuándo: el docente confirma antes de aplicar.
+# `propuesta: true` = pendiente de confirmar por el docente. Los tres informes de caso los confirmó
+# el docente el 2026-10-16 (publicación y entrega en las sesiones indicadas).
 tareas:
-  - {id: informe_caso_u1, titulo: "Informe de caso · Unidad 1", componente: formativa, rubrica: informe_caso, sesion_publicacion: 3, sesion_entrega: 5, propuesta: true}
-  - {id: informe_caso_u2, titulo: "Informe de caso · Unidad 2", componente: formativa, rubrica: informe_caso, sesion_publicacion: 6, sesion_entrega: 7, propuesta: true}
-  - {id: informe_caso_u3, titulo: "Informe de caso · Unidad 3", componente: formativa, rubrica: informe_caso, sesion_publicacion: 10, sesion_entrega: 12, propuesta: true}
+  - {id: informe_caso_u1, titulo: "Informe de caso · Unidad 1", componente: formativa, rubrica: informe_caso, sesion_publicacion: 3, sesion_entrega: 5}
+  - {id: informe_caso_u2, titulo: "Informe de caso · Unidad 2", componente: formativa, rubrica: informe_caso, sesion_publicacion: 6, sesion_entrega: 7}
+  - {id: informe_caso_u3, titulo: "Informe de caso · Unidad 3", componente: formativa, rubrica: informe_caso, sesion_publicacion: 10, sesion_entrega: 12}
   - {id: evaluacion_1, titulo: "Evaluación 1 · Razonamiento bayesiano", componente: sumativa_1, sesion_publicacion: 8, sesion_entrega: 8}
   - {id: proyecto_integrador, titulo: "Proyecto integrador (parejas)", componente: sumativa_final, sesion_publicacion: 13, sesion_entrega: 16}

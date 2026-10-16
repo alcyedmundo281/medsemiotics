@@ -23,6 +23,8 @@ class Curso(_Base):
     hora_inicio: Annotated[str, StringConstraints(pattern=r"^\d{2}:\d{2}$")]
     duracion_min: int = Field(gt=0)
     base_url: Texto
+    classroom_url: Texto | None = None
+    silabo_pdf: Texto | None = None
     recesos: list[date]
 
 

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Sílabo Medicina y Ciencia 2026-2027</title>
+<style>
+@page { size: A4; margin: 24mm 14mm 16mm 14mm;
+  @top-center { content: "UNIVERSIDAD CENTRAL DEL ECUADOR · FACULTAD DE CIENCIAS MÉDICAS – CARRERA DE MEDICINA · PLANIFICACIÓN MICROCURRICULAR"; font: bold 7.5pt Arial, sans-serif; color:#1f3864; }
+  @bottom-right { content: counter(page); font: 8pt Arial, sans-serif; } }
+body { font: 9pt/1.35 Arial, Helvetica, sans-serif; color:#111; }
+h1 { text-align:center; font-size:15pt; margin:2mm 0 1mm; color:#1f3864; }
+h2 { text-align:center; font-size:10.5pt; margin:0 0 4mm; }
+h3 { break-after: avoid; font-size:9pt; background:#1f3864; color:#fff; padding:1.5mm 2mm; margin:4mm 0 0; text-transform:uppercase; }
+h3 + table, h3 + p { break-before: avoid; }
+table { width:100%; border-collapse:collapse; margin:0; page-break-inside:auto; }
+tr { page-break-inside:avoid; }
+th, td { border:0.6pt solid #555; padding:1.4mm 2mm; vertical-align:top; text-align:left; }
+th { background:#dce6f1; }
+td.k { background:#eef3f9; font-weight:bold; width:30%; }
+.c { text-align:center; } .u { page-break-before:always; }
+.sig td { height:22mm; vertical-align:bottom; text-align:center; font-size:8pt; }
+p { margin:1.5mm 0; } ul, ol { margin:1mm 0 1mm 5mm; padding:0; }
+.sm { font-size:8pt; }
+</style></head><body>
+
+<h1>SÍLABO / PLANIFICACIÓN MICROCURRICULAR</h1>
+<h2>MEDICINA Y CIENCIA: CIENCIA DE DATOS Y ESTADÍSTICA BIOMÉDICA EN EL RAZONAMIENTO CLÍNICO</h2>
+
+<table>
+<tr><td class="k">Facultad / Carrera</td><td>Facultad de Ciencias Médicas — Carrera de Medicina</td></tr>
+<tr><td class="k">Cátedra</td><td>Medicina y Ciencia</td></tr>
+<tr><td class="k">Modalidad</td><td>Presencial, con apoyo de plataforma web y aula virtual</td></tr>
+<tr><td class="k">Sedes de práctica</td><td>IESS San Francisco y MSP Calderón</td></tr>
+<tr><td class="k">Código de la asignatura</td><td>Por asignar según la malla curricular de la Carrera</td></tr>
+<tr><td class="k">Período académico</td><td>2026 – 2027</td></tr>
+<tr><td class="k">Período de ejecución</td><td>16 semanas: del 11 de noviembre de 2026 al 10 de marzo de 2027 (receso 23 y 30 de diciembre de 2026)</td></tr>
+<tr><td class="k">Horario</td><td>Miércoles 20:00–21:30 (una sesión semanal de 90 minutos; 24 horas de clase)</td></tr>
+<tr><td class="k">Docente</td><td>Dr. Alcy Edmundo Torres Guerrero — Medicina Interna</td></tr>
+<tr><td class="k">Plataforma web</td><td>https://powersemiotics.com/medsemiotics/index.html y https://powersemiotics.com/medsemiotics/medicina_y_datos.html</td></tr>
+<tr><td class="k">Aula virtual</td><td>Google Classroom «Medicina y Ciencia 2026-2027»</td></tr>
+<tr><td class="k">Fuente clínica</td><td>medsemiotics-db (https://github.com/alcyedmundo281/medsemiotics-db; DOI 10.5281/zenodo.22064424): hallazgos, sensibilidad, especificidad, LR+, LR− y referencias</td></tr>
+</table>
+
+<h3>Aportes al perfil de egreso</h3>
+<table><tr><td>
+<p>La cátedra contribuye a formar un médico general capaz de: (1) razonar con probabilidades ante un hallazgo clínico y decidir si pedir una prueba; (2) leer críticamente la literatura diagnóstica y reconocer la incertidumbre de una cifra; (3) manejar datos clínicos con ética; (4) evaluar y comunicar modelos de predicción y el riesgo al paciente.</p>
+<p><b>Resultados de aprendizaje.</b> Al finalizar, el estudiante será capaz de:</p>
+<ol>
+<li><b>Calcular e interpretar</b> sensibilidad, especificidad, VPP, VPN, LR+ y LR− a partir de una tabla 2×2 y de la literatura.</li>
+<li><b>Actualizar la probabilidad</b> de enfermedad (pretest → postest) con odds, LR y nomograma de Fagan, y relacionarla con umbrales de decisión.</li>
+<li><b>Combinar hallazgos</b> con criterio, reconociendo cuándo el supuesto de independencia falla.</li>
+<li><b>Valorar críticamente</b> un estudio de exactitud diagnóstica (STARD, QUADAS-2, sesgo de espectro) y la incertidumbre de un LR (IC 95 %).</li>
+<li><b>Distinguir</b> diagnóstico, pronóstico y causalidad, y reconocer confusión, colisionadores y sesgos cognitivos.</li>
+<li><b>Manejar datos clínicos</b> con ética: estructurar, consultar (SQL) y analizar (R/Python) una base anonimizada.</li>
+<li><b>Evaluar y comunicar</b> modelos de predicción e IA clínica (discriminación, calibración, explicabilidad) y el riesgo al paciente.</li>
+</ol></td></tr></table>
+
+<h3>Caracterización de la asignatura</h3>
+<table><tr><td>
+<p>La cátedra enseña ciencia de datos y estadística biomédica como <b>instrumento de decisión diagnóstica</b>. Cada concepto se aprende resolviendo un caso clínico del blog Medsemiotics, y la herramienta computacional entra cuando el caso la necesita. El eje es la ruta de un hallazgo: <i>hallazgo clínico → ¿qué tan frecuente es? (probabilidad basal) → ¿qué tan informativo es? (sensibilidad/especificidad → LR+ y LR−) → ¿qué tan seguro es ese número? (IC 95 %, calidad del estudio) → ¿cambia la conducta? (umbrales) → ¿cómo se lo digo al paciente?</i></p>
+<p>Cada sesión usa <b>una condición del blog</b> como caso ancla. Los valores numéricos se toman siempre del artículo correspondiente, que deriva de medsemiotics-db; el docente no los sustituye por cifras de memoria.</p>
+<p><b>Asistente del curso.</b> El repositorio medsemiotics-copilot funciona como asistente de la cátedra: responde desde los artículos del blog y medsemiotics-db citando PMID/DOI y, si no hay cifra documentada, lo dice; hace preguntas socráticas y no entrega la respuesta de las evaluaciones; no recibe ni almacena datos de pacientes ni de estudiantes; su salida es un borrador, no una fuente.</p>
+</td></tr></table>
+
+<h3>Metodologías de enseñanza – aprendizaje</h3>
+<table>
+<tr><th>Estrategia</th><th class="c">Uso</th><th>Estrategia</th><th class="c">Uso</th></tr>
+<tr><td>Aprendizaje problémico (ABP)</td><td class="c">X</td><td>Estrategias socráticas (caso socrático)</td><td class="c">X</td></tr>
+<tr><td>Estudio de caso</td><td class="c">X</td><td>Talleres de cálculo en parejas</td><td class="c">X</td></tr>
+<tr><td>Aula invertida con plataforma web y Classroom</td><td class="c">X</td><td>Búsqueda de información</td><td class="c">X</td></tr>
+<tr><td>Proyecto integrador (parejas)</td><td class="c">X</td><td>Proceso reflexivo y crítico</td><td class="c">X</td></tr>
+</table>
+
+<h3>Evaluación durante el período académico (sobre 20 puntos)</h3>
+<table>
+<tr><th>Componente</th><th class="c">Ponderación</th><th class="c">Puntos</th><th>Instrumento y evidencia</th></tr>
+<tr><td><b>Evaluación formativa</b></td><td class="c">40 %</td><td class="c">8</td><td>Informes de caso (rúbrica abajo), autoevaluaciones del <i>Reto clínico</i> y participación en el caso socrático. Evidencia: entregas en Classroom.</td></tr>
+<tr><td><b>Evaluación sumativa 1</b> (semana 8)</td><td class="c">25 %</td><td class="c">5</td><td>Razonamiento bayesiano: dado un caso, estimar el pretest, aplicar LR y justificar la conducta.</td></tr>
+<tr><td><b>Evaluación sumativa final</b> (semana 16)</td><td class="c">35 %</td><td class="c">7</td><td>Proyecto integrador en parejas: pregunta clínica (PICO), base anonimizada, medidas diagnósticas con IC, límites y comunicación al paciente.</td></tr>
+<tr><td><b>TOTAL</b></td><td class="c"><b>100 %</b></td><td class="c"><b>20</b></td><td>Formativa 40 % y sumativa 60 %, como en las demás cátedras.</td></tr>
+</table>
+
+<h3>Rúbrica del informe de caso (sobre 20 puntos)</h3>
+<table>
+<tr><th>Criterio</th><th class="c">Puntos</th></tr>
+<tr><td>Probabilidad pretest estimada y justificada</td><td class="c">6</td></tr>
+<tr><td>Cálculo e interpretación (sens/esp, LR, postest)</td><td class="c">6</td></tr>
+<tr><td>Valoración crítica de la evidencia (IC, calidad, aplicabilidad)</td><td class="c">4</td></tr>
+<tr><td>Decisión clínica, comunicación y referencias verificables</td><td class="c">4</td></tr>
+<tr><td><b>TOTAL</b></td><td class="c"><b>20</b></td></tr>
+</table>
+
+<h3>Entregas en Classroom (vencen a las 21:30 de la sesión indicada)</h3>
+<table>
+<tr><th>Tarea</th><th>Componente</th><th>Se publica</th><th>Se entrega</th></tr>
+<tr><td>Informe de caso · Unidad 1</td><td>Formativa</td><td>25 nov 2026 (sem. 3)</td><td>09 dic 2026 (sem. 5)</td></tr>
+<tr><td>Informe de caso · Unidad 2</td><td>Formativa</td><td>16 dic 2026 (sem. 6)</td><td>06 ene 2027 (sem. 7)</td></tr>
+<tr><td>Informe de caso · Unidad 3</td><td>Formativa</td><td>27 ene 2027 (sem. 10)</td><td>10 feb 2027 (sem. 12)</td></tr>
+<tr><td>Evaluación 1 · Razonamiento bayesiano</td><td>Sumativa 1</td><td>13 ene 2027 (sem. 8)</td><td>13 ene 2027 (sem. 8)</td></tr>
+<tr><td>Proyecto integrador (parejas)</td><td>Sumativa final</td><td>17 feb 2027 (sem. 13)</td><td>10 mar 2027 (sem. 16)</td></tr>
+</table>
+
+<h3>Reglas de la cátedra</h3>
+<table><tr><td><ol>
+<li>Todo dato de paciente debe estar <b>anonimizado</b>; no se cargan nombres, cédulas ni identificadores.</li>
+<li>Las cifras diagnósticas se citan <b>con su referencia</b> (PMID/DOI); un número sin fuente no puntúa.</li>
+<li>El uso de IA generativa se declara; la salida de un LLM es un borrador, no una fuente.</li>
+<li>Las entregas se gestionan en Classroom; la asistencia, mediante el formulario de la cátedra.</li>
+</ol></td></tr></table>
+
+<h3>Estructura de cada sesión (90 minutos)</h3>
+<table>
+<tr><th>Minutos</th><th>Momento</th><th>Descripción</th></tr>
+<tr><td>0–10</td><td>Caso socrático</td><td>Viñeta del caso ABP sin revelar el cociente; el estudiante estima la probabilidad pretest.</td></tr>
+<tr><td>10–35</td><td>Concepto</td><td>Mini-clase del concepto estadístico del día, anclado en el caso.</td></tr>
+<tr><td>35–65</td><td>Cálculo y debate</td><td>Trabajo en parejas: tabla 2×2, LR, probabilidad postest, con la calculadora de <i>Estadísticos Clínicos</i> o código en R/Python.</td></tr>
+<tr><td>65–80</td><td>Autoevaluación</td><td>Preguntas del blog (<i>Reto clínico</i>) sobre el LR documentado.</td></tr>
+<tr><td>80–90</td><td>Cierre</td><td>«¿Qué cambia en la conducta?» y límites de la evidencia.</td></tr>
+</table>
+
+<h3>Recursos bibliográficos (estilo Vancouver)</h3>
+<table><tr><td><ul>
+<li>Simel DL, Rennie D, Bossuyt PM, editores. <i>The Rational Clinical Examination: Evidence-Based Clinical Diagnosis</i>. JAMA/McGraw-Hill.</li>
+<li>Fanaroff AC, et al. Does this patient with chest pain have acute coronary syndrome? <i>JAMA</i>. 2015. doi:10.1001/jama.2015.12735 (PMID 26547467).</li>
+<li>Bossuyt PM, et al. STARD 2015. <i>BMJ</i>. 2015;351:h5527.</li>
+<li>Whiting PF, et al. QUADAS-2. <i>Ann Intern Med</i>. 2011;155:529-536.</li>
+<li>Johnson AEW, et al. MIMIC-IV. <i>Sci Data</i>. 2023;10:1. doi:10.1038/s41597-022-01899-x.</li>
+<li>Instituto Nacional de Estadística y Censos. ENSANUT 2018. Ecuador.</li>
+<li>medsemiotics-db: fuente clínica de los casos (DOI 10.5281/zenodo.22064424).</li>
+</ul></td></tr></table>
+
+<div class="u"></div>
+<h3>Descripción microcurricular por unidad</h3>
+<p class="sm">Todas las sesiones: miércoles 20:00–21:30, aula asignada de la Carrera y plataforma web <i>medsemiotics</i>. Los recursos son páginas de https://powersemiotics.com/medsemiotics/.</p>
+
+<table>
+<tr><th colspan="4" style="background:#1f3864;color:#fff">UNIDAD 1 · Del hallazgo al número (semanas 1–4)</th></tr>
+<tr><td colspan="4"><b>Resultado de aprendizaje:</b> calcula e interpreta las medidas de exactitud diagnóstica y las traduce a LR+ y LR− (Bloom: comprender / aplicar).</td></tr>
+<tr><th style="width:14%">Semana</th><th>Contenido</th><th style="width:24%">Caso ancla y recurso</th><th style="width:14%">Evaluación</th></tr>
+<tr><td>1 · 11 nov 2026</td><td>El razonamiento clínico como inferencia: abducción, deducción, inducción; qué es un hallazgo como evidencia.</td><td>Presentación del blog; recorrido por un artículo completo. Fundamentos semióticos; Razonamiento clínico.</td><td></td></tr>
+<tr><td>2 · 18 nov 2026</td><td>Datos clínicos: tipos de variable, bases relacionales, ENSANUT, MIMIC-IV, desidentificación y ética.</td><td>Datos de Chimborazo. Laboratorio de Código; Estadísticos Clínicos.</td><td></td></tr>
+<tr><td>3 · 25 nov 2026</td><td>Tabla 2×2: sensibilidad, especificidad, VPP y VPN; por qué el VPP depende de la prevalencia.</td><td>HM:6009 Faringitis estreptocócica. Cuantificando la incertidumbre.</td><td>Informe de caso, Unidad 1</td></tr>
+<tr><td>4 · 02 dic 2026</td><td>De sensibilidad/especificidad a LR+ y LR−: definición, interpretación, magnitudes que cambian la conducta.</td><td>HM:6007 Síndrome coronario agudo (descenso del ST). Cuantificando la incertidumbre.</td><td></td></tr>
+</table>
+
+<table style="margin-top:4mm">
+<tr><th colspan="4" style="background:#1f3864;color:#fff">UNIDAD 2 · Razonar con probabilidades (semanas 5–8)</th></tr>
+<tr><td colspan="4"><b>Resultado de aprendizaje:</b> actualiza la probabilidad de enfermedad con odds y LR, combina hallazgos y decide con umbrales (Bloom: aplicar / analizar).</td></tr>
+<tr><th style="width:14%">Semana</th><th>Contenido</th><th style="width:24%">Caso ancla y recurso</th><th style="width:14%">Evaluación</th></tr>
+<tr><td>5 · 09 dic 2026</td><td>Probabilidad pretest, odds y nomograma de Fagan; intuición bayesiana y falacia de la tasa base.</td><td>HM:6043 Apendicitis aguda. La Intuición Bayesiana.</td><td>Entrega del informe, Unidad 1</td></tr>
+<tr><td>6 · 16 dic 2026</td><td>Combinar hallazgos: producto de LR, independencia condicional y sus límites.</td><td>HM:6040 Pancreatitis aguda; HM:6042 Colecistitis aguda.</td><td>Informe de caso, Unidad 2</td></tr>
+<tr><td>7 · 06 ene 2027</td><td>Umbrales de prueba y de tratamiento; cuándo una prueba no debe pedirse.</td><td>HM:6044 Tromboembolia pulmonar; HM:6035 Trombosis venosa profunda.</td><td>Entrega del informe, Unidad 2</td></tr>
+<tr><td>8 · 13 ene 2027</td><td><b>Evaluación 1:</b> razonamiento bayesiano sobre casos nuevos.</td><td>Casos no vistos de la lista de condiciones. Reto clínico.</td><td><b>Sumativa 1 (25 %)</b></td></tr>
+</table>
+
+<table style="margin-top:4mm">
+<tr><th colspan="4" style="background:#1f3864;color:#fff">UNIDAD 3 · Cuán seguro es el número (semanas 9–12)</th></tr>
+<tr><td colspan="4"><b>Resultado de aprendizaje:</b> valora críticamente la evidencia diagnóstica, su incertidumbre y los sesgos que la distorsionan (Bloom: analizar / evaluar).</td></tr>
+<tr><th style="width:14%">Semana</th><th>Contenido</th><th style="width:24%">Caso ancla y recurso</th><th style="width:14%">Evaluación</th></tr>
+<tr><td>9 · 20 ene 2027</td><td>Incertidumbre estadística: IC 95 %, valor p, tamaño de efecto; leer el IC de un LR.</td><td>HM:6007 y HM:6036 Neumonía infantil. Cuantificando la incertidumbre.</td><td></td></tr>
+<tr><td>10 · 27 ene 2027</td><td>Calidad de los estudios de exactitud: STARD, QUADAS-2, sesgo de espectro y de verificación.</td><td>HM:6034 Cáncer de mama.</td><td>Informe de caso, Unidad 3</td></tr>
+<tr><td>11 · 03 feb 2027</td><td>Reglas de decisión clínica, puntos de corte y curvas ROC.</td><td>HM:6038 Lesión intracraneal en TCE leve.</td><td></td></tr>
+<tr><td>12 · 10 feb 2027</td><td>Sesgos cognitivos (anclaje, disponibilidad) y causalidad: confusión, colisionadores, DAG.</td><td>CausalMed: el caso TRH; reingresos y TEV en Chimborazo. Sesgos de la mente; Inferencia causal.</td><td>Entrega del informe, Unidad 3</td></tr>
+</table>
+
+<table style="margin-top:4mm">
+<tr><th colspan="4" style="background:#1f3864;color:#fff">UNIDAD 4 · Datos, IA y comunicación (semanas 13–16)</th></tr>
+<tr><td colspan="4"><b>Resultado de aprendizaje:</b> analiza una base anonimizada, evalúa modelos de predicción y comunica el riesgo al paciente (Bloom: aplicar / evaluar / crear).</td></tr>
+<tr><th style="width:14%">Semana</th><th>Contenido</th><th style="width:24%">Caso ancla y recurso</th><th style="width:14%">Evaluación</th></tr>
+<tr><td>13 · 17 feb 2027</td><td>Laboratorio de datos: consultas SQL y análisis en R/Python; calcular sensibilidad, especificidad y LR desde una base.</td><td>Base anonimizada de Chimborazo. Laboratorio de Código.</td><td>Inicio del proyecto integrador</td></tr>
+<tr><td>14 · 24 feb 2027</td><td>Modelos de predicción e IA clínica: discriminación, calibración, validación externa, explicabilidad.</td><td>HM:6030 Infarto agudo de miocardio. Razonamiento clínico: IA explicable.</td><td></td></tr>
+<tr><td>15 · 03 mar 2027</td><td>Comunicar el riesgo: frecuencias naturales, visualización y decisión compartida.</td><td>HM:6029 Hipertensión arterial esencial. Comunicación y visualización.</td><td></td></tr>
+<tr><td>16 · 10 mar 2027</td><td><b>Evaluación final / proyecto integrador.</b></td><td>Caso elegido por el grupo.</td><td><b>Sumativa final (35 %)</b></td></tr>
+</table>
+
+<p class="sm" style="margin-top:3mm">Los casos ancla son una propuesta: cualquiera de las 48 condiciones del blog puede sustituirlos, con preferencia por las que tienen caso socrático publicado y LR con IC documentado.</p>
+
+<h3>Firmas de responsabilidad</h3>
+<table class="sig"><tr>
+<td>_________________________<br><b>Elaborado por</b><br>Dr. Alcy Edmundo Torres Guerrero<br>Profesor de la Asignatura<br>Fecha: ______________</td>
+<td>_________________________<br><b>Revisado por</b><br>Coordinación de la Cátedra<br>Fecha: ______________</td>
+<td>_________________________<br><b>Aprobado por</b><br>Dirección de la Carrera de Medicina<br>Fecha: ______________</td>
+</tr></table>
+</body></html>

@@ -141,10 +141,22 @@ Se **mantienen las ponderaciones** de la cátedra y de los sílabos de Neurolog�
 
 | Criterio                                                                      | Puntos |
 | :---------------------------------------------------------------------------- | :----: |
-| Estimación y justificación de la probabilidad pretest                         | 6      |
-| Cálculo e interpretación correctos (sens/esp, LR, probabilidad postest)       | 6      |
-| Valoración crítica de la evidencia (IC, calidad del estudio, aplicabilidad)   | 4      |
-| Decisión clínica y comunicación; referencias en formato verificable           | 4      |
+| Probabilidad pretest estimada y justificada                         | 6      |
+| Cálculo e interpretación (sens/esp, LR, postest)       | 6      |
+| Valoración crítica de la evidencia (IC, calidad, aplicabilidad)   | 4      |
+| Decisión clínica, comunicación y referencias verificables           | 4      |
+
+**Entregas en Classroom** (confirmadas por el docente; vencen a las 21:30 de la sesión indicada)
+
+| Tarea                                   | Componente   | Se publica       | Se entrega       |
+| :-------------------------------------- | :----------- | :--------------- | :--------------- |
+| Informe de caso · Unidad 1              | Formativa    | 25 nov 2026 (s3) | 09 dic 2026 (s5) |
+| Informe de caso · Unidad 2              | Formativa    | 16 dic 2026 (s6) | 06 ene 2027 (s7) |
+| Informe de caso · Unidad 3              | Formativa    | 27 ene 2027 (s10)| 10 feb 2027 (s12)|
+| Evaluación 1 · Razonamiento bayesiano   | Sumativa 1   | 13 ene 2027 (s8) | 13 ene 2027 (s8) |
+| Proyecto integrador (parejas)           | Sumativa final | 17 feb 2027 (s13) | 10 mar 2027 (s16) |
+
+Puntos sobre 20: formativa 8, sumativa 1 = 5, sumativa final = 7.
 
 **Reglas de la cátedra**
 
