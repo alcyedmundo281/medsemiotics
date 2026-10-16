@@ -79,6 +79,10 @@ MESES = {
 }
 FILA_SESION = re.compile(r"^\|\s*(\d+)\s*·\s*(\d{1,2}) (\w{3}) (\d{4})\s*\|(.*)\|\s*$")
 CONDICION = re.compile(r"HM(\d{4})")
+FILA_TAREA = re.compile(
+    r"^\|\s*([^|]+?)\s*\|[^|]*\|\s*\d{1,2} \w{3} \d{4} \(s(\d+)\)\s*\|"
+    r"\s*\d{1,2} \w{3} \d{4} \(s(\d+)\)\s*\|\s*$"
+)
 
 
 def contraste_silabo(plan: Plan, silabo: str) -> list[str]:
@@ -109,6 +113,21 @@ def contraste_silabo(plan: Plan, silabo: str) -> list[str]:
             fallos.append(
                 f"Sesión {s.n}: casos del sílabo {sorted(casos)} frente a "
                 f"{sorted(s.condiciones)} del plan."
+            )
+    entregas = {
+        m.group(1): (int(m.group(2)), int(m.group(3)))
+        for m in map(FILA_TAREA.match, silabo.splitlines())
+        if m
+    }
+    for t in plan.tareas:
+        if t.propuesta:
+            continue
+        if t.titulo not in entregas:
+            fallos.append(f"Tarea {t.id}: no está en la tabla de entregas del sílabo.")
+        elif entregas[t.titulo] != (t.sesion_publicacion, t.sesion_entrega):
+            fallos.append(
+                f"Tarea {t.id}: el sílabo dice sesiones {entregas[t.titulo]} y el plan "
+                f"{(t.sesion_publicacion, t.sesion_entrega)}."
             )
     fallos += [
         f"Componente {c.id}: el sílabo no menciona su ponderación de {c.peso} %."

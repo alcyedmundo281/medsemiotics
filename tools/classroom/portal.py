@@ -35,6 +35,10 @@ def _preguntas(raiz: Path) -> dict[str, int]:
     return {p["slug"]: int(p.get("quiz_count") or 0) for p in indice}
 
 
+def _n_preguntas(n: int) -> str:
+    return f"{n} pregunta del Reto" if n == 1 else f"{n} preguntas del Reto"
+
+
 def _fecha(s: Sesion) -> str:
     return f"mié {s.fecha.day:02d} {MESES[s.fecha.month - 1]} {s.fecha.year}"
 
@@ -60,7 +64,7 @@ def _tarjeta(plan: Plan, s: Sesion, raiz: Path, articulos: dict[str, Articulo]) 
     enlaces = [
         _enlace(
             f"post.html?slug={articulos[c].slug}",
-            f"{articulos[c].condicion_nombre} · {preguntas.get(articulos[c].slug, 0)} preguntas del Reto",
+            f"{articulos[c].condicion_nombre} · {_n_preguntas(preguntas.get(articulos[c].slug, 0))}",
             "fa-file-medical",
         )
         for c in s.condiciones
@@ -70,7 +74,11 @@ def _tarjeta(plan: Plan, s: Sesion, raiz: Path, articulos: dict[str, Articulo]) 
     ]
     insignias = []
     for t in plan.tareas:
-        if not t.propuesta and t.sesion_entrega == s.n:
+        if t.propuesta:
+            continue
+        if t.sesion_publicacion == s.n and t.sesion_publicacion != t.sesion_entrega:
+            insignias.append(f"Se publica: {t.titulo}")
+        if t.sesion_entrega == s.n:
             insignias.append(f"Entrega: {t.titulo}")
     if s.evaluacion:
         peso = next(c.peso for c in plan.componentes if c.id == s.evaluacion)
@@ -116,10 +124,12 @@ def generar(plan: Plan, raiz: Path, articulos: dict[str, Articulo]) -> str:
         f"<span><strong>{escape(t)}.</strong> {escape(d)}</span></li>"
         for m, t, d in MOMENTOS
     )
+    puntos = {k.id: k.peso * 20 // 100 for k in plan.componentes}
     pesos = "".join(
         f'<div class="bg-white p-6 rounded-xl shadow border border-gray-200 text-center">'
         f'<div class="text-4xl font-bold gradient-text">{k.peso} %</div>'
-        f'<div class="text-gray-700 font-semibold mt-1">{escape(k.titulo)}</div></div>'
+        f'<div class="text-gray-700 font-semibold mt-1">{escape(k.titulo)}</div>'
+        f'<div class="text-sm text-gray-500">{puntos[k.id]} de 20 puntos</div></div>'
         for k in plan.componentes
     )
     rubrica = plan.rubricas[0]
@@ -128,6 +138,23 @@ def generar(plan: Plan, raiz: Path, articulos: dict[str, Articulo]) -> str:
         f'<td class="py-2 text-right font-bold">{k.puntos}</td></tr>'
         for k in rubrica.criterios
     )
+    sesion = {x.n: x for x in plan.sesiones}
+    filas_tareas = "".join(
+        f'<tr class="border-t border-gray-100"><td class="py-2 pr-4">{escape(t.titulo)}</td>'
+        f'<td class="py-2 pr-4">{escape(next(k.titulo for k in plan.componentes if k.id == t.componente))}</td>'
+        f'<td class="py-2 pr-4">{_fecha(sesion[t.sesion_publicacion])}</td>'
+        f'<td class="py-2">{_fecha(sesion[t.sesion_entrega])}</td></tr>'
+        for t in plan.tareas
+        if not t.propuesta
+    )
+    h, m = (int(x) for x in c.hora_inicio.split(":"))
+    fin_min = h * 60 + m + c.duracion_min
+    cierre = f"{fin_min // 60:02d}:{fin_min % 60:02d}"
+    enlaces_curso = ""
+    if c.classroom_url:
+        enlaces_curso += _enlace(c.classroom_url, "Aula en Google Classroom", "fa-chalkboard-user")
+    if c.silabo_pdf:
+        enlaces_curso += " &nbsp; " + _enlace(c.silabo_pdf, "Sílabo en PDF", "fa-file-pdf")
     nav = "".join(
         f'<a href="#{u.id.lower()}" class="text-indigo-700 hover:text-indigo-500 font-semibold">'
         f"{escape(u.titulo.split(' · ')[0])}</a>"
@@ -168,6 +195,7 @@ def generar(plan: Plan, raiz: Path, articulos: dict[str, Articulo]) -> str:
           {_fecha(ini)} a {_fecha(fin)} · {len(plan.sesiones)} sesiones (receso {recesos})
         </p>
         <p class="text-sm text-gray-500">{escape(c.seccion)}</p>
+        <p class="mt-3">{enlaces_curso}</p>
       </div>
 
       <section class="max-w-6xl mx-auto mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -191,6 +219,13 @@ def generar(plan: Plan, raiz: Path, articulos: dict[str, Articulo]) -> str:
       <section id="evaluacion" class="max-w-4xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-gray-900 mb-6">Evaluación</h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">{pesos}</div>
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 mb-8">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Entregas en Classroom</h3>
+          <table class="w-full text-sm text-gray-700">
+            <tr class="text-left text-gray-500"><th class="pb-2 pr-4">Tarea</th><th class="pb-2 pr-4">Componente</th><th class="pb-2 pr-4">Se publica</th><th class="pb-2">Se entrega (hasta {cierre})</th></tr>{filas_tareas}
+          </table>
+          <p class="text-sm text-gray-500 mt-3">La formativa (40 %) reúne los tres informes de caso, las autoevaluaciones del Reto clínico y la participación en el caso socrático. Los informes se califican con la rúbrica de abajo.</p>
+        </div>
         <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
           <h3 class="text-xl font-bold text-gray-800 mb-3">Rúbrica: {escape(rubrica.titulo.lower())} (20 puntos)</h3>
           <table class="w-full text-gray-700">{filas}</table>
