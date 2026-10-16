@@ -61,14 +61,14 @@ etapas:
     informacion: >-
       La exploración reglada de ambas mamas, con inspección y palpación sistemática, dura
       más de tres minutos por mama. En el cuadrante superoexterno de la mama izquierda
-      encuentras {{hallazgo HM:3142}}: un nódulo duro de unos dos centímetros, de bordes
+      encuentras lo que la base registra como «{{hallazgo HM:3142}}»: un nódulo duro de unos dos centímetros, de bordes
       mal definidos, poco móvil, sin cambios en la piel ni adenopatías axilares.
     preguntas:
       - pregunta: >-
           Palpas un nódulo duro y poco móvil. ¿Cuánto aumenta la probabilidad de cáncer?
           Interpreta el cociente con su intervalo.
         clave: >-
-          El {{hallazgo HM:3142}} tiene {{lr+ HM:3142}}, con {{esp HM:3142}}: es un cociente
+          El hallazgo «{{hallazgo HM:3142}}» tiene {{lr+ HM:3142}} y {{esp HM:3142}}: es un cociente
           alto, de los que cambian la conducta. El intervalo es amplio: su extremo inferior
           sigue siendo un cociente moderado y el superior es muy alto, de modo que lo único
           seguro es que aumenta mucho la probabilidad. Qué tanto, depende del punto de
