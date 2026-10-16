@@ -135,7 +135,7 @@ etapas:
     hallazgos: [HM:0611]
     informacion: >-
       A las 48 horas el paciente empeora, con dolor persistente y necesidad de más líquidos.
-      En la exploración se ve una {{hallazgo HM:0611}}, una coloración azulada alrededor del
+      En la exploración se ve el {{hallazgo HM:0611}}, una coloración azulada alrededor del
       ombligo.
     preguntas:
       - pregunta: >-
