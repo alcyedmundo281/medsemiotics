@@ -86,7 +86,7 @@ etapas:
     hallazgos: [HM:3144]
     informacion: >-
       Con una probabilidad clínica que juzgas intermedia, se pide dímero D. El resultado
-      es un {{hallazgo HM:3144}}: queda por encima del corte ajustado por edad.
+      es un {{hallazgo HM:3144}}: queda por encima de los 500 µg/L del ensayo del laboratorio.
     preguntas:
       - pregunta: >-
           El dímero D está elevado. ¿Confirma la tromboembolia pulmonar? ¿Para qué sirve
@@ -94,7 +94,7 @@ etapas:
         clave: >-
           No confirma: se eleva en el embarazo, el posoperatorio, la infección, el cáncer y
           la edad, y la base no registra un cociente positivo para él. Su valor documentado
-          es el cociente negativo, {{lr- HM:3144}}: un dímero D por debajo del corte permite
+          es el cociente negativo, {{lr- HM:3144}}: un dímero D por debajo del corte del ensayo (aquí, ELISA cuantitativo con 500 µg/L) permite
           descartar el diagnóstico sin tomografía. Una prueba «sensible» se usa por su
           resultado normal. Aquí el resultado fue elevado, así que no aporta nada para
           decidir y la paciente necesita una prueba de imagen.
@@ -163,7 +163,8 @@ etapas:
           ¿Qué no puede responder la evidencia de este artículo?
         clave: >-
           No hay probabilidad basal ni cocientes para la clínica. El dímero D tiene solo
-          cociente negativo y sin intervalo de confianza publicado. No se documenta la
+          cociente negativo, y ese cociente se mide con un ensayo y un corte concretos: otros
+          ensayos tienen cocientes negativos mayores. No se documenta la
           angiotomografía ni las escalas de probabilidad clínica. La población del
           cociente de la ecografía es de sospecha clínica con estudio a pie de cama: el
           rendimiento depende de quién lo hace. Y no hay información sobre tratamiento ni

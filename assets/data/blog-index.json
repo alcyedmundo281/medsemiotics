@@ -385,13 +385,18 @@
         "concepto": "HM:3144",
         "rol": "prueba_sensible",
         "estado_lr": "medido",
-        "ref": "pmid:16403932",
+        "ref": "pmid:16052017",
         "lr_negativo": {
-          "valor": 0.1,
-          "ref": "pmid:16403932"
+          "valor": 0.08,
+          "ic95": [
+            0.04,
+            0.18
+          ],
+          "ref": "pmid:16052017"
         },
-        "poblacion": "pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest",
-        "decision": "un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía"
+        "poblacion": "pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)",
+        "decision": "un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia",
+        "nota": "Corregido: el cociente anterior (0.10, sin intervalo) se había copiado de Wells 2006 (pmid:16403932), que mide la trombosis venosa profunda. El valor y el intervalo de esta arista son los de Roy 2005 para el ELISA cuantitativo con corte < 500 µg/L. Otros ensayos (látex cuantitativo, hemaglutinación) tienen cocientes negativos mayores y solo excluyen con probabilidad previa baja. Esta fuente no estudia un corte ajustado por edad."
       },
       {
         "concepto": "HM:0401",
@@ -416,7 +421,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "f363c5ffd4e5f887b9c8a4ae916cee93ad62914f",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6044-tromboembolia-pulmonar.yaml",
       "archivos": {
@@ -433,8 +438,9 @@
         "conceptos/HM3144-dimero-d-elevado.yaml": "562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2",
         "conceptos/HM3162-ventriculo-derecho-dilatado.yaml": "bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134",
         "conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml": "8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621",
-        "condiciones/HM6044-tromboembolia-pulmonar.yaml": "909e053b124aa84bde431c8e7747afbfd0d3b86feeda65fc0d0b653d0490d79b",
+        "condiciones/HM6044-tromboembolia-pulmonar.yaml": "2234238767bc6493ff870015fa962048d2a9d88923852e109352d34162ecb71b",
         "referencias/pmid-10737280.yaml": "68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de",
+        "referencias/pmid-16052017.yaml": "608a924c6c05185604836f0e3ef4c1617da586d7c02cd72c3b4374688809d990",
         "referencias/pmid-16403932.yaml": "a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789",
         "referencias/pmid-19679614.yaml": "3a41f589222c75041e1f97433692e4e17afdee178eaddc867a0f74e4526b232c",
         "referencias/pmid-28495379.yaml": "94dd6cc6490001dc513f3e588d2b3b055644113f7874d72b9f9e244143affb93",
@@ -3675,32 +3681,60 @@
       "lr_negativo": null,
       "lr_positivo_rango": null,
       "lr_negativo_rango": null,
-      "poblacion": null,
+      "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal",
       "referencia_id": "pmid:23100216",
       "referencia_cita": "Banks PA, Bollen TL, Dervenis C, Gooszen HG, Johnson CD, Sarr MG, Tsiotos GG, Vege SS Classification of acute pancreatitis--2012: revision of the Atlanta classification and definitions by international consensus Gut 2013",
       "pmid": "23100216",
-      "doi": "10.1136/gutjnl-2012-302779"
+      "doi": "10.1136/gutjnl-2012-302779",
+      "sensibilidad": 0.79,
+      "especificidad": 0.89
     },
     "evidencia": [
       {
         "concepto": "HM:0732",
         "rol": "prueba_especifica",
         "estado_lr": "no_medido",
-        "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
-        "nota": "el corte que usa el protocolo es más de tres veces el límite alto, que es también el que exige Atlanta. El cociente que holonmed le asigna no entra por falta de procedencia; ver «Fuera de alcance»."
+        "sensibilidad": 0.79,
+        "ic95_sensibilidad": [
+          0.54,
+          0.92
+        ],
+        "especificidad": 0.89,
+        "ic95_especificidad": [
+          0.46,
+          0.99
+        ],
+        "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal",
+        "ref": "pmid:28431198",
+        "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
+        "decision": "es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+        "nota": "el corte es más de tres veces el límite alto, que es también el que exige Atlanta. Las cifras sustituyen al cociente del protocolo de origen, que no declaraba procedencia. El estudio que aportó unos dos tercios de los participantes quedó fuera del análisis presentado por problemas con los participantes incluidos."
       },
       {
         "concepto": "HM:0731",
         "rol": "prueba_especifica",
         "estado_lr": "no_medido",
+        "sensibilidad": 0.72,
+        "ic95_sensibilidad": [
+          0.59,
+          0.82
+        ],
+        "especificidad": 0.93,
+        "ic95_especificidad": [
+          0.66,
+          0.99
+        ],
+        "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; amilasa sérica por encima de tres veces el límite normal",
+        "ref": "pmid:28431198",
+        "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
         "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
-        "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+        "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí."
       },
       {
         "concepto": "HM:0202",
         "rol": "manifestacion",
         "estado_lr": "no_medido",
-        "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que holonmed aprovecha de él es sobre todo su ausencia"
+        "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que se aprovecha de él es sobre todo su ausencia"
       },
       {
         "concepto": "HM:0302",
@@ -3719,7 +3753,7 @@
         "rol": "apoyo",
         "estado_lr": "no_medido",
         "decision": "raro pero llamativo: orienta a pancreatitis necrotizante o hemorrágica",
-        "advertencia": "su AUSENCIA no descarta nada, y por eso el protocolo de holonmed no le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad."
+        "advertencia": "su AUSENCIA no descarta nada, y por eso no se le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad."
       },
       {
         "concepto": "HM:0901",
@@ -3731,7 +3765,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "f363c5ffd4e5f887b9c8a4ae916cee93ad62914f",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6040-pancreatitis-aguda.yaml",
       "archivos": {
@@ -3749,11 +3783,13 @@
         "conceptos/HM0732-hiperlipasemia.yaml": "b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275",
         "conceptos/HM0900-hallazgo-de-imagen.yaml": "0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67",
         "conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml": "556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a",
-        "condiciones/HM6040-pancreatitis-aguda.yaml": "94b5db0ea8c4f0d499e3eaf47866b480c8385aabda8242d591bde27b29636dad",
+        "condiciones/HM6040-pancreatitis-aguda.yaml": "68a206a74243bec099ae0e17d38a2c6c937df0d19319cbbe9e99f56e72e183d8",
         "referencias/pmid-23100216.yaml": "43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd",
         "referencias/pmid-25088919.yaml": "b0be6e2c04299a8adea4085e3e6b28f10849d8bd0118e734da36efa36e1bef81",
         "referencias/pmid-26844279.yaml": "6c58e2666a253432e0cfa871160a02df14cacdcfc95e2f1425a8c29071db45b9",
-        "referencias/pmid-27820614.yaml": "0d9f1a12fd2c091c5b8dceb4b30aa62f209df443d05df3417253626d2660b596"
+        "referencias/pmid-27820614.yaml": "0d9f1a12fd2c091c5b8dceb4b30aa62f209df443d05df3417253626d2660b596",
+        "referencias/pmid-28431198.yaml": "2585ea3e375b75c9e33bff7301d6e75d2008c5bb2e68eebfd5f68dd6654afa22",
+        "referencias/pmid-6237447.yaml": "847a002a01f2be5533e4c6d7d9968888b25eb51537335404afff8e639a0b757d"
       }
     },
     "publicacion": {

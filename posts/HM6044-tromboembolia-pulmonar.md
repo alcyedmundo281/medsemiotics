@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: f363c5ffd4e5f887b9c8a4ae916cee93ad62914f
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6044-tromboembolia-pulmonar.yaml
   archivos:
@@ -32,8 +32,9 @@ fuente:
     conceptos/HM3144-dimero-d-elevado.yaml: 562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2
     conceptos/HM3162-ventriculo-derecho-dilatado.yaml: bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134
     conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml: 8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621
-    condiciones/HM6044-tromboembolia-pulmonar.yaml: 909e053b124aa84bde431c8e7747afbfd0d3b86feeda65fc0d0b653d0490d79b
+    condiciones/HM6044-tromboembolia-pulmonar.yaml: 2234238767bc6493ff870015fa962048d2a9d88923852e109352d34162ecb71b
     referencias/pmid-10737280.yaml: 68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de
+    referencias/pmid-16052017.yaml: 608a924c6c05185604836f0e3ef4c1617da586d7c02cd72c3b4374688809d990
     referencias/pmid-16403932.yaml: a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789
     referencias/pmid-19679614.yaml: 3a41f589222c75041e1f97433692e4e17afdee178eaddc867a0f74e4526b232c
     referencias/pmid-28495379.yaml: 94dd6cc6490001dc513f3e588d2b3b055644113f7874d72b9f9e244143affb93
@@ -92,12 +93,16 @@ evidencia:
 - concepto: HM:3144
   rol: prueba_sensible
   estado_lr: medido
-  ref: pmid:16403932
+  ref: pmid:16052017
   lr_negativo: &id002
-    valor: 0.1
-    ref: pmid:16403932
-  poblacion: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest
-  decision: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía
+    valor: 0.08
+    ic95:
+    - 0.04
+    - 0.18
+    ref: pmid:16052017
+  poblacion: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)
+  decision: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia
+  nota: 'Corregido: el cociente anterior (0.10, sin intervalo) se había copiado de Wells 2006 (pmid:16403932), que mide la trombosis venosa profunda. El valor y el intervalo de esta arista son los de Roy 2005 para el ELISA cuantitativo con corte < 500 µg/L. Otros ensayos (látex cuantitativo, hemaglutinación) tienen cocientes negativos mayores y solo excluyen con probabilidad previa baja. Esta fuente no estudia un corte ajustado por edad.'
 - concepto: HM:0401
   rol: manifestacion
   estado_lr: no_medido
@@ -139,11 +144,11 @@ autoevaluacion:
     correcta: false
     feedback: 'Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
 - id: q2
-  pregunta: 'En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest.'
+  pregunta: 'En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas).'
   concepto_id: HM:3144
-  referencia_id: pmid:16403932
-  pmid: '16403932'
-  doi: 10.1001/jama.295.2.199
+  referencia_id: pmid:16052017
+  pmid: '16052017'
+  doi: 10.1136/bmj.331.7511.259
   fuente_doi: 10.5281/zenodo.22064424
   evidencia:
     condicion_id: HM:6044
@@ -151,20 +156,20 @@ autoevaluacion:
     estado_lr: medido
     campo: lr_negativo
     dato: *id002
-    poblacion: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest
+    poblacion: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)
     motivo: null
-    decision: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía
+    decision: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia
     advertencia: null
   opciones:
-  - texto: El valor 0.1 corresponde al LR positivo y no al LR negativo.
+  - texto: El valor 0.08 corresponde al LR positivo y no al LR negativo.
     correcta: false
-    feedback: 'Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía.'
+    feedback: 'Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia.'
   - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'Sí hay una medición documentada: LR negativo: 0.1. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía.'
-  - texto: 'LR negativo: 0.1.'
+    feedback: 'Sí hay una medición documentada: LR negativo: 0.08. LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia.'
+  - texto: 'LR negativo: 0.08.'
     correcta: true
-    feedback: 'LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía.'
+    feedback: 'LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia.'
 ---
 
 # Tromboembolia pulmonar
@@ -241,13 +246,15 @@ Snomed: 59282003; Cie10: I26.9
 
 **Estado del LR:** LR medido
 
-**Referencia:** pmid:16403932
+**Referencia:** pmid:16052017
 
-**LR negativo:** Valor: 0.1; Referencia: pmid:16403932
+**LR negativo:** Valor: 0.08; IC del 95 %: 0.04 / 0.18; Referencia: pmid:16052017
 
-**Población:** pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest
+**Población:** pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)
 
-**Decisión:** un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía
+**Decisión:** un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia
+
+**Nota:** Corregido: el cociente anterior (0.10, sin intervalo) se había copiado de Wells 2006 (pmid:16403932), que mide la trombosis venosa profunda. El valor y el intervalo de esta arista son los de Roy 2005 para el ELISA cuantitativo con corte < 500 µg/L. Otros ensayos (látex cuantitativo, hemaglutinación) tienen cocientes negativos mayores y solo excluyen con probabilidad previa baja. Esta fuente no estudia un corte ajustado por edad.
 
 ### Disnea (HM:0401)
 
@@ -280,6 +287,8 @@ La ecocardiografía a pie de cama muestra especificidad útil y sensibilidad baj
 ## Referencias y procedencia
 
 **pmid:10737280:** Risk factors for deep vein thrombosis and pulmonary embolism: a population-based case-control study. Arch Intern Med, 2000. DOI: 10.1001/archinte.160.6.809.
+
+**pmid:16052017:** Systematic review and meta-analysis of strategies for the diagnosis of suspected pulmonary embolism. BMJ, 2005. DOI: 10.1136/bmj.331.7511.259.
 
 **pmid:16403932:** Does this patient have deep vein thrombosis?. JAMA, 2006. DOI: 10.1001/jama.295.2.199.
 

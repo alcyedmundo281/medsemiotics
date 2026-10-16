@@ -12,7 +12,7 @@
     "ultima_revision": "2026-10-16",
     "revisiones": []
   },
-  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "fuente_revision": "f363c5ffd4e5f887b9c8a4ae916cee93ad62914f",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -81,7 +81,7 @@
           "estado": "LR no medido",
           "poblacion": null,
           "cifras": [],
-          "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que holonmed aprovecha de él es sobre todo su ausencia",
+          "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que se aprovecha de él es sobre todo su ausencia",
           "motivo": null,
           "advertencia": null,
           "graduacion": null,
@@ -145,13 +145,18 @@
           "estado_lr": "no_medido",
           "estado": "LR no medido",
           "poblacion": null,
-          "cifras": [],
-          "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
-          "motivo": null,
+          "cifras": [
+            "sensibilidad 0.79",
+            "especificidad 0.89"
+          ],
+          "decision": "es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+          "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
           "advertencia": null,
           "graduacion": null,
           "tramos": [],
-          "referencias": []
+          "referencias": [
+            "pmid:28431198"
+          ]
         },
         {
           "id": "HM:0731",
@@ -160,13 +165,18 @@
           "estado_lr": "no_medido",
           "estado": "LR no medido",
           "poblacion": null,
-          "cifras": [],
+          "cifras": [
+            "sensibilidad 0.72",
+            "especificidad 0.93"
+          ],
           "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
-          "motivo": null,
-          "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento.",
+          "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
+          "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí.",
           "graduacion": null,
           "tramos": [],
-          "referencias": []
+          "referencias": [
+            "pmid:28431198"
+          ]
         },
         {
           "id": "HM:0901",
@@ -221,7 +231,7 @@
           "cifras": [],
           "decision": "raro pero llamativo: orienta a pancreatitis necrotizante o hemorrágica",
           "motivo": null,
-          "advertencia": "su AUSENCIA no descarta nada, y por eso el protocolo de holonmed no le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad.",
+          "advertencia": "su AUSENCIA no descarta nada, y por eso no se le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad.",
           "graduacion": null,
           "tramos": [],
           "referencias": []
@@ -264,5 +274,10 @@
     ]
   },
   "omitidos": [],
-  "referencias": []
+  "referencias": [
+    {
+      "id": "pmid:28431198",
+      "cita": "Serum amylase and lipase and urinary trypsinogen and amylase for diagnosis of acute pancreatitis. Cochrane Database Syst Rev, 2017. DOI: 10.1002/14651858.CD012010.pub2."
+    }
+  ]
 }
