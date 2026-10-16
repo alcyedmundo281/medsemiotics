@@ -68,7 +68,7 @@ etapas:
           Ordena los tres hallazgos del paciente A por su capacidad de aumentar la
           probabilidad. ¿Cuál es el más informativo y cuál el menos?
         clave: >-
-          La {{hallazgo HM:3014}} tiene {{lr+ HM:3014}}; el {{hallazgo HM:3132}}, {{lr+ HM:3132}};
+          El hallazgo «{{hallazgo HM:3014}}» tiene {{lr+ HM:3014}}; el {{hallazgo HM:3132}}, {{lr+ HM:3132}};
           la {{hallazgo HM:0109}}, {{lr+ HM:0109}}. La irradiación es la más informativa de las
           tres; el tercer tono y la hipotensión quedan en un cociente moderado con
           intervalos que se solapan, de modo que la base no permite ordenarlos entre sí.
@@ -84,32 +84,40 @@ etapas:
           que no se traslada un número de una condición a otra.
   - titulo: El electrocardiograma del paciente A
     fase: discriminacion
-    hallazgos: [HM:3130, HM:3131]
+    hallazgos: [HM:3130]
     informacion: >-
-      El electrocardiograma muestra {{hallazgo HM:3130}} en las derivaciones inferiores y,
-      además, {{hallazgo HM:3131}} en esas mismas derivaciones.
+      El electrocardiograma de ingreso muestra {{hallazgo HM:3130}} en las derivaciones
+      inferiores.
     preguntas:
       - pregunta: >-
           La elevación del ST tiene el cociente más alto de la serie. Interpreta su magnitud
           y su intervalo.
         clave: >-
-          La {{hallazgo HM:3130}} tiene {{lr+ HM:3130}}: es muy alto, y el intervalo, muy
-          amplio, aun en su extremo inferior es un cociente alto. Es el hallazgo
-          electrocardiográfico individual más potente para confirmar el infarto con
-          indicación de reperfusión. Con un cociente así, incluso un pretest bajo lleva la
-          probabilidad a un nivel que obliga a actuar.
+          El hallazgo «{{hallazgo HM:3130}}» tiene {{lr+ HM:3130}}: es muy alto, y el
+          intervalo, muy amplio, aun en su extremo inferior es un cociente alto. Es el
+          hallazgo electrocardiográfico individual más potente para confirmar el infarto con
+          indicación de reperfusión. Con un cociente así, el efecto depende de tu pretest:
+          calcula el postest con el pretest más bajo y con el más alto que consideres
+          razonables, y comprueba si en ambos queda por encima de tu umbral de tratamiento.
+  - titulo: El electrocardiograma de control
+    fase: discriminacion
+    hallazgos: [HM:3131]
+    informacion: >-
+      Un electrocardiograma de control, repetido a las tres horas del inicio del dolor,
+      muestra además {{hallazgo HM:3131}} en esas mismas derivaciones.
+    preguntas:
       - pregunta: >-
-          Tienes cuatro hallazgos que aumentan la probabilidad. Si multiplicas sus cuatro
+          Tienes cinco hallazgos que aumentan la probabilidad. Si multiplicas sus cinco
           cocientes, ¿qué obtienes y por qué no puedes fiarte de ese número?
         clave: >-
           Obtienes un cociente combinado enorme, que llevaría la probabilidad casi a la
           certeza. No puedes fiarte porque multiplicar supone independencia condicional: que
           dado el infarto, cada hallazgo aparezca sin relación con los demás. Aquí no es así:
-          la {{hallazgo HM:3130}} y la {{hallazgo HM:3131}} son dos expresiones
-          electrocardiográficas del mismo evento, y la hipotensión y el tercer tono reflejan
-          ambos una disfunción ventricular. Contar dos veces la misma información sobrestima la
-          probabilidad. Un modelo de este tipo, el llamado «ingenuo», discrimina bien pero
-          está mal calibrado.
+          el hallazgo «{{hallazgo HM:3130}}» y el hallazgo «{{hallazgo HM:3131}}» son dos
+          expresiones electrocardiográficas del mismo evento, y la hipotensión y el tercer
+          tono reflejan ambos una disfunción ventricular. Contar dos veces la misma
+          información sobrestima la probabilidad. Un modelo de este tipo, el llamado
+          «ingenuo», discrimina bien pero está mal calibrado.
       - pregunta: >-
           Aun sin calcular, ¿necesitas el producto para decidir qué hacer con el paciente A?
         clave: >-
@@ -130,11 +138,11 @@ etapas:
           Los cuatro hallazgos del paciente B tienen cociente positivo menor que 1. ¿Qué
           significa que un hallazgo presente tenga un cociente positivo menor que 1?
         clave: >-
-          Que su presencia hace menos probable el diagnóstico. Por ejemplo, el
-          {{hallazgo HM:3133}} tiene {{lr+ HM:3133}}, y los otros tres, valores del mismo
-          orden. No es una rareza: un hallazgo es informativo cuando su cociente se aleja de
+          Que su presencia hace menos probable el diagnóstico. Por ejemplo, el hallazgo
+          «{{hallazgo HM:3133}}» tiene {{lr+ HM:3133}}; los otros tres (punzante, posicional y reproducible a la palpación) son {{lr+ HM:3135}},
+          {{lr+ HM:3136}} y {{lr+ HM:3134}}, respectivamente. No es una rareza: un hallazgo es informativo cuando su cociente se aleja de
           1 en cualquier sentido, y estos son los síntomas de una causa distinta del
-          infarto, como la pericarditis o el dolor osteomuscular. Con un cociente de 0.2 a 0.3
+          infarto, como la pericarditis o el dolor osteomuscular. Con valores tan alejados de 1
           la probabilidad baja de forma importante.
       - pregunta: >-
           ¿Puedes multiplicar los cuatro cocientes del paciente B para concluir que no
