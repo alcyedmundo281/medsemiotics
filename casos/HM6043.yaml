@@ -102,8 +102,8 @@ etapas:
           probabilidad postest tras una ecografía positiva. ¿Basta para operar?
         clave: >-
           El {{hallazgo HM:3177}} tiene {{lr+ HM:3177}}, medido en una población de adultos
-          de urgencias con sospecha de apendicitis. Es un cociente modesto: su especificidad
-          es {{esp HM:3177}}, y con ella el resultado positivo desplaza la probabilidad pero
+          de urgencias con sospecha de apendicitis. Es un cociente modesto: con
+          {{esp HM:3177}}, el resultado positivo desplaza la probabilidad pero
           no la lleva a la certeza. Cuánto sube depende de tu punto de partida: con un
           pretest ya alto el postest queda alto, con uno intermedio queda en una zona que
           justifica valoración quirúrgica y a menudo una tomografía. La decisión que la ficha
@@ -112,9 +112,9 @@ etapas:
           La sensibilidad es alta y la especificidad, moderada. ¿Qué consecuencias tiene
           eso para un resultado positivo y para uno negativo?
         clave: >-
-          La {{sens HM:3177}} hace que la mayoría de los enfermos tengan ecografía positiva,
-          pero la {{esp HM:3177}} moderada deja un buen número de falsos positivos, y por
-          eso el {{lr+ HM:3177}} es bajo. En el otro sentido, el {{lr- HM:3177}} reduce de
+          Con {{sens HM:3177}}, la mayoría de los enfermos tiene una ecografía positiva,
+          pero con {{esp HM:3177}}, que es moderada, quedan muchos falsos positivos, y por
+          eso el cociente positivo es bajo: {{lr+ HM:3177}}. En el otro sentido, {{lr- HM:3177}} reduce de
           forma apreciable la probabilidad, pero un solo estudio negativo no la lleva a un
           nivel en que se pueda descartar, sobre todo si el pretest era alto.
       - pregunta: >-
