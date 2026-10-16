@@ -12,7 +12,7 @@
     "ultima_revision": "2026-10-16",
     "revisiones": []
   },
-  "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+  "fuente_revision": "af44eec90966a41d8052c3605c90a480ad042299",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -205,9 +205,9 @@
             "sensibilidad 0.53",
             "especificidad 0.83"
           ],
-          "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+          "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
           "motivo": null,
-          "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico",
+          "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico",
           "graduacion": null,
           "tramos": [],
           "referencias": [

@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
+  revision: af44eec90966a41d8052c3605c90a480ad042299
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6040-pancreatitis-aguda.yaml
   archivos:
@@ -33,7 +33,7 @@ fuente:
     conceptos/HM0732-hiperlipasemia.yaml: b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275
     conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml: 556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a
-    condiciones/HM6040-pancreatitis-aguda.yaml: 68a206a74243bec099ae0e17d38a2c6c937df0d19319cbbe9e99f56e72e183d8
+    condiciones/HM6040-pancreatitis-aguda.yaml: e611ea546fa844fdd726005f15da408d3596946a89550963638742d1457d8e87
     referencias/pmid-23100216.yaml: 43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd
     referencias/pmid-25088919.yaml: b0be6e2c04299a8adea4085e3e6b28f10849d8bd0118e734da36efa36e1bef81
     referencias/pmid-26844279.yaml: 6c58e2666a253432e0cfa871160a02df14cacdcfc95e2f1425a8c29071db45b9
@@ -293,7 +293,7 @@ Snomed: 197456007; Cie10: No documentado.
 
 ## Notas de uso
 
-LOS CRITERIOS DE ATLANTA NO ESTÁN AQUÍ COMO REGLA, solo descritos abajo en prosa, y la razón es el propio validador. Una `regla` exige `ref`, su única fuente posible es Atlanta 2012 (pmid:23100216), y esa referencia entró en el índice con la errata sin comprobar porque la red desde la que se importó no alcanzaba PubMed. build.py falla si una referencia así sostiene un dato, y una regla de clasificación es un dato. Se añade sola en cuanto alguien corra `scripts/9_desbloquear_referencias.py` desde una red que sí lo alcance.
+LOS CRITERIOS DE ATLANTA NO ESTÁN AQUÍ COMO REGLA, solo descritos abajo en prosa. Una `regla` exige `ref` y su fuente es Atlanta 2012 (pmid:23100216), que ya está cotejada y sin errata pendiente, así que el validador no lo impide: falta registrar la regla.
 
 NINGUNA DE LAS SIETE ARISTAS TRAE COCIENTE, y no es un descuido de la migración: es que el protocolo de origen no declara procedencia para ninguno. La lipasa y la amilasa traen sensibilidad y especificidad de una revisión Cochrane, que no publica el cociente y aquí no se calcula; las otras cinco no traen cifra alguna. Quien lea esta condición esperando cociente con el que mover una probabilidad no lo va a encontrar aquí todavía.
 
@@ -309,7 +309,7 @@ EL ORIGEN DE LOS COCIENTES YA NO ES UNA INCÓGNITA: GetTheDiagnosis.org, confirm
 
 Dos atajos que NO valen, y conviene dejarlos escritos para no repetirlos: la serie Rational Clinical Examination no tiene artículo de pancreatitis —comprobado contra PubMed—, y los metaanálisis de pancreatitis POST-CPRE miden otra cosa y no sustituyen a la fuente de estos cocientes.
 
-LA REGLA DE ATLANTA, que es lo único cuantificado y bien citado de todo el protocolo. Está escrita y comprobada; solo espera a que se coteje la errata de pmid:23100216. Sus componentes son dolor abdominal en cinturón y dolor epigástrico (dolor), hiperamilasemia y hiperlipasemia (enzimas) y hallazgos de imagen compatibles con pancreatitis (imagen), con el criterio de dos de tres.
+LA REGLA DE ATLANTA, que es lo único cuantificado y bien citado de todo el protocolo. La referencia (pmid:23100216) ya está cotejada y sin errata pendiente; falta registrar la regla. Sus componentes son dolor abdominal en cinturón y dolor epigástrico (dolor), hiperamilasemia y hiperlipasemia (enzimas) y hallazgos de imagen compatibles con pancreatitis (imagen), con el criterio de dos de tres.
 
 Los cuatro factores de riesgo entran sin `ref`. La asociación es conocida, pero este índice guarda hechos con procedencia y todavía no la tienen.
 

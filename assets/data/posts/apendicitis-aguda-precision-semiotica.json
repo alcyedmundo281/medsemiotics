@@ -96,7 +96,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+    "revision": "af44eec90966a41d8052c3605c90a480ad042299",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6043-apendicitis-aguda.yaml",
     "archivos": {
@@ -240,7 +240,7 @@
       "ultima_revision": "2026-10-16",
       "revisiones": []
     },
-    "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+    "fuente_revision": "af44eec90966a41d8052c3605c90a480ad042299",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
