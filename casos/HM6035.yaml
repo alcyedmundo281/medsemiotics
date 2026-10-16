@@ -1,0 +1,167 @@
+# Caso socrático para Trombosis venosa profunda (HM:6035).
+# El eje docente es que una misma prueba, el dímero D normal, descarta con fuerza en un estrato de
+# sospecha y no debe usarse para descartar en otro: el cociente negativo depende del ensayo y de la
+# probabilidad previa, y la propia fuente desaconseja apoyarse en él con sospecha alta. Es el caso
+# natural de umbrales de la sesión 7 y comparte con HM:6044 el mismo hallazgo, medido en otra
+# población.
+condicion_id: HM:6035
+estado: borrador
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: null
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Estimar la probabilidad clínica de trombosis venosa profunda antes de pedir pruebas, con la probabilidad basal y los estratos que registra el artículo.
+  - Interpretar el cociente negativo del dímero D según el estrato de sospecha y la sensibilidad del ensayo.
+  - Explicar por qué un dímero D normal descarta con sospecha baja y por qué no debe modificar la decisión con sospecha alta.
+  - Aplicar la lógica de umbrales para decidir entre ecografía, observación y alta.
+vineta:
+  titulo: La pantorrilla que duele después del viaje
+  texto: >-
+    Hombre de 47 años que consulta de forma ambulatoria por dolor en la pantorrilla izquierda
+    de tres días, que empeora al caminar, después de un vuelo de nueve horas la semana
+    pasada. No tiene antecedentes de trombosis, cáncer ni cirugías recientes. No toma
+    medicación. No tiene dolor de pecho ni falta de aire. En la exploración la pantorrilla
+    izquierda está algo más sensible y no hay diferencia clara de diámetro respecto de la
+    derecha.
+  datos:
+    - etiqueta: Temperatura
+      valor: 36.8 °C
+    - etiqueta: Frecuencia cardíaca
+      valor: 78 lpm
+    - etiqueta: Presión arterial
+      valor: 126/80 mmHg
+    - etiqueta: Saturación de oxígeno
+      valor: 98 % al aire ambiente
+etapas:
+  - titulo: Antes de pedir pruebas
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          ¿Qué otras causas de dolor en la pantorrilla debes considerar y por qué no basta
+          con la clínica para decidir?
+        clave: >-
+          Desgarro o contractura muscular, quiste de Baker roto, celulitis, insuficiencia
+          venosa y trombosis venosa superficial. La fuente destaca que los signos y
+          síntomas de la trombosis venosa profunda son inespecíficos y por eso no los
+          cuantifica: el dolor, la sensibilidad y el edema no permiten ni confirmar ni
+          descartar por sí solos, y por eso se usan reglas de predicción para estimar la
+          probabilidad antes de las pruebas.
+      - pregunta: >-
+          Antes de pedir una prueba, ¿cuál es tu estimación de la probabilidad de
+          trombosis y qué te da el artículo para fundamentarla?
+        clave: >-
+          El artículo registra la probabilidad basal en pacientes ambulatorios consecutivos
+          con sospecha de trombosis venosa profunda, con su intervalo, y la prevalencia por
+          estrato de probabilidad clínica (baja, moderada y alta) de una regla de predicción.
+          La conclusión de la fuente es que la exactitud diagnóstica mejora cuando se estima
+          la probabilidad clínica antes de las pruebas. Búscalas y escríbelas: el estrato en
+          el que ubiques a este paciente determina lo que sigue.
+      - pregunta: >-
+          Este paciente tiene un vuelo reciente pero sin diferencia de diámetro ni
+          antecedentes. ¿En qué estrato lo ubicas y por qué?
+        clave: >-
+          Probablemente en probabilidad baja o baja-moderada: hay un factor de riesgo
+          (inmovilización prolongada) pero no hay edema asimétrico, ni antecedente, ni cáncer,
+          ni cirugía. Los componentes exactos y los puntos de corte de la regla no están en
+          el resumen de la fuente, de modo que la clasificación se justifica
+          cualitativamente y se señala como pendiente de documentar.
+  - titulo: Lo que muestra la exploración
+    fase: activacion
+    informacion: >-
+      La pantorrilla está algo sensible a la palpación profunda, sin eritema, sin cordón
+      palpable y sin diferencia de perímetro. Los pulsos distales son normales.
+    preguntas:
+      - pregunta: >-
+          La base no registra ningún cociente para el edema ni para el dolor. ¿Cómo
+          interpretas la ausencia de diferencia de diámetro?
+        clave: >-
+          Como un dato clínico que orienta hacia una probabilidad baja, no como una
+          prueba: la fuente no publica cociente alguno para signos ni síntomas y afirma que
+          son inespecíficos, y la base lo deja explícito para no inventar una cifra. Lo que
+          sí se sostiene con evidencia es el efecto de estimar la probabilidad con una regla
+          antes de pedir la prueba.
+  - titulo: El dímero D en un paciente de baja probabilidad
+    fase: discriminacion
+    hallazgos: [HM:3144]
+    informacion: >-
+      Con probabilidad clínica baja se pide dímero D con un ensayo de alta sensibilidad. El
+      resultado es normal, es decir, no hay {{hallazgo HM:3144}}.
+    preguntas:
+      - pregunta: >-
+          El dímero D es normal. ¿Qué haces? Calcula con el cociente del estrato bajo.
+        clave: >-
+          El cociente que corresponde es el del estrato de sospecha baja con ensayo de alta
+          sensibilidad: {{lr- HM:3144#1}}. Aplicado sobre una probabilidad previa baja,
+          deja la probabilidad posterior muy por debajo del umbral en el que se justifica
+          seguir estudiando, y la conclusión de la fuente es que con probabilidad baja y
+          dímero D negativo el diagnóstico puede excluirse sin ecografía. Comprueba la cuenta
+          con la calculadora bayesiana del artículo, y observa la amplitud del intervalo.
+      - pregunta: >-
+          Si el laboratorio usara un ensayo de sensibilidad moderada, ¿cambia el cociente?
+          ¿Qué implica para tu hospital?
+        clave: >-
+          Sí: para el mismo estrato la base registra {{lr- HM:3144#2}}, un cociente negativo
+          menos potente. La advertencia de la ficha es que cuánto descarta un dímero D normal
+          depende de dos cosas que hay que saber antes de aplicarlo: el ensayo que se usó y
+          el estrato de probabilidad previa. No se debe trasladar el cociente de un ensayo
+          a otro sin saber cuál mide el laboratorio.
+      - pregunta: >-
+          El cociente negativo del estrato bajo ({{lr- HM:3144#1}}) y el del estrato alto
+          ({{lr- HM:3144#5}}) son del mismo orden. Entonces, ¿por qué la fuente desaconseja
+          usar el dímero D con sospecha alta?
+        clave: >-
+          Porque el cociente por sí solo no decide: lo que cuenta es dónde deja la
+          probabilidad posterior respecto del umbral. Con sospecha alta, la probabilidad
+          previa es mucho mayor, de modo que aun con un cociente negativo pequeño la
+          probabilidad posterior sigue siendo demasiado alta para dar de alta, y
+          una trombosis no diagnosticada puede terminar en una embolia pulmonar mortal. La
+          fuente añade que la especificidad del dímero D cae según sube la probabilidad
+          previa, así que además de descartar menos, el dímero D elevado confunde más. Por
+          eso, con sospecha alta, el resultado no debe modificar la decisión clínica.
+  - titulo: Qué hacer
+    fase: decision
+    preguntas:
+      - pregunta: >-
+          Para este paciente, con probabilidad baja y dímero D normal, ¿cuál es tu conducta?
+          ¿Y si en lugar de este paciente fuera uno con la pierna edematosa, antecedente de
+          cáncer y cirugía reciente?
+        clave: >-
+          En el paciente de este caso, el diagnóstico se excluye sin ecografía y se maneja
+          la causa más probable del dolor con seguimiento y advertencia de consultar si
+          aparece edema, aumento del dolor o síntomas respiratorios. En el segundo paciente
+          la probabilidad clínica es alta y el dímero D no se usa para descartar: se va
+          directamente a la ecografía de compresión, y si es negativa y la sospecha persiste
+          se repite o se completa el estudio según la guía local. La imagen de referencia y
+          su rendimiento no están documentados en esta base.
+      - pregunta: >-
+          ¿Qué no puede responder la evidencia de este artículo?
+        clave: >-
+          Los componentes y puntos de corte de la regla de predicción no están en el resumen
+          de la fuente. No hay cocientes para ningún signo ni síntoma. El abstract publica
+          además cocientes agrupados con una incoherencia que impide transcribirlos, por lo
+          que la base solo usa los seis separados por ensayo. No cubre la trombosis de
+          miembros superiores ni la de pacientes hospitalizados, el embarazo o el cáncer, y
+          no documenta el tratamiento.
+cierre:
+  sintesis: >-
+    En la trombosis venosa profunda el signo clínico no se cuantifica, y lo que mejora la
+    exactitud es estimar la probabilidad antes de pedir pruebas. Un dímero D normal descarta
+    con fuerza en la sospecha baja, su potencia depende del ensayo, y con sospecha alta no
+    debe modificar la decisión: lo que decide es dónde queda la probabilidad posterior
+    respecto de los umbrales, no el cociente solo.
+  necesidades_aprendizaje:
+    - >-
+      Componentes y puntos de corte de la regla de predicción clínica, pendientes del texto
+      completo de la fuente.
+    - >-
+      Rendimiento de la ecografía de compresión y estrategias de repetición.
+    - >-
+      Cocientes del edema asimétrico, del dolor y de otros signos, que la fuente no publica.
+    - >-
+      Trombosis venosa profunda en el embarazo, el cáncer, la hospitalización y los
+      miembros superiores.
+    - >-
+      Tratamiento anticoagulante y duración, no documentados en la base.
+omitidos: []
