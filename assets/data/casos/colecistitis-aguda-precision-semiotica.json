@@ -1,0 +1,285 @@
+{
+  "condicion_id": "HM:6042",
+  "slug": "colecistitis-aguda-precision-semiotica",
+  "estado": "publicado",
+  "autoria": {
+    "autor": "Dr. Alcy Torres",
+    "revisor": "Dr. Alcy Torres"
+  },
+  "publicacion": {
+    "fecha": "2026-10-16",
+    "version": 1,
+    "ultima_revision": "2026-10-16",
+    "revisiones": []
+  },
+  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "nivel": "Pregrado",
+  "duracion_min": 45,
+  "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+  "objetivos": [
+    "Interpretar el cociente positivo y el negativo de la ecografía a pie de cama en la sospecha de colecistitis aguda y explicar su asimetría.",
+    "Explicar por qué la sensibilidad moderada impide descartar la colecistitis con una ecografía negativa si la sospecha es alta.",
+    "Reconocer cómo los criterios de Tokio combinan datos locales, sistémicos y de imagen sin multiplicar cocientes.",
+    "Distinguir la litiasis biliar en la imagen de la colecistitis y enumerar qué puede dar un falso positivo.",
+    "Decidir la conducta tras una ecografía positiva y tras una indeterminada."
+  ],
+  "vineta": {
+    "titulo": "El dolor después de la comida grasa",
+    "texto": "Mujer de 54 años que consulta a urgencias por dolor en la parte alta derecha del abdomen de unas treinta horas, que empezó la noche anterior tras una cena abundante, y que no cede como los cólicos que ya había tenido. Hace dos años le encontraron cálculos en la vesícula en una ecografía de rutina y decidió no operarse. Tiene náuseas, escalofríos y el dolor aumenta al respirar profundo. No ha tenido ictericia ni orina oscura.",
+    "datos": [
+      {
+        "etiqueta": "Temperatura",
+        "valor": "38.4 °C"
+      },
+      {
+        "etiqueta": "Frecuencia cardíaca",
+        "valor": "100 lpm"
+      },
+      {
+        "etiqueta": "Presión arterial",
+        "valor": "130/80 mmHg"
+      },
+      {
+        "etiqueta": "Saturación de oxígeno",
+        "valor": "97 % al aire ambiente"
+      }
+    ]
+  },
+  "etapas": [
+    {
+      "numero": 1,
+      "titulo": "Antes de explorarla",
+      "fase": "activacion",
+      "fase_etiqueta": "Activación e hipótesis iniciales",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué diferencia un cólico biliar de una colecistitis aguda en la historia que cuenta la paciente?",
+          "clave": "El cólico biliar es un dolor que aparece, dura menos de unas horas y cede, porque el cálculo se impacta y se libera. En la colecistitis el dolor persiste más de seis horas aproximadamente, se acompaña de fiebre y respuesta inflamatoria y hay sensibilidad local mantenida. La diferencia clínica es de duración y de signos sistémicos, y esa diferencia es lo que justifica pasar de analgesia a imagen y valoración quirúrgica."
+        },
+        {
+          "pregunta": "¿Qué otros diagnósticos deben considerarse en el dolor del hipocondrio derecho con fiebre, y qué prueba sencilla distingue varios de ellos?",
+          "clave": "Colangitis, hepatitis aguda, pancreatitis biliar, úlcera péptica perforada, neumonía basal derecha, pielonefritis y, menos probable en esta paciente, síndrome coronario agudo. Una analítica con perfil hepático, lipasa y leucocitos, y una radiografía de tórax cuando hay síntomas respiratorios, ordenan buena parte del diferencial antes de la ecografía."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Lo que dicen la clínica y el laboratorio",
+      "fase": "exploracion",
+      "fase_etiqueta": "Exploración de hallazgos",
+      "informacion": "La paciente tiene dolor en hipocondrio derecho con irritación peritoneal localizada y detención de la inspiración al palpar. Está con fiebre. El laboratorio muestra leucocitosis y elevación de proteína C reactiva.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:0203",
+          "nombre": "Dolor en hipocondrio derecho",
+          "rol": "Manifestación",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:29032636"
+          ]
+        },
+        {
+          "id": "HM:0101",
+          "nombre": "Fiebre",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:29032636"
+          ]
+        },
+        {
+          "id": "HM:0601",
+          "nombre": "Irritación peritoneal",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:29032636"
+          ]
+        },
+        {
+          "id": "HM:0712",
+          "nombre": "Leucocitosis",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:29032636"
+          ]
+        },
+        {
+          "id": "HM:0761",
+          "nombre": "Elevación de proteína C reactiva",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:29032636"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "Ninguno de estos hallazgos tiene cociente medido en la base. ¿Cómo decides si la paciente tiene colecistitis, y qué NO puedes hacer?",
+          "clave": "Se decide con criterios, no con cocientes: los criterios de Tokio piden un signo local (Murphy, dolor o masa en el hipocondrio derecho), un signo sistémico (fiebre o marcadores inflamatorios) y un hallazgo de imagen confirmatorio. Lo que no puede hacerse es sumar o multiplicar «cociente aproximados» de cada hallazgo: la base los marca como LR no medido y no hay cifra que combinar. Con signo local más sistémico se tiene sospecha; para el diagnóstico definitivo falta la imagen."
+        },
+        {
+          "pregunta": "¿Por qué un criterio de clasificación como el de Tokio no es lo mismo que una actualización bayesiana?",
+          "clave": "Porque dice cuándo se considera hecho el diagnóstico a efectos clínicos, no cuánto cambia la probabilidad con cada dato. Es una regla de decisión construida por consenso, útil para estandarizar, que no explicita probabilidades. La actualización bayesiana, en cambio, exige una probabilidad previa y un cociente por cada hallazgo. En esta condición solo la imagen tiene cociente documentado."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "La ecografía a pie de cama",
+      "fase": "discriminacion",
+      "fase_etiqueta": "Discriminación con la evidencia",
+      "informacion": "El médico de urgencias realiza una ecografía. Se ve litiasis biliar en imagen, un foco ecogénico con sombra acústica en la luz vesicular. Además la pared está engrosada, hay líquido alrededor de la vesícula y el dolor es máximo al presionar con el transductor sobre ella: signo ecográfico de colecistitis aguda.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:0903",
+          "nombre": "Litiasis biliar en imagen",
+          "rol": "Manifestación",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:29032636"
+          ]
+        },
+        {
+          "id": "HM:3175",
+          "nombre": "Signo ecográfico de colecistitis aguda",
+          "rol": "Imagen",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR+ 12.7 (IC 95 %: 5.8–27.5)",
+            "LR− 0.31 (IC 95 %: 0.23–0.41)",
+            "sensibilidad 0.709",
+            "especificidad 0.944"
+          ],
+          "decision": "patrón ecográfico positivo (cálculo + pared > 3 mm + líquido perivesicular + Murphy ecográfico): confirma colecistitis aguda e indica interconsulta quirúrgica temprana para colecistectomía laparoscópica precoz (dentro de las primeras 24-72 h)",
+          "motivo": null,
+          "advertencia": "un LR− de 0.31 no descarta colecistitis en presencia de clínica inflamatoria persistente; ante ecografía indeterminada o negativa con alta sospecha, indicar imagen adicional o reevaluación seriada",
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:37855790"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "La ecografía muestra cálculos. ¿Es eso suficiente para diagnosticar colecistitis? ¿En qué se distingue el hallazgo de litiasis del signo ecográfico completo?",
+          "clave": "No. La litiasis biliar en imagen figura en la base como hallazgo LR no medido: los cálculos son frecuentes en la población y la mayoría de quienes los tienen no desarrollan colecistitis. El signo ecográfico de colecistitis aguda es otra cosa: exige además pared engrosada, líquido perivesicular y dolor selectivo bajo el transductor, es decir, la huella de la inflamación y no solo la presencia del cálculo."
+        },
+        {
+          "pregunta": "Interpreta el cociente positivo del signo ecográfico y su intervalo. ¿Qué dice sobre la probabilidad de colecistitis?",
+          "clave": "El signo ecográfico de colecistitis aguda tiene LR+ 12.7 (IC 95 %: 5.8–27.5) y especificidad 0.944. Es un cociente alto, de los que mueven la probabilidad con fuerza, y por eso la ficha indica que confirma la colecistitis e inicia la interconsulta quirúrgica. Pero el intervalo es muy amplio: el extremo inferior es un cociente moderado y el superior, muy alto. Aun en el peor de los casos de la estimación, desplaza claramente la probabilidad."
+        },
+        {
+          "pregunta": "Ahora imagina que la ecografía es negativa o indeterminada, pero la paciente sigue con fiebre y dolor localizado. ¿Descartas la colecistitis?",
+          "clave": "No. El cociente negativo (LR− 0.31 (IC 95 %: 0.23–0.41)) viene de una prueba con sensibilidad 0.709, que es solo moderada: casi un tercio de los enfermos tendría una ecografía que no muestra el signo completo. La ficha advierte que ese cociente negativo no descarta la colecistitis ante clínica inflamatoria persistente y que, con ecografía indeterminada o negativa y alta sospecha, debe obtenerse otra imagen o reevaluar de forma seriada. La asimetría es la lección: el estudio positivo confirma en la mayoría de los pretest razonables, el negativo no descarta."
+        },
+        {
+          "pregunta": "¿Qué puede dar una ecografía falsamente positiva en una paciente como esta?",
+          "clave": "Según las advertencias de la ficha: engrosamiento de la pared por causas sistémicas (insuficiencia cardíaca, cirrosis con ascitis, hipoalbuminemia, hepatitis aguda, pancreatitis), vesícula colapsada tras comer, colelitiasis simple con cólico sin inflamación de la pared, y neoplasias o adenomiomatosis. Y en sentido contrario, la analgesia previa o el shock pueden suprimir el dolor selectivo y dar un falso negativo del signo de Murphy ecográfico."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Qué hacer",
+      "fase": "decision",
+      "fase_etiqueta": "Juicio clínico y decisión",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "Con la ecografía positiva, ¿cuál es tu conducta y qué plazo tiene la cirugía?",
+          "clave": "Interconsulta quirúrgica temprana, con ayuno, hidratación, analgesia y antibiótico según la gravedad y el protocolo local. La ficha recoge colecistectomía laparoscópica precoz, dentro de las primeras 24 a 72 horas. La decisión sobre gravedad y riesgo quirúrgico (edad, comorbilidad) no está documentada en la base y se resuelve con la guía local y el cirujano."
+        },
+        {
+          "pregunta": "En el caso de la apendicitis, la especificidad de la ecografía era moderada; aquí es alta. ¿Qué cambia en cómo usas el resultado positivo en cada una?",
+          "clave": "Con especificidad alta y cociente positivo alto, un resultado positivo en colecistitis confirma en la mayoría de los pretest razonables; en la apendicitis, con especificidad moderada y cociente bajo, un resultado positivo desplaza la probabilidad pero obliga a confirmar si el pretest no era alto. La misma técnica, la ecografía, tiene un peso distinto según la condición, el operador y la población: no se traslada un cociente de una enfermedad a otra."
+        },
+        {
+          "pregunta": "¿Qué no puede responder esta evidencia?",
+          "clave": "No documenta la probabilidad basal, de modo que el pretest vuelve a ser un juicio. No tiene cocientes para la clínica ni para el laboratorio. No cubre la colecistitis alitiásica, que la propia ficha señala como parte de los casos sin cálculo y que ocurre en pacientes críticos. No incluye la colangitis ni la coledocolitiasis, que cambian la conducta. Y el cociente viene de un metaanálisis de estudios en urgencias: su aplicación a otros contextos requiere prudencia."
+        }
+      ]
+    }
+  ],
+  "cierre": {
+    "sintesis": "En la colecistitis aguda la clínica se combina por criterios, no por cocientes, porque la base no los documenta. La ecografía a pie de cama sí tiene cociente: un resultado positivo con el signo completo confirma en la mayoría de los pretest razonables, y uno negativo no descarta si la sospecha persiste. Lo mismo que en la apendicitis: la misma técnica pesa distinto según la condición.",
+    "necesidades_aprendizaje": [
+      "Probabilidad basal de colecistitis en pacientes con dolor en el hipocondrio derecho, no documentada en esta condición.",
+      "Cocientes de los hallazgos clínicos y de laboratorio, marcados como no medidos.",
+      "Rendimiento de la gammagrafía, la tomografía y la resonancia cuando la ecografía es indeterminada.",
+      "Estratificación de la gravedad de la colecistitis y criterios de drenaje percutáneo en pacientes de alto riesgo quirúrgico.",
+      "Colecistitis alitiásica en el paciente crítico."
+    ]
+  },
+  "omitidos": [],
+  "referencias": [
+    {
+      "id": "pmid:29032636",
+      "cita": "Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholecystitis (with videos). J Hepatobiliary Pancreat Sci, 2018. DOI: 10.1002/jhbp.515."
+    },
+    {
+      "id": "pmid:37855790",
+      "cita": "Test Characteristics of Emergency Medicine-Performed Point-of-Care Ultrasound for the Diagnosis of Acute Cholecystitis: A Systematic Review and Meta-analysis. Ann Emerg Med, 2024. DOI: 10.1016/j.annemergmed.2023.09.005."
+    }
+  ]
+}
