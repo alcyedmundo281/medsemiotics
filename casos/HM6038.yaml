@@ -68,8 +68,8 @@ etapas:
           El atropello y los vómitos repetidos aumentan la probabilidad. Compara cómo se
           expresa la incertidumbre de cada cociente.
         clave: >-
-          Al {{hallazgo HM:3052}} le corresponde {{lr+ HM:3052}}, un cociente con intervalo de
-          confianza estrecho: el más preciso de la serie. Al {{hallazgo HM:3053}}, en
+          Al hallazgo «{{hallazgo HM:3052}}» le corresponde {{lr+ HM:3052}}, un cociente con intervalo de
+          confianza estrecho: el más preciso de la serie. Al hallazgo «{{hallazgo HM:3053}}», en
           cambio, {{lr+ HM:3053}}, que es un rango entre estudios y no un intervalo de
           confianza. Parecen equivalentes pero no lo son: uno describe la precisión de una
           estimación, el otro la dispersión entre mediciones, y la base advierte que no se
@@ -94,9 +94,9 @@ etapas:
         clave: >-
           No son independientes: describen el mismo hecho, un deterioro del nivel de
           conciencia, medido de dos maneras. Multiplicar sus cocientes contaría dos veces
-          la misma información y sobrestimaría la probabilidad. El {{hallazgo HM:3050}} tiene
-          {{lr+ HM:3050}} y es la puntuación exacta de 13, no «13 o menos». El
-          {{hallazgo HM:3051}} se expresa como {{lr+ HM:3051}}, un rango tan amplio que no
+          la misma información y sobrestimaría la probabilidad. El hallazgo «{{hallazgo HM:3050}}» tiene
+          {{lr+ HM:3050}} y es la puntuación exacta de 13, no «13 o menos». El hallazgo
+          «{{hallazgo HM:3051}}» se expresa como {{lr+ HM:3051}}, un rango tan amplio que no
           puede tratarse como una estimación única.
       - pregunta: >-
           ¿Qué ocurre con los cocientes si en lugar de un Glasgow de exactamente 13 el
@@ -118,7 +118,7 @@ etapas:
           Los signos de fractura de cráneo tienen el cociente positivo más alto de la serie.
           ¿Qué significa que su intervalo sea tan amplio?
         clave: >-
-          El {{hallazgo HM:3049}} tiene {{lr+ HM:3049}}, con {{esp HM:3049}}. El intervalo
+          El hallazgo «{{hallazgo HM:3049}}» tiene {{lr+ HM:3049}}, con {{esp HM:3049}}. El intervalo
           es amplísimo: el hallazgo es raro y la estimación muy imprecisa. La ficha lo
           resume bien: lo que sostiene la decisión es el extremo inferior, no el valor
           puntual. Aun en el peor caso de la estimación el cociente sigue siendo moderado,
@@ -127,7 +127,7 @@ etapas:
           El Glasgow persiste bajo a las dos horas. ¿Qué aporta, y qué ocurre con el corte
           que publicó el artículo original?
         clave: >-
-          El {{hallazgo HM:3152}} tiene {{lr+ HM:3152}} y pesa por sí mismo, con
+          El hallazgo «{{hallazgo HM:3152}}» tiene {{lr+ HM:3152}} y pesa por sí mismo, con
           independencia del Glasgow de llegada. La nota de la ficha es una enseñanza en sí
           misma: este cociente no estaba en el resumen original; lo aporta una corrección
           publicada, que cambió el corte de 15 a 14 y los cocientes a la vez. Un punto de
@@ -169,8 +169,8 @@ cierre:
     En el traumatismo craneal leve del adulto, los hallazgos individuales tienen cocientes
     positivos modestos o muy imprecisos, y varios de ellos son cortes distintos de la misma
     escala que no pueden multiplicarse. El valor de la condición está en el cociente negativo de
-    una regla de decisión: ninguna positiva hace muy improbable la lesión y sostiene la
-    decisión de no pedir la tomografía.
+    una regla de decisión: una regla sin ningún criterio presente (negativa) hace muy
+    improbable la lesión y sostiene la decisión de no pedir la tomografía.
   necesidades_aprendizaje:
     - >-
       Componentes y puntos de corte de la Canadian CT Head Rule y de los New Orleans Criteria,
