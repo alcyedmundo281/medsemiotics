@@ -67,15 +67,11 @@ etapas:
           ni cirugía. Los componentes exactos y los puntos de corte de la regla no están en
           el resumen de la fuente, de modo que la clasificación se justifica
           cualitativamente y se señala como pendiente de documentar.
-  - titulo: Lo que muestra la exploración
-    fase: activacion
-    informacion: >-
-      La pantorrilla está algo sensible a la palpación profunda, sin eritema, sin cordón
-      palpable y sin diferencia de perímetro. Los pulsos distales son normales.
-    preguntas:
       - pregunta: >-
-          La base no registra ningún cociente para el edema ni para el dolor. ¿Cómo
-          interpretas la ausencia de diferencia de diámetro?
+          La pantorrilla está algo sensible a la palpación profunda, sin eritema, sin cordón
+          palpable y sin diferencia de perímetro, con pulsos distales normales. La base no
+          registra ningún cociente para el edema ni para el dolor. ¿Cómo interpretas la
+          ausencia de diferencia de diámetro?
         clave: >-
           Como un dato clínico que orienta hacia una probabilidad baja, no como una
           prueba: la fuente no publica cociente alguno para signos ni síntomas y afirma que
@@ -93,11 +89,15 @@ etapas:
           El dímero D es normal. ¿Qué haces? Calcula con el cociente del estrato bajo.
         clave: >-
           El cociente que corresponde es el del estrato de sospecha baja con ensayo de alta
-          sensibilidad: {{lr- HM:3144#1}}. Aplicado sobre una probabilidad previa baja,
-          deja la probabilidad posterior muy por debajo del umbral en el que se justifica
-          seguir estudiando, y la conclusión de la fuente es que con probabilidad baja y
-          dímero D negativo el diagnóstico puede excluirse sin ecografía. Comprueba la cuenta
-          con la calculadora bayesiana del artículo, y observa la amplitud del intervalo.
+          sensibilidad: {{lr- HM:3144#1}}. Toma la prevalencia que el artículo registra para
+          el estrato de probabilidad clínica baja, conviértela en odds, multiplícala por el
+          cociente y vuelve a probabilidad; repite el cálculo con cada extremo del
+          intervalo. Decide tú si el resultado queda por debajo del umbral en el que no
+          compensa seguir estudiando: el umbral no lo fija la base, lo fija el costo de
+          perder una trombosis frente al de pedir una ecografía. La conclusión de la fuente
+          es que con probabilidad baja y dímero D negativo el diagnóstico puede excluirse sin
+          ecografía. Comprueba la cuenta con la calculadora bayesiana del artículo y observa
+          la amplitud del intervalo.
       - pregunta: >-
           Si el laboratorio usara un ensayo de sensibilidad moderada, ¿cambia el cociente?
           ¿Qué implica para tu hospital?
@@ -108,18 +108,21 @@ etapas:
           el estrato de probabilidad previa. No se debe trasladar el cociente de un ensayo
           a otro sin saber cuál mide el laboratorio.
       - pregunta: >-
-          El cociente negativo del estrato bajo ({{lr- HM:3144#1}}) y el del estrato alto
-          ({{lr- HM:3144#5}}) son del mismo orden. Entonces, ¿por qué la fuente desaconseja
-          usar el dímero D con sospecha alta?
+          Compara el cociente negativo del estrato bajo con el del estrato alto, ambos con
+          ensayo de alta sensibilidad. Parecen del mismo orden. Entonces, ¿por qué la fuente
+          desaconseja usar el dímero D con sospecha alta?
         clave: >-
-          Porque el cociente por sí solo no decide: lo que cuenta es dónde deja la
-          probabilidad posterior respecto del umbral. Con sospecha alta, la probabilidad
-          previa es mucho mayor, de modo que aun con un cociente negativo pequeño la
-          probabilidad posterior sigue siendo demasiado alta para dar de alta, y
-          una trombosis no diagnosticada puede terminar en una embolia pulmonar mortal. La
-          fuente añade que la especificidad del dímero D cae según sube la probabilidad
-          previa, así que además de descartar menos, el dímero D elevado confunde más. Por
-          eso, con sospecha alta, el resultado no debe modificar la decisión clínica.
+          El estrato bajo con ensayo de alta sensibilidad tiene {{lr- HM:3144#1}}, y el
+          estrato alto con el mismo ensayo, {{lr- HM:3144#5}}. Porque el cociente por sí
+          solo no decide: lo que cuenta es dónde deja la probabilidad posterior. Con
+          sospecha alta la prevalencia previa es mucho mayor, así que aun con un cociente
+          negativo pequeño la probabilidad posterior queda muy por encima de la que obtuviste
+          en el estrato bajo. Calcúlalo con la prevalencia del estrato alto y compáralo con
+          el resultado del estrato bajo. Además, una trombosis
+          no diagnosticada puede terminar en una embolia pulmonar mortal. La fuente añade
+          que la especificidad del dímero D cae según sube la probabilidad previa, así que
+          además de descartar menos, el dímero D elevado confunde más. Por eso, con sospecha
+          alta, el resultado no debe modificar la decisión clínica.
   - titulo: Qué hacer
     fase: decision
     preguntas:
