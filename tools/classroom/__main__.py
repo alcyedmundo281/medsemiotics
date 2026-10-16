@@ -15,10 +15,11 @@ from casos.articulo import leer_articulos
 from casos.compilar import RAIZ, Rutas, leer_casos
 from classroom.plan import construir
 from classroom.portal import generar
-from classroom.validar import avisos, cargar, errores
+from classroom.validar import avisos, cargar, contraste_silabo, errores
 
 CURSO = RAIZ / "classroom" / "curso-2026-2027.yaml"
 PORTAL = RAIZ / "medicina_y_datos.html"
+SILABO = RAIZ / "docs" / "silabo-medicina-y-ciencia-v3.md"
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -34,6 +35,7 @@ def main(argv: list[str] | None = None) -> int:
     rutas = Rutas(RAIZ)
     articulos = leer_articulos(rutas.posts)
     fallos = errores(plan, RAIZ, set(articulos))
+    fallos += contraste_silabo(plan, SILABO.read_text(encoding="utf-8"))
     if fallos:
         print("\n".join(fallos), file=sys.stderr)
         return 1

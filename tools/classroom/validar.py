@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from datetime import timedelta
+import re
+from datetime import date, timedelta
 from typing import TYPE_CHECKING
 
 import yaml
@@ -67,6 +68,53 @@ def errores(plan: Plan, raiz: Path, condiciones_publicadas: set[str]) -> list[st
     for c in plan.componentes:
         if c.sesion and c.sesion in sesiones and sesiones[c.sesion].evaluacion != c.id:
             fallos.append(f"Componente {c.id}: la sesión {c.sesion} no la declara.")
+    return fallos
+
+
+MESES = {
+    m: i
+    for i, m in enumerate(
+        ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"], 1
+    )
+}
+FILA_SESION = re.compile(r"^\|\s*(\d+)\s*·\s*(\d{1,2}) (\w{3}) (\d{4})\s*\|(.*)\|\s*$")
+CONDICION = re.compile(r"HM(\d{4})")
+
+
+def contraste_silabo(plan: Plan, silabo: str) -> list[str]:
+    """Compara el plan con el cronograma y las ponderaciones del sílabo (prosa Markdown).
+
+    Por cada sesión exige que el sílabo tenga su fila con la misma fecha y los mismos casos
+    ancla; por cada componente, que el sílabo mencione su ponderación. Un cambio en una sola
+    de las dos fuentes hace fallar la comprobación.
+    """
+    filas: dict[int, tuple[date, set[str]]] = {}
+    for linea in silabo.splitlines():
+        m = FILA_SESION.match(linea)
+        mes = MESES.get(m.group(3)) if m else None
+        if m is None or mes is None:
+            continue
+        columnas = m.group(5).split("|")
+        casos = {f"HM:{c}" for c in CONDICION.findall(columnas[1] if len(columnas) > 1 else "")}
+        filas[int(m.group(1))] = (date(int(m.group(4)), mes, int(m.group(2))), casos)
+    fallos: list[str] = []
+    for s in plan.sesiones:
+        if s.n not in filas:
+            fallos.append(f"Sesión {s.n}: no está en el cronograma del sílabo.")
+            continue
+        fecha, casos = filas[s.n]
+        if fecha != s.fecha:
+            fallos.append(f"Sesión {s.n}: el sílabo dice {fecha} y el plan {s.fecha}.")
+        if casos != set(s.condiciones):
+            fallos.append(
+                f"Sesión {s.n}: casos del sílabo {sorted(casos)} frente a "
+                f"{sorted(s.condiciones)} del plan."
+            )
+    fallos += [
+        f"Componente {c.id}: el sílabo no menciona su ponderación de {c.peso} %."
+        for c in plan.componentes
+        if f"{c.peso} %" not in silabo
+    ]
     return fallos
 
 

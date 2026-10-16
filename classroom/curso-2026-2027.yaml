@@ -32,7 +32,7 @@ sesiones:
   - {n: 11, fecha: "2027-02-03", unidad: U3, tema: "Reglas de decisión clínica, puntos de corte y curvas ROC", condiciones: ["HM:6038"], recursos: []}
   - {n: 12, fecha: "2027-02-10", unidad: U3, tema: "Sesgos cognitivos y causalidad: confusión, colisionadores, DAG", condiciones: [], recursos: [medicina_y_datos/sesgos_de_la_mente.html, medicina_y_datos/inferencia-causal.html]}
   - {n: 13, fecha: "2027-02-17", unidad: U4, tema: "Laboratorio de datos: SQL y R/Python; sens/esp/LR desde una base", condiciones: [], recursos: [medicina_y_datos/codigo_estadistico/index.html]}
-  - {n: 14, fecha: "2027-02-24", unidad: U4, tema: "Modelos de predicción e IA clínica: discriminación, calibración, explicabilidad", condiciones: ["HM:6030"], recursos: [medicina_y_datos/razonamiento_clinico/index.html]}
+  - {n: 14, fecha: "2027-02-24", unidad: U4, tema: "Modelos de predicción e IA clínica: discriminación, calibración, explicabilidad", condiciones: ["HM:6030"], recursos: [medicina_y_datos/razonamiento_clinico/IA_Explicable/index.html]}
   - {n: 15, fecha: "2027-03-03", unidad: U4, tema: "Comunicar el riesgo: frecuencias naturales y decisión compartida", condiciones: ["HM:6029"], recursos: [medicina_y_datos/razonamiento_clinico/comunicacion_y_visualizacion.html]}
   - {n: 16, fecha: "2027-03-10", unidad: U4, tema: "Evaluación final / proyecto integrador", condiciones: [], recursos: [], evaluacion: sumativa_final}
 
