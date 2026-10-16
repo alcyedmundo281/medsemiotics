@@ -78,15 +78,15 @@ etapas:
           La ausencia de hinchazón en las piernas, ¿qué cambia?
         clave: >-
           Muy poco: la tromboembolia pulmonar puede ocurrir con una exploración de piernas
-          normal y esta base no cuantifica el valor de ese hallazgo. Es un ejemplo de un
-          dato que tranquiliza a quien no sabe que no tiene cociente: no se puede restar
-          probabilidad por él.
+          normal y esta base no cuantifica el valor de ese hallazgo. Como no tiene cociente
+          medido, no se puede restar probabilidad por él, aunque su ausencia tranquilice: es un
+          dato clínico sin peso cuantificado.
   - titulo: El dímero D
     fase: discriminacion
     hallazgos: [HM:3144]
     informacion: >-
       Con una probabilidad clínica que juzgas intermedia, se pide dímero D. El resultado
-      vuelve {{hallazgo HM:3144}}, por encima del corte ajustado por edad.
+      es un {{hallazgo HM:3144}}: queda por encima del corte ajustado por edad.
     preguntas:
       - pregunta: >-
           El dímero D está elevado. ¿Confirma la tromboembolia pulmonar? ¿Para qué sirve
@@ -113,15 +113,15 @@ etapas:
     hallazgos: [HM:3162]
     informacion: >-
       Mientras esperan la tomografía, la paciente se pone pálida y sudorosa y la presión
-      baja a 82/50 mmHg. Con la ecografía a pie de cama ves {{hallazgo HM:3162}}, con el
+      baja a 82/50 mmHg. Al colocar el transductor sobre el tórax ves un {{hallazgo HM:3162}}, con el
       tabique desplazado hacia el ventrículo izquierdo.
     preguntas:
       - pregunta: >-
           La paciente está inestable y la ecografía muestra el ventrículo derecho dilatado.
           ¿Cuánto aporta ese hallazgo y qué justifica hacer?
         clave: >-
-          El {{hallazgo HM:3162}} tiene {{lr+ HM:3162}}, con {{esp HM:3162}}: la
-          especificidad es útil pero el cociente es moderado. La ficha lo pone en contexto:
+          El {{hallazgo HM:3162}} tiene {{lr+ HM:3162}} y {{esp HM:3162}}. Esa
+          capacidad de evitar falsos positivos es útil, pero el cociente es moderado. La ficha lo pone en contexto:
           en el paciente inestable, un hallazgo inequívoco de sobrecarga del ventrículo
           derecho apoya fuertemente la embolia pulmonar masiva y justifica considerar la
           reperfusión de emergencia si la angiotomografía no es viable. El cociente es
