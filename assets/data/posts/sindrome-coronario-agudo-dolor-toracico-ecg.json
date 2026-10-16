@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-08-21",
   "fecha_publicacion": "2026-08-21",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-10-16",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "cardiologia",
   "category_label": "Cardiología",
@@ -249,6 +249,276 @@
       ]
     }
   ],
-  "caso": null,
+  "caso": {
+    "condicion_id": "HM:6007",
+    "slug": "sindrome-coronario-agudo-dolor-toracico-ecg",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-10-16",
+      "version": 1,
+      "ultima_revision": "2026-10-16",
+      "revisiones": []
+    },
+    "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Estimar la probabilidad de partida de síndrome coronario agudo en un paciente que consulta a urgencias por dolor torácico agudo.",
+      "Distinguir, entre los hallazgos de anamnesis y electrocardiograma, cuáles desplazan más la probabilidad y por qué una especificidad alta no basta.",
+      "Interpretar el cociente positivo del descenso del segmento ST junto con su intervalo de confianza.",
+      "Explicar por qué ni la anamnesis, ni la exploración, ni el electrocardiograma aislados confirman o descartan el diagnóstico.",
+      "Decidir la conducta inicial reconociendo qué aporta una escala con troponina y qué no documenta la base."
+    ],
+    "vineta": {
+      "titulo": "Presión en el pecho que se va a los dos brazos",
+      "texto": "Hombre de 58 años que llega a urgencias por presión retroesternal de unos cuarenta minutos, que se extiende hacia ambos brazos y se acompaña de sudoración y náuseas. Empezó en reposo, mientras miraba televisión. Fuma desde hace treinta años, tiene diabetes tipo 2 en tratamiento y desde hace un tiempo se le acalambran las pantorrillas al caminar unas pocas cuadras. Hace dos años le hicieron una prueba de esfuerzo por dolor de pecho, de la que no recuerda el resultado exacto, sino que «salió alterada». No toma antiagregantes.",
+      "datos": [
+        {
+          "etiqueta": "Presión arterial",
+          "valor": "148/88 mmHg"
+        },
+        {
+          "etiqueta": "Frecuencia cardíaca",
+          "valor": "92 lpm"
+        },
+        {
+          "etiqueta": "Frecuencia respiratoria",
+          "valor": "20 rpm"
+        },
+        {
+          "etiqueta": "Saturación de oxígeno",
+          "valor": "96 % al aire ambiente"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "Antes de leer el electrocardiograma",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Qué causas de dolor torácico agudo no debes dejar de considerar en este paciente y con qué probabilidad de partida de síndrome coronario agudo trabajas?",
+            "clave": "Las que amenazan la vida van primero: síndrome coronario agudo, disección aórtica, embolia pulmonar y neumotórax a tensión; después las frecuentes y benignas, como la causa musculoesquelética o el reflujo. La probabilidad de partida no es una corazonada: el artículo registra la probabilidad basal del síndrome coronario agudo en pacientes que acuden a urgencias por dolor torácico agudo, y es menor de lo que la urgencia sugiere. Búscala y escríbela antes de seguir, porque la mayoría de quienes consultan por dolor de pecho no tienen un síndrome coronario agudo."
+          },
+          {
+            "pregunta": "Con la historia que cuenta, ¿qué datos de la anamnesis te inclinan hacia el síndrome coronario agudo y cuáles te harían dudar?",
+            "clave": "A favor: presión retroesternal en reposo, irradiación, sudoración y náuseas, y el perfil de riesgo del paciente. En contra o neutros: el dolor que cambia con la respiración o la palpación, o que dura segundos. Lo importante es que cada uno de estos datos tiene un peso distinto, y la base solo cuantifica algunos; el resto es juicio clínico que conviene reconocer como tal."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "Lo que cuenta el paciente y lo que se sabe de él",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "El motivo de consulta es dolor torácico agudo. El paciente lo describe como dolor torácico irradiado a ambos brazos. Tiene enfermedad arterial periférica, con claudicación a pocas cuadras, y una prueba de esfuerzo previa anormal de hace dos años.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0206",
+            "nombre": "Dolor torácico",
+            "rol": "Manifestación",
+            "estado_lr": "no_medible",
+            "estado": "LR no medible",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": "es el motivo de consulta que define la población estudiada, no una prueba dentro de ella",
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": []
+          },
+          {
+            "id": "HM:3014",
+            "nombre": "Dolor torácico irradiado a ambos brazos",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 2.6 (IC 95 %: 1.8–3.7)",
+              "especificidad 0.96"
+            ],
+            "decision": "alta especificidad pero cociente bajo: cuando aparece apoya, y su ausencia no dice nada",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:26547467"
+            ]
+          },
+          {
+            "id": "HM:3018",
+            "nombre": "Enfermedad arterial periférica",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 2.7 (IC 95 %: 1.5–4.8)",
+              "especificidad 0.97"
+            ],
+            "decision": "factor de riesgo con cociente propio, modesto",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:26547467"
+            ]
+          },
+          {
+            "id": "HM:3017",
+            "nombre": "Prueba de esfuerzo previa anormal",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 3.1 (IC 95 %: 2.0–4.7)",
+              "especificidad 0.96"
+            ],
+            "decision": "antecedente, no hallazgo actual; desplaza poco",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:26547467"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "El dolor torácico es el motivo de consulta. ¿Cuánto aumenta la probabilidad de síndrome coronario agudo?",
+            "clave": "Nada, por diseño: la base registra el dolor torácico como hallazgo LR no medible, porque es lo que define a la población en la que se midieron los demás hallazgos. Es el motivo por el que el paciente entró en la población, no una prueba dentro de ella; por eso el punto de partida es la probabilidad basal de «pacientes con dolor torácico agudo»."
+          },
+          {
+            "pregunta": "La irradiación a ambos brazos, la enfermedad arterial periférica y la prueba de esfuerzo anormal tienen especificidad alta. ¿Por qué entonces cada una desplaza tan poco la probabilidad?",
+            "clave": "Porque una especificidad alta no basta: lo que mueve la probabilidad es el cociente positivo, y este depende también de la sensibilidad, que aquí es baja. El dolor torácico irradiado a ambos brazos tiene especificidad 0.96 y un LR+ 2.6 (IC 95 %: 1.8–3.7); la enfermedad arterial periférica tiene especificidad 0.97 y LR+ 2.7 (IC 95 %: 1.5–4.8); la prueba de esfuerzo previa anormal tiene especificidad 0.96 y LR+ 3.1 (IC 95 %: 2.0–4.7). Los tres son cocientes modestos, de la misma magnitud, y sus intervalos se solapan: la base no permite decir que uno pese más que otro. Y obsérvese qué son: dos de ellos son antecedentes, no hallazgos de hoy."
+          },
+          {
+            "pregunta": "Si el paciente no hubiera referido irradiación a los dos brazos, ¿qué concluirías?",
+            "clave": "Nada. La ficha lo dice sin rodeos: cuando aparece apoya, y su ausencia no dice nada. La base solo registra el cociente positivo de este hallazgo, no uno negativo, de modo que no existe un número con el que reducir la probabilidad por su ausencia. Un hallazgo específico pero poco sensible sirve para sumar cuando está presente y no para restar cuando falta."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "El electrocardiograma",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "El electrocardiograma de doce derivaciones no muestra elevación del segmento ST. Sí hay signos de isquemia en el electrocardiograma y, en las derivaciones laterales, un franco descenso del segmento ST.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3016",
+            "nombre": "Signos de isquemia en el electrocardiograma",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 3.6 (IC 95 %: 1.6–5.7)",
+              "especificidad 0.91"
+            ],
+            "decision": "categoría más amplia que el descenso del ST y con menos peso",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:26547467"
+            ]
+          },
+          {
+            "id": "HM:3015",
+            "nombre": "Descenso del segmento ST",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 5.3 (IC 95 %: 2.1–8.6)",
+              "especificidad 0.95"
+            ],
+            "decision": "el hallazgo aislado más útil, pero insuficiente para confirmar",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:26547467"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Hay descenso del segmento ST. ¿Es suficiente para confirmar el síndrome coronario agudo? Fundamenta con el cociente y con su intervalo.",
+            "clave": "No. El descenso del segmento ST es el hallazgo aislado más útil que registra la base: LR+ 5.3 (IC 95 %: 2.1–8.6), con especificidad 0.95. Pero el intervalo de confianza es amplio, y su límite inferior es un cociente bajo, de modo que lo único que se puede afirmar es que desplaza la probabilidad de forma importante, no cuánto. Con una probabilidad de partida baja, ni siquiera el extremo alto del intervalo la lleva a un nivel en el que se pueda cerrar el diagnóstico. Calcula con la calculadora bayesiana del artículo el postest con el valor central y con cada extremo. Aclaración clínica: que el descenso del ST no confirme por sí solo no significa que no cambie la conducta. En un paciente con dolor de reposo y descenso franco del ST, la sospecha es alta y se trata como un posible síndrome coronario agudo mientras se espera la troponina, sin aguardar a que la probabilidad «llegue a confirmar». La razón es de umbrales: el umbral de tratamiento es bajo porque el costo de no tratar un infarto es mucho mayor que el de tratar de más durante unas horas. Confirmar y actuar son decisiones distintas."
+          },
+          {
+            "pregunta": "Los «signos de isquemia en el electrocardiograma» y el descenso del ST, ¿son lo mismo? ¿Qué aporta cada uno?",
+            "clave": "No. Los signos de isquemia en el electrocardiograma son una categoría más amplia (incluyen alteraciones de la onda T, por ejemplo) con LR+ 3.6 (IC 95 %: 1.6–5.7), que es menor que el del descenso del ST. Al agrupar hallazgos más inespecíficos se gana sensibilidad y se pierde especificidad: el cociente baja. Por eso el informe del electrocardiograma debe decir qué se vio, no solo «cambios isquémicos»."
+          },
+          {
+            "pregunta": "Supón que el electrocardiograma hubiera sido normal. ¿Descartarías el síndrome coronario agudo?",
+            "clave": "No, y es un error frecuente. La base no registra cociente negativo para un electrocardiograma normal, y la conclusión de la fuente es que ni la anamnesis, ni la exploración, ni el electrocardiograma por sí solos confirman ni excluyen el diagnóstico. Un trazado normal al llegar no cierra el caso: se repite y se acompaña de troponina."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Qué hacer en este momento",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Cuál es tu conducta inmediata? ¿Qué le pedirías para decidir si lo ingresas, lo observas o lo das de alta?",
+            "clave": "Monitorización, acceso venoso, electrocardiograma seriado y troponina de alta sensibilidad con repetición según el protocolo del servicio, además del tratamiento inicial que corresponda al cuadro. El hallazgo electrocardiográfico y la anamnesis orientan, pero la decisión de alta o ingreso se apoya en una escala de riesgo con troponina, como HEART o TIMI, que son los instrumentos que la fuente señala como más informativos. Si en algún momento aparece elevación del ST, el camino cambia hacia la reperfusión inmediata, cuyo manejo está fuera de lo que documenta esta base."
+          },
+          {
+            "pregunta": "¿Por qué la fuente concluye que las escalas con troponina aportan más información que la clínica y el electrocardiograma?",
+            "clave": "Porque integran varios datos y, sobre todo, un marcador objetivo de daño miocárdico. Los hallazgos de este caso son cociente a cociente modestos y con intervalos amplios; la troponina cambia la naturaleza de la información. Una escala bien validada puede además llevar a un riesgo bajo que permite el alta con seguridad, algo que ningún hallazgo clínico aislado consigue."
+          },
+          {
+            "pregunta": "¿Qué no puede responder la evidencia de este artículo?",
+            "clave": "Varias cosas. No documenta cociente negativo del electrocardiograma ni de los hallazgos de anamnesis presentados, así que ninguno sirve para descartar. No registra el rendimiento de la troponina de alta sensibilidad, que es el dato que más pesa en la práctica actual. La probabilidad basal es de una población de urgencias y no se extrapola a la consulta ambulatoria. Y no cubre el síndrome coronario con elevación del ST ni otras causas graves de dolor torácico."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "En el dolor torácico agudo de urgencias, el motivo de consulta no discrimina y los hallazgos de anamnesis aportan cocientes modestos con intervalos que se solapan. El descenso del segmento ST es el hallazgo aislado más útil, y aun así deja una gran incertidumbre; un electrocardiograma normal no descarta. La decisión descansa en las escalas que incorporan la troponina.",
+      "necesidades_aprendizaje": [
+        "Rendimiento diagnóstico de la troponina de alta sensibilidad y de los protocolos de repetición a las pocas horas, que la base no registra en esta condición.",
+        "Cociente negativo de un electrocardiograma normal, que la fuente no documenta.",
+        "Manejo del síndrome coronario agudo con elevación del segmento ST y otras causas graves de dolor torácico, fuera del alcance de esta condición.",
+        "Tratamiento inicial del síndrome coronario agudo (antiagregación, anticoagulación, decisión de estrategia invasiva), no documentado en la base."
+      ]
+    },
+    "omitidos": [],
+    "referencias": [
+      {
+        "id": "pmid:26547467",
+        "cita": "Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review. JAMA, 2015. DOI: 10.1001/jama.2015.12735."
+      }
+    ]
+  },
   "body": "# Síndrome coronario agudo\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAcute coronary syndrome\n\n## Sinónimos\n\nSCA\n\n## Códigos\n\nSnomed: 394659003; Cie10: I24.9\n\n## Probabilidad basal\n\nValor: 0.1; Población: pacientes que acuden a urgencias con dolor torácico agudo; Referencia: pmid:26547467\n\n## Hallazgos clínicos\n\n### Descenso del segmento ST (HM:3015)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.95\n\n**LR positivo:** Valor: 5.3; IC del 95 %: 2.1 / 8.6; Referencia: pmid:26547467\n\n**Decisión:** el hallazgo aislado más útil, pero insuficiente para confirmar\n\n### Signos de isquemia en el electrocardiograma (HM:3016)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.91\n\n**LR positivo:** Valor: 3.6; IC del 95 %: 1.6 / 5.7; Referencia: pmid:26547467\n\n**Decisión:** categoría más amplia que el descenso del ST y con menos peso\n\n### Prueba de esfuerzo previa anormal (HM:3017)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.96\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 2.0 / 4.7; Referencia: pmid:26547467\n\n**Decisión:** antecedente, no hallazgo actual; desplaza poco\n\n### Enfermedad arterial periférica (HM:3018)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.97\n\n**LR positivo:** Valor: 2.7; IC del 95 %: 1.5 / 4.8; Referencia: pmid:26547467\n\n**Decisión:** factor de riesgo con cociente propio, modesto\n\n### Dolor torácico irradiado a ambos brazos (HM:3014)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**Especificidad:** 0.96\n\n**LR positivo:** Valor: 2.6; IC del 95 %: 1.8 / 3.7; Referencia: pmid:26547467\n\n**Decisión:** alta especificidad pero cociente bajo: cuando aparece apoya, y su ausencia no dice nada\n\n### Dolor torácico (HM:0206)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medible\n\n**Motivo:** es el motivo de consulta que define la población estudiada, no una prueba dentro de ella\n\n## Escalas\n\nNombre: HEART; Componentes declarados: anamnesis, electrocardiograma, edad, factores de riesgo y primera troponina; Graduación: Parámetro: Puntuación HEART; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: 7 a 10 (riesgo alto); Desde: 7; Hasta: 11; LR positivo: 13; IC del 95 %: 7.0 / 24; Referencia: pmid:26547467 / Rango documentado: 0 a 3 (riesgo bajo); Desde: 0; Hasta: 4; LR negativo: 0.2; IC del 95 %: 0.13 / 0.3; Referencia: pmid:26547467; Decisión: el instrumento más potente en ambos sentidos: confirma en el tramo alto y descarta en el bajo\n\nNombre: TIMI; Graduación: Parámetro: Puntuación TIMI; Unidad: puntos; Lectura: disjunto; Tramos: Rango documentado: 5 a 7 (riesgo alto); Desde: 5; Hasta: 8; LR positivo: 6.8; IC del 95 %: 5.2 / 8.9; Referencia: pmid:26547467 / Rango documentado: 0 a 1 (riesgo bajo); Desde: 0; Hasta: 2; LR negativo: 0.31; IC del 95 %: 0.23 / 0.43; Referencia: pmid:26547467\n\nNombre: Algoritmo de la Heart Foundation of Australia y la Cardiac Society of Australia and New Zealand; Tramos: Rango documentado: riesgo bajo a intermedio; LR negativo: 0.24; IC del 95 %: 0.19 / 0.31; Referencia: pmid:26547467\n\n## Conclusión de la fuente\n\nEntre los pacientes con sospecha de SCA en urgencias, la anamnesis, la exploración física y el electrocardiograma por sí solos no confirmaron ni excluyeron el diagnóstico. Las escalas HEART o TIMI, que incorporan la primera troponina, aportaron más información diagnóstica.\n\n## Referencias y procedencia\n\n**pmid:26547467:** Does This Patient With Chest Pain Have Acute Coronary Syndrome?: The Rational Clinical Examination Systematic Review. JAMA, 2015. DOI: 10.1001/jama.2015.12735.\n\nFuente clínica: medsemiotics-db, condición HM:6007."
 }
