@@ -96,8 +96,8 @@
           "clave": "La presión arterial en consulta mayor o igual a 140/90 mmHg tiene LR+ 4.2 (IC 95 %: 2.9–6.1): aumenta la probabilidad de forma apreciable, pero no al extremo de confirmar el diagnóstico. Por eso la conclusión de la fuente la llama prueba de cribado útil. No dice si la hipertensión es sostenida o una elevación de bata blanca; eso exige medir fuera de la consulta."
         },
         {
-          "pregunta": "La ficha dice que una cifra elevada en consulta «quintuplica aproximadamente la odds». Compáralo con el cociente registrado. ¿Es exacto? ¿Importa?",
-          "clave": "El cociente positivo registrado es LR+ 4.2 (IC 95 %: 2.9–6.1): algo más de cuatro veces, no cinco, y su intervalo incluye valores bastante más bajos. Y ojo con lo que se multiplica: el cociente multiplica las odds (el cociente entre la probabilidad de estar enfermo y la de no estarlo), no la probabilidad. Solo con un pretest muy bajo la probabilidad se multiplica de forma parecida; con uno moderado o alto, mucho menos. Redondear «hacia arriba» exagera el efecto, y confundir odds con probabilidad lo exagera aún más. Importa porque en la comunicación del riesgo la precisión es parte de la honestidad: decirle al paciente que su probabilidad «se multiplica por cinco» lo asusta de más. Es un buen ejercicio de lectura crítica: contrastar siempre una frase descriptiva con la cifra con la que se sostiene."
+          "pregunta": "Un colega comenta que una presión elevada en consulta «quintuplica la probabilidad» de hipertensión. Compáralo con el cociente registrado. ¿Es exacto? ¿Importa?",
+          "clave": "El cociente positivo registrado es LR+ 4.2 (IC 95 %: 2.9–6.1): algo más de cuatro veces, no cinco, y su intervalo incluye valores bastante más bajos. Y ojo con lo que se multiplica: el cociente multiplica las odds (el cociente entre la probabilidad de estar enfermo y la de no estarlo), no la probabilidad. Solo con un pretest muy bajo la probabilidad se multiplica de forma parecida; con uno moderado o alto, mucho menos. Redondear «hacia arriba» exagera el efecto, y confundir odds con probabilidad lo exagera aún más. Importa porque en la comunicación del riesgo la precisión es parte de la honestidad: decirle al paciente que su probabilidad «se multiplica por cinco» lo asusta de más. Es un buen ejercicio de lectura crítica: contrastar siempre una frase de un colega, de un libro o de una ficha con la cifra con la que se sostiene."
         },
         {
           "pregunta": "Si la presión en consulta hubiera sido normal, ¿qué le dirías?",
@@ -144,8 +144,8 @@
           "clave": "No. Las dos miden lo mismo, la presión arterial del paciente, en lugares y momentos distintos; su error está correlacionado y no son pruebas independientes. Además, el resultado de casa contradice al de consulta, y un producto entre un cociente alto y uno bajo da un número intermedio que no representa a ninguna de las dos situaciones. Cuando las pruebas discrepan se resuelve con una tercera de mejor calidad, no con una cuenta."
         },
         {
-          "pregunta": "La ficha califica el cociente negativo de la automonitorización de «excelente». ¿Estás de acuerdo con ese calificativo?",
-          "clave": "Con prudencia. El LR− 0.33 (IC 95 %: 0.24–0.46) reduce la probabilidad de forma útil, pero no la lleva a un valor que permita descartar sin más, sobre todo si el pretest era moderado. «Excelente» es una valoración de la ficha, no una propiedad de la cifra. Al comunicar con el paciente conviene decir lo que la cifra permite: «es poco probable, pero queremos confirmarlo»."
+          "pregunta": "Otro colega dice que el cociente negativo de la automonitorización domiciliaria es «excelente» para descartar la hipertensión. ¿Estás de acuerdo con ese calificativo?",
+          "clave": "Con prudencia. El LR− 0.33 (IC 95 %: 0.24–0.46) reduce la probabilidad de forma útil, pero no la lleva a un valor que permita descartar sin más, sobre todo si el pretest era moderado. «Excelente» es una valoración, no una propiedad de la cifra. Al comunicar con el paciente conviene decir lo que la cifra permite: «es poco probable, pero queremos confirmarlo»."
         }
       ]
     },

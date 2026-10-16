@@ -2,7 +2,7 @@
 # El eje docente es la comunicación del riesgo: una presión elevada en consulta es una prueba de
 # cribado, no un diagnóstico; el paciente necesita entender qué significa un resultado y qué
 # sigue, con frecuencias naturales y sin cifras asustadoras ni tranquilizadoras de más. El caso
-# también enseña a leer con espíritu crítico una frase de la ficha que redondea un cociente.
+# también enseña a leer con espíritu crítico una frase de colega que redondea un cociente.
 # Sirve a la sesión 15 del curso (comunicar el riesgo y decisión compartida).
 condicion_id: HM:6029
 estado: publicado
@@ -73,8 +73,8 @@ etapas:
           de la fuente la llama prueba de cribado útil. No dice si la hipertensión es
           sostenida o una elevación de bata blanca; eso exige medir fuera de la consulta.
       - pregunta: >-
-          La ficha dice que una cifra elevada en consulta «quintuplica aproximadamente la
-          odds». Compáralo con el cociente registrado. ¿Es exacto? ¿Importa?
+          Un colega comenta que una presión elevada en consulta «quintuplica la probabilidad»
+          de hipertensión. Compáralo con el cociente registrado. ¿Es exacto? ¿Importa?
         clave: >-
           El cociente positivo registrado es {{lr+ HM:3127}}: algo más de cuatro veces, no
           cinco, y su intervalo incluye valores bastante más bajos. Y ojo con lo que se
@@ -85,7 +85,8 @@ etapas:
           probabilidad lo exagera aún más. Importa porque en la comunicación del riesgo la
           precisión es parte de la honestidad: decirle al paciente que su probabilidad «se
           multiplica por cinco» lo asusta de más. Es un buen ejercicio de lectura crítica:
-          contrastar siempre una frase descriptiva con la cifra con la que se sostiene.
+          contrastar siempre una frase de un colega, de un libro o de una ficha con la cifra con
+          la que se sostiene.
       - pregunta: >-
           Si la presión en consulta hubiera sido normal, ¿qué le dirías?
         clave: >-
@@ -123,12 +124,12 @@ etapas:
           Cuando las pruebas discrepan se resuelve con una tercera de mejor calidad, no con
           una cuenta.
       - pregunta: >-
-          La ficha califica el cociente negativo de la automonitorización de «excelente».
-          ¿Estás de acuerdo con ese calificativo?
+          Otro colega dice que el cociente negativo de la automonitorización domiciliaria es
+          «excelente» para descartar la hipertensión. ¿Estás de acuerdo con ese calificativo?
         clave: >-
           Con prudencia. El {{lr- HM:3128}} reduce la probabilidad de forma útil, pero no la
           lleva a un valor que permita descartar sin más, sobre todo si el pretest era
-          moderado. «Excelente» es una valoración de la ficha, no una propiedad de la cifra.
+          moderado. «Excelente» es una valoración, no una propiedad de la cifra.
           Al comunicar con el paciente conviene decir lo que la cifra permite: «es poco
           probable, pero queremos confirmarlo».
   - titulo: Hablar con el paciente
