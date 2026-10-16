@@ -81,7 +81,7 @@ etapas:
           ¿Qué pasa si no lo tuviera?
         clave: >-
           El {{hallazgo HM:0206}} es el único síntoma que la fuente asocia a la neumonía, por
-          su especificidad ({{lr+ HM:0206}}), y es un rango muy amplio, procedente de dos
+          su especificidad: {{lr+ HM:0206}}. Es un rango muy amplio, procedente de dos
           estudios que incluían adolescentes. Presente, apoya con fuerza incierta; ausente,
           no dice nada, porque la base no registra un cociente negativo y la mayoría de los
           niños con neumonía no lo refieren. Además hay que preguntarse si el rango, obtenido
@@ -91,8 +91,8 @@ etapas:
     fase: exploracion
     hallazgos: [HM:0106, HM:0406]
     informacion: >-
-      La {{hallazgo HM:0106}} es evidente al contar la frecuencia respiratoria durante un
-      minuto con el niño tranquilo. A la auscultación se oyen {{hallazgo HM:0406}} en la base
+      Al contar la frecuencia respiratoria durante un minuto con el niño tranquilo se
+      obtienen 44 por minuto: {{hallazgo HM:0106}}. A la auscultación se oyen {{hallazgo HM:0406}} en la base
       derecha.
     preguntas:
       - pregunta: >-
@@ -118,15 +118,16 @@ etapas:
     fase: discriminacion
     hallazgos: [HM:0110, HM:3145]
     informacion: >-
-      La oximetría muestra {{hallazgo HM:0110}} leve. El niño tiene además
+      La oximetría marca una saturación de 94 %, es decir, {{hallazgo HM:0110}} leve. El niño tiene además
       {{hallazgo HM:3145}}: quejido, aleteo nasal y tiraje subcostal.
     preguntas:
       - pregunta: >-
           Interpreta el cociente positivo de la hipoxemia con su intervalo. ¿Es un
           cociente grande? ¿Qué te dice la amplitud del intervalo?
         clave: >-
-          La {{hallazgo HM:0110}} tiene {{lr+ HM:0110}}. Es el cociente más alto de toda la
-          serie y aun así es modesto: ningún hallazgo aislado distingue la neumonía de otras
+          La {{hallazgo HM:0110}} tiene {{lr+ HM:0110}}. Es el cociente puntual más alto de la
+          serie (el rango del dolor torácico llega más alto, pero es la dispersión entre dos
+          estudios) y aun así es modesto: ningún hallazgo aislado distingue la neumonía de otras
           causas de enfermedad respiratoria. El intervalo es relativamente estrecho, de
           modo que el valor es una estimación bastante precisa de un efecto moderado. Precisión
           y magnitud son dos cosas distintas: un intervalo estrecho no hace grande al
@@ -140,11 +141,11 @@ etapas:
           hipoxemia moderada, más laxo que el canónico, y aplicar otro corte ya no es leer
           el mismo dato.
       - pregunta: >-
-          Compara el aumento del trabajo respiratorio ({{lr+ HM:3145}}) con la taquipnea y con
+          Compara el aumento del trabajo respiratorio con la taquipnea y con
           la hipoxemia. ¿Puedes afirmar que uno pesa más que otro mirando solo los
           intervalos?
         clave: >-
-          Hay que mirarlos juntos. Con los valores actuales de la base, el intervalo de la
+          El aumento del trabajo respiratorio tiene {{lr+ HM:3145}}. Hay que mirarlos juntos. Con los valores actuales de la base, el intervalo de la
           hipoxemia y el de la taquipnea no se solapan, así que la diferencia es creíble;
           el del trabajo respiratorio se solapa con el de la hipoxemia, y con ese solo dato no
           se puede decir cuál pesa más. La fuente los agrupa como los dos más importantes. Es un
