@@ -106,7 +106,7 @@ etapas:
           Interpreta el cociente positivo del signo ecográfico y su intervalo. ¿Qué dice
           sobre la probabilidad de colecistitis?
         clave: >-
-          El {{hallazgo HM:3175}} tiene {{lr+ HM:3175}}, con {{esp HM:3175}}. Es un cociente
+          El {{hallazgo HM:3175}} tiene {{lr+ HM:3175}} y {{esp HM:3175}}. Es un cociente
           alto, de los que mueven la probabilidad con fuerza, y por eso la ficha indica que
           confirma la colecistitis e inicia la interconsulta quirúrgica. Pero el intervalo
           es muy amplio: el extremo inferior es un cociente moderado y el superior, muy
@@ -116,12 +116,12 @@ etapas:
           Ahora imagina que la ecografía es negativa o indeterminada, pero la paciente sigue
           con fiebre y dolor localizado. ¿Descartas la colecistitis?
         clave: >-
-          No. El {{lr- HM:3175}} se asocia a una {{sens HM:3175}} solo moderada: casi un
+          No. El cociente negativo ({{lr- HM:3175}}) viene de una prueba con {{sens HM:3175}}, que es solo moderada: casi un
           tercio de los enfermos tendría una ecografía que no muestra el signo completo. La
           ficha advierte que ese cociente negativo no descarta la colecistitis ante clínica
           inflamatoria persistente y que, con ecografía indeterminada o negativa y alta
           sospecha, debe obtenerse otra imagen o reevaluar de forma seriada. La asimetría
-          es la lección: el estudio positivo confirma casi por sí solo, el negativo no
+          es la lección: el estudio positivo confirma en la mayoría de los pretest razonables, el negativo no
           descarta.
       - pregunta: >-
           ¿Qué puede dar una ecografía falsamente positiva en una paciente como esta?
@@ -148,7 +148,7 @@ etapas:
           es alta. ¿Qué cambia en cómo usas el resultado positivo en cada una?
         clave: >-
           Con especificidad alta y cociente positivo alto, un resultado positivo en
-          colecistitis casi decide por sí solo; en la apendicitis, con especificidad
+          colecistitis confirma en la mayoría de los pretest razonables; en la apendicitis, con especificidad
           moderada y cociente bajo, un resultado positivo desplaza la probabilidad pero
           obliga a confirmar si el pretest no era alto. La misma técnica, la ecografía,
           tiene un peso distinto según la condición, el operador y la población: no se
@@ -166,7 +166,7 @@ cierre:
   sintesis: >-
     En la colecistitis aguda la clínica se combina por criterios, no por cocientes, porque la
     base no los documenta. La ecografía a pie de cama sí tiene cociente: un resultado positivo
-    con el signo completo confirma casi por sí solo, y uno negativo no descarta si la
+    con el signo completo confirma en la mayoría de los pretest razonables, y uno negativo no descarta si la
     sospecha persiste. Lo mismo que en la apendicitis: la misma técnica pesa distinto según la
     condición.
   necesidades_aprendizaje:
