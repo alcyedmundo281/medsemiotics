@@ -4,10 +4,12 @@
 # de cama sirve para actuar en el paciente inestable (sensibilidad baja: un ventrículo derecho
 # normal no descarta). Sirve a la sesión 7 del curso (umbrales de prueba y de tratamiento).
 condicion_id: HM:6044
-estado: borrador
+estado: publicado
 autoria:
   autor: Dr. Alcy Torres
-  revisor: null
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
 nivel: Pregrado
 duracion_min: 45
 objetivos:
