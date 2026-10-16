@@ -104,10 +104,13 @@ etapas:
         clave: >-
           La ficha limita su uso a pacientes con probabilidad clínica baja o intermedia.
           Con sospecha alta no se debe pedir para descartar: un resultado normal no debería
-          cerrar el estudio, porque la probabilidad previa es tan alta que incluso un
-          cociente negativo pequeño deja una probabilidad posterior inaceptable. Es el
-          mismo principio de umbrales: la prueba solo sirve si su resultado puede cruzar el
-          umbral de prueba.
+          cerrar el estudio, porque con una probabilidad previa alta el resultado puede no
+          bajar lo suficiente. Compruébalo: toma tu pretest alto, conviértelo en odds,
+          multiplícalas por el cociente negativo del dímero D y vuelve a probabilidad;
+          repite con cada extremo del intervalo y compara el resultado con la probabilidad
+          por debajo de la cual aceptarías no estudiar más (ese umbral no lo fija la base,
+          lo fija el costo de perder una embolia). Es el mismo principio de umbrales: la
+          prueba solo sirve si su resultado puede cruzar el umbral de prueba.
   - titulo: Dos horas después
     fase: discriminacion
     hallazgos: [HM:3162]
