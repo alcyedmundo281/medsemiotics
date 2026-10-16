@@ -7,8 +7,7 @@
 **Sedes de práctica:** IESS San Francisco y MSP Calderón
 
 > **Estado: BORRADOR v3.0 para revisión del docente.** Período, horario y fecha de inicio los
-> confirmó el docente. Las ponderaciones marcadas con ⚠ son supuestos tomados de los sílabos de
-> Neurología y Gastroenterología v2. Las fechas son todos los miércoles consecutivos desde el
+> confirmó el docente. Las ponderaciones se mantienen (40 % formativa, 60 % sumativa). Las fechas son todos los miércoles consecutivos desde el
 > inicio; las del 23 y 30 de diciembre y las de carnaval deben confirmarse como clase o receso.
 
 ---
@@ -128,9 +127,9 @@ cifra documentada, lo dice; (2) hace preguntas socráticas y no entrega la respu
 evaluaciones; (3) no recibe ni almacena datos de pacientes ni de estudiantes; (4) su salida es un
 borrador, no una fuente; (5) los casos nuevos se publican solo con revisor humano nominado.
 
-## 7. Sistema de evaluación ⚠
+## 7. Sistema de evaluación
 
-Se mantiene la estructura de los sílabos de Neurología y Gastroenterología v2 (escala sobre 20).
+Se **mantienen las ponderaciones** de la cátedra y de los sílabos de Neurología y Gastroenterología v2: 40 % formativa y 60 % sumativa (escala sobre 20). Esta regla no cambia entre versiones del sílabo.
 
 | Componente                   | Peso | Instrumento                                                                                                                         |
 | :--------------------------- | :--: | :---------------------------------------------------------------------------------------------------------------------------------- |
@@ -166,7 +165,7 @@ Se mantiene la estructura de los sílabos de Neurología y Gastroenterología v2
 
 ## 9. Pendientes para el docente
 
-1. Confirmar la ponderación y si el 23 y 30 de diciembre (sesiones 7 y 8, esta última con la Evaluación 1) y el carnaval de 2027 son clase o receso; si hay receso, el curso se corre o se acorta.
+1. Confirmar si el 23 y 30 de diciembre (sesiones 7 y 8, esta última con la Evaluación 1) y el carnaval de 2027 son clase o receso; si hay receso, el curso se corre o se acorta.
 2. Confirmar la lista de casos ancla y si algún caso socrático nuevo debe redactarse (skill `caso-socratico`; requiere revisor humano nominado).
 3. Decidir si el sílabo se publica en el sitio o se archiva como documento docente (ver `MIGRATION.md`: el sílabo de Gastroenterología se marcó «Archivar»).
 4. Revisar las referencias de las sesiones 10–15, que son propuestas y no han sido verificadas contra PubMed en este borrador.
