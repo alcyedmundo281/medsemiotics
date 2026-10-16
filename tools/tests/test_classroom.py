@@ -50,3 +50,13 @@ def test_contraste_detecta_fecha_y_caso_distintos() -> None:
     fallos = contraste_silabo(plan, roto)
     assert any("Sesión 3" in f and "2026-11-26" in f for f in fallos)
     assert any("Sesión 7" in f for f in fallos)
+
+
+def test_detecta_entregas_distintas_en_el_silabo() -> None:
+    plan = cargar(CURSO)
+    silabo = SILABO.read_text(encoding="utf-8")
+    roto = silabo.replace("09 dic 2026 (s5)", "09 dic 2026 (s6)")
+    fallos = contraste_silabo(plan, roto)
+    assert any("informe_caso_u1" in f for f in fallos)
+    sin_tabla = silabo.replace("| Proyecto integrador (parejas)", "| Otro nombre")
+    assert any("proyecto_integrador" in f for f in contraste_silabo(plan, sin_tabla))

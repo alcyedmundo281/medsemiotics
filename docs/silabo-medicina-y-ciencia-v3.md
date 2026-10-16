@@ -152,7 +152,7 @@ Se **mantienen las ponderaciones** de la cátedra y de los sílabos de Neurolog�
 | :-------------------------------------- | :----------- | :--------------- | :--------------- |
 | Informe de caso · Unidad 1              | Formativa    | 25 nov 2026 (s3) | 09 dic 2026 (s5) |
 | Informe de caso · Unidad 2              | Formativa    | 16 dic 2026 (s6) | 06 ene 2027 (s7) |
-| Informe de caso · Unidad 3              | Formativa    | 27 ene 2027 (s10)| 10 feb 2027 (s12)|
+| Informe de caso · Unidad 3              | Formativa    | 27 ene 2027 (s10) | 10 feb 2027 (s12) |
 | Evaluación 1 · Razonamiento bayesiano   | Sumativa 1   | 13 ene 2027 (s8) | 13 ene 2027 (s8) |
 | Proyecto integrador (parejas)           | Sumativa final | 17 feb 2027 (s13) | 10 mar 2027 (s16) |
 
