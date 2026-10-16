@@ -3099,12 +3099,12 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/X-ray_of_lobar_pneumonia.jpg/1280px-X-ray_of_lobar_pneumonia.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
-    "image_license": "CC0",
-    "image_title": "X-ray of lobar pneumonia.jpg",
-    "image_alt": "Radiografía posteroanterior de tórax que evidencia consolidación alveolar lobar con broncograma aéreo",
-    "image_author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Written informed consent was obtained from the individual, including online publication.",
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pneumonia_x-ray.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Pneumonia_x-ray.jpg",
+    "image_license": "Public domain",
+    "image_title": "Pneumonia x-ray.jpg",
+    "image_alt": "Radiografías de tórax comparadas: normal y con neumonía (infiltrado), el patrón de referencia del artículo",
+    "image_author": "Autor no declarado",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
