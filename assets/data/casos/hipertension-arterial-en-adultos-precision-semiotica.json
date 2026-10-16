@@ -12,7 +12,7 @@
     "ultima_revision": "2026-10-16",
     "revisiones": []
   },
-  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -80,7 +80,7 @@
             "LR+ 4.2 (IC 95 %: 2.9–6.1)",
             "LR− 0.56 (IC 95 %: 0.46–0.68)"
           ],
-          "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca",
+          "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca",
           "motivo": null,
           "advertencia": null,
           "graduacion": null,
@@ -124,7 +124,7 @@
             "LR+ 3.1 (IC 95 %: 2.3–4.2)",
             "LR− 0.33 (IC 95 %: 0.24–0.46)"
           ],
-          "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida",
+          "decision": "una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca",
           "motivo": null,
           "advertencia": null,
           "graduacion": null,

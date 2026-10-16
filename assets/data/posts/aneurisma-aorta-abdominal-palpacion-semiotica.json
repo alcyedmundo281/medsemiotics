@@ -118,7 +118,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
     "archivos": {
@@ -210,7 +210,7 @@
       "ultima_revision": "2026-09-24",
       "revisiones": []
     },
-    "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "nivel": "Pregrado",
     "duracion_min": 40,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",

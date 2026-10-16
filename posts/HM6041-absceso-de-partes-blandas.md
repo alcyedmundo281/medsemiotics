@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6041-absceso-de-partes-blandas.yaml
   archivos:

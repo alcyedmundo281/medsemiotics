@@ -137,7 +137,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6036-neumonia-infantil.yaml",
     "archivos": {
@@ -150,7 +150,7 @@
       "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
       "conceptos/HM0400-sintoma-respiratorio.yaml": "437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b",
       "conceptos/HM0406-crepitantes.yaml": "5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083",
-      "conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml": "9449ad5b45db85fce3b18a01aaa8241470c2edfe132589b703bd498687eac216",
+      "conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml": "ce253531adeebe3b92348d8b0510e02b1aef29b07d8280d2bd457c5fcd5bd7c3",
       "condiciones/HM6036-neumonia-infantil.yaml": "2592cfc7ca6b494357364ace2e9241755179b522a731d51563820e9c32e4da2a",
       "referencias/pmid-28763554.yaml": "6b16261f8789e9a1205fa94803b9f07841f6bd6563ebcd59b30a6595ce6db76f"
     }
@@ -279,7 +279,7 @@
       "ultima_revision": "2026-10-16",
       "revisiones": []
     },
-    "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",

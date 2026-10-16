@@ -1,21 +1,21 @@
 ---
 id: HM6046-01
 slug: ascitis-precision-semiotica
-title: 'Ascitis: hallazgos y evidencia clínica'
+title: 'Síndrome ascítico: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-09-21'
 author: Dr. Alcy Torres
 category: medicina_interna
 category_label: Medicina Interna
 tags:
-- ascitis
 - medicina_interna
 - semiologia
+- sindrome-ascitico
 reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6046-ascitis.yaml
   archivos:
@@ -35,7 +35,7 @@ fuente:
     conceptos/HM3182-signo-del-charco.yaml: 92c0039daac9acdb1bef8c264912a5eb55f16e337ab407a1a7108183377beaf1
     conceptos/HM3183-aumento-del-perimetro-abdominal.yaml: 9685963c37f2275c42b2434460a7bd284124f6134e419dd7c5d00619ad4e39a7
     conceptos/HM3186-ganancia-de-peso-reciente.yaml: a26bed1c90308f661c6d44f61910991cf8d7fcd68dd859234c459617fbb2fed4
-    condiciones/HM6046-ascitis.yaml: f0bdc09800cfaa915e8988bab6a442df8345627c799dbde310bbede6a4956d60
+    condiciones/HM6046-ascitis.yaml: 6cd4b8e69ab64c63763fb602abb8f7c93ed8360ef7249f00d3a734d64c407b9d
     referencias/pmid-1573754.yaml: c538baf13a73481c6db58f7c8616033cdb9681fe317192f2d980efa947cd6614
     referencias/pmid-26683569.yaml: 038c4e4117a7de3cd0979727661337993e29688c106e221ebf5ff05475e4addc
     referencias/pmid-36703099.yaml: 4ff0c4059ec7837a09a2c86a26f8da8d7c0ec6be30ed2a362e985bc0bc6fb9b9
@@ -43,7 +43,7 @@ fuente:
     referencias/pmid-7674411.yaml: 2f524e88031a078b2d1a8ddae869e0374fdbc513c7db8aac42df6d7bab8c7aec
 grounding:
   condicion_id: HM:6046
-  condicion_nombre: Ascitis
+  condicion_nombre: Síndrome ascítico
   concepto_id: HM:3182
   concepto_nombre: Signo del charco
   estado_lr: medido
@@ -180,7 +180,7 @@ evidencia:
   decision: la ausencia de edema en tobillos o piernas descarta ascitis con gran poder excluyente (LR- 0.10) en contexto de fallo sistémico o hipertensión portal
 autoevaluacion:
 - id: q1
-  pregunta: 'En Ascitis, ¿cuál es el resultado documentado del LR positivo para «Signo del charco»? Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas.'
+  pregunta: 'En Síndrome ascítico, ¿cuál es el resultado documentado del LR positivo para «Signo del charco»? Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas.'
   concepto_id: HM:3182
   referencia_id: pmid:1573754
   pmid: '1573754'
@@ -207,7 +207,7 @@ autoevaluacion:
     correcta: false
     feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 1.6. Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas. Interpretación registrada: maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal.'
 - id: q2
-  pregunta: En Ascitis, ¿qué estado de la evidencia corresponde a «Líquido libre en receso hepatorrenal (espacio de Morrison)» según la fuente?
+  pregunta: En Síndrome ascítico, ¿qué estado de la evidencia corresponde a «Líquido libre en receso hepatorrenal (espacio de Morrison)» según la fuente?
   concepto_id: HM:0902
   referencia_id: null
   pmid: null
@@ -235,17 +235,15 @@ autoevaluacion:
     feedback: 'La fuente clasifica este hallazgo como «LR no medible». LR no medible Motivo: Estándar de referencia de la condición: la ecografía abdominal define la presencia de líquido libre peritoneal frente a la cual se calibran las maniobras físicas en la revisión sistemática de Williams & Simel 1992 (sesgo de incorporación). Detecta desde 100 mL de líquido libre peritoneal en recesos dependientes (Morrison, esplenorrenal, Douglas), superando ampliamente el umbral de detección de la exploración física clínica (> 1.5 L). Interpretación registrada: la presencia de líquido anecoico libre dependiente confirma ascitis y permite guiar paracentesis diagnóstica de forma segura.'
 ---
 
-# Ascitis
+# Síndrome ascítico
 
 Hallazgos, cocientes documentados y límites de la evidencia.
 
 ## Nombre en inglés
 
-Ascites
+Ascitic syndrome
 
 ## Sinónimos
-
-síndrome ascítico
 
 ascitis abdominal
 

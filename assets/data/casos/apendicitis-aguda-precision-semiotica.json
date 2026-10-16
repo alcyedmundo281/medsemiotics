@@ -12,7 +12,7 @@
     "ultima_revision": "2026-10-16",
     "revisiones": []
   },
-  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -166,7 +166,7 @@
             "sensibilidad 0.85",
             "especificidad 0.63"
           ],
-          "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata",
+          "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica",
           "motivo": null,
           "advertencia": "el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación",
           "graduacion": null,

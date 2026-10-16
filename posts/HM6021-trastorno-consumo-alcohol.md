@@ -15,15 +15,15 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6021-trastorno-consumo-alcohol.yaml
   archivos:
     CITATION.cff: 6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2
     conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
-    conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml: 4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35
+    conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml: 6d10e1f2aa61327a6b8fdcde9b9faa4f5c89a4973f84febd7e38eeb286252e92
     conceptos/HM3084-cuestionario-audit-c-positivo.yaml: 60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37
-    conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml: 2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406
+    conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml: bc49eee03e5917e69acbb33e2e005ab845d77b8b73b007f527639c53b6f431dc
     conceptos/HM3086-audit-postparto-puntuacion-4-o-mas.yaml: aaa992fc60e316a7203b23e37ff2d8e6f109ad56e0310cde66ad69fb875a0294
     conceptos/HM3087-tweak-t-ace-menor-2-postparto.yaml: 4b778da7722fe4d93254cea0e7d90d584d874ef12c531adbc35472dc7c1f0433
     condiciones/HM6021-trastorno-consumo-alcohol.yaml: e27cb171039f913be4df5fd8646d06ec7034a6b759233d30c2601c3265e6e0f1
@@ -36,7 +36,7 @@ grounding:
   condicion_id: HM:6021
   condicion_nombre: Trastorno por consumo de alcohol
   concepto_id: HM:3083
-  concepto_nombre: Cuestionario AUDIT con puntuación ≥ 8
+  concepto_nombre: Cuestionario AUDIT con puntuación de 8 o más
   estado_lr: medido
   lr_positivo: 6.5
   lr_negativo: null
@@ -48,7 +48,7 @@ grounding:
   pmid: '38592385'
   doi: 10.1001/jama.2024.3101
 triada:
-  significante: Cuestionario AUDIT con puntuación ≥ 8
+  significante: Cuestionario AUDIT con puntuación de 8 o más
   significado: El mecanismo fisiopatológico no está documentado en esta fuente.
   decision: 'AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.'
 evidencia:
@@ -110,7 +110,7 @@ evidencia:
   decision: 'TWEAK o T-ACE < 2 en postparto: excelente poder de exclusión (LR- 0.05), descartando prácticamente el trastorno en esta población.'
 autoevaluacion:
 - id: q1
-  pregunta: 'En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR positivo para «Cuestionario AUDIT con puntuación ≥ 8»? Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633).'
+  pregunta: 'En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR positivo para «Cuestionario AUDIT con puntuación de 8 o más»? Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633).'
   concepto_id: HM:3083
   referencia_id: pmid:38592385
   pmid: '38592385'
@@ -137,7 +137,7 @@ autoevaluacion:
     correcta: true
     feedback: 'LR positivo: 6.5. IC del 95 %: 3.9 a 11. Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633). Nota: en mujeres el LR+ es 6.9 (IC 95%: 3.9-12); en hombres es 3.8 (IC 95%: 2.6-5.5). Interpretación registrada: AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.'
 - id: q2
-  pregunta: 'En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR negativo para «Cuestionario AUDIT con puntuación < 8»? Población: adultos evaluados con AUDIT.'
+  pregunta: 'En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR negativo para «Cuestionario AUDIT con puntuación menor de 8»? Población: adultos evaluados con AUDIT.'
   concepto_id: HM:3085
   referencia_id: pmid:38592385
   pmid: '38592385'
@@ -195,7 +195,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 ## Hallazgos clínicos
 
-### Cuestionario AUDIT con puntuación ≥ 8 (HM:3083)
+### Cuestionario AUDIT con puntuación de 8 o más (HM:3083)
 
 **Rol:** Prueba específica
 
@@ -207,7 +207,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **Decisión:** AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación.
 
-### Cuestionario AUDIT con puntuación < 8 (HM:3085)
+### Cuestionario AUDIT con puntuación menor de 8 (HM:3085)
 
 **Rol:** Prueba sensible
 

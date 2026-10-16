@@ -12,7 +12,7 @@
     "ultima_revision": "2026-10-16",
     "revisiones": []
   },
-  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -81,7 +81,7 @@
             "sensibilidad 0.54",
             "especificidad 0.94"
           ],
-          "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)",
+          "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad",
           "motivo": null,
           "advertencia": null,
           "graduacion": null,
@@ -120,7 +120,7 @@
           "cifras": [
             "LR− 0.47 (IC 95 %: 0.4–0.56)"
           ],
-          "decision": "una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado",
+          "decision": "una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado",
           "motivo": null,
           "advertencia": null,
           "graduacion": null,

@@ -121,7 +121,7 @@
       "efecto": "excluye",
       "sostiene": "discriminacion_medida",
       "ref": "pmid:9786377",
-      "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM (LR 0.2)"
+      "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM"
     },
     {
       "concepto": "HM:3134",
@@ -177,7 +177,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
     "archivos": {
@@ -195,7 +195,7 @@
       "conceptos/HM3134-dolor-toracico-reproducible-a-la-palpacion.yaml": "f23a1800f2d73e860ab303a1026f8e90a3aa29f340d037668ba3de3522297ef6",
       "conceptos/HM3135-dolor-toracico-punzante.yaml": "a82cc27a26e2f5c4fdee7225832251f4bf5e1d18fce8c93ed82c0e081f7463c3",
       "conceptos/HM3136-dolor-toracico-posicional.yaml": "14e7c84d587048ab1b4a61d4b88c29ea6693307a7e4c1e67889e09cdd9eafec3",
-      "condiciones/HM6030-infarto-agudo-de-miocardio.yaml": "92fcbe38a8b1f3b2bc0223fe3eb0bcf09d1641e57bbe160a23ff0941da4e9a8a",
+      "condiciones/HM6030-infarto-agudo-de-miocardio.yaml": "e0bd69fedef44e9f27f9c6baf07e6458a97aa82f823708d040eaa55be7ccd10d",
       "referencias/pmid-9786377.yaml": "a744bdfe061bea39eeebdfeb75c36d78c863cb9fb6a8a848d121b42024f1665f"
     }
   },
@@ -321,7 +321,7 @@
       "ultima_revision": "2026-10-16",
       "revisiones": []
     },
-    "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "nivel": "Pregrado",
     "duracion_min": 45,
     "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -543,7 +543,7 @@
             "cifras": [
               "LR+ 0.2 (IC 95 %: 0.1–0.4)"
             ],
-            "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM (LR 0.2)",
+            "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM",
             "motivo": null,
             "advertencia": null,
             "graduacion": null,
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "body": "# Infarto agudo de miocardio\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAcute myocardial infarction\n\n## Sinónimos\n\nIAM\n\nataque cardíaco\n\ninfarto de miocardio\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Elevación nueva del segmento ST en el ECG (HM:3130)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 22.0; IC del 95 %: 5.7 / 53.9; Referencia: pmid:9786377\n\n**Decisión:** el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión\n\n### Nueva onda Q patológica en el ECG (HM:3131)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 11.0; IC del 95 %: 5.3 / 24.8; Referencia: pmid:9786377\n\n**Decisión:** signo electrocardiográfico de necrosis miocárdica transmisible\n\n### Dolor torácico irradiado a ambos brazos (HM:3014)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.1; IC del 95 %: 3.5 / 14.2; Referencia: pmid:9786377\n\n**Decisión:** el síntoma de irradiación dolorosa con mayor rendimiento discriminativo positivo\n\n### Tercer tono cardíaco (R3) (HM:3132)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.2; IC del 95 %: 1.6 / 6.5; Referencia: pmid:9786377\n\n**Decisión:** signo auscultatorio de disfunción ventricular izquierda aguda\n\n### Hipotensión arterial (HM:0109)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 1.6 / 6.2; Referencia: pmid:9786377\n\n**Decisión:** marcador hemodinámico de compromiso miocárdico o shock cardiogénico\n\n### Dolor torácico pleurítico (HM:3133)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.2; IC del 95 %: 0.1 / 0.4; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** las características pleuríticas reducen fuertemente la probabilidad de IAM (LR 0.2)\n\n### Dolor torácico reproducible a la palpación (HM:3134)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.2 / 0.4; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** el dolor reproducible a la presión de la pared torácica orienta a causa osteomuscular\n\n### Dolor torácico punzante o cortante (HM:3135)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.1 / 0.6; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** el dolor punzante desplaza fuertemente la probabilidad en contra de IAM\n\n### Dolor torácico posicional (HM:3136)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.1 / 0.7; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** la modificación postural del dolor aleja la sospecha de isquemia coronaria aguda\n\n## Conclusión de la fuente\n\nLa anamnesis dirigida, la exploración física y el ECG son fundamentales para evaluar a pacientes con dolor torácico agudo. La nueva elevación del ST (LR+ 22.0) y la irradiación a ambos brazos (LR+ 7.1) confirman fuertemente el IAM, mientras que el dolor pleurítico, posicional o reproducible a la palpación lo hacen muy improbable (LR 0.2-0.3).\n\n## Referencias y procedencia\n\n**pmid:9786377:** The rational clinical examination. Is this patient having a myocardial infarction?. JAMA, 1998. DOI: 10.1001/jama.280.14.1256.\n\nFuente clínica: medsemiotics-db, condición HM:6030."
+  "body": "# Infarto agudo de miocardio\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nAcute myocardial infarction\n\n## Sinónimos\n\nIAM\n\nataque cardíaco\n\ninfarto de miocardio\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Elevación nueva del segmento ST en el ECG (HM:3130)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 22.0; IC del 95 %: 5.7 / 53.9; Referencia: pmid:9786377\n\n**Decisión:** el hallazgo electrocardiográfico individual más potente para confirmar IAM con indicación de reperfusión\n\n### Nueva onda Q patológica en el ECG (HM:3131)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 11.0; IC del 95 %: 5.3 / 24.8; Referencia: pmid:9786377\n\n**Decisión:** signo electrocardiográfico de necrosis miocárdica transmisible\n\n### Dolor torácico irradiado a ambos brazos (HM:3014)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 7.1; IC del 95 %: 3.5 / 14.2; Referencia: pmid:9786377\n\n**Decisión:** el síntoma de irradiación dolorosa con mayor rendimiento discriminativo positivo\n\n### Tercer tono cardíaco (R3) (HM:3132)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.2; IC del 95 %: 1.6 / 6.5; Referencia: pmid:9786377\n\n**Decisión:** signo auscultatorio de disfunción ventricular izquierda aguda\n\n### Hipotensión arterial (HM:0109)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 1.6 / 6.2; Referencia: pmid:9786377\n\n**Decisión:** marcador hemodinámico de compromiso miocárdico o shock cardiogénico\n\n### Dolor torácico pleurítico (HM:3133)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.2; IC del 95 %: 0.1 / 0.4; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** las características pleuríticas reducen fuertemente la probabilidad de IAM\n\n### Dolor torácico reproducible a la palpación (HM:3134)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.2 / 0.4; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** el dolor reproducible a la presión de la pared torácica orienta a causa osteomuscular\n\n### Dolor torácico punzante o cortante (HM:3135)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.1 / 0.6; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** el dolor punzante desplaza fuertemente la probabilidad en contra de IAM\n\n### Dolor torácico posicional (HM:3136)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 0.3; IC del 95 %: 0.1 / 0.7; Referencia: pmid:9786377\n\n**Efecto:** excluye\n\n**Sostiene:** Discriminación medida\n\n**Referencia:** pmid:9786377\n\n**Decisión:** la modificación postural del dolor aleja la sospecha de isquemia coronaria aguda\n\n## Conclusión de la fuente\n\nLa anamnesis dirigida, la exploración física y el ECG son fundamentales para evaluar a pacientes con dolor torácico agudo. La nueva elevación del ST (LR+ 22.0) y la irradiación a ambos brazos (LR+ 7.1) confirman fuertemente el IAM, mientras que el dolor pleurítico, posicional o reproducible a la palpación lo hacen muy improbable (LR 0.2-0.3).\n\n## Referencias y procedencia\n\n**pmid:9786377:** The rational clinical examination. Is this patient having a myocardial infarction?. JAMA, 1998. DOI: 10.1001/jama.280.14.1256.\n\nFuente clínica: medsemiotics-db, condición HM:6030."
 }

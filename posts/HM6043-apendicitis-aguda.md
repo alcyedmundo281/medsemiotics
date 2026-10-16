@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6043-apendicitis-aguda.yaml
   archivos:
@@ -30,7 +30,7 @@ fuente:
     conceptos/HM0712-leucocitosis.yaml: 2e5c508b2e66972503180b4cfced57952439dbca740f2bfa1cbb9dbc6a25b158
     conceptos/HM0900-hallazgo-de-imagen.yaml: 0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67
     conceptos/HM3177-signo-ecografico-de-apendicitis-aguda.yaml: 8af710d0fc65e8203a82946be611bed521b330ae00b5ea647d9d6de7a55c6f96
-    condiciones/HM6043-apendicitis-aguda.yaml: 733af9cd1018b0bf62aef6cbe0fa920f8e075d1c5db17e79c29c92ddfec096ab
+    condiciones/HM6043-apendicitis-aguda.yaml: db3b62047a4501ef009444c7f7dd1b6db6422845a2208b37d997d2b0c32077dd
     referencias/pmid-2239906.yaml: 143382d1babcce9d2979ae48bc7841efd23eb5b8492b7a520130a81308c11781
     referencias/pmid-24113477.yaml: 371db850598e103d5be3697f876a8e8501122f3de0f8f20893ccd9c8bd75ffb2
     referencias/pmid-28826614.yaml: b630a135237dd8eaacc00d6ecaf1d746a89e60945aa88993984831c6d9fe8ce2
@@ -62,7 +62,7 @@ grounding:
 triada:
   significante: Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.
   significado: Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.
-  decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata'
+  decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica'
 evidencia:
 - concepto: HM:3177
   rol: imagen
@@ -89,7 +89,7 @@ evidencia:
     - 0.14
     - 0.42
     ref: pmid:34420255
-  decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata'
+  decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica'
   advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación
 - concepto: HM:0204
   rol: manifestacion
@@ -119,18 +119,18 @@ autoevaluacion:
     dato: *id001
     poblacion: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)
     motivo: null
-    decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata'
+    decision: 'hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica'
     advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación
   opciones:
   - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'Sí hay una medición documentada: LR positivo: 2.29. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
+    feedback: 'Sí hay una medición documentada: LR positivo: 2.29. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
   - texto: 'LR positivo: 2.29.'
     correcta: true
-    feedback: 'LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
+    feedback: 'LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
   - texto: El valor 2.29 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación.'
 - id: q2
   pregunta: En Apendicitis aguda, ¿qué estado de la evidencia corresponde a «Dolor en fosa ilíaca derecha» según la fuente?
   concepto_id: HM:0204
@@ -214,7 +214,7 @@ Snomed: 85189001; Cie10: K35.8
 
 **LR negativo:** Valor: 0.24; IC del 95 %: 0.14 / 0.42; Referencia: pmid:34420255
 
-**Decisión:** hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata
+**Decisión:** hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica
 
 **Advertencia:** el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación
 
