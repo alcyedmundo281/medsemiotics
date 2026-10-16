@@ -1,0 +1,184 @@
+{
+  "condicion_id": "HM:6034",
+  "slug": "cancer-de-mama-precision-semiotica",
+  "estado": "publicado",
+  "autoria": {
+    "autor": "Dr. Alcy Torres",
+    "revisor": "Dr. Alcy Torres"
+  },
+  "publicacion": {
+    "fecha": "2026-10-16",
+    "version": 1,
+    "ultima_revision": "2026-10-16",
+    "revisiones": []
+  },
+  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "nivel": "Pregrado",
+  "duracion_min": 45,
+  "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+  "objetivos": [
+    "Interpretar el cociente positivo de una masa mamaria palpable y el cociente negativo de una exploración normal, con sus intervalos.",
+    "Explicar por qué una sensibilidad moderada y una especificidad alta producen un cociente positivo alto y un negativo modesto.",
+    "Identificar qué preguntas de calidad (espectro de pacientes, verificación del diagnóstico, definición de la exploración) debe hacerse un lector ante este estudio.",
+    "Explicar por qué un examen clínico normal no sustituye a la mamografía de cribado.",
+    "Decidir la conducta ante una masa palpable reconociendo los límites de la evidencia registrada."
+  ],
+  "vineta": {
+    "titulo": "Un nódulo que la paciente no había notado",
+    "texto": "Mujer de 49 años que acude a un control ginecológico de rutina, sin síntomas mamarios. Su madre tuvo cáncer de mama a los 61 años. Menarquia a los 11 años, dos hijos, lactancia prolongada. No usa terapia hormonal. Su última mamografía fue hace tres años y fue informada como normal. Nunca se había hecho un autoexamen sistemático.",
+    "datos": [
+      {
+        "etiqueta": "Edad",
+        "valor": "49 años"
+      },
+      {
+        "etiqueta": "Índice de masa corporal",
+        "valor": "27 kg/m²"
+      },
+      {
+        "etiqueta": "Antecedente familiar",
+        "valor": "madre, a los 61 años"
+      }
+    ]
+  },
+  "etapas": [
+    {
+      "numero": 1,
+      "titulo": "Antes de la exploración",
+      "fase": "activacion",
+      "fase_etiqueta": "Activación e hipótesis iniciales",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "Esta paciente no consulta por un síntoma, sino por un control. ¿En qué se parece y en qué se diferencia de una paciente que consulta porque se palpó un bulto?",
+          "clave": "Se parece en que la exploración clínica es la misma maniobra. Se diferencia en la probabilidad de partida: en un control de rutina la mayoría de las pacientes no tiene cáncer, y en quien consulta por un bulto la probabilidad previa es mayor. El cociente de una prueba puede ser el mismo en ambos, pero la probabilidad posterior no, porque se parte de puntos distintos. La base no registra la probabilidad basal de esta condición, así que debes declarar de dónde partes."
+        },
+        {
+          "pregunta": "Para dar un cociente por válido en esta paciente, ¿qué debería saber del estudio del que sale?",
+          "clave": "En qué pacientes se midió (¿asintomáticas en cribado o con síntomas?), cómo se definió una exploración «positiva», quién exploró y durante cuánto tiempo, y cómo se confirmó el diagnóstico en todas las pacientes, incluidas las de exploración normal. Son las preguntas del instrumento QUADAS-2 y de la lista STARD: dominio de selección de pacientes, prueba índice, patrón de referencia y flujo. Guárdalas, las usarás al leer el artículo."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "La exploración",
+      "fase": "exploracion",
+      "fase_etiqueta": "Exploración de hallazgos",
+      "informacion": "La exploración reglada de ambas mamas, con inspección y palpación sistemática, dura más de tres minutos por mama. En el cuadrante superoexterno de la mama izquierda encuentras lo que la base registra como «masa mamaria palpable o hallazgo sospechoso en la exploración»: un nódulo duro de unos dos centímetros, de bordes mal definidos, poco móvil, sin cambios en la piel ni adenopatías axilares.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:3142",
+          "nombre": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
+          "rol": "Prueba específica",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR+ 10.6 (IC 95 %: 5.8–19.2)",
+            "sensibilidad 0.54",
+            "especificidad 0.94"
+          ],
+          "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:10517431"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "Palpas un nódulo duro y poco móvil. ¿Cuánto aumenta la probabilidad de cáncer? Interpreta el cociente con su intervalo.",
+          "clave": "El hallazgo «masa mamaria palpable o hallazgo sospechoso en la exploración» tiene LR+ 10.6 (IC 95 %: 5.8–19.2) y especificidad 0.94: es un cociente alto, de los que cambian la conducta. El intervalo es amplio: su extremo inferior sigue siendo un cociente moderado y el superior es muy alto, de modo que lo único seguro es que aumenta mucho la probabilidad. Qué tanto, depende del punto de partida que declaraste."
+        },
+        {
+          "pregunta": "Un cociente positivo alto, ¿equivale a decir que la paciente tiene cáncer? ¿Qué otras causas explican un nódulo así?",
+          "clave": "No. Un cociente positivo alto desplaza la probabilidad, pero la mayoría de los nódulos mamarios son benignos: fibroadenoma, quiste, cambios fibroquísticos, necrosis grasa. Por eso la conducta es completar el estudio con imagen y, si corresponde, con biopsia, y no etiquetar a la paciente con el cociente. Un cociente alto indica que hay que seguir estudiando con urgencia, no que el diagnóstico está hecho."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "La otra cara de la moneda",
+      "fase": "discriminacion",
+      "fase_etiqueta": "Discriminación con la evidencia",
+      "informacion": "Imagina ahora a otra mujer de la misma edad, sin nódulo: el hallazgo es un examen clínico de mama reglado normal, con la misma técnica y el mismo tiempo de examen.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:3143",
+          "nombre": "Examen clínico de mama reglado normal",
+          "rol": "Prueba sensible",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR− 0.47 (IC 95 %: 0.4–0.56)"
+          ],
+          "decision": "una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:10517431"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "El examen es normal. ¿Descartas el cáncer de mama? Fundamenta con el cociente y con su relación con la sensibilidad.",
+          "clave": "No. El examen clínico de mama reglado normal tiene LR− 0.47 (IC 95 %: 0.4–0.56): reduce la probabilidad de forma modesta. Esto es consecuencia directa de la sensibilidad: con sensibilidad 0.54, la exploración deja de detectar una parte importante de los cánceres, y por eso una exploración normal no los excluye. La ficha lo dice sin rodeos: no excluye la necesidad de mamografía de cribado."
+        },
+        {
+          "pregunta": "La especificidad es alta y la sensibilidad es moderada. ¿Qué pasa con el cociente positivo y con el negativo, y por qué?",
+          "clave": "Una especificidad alta (especificidad 0.94) produce un cociente positivo alto: casi no hay falsos positivos, así que un resultado positivo es muy informativo. Una sensibilidad moderada produce un cociente negativo cercano a 1: hay muchos falsos negativos, así que un resultado normal informa poco. Es la asimetría clásica de una prueba específica pero poco sensible: sirve para confirmar, no para descartar."
+        },
+        {
+          "pregunta": "Con tu lista de preguntas de calidad, ¿qué puedes decir y qué no del estudio que sostiene estos cocientes, con lo que registra esta base?",
+          "clave": "La base registra los cocientes con sus intervalos y la referencia, pero no la población en la que se midieron, ni cómo se verificó el diagnóstico en las pacientes con exploración normal. Sin esos datos no se puede juzgar el sesgo de espectro (¿pacientes sintomáticas o de cribado?) ni el de verificación (¿se confirmó a todas con el mismo patrón de referencia?). Tampoco se puede saber si el tiempo de examen de la conclusión es una condición de los estudios o una recomendación posterior. Decirlo con claridad es parte de leer críticamente: el número es citable, pero su aplicabilidad a esta paciente no está establecida por lo que tenemos delante."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Qué hacer",
+      "fase": "decision",
+      "fase_etiqueta": "Juicio clínico y decisión",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "Para la paciente con el nódulo, ¿cuál es tu conducta? ¿Y para la que tiene el examen normal?",
+          "clave": "Para la primera, completar el estudio sin demora con imagen (mamografía y ecografía) y obtener tejido para el diagnóstico si la imagen o la clínica lo indican; la exploración sola nunca cierra el diagnóstico. Para la segunda, continuar con el cribado por mamografía según la edad y el riesgo, porque el examen normal no lo reemplaza. El criterio de fondo es de umbrales: la probabilidad posterior de la primera supera claramente el umbral de estudio, y la de la segunda no baja lo bastante como para omitir el cribado."
+        },
+        {
+          "pregunta": "¿Qué no puede responder la evidencia de este artículo?",
+          "clave": "No registra la probabilidad basal, la población ni el diseño del estudio, de modo que no permite evaluar su calidad. No documenta el rendimiento de la mamografía, de la ecografía ni de la biopsia. No distingue el cribado del diagnóstico en pacientes sintomáticas. Y no cuantifica el efecto de los factores de riesgo, como el antecedente familiar de esta paciente."
+        }
+      ]
+    }
+  ],
+  "cierre": {
+    "sintesis": "En el cáncer de mama, la exploración clínica reglada tiene una especificidad alta y una sensibilidad moderada: una masa palpable aumenta mucho la probabilidad y una exploración normal la reduce poco. Antes de fiarse de esos cocientes hay que preguntar en quién se midieron y cómo se verificó el diagnóstico, y esta base no lo responde todavía.",
+    "necesidades_aprendizaje": [
+      "Población, diseño y patrón de referencia del estudio que sostiene los cocientes, para valorarlo con QUADAS-2.",
+      "Probabilidad basal en cribado y en pacientes sintomáticas.",
+      "Rendimiento de la mamografía, la ecografía y la biopsia, y su combinación con la exploración clínica.",
+      "Efecto del antecedente familiar y de otros factores de riesgo sobre la probabilidad previa."
+    ]
+  },
+  "omitidos": [],
+  "referencias": [
+    {
+      "id": "pmid:10517431",
+      "cita": "The rational clinical examination. Does this patient have breast cancer? The screening clinical breast examination: should it be done? How?. JAMA, 1999. DOI: 10.1001/jama.282.13.1270."
+    }
+  ]
+}
