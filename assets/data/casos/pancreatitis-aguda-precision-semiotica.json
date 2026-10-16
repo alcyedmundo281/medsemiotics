@@ -1,0 +1,268 @@
+{
+  "condicion_id": "HM:6040",
+  "slug": "pancreatitis-aguda-precision-semiotica",
+  "estado": "publicado",
+  "autoria": {
+    "autor": "Dr. Alcy Torres",
+    "revisor": "Dr. Alcy Torres"
+  },
+  "publicacion": {
+    "fecha": "2026-10-16",
+    "version": 1,
+    "ultima_revision": "2026-10-16",
+    "revisiones": []
+  },
+  "fuente_revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+  "nivel": "Pregrado",
+  "duracion_min": 45,
+  "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+  "objetivos": [
+    "Aplicar el criterio diagnóstico de dos de tres (dolor, enzimas, imagen) a un paciente con dolor abdominal agudo.",
+    "Explicar por qué la base no permite calcular una probabilidad posterior en esta condición y qué significa que un hallazgo tenga «LR no medido».",
+    "Distinguir la lipasa de la amilasa por su especificidad y por su cinética.",
+    "Reconocer que la ausencia de un signo raro, como el de Cullen, no descarta una forma grave.",
+    "Decidir qué imagen pedir y con qué fin (confirmar la pancreatitis o buscar la causa biliar)."
+  ],
+  "vineta": {
+    "titulo": "Un dolor que atraviesa hacia la espalda",
+    "texto": "Hombre de 46 años, que llega a urgencias por dolor abdominal de doce horas de evolución, de inicio brusco, en la parte alta del abdomen, que atraviesa hacia la espalda y mejora un poco al inclinarse hacia adelante. Ha vomitado varias veces sin alivio. Bebió mucho alcohol durante una celebración dos días atrás; refiere consumo habitual elevado de fines de semana. No toma medicación regular. No ha tenido cólicos previos que él recuerde.",
+    "datos": [
+      {
+        "etiqueta": "Temperatura",
+        "valor": "37.8 °C"
+      },
+      {
+        "etiqueta": "Frecuencia cardíaca",
+        "valor": "108 lpm"
+      },
+      {
+        "etiqueta": "Presión arterial",
+        "valor": "124/76 mmHg"
+      },
+      {
+        "etiqueta": "Saturación de oxígeno",
+        "valor": "96 % al aire ambiente"
+      }
+    ]
+  },
+  "etapas": [
+    {
+      "numero": 1,
+      "titulo": "Antes de pedir nada",
+      "fase": "activacion",
+      "fase_etiqueta": "Activación e hipótesis iniciales",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué causas de dolor epigástrico agudo con vómitos deben considerarse antes de fijarse en el páncreas?",
+          "clave": "Úlcera péptica complicada, colecistitis o cólico biliar, síndrome coronario agudo de cara inferior (que puede presentarse como dolor epigástrico), isquemia mesentérica, aneurisma o disección aórtica y obstrucción intestinal. Considerar lo grave primero evita quedarse anclado en el diagnóstico más sugestivo por el dato del alcohol."
+        },
+        {
+          "pregunta": "El alcohol es la causa más evidente en la historia. ¿Cuál es la otra causa frecuente que no se debe dar por descartada y cómo la buscarías?",
+          "clave": "La litiasis biliar, incluida la que migra por el colédoco. Un paciente que bebe no está por eso libre de cálculos, y tratar la pancreatitis sin buscar la causa biliar expone a una recurrencia. Se busca con ecografía abdominal y con el perfil hepático. Obsérvese que esta base no cuantifica la litiasis como factor de riesgo, porque no hay estudio con grupo control que la documente: la causa biliar se razona, no se calcula."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Lo que muestra la clínica",
+      "fase": "exploracion",
+      "fase_etiqueta": "Exploración de hallazgos",
+      "informacion": "El paciente tiene dolor epigástrico con irradiación a la espalda, y los vómitos han sido repetidos. A la palpación el abdomen está tenso y doloroso en la parte alta, con irritación peritoneal localizada.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:0202",
+          "nombre": "Dolor epigástrico",
+          "rol": "Manifestación",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que holonmed aprovecha de él es sobre todo su ausencia",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        },
+        {
+          "id": "HM:0302",
+          "nombre": "Vómitos",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "aporta poca certeza por sí solo",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        },
+        {
+          "id": "HM:0601",
+          "nombre": "Irritación peritoneal",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "signo de Blumberg; apoya, no decide",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "El dolor epigástrico es el motivo de consulta. ¿Qué papel cumple si no se puede cuantificar?",
+          "clave": "La base lo clasifica como hallazgo LR no medido y lo describe como sensible y poco específico: fija la sospecha de partida y su ausencia pesa más que su presencia. Un paciente con pancreatitis sin dolor abdominal es raro, pero un dolor epigástrico lo tienen decenas de diagnósticos. No hay un número que mover, y eso no es un defecto del hallazgo sino de lo que se ha documentado hasta ahora."
+        },
+        {
+          "pregunta": "Los vómitos y la irritación peritoneal «apoyan». ¿Puedes calcular cuánto?",
+          "clave": "No. Ambos figuran en la base con LR no medido y como apoyo: la ficha dice que los vómitos aportan poca certeza por sí solos y que la irritación peritoneal apoya pero no decide. Aquí conviene resistir la tentación de poner un número «aproximado» de memoria: una cifra sin fuente aparenta una precisión que no existe. Lo correcto es decir cuánto se confía cualitativamente, y qué dato permitiría cuantificarlo."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "Los exámenes de laboratorio y la imagen",
+      "fase": "discriminacion",
+      "fase_etiqueta": "Discriminación con la evidencia",
+      "informacion": "La hiperlipasemia es varias veces mayor que el límite alto de la normalidad, y la hiperamilasemia también está elevada. La tomografía con contraste realizada a las 36 horas muestra hallazgos de imagen compatibles con pancreatitis.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:0732",
+          "nombre": "Hiperlipasemia",
+          "rol": "Prueba específica",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        },
+        {
+          "id": "HM:0731",
+          "nombre": "Hiperamilasemia",
+          "rol": "Prueba específica",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
+          "motivo": null,
+          "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento.",
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        },
+        {
+          "id": "HM:0901",
+          "nombre": "Hallazgos de imagen compatibles con pancreatitis",
+          "rol": "Imagen",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "es el tercero de los tres criterios de Atlanta, y el que permite diagnosticar cuando las enzimas no llegan al corte",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "Aplica el criterio de dos de tres a este paciente. ¿Está hecho el diagnóstico? ¿En qué momento lo estuvo?",
+          "clave": "Sí. La fuente establece el diagnóstico con dos de tres criterios: dolor abdominal característico, elevación de las enzimas pancreáticas por encima de tres veces el límite alto de la normalidad, o hallazgos de imagen compatibles. El paciente cumplía dolor y enzimas desde la llegada, así que el diagnóstico estaba hecho antes de la tomografía. Este es un criterio de clasificación, no una actualización de probabilidad: dice cuándo el diagnóstico está hecho, no cuánto sube la probabilidad con cada hallazgo."
+        },
+        {
+          "pregunta": "¿Por qué la lipasa se prefiere a la amilasa y qué cambia en la práctica?",
+          "clave": "Según la ficha, la hiperlipasemia se eleva más tiempo y es más específica del páncreas, mientras que la hiperamilasemia también sube en patología salival y otras causas y se normaliza antes. En un paciente que consulta tarde, la amilasa puede haber vuelto a valores normales cuando la lipasa sigue alta. La ficha advierte además que no se sustituyen entre sí: son dos enzimas con comportamientos distintos."
+        },
+        {
+          "pregunta": "Si quisieras multiplicar cocientes de los siete hallazgos para obtener la probabilidad posterior, ¿qué te lo impide en esta condición?",
+          "clave": "Que la base no documenta ninguno: los siete figuran con «LR no medido». Lo documentado es que no entran por falta de procedencia verificable de las cifras, no porque los hallazgos carezcan de valor. Y aunque estuvieran, combinarlos multiplicando exige que sean independientes dado el diagnóstico, cosa dudosa cuando la lipasa, la amilasa y la imagen reflejan la misma inflamación. El criterio de dos de tres es precisamente la manera de no depender de esa suposición."
+        },
+        {
+          "pregunta": "La tomografía con contraste confirma, pero ¿para qué sirve la ecografía en este paciente?",
+          "clave": "Según la ficha, la referencia para confirmar la pancreatitis es la tomografía con contraste, y la ecografía sirve sobre todo para buscar la causa biliar, no para confirmar la pancreatitis. Es una pregunta de propósito: se pide una imagen distinta según se quiera confirmar el diagnóstico o identificar la etiología."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Dos días después",
+      "fase": "discriminacion",
+      "fase_etiqueta": "Discriminación con la evidencia",
+      "informacion": "A las 48 horas el paciente empeora, con dolor persistente y necesidad de más líquidos. En la exploración se ve el signo de Cullen, una coloración azulada alrededor del ombligo.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:0611",
+          "nombre": "Signo de Cullen",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "no_medido",
+          "estado": "LR no medido",
+          "poblacion": null,
+          "cifras": [],
+          "decision": "raro pero llamativo: orienta a pancreatitis necrotizante o hemorrágica",
+          "motivo": null,
+          "advertencia": "su AUSENCIA no descarta nada, y por eso el protocolo de holonmed no le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad.",
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "Apareció el signo de Cullen. ¿Qué te dice? Y si no hubiera aparecido, ¿qué habrías pensado?",
+          "clave": "La ficha lo describe como raro pero llamativo: orienta a pancreatitis necrotizante o hemorrágica. Su presencia pesa; su ausencia no descarta nada, y por eso la base no le asigna cociente negativo: es infrecuente incluso dentro de la enfermedad. Un signo específico y raro sirve para alertar cuando está, y no para tranquilizar cuando falta."
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Qué hacer",
+      "fase": "decision",
+      "fase_etiqueta": "Juicio clínico y decisión",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "Con el diagnóstico hecho, ¿cuáles son los pilares de tu manejo inicial y qué buscas en las primeras horas?",
+          "clave": "Reposición de líquidos con vigilancia de la respuesta, analgesia, soporte nutricional precoz según tolerancia y vigilancia de la aparición de falla orgánica; búsqueda de la causa (biliar, alcohol, triglicéridos, fármacos). La estratificación de la gravedad y los detalles del manejo son de la guía local y no están en esta base: se plantean como necesidades de aprendizaje."
+        },
+        {
+          "pregunta": "¿Qué no puede responder la evidencia de este artículo?",
+          "clave": "Casi todo lo cuantitativo: no hay cocientes de verosimilitud para ningún hallazgo, no hay probabilidad basal, y la litiasis biliar, la causa más frecuente, no figura como factor con cifras. El artículo documenta criterios, no probabilidades. Reconocerlo es parte de razonar con datos: hay problemas clínicos en los que la herramienta bayesiana todavía no tiene los insumos."
+        }
+      ]
+    }
+  ],
+  "cierre": {
+    "sintesis": "La pancreatitis aguda se diagnostica por criterios (dos de tres), no por probabilidades actualizadas: la base documenta los hallazgos y su papel, pero ninguno con cociente medido. La lipasa es más específica que la amilasa, la tomografía es la referencia de imagen, la ecografía busca la causa biliar y el signo de Cullen, cuando falta, no tranquiliza.",
+    "necesidades_aprendizaje": [
+      "Cocientes de verosimilitud de la lipasa, la amilasa y los hallazgos clínicos, cuya procedencia está pendiente de verificar en la base.",
+      "Frecuencia de la litiasis biliar como causa y su cuantificación como factor de riesgo.",
+      "Estratificación de la gravedad, criterios de ingreso en cuidados intensivos y manejo de líquidos y nutrición, no documentados en la base.",
+      "Manejo de las complicaciones locales y de la pancreatitis necrotizante."
+    ]
+  },
+  "omitidos": [],
+  "referencias": []
+}
