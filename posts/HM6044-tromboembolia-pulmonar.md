@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
+  revision: af44eec90966a41d8052c3605c90a480ad042299
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6044-tromboembolia-pulmonar.yaml
   archivos:
@@ -32,7 +32,7 @@ fuente:
     conceptos/HM3144-dimero-d-elevado.yaml: 562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2
     conceptos/HM3162-ventriculo-derecho-dilatado.yaml: bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134
     conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml: 8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621
-    condiciones/HM6044-tromboembolia-pulmonar.yaml: 2234238767bc6493ff870015fa962048d2a9d88923852e109352d34162ecb71b
+    condiciones/HM6044-tromboembolia-pulmonar.yaml: 151072d461a4b6a2417746f1159ece1108241b9b09fde6940b07f42fd27652f5
     referencias/pmid-10737280.yaml: 68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de
     referencias/pmid-16052017.yaml: 608a924c6c05185604836f0e3ef4c1617da586d7c02cd72c3b4374688809d990
     referencias/pmid-16403932.yaml: a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789
@@ -61,7 +61,7 @@ grounding:
 triada:
   significante: Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).
   significado: El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.
-  decision: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
+  decision: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
 evidencia:
 - concepto: HM:3162
   rol: imagen
@@ -88,8 +88,8 @@ evidencia:
     - 0.47
     - 0.68
     ref: pmid:28495379
-  decision: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
-  advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico
+  decision: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
+  advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico
 - concepto: HM:3144
   rol: prueba_sensible
   estado_lr: medido
@@ -131,18 +131,18 @@ autoevaluacion:
     dato: *id001
     poblacion: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017)
     motivo: null
-    decision: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
-    advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico
+    decision: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
+    advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico
   opciones:
   - texto: 'LR positivo: 3.12.'
     correcta: true
-    feedback: 'LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
+    feedback: 'LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
   - texto: El valor 3.12 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
   - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
+    feedback: 'Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico.'
 - id: q2
   pregunta: 'En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas).'
   concepto_id: HM:3144
@@ -236,9 +236,9 @@ Snomed: 59282003; Cie10: I26.9
 
 **LR negativo:** Valor: 0.57; IC del 95 %: 0.47 / 0.68; Referencia: pmid:28495379
 
-**Decisión:** en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
+**Decisión:** en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable
 
-**Advertencia:** sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico
+**Advertencia:** la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico
 
 ### Dímero D elevado (HM:3144)
 

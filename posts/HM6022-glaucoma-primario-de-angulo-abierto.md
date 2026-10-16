@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
+  revision: af44eec90966a41d8052c3605c90a480ad042299
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml
   archivos:

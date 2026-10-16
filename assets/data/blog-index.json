@@ -119,7 +119,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6042-colecistitis-aguda.yaml",
       "archivos": {
@@ -263,7 +263,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6043-apendicitis-aguda.yaml",
       "archivos": {
@@ -378,8 +378,8 @@
           ],
           "ref": "pmid:28495379"
         },
-        "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
-        "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
+        "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+        "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
       },
       {
         "concepto": "HM:3144",
@@ -421,7 +421,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6044-tromboembolia-pulmonar.yaml",
       "archivos": {
@@ -438,7 +438,7 @@
         "conceptos/HM3144-dimero-d-elevado.yaml": "562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2",
         "conceptos/HM3162-ventriculo-derecho-dilatado.yaml": "bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134",
         "conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml": "8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621",
-        "condiciones/HM6044-tromboembolia-pulmonar.yaml": "2234238767bc6493ff870015fa962048d2a9d88923852e109352d34162ecb71b",
+        "condiciones/HM6044-tromboembolia-pulmonar.yaml": "151072d461a4b6a2417746f1159ece1108241b9b09fde6940b07f42fd27652f5",
         "referencias/pmid-10737280.yaml": "68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de",
         "referencias/pmid-16052017.yaml": "608a924c6c05185604836f0e3ef4c1617da586d7c02cd72c3b4374688809d990",
         "referencias/pmid-16403932.yaml": "a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789",
@@ -536,7 +536,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6045-taponamiento-cardiaco.yaml",
       "archivos": {
@@ -769,7 +769,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6046-ascitis.yaml",
       "archivos": {
@@ -915,7 +915,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6047-esplenomegalia.yaml",
       "archivos": {
@@ -1049,7 +1049,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6048-bocio.yaml",
       "archivos": {
@@ -1183,7 +1183,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml",
       "archivos": {
@@ -1368,7 +1368,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6023-conmocion-cerebral-pediatrica.yaml",
       "archivos": {
@@ -1546,7 +1546,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6024-maltrato-fisico-infantil.yaml",
       "archivos": {
@@ -1716,7 +1716,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml",
       "archivos": {
@@ -1838,7 +1838,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6026-insuficiencia-aortica.yaml",
       "archivos": {
@@ -1966,7 +1966,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml",
       "archivos": {
@@ -2063,7 +2063,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6028-alergia-a-penicilina.yaml",
       "archivos": {
@@ -2174,7 +2174,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml",
       "archivos": {
@@ -2379,7 +2379,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
       "archivos": {
@@ -2478,7 +2478,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml",
       "archivos": {
@@ -2566,7 +2566,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6032-trastorno-de-panico.yaml",
       "archivos": {
@@ -2670,7 +2670,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6033-melanoma-cutaneo.yaml",
       "archivos": {
@@ -2770,7 +2770,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6034-cancer-de-mama.yaml",
       "archivos": {
@@ -2915,7 +2915,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6035-trombosis-venosa-profunda.yaml",
       "archivos": {
@@ -3081,7 +3081,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6036-neumonia-infantil.yaml",
       "archivos": {
@@ -3333,7 +3333,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6037-sobrecarga-de-volumen.yaml",
       "archivos": {
@@ -3507,7 +3507,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6038-lesion-intracraneal-en-traumatismo-craneal-leve.yaml",
       "archivos": {
@@ -3624,7 +3624,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6039-estres-postraumatico.yaml",
       "archivos": {
@@ -3765,7 +3765,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6040-pancreatitis-aguda.yaml",
       "archivos": {
@@ -3783,7 +3783,7 @@
         "conceptos/HM0732-hiperlipasemia.yaml": "b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275",
         "conceptos/HM0900-hallazgo-de-imagen.yaml": "0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67",
         "conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml": "556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a",
-        "condiciones/HM6040-pancreatitis-aguda.yaml": "68a206a74243bec099ae0e17d38a2c6c937df0d19319cbbe9e99f56e72e183d8",
+        "condiciones/HM6040-pancreatitis-aguda.yaml": "e611ea546fa844fdd726005f15da408d3596946a89550963638742d1457d8e87",
         "referencias/pmid-23100216.yaml": "43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd",
         "referencias/pmid-25088919.yaml": "b0be6e2c04299a8adea4085e3e6b28f10849d8bd0118e734da36efa36e1bef81",
         "referencias/pmid-26844279.yaml": "6c58e2666a253432e0cfa871160a02df14cacdcfc95e2f1425a8c29071db45b9",
@@ -3884,7 +3884,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6041-absceso-de-partes-blandas.yaml",
       "archivos": {
@@ -4020,7 +4020,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
       "archivos": {
@@ -4128,7 +4128,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6002-sindrome-intestino-irritable.yaml",
       "archivos": {
@@ -4291,7 +4291,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6019-luxacion-cadera-lactante.yaml",
       "archivos": {
@@ -4441,7 +4441,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6020-intubacion-dificil.yaml",
       "archivos": {
@@ -4590,7 +4590,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
       "archivos": {
@@ -4875,7 +4875,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
       "archivos": {
@@ -5027,7 +5027,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
       "archivos": {
@@ -5182,7 +5182,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
       "archivos": {
@@ -5333,7 +5333,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
       "archivos": {
@@ -5530,7 +5530,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6008-hipovolemia.yaml",
       "archivos": {
@@ -5668,7 +5668,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6009-faringitis-estreptococica.yaml",
       "archivos": {
@@ -5934,7 +5934,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6010-sincope-cardiaco.yaml",
       "archivos": {
@@ -6106,7 +6106,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6011-infeccion-precoz-por-vih.yaml",
       "archivos": {
@@ -6314,7 +6314,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6012-artrosis-de-cadera.yaml",
       "archivos": {
@@ -6432,7 +6432,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml",
       "archivos": {
@@ -6537,7 +6537,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml",
       "archivos": {
@@ -6626,7 +6626,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6015-enfermedad-de-parkinson.yaml",
       "archivos": {
@@ -6855,7 +6855,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6016-embarazo-ectopico.yaml",
       "archivos": {
@@ -6990,7 +6990,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6017-conjuntivitis-bacteriana.yaml",
       "archivos": {
@@ -7087,7 +7087,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml",
       "archivos": {
@@ -7263,7 +7263,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6004-meningitis-aguda.yaml",
       "archivos": {
