@@ -74,13 +74,16 @@ etapas:
           La ficha dice que una cifra elevada en consulta «quintuplica aproximadamente la
           odds». Compáralo con el cociente registrado. ¿Es exacto? ¿Importa?
         clave: >-
-          El cociente positivo registrado es {{lr+ HM:3127}}, es decir, algo más de cuatro
-          veces, no cinco, y su intervalo incluye valores bastante más bajos. Redondear
-          «hacia arriba» exagera el efecto. Importa porque en la comunicación del riesgo la
-          precisión es parte de la honestidad: si se le dice al paciente que su probabilidad
-          se multiplica por cinco cuando es por cuatro y con incertidumbre, se le asusta de
-          más. Es un buen ejercicio de lectura crítica: contrastar siempre una frase
-          descriptiva con la cifra con la que se sostiene.
+          El cociente positivo registrado es {{lr+ HM:3127}}: algo más de cuatro veces, no
+          cinco, y su intervalo incluye valores bastante más bajos. Y ojo con lo que se
+          multiplica: el cociente multiplica las odds (el cociente entre la probabilidad de
+          estar enfermo y la de no estarlo), no la probabilidad. Solo con un pretest muy bajo
+          la probabilidad se multiplica de forma parecida; con uno moderado o alto, mucho
+          menos. Redondear «hacia arriba» exagera el efecto, y confundir odds con
+          probabilidad lo exagera aún más. Importa porque en la comunicación del riesgo la
+          precisión es parte de la honestidad: decirle al paciente que su probabilidad «se
+          multiplica por cinco» lo asusta de más. Es un buen ejercicio de lectura crítica:
+          contrastar siempre una frase descriptiva con la cifra con la que se sostiene.
       - pregunta: >-
           Si la presión en consulta hubiera sido normal, ¿qué le dirías?
         clave: >-
@@ -101,10 +104,10 @@ etapas:
           La medición en casa es normal. ¿Qué le dices ahora? Interpreta el cociente negativo
           de la automonitorización.
         clave: >-
-          El {{hallazgo HM:3128}} ausente corresponde a un {{lr- HM:3128}}: reduce de forma
-          clara la probabilidad de hipertensión mantenida, más que la presión normal en
-          consulta, porque la medición domiciliaria es repetida y se hace en el ambiente
-          habitual. Con una presión elevada en consulta y normal en casa, la explicación más
+          La ausencia del hallazgo «{{hallazgo HM:3128}}» corresponde a un {{lr- HM:3128}}:
+          reduce de forma clara la probabilidad de hipertensión mantenida, más que la presión
+          normal en consulta. Una hipótesis razonable, que la base no documenta, es que la
+          medición domiciliaria es repetida y se hace en el ambiente habitual. Con una presión elevada en consulta y normal en casa, la explicación más
           probable es la elevación de bata blanca, aunque sin confirmar con monitorización
           ambulatoria no se puede cerrar el diagnóstico.
       - pregunta: >-
