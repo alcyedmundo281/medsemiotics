@@ -7,8 +7,8 @@
 **Sedes de práctica:** IESS San Francisco y MSP Calderón
 
 > **Estado: BORRADOR v3.0 para revisión del docente.** Período, horario y fecha de inicio los
-> confirmó el docente. Las ponderaciones se mantienen (40 % formativa, 60 % sumativa). Las fechas son todos los miércoles consecutivos desde el
-> inicio; las del 23 y 30 de diciembre y las de carnaval deben confirmarse como clase o receso.
+> confirmó el docente. Las ponderaciones se mantienen (40 % formativa, 60 % sumativa). Las fechas son los miércoles desde el inicio, con receso
+> el 23 y 30 de diciembre de 2026 (confirmado por el docente).
 
 ---
 
@@ -20,7 +20,7 @@
 | **Docente**             | Dr. Alcy Torres — Medicina Interna                                                                                                  |
 | **Período**             | 2026-2027                                                                                                                            |
 | **Horario**             | Miércoles 20:00–21:30 (1 sesión semanal de 90 min)                                                                                  |
-| **Inicio / fin**        | 11 de noviembre de 2026 / 24 de febrero de 2027 (16 sesiones)                                                                       |
+| **Inicio / fin**        | 11 de noviembre de 2026 / 10 de marzo de 2027 (16 sesiones; receso 23 y 30 de dic)                                                                       |
 | **Plataforma web**      | <https://powersemiotics.com/medsemiotics/index.html> y <https://powersemiotics.com/medsemiotics/medicina_y_datos.html>             |
 | **Aula virtual**        | Google Classroom de la cátedra                                                                                                      |
 | **Fuente clínica**      | [medsemiotics-db](https://github.com/alcyedmundo281/medsemiotics-db): hallazgos, LR+, LR−, sensibilidad, especificidad y referencias |
@@ -94,26 +94,26 @@ los sustituye por cifras de memoria.
 | :--: | :-------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :--------------------------------- |
 | 5 · 09 dic 2026 | Probabilidad pretest, odds y nomograma de Fagan; intuición bayesiana y falacia de la tasa base | HM6043 Apendicitis aguda                                       | La Intuición Bayesiana             |
 | 6 · 16 dic 2026 | Combinar hallazgos: producto de LR, independencia condicional y sus límites                    | HM6040 Pancreatitis aguda; HM6042 Colecistitis aguda           | Artículos HM6040 y HM6042          |
-| 7 · 23 dic 2026 | Umbrales de prueba y de tratamiento; cuándo una prueba no debe pedirse                         | HM6044 Tromboembolia pulmonar; HM6035 Trombosis venosa profunda | Artículos HM6044 y HM6035          |
-| 8 · 30 dic 2026 | **Evaluación 1:** razonamiento bayesiano sobre casos nuevos                                    | Casos no vistos de la lista de condiciones                     | Reto clínico                       |
+| 7 · 06 ene 2027 | Umbrales de prueba y de tratamiento; cuándo una prueba no debe pedirse                         | HM6044 Tromboembolia pulmonar; HM6035 Trombosis venosa profunda | Artículos HM6044 y HM6035          |
+| 8 · 13 ene 2027 | **Evaluación 1:** razonamiento bayesiano sobre casos nuevos                                    | Casos no vistos de la lista de condiciones                     | Reto clínico                       |
 
 ### Unidad 3 — Cuán seguro es el número (semanas 9–12)
 
 | Sem. | Tema                                                                                                              | Caso ancla (blog)                                         | Recurso en el sitio                          |
 | :--: | :---------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- | :------------------------------------------- |
-| 9 · 06 ene 2027 | Incertidumbre estadística: IC 95 %, valor p, tamaño de efecto; leer el IC de un LR                                | HM6007 (LR+ 5.3, IC 2.1–8.6) y HM6036 Neumonía infantil   | Cuantificando la incertidumbre               |
-| 10 · 13 ene 2027 | Calidad de los estudios de exactitud: STARD, QUADAS-2, sesgo de espectro y de verificación                        | HM6034 Cáncer de mama                                     | Artículo HM6034                              |
-| 11 · 20 ene 2027 | Reglas de decisión clínica, puntos de corte y curvas ROC                                                          | HM6038 Lesión intracraneal en TCE leve                    | Artículo HM6038                              |
-| 12 · 27 ene 2027 | Sesgos cognitivos (anclaje, disponibilidad) y **causalidad**: confusión, colisionadores, DAG                      | CausalMed: el caso TRH; reingresos y TEV en Chimborazo    | Sesgos de la mente; Inferencia causal        |
+| 9 · 20 ene 2027 | Incertidumbre estadística: IC 95 %, valor p, tamaño de efecto; leer el IC de un LR                                | HM6007 (LR+ 5.3, IC 2.1–8.6) y HM6036 Neumonía infantil   | Cuantificando la incertidumbre               |
+| 10 · 27 ene 2027 | Calidad de los estudios de exactitud: STARD, QUADAS-2, sesgo de espectro y de verificación                        | HM6034 Cáncer de mama                                     | Artículo HM6034                              |
+| 11 · 03 feb 2027 | Reglas de decisión clínica, puntos de corte y curvas ROC                                                          | HM6038 Lesión intracraneal en TCE leve                    | Artículo HM6038                              |
+| 12 · 10 feb 2027 | Sesgos cognitivos (anclaje, disponibilidad) y **causalidad**: confusión, colisionadores, DAG                      | CausalMed: el caso TRH; reingresos y TEV en Chimborazo    | Sesgos de la mente; Inferencia causal        |
 
 ### Unidad 4 — Datos, IA y comunicación (semanas 13–16)
 
 | Sem. | Tema                                                                                                    | Caso ancla (blog)                                       | Recurso en el sitio                          |
 | :--: | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------- |
-| 13 · 03 feb 2027 | Laboratorio de datos: consultas SQL y análisis en R/Python; calcular sens/esp/LR desde una base         | Base anonimizada de Chimborazo                          | Laboratorio de Código                        |
-| 14 · 10 feb 2027 | Modelos de predicción e IA clínica: discriminación, calibración, validación externa, explicabilidad    | HM6030 Infarto agudo de miocardio                       | Razonamiento clínico: IA explicable          |
-| 15 · 17 feb 2027 | Comunicar el riesgo: frecuencias naturales, visualización y decisión compartida                         | HM6029 Hipertensión arterial esencial                   | Comunicación y visualización                 |
-| 16 · 24 feb 2027 | **Evaluación final / proyecto integrador** (ver §7)                                                     | Caso elegido por el grupo                               | Todos                                        |
+| 13 · 17 feb 2027 | Laboratorio de datos: consultas SQL y análisis en R/Python; calcular sens/esp/LR desde una base         | Base anonimizada de Chimborazo                          | Laboratorio de Código                        |
+| 14 · 24 feb 2027 | Modelos de predicción e IA clínica: discriminación, calibración, validación externa, explicabilidad    | HM6030 Infarto agudo de miocardio                       | Razonamiento clínico: IA explicable          |
+| 15 · 03 mar 2027 | Comunicar el riesgo: frecuencias naturales, visualización y decisión compartida                         | HM6029 Hipertensión arterial esencial                   | Comunicación y visualización                 |
+| 16 · 10 mar 2027 | **Evaluación final / proyecto integrador** (ver §7)                                                     | Caso elegido por el grupo                               | Todos                                        |
 
 > La lista de casos ancla es una propuesta. Cualquiera de las 48 condiciones puede
 > sustituirla; conviene preferir las que ya tienen caso socrático publicado (`casos/`) y
@@ -165,7 +165,7 @@ Se **mantienen las ponderaciones** de la cátedra y de los sílabos de Neurolog�
 
 ## 9. Pendientes para el docente
 
-1. Confirmar si el 23 y 30 de diciembre (sesiones 7 y 8, esta última con la Evaluación 1) y el carnaval de 2027 son clase o receso; si hay receso, el curso se corre o se acorta.
+1. Confirmar que la Evaluación 1 (sesión 8, 13 ene 2027) y el cierre (sesión 16, 10 mar 2027) caen en semana lectiva.
 2. Confirmar la lista de casos ancla y si algún caso socrático nuevo debe redactarse (skill `caso-socratico`; requiere revisor humano nominado).
 3. Decidir si el sílabo se publica en el sitio o se archiva como documento docente (ver `MIGRATION.md`: el sílabo de Gastroenterología se marcó «Archivar»).
 4. Revisar las referencias de las sesiones 10–15, que son propuestas y no han sido verificadas contra PubMed en este borrador.
