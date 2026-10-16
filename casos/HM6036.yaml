@@ -1,0 +1,196 @@
+# Caso socrático para Neumonía infantil (HM:6036).
+# El eje docente es leer la incertidumbre de un cociente: aquí conviven un intervalo de confianza
+# estrecho (hipoxemia, taquipnea), un «rango» entre dos estudios que NO es un intervalo (dolor
+# torácico, fiebre) y un hallazgo medido sin efecto (crepitantes). Ningún cociente supera el
+# de la hipoxemia, y todos se leen contra la radiografía, no contra un diagnóstico clínico.
+# Sirve a la sesión 9 del curso (intervalo de confianza de un cociente).
+condicion_id: HM:6036
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Elegir la probabilidad basal de neumonía infantil según el entorno asistencial y explicar por qué sus dos valores no son un intervalo de incertidumbre.
+  - Leer el intervalo de confianza de un cociente y distinguirlo de un rango entre dos estudios.
+  - Comparar el peso de la hipoxemia, el aumento del trabajo respiratorio, la taquipnea, la fiebre y el dolor torácico, y juzgar si sus intervalos se solapan.
+  - Explicar por qué un hallazgo medido «sin efecto discriminativo», como los crepitantes, no es lo mismo que un hallazgo no medido.
+  - Reconocer que los cocientes se miden contra la radiografía y que sus umbrales pediátricos no son los del adulto.
+vineta:
+  titulo: Tos, fiebre y un niño que respira con esfuerzo
+  texto: >-
+    Niño de 5 años, llevado a urgencias por su madre por tos de cuatro días y fiebre
+    desde hace tres. Hoy lo nota decaído, respira rápido y se queja de que le duele el
+    pecho al toser. Come poco pero toma líquidos. Está vacunado según calendario. No ha
+    tenido episodios previos de sibilancias ni atopia familiar conocida. No hay contactos
+    con tuberculosis. En su guardería hay varios niños con tos.
+  datos:
+    - etiqueta: Peso
+      valor: 18 kg
+    - etiqueta: Temperatura
+      valor: 38.5 °C
+    - etiqueta: Frecuencia cardíaca
+      valor: 128 lpm
+    - etiqueta: Presión arterial
+      valor: 98/58 mmHg
+etapas:
+  - titulo: Antes de examinarlo
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          ¿Qué cuadros respiratorios explican tos, fiebre y respiración rápida en un
+          preescolar y cuál es tu probabilidad de partida de neumonía?
+        clave: >-
+          Infección viral de vías altas, bronquiolitis (menos probable a esta edad),
+          crisis asmática, neumonía viral o bacteriana y, en menor medida, aspiración de
+          cuerpo extraño. La probabilidad de partida no es una corazonada: el artículo
+          registra dos valores de probabilidad basal según el entorno asistencial. Léelos
+          con cuidado: no son un intervalo de incertidumbre sobre un mismo valor, sino dos
+          poblaciones distintas. Debes elegir el que corresponde al lugar donde atiendes y
+          justificar por qué.
+      - pregunta: >-
+          La fuente define la neumonía por la radiografía de tórax. ¿Qué significa eso para
+          lo que aprenderás hoy?
+        clave: >-
+          Que todos los cocientes de este caso se leen contra un «infiltrado en la
+          radiografía», no contra un diagnóstico clínico ni microbiológico. Un niño con
+          infiltrado puede tener una neumonía viral, y uno con radiografía normal puede
+          tener neumonía temprana. Es el patrón de referencia de la fuente, con sus
+          imperfecciones, y conviene recordarlo cada vez que se interpreta un cociente.
+  - titulo: Lo que cuentan el niño y su madre
+    fase: exploracion
+    hallazgos: [HM:0101, HM:0206]
+    informacion: >-
+      El niño tiene {{hallazgo HM:0101}} medida en el servicio y se queja de
+      {{hallazgo HM:0206}} al toser, localizado en el costado derecho.
+    preguntas:
+      - pregunta: >-
+          La fiebre es el dato más constante. ¿Cuánto aporta y qué significa que el
+          cociente se dé como rango y no con un intervalo?
+        clave: >-
+          La {{hallazgo HM:0101}} tiene un {{lr+ HM:0101}}: un cociente que apenas mueve la
+          probabilidad, porque es muy frecuente en cualquier infección respiratoria. Fíjate
+          en cómo se expresa: es un rango entre estudios, no un intervalo de confianza.
+          Describe la dispersión entre dos mediciones, no la precisión de una estimación
+          combinada. Además, la advertencia de la ficha dice que el corte de temperatura
+          de la fuente no es el corte canónico del concepto, por lo que aplicar el cociente
+          con otro corte no sería válido.
+      - pregunta: >-
+          El dolor torácico casi nunca está, pero este niño lo tiene. ¿Cuánto cambia eso?
+          ¿Qué pasa si no lo tuviera?
+        clave: >-
+          El {{hallazgo HM:0206}} es el único síntoma que la fuente asocia a la neumonía, por
+          su especificidad: {{lr+ HM:0206}}. Es un rango muy amplio, procedente de dos
+          estudios que incluían adolescentes. Presente, apoya con fuerza incierta; ausente,
+          no dice nada, porque la base no registra un cociente negativo y la mayoría de los
+          niños con neumonía no lo refieren. Además hay que preguntarse si el rango, obtenido
+          en parte con adolescentes, se aplica a un niño de cinco años que describe el
+          dolor con dificultad.
+  - titulo: La exploración del tórax
+    fase: exploracion
+    hallazgos: [HM:0106, HM:0406]
+    informacion: >-
+      Al contar la frecuencia respiratoria durante un minuto con el niño tranquilo se
+      obtienen 44 por minuto: {{hallazgo HM:0106}}. A la auscultación se oyen {{hallazgo HM:0406}} en la base
+      derecha.
+    preguntas:
+      - pregunta: >-
+          Los crepitantes en la base derecha le parecen a todo médico la señal de neumonía.
+          ¿Cuánto pesan según la base?
+        clave: >-
+          Nada: la base los clasifica como hallazgo {{estado HM:0406}}. No es una laguna: la
+          fuente afirma que los hallazgos auscultatorios no se asociaron al diagnóstico,
+          pero no publica el cociente. Es un resultado medido de ausencia de efecto y por
+          eso se distingue de «LR no medido». Un hallazgo que impresiona al examinador y no
+          discrimina es una de las lecciones más incómodas de la semiología.
+      - pregunta: >-
+          La taquipnea figura en todos los algoritmos de cribado. ¿Qué dice la evidencia de
+          este artículo sobre su peso?
+        clave: >-
+          La {{hallazgo HM:0106}} tiene {{lr+ HM:0106}}, con {{sens HM:0106}} y
+          {{esp HM:0106}}: sensible pero poco específica. La conclusión de la fuente es
+          explícita en que pesa menos que la hipoxemia y que el trabajo respiratorio. Su
+          utilidad en un cribado es no dejar pasar casos, no confirmar. Y el corte
+          pediátrico del cociente no es el del adulto: aplicar uno a la edad equivocada
+          invalida el número.
+  - titulo: Oximetría y esfuerzo respiratorio
+    fase: discriminacion
+    hallazgos: [HM:0110, HM:3145]
+    informacion: >-
+      La oximetría marca una saturación de 94 %, es decir, {{hallazgo HM:0110}} leve. El niño tiene además
+      {{hallazgo HM:3145}}: quejido, aleteo nasal y tiraje subcostal.
+    preguntas:
+      - pregunta: >-
+          Interpreta el cociente positivo de la hipoxemia con su intervalo. ¿Es un
+          cociente grande? ¿Qué te dice la amplitud del intervalo?
+        clave: >-
+          La {{hallazgo HM:0110}} tiene {{lr+ HM:0110}}. Es el cociente puntual más alto de la
+          serie (el rango del dolor torácico llega más alto, pero es la dispersión entre dos
+          estudios) y aun así es modesto: ningún hallazgo aislado distingue la neumonía de otras
+          causas de enfermedad respiratoria. El intervalo es relativamente estrecho, de
+          modo que el valor es una estimación bastante precisa de un efecto moderado. Precisión
+          y magnitud son dos cosas distintas: un intervalo estrecho no hace grande al
+          cociente.
+      - pregunta: >-
+          Si el niño hubiera tenido buena saturación, ¿qué habrías concluido?
+        clave: >-
+          La base sí registra el cociente negativo, {{lr- HM:0110}}: reduce la probabilidad
+          de forma apreciable pero no la lleva a un nivel que permita descartar, sobre todo
+          si el pretest es el más alto. Fíjate en el umbral: es un corte pediátrico de
+          hipoxemia moderada, más laxo que el canónico, y aplicar otro corte ya no es leer
+          el mismo dato.
+      - pregunta: >-
+          Compara el aumento del trabajo respiratorio con la taquipnea y con
+          la hipoxemia. ¿Puedes afirmar que uno pesa más que otro mirando solo los
+          intervalos?
+        clave: >-
+          El aumento del trabajo respiratorio tiene {{lr+ HM:3145}}. Hay que mirarlos juntos. Con los valores actuales de la base, el intervalo de la
+          hipoxemia y el de la taquipnea no se solapan, así que la diferencia es creíble;
+          el del trabajo respiratorio se solapa con el de la hipoxemia, y con ese solo dato no
+          se puede decir cuál pesa más. La fuente los agrupa como los dos más importantes. Es un
+          buen ejercicio para entender que el solapamiento de intervalos es una forma de
+          leer incertidumbre, aunque no sustituye a una comparación formal.
+  - titulo: Qué hacer
+    fase: decision
+    preguntas:
+      - pregunta: >-
+          Con lo reunido, ¿qué probabilidad de neumonía asignas a este niño y qué haces?
+          Justifica con la probabilidad basal que elegiste.
+        clave: >-
+          Con probabilidad basal de partida moderada, hipoxemia leve y trabajo respiratorio
+          aumentado, la probabilidad queda en una zona en la que se justifica la radiografía
+          y la observación, y el manejo depende de la gravedad (necesidad de oxígeno, edad,
+          capacidad de ingesta, entorno), criterios que esta base no documenta. La decisión
+          de tratar con antibiótico se apoya en la clínica y en la radiografía según la guía
+          local. Lo que importa aquí es el razonamiento: declarar el punto de partida,
+          aplicar los cocientes con sus umbrales, reconocer que ninguno es definitivo.
+      - pregunta: >-
+          ¿Qué no puede responder la evidencia de este artículo?
+        clave: >-
+          No distingue neumonía viral de bacteriana, porque se mide contra la radiografía.
+          No documenta el cociente negativo de la fiebre, de la taquipnea ni del trabajo
+          respiratorio. El rango del dolor torácico viene de dos estudios con adolescentes.
+          El cociente de los crepitantes no está publicado. Y no hay información sobre el
+          tratamiento ni sobre los criterios de ingreso.
+cierre:
+  sintesis: >-
+    En la neumonía infantil ningún hallazgo aislado discrimina bien: la hipoxemia y el aumento
+    del trabajo respiratorio pesan más que la taquipnea y que la auscultación, y los
+    crepitantes, que tanto pesan en la intuición del examinador, no tienen efecto
+    discriminativo. Saber leer si un número viene con intervalo o con rango, y contra qué umbral
+    y qué patrón de referencia se midió, es parte del uso correcto del cociente.
+  necesidades_aprendizaje:
+    - >-
+      Cociente negativo de la fiebre, la taquipnea y el aumento del trabajo respiratorio, no
+      documentado en la base.
+    - >-
+      Cociente publicado de los hallazgos auscultatorios, pendiente del texto completo.
+    - >-
+      Distinción entre neumonía viral y bacteriana y papel de los marcadores inflamatorios,
+      fuera del alcance de esta condición.
+    - >-
+      Criterios de gravedad, de ingreso y elección del antibiótico, no documentados en la base.
+omitidos: []

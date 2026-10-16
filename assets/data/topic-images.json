@@ -88,15 +88,15 @@
     "verified": "2026-09-25"
   },
   "HM6009": {
-    "title": "File:Pharyngitis, COVID-19.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pharyngitis%2C_COVID-19.jpg",
-    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pharyngitis%2C_COVID-19.jpg/1280px-Pharyngitis%2C_COVID-19.jpg",
-    "license": "CC0",
-    "license_code": "cc0",
-    "author": "FreeMediaKid!",
-    "alt": "Orofaringe con eritema faríngeo en un paciente con faringitis",
-    "source": "https://commons.wikimedia.org/wiki/File:Pharyngitis,_COVID-19.jpg",
-    "verified": "2026-09-21"
+    "title": "File:Streptococcal pharyngitis 1.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Streptococcal_pharyngitis_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Streptococcal_pharyngitis_1.jpg/1280px-Streptococcal_pharyngitis_1.jpg",
+    "license": "Public domain",
+    "license_code": "pd",
+    "author": "en:User:RescueFF",
+    "alt": "Orofaringe con amígdalas enrojecidas y exudado blanquecino en una faringitis estreptocócica",
+    "source": "https://commons.wikimedia.org/wiki/File:Streptococcal_pharyngitis_1.jpg",
+    "verified": "2026-10-16"
   },
   "HM6010": {
     "title": "File:Ventricular Tachycardia.svg",
@@ -314,20 +314,20 @@
     "license": "Public domain",
     "license_code": "pd",
     "author": "ML5 at English Wikipedia",
-    "alt": "Esfigmomanómetro aneroide con brazalete para la medición clínica estandarizada de la presión arterial sistémica",
+    "alt": "Esfigmomanómetro con manguito para medir la presión arterial",
     "source": "https://commons.wikimedia.org/wiki/File:Sphygmomanometer%26Cuff.JPG",
-    "verified": "2026-09-25"
+    "verified": "2026-10-16"
   },
   "HM6030": {
-    "title": "File:Gross pathology of old myocardial infarction.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gross_pathology_of_old_myocardial_infarction.jpg",
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gross_pathology_of_old_myocardial_infarction.jpg",
-    "license": "CC0",
-    "license_code": "cc0",
-    "author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Consent from the patient or patient's relatives is regarded as redundant, because of absence of identifiable features ( List of HIPAA identifiers ) in the media and case information ( See also HIPAA case reports guidance ).",
-    "alt": "Corte transversal macroscópico del miocardio ventricular que muestra área de infarto transmural y fibrosis ventricular",
-    "source": "https://commons.wikimedia.org/wiki/File:Gross_pathology_of_old_myocardial_infarction.jpg",
-    "verified": "2026-09-25"
+    "title": "File:12 lead generated inferior MI.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/12_lead_generated_inferior_MI.JPG",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/59/12_lead_generated_inferior_MI.JPG",
+    "license": "Public domain",
+    "license_code": "pd",
+    "author": "Glenlarson",
+    "alt": "Electrocardiograma de 12 derivaciones con infarto inferior: elevación del ST en II, III y aVF con cambios recíprocos",
+    "source": "https://commons.wikimedia.org/wiki/File:12_lead_generated_inferior_MI.JPG",
+    "verified": "2026-10-16"
   },
   "HM6031": {
     "title": "File:Lifetime Prevalence of Anxiety Disorders (ECA Study).jpg",
@@ -363,37 +363,37 @@
     "verified": "2026-09-25"
   },
   "HM6034": {
-    "title": "File:Mammogram showing breast cancer.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mammogram_showing_breast_cancer.jpg",
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mammogram_showing_breast_cancer.jpg",
+    "title": "File:Breast cancer.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Breast_cancer.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Breast_cancer.JPG/1280px-Breast_cancer.JPG",
+    "license": "Public domain",
+    "license_code": "pd",
+    "author": "John Hayman",
+    "alt": "Tejido mamario resecado con un carcinoma estrellado de 2 cm, palpable como nódulo duro",
+    "source": "https://commons.wikimedia.org/wiki/File:Breast_cancer.JPG",
+    "verified": "2026-10-16"
+  },
+  "HM6035": {
+    "title": "File:Ultrasonography of thrombosis of the fibular veins, axial plane, annotated.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Ultrasonography_of_thrombosis_of_the_fibular_veins%2C_axial_plane%2C_annotated.svg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Ultrasonography_of_thrombosis_of_the_fibular_veins%2C_axial_plane%2C_annotated.svg/1280px-Ultrasonography_of_thrombosis_of_the_fibular_veins%2C_axial_plane%2C_annotated.svg.png",
+    "license": "CC0",
+    "license_code": "cc0",
+    "author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Written informed consent was obtained from the individual, including online publication.",
+    "alt": "Ecografía de la pantorrilla con trombosis de las venas peroneas, corte axial anotado",
+    "source": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_thrombosis_of_the_fibular_veins,_axial_plane,_annotated.svg",
+    "verified": "2026-10-16"
+  },
+  "HM6036": {
+    "title": "File:Pneumonia x-ray.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pneumonia_x-ray.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pneumonia_x-ray.jpg",
     "license": "Public domain",
     "license_code": "pd",
     "author": "Autor no declarado",
-    "alt": "Mamografía diagnóstica que muestra una lesión nodular densa espiculada con microcalcificaciones en parénquima mamario",
-    "source": "https://commons.wikimedia.org/wiki/File:Mammogram_showing_breast_cancer.jpg",
-    "verified": "2026-09-25"
-  },
-  "HM6035": {
-    "title": "File:Ultrasonography of deep vein thrombosis of the femoral vein.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg",
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg",
-    "license": "CC0",
-    "license_code": "cc0",
-    "author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Written informed consent was obtained from the individual, including online publication.",
-    "alt": "Ecografía Doppler de extremidad inferior que demuestra material ecogénico intraluminal y falta de colapso en vena femoral",
-    "source": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg",
-    "verified": "2026-09-25"
-  },
-  "HM6036": {
-    "title": "File:X-ray of lobar pneumonia.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/X-ray_of_lobar_pneumonia.jpg",
-    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/X-ray_of_lobar_pneumonia.jpg/1280px-X-ray_of_lobar_pneumonia.jpg",
-    "license": "CC0",
-    "license_code": "cc0",
-    "author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Written informed consent was obtained from the individual, including online publication.",
-    "alt": "Radiografía posteroanterior de tórax que evidencia consolidación alveolar lobar con broncograma aéreo",
-    "source": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
-    "verified": "2026-09-25"
+    "alt": "Radiografías de tórax comparadas: normal y con neumonía (infiltrado), el patrón de referencia del artículo",
+    "source": "https://commons.wikimedia.org/wiki/File:Pneumonia_x-ray.jpg",
+    "verified": "2026-10-16"
   },
   "HM6037": {
     "title": "File:Chest radiograph of a lung with Kerley B lines - annotated.jpg",
@@ -407,15 +407,15 @@
     "verified": "2026-09-25"
   },
   "HM6038": {
-    "title": "File:Trauma subdural.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Trauma_subdural.jpg",
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Trauma_subdural.jpg",
+    "title": "File:Trauma subdural arrow.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Trauma_subdural_arrow.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/38/Trauma_subdural_arrow.jpg",
     "license": "Public domain",
     "license_code": "pd",
     "author": "Glitzy queen00 at English Wikipedia",
-    "alt": "Tomografía computarizada craneal que demuestra colección hiperdensa extraaxial compatible con hematoma subdural postraumático",
-    "source": "https://commons.wikimedia.org/wiki/File:Trauma_subdural.jpg",
-    "verified": "2026-09-25"
+    "alt": "Tomografía de cráneo con hematoma subdural traumático señalado con una flecha",
+    "source": "https://commons.wikimedia.org/wiki/File:Trauma_subdural_arrow.jpg",
+    "verified": "2026-10-16"
   },
   "HM6039": {
     "title": "File:Ptsd-brain.png",
@@ -451,15 +451,15 @@
     "verified": "2026-09-25"
   },
   "HM6042": {
-    "title": "File:Gallstones.JPG",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Gallstones.JPG",
-    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Gallstones.JPG",
-    "license": "Public domain",
-    "license_code": "pd",
-    "author": "Alex Khimich ( talk )",
-    "alt": "Pieza macroscópica de vesícula biliar abierta con cálculos biliares causantes de colecistitis litiásica aguda",
-    "source": "https://commons.wikimedia.org/wiki/File:Gallstones.JPG",
-    "verified": "2026-09-25"
+    "title": "File:Ultrasonography of cholecystitis.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Ultrasonography_of_cholecystitis.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/76/Ultrasonography_of_cholecystitis.jpg",
+    "license": "CC0",
+    "license_code": "cc0",
+    "author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D.",
+    "alt": "Ecografía abdominal con colecistitis aguda: cálculos, pared vesicular engrosada y líquido perivesicular",
+    "source": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_cholecystitis.jpg",
+    "verified": "2026-10-16"
   },
   "HM6043": {
     "title": "File:Appendizitis5ct.jpg",
@@ -468,9 +468,9 @@
     "license": "Public domain",
     "license_code": "pd",
     "author": "Benutzer:Rho",
-    "alt": "Corte tomográfico axial de abdomen que muestra apéndice cecal engrosado con alteración de la grasa periapendicular",
+    "alt": "Tomografía axial de pelvis con apéndice engrosado e inflamado (señalado) en un caso de apendicitis aguda",
     "source": "https://commons.wikimedia.org/wiki/File:Appendizitis5ct.jpg",
-    "verified": "2026-09-25"
+    "verified": "2026-10-16"
   },
   "HM6044": {
     "title": "File:Pulmonary-embolism.png",
@@ -479,9 +479,9 @@
     "license": "CC0",
     "license_code": "cc0",
     "author": "Baedr-9439",
-    "alt": "Ilustración médica esquemática de la circulación pulmonar con trombo ocluyendo una rama de la arteria pulmonar",
+    "alt": "Esquema de tromboembolia pulmonar: émbolo en una rama de la arteria pulmonar con sobrecarga de cavidades derechas",
     "source": "https://commons.wikimedia.org/wiki/File:Pulmonary-embolism.png",
-    "verified": "2026-09-25"
+    "verified": "2026-10-16"
   },
   "HM6045": {
     "title": "File:Pericarditis.jpg",

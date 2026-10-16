@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: 3b1470159f0d1771f14a29f382ff5907e640f9cc
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6034-cancer-de-mama.yaml
   archivos:
@@ -23,7 +23,7 @@ fuente:
     conceptos/HM0600-signo-de-exploracion.yaml: 86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf
     conceptos/HM3142-masa-mamaria-palpable-sospechosa.yaml: f11f27c1edc99011448c3818fbae8799dad25cbd5df600b47f5f6136f60218c9
     conceptos/HM3143-examen-clinico-mamario-reglado-normal.yaml: 5a107bc0bf6672b131ceac761664ae19eca3bbb043d0291ba6fb0a72992dd450
-    condiciones/HM6034-cancer-de-mama.yaml: eab87d90399daf8948d669883195f2284c932252bf03bab648bc5c922eaead2f
+    condiciones/HM6034-cancer-de-mama.yaml: c58590c5a2b68d340649095c7af6f8f6d6c7d57dcee5848b6b22dd2390fd36d2
     referencias/pmid-10517431.yaml: 8ebe10c6f72dd592a497d527f6bc8a3d8cbdc4cd8b626cf974280489fe49e662
 grounding:
   condicion_id: HM:6034
@@ -45,7 +45,7 @@ grounding:
 triada:
   significante: Masa mamaria palpable o hallazgo sospechoso en la exploración
   significado: El mecanismo fisiopatológico no está documentado en esta fuente.
-  decision: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)
+  decision: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad
 evidencia:
 - concepto: HM:3142
   rol: prueba_especifica
@@ -58,7 +58,7 @@ evidencia:
     - 5.8
     - 19.2
     ref: pmid:10517431
-  decision: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)
+  decision: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad
 - concepto: HM:3143
   rol: prueba_sensible
   estado_lr: medido
@@ -68,7 +68,7 @@ evidencia:
     - 0.4
     - 0.56
     ref: pmid:10517431
-  decision: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado
+  decision: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado
 autoevaluacion:
 - id: q1
   pregunta: En Cáncer de mama, ¿cuál es el resultado documentado del LR positivo para «Masa mamaria palpable o hallazgo sospechoso en la exploración»?
@@ -85,18 +85,18 @@ autoevaluacion:
     dato: *id001
     poblacion: null
     motivo: null
-    decision: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)
+    decision: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad
     advertencia: null
   opciones:
   - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'Sí hay una medición documentada: LR positivo: 10.6. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6).'
+    feedback: 'Sí hay una medición documentada: LR positivo: 10.6. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad.'
   - texto: 'LR positivo: 10.6.'
     correcta: true
-    feedback: 'LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6).'
+    feedback: 'LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad.'
   - texto: El valor 10.6 corresponde al LR negativo y no al LR positivo.
     correcta: false
-    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6).'
+    feedback: 'Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad.'
 - id: q2
   pregunta: En Cáncer de mama, ¿cuál es el resultado documentado del LR negativo para «Examen clínico de mama reglado normal»?
   concepto_id: HM:3143
@@ -112,18 +112,18 @@ autoevaluacion:
     dato: *id002
     poblacion: null
     motivo: null
-    decision: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado
+    decision: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado
     advertencia: null
   opciones:
   - texto: 'LR negativo: 0.47.'
     correcta: true
-    feedback: 'LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado.'
+    feedback: 'LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado.'
   - texto: El valor 0.47 corresponde al LR positivo y no al LR negativo.
     correcta: false
-    feedback: 'Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado.'
+    feedback: 'Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado.'
   - texto: La fuente no dispone de un cociente medido para este hallazgo.
     correcta: false
-    feedback: 'Sí hay una medición documentada: LR negativo: 0.47. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado.'
+    feedback: 'Sí hay una medición documentada: LR negativo: 0.47. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado.'
 ---
 
 # Cáncer de mama
@@ -158,7 +158,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **LR positivo:** Valor: 10.6; IC del 95 %: 5.8 / 19.2; Referencia: pmid:10517431
 
-**Decisión:** el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)
+**Decisión:** el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad
 
 ### Examen clínico de mama reglado normal (HM:3143)
 
@@ -168,7 +168,7 @@ Snomed: No documentado.; Cie10: No documentado.
 
 **LR negativo:** Valor: 0.47; IC del 95 %: 0.4 / 0.56; Referencia: pmid:10517431
 
-**Decisión:** una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado
+**Decisión:** una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado
 
 ## Conclusión de la fuente
 

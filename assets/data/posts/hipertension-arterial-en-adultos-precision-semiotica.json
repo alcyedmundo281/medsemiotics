@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-18",
   "fecha_publicacion": "2026-09-18",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-10-16",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -56,7 +56,7 @@
         ],
         "ref": "pmid:34313682"
       },
-      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+      "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca"
     },
     {
       "concepto": "HM:3128",
@@ -78,12 +78,12 @@
         ],
         "ref": "pmid:34313682"
       },
-      "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida"
+      "decision": "una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca"
     }
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml",
     "archivos": {
@@ -91,7 +91,7 @@
       "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
       "conceptos/HM3127-presion-arterial-en-consulta-mayor-o-igual-a-140-90.yaml": "f66c2c28d0371db93331bb99132c23a4faff7857c109318c5b7ab1fa5ec6b5e1",
       "conceptos/HM3128-automonitorizacion-domiciliaria-ampa-mayor-o-igual-a-135-85.yaml": "7872dd1ef931f340ae6ad78b211211312c1aa72c4758b7e65df7047129bfbf1f",
-      "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml": "13859cd6ce6e7d118f245376b993efb13ca4779a500051b4809c448a0ab27a6b",
+      "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml": "0ad01181390af69ad54b2849d8252d777552a6fb5363f55023890e0400c7d7cb",
       "referencias/pmid-34313682.yaml": "a7ab07c045ece7b7760dd6b8df4d794d8c7d4e2d4747d57f9c58da5c11d89920"
     }
   },
@@ -105,13 +105,13 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Sphygmomanometer%26Cuff.JPG",
   "image_license": "Public domain",
   "image_title": "Sphygmomanometer&Cuff.JPG",
-  "image_alt": "Esfigmomanómetro aneroide con brazalete para la medición clínica estandarizada de la presión arterial sistémica",
+  "image_alt": "Esfigmomanómetro con manguito para medir la presión arterial",
   "image_author": "ML5 at English Wikipedia",
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
     "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-    "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+    "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca"
   },
   "autoevaluacion": [
     {
@@ -137,24 +137,24 @@
         },
         "poblacion": null,
         "motivo": null,
-        "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca",
+        "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca",
         "advertencia": null
       },
       "opciones": [
         {
           "texto": "LR positivo: 4.2.",
           "correcta": true,
-          "feedback": "LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+          "feedback": "LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca."
         },
         {
           "texto": "El valor 4.2 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca."
         },
         {
           "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Sí hay una medición documentada: LR positivo: 4.2. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+          "feedback": "Sí hay una medición documentada: LR positivo: 4.2. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca."
         }
       ]
     },
@@ -181,28 +181,219 @@
         },
         "poblacion": null,
         "motivo": null,
-        "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida",
+        "decision": "una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca",
         "advertencia": null
       },
       "opciones": [
         {
           "texto": "El valor 3.1 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca."
         },
         {
           "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+          "feedback": "Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca."
         },
         {
           "texto": "LR positivo: 3.1.",
           "correcta": true,
-          "feedback": "LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+          "feedback": "LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca."
         }
       ]
     }
   ],
-  "caso": null,
-  "body": "# Hipertensión arterial en adultos\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nHypertension in adults\n\n## Sinónimos\n\nHTA esencial\n\nhipertensión arterial primaria en adultos\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Presión arterial en consulta mayor o igual a 140/90 mmHg (HM:3127)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.2; IC del 95 %: 2.9 / 6.1; Referencia: pmid:34313682\n\n**LR negativo:** Valor: 0.56; IC del 95 %: 0.46 / 0.68; Referencia: pmid:34313682\n\n**Decisión:** una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca\n\n### Automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg (HM:3128)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 2.3 / 4.2; Referencia: pmid:34313682\n\n**LR negativo:** Valor: 0.33; IC del 95 %: 0.24 / 0.46; Referencia: pmid:34313682\n\n**Decisión:** la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida\n\n## Conclusión de la fuente\n\nLa medición de la presión arterial en consulta es una prueba de cribado útil (LR+ 4.2), pero la automonitorización domiciliaria (AMPA) o el MAPA son necesarios para confirmar el diagnóstico definitivo y descartar la hipertensión de bata blanca.\n\n## Referencias y procedencia\n\n**pmid:34313682:** Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review. JAMA, 2021. DOI: 10.1001/jama.2021.4533.\n\nFuente clínica: medsemiotics-db, condición HM:6029."
+  "caso": {
+    "condicion_id": "HM:6029",
+    "slug": "hipertension-arterial-en-adultos-precision-semiotica",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-10-16",
+      "version": 1,
+      "ultima_revision": "2026-10-16",
+      "revisiones": []
+    },
+    "fuente_revision": "3b1470159f0d1771f14a29f382ff5907e640f9cc",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Explicar a un paciente, con frecuencias naturales y sin jerga, qué significa una presión elevada en la consulta y por qué hace falta confirmarla fuera de ella.",
+      "Interpretar el cociente positivo y el negativo de la presión en consulta y de la automonitorización domiciliaria.",
+      "Reconocer que dos mediciones de presión arterial no son pruebas independientes y que sus cocientes no se multiplican.",
+      "Detectar cuándo una frase descriptiva sobre un cociente lo exagera, comparándola con la cifra registrada.",
+      "Compartir con el paciente la decisión de confirmar el diagnóstico y cómo hacerlo."
+    ],
+    "vineta": {
+      "titulo": "«Doctor, me subió la presión»",
+      "texto": "Hombre de 46 años, empleado de oficina, que acude a un control de salud laboral. No tiene antecedentes de hipertensión. Su padre tuvo un infarto a los 64 años. Se declara «nervioso» en los consultorios médicos. Hace poco subió de peso y fuma de forma ocasional. Pregunta, preocupado, si «ya tiene la presión alta» y si tendrá que tomar pastillas toda la vida.",
+      "datos": [
+        {
+          "etiqueta": "Índice de masa corporal",
+          "valor": "29 kg/m²"
+        },
+        {
+          "etiqueta": "Frecuencia cardíaca",
+          "valor": "82 lpm"
+        },
+        {
+          "etiqueta": "Circunferencia abdominal",
+          "valor": "98 cm"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "Antes de medir",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "El paciente pregunta si «ya tiene la presión alta». Antes de medírsela, ¿qué probabilidad le asignarías de tener hipertensión sostenida y cómo le explicarías qué es una probabilidad?",
+            "clave": "La base no registra una probabilidad basal para esta condición, de modo que la probabilidad previa es un juicio que debes declarar, apoyado en la edad, el peso y el antecedente familiar. Para explicarla a un paciente, evita los porcentajes abstractos y usa frecuencias naturales: «de cada 100 hombres como usted, unos X tienen la presión alta de forma mantenida». Es más fácil de entender y de recordar que un porcentaje o una razón."
+          },
+          {
+            "pregunta": "¿Qué cuidados debe tener la medición en consulta para que su resultado sea interpretable?",
+            "clave": "Reposo previo de algunos minutos, sentado, con el brazo a la altura del corazón, manguito del tamaño adecuado, sin hablar, y con más de una medición. Una medición mal hecha invalida el cociente que se le aplique después: los cocientes se midieron con una técnica determinada y solo aplican si se reproduce."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "La presión en la consulta",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "Con la técnica correcta, en dos mediciones separadas, el paciente tiene una presión arterial en consulta mayor o igual a 140/90 mmHg: el promedio es de 152/94 mmHg.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3127",
+            "nombre": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 4.2 (IC 95 %: 2.9–6.1)",
+              "LR− 0.56 (IC 95 %: 0.46–0.68)"
+            ],
+            "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:34313682"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Interpreta el cociente positivo de la presión elevada en consulta. ¿Qué dice y qué no dice sobre este paciente?",
+            "clave": "La presión arterial en consulta mayor o igual a 140/90 mmHg tiene LR+ 4.2 (IC 95 %: 2.9–6.1): aumenta la probabilidad de forma apreciable, pero no al extremo de confirmar el diagnóstico. Por eso la conclusión de la fuente la llama prueba de cribado útil. No dice si la hipertensión es sostenida o una elevación de bata blanca; eso exige medir fuera de la consulta."
+          },
+          {
+            "pregunta": "Un colega comenta que una presión elevada en consulta «quintuplica la probabilidad» de hipertensión. Compáralo con el cociente registrado. ¿Es exacto? ¿Importa?",
+            "clave": "El cociente positivo registrado es LR+ 4.2 (IC 95 %: 2.9–6.1): algo más de cuatro veces, no cinco, y su intervalo incluye valores bastante más bajos. Y ojo con lo que se multiplica: el cociente multiplica las odds (el cociente entre la probabilidad de estar enfermo y la de no estarlo), no la probabilidad. Solo con un pretest muy bajo la probabilidad se multiplica de forma parecida; con uno moderado o alto, mucho menos. Redondear «hacia arriba» exagera el efecto, y confundir odds con probabilidad lo exagera aún más. Importa porque en la comunicación del riesgo la precisión es parte de la honestidad: decirle al paciente que su probabilidad «se multiplica por cinco» lo asusta de más. Es un buen ejercicio de lectura crítica: contrastar siempre una frase de un colega, de un libro o de una ficha con la cifra con la que se sostiene."
+          },
+          {
+            "pregunta": "Si la presión en consulta hubiera sido normal, ¿qué le dirías?",
+            "clave": "Que la probabilidad de hipertensión baja, pero no desaparece: el LR− 0.56 (IC 95 %: 0.46–0.68) es un cociente negativo cercano a 1, lo que significa que una medición normal en consulta tranquiliza poco. Una persona con presión normal en la consulta puede tener hipertensión enmascarada. La conducta es repetir los controles periódicamente según riesgo, no darle el alta definitiva."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "Medición en casa",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Durante siete días el paciente se mide la presión en casa con un equipo validado, dos veces por la mañana y dos por la noche. El promedio es de 128/80 mmHg: no hay automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3128",
+            "nombre": "Automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg",
+            "rol": "Prueba específica",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 3.1 (IC 95 %: 2.3–4.2)",
+              "LR− 0.33 (IC 95 %: 0.24–0.46)"
+            ],
+            "decision": "una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:34313682"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "La medición en casa es normal. ¿Qué le dices ahora? Interpreta el cociente negativo de la automonitorización.",
+            "clave": "La ausencia del hallazgo «automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg» corresponde a un LR− 0.33 (IC 95 %: 0.24–0.46): reduce de forma clara la probabilidad de hipertensión mantenida, más que la presión normal en consulta. Una hipótesis razonable, que la base no documenta, es que la medición domiciliaria es repetida y se hace en el ambiente habitual. Con una presión elevada en consulta y normal en casa, la explicación más probable es la elevación de bata blanca, aunque sin confirmar con monitorización ambulatoria no se puede cerrar el diagnóstico."
+          },
+          {
+            "pregunta": "Tienes dos pruebas, la presión de consulta (positiva) y la de casa (negativa). ¿Multiplicas los cocientes de ambas?",
+            "clave": "No. Las dos miden lo mismo, la presión arterial del paciente, en lugares y momentos distintos; su error está correlacionado y no son pruebas independientes. Además, el resultado de casa contradice al de consulta, y un producto entre un cociente alto y uno bajo da un número intermedio que no representa a ninguna de las dos situaciones. Cuando las pruebas discrepan se resuelve con una tercera de mejor calidad, no con una cuenta."
+          },
+          {
+            "pregunta": "Otro colega dice que el cociente negativo de la automonitorización domiciliaria es «excelente» para descartar la hipertensión. ¿Estás de acuerdo con ese calificativo?",
+            "clave": "Con prudencia. El LR− 0.33 (IC 95 %: 0.24–0.46) reduce la probabilidad de forma útil, pero no la lleva a un valor que permita descartar sin más, sobre todo si el pretest era moderado. «Excelente» es una valoración, no una propiedad de la cifra. Al comunicar con el paciente conviene decir lo que la cifra permite: «es poco probable, pero queremos confirmarlo»."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Hablar con el paciente",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "Redacta, en tres frases y con frecuencias naturales, lo que le dirías a este paciente sobre su situación y el siguiente paso.",
+            "clave": "Un ejemplo de estructura: «Su presión en el consultorio salió alta, pero en casa sale normal; esto le pasa a una parte de las personas que se ponen nerviosas en la consulta. Para estar seguros, de cada 100 personas con un resultado como el suyo, algunas tienen la presión alta de verdad y otras no; por eso le proponemos colocarle un aparato que mide la presión durante 24 horas. Mientras tanto, bajar de peso y moverse más le hace bien en cualquier caso.» Lo importante es que el paciente sepa qué se sabe, qué no, qué sigue, y que se sienta parte de la decisión. Evita decir «usted no tiene nada» y «usted es hipertenso» antes de confirmar."
+          },
+          {
+            "pregunta": "¿Qué opciones le ofreces y qué decisión compartida hay en este punto?",
+            "clave": "Confirmar con monitorización ambulatoria de 24 horas, repetir la automonitorización domiciliaria durante más días, o repetir el control en consulta en unas semanas; y, en paralelo, intervenir en el estilo de vida. Se explica el beneficio de confirmar (evitar tratar una elevación de bata blanca y no perder una hipertensión real) y el costo (tiempo e incomodidad). La preferencia del paciente y los recursos del servicio completan la decisión."
+          },
+          {
+            "pregunta": "¿Qué no puede responder la evidencia de este artículo?",
+            "clave": "No registra la probabilidad basal, el rendimiento de la monitorización ambulatoria (que aquí es el estándar para confirmar), ni el riesgo cardiovascular asociado a cada nivel de presión. No documenta el umbral de tratamiento ni el beneficio de tratar en un paciente como este. Y los cocientes son de una sola revisión sin la población detallada en esta base."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "La presión elevada en consulta es una prueba de cribado de rendimiento moderado y la automonitorización domiciliaria permite discriminar mejor, pero ninguna sustituye a la confirmación ambulatoria. Comunicar el riesgo implica usar frecuencias naturales, no exagerar los cocientes y compartir con el paciente el siguiente paso.",
+      "necesidades_aprendizaje": [
+        "Probabilidad basal de hipertensión sostenida en consulta de control, no documentada en la base.",
+        "Rendimiento de la monitorización ambulatoria de 24 horas, que es el estándar contra el que se leen estos cocientes.",
+        "Riesgo cardiovascular asociado a cada nivel de presión y umbrales de tratamiento.",
+        "Hipertensión enmascarada y de bata blanca: frecuencia y pronóstico."
+      ]
+    },
+    "omitidos": [],
+    "referencias": [
+      {
+        "id": "pmid:34313682",
+        "cita": "Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review. JAMA, 2021. DOI: 10.1001/jama.2021.4533."
+      }
+    ]
+  },
+  "body": "# Hipertensión arterial en adultos\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nHypertension in adults\n\n## Sinónimos\n\nHTA esencial\n\nhipertensión arterial primaria en adultos\n\n## Códigos\n\nSnomed: No documentado.; Cie10: No documentado.\n\n## Hallazgos clínicos\n\n### Presión arterial en consulta mayor o igual a 140/90 mmHg (HM:3127)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 4.2; IC del 95 %: 2.9 / 6.1; Referencia: pmid:34313682\n\n**LR negativo:** Valor: 0.56; IC del 95 %: 0.46 / 0.68; Referencia: pmid:34313682\n\n**Decisión:** una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca\n\n### Automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg (HM:3128)\n\n**Rol:** Prueba específica\n\n**Estado del LR:** LR medido\n\n**LR positivo:** Valor: 3.1; IC del 95 %: 2.3 / 4.2; Referencia: pmid:34313682\n\n**LR negativo:** Valor: 0.33; IC del 95 %: 0.24 / 0.46; Referencia: pmid:34313682\n\n**Decisión:** una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca\n\n## Conclusión de la fuente\n\nLa medición de la presión arterial en consulta es una prueba de cribado útil (LR+ 4.2), pero la automonitorización domiciliaria (AMPA) o el MAPA son necesarios para confirmar el diagnóstico definitivo y descartar la hipertensión de bata blanca.\n\n## Referencias y procedencia\n\n**pmid:34313682:** Does This Adult Patient Have Hypertension?: The Rational Clinical Examination Systematic Review. JAMA, 2021. DOI: 10.1001/jama.2021.4533.\n\nFuente clínica: medsemiotics-db, condición HM:6029."
 }
