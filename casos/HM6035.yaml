@@ -5,10 +5,12 @@
 # natural de umbrales de la sesión 7 y comparte con HM:6044 el mismo hallazgo, medido en otra
 # población.
 condicion_id: HM:6035
-estado: borrador
+estado: publicado
 autoria:
   autor: Dr. Alcy Torres
-  revisor: null
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
 nivel: Pregrado
 duracion_min: 45
 objetivos:
