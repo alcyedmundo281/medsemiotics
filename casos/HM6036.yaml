@@ -5,10 +5,12 @@
 # de la hipoxemia, y todos se leen contra la radiografía, no contra un diagnóstico clínico.
 # Sirve a la sesión 9 del curso (intervalo de confianza de un cociente).
 condicion_id: HM:6036
-estado: borrador
+estado: publicado
 autoria:
   autor: Dr. Alcy Torres
-  revisor: null
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
 nivel: Pregrado
 duracion_min: 45
 objetivos:
