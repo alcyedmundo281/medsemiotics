@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from datetime import date
 from typing import TYPE_CHECKING
@@ -33,8 +34,13 @@ def _articulos(raiz: Path) -> set[str]:
 
 def comprobar(raiz: Path, *, estricto: bool, online: bool) -> list[str]:
     datos = registro.leer(raiz / "assets" / "data" / "topic-images.json")
+    modulos = registro.leer(raiz / "assets" / "data" / registro.MODULOS)
     articulos = _articulos(raiz)
     errores = [e for clave, entrada in datos.items() for e in registro.problemas(clave, entrada)]
+    for ruta, entrada in modulos.items():
+        errores.extend(registro.problemas(ruta, entrada, modulo=True))
+        if not (raiz / ruta).is_file():
+            errores.append(f"{ruta}: no existe la página del módulo.")
     errores += [
         f"{clave}: imagen de una condición sin artículo."
         for clave in sorted(set(datos) - articulos)
@@ -50,7 +56,7 @@ def comprobar(raiz: Path, *, estricto: bool, online: bool) -> list[str]:
         for clave in sorted(exigidos - set(datos))
     ]
     if online:
-        for clave, entrada in sorted(datos.items()):
+        for clave, entrada in sorted({**datos, **modulos}.items()):
             try:
                 imagen = commons.obtener(str(entrada.get("title")))
             except ValueError as error:
@@ -73,6 +79,9 @@ def main(argv: list[str] | None = None) -> int:
     asignar.add_argument("condicion")
     asignar.add_argument("titulo")
     asignar.add_argument("--alt", required=True, help="Descripción de la imagen para lectores.")
+    asignar.add_argument(
+        "--modulo", action="store_true", help="Registrar para una página HTML, no un artículo HM."
+    )
     check = ordenes.add_parser("check")
     check.add_argument("--estricto", action="store_true")
     check.add_argument("--online", action="store_true")
@@ -82,12 +91,22 @@ def main(argv: list[str] | None = None) -> int:
         errores = comprobar(registro.RAIZ, estricto=args.estricto, online=args.online)
         for error in errores:
             print("ERROR:", error, file=sys.stderr)
-        total = len(registro.leer())
+        total = len(registro.leer()) + len(
+            registro.leer(registro.RAIZ / "assets" / "data" / registro.MODULOS)
+        )
         print(f"Imágenes registradas: {total}. Incumplimientos: {len(errores)}.")
         return 1 if errores else 0
 
-    clave = _clave(args.condicion)
-    if clave not in _articulos(registro.RAIZ):
+    modulo = args.orden == "asignar" and args.modulo
+    clave = args.condicion if modulo else _clave(args.condicion)
+    archivo = registro.ARCHIVO
+    if modulo:
+        if not re.fullmatch(r"[a-z0-9_-]+/[a-z0-9_-]+\.html", clave):
+            raise ValueError("Se requiere una ruta relativa de módulo HTML.")
+        if not (registro.RAIZ / clave).is_file():
+            raise ValueError(f"No existe el módulo {clave}.")
+        archivo = registro.RAIZ / "assets" / "data" / registro.MODULOS
+    elif clave not in _articulos(registro.RAIZ):
         raise ValueError(f"No hay artículo para {clave}.")
     if args.orden == "buscar":
         candidatas = commons.buscar(args.consulta)
@@ -105,18 +124,19 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     imagen = commons.obtener(args.titulo)
-    datos = registro.leer()
+    datos = registro.leer(archivo)
     anterior = datos.get(clave, {}).get("title")
     datos[clave] = registro.entrada(imagen, args.alt, date.today())
-    errores = registro.problemas(clave, datos[clave])
+    errores = registro.problemas(clave, datos[clave], modulo=modulo)
     if errores:
         raise ValueError("\n".join(errores))
-    registro.escribir(datos)
+    registro.escribir(datos, archivo)
     print(
         f"{clave}: {imagen.titulo} ({imagen.licencia})"
         + (f"; sustituye a {anterior}" if anterior and anterior != imagen.titulo else "")
     )
-    print("Regenere el blog: npm run build:blog")
+    if not modulo:
+        print("Regenere el blog: npm run build:blog")
     return 0
 
 
