@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Problemas esofágicos · Gastroenterología | Powersemiotics</title>
+    <meta
+      name="description"
+      content="Complemento interactivo de la última clase: Boerhaave, Mallory-Weiss, acalasia y evaluación de la disfagia. Comparación, selección de pruebas y autoevaluación razonada."
+    />
+    <link
+      rel="canonical"
+      href="https://powersemiotics.com/medsemiotics/gastroenterologia/problemas-esofagicos.html"
+    />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="problemas-esofagicos.css" />
+    <script src="problemas-esofagicos.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header>
+      <a class="brand" href="../index.html"
+        >Powersemiotics<span>Aprender a decidir</span></a
+      ><a href="../gastroenterologia.html">← Hub de Gastroenterología</a>
+    </header>
+    <main id="contenido">
+      <section class="hero" aria-labelledby="titulo">
+        <div>
+          <p class="eyebrow">Gastroenterología · Última clase</p>
+          <h1 id="titulo">
+            Un esófago.<br />Tres problemas <em>muy distintos.</em>
+          </h1>
+          <p class="lead">
+            ¿Se rompió la pared, sangra la mucosa o falla el movimiento? Aprende
+            a distinguir Boerhaave, Mallory-Weiss y acalasia antes de elegir la
+            siguiente prueba.
+          </p>
+          <p class="tag">Complemento de clase · Fuera del sílabo original</p>
+          <a class="primary" href="#comparador">Empezar a explorar ↓</a>
+        </div>
+        <aside class="hero-note">
+          <span class="number">01 / 02 / 03</span>
+          <figure>
+            <img
+              src="../assets/images/esofago-anatomia.jpg"
+              width="440"
+              height="424"
+              alt="Ilustración anatómica del esófago: trayecto desde la faringe hasta el estómago, con rótulos en inglés"
+            />
+            <figcaption>
+              SEER / National Cancer Institute ·
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Illu_esophagus.jpg"
+                >Wikimedia Commons</a
+              >
+              · Dominio público.
+            </figcaption>
+          </figure>
+          <h2>Pared. Mucosa. Motilidad.</h2>
+          <p>La localización del problema cambia la prioridad clínica.</p>
+          <a href="#ruta">Explorar la ruta diagnóstica →</a>
+        </aside>
+      </section>
+      <nav class="section-nav" aria-label="Secciones del módulo">
+        <a href="#comparador">01 Comparar</a
+        ><a href="#ruta">02 Elegir una prueba</a
+        ><a href="#diferenciales">03 Ampliar el diferencial</a
+        ><a href="#evaluacion">04 Ponerte a prueba</a
+        ><a href="#fuentes">Fuentes</a>
+      </nav>
+      <section class="objectives">
+        <h2>Al terminar podrás…</h2>
+        <ul>
+          <li>Diferenciar lesión mucosa, perforación y alteración motora.</li>
+          <li>Priorizar urgencias y justificar la elección de pruebas.</li>
+          <li>Reconocer los límites de un patrón de síntomas.</li>
+        </ul>
+      </section>
+      <section id="comparador" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">01 · Comparar mecanismos</p>
+          <h2>El antecedente de vómito no basta.</h2>
+          <p>
+            Selecciona una entidad y conecta mecanismo, presentación y conducta.
+            Los patrones orientan; no confirman un diagnóstico por sí solos.
+          </p>
+        </div>
+        <div class="selectors" role="group" aria-label="Entidad para explorar">
+          <button type="button" data-disease="boerhaave" aria-pressed="true">
+            Boerhaave <span>Perforación</span></button
+          ><button type="button" data-disease="mallory" aria-pressed="false">
+            Mallory-Weiss <span>Desgarro mucoso</span></button
+          ><button type="button" data-disease="acalasia" aria-pressed="false">
+            Acalasia <span>Trastorno motor</span>
+          </button>
+        </div>
+        <article
+          id="disease-detail"
+          class="detail"
+          aria-live="polite"
+        ></article>
+        <noscript
+          ><p>
+            Activa JavaScript para usar el comparador y la autoevaluación.
+            Puedes consultar las rutas, los diferenciales y las guías enlazadas
+            sin JavaScript.
+          </p></noscript
+        >
+        <details>
+          <summary>Ver las tres entidades juntas</summary>
+          <div class="table-scroll">
+            <table>
+              <caption>
+                Comparación esencial
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Entidad</th>
+                  <th scope="col">Problema</th>
+                  <th scope="col">Orientación inicial</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Boerhaave</th>
+                  <td>Rotura transmural espontánea</td>
+                  <td>
+                    Sospecha de perforación: evaluación urgente y TC con
+                    contraste / TC-esofagografía. <a href="#ref-wses">[1]</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Mallory-Weiss</th>
+                  <td>Laceración mucosa en la unión esofagogástrica</td>
+                  <td>
+                    Hemorragia: estabilización y endoscopia; hemostasia si el
+                    sangrado está activo. <a href="#ref-mallory">[2]</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Acalasia</th>
+                  <td>
+                    Relajación insuficiente del esfínter inferior y peristalsis
+                    anormal
+                  </td>
+                  <td>
+                    Endoscopia para excluir obstrucción; manometría de alta
+                    resolución para confirmar. <a href="#ref-acg">[3]</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+      <section id="ruta" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">02 · Elegir una prueba</p>
+          <h2>Primero la prioridad. Después la técnica.</h2>
+          <p>
+            Abre cada ruta y explica por qué una prueba responde a esa pregunta
+            clínica.
+          </p>
+        </div>
+        <div class="routes">
+          <details>
+            <summary>
+              <span class="route-label">Urgencia</span> Dolor intenso tras
+              vómitos y sospecha de perforación
+            </summary>
+            <p>
+              Valorar y estabilizar; solicitar evaluación especializada urgente.
+              La TC con contraste y la TC-esofagografía permiten buscar una fuga
+              y su extensión. Una radiografía sin hallazgos no excluye
+              perforación. La endoscopia diagnóstica se reserva para situaciones
+              seleccionadas: puede aumentar la lesión o la contaminación.
+              <a href="#ref-wses">[1]</a>
+            </p>
+            <p class="prompt">
+              Para discutir: ¿por qué no seguir automáticamente la ruta
+              endoscópica de la hematemesis?
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="route-label">Sangrado</span> Hematemesis después de
+              arcadas
+            </summary>
+            <p>
+              Evaluar estabilidad y tratar la hemorragia digestiva.
+              Mallory-Weiss es una posibilidad, pero no la única causa. La
+              endoscopia identifica la lesión; el sangrado activo o persistente
+              puede requerir hemostasia endoscópica. No asumir que siempre
+              cederá solo. <a href="#ref-mallory">[2]</a>
+            </p>
+            <p class="prompt">
+              Para discutir: ¿qué cambiaría si predomina dolor torácico intenso
+              con sospecha de fuga?
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="route-label">Disfagia</span> Dificultad persistente
+              para sólidos y líquidos
+            </summary>
+            <p>
+              Considerar dismotilidad sin convertir el patrón en diagnóstico. La
+              endoscopia con biopsias según los hallazgos y la sospecha busca
+              causas estructurales o mucosas. Si no explican los síntomas, la
+              manometría de alta resolución evalúa la motilidad; el esofagograma
+              baritado temporizado aporta información complementaria.
+              <a href="#ref-testing">[4]</a>
+            </p>
+            <p class="prompt">
+              Para discutir: ¿por qué una endoscopia normal no excluye acalasia?
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="route-label">Obstrucción</span> Bolo impactado e
+              incapacidad para deglutir saliva
+            </summary>
+            <p>
+              La obstrucción esofágica completa exige atención urgente y
+              endoscopia emergente; no retrasarla con intentos de empujar el
+              alimento. Si se sospecha perforación, la evaluación por imagen y
+              el equipo especializado cambian el abordaje.
+              <a href="#ref-wses">[1]</a>
+            </p>
+            <p class="prompt">
+              Para discutir: tras resolver la impactación, ¿qué enfermedad
+              subyacente buscarías?
+            </p>
+          </details>
+        </div>
+        <aside class="callout">
+          <strong>El dolor torácico necesita una mirada amplia.</strong> Antes
+          de atribuirlo al esófago deben considerarse causas cardiovasculares y
+          otras emergencias según el contexto. Este módulo es una actividad
+          educativa y no un protocolo de atención individual.
+        </aside>
+      </section>
+      <section id="diferenciales" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">03 · Ampliar el diferencial</p>
+          <h2>La disfagia es el comienzo de la pregunta.</h2>
+        </div>
+        <div class="differentials">
+          <article>
+            <span class="small-label">Estructura</span>
+            <h3>Obstrucción y pseudoacalasia</h3>
+            <p>
+              Una lesión mecánica puede simular un trastorno motor. La pérdida
+              de peso rápida, especialmente en una persona mayor, obliga a
+              investigar pseudoacalasia; el estudio no termina al reconocer un
+              patrón sugestivo. <a href="#ref-acg">[3]</a>
+            </p>
+            <a href="esophageal_gastric_cancer.html" id="oncology-link"
+              >Revisar oncología esofágica →</a
+            >
+          </article>
+          <article>
+            <span class="small-label">Inflamación</span>
+            <h3>Esofagitis eosinofílica</h3>
+            <p>
+              Considerarla en disfagia e impactaciones. El diagnóstico integra
+              síntomas, biopsia esofágica y evaluación de otras causas de
+              eosinofilia. El tratamiento puede incluir dieta o fármacos; la
+              dilatación de una estenosis acompaña al control de la inflamación.
+              <a href="#ref-eoe">[5]</a>
+            </p>
+          </article>
+          <article>
+            <span class="small-label">Reflujo</span>
+            <h3>ERGE y síntomas superpuestos</h3>
+            <p>
+              La pirosis y la regurgitación orientan, pero no explican
+              automáticamente la disfagia. Los síntomas persistentes pueden
+              requerir endoscopia y pruebas fisiológicas dirigidas.
+              <a href="#ref-testing">[4]</a>
+            </p>
+            <a href="reflujo-gastroesofagico.html"
+              >Volver al módulo de ERGE →</a
+            >
+          </article>
+        </div>
+      </section>
+      <section id="evaluacion" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">04 · Ponerte a prueba</p>
+          <h2>Elige. Justifica. Revisa.</h2>
+          <p>
+            Ejercicios de conceptos, sin datos de pacientes. Responde antes de
+            desplegar la explicación. Puedes repetirlos; el resultado solo
+            permanece en esta página.
+          </p>
+        </div>
+        <form id="quiz">
+          <div id="questions"></div>
+          <div class="quiz-actions">
+            <button class="primary" type="submit">Comprobar respuestas</button
+            ><button type="reset" class="secondary">Reiniciar actividad</button
+            ><button id="print" type="button" class="secondary">
+              Imprimir repaso
+            </button>
+          </div>
+          <p id="quiz-result" role="status" tabindex="-1"></p>
+        </form>
+      </section>
+      <section id="fuentes" class="section references">
+        <p class="eyebrow">Lectura crítica</p>
+        <h2>Guías que sostienen el módulo</h2>
+        <p>
+          Selección docente de recomendaciones; consulta los documentos
+          completos para sus condiciones y calidad de evidencia.
+        </p>
+        <ol>
+          <li id="ref-wses">
+            Chirica et al.
+            <a href="https://doi.org/10.1186/s13017-019-0245-2"
+              >Esophageal emergencies: WSES guidelines</a
+            >. 2019.
+          </li>
+          <li id="ref-mallory">
+            Fujishiro et al.
+            <a href="https://doi.org/10.1111/den.15019"
+              >Guidelines for endoscopic management of nonvariceal upper
+              gastrointestinal bleeding, segunda edición</a
+            >. 2025. Sección Mallory-Weiss.
+          </li>
+          <li id="ref-acg">
+            Vaezi et al.
+            <a href="https://doi.org/10.14309/ajg.0000000000000731"
+              >ACG: Diagnosis and Management of Achalasia</a
+            >. 2020.
+          </li>
+          <li id="ref-testing">
+            Gyawali et al.
+            <a href="https://doi.org/10.14309/ajg.0000000000000734"
+              >ACG: Clinical Use of Esophageal Physiologic Testing</a
+            >. 2020.
+          </li>
+          <li id="ref-eoe">
+            Dellon et al.
+            <a href="https://doi.org/10.14309/ajg.0000000000003194"
+              >ACG: Diagnosis and Management of Eosinophilic Esophagitis</a
+            >. 2025.
+          </li>
+        </ol>
+        <p class="editorial">
+          Borrador docente · Pendiente de revisión clínica.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <a href="../gastroenterologia.html">← Volver a Gastroenterología</a>
+      <p>
+        Powersemiotics · Contenido bajo
+        <a
+          rel="license"
+          href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"
+          >CC BY-SA 4.0</a
+        >. Las guías enlazadas conservan sus propias licencias.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -17,6 +17,7 @@ if TYPE_CHECKING:
 
 RAIZ = Path(__file__).resolve().parents[2]
 ARCHIVO = RAIZ / "assets" / "data" / "topic-images.json"
+MODULOS = "module-images.json"
 LICENCIAS = frozenset({"Public domain", "CC0"})
 CAMPOS = ("title", "url", "thumb", "license", "license_code", "author", "alt", "source", "verified")
 CLAVE = re.compile(r"^HM\d+$")
@@ -50,10 +51,13 @@ def entrada(imagen: Imagen, alt: str, hoy: date) -> dict[str, Any]:
     }
 
 
-def problemas(clave: str, datos: dict[str, Any]) -> list[str]:
+def problemas(clave: str, datos: dict[str, Any], *, modulo: bool = False) -> list[str]:
     """Incumplimientos de la política en una entrada, sin consultar la red."""
     errores: list[str] = []
-    if not CLAVE.match(clave):
+    if modulo:
+        if not re.fullmatch(r"[a-z0-9_-]+/[a-z0-9_-]+\.html", clave):
+            errores.append(f"{clave}: se requiere una ruta relativa de módulo HTML.")
+    elif not CLAVE.match(clave):
         errores.append(f"{clave}: la clave debe ser el ID de condición sin dos puntos (HM6003).")
     faltan = [c for c in CAMPOS if not str(datos.get(c) or "").strip()]
     if faltan:

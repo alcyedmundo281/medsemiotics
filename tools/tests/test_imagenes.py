@@ -9,7 +9,7 @@ import pytest
 from conftest import HOY
 
 from imagenes import commons, registro
-from imagenes.__main__ import comprobar
+from imagenes.__main__ import comprobar, main
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -98,3 +98,44 @@ def test_autor_duplicado_o_desconocido() -> None:
     assert commons._autor("Unknown author Unknown author") == "Autor no declarado"
     assert commons._autor("CDC CDC") == "CDC"
     assert commons._autor("R. G. Wiener, Harlem Hospital") == "R. G. Wiener, Harlem Hospital"
+
+
+def test_imagen_modulo_y_licencia(raiz: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    modulo = "gastroenterologia/esofago.html"
+    pagina_html = raiz / modulo
+    pagina_html.parent.mkdir(parents=True)
+    pagina_html.write_text("<!doctype html>", encoding="utf-8")
+    (raiz / "assets" / "data").mkdir(parents=True)
+    monkeypatch.setattr(registro, "RAIZ", raiz)
+    imagen = commons.obtener("Ejemplo.jpg", api(pagina("pd", "Public domain")))
+    monkeypatch.setattr(commons, "obtener", lambda _: imagen)
+    assert (
+        main(
+            [
+                "asignar",
+                modulo,
+                "Ejemplo.jpg",
+                "--modulo",
+                "--alt",
+                "Anatomía del esófago y su trayecto",
+            ]
+        )
+        == 0
+    )
+    archivo = raiz / "assets" / "data" / registro.MODULOS
+    assert registro.leer(archivo)[modulo]["license"] == "Public domain"
+    assert comprobar(raiz, estricto=False, online=False) == []
+    entrada = {**registro.leer(archivo)[modulo], "license": "CC BY-SA 4.0"}
+    registro.escribir({modulo: entrada}, archivo)
+    assert any("licencia" in error for error in comprobar(raiz, estricto=False, online=False))
+    with pytest.raises(ValueError, match="ruta relativa"):
+        main(
+            [
+                "asignar",
+                "../fuera.html",
+                "Ejemplo.jpg",
+                "--modulo",
+                "--alt",
+                "Una descripción extensa",
+            ]
+        )
