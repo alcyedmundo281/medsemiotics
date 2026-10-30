@@ -32,7 +32,20 @@ SECCIONES: tuple[str, ...] = (
 )
 
 PENDIENTE = re.compile(r"\b(TODO|PENDIENTE)\b")
-CITA = re.compile(r"\[[^\]]*@([A-Za-z][A-Za-z0-9_:\-]*)[^\]]*\]")
+# Grupo de citas Pandoc: [@a], [@a; @b], [véase @a, p. 3]. Cada clave se valida por separado.
+GRUPO_CITAS = re.compile(r"\[[^\[\]]*@[^\[\]]*\]")
+CLAVE_CITA = re.compile(r"@([A-Za-z][A-Za-z0-9_:\-]*)")
+# Campos del frontmatter con prosa clínica: rigen las mismas reglas de evidencia que el cuerpo.
+# La viñeta y la pregunta traen datos del paciente (edad, horas de vida), no afirmaciones de
+# evidencia: en ellas las métricas siguen prohibidas, pero una cifra no exige cita.
+CAMPOS_CLINICOS: tuple[str, ...] = (
+    "pregunta_clinica",
+    "abstract",
+    "dialogo_clinico",
+    "indispensable",
+    "limites",
+)
+CAMPOS_CON_DATOS_DEL_PACIENTE: frozenset[str] = frozenset({"pregunta_clinica", "dialogo_clinico"})
 DIGITO = re.compile(r"\d")
 LISTA_NUMERADA = re.compile(r"^\s*\d+[.)]\s")
 BLOQUE = re.compile(r"(?ms)^:::\s*\{\.(?P<clase>[a-z-]+)\}\s*$.*?^:::\s*$")
@@ -87,13 +100,31 @@ def problemas_de_cuerpo(cuerpo: str, leccion: Leccion | None) -> list[str]:
 
     # El bloque legado es una cita histórica literal: sus cifras no se reescriben ni se citan.
     prosa = BLOQUE.sub(lambda m: "" if m["clase"] == "legado" else m[0], texto)
+    problemas += problemas_de_evidencia(prosa, leccion)
+    return problemas
 
+
+def claves_citadas(texto: str) -> list[str]:
+    return [c for g in GRUPO_CITAS.findall(texto) for c in CLAVE_CITA.findall(g)]
+
+
+def problemas_de_evidencia(
+    prosa: str, leccion: Leccion | None, exigir_cita: bool = True
+) -> list[str]:
+    """Reglas de evidencia de toda prosa clínica, del cuerpo o del frontmatter.
+
+    Las métricas de rendimiento solo entran por token; los tokens citan conceptos declarados;
+    cualquier otra cifra va en un párrafo con cita, y cada clave citada está en «refs».
+    """
+    problemas: list[str] = []
     sin_tokens = TOKEN.sub(" ", prosa)
     malformado = LLAVES.search(sin_tokens)
     if malformado:
         problemas.append(f"token mal formado: {malformado[0]!r}")
+    # Las claves de cita (p. ej. «[@futagi1999]») no son cifras del texto.
+    sin_citas = GRUPO_CITAS.sub(" ", sin_tokens)
     for patron, motivo in PROHIBIDOS_LECCION:
-        for m in patron.finditer(sin_tokens):
+        for m in patron.finditer(sin_citas):
             problemas.append(f"{motivo}: «{m[0]}»")
 
     declarados = set(leccion.conceptos) if leccion is not None else set()
@@ -110,13 +141,25 @@ def problemas_de_cuerpo(cuerpo: str, leccion: Leccion | None) -> list[str]:
             for ln in parrafo.splitlines()
             if not ln.lstrip().startswith(("#", ":::"))
         ]
-        resto = CITA.sub("", "\n".join(lineas))
-        if DIGITO.search(resto) and not CITA.search(parrafo):
+        resto = GRUPO_CITAS.sub("", "\n".join(lineas))
+        claves = claves_citadas(parrafo)
+        if exigir_cita and DIGITO.search(resto) and not claves:
             extracto = " ".join(resto.split())[:70]
             problemas.append(f"cifra sin cita [@clave] en el párrafo: «{extracto}…»")
-        for clave in CITA.findall(parrafo):
+        for clave in claves:
             if leccion is not None and clave not in refs:
                 problemas.append(f"cita [@{clave}] no declarada en «refs»")
+    return problemas
+
+
+def problemas_de_frontmatter(leccion: Leccion) -> list[str]:
+    problemas: list[str] = []
+    for campo in CAMPOS_CLINICOS:
+        valor = getattr(leccion, campo)
+        textos: list[str] = valor if isinstance(valor, list) else [valor]
+        for texto in textos:
+            exigir = campo not in CAMPOS_CON_DATOS_DEL_PACIENTE
+            problemas += [f"{campo}: {p}" for p in problemas_de_evidencia(texto, leccion, exigir)]
     return problemas
 
 
@@ -188,6 +231,7 @@ def validar_archivo(
     if leccion is not None:
         if ruta.stem != leccion.id:
             resultado.errores.append(f"{nombre}: el archivo debe llamarse {leccion.id}.qmd")
+        destino.extend(f"{nombre}: {p}" for p in problemas_de_frontmatter(leccion))
         destino.extend(f"{nombre}: {p}" for p in problemas_de_referencias(leccion, bib))
         destino.extend(f"{nombre}: {p}" for p in problemas_de_archivos(leccion, raiz))
 

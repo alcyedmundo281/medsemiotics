@@ -331,3 +331,42 @@ def test_mapa_rechaza_modulo_en_dos_lecciones() -> None:
     datos["lecciones"][1]["modulos_html"] = ["neurologia/demencias.html"]
     with pytest.raises(ValidationError, match="más de una lección"):
         m.Mapa.model_validate(datos)
+
+
+# --- hallazgos de la revisión del PR #34 ----------------------------------------------------
+
+
+def test_cita_agrupada_valida_cada_clave() -> None:
+    texto = cuerpo(**{"Qué significa": "Hay 20 casos [@otra2020; @futagi1999]."})
+    problemas = problemas_de_cuerpo(texto, Leccion.model_validate(BASE))
+    assert any("[@otra2020] no declarada" in p for p in problemas)
+
+
+def test_clave_de_cita_no_cuenta_como_metrica() -> None:
+    datos = {**BASE, "refs": ["futagi1999"]}
+    texto = cuerpo(**{"Qué significa": "La sensibilidad es {{sens HM:1234}} [@futagi1999]."})
+    assert problemas_de_cuerpo(texto, Leccion.model_validate(datos)) == []
+
+
+@pytest.mark.parametrize(
+    ("campo", "valor", "motivo"),
+    [
+        ("indispensable", ["La sensibilidad es 98 %."], "a mano"),
+        ("abstract", ABSTRACT + " con un LR de 8 para la condición", "a mano"),
+        ("limites", ["Falla en 3 de cada 10 niños."], "cifra sin cita"),
+        ("indispensable", ["Rinde {{lr+ HM:9999}}."], "no figura en «conceptos»"),
+    ],
+)
+def test_frontmatter_clinico_sigue_las_reglas_de_evidencia(
+    campo: str, valor: Any, motivo: str
+) -> None:
+    from lecciones.validacion import problemas_de_frontmatter
+
+    problemas = problemas_de_frontmatter(Leccion.model_validate({**BASE, campo: valor}))
+    assert any(motivo in p for p in problemas)
+
+
+def test_vineta_admite_datos_del_paciente() -> None:
+    from lecciones.validacion import problemas_de_frontmatter
+
+    assert problemas_de_frontmatter(Leccion.model_validate(BASE)) == []
