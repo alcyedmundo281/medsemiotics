@@ -17,6 +17,7 @@ lerna-debug.log*
 vite.log
 
 # Build artifacts
+build/
 dist
 dist-ssr
 

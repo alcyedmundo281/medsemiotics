@@ -18,6 +18,7 @@ export default [
     // lintable source. Their corresponding editable sources remain in the
     // repository and are covered by the configurations below.
     ignores: [
+      '**/build/',
       '**/dist/',
       '**/node_modules/',
       'assets/vendor/',
