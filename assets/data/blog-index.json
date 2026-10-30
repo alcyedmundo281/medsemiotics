@@ -6,9 +6,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-21",
     "fecha_publicacion": "2026-09-21",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -119,7 +119,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6042-colecistitis-aguda.yaml",
       "archivos": {
@@ -157,12 +157,12 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Gallstones.JPG",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Gallstones.JPG",
-    "image_license": "Public domain",
-    "image_title": "Gallstones.JPG",
-    "image_alt": "Pieza macroscópica de vesícula biliar abierta con cálculos biliares causantes de colecistitis litiásica aguda",
-    "image_author": "Alex Khimich ( talk )",
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Ultrasonography_of_cholecystitis.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_cholecystitis.jpg",
+    "image_license": "CC0",
+    "image_title": "Ultrasonography of cholecystitis.jpg",
+    "image_alt": "Ecografía abdominal con colecistitis aguda: cálculos, pared vesicular engrosada y líquido perivesicular",
+    "image_author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D.",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
@@ -172,9 +172,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-21",
     "fecha_publicacion": "2026-09-21",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -237,7 +237,7 @@
           ],
           "ref": "pmid:34420255"
         },
-        "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata",
+        "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica",
         "advertencia": "el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación"
       },
       {
@@ -263,7 +263,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6043-apendicitis-aguda.yaml",
       "archivos": {
@@ -278,7 +278,7 @@
         "conceptos/HM0712-leucocitosis.yaml": "2e5c508b2e66972503180b4cfced57952439dbca740f2bfa1cbb9dbc6a25b158",
         "conceptos/HM0900-hallazgo-de-imagen.yaml": "0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67",
         "conceptos/HM3177-signo-ecografico-de-apendicitis-aguda.yaml": "8af710d0fc65e8203a82946be611bed521b330ae00b5ea647d9d6de7a55c6f96",
-        "condiciones/HM6043-apendicitis-aguda.yaml": "733af9cd1018b0bf62aef6cbe0fa920f8e075d1c5db17e79c29c92ddfec096ab",
+        "condiciones/HM6043-apendicitis-aguda.yaml": "db3b62047a4501ef009444c7f7dd1b6db6422845a2208b37d997d2b0c32077dd",
         "referencias/pmid-2239906.yaml": "143382d1babcce9d2979ae48bc7841efd23eb5b8492b7a520130a81308c11781",
         "referencias/pmid-24113477.yaml": "371db850598e103d5be3697f876a8e8501122f3de0f8f20893ccd9c8bd75ffb2",
         "referencias/pmid-28826614.yaml": "b630a135237dd8eaacc00d6ecaf1d746a89e60945aa88993984831c6d9fe8ce2",
@@ -302,7 +302,7 @@
     "image_source": "https://commons.wikimedia.org/wiki/File:Appendizitis5ct.jpg",
     "image_license": "Public domain",
     "image_title": "Appendizitis5ct.jpg",
-    "image_alt": "Corte tomográfico axial de abdomen que muestra apéndice cecal engrosado con alteración de la grasa periapendicular",
+    "image_alt": "Tomografía axial de pelvis con apéndice engrosado e inflamado (señalado) en un caso de apendicitis aguda",
     "image_author": "Benutzer:Rho",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
@@ -313,9 +313,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-21",
     "fecha_publicacion": "2026-09-21",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -378,20 +378,25 @@
           ],
           "ref": "pmid:28495379"
         },
-        "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
-        "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
+        "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+        "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
       },
       {
         "concepto": "HM:3144",
         "rol": "prueba_sensible",
         "estado_lr": "medido",
-        "ref": "pmid:16403932",
+        "ref": "pmid:16052017",
         "lr_negativo": {
-          "valor": 0.1,
-          "ref": "pmid:16403932"
+          "valor": 0.08,
+          "ic95": [
+            0.04,
+            0.18
+          ],
+          "ref": "pmid:16052017"
         },
-        "poblacion": "pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest",
-        "decision": "un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía"
+        "poblacion": "pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)",
+        "decision": "un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia",
+        "nota": "Corregido: el cociente anterior (0.10, sin intervalo) se había copiado de Wells 2006 (pmid:16403932), que mide la trombosis venosa profunda. El valor y el intervalo de esta arista son los de Roy 2005 para el ELISA cuantitativo con corte < 500 µg/L. Otros ensayos (látex cuantitativo, hemaglutinación) tienen cocientes negativos mayores y solo excluyen con probabilidad previa baja. Esta fuente no estudia un corte ajustado por edad."
       },
       {
         "concepto": "HM:0401",
@@ -416,7 +421,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6044-tromboembolia-pulmonar.yaml",
       "archivos": {
@@ -433,8 +438,9 @@
         "conceptos/HM3144-dimero-d-elevado.yaml": "562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2",
         "conceptos/HM3162-ventriculo-derecho-dilatado.yaml": "bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134",
         "conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml": "8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621",
-        "condiciones/HM6044-tromboembolia-pulmonar.yaml": "909e053b124aa84bde431c8e7747afbfd0d3b86feeda65fc0d0b653d0490d79b",
+        "condiciones/HM6044-tromboembolia-pulmonar.yaml": "151072d461a4b6a2417746f1159ece1108241b9b09fde6940b07f42fd27652f5",
         "referencias/pmid-10737280.yaml": "68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de",
+        "referencias/pmid-16052017.yaml": "608a924c6c05185604836f0e3ef4c1617da586d7c02cd72c3b4374688809d990",
         "referencias/pmid-16403932.yaml": "a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789",
         "referencias/pmid-19679614.yaml": "3a41f589222c75041e1f97433692e4e17afdee178eaddc867a0f74e4526b232c",
         "referencias/pmid-28495379.yaml": "94dd6cc6490001dc513f3e588d2b3b055644113f7874d72b9f9e244143affb93",
@@ -453,7 +459,7 @@
     "image_source": "https://commons.wikimedia.org/wiki/File:Pulmonary-embolism.png",
     "image_license": "CC0",
     "image_title": "Pulmonary-embolism.png",
-    "image_alt": "Ilustración médica esquemática de la circulación pulmonar con trombo ocluyendo una rama de la arteria pulmonar",
+    "image_alt": "Esquema de tromboembolia pulmonar: émbolo en una rama de la arteria pulmonar con sobrecarga de cavidades derechas",
     "image_author": "Baedr-9439",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
@@ -530,7 +536,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6045-taponamiento-cardiaco.yaml",
       "archivos": {
@@ -566,7 +572,7 @@
   {
     "id": "HM6046-01",
     "slug": "ascitis-precision-semiotica",
-    "title": "Ascitis: hallazgos y evidencia clínica",
+    "title": "Síndrome ascítico: hallazgos y evidencia clínica",
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-21",
     "fecha_publicacion": "2026-09-21",
@@ -577,16 +583,16 @@
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "tags": [
-      "ascitis",
       "medicina_interna",
-      "semiologia"
+      "semiologia",
+      "sindrome-ascitico"
     ],
     "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6046 · PMID:1573754",
     "grounding": {
       "condicion_id": "HM:6046",
-      "condicion_nombre": "Ascitis",
+      "condicion_nombre": "Síndrome ascítico",
       "concepto_id": "HM:3182",
       "concepto_nombre": "Signo del charco",
       "estado_lr": "medido",
@@ -763,7 +769,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6046-ascitis.yaml",
       "archivos": {
@@ -783,7 +789,7 @@
         "conceptos/HM3182-signo-del-charco.yaml": "92c0039daac9acdb1bef8c264912a5eb55f16e337ab407a1a7108183377beaf1",
         "conceptos/HM3183-aumento-del-perimetro-abdominal.yaml": "9685963c37f2275c42b2434460a7bd284124f6134e419dd7c5d00619ad4e39a7",
         "conceptos/HM3186-ganancia-de-peso-reciente.yaml": "a26bed1c90308f661c6d44f61910991cf8d7fcd68dd859234c459617fbb2fed4",
-        "condiciones/HM6046-ascitis.yaml": "f0bdc09800cfaa915e8988bab6a442df8345627c799dbde310bbede6a4956d60",
+        "condiciones/HM6046-ascitis.yaml": "6cd4b8e69ab64c63763fb602abb8f7c93ed8360ef7249f00d3a734d64c407b9d",
         "referencias/pmid-1573754.yaml": "c538baf13a73481c6db58f7c8616033cdb9681fe317192f2d980efa947cd6614",
         "referencias/pmid-26683569.yaml": "038c4e4117a7de3cd0979727661337993e29688c106e221ebf5ff05475e4addc",
         "referencias/pmid-36703099.yaml": "4ff0c4059ec7837a09a2c86a26f8da8d7c0ec6be30ed2a362e985bc0bc6fb9b9",
@@ -808,7 +814,7 @@
   {
     "id": "HM6047-01",
     "slug": "esplenomegalia-precision-semiotica",
-    "title": "Esplenomegalia: hallazgos y evidencia clínica",
+    "title": "Síndrome esplenomegálico: hallazgos y evidencia clínica",
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-21",
     "fecha_publicacion": "2026-09-21",
@@ -819,16 +825,16 @@
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "tags": [
-      "esplenomegalia",
       "medicina_interna",
-      "semiologia"
+      "semiologia",
+      "sindrome-esplenomegalico"
     ],
     "reading_time": "8 min",
     "difficulty": "Intermedio",
     "grounding_badge": "HM:6047 · PMID:8411607",
     "grounding": {
       "condicion_id": "HM:6047",
-      "condicion_nombre": "Esplenomegalia",
+      "condicion_nombre": "Síndrome esplenomegálico",
       "concepto_id": "HM:0603",
       "concepto_nombre": "Esplenomegalia",
       "estado_lr": "medido",
@@ -909,7 +915,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6047-esplenomegalia.yaml",
       "archivos": {
@@ -919,7 +925,7 @@
         "conceptos/HM0603-esplenomegalia.yaml": "d694a903ae98ee750e432f8b2f95e52b856440a67ebef8ea14396108447626a6",
         "conceptos/HM3184-matidez-en-espacio-de-traube.yaml": "aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9",
         "conceptos/HM3185-signo-de-percusion-de-castell.yaml": "493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f",
-        "condiciones/HM6047-esplenomegalia.yaml": "62abb851775465a9520dccdb108d73114afb5ac5e7c5d516b1b22a7992153955",
+        "condiciones/HM6047-esplenomegalia.yaml": "101d444603bb27f433b62a785f3ce11930be9b69e13e79633de94012ccff9c03",
         "referencias/pmid-8411607.yaml": "cacb8c8bd67b1f8fe3b0d2d8c35cd177811366fa77deeb28650fe548c42e8efa"
       }
     },
@@ -1043,7 +1049,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6048-bocio.yaml",
       "archivos": {
@@ -1177,7 +1183,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6022-glaucoma-primario-de-angulo-abierto.yaml",
       "archivos": {
@@ -1362,7 +1368,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6023-conmocion-cerebral-pediatrica.yaml",
       "archivos": {
@@ -1540,7 +1546,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6024-maltrato-fisico-infantil.yaml",
       "archivos": {
@@ -1710,7 +1716,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6025-hipertension-secundaria-pediatrica.yaml",
       "archivos": {
@@ -1832,7 +1838,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6026-insuficiencia-aortica.yaml",
       "archivos": {
@@ -1960,7 +1966,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6027-rotura-del-ligamento-cruzado-anterior.yaml",
       "archivos": {
@@ -2057,7 +2063,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6028-alergia-a-penicilina.yaml",
       "archivos": {
@@ -2090,9 +2096,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -2141,7 +2147,7 @@
           ],
           "ref": "pmid:34313682"
         },
-        "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+        "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca"
       },
       {
         "concepto": "HM:3128",
@@ -2163,12 +2169,12 @@
           ],
           "ref": "pmid:34313682"
         },
-        "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida"
+        "decision": "una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca"
       }
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml",
       "archivos": {
@@ -2176,7 +2182,7 @@
         "conceptos/HM0109-hipotension-arterial.yaml": "934b7dadbc768a08d34a84a322bb11c8008218f7b111b1bba2b766e67f4db7cc",
         "conceptos/HM3127-presion-arterial-en-consulta-mayor-o-igual-a-140-90.yaml": "f66c2c28d0371db93331bb99132c23a4faff7857c109318c5b7ab1fa5ec6b5e1",
         "conceptos/HM3128-automonitorizacion-domiciliaria-ampa-mayor-o-igual-a-135-85.yaml": "7872dd1ef931f340ae6ad78b211211312c1aa72c4758b7e65df7047129bfbf1f",
-        "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml": "13859cd6ce6e7d118f245376b993efb13ca4779a500051b4809c448a0ab27a6b",
+        "condiciones/HM6029-hipertension-arterial-esencial-en-adultos.yaml": "0ad01181390af69ad54b2849d8252d777552a6fb5363f55023890e0400c7d7cb",
         "referencias/pmid-34313682.yaml": "a7ab07c045ece7b7760dd6b8df4d794d8c7d4e2d4747d57f9c58da5c11d89920"
       }
     },
@@ -2190,7 +2196,7 @@
     "image_source": "https://commons.wikimedia.org/wiki/File:Sphygmomanometer%26Cuff.JPG",
     "image_license": "Public domain",
     "image_title": "Sphygmomanometer&Cuff.JPG",
-    "image_alt": "Esfigmomanómetro aneroide con brazalete para la medición clínica estandarizada de la presión arterial sistémica",
+    "image_alt": "Esfigmomanómetro con manguito para medir la presión arterial",
     "image_author": "ML5 at English Wikipedia",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
@@ -2201,9 +2207,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -2317,7 +2323,7 @@
         "efecto": "excluye",
         "sostiene": "discriminacion_medida",
         "ref": "pmid:9786377",
-        "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM (LR 0.2)"
+        "decision": "las características pleuríticas reducen fuertemente la probabilidad de IAM"
       },
       {
         "concepto": "HM:3134",
@@ -2373,7 +2379,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6030-infarto-agudo-de-miocardio.yaml",
       "archivos": {
@@ -2391,7 +2397,7 @@
         "conceptos/HM3134-dolor-toracico-reproducible-a-la-palpacion.yaml": "f23a1800f2d73e860ab303a1026f8e90a3aa29f340d037668ba3de3522297ef6",
         "conceptos/HM3135-dolor-toracico-punzante.yaml": "a82cc27a26e2f5c4fdee7225832251f4bf5e1d18fce8c93ed82c0e081f7463c3",
         "conceptos/HM3136-dolor-toracico-posicional.yaml": "14e7c84d587048ab1b4a61d4b88c29ea6693307a7e4c1e67889e09cdd9eafec3",
-        "condiciones/HM6030-infarto-agudo-de-miocardio.yaml": "92fcbe38a8b1f3b2bc0223fe3eb0bcf09d1641e57bbe160a23ff0941da4e9a8a",
+        "condiciones/HM6030-infarto-agudo-de-miocardio.yaml": "e0bd69fedef44e9f27f9c6baf07e6458a97aa82f823708d040eaa55be7ccd10d",
         "referencias/pmid-9786377.yaml": "a744bdfe061bea39eeebdfeb75c36d78c863cb9fb6a8a848d121b42024f1665f"
       }
     },
@@ -2401,12 +2407,12 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gross_pathology_of_old_myocardial_infarction.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Gross_pathology_of_old_myocardial_infarction.jpg",
-    "image_license": "CC0",
-    "image_title": "Gross pathology of old myocardial infarction.jpg",
-    "image_alt": "Corte transversal macroscópico del miocardio ventricular que muestra área de infarto transmural y fibrosis ventricular",
-    "image_author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Consent from the patient or patient's relatives is regarded as redundant, because of absence of identifiable features ( List of HIPAA identifiers ) in the media and case information ( See also HIPAA case reports guidance ).",
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/5/59/12_lead_generated_inferior_MI.JPG",
+    "image_source": "https://commons.wikimedia.org/wiki/File:12_lead_generated_inferior_MI.JPG",
+    "image_license": "Public domain",
+    "image_title": "12 lead generated inferior MI.JPG",
+    "image_alt": "Electrocardiograma de 12 derivaciones con infarto inferior: elevación del ST en II, III y aVF con cambios recíprocos",
+    "image_author": "Glenlarson",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
@@ -2472,7 +2478,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6031-trastorno-de-ansiedad-generalizada.yaml",
       "archivos": {
@@ -2560,7 +2566,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6032-trastorno-de-panico.yaml",
       "archivos": {
@@ -2664,7 +2670,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6033-melanoma-cutaneo.yaml",
       "archivos": {
@@ -2698,9 +2704,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -2745,7 +2751,7 @@
           ],
           "ref": "pmid:10517431"
         },
-        "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)"
+        "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad"
       },
       {
         "concepto": "HM:3143",
@@ -2759,12 +2765,12 @@
           ],
           "ref": "pmid:10517431"
         },
-        "decision": "una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado"
+        "decision": "una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado"
       }
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6034-cancer-de-mama.yaml",
       "archivos": {
@@ -2772,7 +2778,7 @@
         "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
         "conceptos/HM3142-masa-mamaria-palpable-sospechosa.yaml": "f11f27c1edc99011448c3818fbae8799dad25cbd5df600b47f5f6136f60218c9",
         "conceptos/HM3143-examen-clinico-mamario-reglado-normal.yaml": "5a107bc0bf6672b131ceac761664ae19eca3bbb043d0291ba6fb0a72992dd450",
-        "condiciones/HM6034-cancer-de-mama.yaml": "eab87d90399daf8948d669883195f2284c932252bf03bab648bc5c922eaead2f",
+        "condiciones/HM6034-cancer-de-mama.yaml": "c58590c5a2b68d340649095c7af6f8f6d6c7d57dcee5848b6b22dd2390fd36d2",
         "referencias/pmid-10517431.yaml": "8ebe10c6f72dd592a497d527f6bc8a3d8cbdc4cd8b626cf974280489fe49e662"
       }
     },
@@ -2782,12 +2788,12 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mammogram_showing_breast_cancer.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Mammogram_showing_breast_cancer.jpg",
+    "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Breast_cancer.JPG/1280px-Breast_cancer.JPG",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Breast_cancer.JPG",
     "image_license": "Public domain",
-    "image_title": "Mammogram showing breast cancer.jpg",
-    "image_alt": "Mamografía diagnóstica que muestra una lesión nodular densa espiculada con microcalcificaciones en parénquima mamario",
-    "image_author": "Autor no declarado",
+    "image_title": "Breast cancer.JPG",
+    "image_alt": "Tejido mamario resecado con un carcinoma estrellado de 2 cm, palpable como nódulo duro",
+    "image_author": "John Hayman",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
@@ -2797,9 +2803,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -2909,7 +2915,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6035-trombosis-venosa-profunda.yaml",
       "archivos": {
@@ -2928,11 +2934,11 @@
     },
     "has_quiz": true,
     "quiz_count": 1,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_deep_vein_thrombosis_of_the_femoral_vein.jpg",
+    "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Ultrasonography_of_thrombosis_of_the_fibular_veins%2C_axial_plane%2C_annotated.svg/1280px-Ultrasonography_of_thrombosis_of_the_fibular_veins%2C_axial_plane%2C_annotated.svg.png",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Ultrasonography_of_thrombosis_of_the_fibular_veins,_axial_plane,_annotated.svg",
     "image_license": "CC0",
-    "image_title": "Ultrasonography of deep vein thrombosis of the femoral vein.jpg",
-    "image_alt": "Ecografía Doppler de extremidad inferior que demuestra material ecogénico intraluminal y falta de colapso en vena femoral",
+    "image_title": "Ultrasonography of thrombosis of the fibular veins, axial plane, annotated.svg",
+    "image_alt": "Ecografía de la pantorrilla con trombosis de las venas peroneas, corte axial anotado",
     "image_author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Written informed consent was obtained from the individual, including online publication.",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
@@ -2943,9 +2949,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -3075,7 +3081,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6036-neumonia-infantil.yaml",
       "archivos": {
@@ -3088,7 +3094,7 @@
         "conceptos/HM0206-dolor-toracico.yaml": "b0ab2dde126e6fb4d8543adeb2d5fce843a1ce51a2de62c293deda255cc1973f",
         "conceptos/HM0400-sintoma-respiratorio.yaml": "437414db42a3586a5896d3f91e90ee8ed51c7baef7b67741067b3ee04ca7a53b",
         "conceptos/HM0406-crepitantes.yaml": "5025b2d5cad42255302233528cb6c75479881002078b78baff67dae058475083",
-        "conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml": "9449ad5b45db85fce3b18a01aaa8241470c2edfe132589b703bd498687eac216",
+        "conceptos/HM3145-aumento-del-trabajo-respiratorio.yaml": "ce253531adeebe3b92348d8b0510e02b1aef29b07d8280d2bd457c5fcd5bd7c3",
         "condiciones/HM6036-neumonia-infantil.yaml": "2592cfc7ca6b494357364ace2e9241755179b522a731d51563820e9c32e4da2a",
         "referencias/pmid-28763554.yaml": "6b16261f8789e9a1205fa94803b9f07841f6bd6563ebcd59b30a6595ce6db76f"
       }
@@ -3099,12 +3105,12 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/X-ray_of_lobar_pneumonia.jpg/1280px-X-ray_of_lobar_pneumonia.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
-    "image_license": "CC0",
-    "image_title": "X-ray of lobar pneumonia.jpg",
-    "image_alt": "Radiografía posteroanterior de tórax que evidencia consolidación alveolar lobar con broncograma aéreo",
-    "image_author": "Mikael Häggström , M.D. Author info - Reusing images - Conflicts of interest: None Mikael Häggström , M.D. Consent note : Written informed consent was obtained from the individual, including online publication.",
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pneumonia_x-ray.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Pneumonia_x-ray.jpg",
+    "image_license": "Public domain",
+    "image_title": "Pneumonia x-ray.jpg",
+    "image_alt": "Radiografías de tórax comparadas: normal y con neumonía (infiltrado), el patrón de referencia del artículo",
+    "image_author": "Autor no declarado",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
@@ -3327,7 +3333,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6037-sobrecarga-de-volumen.yaml",
       "archivos": {
@@ -3371,9 +3377,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -3501,7 +3507,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6038-lesion-intracraneal-en-traumatismo-craneal-leve.yaml",
       "archivos": {
@@ -3528,11 +3534,11 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Trauma_subdural.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Trauma_subdural.jpg",
+    "featured_image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Trauma_subdural_arrow.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Trauma_subdural_arrow.jpg",
     "image_license": "Public domain",
-    "image_title": "Trauma subdural.jpg",
-    "image_alt": "Tomografía computarizada craneal que demuestra colección hiperdensa extraaxial compatible con hematoma subdural postraumático",
+    "image_title": "Trauma subdural arrow.jpg",
+    "image_alt": "Tomografía de cráneo con hematoma subdural traumático señalado con una flecha",
     "image_author": "Glitzy queen00 at English Wikipedia",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
@@ -3618,7 +3624,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6039-estres-postraumatico.yaml",
       "archivos": {
@@ -3651,9 +3657,9 @@
     "subtitle": "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.",
     "date": "2026-09-18",
     "fecha_publicacion": "2026-09-18",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
@@ -3675,32 +3681,60 @@
       "lr_negativo": null,
       "lr_positivo_rango": null,
       "lr_negativo_rango": null,
-      "poblacion": null,
+      "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal",
       "referencia_id": "pmid:23100216",
       "referencia_cita": "Banks PA, Bollen TL, Dervenis C, Gooszen HG, Johnson CD, Sarr MG, Tsiotos GG, Vege SS Classification of acute pancreatitis--2012: revision of the Atlanta classification and definitions by international consensus Gut 2013",
       "pmid": "23100216",
-      "doi": "10.1136/gutjnl-2012-302779"
+      "doi": "10.1136/gutjnl-2012-302779",
+      "sensibilidad": 0.79,
+      "especificidad": 0.89
     },
     "evidencia": [
       {
         "concepto": "HM:0732",
         "rol": "prueba_especifica",
         "estado_lr": "no_medido",
-        "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
-        "nota": "el corte que usa el protocolo es más de tres veces el límite alto, que es también el que exige Atlanta. El cociente que holonmed le asigna no entra por falta de procedencia; ver «Fuera de alcance»."
+        "sensibilidad": 0.79,
+        "ic95_sensibilidad": [
+          0.54,
+          0.92
+        ],
+        "especificidad": 0.89,
+        "ic95_especificidad": [
+          0.46,
+          0.99
+        ],
+        "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal",
+        "ref": "pmid:28431198",
+        "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
+        "decision": "es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+        "nota": "el corte es más de tres veces el límite alto, que es también el que exige Atlanta. Las cifras sustituyen al cociente del protocolo de origen, que no declaraba procedencia. El estudio que aportó unos dos tercios de los participantes quedó fuera del análisis presentado por problemas con los participantes incluidos."
       },
       {
         "concepto": "HM:0731",
         "rol": "prueba_especifica",
         "estado_lr": "no_medido",
+        "sensibilidad": 0.72,
+        "ic95_sensibilidad": [
+          0.59,
+          0.82
+        ],
+        "especificidad": 0.93,
+        "ic95_especificidad": [
+          0.66,
+          0.99
+        ],
+        "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; amilasa sérica por encima de tres veces el límite normal",
+        "ref": "pmid:28431198",
+        "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
         "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
-        "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+        "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí."
       },
       {
         "concepto": "HM:0202",
         "rol": "manifestacion",
         "estado_lr": "no_medido",
-        "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que holonmed aprovecha de él es sobre todo su ausencia"
+        "decision": "fija la sospecha de partida. Sensible y poco específico, así que lo que se aprovecha de él es sobre todo su ausencia"
       },
       {
         "concepto": "HM:0302",
@@ -3719,7 +3753,7 @@
         "rol": "apoyo",
         "estado_lr": "no_medido",
         "decision": "raro pero llamativo: orienta a pancreatitis necrotizante o hemorrágica",
-        "advertencia": "su AUSENCIA no descarta nada, y por eso el protocolo de holonmed no le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad."
+        "advertencia": "su AUSENCIA no descarta nada, y por eso no se le declara cociente negativo. Es infrecuente incluso dentro de la enfermedad."
       },
       {
         "concepto": "HM:0901",
@@ -3731,7 +3765,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6040-pancreatitis-aguda.yaml",
       "archivos": {
@@ -3749,11 +3783,13 @@
         "conceptos/HM0732-hiperlipasemia.yaml": "b12f57b2eeca3e2cd72c9d2d39a02f46b456322b5845692f3abfe329c027f275",
         "conceptos/HM0900-hallazgo-de-imagen.yaml": "0b40c9368c746533cc335071c04e027c4465fb29158ed2cc747d65b9bb573e67",
         "conceptos/HM0901-hallazgos-de-imagen-compatibles-con-pancreatitis.yaml": "556099a1a0c2481e4eb806459f1ba00a07749282e3e74ce4efeb6a92d009e23a",
-        "condiciones/HM6040-pancreatitis-aguda.yaml": "94b5db0ea8c4f0d499e3eaf47866b480c8385aabda8242d591bde27b29636dad",
+        "condiciones/HM6040-pancreatitis-aguda.yaml": "e611ea546fa844fdd726005f15da408d3596946a89550963638742d1457d8e87",
         "referencias/pmid-23100216.yaml": "43d6b498ae28cb9451014d13d219e7caa00ea9fc8107af092b8c171438a26abd",
         "referencias/pmid-25088919.yaml": "b0be6e2c04299a8adea4085e3e6b28f10849d8bd0118e734da36efa36e1bef81",
         "referencias/pmid-26844279.yaml": "6c58e2666a253432e0cfa871160a02df14cacdcfc95e2f1425a8c29071db45b9",
-        "referencias/pmid-27820614.yaml": "0d9f1a12fd2c091c5b8dceb4b30aa62f209df443d05df3417253626d2660b596"
+        "referencias/pmid-27820614.yaml": "0d9f1a12fd2c091c5b8dceb4b30aa62f209df443d05df3417253626d2660b596",
+        "referencias/pmid-28431198.yaml": "2585ea3e375b75c9e33bff7301d6e75d2008c5bb2e68eebfd5f68dd6654afa22",
+        "referencias/pmid-6237447.yaml": "847a002a01f2be5533e4c6d7d9968888b25eb51537335404afff8e639a0b757d"
       }
     },
     "publicacion": {
@@ -3848,7 +3884,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6041-absceso-de-partes-blandas.yaml",
       "archivos": {
@@ -3984,7 +4020,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6001-hepatitis-viral-aguda.yaml",
       "archivos": {
@@ -4092,7 +4128,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6002-sindrome-intestino-irritable.yaml",
       "archivos": {
@@ -4255,7 +4291,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6019-luxacion-cadera-lactante.yaml",
       "archivos": {
@@ -4405,7 +4441,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6020-intubacion-dificil.yaml",
       "archivos": {
@@ -4462,7 +4498,7 @@
       "condicion_id": "HM:6021",
       "condicion_nombre": "Trastorno por consumo de alcohol",
       "concepto_id": "HM:3083",
-      "concepto_nombre": "Cuestionario AUDIT con puntuación ≥ 8",
+      "concepto_nombre": "Cuestionario AUDIT con puntuación de 8 o más",
       "estado_lr": "medido",
       "lr_positivo": 6.5,
       "lr_negativo": null,
@@ -4554,15 +4590,15 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6021-trastorno-consumo-alcohol.yaml",
       "archivos": {
         "CITATION.cff": "6e9c73a515bb6225965edda4efc52104a4e3b9776dab1bd4fce8e643d86eb1d2",
         "conceptos/HM0600-signo-de-exploracion.yaml": "86a2ac9babe66028eecc797ddbf4d9ea382a6fd685e9cb8df91bb959029d62bf",
-        "conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml": "4ad5e1df5b1314d9c53d47f705bd4249a293d7356e44534c91b744c675e66d35",
+        "conceptos/HM3083-cuestionario-audit-puntuacion-8-o-mas.yaml": "6d10e1f2aa61327a6b8fdcde9b9faa4f5c89a4973f84febd7e38eeb286252e92",
         "conceptos/HM3084-cuestionario-audit-c-positivo.yaml": "60e3da4774c89b58acb80595b1f82a226028c10b8c738cf7a7e6af4e1261cb37",
-        "conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml": "2be92861ce25aed9b93718a5047e7231b5269fc8f0d7ec0e99d530f31e33a406",
+        "conceptos/HM3085-cuestionario-audit-puntuacion-menor-8.yaml": "bc49eee03e5917e69acbb33e2e005ab845d77b8b73b007f527639c53b6f431dc",
         "conceptos/HM3086-audit-postparto-puntuacion-4-o-mas.yaml": "aaa992fc60e316a7203b23e37ff2d8e6f109ad56e0310cde66ad69fb875a0294",
         "conceptos/HM3087-tweak-t-ace-menor-2-postparto.yaml": "4b778da7722fe4d93254cea0e7d90d584d874ef12c531adbc35472dc7c1f0433",
         "condiciones/HM6021-trastorno-consumo-alcohol.yaml": "e27cb171039f913be4df5fd8646d06ec7034a6b759233d30c2601c3265e6e0f1",
@@ -4839,7 +4875,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6003-mononucleosis-infecciosa.yaml",
       "archivos": {
@@ -4860,7 +4896,7 @@
         "conceptos/HM3184-matidez-en-espacio-de-traube.yaml": "aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9",
         "conceptos/HM3185-signo-de-percusion-de-castell.yaml": "493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f",
         "condiciones/HM6003-mononucleosis-infecciosa.yaml": "fdd67306d3d26ce5724613adc81b59ab01bd965186ce7c3d82ca67bf267ce2e9",
-        "condiciones/HM6047-esplenomegalia.yaml": "62abb851775465a9520dccdb108d73114afb5ac5e7c5d516b1b22a7992153955",
+        "condiciones/HM6047-esplenomegalia.yaml": "101d444603bb27f433b62a785f3ce11930be9b69e13e79633de94012ccff9c03",
         "referencias/pmid-25774295.yaml": "a22df30cf7f245df0ade141487ffe5a6ce5d9f7a45bf4833fbb030f249e7c7ab",
         "referencias/pmid-25822555.yaml": "a0e7997279e60745f64a2474332b4637d7d316a9dae025a6008c2af7ac5d2718",
         "referencias/pmid-27115266.yaml": "668a562cc651aa3a28a6b5f3e3519ad1b80287b8bf35f31c7f32225a9013f17b",
@@ -4991,7 +5027,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6005-derrame-pleural-exudativo.yaml",
       "archivos": {
@@ -5146,7 +5182,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6006-aneurisma-aorta-abdominal.yaml",
       "archivos": {
@@ -5180,9 +5216,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "fecha_publicacion": "2026-08-21",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "cardiologia",
     "category_label": "Cardiología",
@@ -5297,7 +5333,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6007-sindrome-coronario-agudo.yaml",
       "archivos": {
@@ -5494,7 +5530,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6008-hipovolemia.yaml",
       "archivos": {
@@ -5536,9 +5572,9 @@
     "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
     "date": "2026-08-21",
     "fecha_publicacion": "2026-08-21",
-    "fecha_revision": null,
-    "version": null,
-    "has_caso": false,
+    "fecha_revision": "2026-10-16",
+    "version": 1,
+    "has_caso": true,
     "author": "Dr. Alcy Torres",
     "category": "infectologia",
     "category_label": "Infectología y Atención Primaria",
@@ -5632,7 +5668,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6009-faringitis-estreptococica.yaml",
       "archivos": {
@@ -5665,12 +5701,12 @@
     },
     "has_quiz": true,
     "quiz_count": 2,
-    "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pharyngitis%2C_COVID-19.jpg/1280px-Pharyngitis%2C_COVID-19.jpg",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Pharyngitis,_COVID-19.jpg",
-    "image_license": "CC0",
-    "image_title": "Pharyngitis, COVID-19.jpg",
-    "image_alt": "Orofaringe con eritema faríngeo en un paciente con faringitis",
-    "image_author": "FreeMediaKid!",
+    "featured_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Streptococcal_pharyngitis_1.jpg/1280px-Streptococcal_pharyngitis_1.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Streptococcal_pharyngitis_1.jpg",
+    "image_license": "Public domain",
+    "image_title": "Streptococcal pharyngitis 1.jpg",
+    "image_alt": "Orofaringe con amígdalas enrojecidas y exudado blanquecino en una faringitis estreptocócica",
+    "image_author": "en:User:RescueFF",
     "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia."
   },
   {
@@ -5898,7 +5934,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6010-sincope-cardiaco.yaml",
       "archivos": {
@@ -6070,7 +6106,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6011-infeccion-precoz-por-vih.yaml",
       "archivos": {
@@ -6278,7 +6314,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6012-artrosis-de-cadera.yaml",
       "archivos": {
@@ -6396,7 +6432,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6013-enfermedad-del-manguito-rotador.yaml",
       "archivos": {
@@ -6501,7 +6537,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6014-rotura-completa-del-manguito-rotador.yaml",
       "archivos": {
@@ -6590,7 +6626,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6015-enfermedad-de-parkinson.yaml",
       "archivos": {
@@ -6819,7 +6855,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6016-embarazo-ectopico.yaml",
       "archivos": {
@@ -6954,7 +6990,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6017-conjuntivitis-bacteriana.yaml",
       "archivos": {
@@ -7051,7 +7087,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6018-apnea-obstructiva-del-sueno.yaml",
       "archivos": {
@@ -7227,7 +7263,7 @@
     ],
     "fuente": {
       "repositorio": "alcyedmundo281/medsemiotics-db",
-      "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+      "revision": "af44eec90966a41d8052c3605c90a480ad042299",
       "doi": "10.5281/zenodo.22064424",
       "condicion": "condiciones/HM6004-meningitis-aguda.yaml",
       "archivos": {

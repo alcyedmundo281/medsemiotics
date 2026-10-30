@@ -1,0 +1,186 @@
+# Caso socrático para Lesión intracraneal en el traumatismo craneal leve del adulto (HM:6038).
+# El eje docente son las reglas de decisión y los puntos de corte: el valor de esta condición
+# está en el cociente NEGATIVO de una regla (no pedir la tomografía), mientras que los cocientes
+# positivos individuales son modestos o muy imprecisos. Tres de los hallazgos son cortes distintos
+# de la misma escala de Glasgow y no se pueden multiplicar. Sirve a la sesión 11 del curso
+# (reglas de decisión clínica, puntos de corte y curvas ROC).
+condicion_id: HM:6038
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Explicar por qué en el traumatismo craneal leve la utilidad de una regla de decisión está en su cociente negativo y qué decisión sostiene.
+  - Distinguir el valor de un hallazgo con intervalo de confianza estrecho de uno con intervalo muy amplio o con un rango entre estudios.
+  - Reconocer que los distintos cortes del Glasgow (exacto 13, menor de 14 a las dos horas, descenso) no son hallazgos independientes ni se multiplican.
+  - Interpretar qué cambia cuando se mueve un punto de corte (14 en lugar de 15) y por qué los cocientes dejan de aplicar.
+  - Decidir la tomografía en un paciente con y sin criterios, reconociendo los límites de la evidencia.
+vineta:
+  titulo: Atropellado en la avenida
+  texto: >-
+    Hombre de 34 años, atropellado por un automóvil mientras cruzaba una avenida, que llega a
+    urgencias traído por una ambulancia. Los paramédicos refieren que en el lugar estaba
+    consciente y orientado, con Glasgow de 15, sin pérdida de conciencia evidente. Durante el
+    traslado vomitó en dos ocasiones y se quejó de dolor de cabeza. No toma anticoagulantes y
+    no refiere consumo de alcohol. Tiene una herida en el cuero cabelludo, una escoriación en
+    la cadera derecha y dolor en la muñeca.
+  datos:
+    - etiqueta: Presión arterial
+      valor: 138/84 mmHg
+    - etiqueta: Frecuencia cardíaca
+      valor: 92 lpm
+    - etiqueta: Saturación de oxígeno
+      valor: 97 % al aire ambiente
+    - etiqueta: Glucemia capilar
+      valor: 104 mg/dl
+etapas:
+  - titulo: Antes de decidir la tomografía
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          ¿Qué estás tratando de evitar con la tomografía en este paciente y qué estás
+          tratando de evitar al no pedirla?
+        clave: >-
+          Se busca no perder una lesión intracraneal que requiera intervención y, a la vez,
+          no exponer a radiación, ni saturar el servicio, a la mayoría de los pacientes con
+          traumatismo leve, en quienes no hay lesión. Es un problema de umbrales: la
+          tomografía se pide cuando la probabilidad de lesión supera el umbral de prueba. El
+          artículo registra la probabilidad basal de lesión intracraneal grave en adultos con
+          traumatismo craneal leve y avisa de que hay un desenlace más estrecho (mortal o
+          quirúrgico) con otra prevalencia, a la que no corresponden estos cocientes.
+      - pregunta: >-
+          Antes de explorarlo, ¿qué datos de la historia ya modifican tu sospecha?
+        clave: >-
+          El mecanismo (un atropello es de alta energía), los vómitos repetidos y la cefalea,
+          además de la ausencia de anticoagulantes, que es una buena noticia. La base separa
+          explícitamente lo que se pregunta de lo que se explora: el mecanismo y los vómitos
+          están disponibles antes de tocar al paciente y rinden tanto como buena parte de la
+          exploración.
+  - titulo: Lo que cuentan los paramédicos
+    fase: exploracion
+    hallazgos: [HM:3053, HM:3052]
+    informacion: >-
+      El paciente es un {{hallazgo HM:3053}}, y durante el traslado tuvo {{hallazgo HM:3052}}.
+    preguntas:
+      - pregunta: >-
+          El atropello y los vómitos repetidos aumentan la probabilidad. Compara cómo se
+          expresa la incertidumbre de cada cociente.
+        clave: >-
+          Al hallazgo «{{hallazgo HM:3052}}» le corresponde {{lr+ HM:3052}}, un cociente con intervalo de
+          confianza estrecho: el más preciso de la serie. Al hallazgo «{{hallazgo HM:3053}}», en
+          cambio, {{lr+ HM:3053}}, que es un rango entre estudios y no un intervalo de
+          confianza. Parecen equivalentes pero no lo son: uno describe la precisión de una
+          estimación, el otro la dispersión entre mediciones, y la base advierte que no se
+          pueden combinar como si lo fueran.
+      - pregunta: >-
+          El vómito aislado, ¿lleva ese mismo cociente?
+        clave: >-
+          No. La advertencia de la ficha es que lo que discrimina son dos o más episodios.
+          Aplicar el cociente a un solo vómito es usar un número en una población para la
+          que no fue medido. Los puntos de corte importan tanto como los valores.
+  - titulo: Examen neurológico y de cráneo
+    fase: exploracion
+    hallazgos: [HM:3050, HM:3051]
+    informacion: >-
+      A la llegada, el paciente está somnoliento pero obedece órdenes, con una
+      {{hallazgo HM:3050}}, y como en el lugar del accidente tenía 15, hubo un
+      {{hallazgo HM:3051}} desde entonces.
+    preguntas:
+      - pregunta: >-
+          El Glasgow de 13 y el descenso desde 15 son dos hallazgos distintos en la base. ¿Son
+          independientes entre sí? ¿Los multiplicas?
+        clave: >-
+          No son independientes: describen el mismo hecho, un deterioro del nivel de
+          conciencia, medido de dos maneras. Multiplicar sus cocientes contaría dos veces
+          la misma información y sobrestimaría la probabilidad. El hallazgo «{{hallazgo HM:3050}}» tiene
+          {{lr+ HM:3050}} y es la puntuación exacta de 13, no «13 o menos». El hallazgo
+          «{{hallazgo HM:3051}}» se expresa como {{lr+ HM:3051}}, un rango tan amplio que no
+          puede tratarse como una estimación única.
+      - pregunta: >-
+          ¿Qué ocurre con los cocientes si en lugar de un Glasgow de exactamente 13 el
+          paciente tuviera 14?
+        clave: >-
+          No aplicarían: el cociente corresponde a la puntuación exacta, y la base registra
+          el Glasgow por debajo de 14 como otra arista, con otro cociente y otra condición
+          de tiempo. Cambiar el punto de corte cambia el hallazgo, y con él el número. Es la
+          misma lección que la de la taquipnea o la fiebre en otras condiciones.
+  - titulo: A las dos horas
+    fase: discriminacion
+    hallazgos: [HM:3152, HM:3049]
+    informacion: >-
+      A las dos horas el paciente sigue con {{hallazgo HM:3152}}. Al examinar la cabeza
+      aparecen {{hallazgo HM:3049}}: una equimosis retroauricular (signo de Battle) y sangre
+      detrás del tímpano.
+    preguntas:
+      - pregunta: >-
+          Los signos de fractura de cráneo tienen el cociente positivo más alto de la serie.
+          ¿Qué significa que su intervalo sea tan amplio?
+        clave: >-
+          El hallazgo «{{hallazgo HM:3049}}» tiene {{lr+ HM:3049}}, con {{esp HM:3049}}. El intervalo
+          es amplísimo: el hallazgo es raro y la estimación muy imprecisa. La ficha lo
+          resume bien: lo que sostiene la decisión es el extremo inferior, no el valor
+          puntual. Aun en el peor caso de la estimación el cociente sigue siendo moderado,
+          así que la conclusión (pedir la tomografía) no depende de la imprecisión.
+      - pregunta: >-
+          El Glasgow persiste bajo a las dos horas. ¿Qué aporta, y qué ocurre con el corte
+          que publicó el artículo original?
+        clave: >-
+          El hallazgo «{{hallazgo HM:3152}}» tiene {{lr+ HM:3152}} y pesa por sí mismo, con
+          independencia del Glasgow de llegada. La nota de la ficha es una enseñanza en sí
+          misma: este cociente no estaba en el resumen original; lo aporta una corrección
+          publicada, que cambió el corte de 15 a 14 y los cocientes a la vez. Un punto de
+          corte no es un detalle: mover una unidad cambia el número que se publica y,
+          con ello, la conducta de quien lo aplica.
+      - pregunta: >-
+          Con todo lo reunido, ¿tiene sentido calcular una probabilidad multiplicando todos
+          los cocientes? ¿Qué hace una regla de decisión en su lugar?
+        clave: >-
+          No: los hallazgos de Glasgow no son independientes, hay rangos que no son
+          intervalos y los cortes cambian entre aristas. Una regla de decisión como la
+          Canadian CT Head Rule evita ese cálculo: reúne criterios y su valor está en el
+          cociente negativo, una regla negativa deja la lesión intracraneal muy improbable.
+          Para este paciente la regla es positiva desde el primer criterio, y la
+          tomografía se pide sin más cálculo.
+  - titulo: Qué hacer
+    fase: decision
+    preguntas:
+      - pregunta: >-
+          Para este paciente, ¿qué decides? Ahora compáralo con un adulto que se cayó de su
+          altura, tiene Glasgow de 15, sin vómitos, sin signos de fractura y sin amnesia.
+        clave: >-
+          Para el atropellado, tomografía sin demora y observación en un entorno con
+          capacidad neuroquirúrgica. Para el segundo paciente, si no cumple ningún criterio
+          de la regla, el cociente negativo (el más fuerte de la condición) hace la lesión
+          muy improbable y sostiene la decisión de no pedir la tomografía, con instrucciones
+          de alarma al alta. El valor práctico de la condición está ahí, en los cocientes
+          negativos y no en los positivos.
+      - pregunta: >-
+          ¿Qué no puede responder la evidencia de este artículo?
+        clave: >-
+          Los componentes de las reglas no están en el resumen de la fuente, así que la
+          base no puede desglosarlos. La amnesia, un componente de otra regla, no tiene
+          cociente aislado. No se documenta el efecto de la anticoagulación ni de la edad
+          avanzada, que modifican el riesgo. Tampoco se documentan el manejo ni la
+          observación posterior.
+cierre:
+  sintesis: >-
+    En el traumatismo craneal leve del adulto, los hallazgos individuales tienen cocientes
+    positivos modestos o muy imprecisos, y varios de ellos son cortes distintos de la misma
+    escala que no pueden multiplicarse. El valor de la condición está en el cociente negativo de
+    una regla de decisión: una regla sin ningún criterio presente (negativa) hace muy
+    improbable la lesión y sostiene la decisión de no pedir la tomografía.
+  necesidades_aprendizaje:
+    - >-
+      Componentes y puntos de corte de la Canadian CT Head Rule y de los New Orleans Criteria,
+      pendientes del texto completo de la fuente.
+    - >-
+      Cociente aislado de la amnesia, la cefalea y la edad avanzada.
+    - >-
+      Efecto de la anticoagulación y la antiagregación sobre el riesgo de lesión.
+    - >-
+      Manejo del paciente en observación y criterios de alta; no documentados en la base.
+omitidos: []

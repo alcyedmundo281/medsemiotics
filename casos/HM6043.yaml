@@ -1,0 +1,197 @@
+# Caso socrático para Apendicitis aguda (HM:6043).
+# El eje docente es doble: (1) la clínica de la apendicitis (dolor, irritación peritoneal,
+# leucocitosis, fiebre) no tiene cociente medido en la base, de modo que la probabilidad
+# previa a la imagen es un juicio que el estudiante debe declarar y defender; (2) la ecografía
+# a pie de cama tiene un LR+ moderado y un LR− que no basta para descartar si el apéndice no
+# se ve. Sirve a la sesión 5 del curso (probabilidad pretest, odds y nomograma de Fagan).
+condicion_id: HM:6043
+estado: publicado
+autoria:
+  autor: Dr. Alcy Torres
+  revisor: Dr. Alcy Torres
+publicacion:
+  fecha: 2026-10-16
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Declarar y justificar una probabilidad pretest de apendicitis cuando la base no la documenta, y reconocer qué datos clínicos la sostienen.
+  - Aplicar el cociente positivo y el negativo de la ecografía a pie de cama sobre esa probabilidad, con la calculadora bayesiana del artículo.
+  - Explicar por qué una sensibilidad alta con especificidad moderada produce un LR+ modesto y un LR− que descarta solo en parte.
+  - Distinguir un estudio negativo de uno no concluyente (apéndice no visualizado) y decidir el paso siguiente.
+  - Reconocer qué mimetizadores pueden dar un falso positivo ecográfico.
+vineta:
+  titulo: Dolor que empezó en el ombligo
+  texto: >-
+    Mujer de 26 años que consulta a urgencias por dolor abdominal de dieciocho horas. Empezó
+    alrededor del ombligo, difuso, y desde hace unas horas se ubica en la parte baja
+    derecha del abdomen y es más intenso. Tuvo náuseas y un vómito, y no tiene hambre. No
+    refiere diarrea ni síntomas urinarios. Última menstruación hace tres semanas, con ciclos
+    regulares; no usa anticonceptivos. No ha tenido cirugías abdominales. Ha tomado un
+    analgésico sin alivio.
+  datos:
+    - etiqueta: Temperatura
+      valor: 37.9 °C
+    - etiqueta: Frecuencia cardíaca
+      valor: 98 lpm
+    - etiqueta: Presión arterial
+      valor: 118/72 mmHg
+    - etiqueta: Saturación de oxígeno
+      valor: 99 % al aire ambiente
+etapas:
+  - titulo: Antes de explorarla
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          ¿Qué diagnósticos consideras en una mujer joven con dolor en la parte baja derecha
+          del abdomen? ¿Cuál de ellos no puedes dejar pasar y por qué?
+        clave: >-
+          Apendicitis aguda, adenitis mesentérica, enteritis infecciosa, enfermedad de Crohn,
+          infección urinaria o litiasis ureteral y, en una mujer en edad fértil, patología
+          ginecológica: quiste ovárico complicado, torsión de anexo, salpingitis y embarazo
+          ectópico. Este último no puede dejarse pasar porque se descarta con una prueba de
+          embarazo, es barata y cambia por completo la conducta. Pedirla es el primer paso
+          antes de cualquier imagen.
+      - pregunta: >-
+          La migración del dolor del ombligo a la fosa ilíaca derecha, ¿qué mecanismo la
+          explica y cuánto vale como dato?
+        clave: >-
+          El dolor inicial es visceral y mal localizado porque la obstrucción y la distensión
+          del apéndice estimulan fibras viscerales; cuando la inflamación alcanza el
+          peritoneo parietal el dolor se localiza en la fosa ilíaca derecha. Es una secuencia
+          clásica y sugestiva, pero esta base no registra un cociente para ella, ni para
+          ningún dato clínico de este artículo: la sospecha previa a la imagen es, por tanto,
+          un juicio que tendrás que declarar.
+  - titulo: Lo que dice la clínica
+    fase: exploracion
+    hallazgos: [HM:0204, HM:0601, HM:0101, HM:0712]
+    informacion: >-
+      La paciente tiene {{hallazgo HM:0204}} y a la palpación hay {{hallazgo HM:0601}} con
+      defensa localizada. Está con {{hallazgo HM:0101}} de bajo grado y el hemograma
+      muestra {{hallazgo HM:0712}} con predominio de neutrófilos. La prueba de embarazo en
+      orina es negativa.
+    preguntas:
+      - pregunta: >-
+          La base no registra cociente para ninguno de estos hallazgos. ¿Eso significa que no
+          sirven? ¿Cómo los usas para fijar tu probabilidad pretest?
+        clave: >-
+          No significa que no sirvan: la base los clasifica como {{estado HM:0204}} y los
+          documenta con su rol, pero no hay una medición que cuantificar. El
+          {{hallazgo HM:0204}} es el motivo de consulta; la {{hallazgo HM:0601}} es la
+          prueba clínica más específica del grupo; la {{hallazgo HM:0101}} y la
+          {{hallazgo HM:0712}} apoyan. Lo honesto es declarar una probabilidad pretest
+          razonada («alta», «intermedia»), mostrar el cálculo para dos valores plausibles y
+          señalar que el resultado depende de ese punto de partida. Es un ejemplo de por qué
+          la probabilidad previa es tan importante como el cociente.
+      - pregunta: >-
+          ¿Por qué no sumas simplemente los hallazgos clínicos como si cada uno empujara la
+          probabilidad?
+        clave: >-
+          Porque sin cociente medido para cada uno no hay forma legítima de combinarlos, y
+          porque son manifestaciones del mismo proceso inflamatorio (no son independientes).
+          Los médicos suelen resolver esto con escalas validadas, que la base no incorpora
+          para esta condición: es una necesidad de aprendizaje que conviene recordar al
+          decidir con cuánta seguridad se llega a la imagen.
+  - titulo: La ecografía a pie de cama
+    fase: discriminacion
+    hallazgos: [HM:3177]
+    informacion: >-
+      El médico de urgencias realiza una ecografía con compresión graduada. En la fosa
+      ilíaca derecha ve una estructura tubular ciega, no compresible, con diámetro mayor de
+      6 mm y dolor localizado al presionar con la sonda: {{hallazgo HM:3177}}.
+    preguntas:
+      - pregunta: >-
+          Con tu probabilidad pretest, calcula con la calculadora del artículo la
+          probabilidad postest tras una ecografía positiva. ¿Basta para operar?
+        clave: >-
+          El {{hallazgo HM:3177}} tiene {{lr+ HM:3177}}, medido en una población de adultos
+          de urgencias con sospecha de apendicitis. Es un cociente modesto: con
+          {{esp HM:3177}}, el resultado positivo desplaza la probabilidad pero
+          no la lleva a la certeza. Cuánto sube depende de tu punto de partida: con un
+          pretest ya alto el postest queda alto, con uno intermedio queda en una zona que
+          justifica valoración quirúrgica y a menudo una tomografía. La decisión que la ficha
+          recoge es solicitar valoración quirúrgica, no operar automáticamente.
+      - pregunta: >-
+          La sensibilidad es alta y la especificidad, moderada. ¿Qué consecuencias tiene
+          eso para un resultado positivo y para uno negativo?
+        clave: >-
+          Con {{sens HM:3177}}, la mayoría de los enfermos tiene una ecografía positiva,
+          pero con {{esp HM:3177}}, que es moderada, quedan muchos falsos positivos, y por
+          eso el cociente positivo es bajo: {{lr+ HM:3177}}. En el otro sentido, {{lr- HM:3177}} reduce de
+          forma apreciable la probabilidad, pero un solo estudio negativo no la lleva a un
+          nivel en que se pueda descartar, sobre todo si el pretest era alto.
+      - pregunta: >-
+          Imagina que el apéndice no se visualiza porque hay gas cecal. ¿Cuenta eso como
+          estudio negativo?
+        clave: >-
+          No: la advertencia de la ficha es explícita. Un estudio no concluyente por no
+          visualización del apéndice o por gas cecal no descarta la apendicitis y exige
+          tomografía o un periodo de observación. Aplicar el cociente negativo a un estudio
+          no concluyente es un error de lectura: el cociente corresponde a un estudio
+          interpretable y negativo.
+      - pregunta: >-
+          ¿Qué otros diagnósticos pueden dar una ecografía aparentemente positiva en esta
+          paciente?
+        clave: >-
+          Según las advertencias de la ficha: un apéndice normal de calibre en el límite alto
+          sin dolor ni cambios parietales, una adenitis mesentérica, un íleon terminal
+          engrosado por enteritis infecciosa o enfermedad de Crohn, la diverticulitis
+          cecal o la apendagitis epiploica, y la patología ginecológica del lado derecho
+          (salpingitis, quiste hemorrágico, torsión de anexo). En una mujer joven, esto último
+          obliga a mirar la pelvis y no solo la fosa ilíaca.
+  - titulo: Qué hacer a continuación
+    fase: decision
+    preguntas:
+      - pregunta: >-
+          Con tu probabilidad pretest y la ecografía positiva, ¿cuál es tu conducta? ¿Qué
+          cambiaría si la ecografía no hubiera sido concluyente?
+        clave: >-
+          Con ecografía positiva en este contexto, valoración quirúrgica con analgesia y
+          antibiótico según el protocolo local. Si el estudio no es concluyente, la salida es
+          una tomografía o la observación con reevaluación seriada, no el alta. El criterio de
+          fondo es de umbrales: la probabilidad en la que el beneficio de operar supera su
+          riesgo es baja porque la apendicitis no tratada puede perforarse, y por eso se
+          tolera operar a algunos pacientes sin apendicitis; cuánto exactamente depende del
+          servicio y no lo documenta la base.
+      - pregunta: >-
+          La fuente indica que otros estudios de ecografía reglada alcanzan mayor
+          especificidad que el POCUS general. ¿Qué te dice eso sobre aplicar el cociente a tu
+          propio hospital?
+        clave: >-
+          Que el cociente no es una propiedad de la prueba sino del conjunto prueba, operador
+          y protocolo. La nota de uso de la ficha contrapone el estudio de médicos de
+          urgencias con los metaanálisis de ecografía reglada, que excluyen casos
+          indeterminados y rinden más. El valor que usas es válido para un POCUS general de
+          urgencias; si la ecografía la hace un radiólogo con protocolo, el rendimiento puede
+          ser distinto y no debe asumirse el mismo número.
+      - pregunta: >-
+          ¿Qué no puede responder esta evidencia?
+        clave: >-
+          No documenta la probabilidad basal ni cocientes para la clínica, de modo que el
+          pretest es un juicio. No cubre a niños ni a embarazadas, que tienen otras
+          consideraciones de imagen. No registra el rendimiento de la tomografía en este
+          artículo. Y el cociente proviene de un único estudio con intervalos de confianza
+          visibles, que conviene leer: la incertidumbre del LR es parte del dato.
+cierre:
+  sintesis: >-
+    En la apendicitis aguda, la clínica orienta pero esta base no la cuantifica, así que la
+    probabilidad previa es un juicio que se declara. La ecografía a pie de cama aporta un
+    cociente positivo moderado y un cociente negativo que reduce la probabilidad sin
+    permitir descartar, y un estudio no concluyente no cuenta como negativo. La decisión
+    pasa por la valoración quirúrgica o por la tomografía, según el resultado y el pretest.
+  necesidades_aprendizaje:
+    - >-
+      Probabilidad basal de apendicitis en pacientes con dolor abdominal en fosa ilíaca
+      derecha, y escalas clínicas validadas (por ejemplo Alvarado o AIR), que la base no
+      incorpora para esta condición.
+    - >-
+      Cocientes de los hallazgos clínicos y de laboratorio de este artículo, marcados como
+      no medidos.
+    - >-
+      Rendimiento de la tomografía y de la resonancia, y su papel tras una ecografía no
+      concluyente.
+    - >-
+      Manejo antibiótico frente al quirúrgico de la apendicitis no complicada, no
+      documentado en la base.
+    - >-
+      Diagnóstico por imagen en niños y embarazadas.
+omitidos: []

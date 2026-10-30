@@ -2149,11 +2149,11 @@
     "doi": "10.1001/jama.2024.3101",
     "referencia_cita": "Wood E, Pan J, Cui Z, Bach P, Dennis B, Nolan S, Socias ME Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review JAMA 2024",
     "triada": {
-      "significante": "Cuestionario AUDIT con puntuación ≥ 8",
+      "significante": "Cuestionario AUDIT con puntuación de 8 o más",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
     },
-    "pregunta": "En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR positivo para «Cuestionario AUDIT con puntuación ≥ 8»? Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633).",
+    "pregunta": "En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR positivo para «Cuestionario AUDIT con puntuación de 8 o más»? Población: adultos evaluados con cuestionario AUDIT frente a criterios diagnósticos DSM-5 (n = 79 633).",
     "opciones": [
       {
         "texto": "El valor 6.5 corresponde al LR negativo y no al LR positivo.",
@@ -2205,11 +2205,11 @@
     "doi": "10.1001/jama.2024.3101",
     "referencia_cita": "Wood E, Pan J, Cui Z, Bach P, Dennis B, Nolan S, Socias ME Does This Patient Have Alcohol Use Disorder?: The Rational Clinical Examination Systematic Review JAMA 2024",
     "triada": {
-      "significante": "Cuestionario AUDIT con puntuación ≥ 8",
+      "significante": "Cuestionario AUDIT con puntuación de 8 o más",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
       "decision": "AUDIT ≥ 8: el instrumento estándar de cribado. Con LR+ de 6.5 global (6.9 en mujeres y 3.8 en hombres), confirma alta probabilidad de trastorno por consumo de alcohol según DSM-5 y exige intervención breve o derivación."
     },
-    "pregunta": "En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR negativo para «Cuestionario AUDIT con puntuación < 8»? Población: adultos evaluados con AUDIT.",
+    "pregunta": "En Trastorno por consumo de alcohol, ¿cuál es el resultado documentado del LR negativo para «Cuestionario AUDIT con puntuación menor de 8»? Población: adultos evaluados con AUDIT.",
     "opciones": [
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
@@ -3029,7 +3029,7 @@
       },
       "poblacion": null,
       "motivo": null,
-      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca",
+      "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
@@ -3040,24 +3040,24 @@
     "triada": {
       "significante": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+      "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca"
     },
     "pregunta": "En Hipertensión arterial en adultos, ¿cuál es el resultado documentado del LR positivo para «Presión arterial en consulta mayor o igual a 140/90 mmHg»?",
     "opciones": [
       {
         "texto": "LR positivo: 4.2.",
         "correcta": true,
-        "feedback": "LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+        "feedback": "LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca."
       },
       {
         "texto": "El valor 4.2 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca."
       },
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR positivo: 4.2. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca."
+        "feedback": "Sí hay una medición documentada: LR positivo: 4.2. LR positivo: 4.2. IC del 95 %: 2.9 a 6.1. Interpretación registrada: una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca."
       }
     ]
   },
@@ -3085,7 +3085,7 @@
       },
       "poblacion": null,
       "motivo": null,
-      "decision": "la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida",
+      "decision": "una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
@@ -3096,24 +3096,24 @@
     "triada": {
       "significante": "Presión arterial en consulta mayor o igual a 140/90 mmHg",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "una cifra elevada en consulta quintuplica aproximadamente la odds pero exige confirmación fuera de consulta por bata blanca"
+      "decision": "una cifra elevada en consulta aumenta de forma apreciable la odds de hipertensión pero exige confirmación fuera de consulta por bata blanca"
     },
     "pregunta": "En Hipertensión arterial en adultos, ¿cuál es el resultado documentado del LR positivo para «Automonitorización domiciliaria (AMPA) mayor o igual a 135/85 mmHg»?",
     "opciones": [
       {
         "texto": "El valor 3.1 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca."
       },
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.1. LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca."
       },
       {
         "texto": "LR positivo: 3.1.",
         "correcta": true,
-        "feedback": "LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: la automonitorización domiciliaria presenta un excelente cociente negativo (LR- 0.33) para descartar hipertensión mantenida."
+        "feedback": "LR positivo: 3.1. IC del 95 %: 2.3 a 4.2. Interpretación registrada: una automonitorización domiciliaria por debajo del corte reduce la probabilidad de hipertensión mantenida; la fuente la presenta, junto con el MAPA, como la vía para confirmar el diagnóstico definitivo y descartar la bata blanca."
       }
     ]
   },
@@ -3470,7 +3470,7 @@
       },
       "poblacion": null,
       "motivo": null,
-      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)",
+      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
@@ -3481,24 +3481,24 @@
     "triada": {
       "significante": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)"
+      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad"
     },
     "pregunta": "En Cáncer de mama, ¿cuál es el resultado documentado del LR positivo para «Masa mamaria palpable o hallazgo sospechoso en la exploración»?",
     "opciones": [
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR positivo: 10.6. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)."
+        "feedback": "Sí hay una medición documentada: LR positivo: 10.6. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad."
       },
       {
         "texto": "LR positivo: 10.6.",
         "correcta": true,
-        "feedback": "LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)."
+        "feedback": "LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad."
       },
       {
         "texto": "El valor 10.6 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 10.6. IC del 95 %: 5.8 a 19.2. Interpretación registrada: el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad."
       }
     ]
   },
@@ -3526,7 +3526,7 @@
       },
       "poblacion": null,
       "motivo": null,
-      "decision": "una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado",
+      "decision": "una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
@@ -3537,24 +3537,24 @@
     "triada": {
       "significante": "Masa mamaria palpable o hallazgo sospechoso en la exploración",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad (LR+ 10.6)"
+      "decision": "el hallazgo de una masa dominante o nódulo sospechoso en el examen clínico eleva marcadamente la probabilidad"
     },
     "pregunta": "En Cáncer de mama, ¿cuál es el resultado documentado del LR negativo para «Examen clínico de mama reglado normal»?",
     "opciones": [
       {
         "texto": "LR negativo: 0.47.",
         "correcta": true,
-        "feedback": "LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado."
+        "feedback": "LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado."
       },
       {
         "texto": "El valor 0.47 corresponde al LR positivo y no al LR negativo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado."
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado."
       },
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR negativo: 0.47. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta (LR- 0.47) pero no excluye la necesidad de mamografía de cribado."
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.47. LR negativo: 0.47. IC del 95 %: 0.4 a 0.56. Interpretación registrada: una palpación normal reduce la probabilidad de forma modesta pero no excluye la necesidad de mamografía de cribado."
       }
     ]
   },
@@ -4026,37 +4026,37 @@
       "estado_lr": "no_medido",
       "campo": null,
       "dato": null,
-      "poblacion": null,
-      "motivo": null,
-      "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
+      "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal",
+      "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
+      "decision": "es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": null,
-    "pmid": null,
-    "doi": null,
+    "referencia_id": "pmid:28431198",
+    "pmid": "28431198",
+    "doi": "10.1002/14651858.CD012010.pub2",
     "referencia_cita": null,
     "triada": {
       "significante": "Hiperlipasemia",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas"
+      "decision": "es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas"
     },
     "pregunta": "En Pancreatitis aguda, ¿qué estado de la evidencia corresponde a «Hiperlipasemia» según la fuente?",
     "opciones": [
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal. Motivo: la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí. Interpretación registrada: es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
       },
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "LR no medido Interpretación registrada: es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
+        "feedback": "LR no medido Población: personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal. Motivo: la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí. Interpretación registrada: es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
       },
       {
         "texto": "LR no medible",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: personas con dolor abdominal agudo que acuden a urgencias; lipasa sérica por encima de tres veces el límite normal. Motivo: la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí. Interpretación registrada: es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas."
       }
     ]
   },
@@ -4075,37 +4075,37 @@
       "estado_lr": "no_medido",
       "campo": null,
       "dato": null,
-      "poblacion": null,
-      "motivo": null,
+      "poblacion": "personas con dolor abdominal agudo que acuden a urgencias; amilasa sérica por encima de tres veces el límite normal",
+      "motivo": "la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí",
       "decision": "el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes",
-      "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+      "advertencia": "no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí."
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": null,
-    "pmid": null,
-    "doi": null,
+    "referencia_id": "pmid:28431198",
+    "pmid": "28431198",
+    "doi": "10.1002/14651858.CD012010.pub2",
     "referencia_cita": null,
     "triada": {
       "significante": "Hiperlipasemia",
       "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
-      "decision": "es el criterio de referencia de laboratorio y el que holonmed considera más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas"
+      "decision": "es el criterio de referencia de laboratorio y el más discriminante, por encima de la amilasa: se eleva más tiempo y es más específica del páncreas"
     },
     "pregunta": "En Pancreatitis aguda, ¿qué estado de la evidencia corresponde a «Hiperamilasemia» según la fuente?",
     "opciones": [
       {
         "texto": "LR no medido",
         "correcta": true,
-        "feedback": "LR no medido Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+        "feedback": "LR no medido Población: personas con dolor abdominal agudo que acuden a urgencias; amilasa sérica por encima de tres veces el límite normal. Motivo: la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí. Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí."
       },
       {
         "texto": "LR no medible",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: personas con dolor abdominal agudo que acuden a urgencias; amilasa sérica por encima de tres veces el límite normal. Motivo: la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí. Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí."
       },
       {
         "texto": "Sin efecto discriminativo",
         "correcta": false,
-        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y el propio protocolo de holonmed bloquea el emparejamiento."
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Población: personas con dolor abdominal agudo que acuden a urgencias; amilasa sérica por encima de tres veces el límite normal. Motivo: la revisión Cochrane publica sensibilidad y especificidad agrupadas, con riesgo de sesgo incierto o alto en todos los estudios, pero no el cociente. No se calcula aquí. Interpretación registrada: el mismo papel que la lipasa pero menos específica: se eleva también en patología salival y en otras causas, y se normaliza antes. Advertencia: no se confunde con la lipasa ni se sustituye por ella. Son enzimas distintas con especificidad distinta, y no se emparejan entre sí."
       }
     ]
   },
@@ -4294,7 +4294,7 @@
       },
       "poblacion": "adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256)",
       "motivo": null,
-      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata",
+      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica",
       "advertencia": "el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación"
     },
     "fuente_doi": "10.5281/zenodo.22064424",
@@ -4305,24 +4305,24 @@
     "triada": {
       "significante": "Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.",
       "significado": "Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.",
-      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata"
+      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica"
     },
     "pregunta": "En Apendicitis aguda, ¿cuál es el resultado documentado del LR positivo para «Signo ecográfico de apendicitis aguda»? Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256).",
     "opciones": [
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR positivo: 2.29. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
+        "feedback": "Sí hay una medición documentada: LR positivo: 2.29. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
       },
       {
         "texto": "LR positivo: 2.29.",
         "correcta": true,
-        "feedback": "LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
+        "feedback": "LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
       },
       {
         "texto": "El valor 2.29 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 2.29. IC del 95 %: 1.85 a 2.84. Población: adultos que consultan en servicios de urgencias con dolor abdominal y sospecha de apendicitis evaluados mediante POCUS por médicos de urgencias (estudio prospectivo observacional multicéntrico, n = 256). Interpretación registrada: hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica. Advertencia: el POCUS general rinde especificidad moderada (63%, LR+ 2.29); un estudio no concluyente por no visualización del apéndice o gas cecal NO descarta apendicitis y exige tomografía computarizada o internación en observación."
       }
     ]
   },
@@ -4354,7 +4354,7 @@
     "triada": {
       "significante": "Estructura tubular ciega en fosa ilíaca derecha que emerge del polo cecal, no compresible a la presión sostenida con la sonda, aperistáltica, con diámetro externo mayor de 6 mm y aspecto estratificado en diana en corte transversal. A menudo con apendicolito ecogénico con sombra, líquido periapendicular o grasa mesentérica hiperecogénica circundante.",
       "significado": "Obstrucción de la luz apendicular que desencadena hiperpresión intraluminal, congestión venosa, invasión bacteriana e inflamación transmural supurativa.",
-      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya fuertemente la sospecha de apendicitis e indica valoración quirúrgica inmediata"
+      "decision": "hallazgo positivo (apéndice no compresible > 6 mm en FID con dolor local): apoya la sospecha de apendicitis y justifica la valoración quirúrgica"
     },
     "pregunta": "En Apendicitis aguda, ¿qué estado de la evidencia corresponde a «Dolor en fosa ilíaca derecha» según la fuente?",
     "opciones": [
@@ -4399,8 +4399,8 @@
       },
       "poblacion": "pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017)",
       "motivo": null,
-      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
-      "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+      "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
     },
     "fuente_doi": "10.5281/zenodo.22064424",
     "referencia_id": "pmid:28495379",
@@ -4410,24 +4410,24 @@
     "triada": {
       "significante": "Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).",
       "significado": "El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.",
-      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
     },
     "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR positivo para «Ventrículo derecho dilatado en ecografía»? Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017).",
     "opciones": [
       {
         "texto": "LR positivo: 3.12.",
         "correcta": true,
-        "feedback": "LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+        "feedback": "LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
       },
       {
         "texto": "El valor 3.12 corresponde al LR negativo y no al LR positivo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+        "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
       },
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+        "feedback": "Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
       }
     ]
   },
@@ -4446,40 +4446,44 @@
       "estado_lr": "medido",
       "campo": "lr_negativo",
       "dato": {
-        "valor": 0.1,
-        "ref": "pmid:16403932"
+        "valor": 0.08,
+        "ic95": [
+          0.04,
+          0.18
+        ],
+        "ref": "pmid:16052017"
       },
-      "poblacion": "pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest",
+      "poblacion": "pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)",
       "motivo": null,
-      "decision": "un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía",
+      "decision": "un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia",
       "advertencia": null
     },
     "fuente_doi": "10.5281/zenodo.22064424",
-    "referencia_id": "pmid:16403932",
-    "pmid": "16403932",
-    "doi": "10.1001/jama.295.2.199",
+    "referencia_id": "pmid:16052017",
+    "pmid": "16052017",
+    "doi": "10.1136/bmj.331.7511.259",
     "referencia_cita": null,
     "triada": {
       "significante": "Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).",
       "significado": "El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.",
-      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
     },
-    "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest.",
+    "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas).",
     "opciones": [
       {
-        "texto": "El valor 0.1 corresponde al LR positivo y no al LR negativo.",
+        "texto": "El valor 0.08 corresponde al LR positivo y no al LR negativo.",
         "correcta": false,
-        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+        "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia."
       },
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
         "correcta": false,
-        "feedback": "Sí hay una medición documentada: LR negativo: 0.1. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+        "feedback": "Sí hay una medición documentada: LR negativo: 0.08. LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia."
       },
       {
-        "texto": "LR negativo: 0.1.",
+        "texto": "LR negativo: 0.08.",
         "correcta": true,
-        "feedback": "LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+        "feedback": "LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia."
       }
     ]
   },
@@ -4584,11 +4588,11 @@
   {
     "id": "ascitis-precision-semiotica-q1",
     "post_slug": "ascitis-precision-semiotica",
-    "post_title": "Ascitis: hallazgos y evidencia clínica",
+    "post_title": "Síndrome ascítico: hallazgos y evidencia clínica",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "condicion_id": "HM:6046",
-    "condicion_nombre": "Ascitis",
+    "condicion_nombre": "Síndrome ascítico",
     "concepto_id": "HM:3182",
     "evidencia": {
       "condicion_id": "HM:6046",
@@ -4614,7 +4618,7 @@
       "significado": "Agrupamiento gravitacional dependiente de pequeños volúmenes de líquido peritoneal libre (tan bajos como 120-300 mL) en la región periumbilical anterior en posición prona.",
       "decision": "maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal"
     },
-    "pregunta": "En Ascitis, ¿cuál es el resultado documentado del LR positivo para «Signo del charco»? Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas.",
+    "pregunta": "En Síndrome ascítico, ¿cuál es el resultado documentado del LR positivo para «Signo del charco»? Población: adultos con sospecha de ascitis de bajo volumen evaluados en posición prona sobre codos y rodillas.",
     "opciones": [
       {
         "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
@@ -4636,11 +4640,11 @@
   {
     "id": "ascitis-precision-semiotica-q2",
     "post_slug": "ascitis-precision-semiotica",
-    "post_title": "Ascitis: hallazgos y evidencia clínica",
+    "post_title": "Síndrome ascítico: hallazgos y evidencia clínica",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "condicion_id": "HM:6046",
-    "condicion_nombre": "Ascitis",
+    "condicion_nombre": "Síndrome ascítico",
     "concepto_id": "HM:0902",
     "evidencia": {
       "condicion_id": "HM:6046",
@@ -4663,7 +4667,7 @@
       "significado": "Agrupamiento gravitacional dependiente de pequeños volúmenes de líquido peritoneal libre (tan bajos como 120-300 mL) en la región periumbilical anterior en posición prona.",
       "decision": "maniobra incómoda y de escasa ganancia diagnóstica; ante sospecha de ascitis mínima debe procederse directamente a ecografía abdominal"
     },
-    "pregunta": "En Ascitis, ¿qué estado de la evidencia corresponde a «Líquido libre en receso hepatorrenal (espacio de Morrison)» según la fuente?",
+    "pregunta": "En Síndrome ascítico, ¿qué estado de la evidencia corresponde a «Líquido libre en receso hepatorrenal (espacio de Morrison)» según la fuente?",
     "opciones": [
       {
         "texto": "LR no medible",
@@ -4685,11 +4689,11 @@
   {
     "id": "esplenomegalia-precision-semiotica-q1",
     "post_slug": "esplenomegalia-precision-semiotica",
-    "post_title": "Esplenomegalia: hallazgos y evidencia clínica",
+    "post_title": "Síndrome esplenomegálico: hallazgos y evidencia clínica",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "condicion_id": "HM:6047",
-    "condicion_nombre": "Esplenomegalia",
+    "condicion_nombre": "Síndrome esplenomegálico",
     "concepto_id": "HM:0603",
     "evidencia": {
       "condicion_id": "HM:6047",
@@ -4715,7 +4719,7 @@
       "significado": "Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.",
       "decision": "un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2)"
     },
-    "pregunta": "En Esplenomegalia, ¿cuál es el resultado documentado del LR positivo para «Esplenomegalia»? Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607).",
+    "pregunta": "En Síndrome esplenomegálico, ¿cuál es el resultado documentado del LR positivo para «Esplenomegalia»? Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607).",
     "opciones": [
       {
         "texto": "LR positivo: 8.2.",
@@ -4737,11 +4741,11 @@
   {
     "id": "esplenomegalia-precision-semiotica-q2",
     "post_slug": "esplenomegalia-precision-semiotica",
-    "post_title": "Esplenomegalia: hallazgos y evidencia clínica",
+    "post_title": "Síndrome esplenomegálico: hallazgos y evidencia clínica",
     "category": "medicina_interna",
     "category_label": "Medicina Interna",
     "condicion_id": "HM:6047",
-    "condicion_nombre": "Esplenomegalia",
+    "condicion_nombre": "Síndrome esplenomegálico",
     "concepto_id": "HM:3184",
     "evidencia": {
       "condicion_id": "HM:6047",
@@ -4767,7 +4771,7 @@
       "significado": "Aumento patológico del volumen o masa esplénica más allá de sus límites fisiológicos normales.",
       "decision": "un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2)"
     },
-    "pregunta": "En Esplenomegalia, ¿cuál es el resultado documentado del LR positivo para «Matidez en el espacio de Traube»? Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607).",
+    "pregunta": "En Síndrome esplenomegálico, ¿cuál es el resultado documentado del LR positivo para «Matidez en el espacio de Traube»? Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607).",
     "opciones": [
       {
         "texto": "El valor 2.3 corresponde al LR negativo y no al LR positivo.",

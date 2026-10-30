@@ -5,9 +5,9 @@
   "subtitle": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "date": "2026-09-21",
   "fecha_publicacion": "2026-09-21",
-  "fecha_revision": null,
-  "version": null,
-  "has_caso": false,
+  "fecha_revision": "2026-10-16",
+  "version": 1,
+  "has_caso": true,
   "author": "Dr. Alcy Torres",
   "category": "medicina_interna",
   "category_label": "Medicina Interna",
@@ -70,20 +70,25 @@
         ],
         "ref": "pmid:28495379"
       },
-      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
-      "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
+      "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+      "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
     },
     {
       "concepto": "HM:3144",
       "rol": "prueba_sensible",
       "estado_lr": "medido",
-      "ref": "pmid:16403932",
+      "ref": "pmid:16052017",
       "lr_negativo": {
-        "valor": 0.1,
-        "ref": "pmid:16403932"
+        "valor": 0.08,
+        "ic95": [
+          0.04,
+          0.18
+        ],
+        "ref": "pmid:16052017"
       },
-      "poblacion": "pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest",
-      "decision": "un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía"
+      "poblacion": "pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)",
+      "decision": "un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia",
+      "nota": "Corregido: el cociente anterior (0.10, sin intervalo) se había copiado de Wells 2006 (pmid:16403932), que mide la trombosis venosa profunda. El valor y el intervalo de esta arista son los de Roy 2005 para el ELISA cuantitativo con corte < 500 µg/L. Otros ensayos (látex cuantitativo, hemaglutinación) tienen cocientes negativos mayores y solo excluyen con probabilidad previa baja. Esta fuente no estudia un corte ajustado por edad."
     },
     {
       "concepto": "HM:0401",
@@ -108,7 +113,7 @@
   ],
   "fuente": {
     "repositorio": "alcyedmundo281/medsemiotics-db",
-    "revision": "9505ae00ca47576b3cd86bdec1357bc816f9cf91",
+    "revision": "af44eec90966a41d8052c3605c90a480ad042299",
     "doi": "10.5281/zenodo.22064424",
     "condicion": "condiciones/HM6044-tromboembolia-pulmonar.yaml",
     "archivos": {
@@ -125,8 +130,9 @@
       "conceptos/HM3144-dimero-d-elevado.yaml": "562847ffb143450d77bfd4dc14af14cd221e5bd31c55bc6f3c386792364f4de2",
       "conceptos/HM3162-ventriculo-derecho-dilatado.yaml": "bfbfab4ea78921d69f2891162121e678a9686759e3c10007725acb3228e09134",
       "conceptos/HM3163-taponamiento-cardiaco-en-ecografia.yaml": "8b19b30092dd4dd2ab9455f9084a4bcd322b5e3e1dbe77821ae96cfea200f621",
-      "condiciones/HM6044-tromboembolia-pulmonar.yaml": "909e053b124aa84bde431c8e7747afbfd0d3b86feeda65fc0d0b653d0490d79b",
+      "condiciones/HM6044-tromboembolia-pulmonar.yaml": "151072d461a4b6a2417746f1159ece1108241b9b09fde6940b07f42fd27652f5",
       "referencias/pmid-10737280.yaml": "68f775e2d42ea9a92d80e73b386197d82887827d22c6bf5896c79b996291e9de",
+      "referencias/pmid-16052017.yaml": "608a924c6c05185604836f0e3ef4c1617da586d7c02cd72c3b4374688809d990",
       "referencias/pmid-16403932.yaml": "a1beeb62b2b79417da89d0d1c48e8c62313e13b7e7cc1f9669b44dde5c3cc789",
       "referencias/pmid-19679614.yaml": "3a41f589222c75041e1f97433692e4e17afdee178eaddc867a0f74e4526b232c",
       "referencias/pmid-28495379.yaml": "94dd6cc6490001dc513f3e588d2b3b055644113f7874d72b9f9e244143affb93",
@@ -145,13 +151,13 @@
   "image_source": "https://commons.wikimedia.org/wiki/File:Pulmonary-embolism.png",
   "image_license": "CC0",
   "image_title": "Pulmonary-embolism.png",
-  "image_alt": "Ilustración médica esquemática de la circulación pulmonar con trombo ocluyendo una rama de la arteria pulmonar",
+  "image_alt": "Esquema de tromboembolia pulmonar: émbolo en una rama de la arteria pulmonar con sobrecarga de cavidades derechas",
   "image_author": "Baedr-9439",
   "excerpt": "Hallazgos, cocientes documentados y límites de la evidencia.",
   "triada": {
     "significante": "Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).",
     "significado": "El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.",
-    "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
+    "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable"
   },
   "autoevaluacion": [
     {
@@ -177,34 +183,34 @@
         },
         "poblacion": "pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017)",
         "motivo": null,
-        "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
-        "advertencia": "sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
+        "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+        "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico"
       },
       "opciones": [
         {
           "texto": "LR positivo: 3.12.",
           "correcta": true,
-          "feedback": "LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+          "feedback": "LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
         },
         {
           "texto": "El valor 3.12 corresponde al LR negativo y no al LR positivo.",
           "correcta": false,
-          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+          "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
         },
         {
           "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
+          "feedback": "Sí hay una medición documentada: LR positivo: 3.12. LR positivo: 3.12. IC del 95 %: 1.96 a 4.97. Población: pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017). Interpretación registrada: en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable. Advertencia: la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico."
         }
       ]
     },
     {
       "id": "q2",
-      "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest.",
+      "pregunta": "En Tromboembolia pulmonar, ¿cuál es el resultado documentado del LR negativo para «Dímero D elevado»? Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas).",
       "concepto_id": "HM:3144",
-      "referencia_id": "pmid:16403932",
-      "pmid": "16403932",
-      "doi": "10.1001/jama.295.2.199",
+      "referencia_id": "pmid:16052017",
+      "pmid": "16052017",
+      "doi": "10.1136/bmj.331.7511.259",
       "fuente_doi": "10.5281/zenodo.22064424",
       "evidencia": {
         "condicion_id": "HM:6044",
@@ -212,33 +218,310 @@
         "estado_lr": "medido",
         "campo": "lr_negativo",
         "dato": {
-          "valor": 0.1,
-          "ref": "pmid:16403932"
+          "valor": 0.08,
+          "ic95": [
+            0.04,
+            0.18
+          ],
+          "ref": "pmid:16052017"
         },
-        "poblacion": "pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest",
+        "poblacion": "pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)",
         "motivo": null,
-        "decision": "un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía",
+        "decision": "un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia",
         "advertencia": null
       },
       "opciones": [
         {
-          "texto": "El valor 0.1 corresponde al LR positivo y no al LR negativo.",
+          "texto": "El valor 0.08 corresponde al LR positivo y no al LR negativo.",
           "correcta": false,
-          "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+          "feedback": "Ese número corresponde al LR negativo, no al LR positivo. LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia."
         },
         {
           "texto": "La fuente no dispone de un cociente medido para este hallazgo.",
           "correcta": false,
-          "feedback": "Sí hay una medición documentada: LR negativo: 0.1. LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+          "feedback": "Sí hay una medición documentada: LR negativo: 0.08. LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia."
         },
         {
-          "texto": "LR negativo: 0.1.",
+          "texto": "LR negativo: 0.08.",
           "correcta": true,
-          "feedback": "LR negativo: 0.1. Población: pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest. Interpretación registrada: un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía."
+          "feedback": "LR negativo: 0.08. IC del 95 %: 0.04 a 0.18. Población: pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas). Interpretación registrada: un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia."
         }
       ]
     }
   ],
-  "caso": null,
-  "body": "# Tromboembolia pulmonar\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPulmonary embolism\n\n## Sinónimos\n\nembolia pulmonar\n\nTEP\n\ntromboembolismo pulmonar\n\n## Códigos\n\nSnomed: 59282003; Cie10: I26.9\n\n## Factores de riesgo\n\n**Trombosis venosa profunda previa o concomitante** (pmid:31340984): tras suspender la anticoagulación de una primera enfermedad tromboembólica no provocada, la recurrencia es de 10.3 por 100 personas-año el primer año (IC95% 8.6-12.1) y la incidencia acumulada del 36% a los 10 años (IC95% 28-45). Metaanálisis de 18 estudios con 7515 pacientes; sin grupo sin antecedente, así que es un riesgo absoluto. La fuente no trata la trombosis concomitante\n\n**Ingreso hospitalario o en residencia** (pmid:10737280): OR 8.0 (IC95% 4.5-14.2), independiente de los demás factores. Casos y controles poblacional anidado de Olmsted County, 625 casos y 625 controles\n\n**Cirugía reciente** (pmid:10737280): OR 21.7 (IC95% 9.4-49.9); el resumen no la desglosa por tipo. Traumatismo, OR 12.7 (IC95% 4.1-39.7)\n\n**Neoplasia maligna activa** (pmid:10737280): OR 4.1 (IC95% 1.9-8.5) sin quimioterapia y 6.5 (IC95% 2.1-20.2) con ella\n\n**Anticonceptivos orales** (pmid:19679614): OR 5.0 (IC95% 4.2-5.8) frente a no usarlos; de 3.6 con levonorgestrel a 7.3 con desogestrel. Casos y controles MEGA: mujeres premenopáusicas menores de 50 años, 1524 casos y 1760 controles\n\n**Terapia hormonal de la menopausia** (pmid:38263123): RR 1.86 (IC95% 1.39-2.50) frente a placebo o ningún tratamiento, sin diferencia entre estrógeno solo y combinado con progestágeno. Metaanálisis de 33 ensayos con 44 639 posmenopáusicas\n\n## Hallazgos clínicos\n\n### Ventrículo derecho dilatado en ecografía (HM:3162)\n\n**Significante:** Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).\n\n**Significado:** El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.\n\n**Falsos positivos:** Cor pulmonale crónico (EPOC, hipertensión pulmonar crónica, cardiopatía congénita): dilata el VD de forma crónica; pared libre gruesa (>5 mm) y aurícula derecha mayor que la izquierda orientan a cronicidad, no a un evento agudo / Signo de McConnell descrito también en infarto del ventrículo derecho: no es exclusivo de tromboembolia pulmonar / Ventana subóptima o corte oblicuo del ápex que simula una relación VD:VI aumentada sin serlo / TAPSE reducido por disfunción del ventrículo izquierdo que arrastra secundariamente al derecho / Ausencia de todos estos hallazgos no descarta tromboembolia pulmonar submasiva o de bajo riesgo hemodinámico\n\n**Rol:** Imagen\n\n**Estado del LR:** LR medido\n\n**Población:** pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017)\n\n**Referencia:** pmid:28495379\n\n**Sensibilidad:** 0.53\n\n**Ic95 sensibilidad:** 0.45 / 0.61\n\n**Especificidad:** 0.83\n\n**Ic95 especificidad:** 0.74 / 0.9\n\n**LR positivo:** Valor: 3.12; IC del 95 %: 1.96 / 4.97; Referencia: pmid:28495379\n\n**LR negativo:** Valor: 0.57; IC del 95 %: 0.47 / 0.68; Referencia: pmid:28495379\n\n**Decisión:** en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo inequívoco de sobrecarga del VD (relación VD/VI ≥ 1, aplanamiento septal o McConnell) apoya fuertemente la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable\n\n**Advertencia:** sensibilidad limitada (53%, LR− 0.57); un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico\n\n### Dímero D elevado (HM:3144)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Referencia:** pmid:16403932\n\n**LR negativo:** Valor: 0.1; Referencia: pmid:16403932\n\n**Población:** pacientes con sospecha de TEP y baja o intermedia probabilidad clínica pretest\n\n**Decisión:** un valor de dímero D por debajo del umbral de corte ajustado por edad descarta el diagnóstico sin necesidad de angiografía por tomografía\n\n### Disnea (HM:0401)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Taquicardia (HM:0104)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Dolor torácico pleurítico (HM:3133)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Hipoxemia (HM:0110)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n## Conclusión de la fuente\n\nLa ecocardiografía a pie de cama muestra especificidad útil y sensibilidad baja (53%) para la sospecha de TEP; su mayor utilidad reside en guiar el manejo inmediato del paciente en shock o con contraindicación para tomografía.\n\n## Referencias y procedencia\n\n**pmid:10737280:** Risk factors for deep vein thrombosis and pulmonary embolism: a population-based case-control study. Arch Intern Med, 2000. DOI: 10.1001/archinte.160.6.809.\n\n**pmid:16403932:** Does this patient have deep vein thrombosis?. JAMA, 2006. DOI: 10.1001/jama.295.2.199.\n\n**pmid:19679614:** The venous thrombotic risk of oral contraceptives, effects of oestrogen dose and progestogen type: results of the MEGA case-control study. BMJ, 2009. DOI: 10.1136/bmj.b2921.\n\n**pmid:28495379:** Transthoracic Echocardiography for Diagnosing Pulmonary Embolism: A Systematic Review and Meta-Analysis. J Am Soc Echocardiogr, 2017. DOI: 10.1016/j.echo.2017.03.004.\n\n**pmid:31340984:** Long term risk of symptomatic recurrent venous thromboembolism after discontinuation of anticoagulant treatment for first unprovoked venous thromboembolism event: systematic review and meta-analysis. BMJ, 2019. DOI: 10.1136/bmj.l4363.\n\n**pmid:38263123:** The benefits and risks of menopause hormone therapy for the cardiovascular system in postmenopausal women: a systematic review and meta-analysis. BMC Womens Health, 2024. DOI: 10.1186/s12905-023-02788-0.\n\n**pmid:9786377:** The rational clinical examination. Is this patient having a myocardial infarction?. JAMA, 1998. DOI: 10.1001/jama.280.14.1256.\n\nFuente clínica: medsemiotics-db, condición HM:6044."
+  "caso": {
+    "condicion_id": "HM:6044",
+    "slug": "tromboembolia-pulmonar-precision-semiotica",
+    "estado": "publicado",
+    "autoria": {
+      "autor": "Dr. Alcy Torres",
+      "revisor": "Dr. Alcy Torres"
+    },
+    "publicacion": {
+      "fecha": "2026-10-16",
+      "version": 1,
+      "ultima_revision": "2026-10-16",
+      "revisiones": []
+    },
+    "fuente_revision": "af44eec90966a41d8052c3605c90a480ad042299",
+    "nivel": "Pregrado",
+    "duracion_min": 45,
+    "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+    "objetivos": [
+      "Declarar y justificar una probabilidad clínica pretest de tromboembolia pulmonar, reconociendo que la base no la documenta.",
+      "Explicar por qué un dímero D elevado no confirma y uno normal puede descartar, y en qué estrato de sospecha es válido ese uso.",
+      "Interpretar el cociente positivo y el negativo de la dilatación del ventrículo derecho en la ecografía a pie de cama.",
+      "Explicar por qué un ventrículo derecho normal no descarta la tromboembolia pulmonar.",
+      "Decidir qué prueba pedir según la estabilidad hemodinámica, con la lógica de umbrales de prueba y de tratamiento."
+    ],
+    "vineta": {
+      "titulo": "Falta de aire y dolor al respirar",
+      "texto": "Mujer de 38 años que consulta a urgencias por falta de aire de dos días y un dolor en el costado derecho que aumenta al inspirar. Toma anticonceptivos orales combinados desde hace tres años. Hace tres semanas viajó en bus durante once horas. No tiene tos con expectoración, ni fiebre, ni antecedentes de trombosis. No hay hinchazón ni dolor en las piernas. Fumadora ocasional.",
+      "datos": [
+        {
+          "etiqueta": "Presión arterial",
+          "valor": "118/74 mmHg"
+        },
+        {
+          "etiqueta": "Frecuencia cardíaca",
+          "valor": "106 lpm"
+        },
+        {
+          "etiqueta": "Frecuencia respiratoria",
+          "valor": "22 rpm"
+        },
+        {
+          "etiqueta": "Temperatura",
+          "valor": "36.9 °C"
+        }
+      ]
+    },
+    "etapas": [
+      {
+        "numero": 1,
+        "titulo": "Antes de pedir pruebas",
+        "fase": "activacion",
+        "fase_etiqueta": "Activación e hipótesis iniciales",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "¿Qué diagnósticos deben considerarse en una mujer joven con disnea y dolor pleurítico? ¿Cuál no puede pasarse por alto y por qué?",
+            "clave": "Tromboembolia pulmonar, neumonía, neumotórax, pleuritis viral, pericarditis, síndrome coronario agudo y causa musculoesquelética. La tromboembolia pulmonar es la que no puede pasarse por alto porque es potencialmente mortal, es tratable y su cuadro es inespecífico: se presenta con síntomas que otras causas explican igual de bien."
+          },
+          {
+            "pregunta": "¿Qué datos de la historia aumentan tu sospecha de tromboembolia pulmonar, y cómo estableces tu probabilidad clínica antes de pedir cualquier prueba?",
+            "clave": "Los anticonceptivos orales y el viaje prolongado son factores de riesgo; la ausencia de síntomas en las piernas no excluye, porque muchas veces el trombo origen no da clínica. El artículo documenta los factores de riesgo con sus magnitudes, pero no registra una probabilidad basal ni cocientes para la clínica: la probabilidad pretest es un juicio que debes declarar («baja», «intermedia», «alta») y que normalmente se estructura con una escala validada que esta base no incorpora. Declararla es el paso que da sentido a todo lo que sigue."
+          }
+        ]
+      },
+      {
+        "numero": 2,
+        "titulo": "Lo que muestra la clínica",
+        "fase": "exploracion",
+        "fase_etiqueta": "Exploración de hallazgos",
+        "informacion": "La paciente presenta disnea y dolor torácico pleurítico en el costado derecho. Hay taquicardia y la oximetría muestra hipoxemia leve. El examen de las piernas es normal y la radiografía de tórax no muestra consolidación.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:0401",
+            "nombre": "Disnea",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": []
+          },
+          {
+            "id": "HM:0104",
+            "nombre": "Taquicardia",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": []
+          },
+          {
+            "id": "HM:3133",
+            "nombre": "Dolor torácico pleurítico",
+            "rol": "Manifestación",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": []
+          },
+          {
+            "id": "HM:0110",
+            "nombre": "Hipoxemia",
+            "rol": "Apoyo diagnóstico",
+            "estado_lr": "no_medido",
+            "estado": "LR no medido",
+            "poblacion": null,
+            "cifras": [],
+            "decision": null,
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": []
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "Los cuatro hallazgos son frecuentes en la tromboembolia pulmonar. ¿Por qué no basta con sumarlos?",
+            "clave": "Porque la base los documenta con LR no medido y sin cociente: son inespecíficos y los comparten casi todas las causas de dolor torácico y disnea. Un hallazgo frecuente en la enfermedad pero también frecuente en quienes consultan por lo mismo no discrimina. Sirven para construir la sospecha y para definir la población en la que se aplicarán las pruebas, no para cuantificarla."
+          },
+          {
+            "pregunta": "La ausencia de hinchazón en las piernas, ¿qué cambia?",
+            "clave": "Muy poco: la tromboembolia pulmonar puede ocurrir con una exploración de piernas normal y esta base no cuantifica el valor de ese hallazgo. Como no tiene cociente medido, no se puede restar probabilidad por él, aunque su ausencia tranquilice: es un dato clínico sin peso cuantificado."
+          }
+        ]
+      },
+      {
+        "numero": 3,
+        "titulo": "El dímero D",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Con una probabilidad clínica que juzgas intermedia, se pide dímero D. El resultado es un dímero D elevado: queda por encima de los 500 µg/L del ensayo del laboratorio.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3144",
+            "nombre": "Dímero D elevado",
+            "rol": "Prueba sensible",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR− 0.08 (IC 95 %: 0.04–0.18)"
+            ],
+            "decision": "un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia",
+            "motivo": null,
+            "advertencia": null,
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:16052017"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "El dímero D está elevado. ¿Confirma la tromboembolia pulmonar? ¿Para qué sirve entonces esta prueba?",
+            "clave": "No confirma: se eleva en el embarazo, el posoperatorio, la infección, el cáncer y la edad, y la base no registra un cociente positivo para él. Su valor documentado es el cociente negativo, LR− 0.08 (IC 95 %: 0.04–0.18): un dímero D por debajo del corte del ensayo (aquí, ELISA cuantitativo con 500 µg/L) permite descartar el diagnóstico sin tomografía. Una prueba «sensible» se usa por su resultado normal. Aquí el resultado fue elevado, así que no aporta nada para decidir y la paciente necesita una prueba de imagen."
+          },
+          {
+            "pregunta": "¿Para qué pacientes es válido usar el dímero D para descartar? ¿Qué harías con un dímero D normal si tu sospecha clínica fuera alta?",
+            "clave": "La ficha limita su uso a pacientes con probabilidad clínica baja o intermedia. Con sospecha alta no se debe pedir para descartar: un resultado normal no debería cerrar el estudio, porque con una probabilidad previa alta el resultado puede no bajar lo suficiente. Compruébalo: toma tu pretest alto, conviértelo en odds, multiplícalas por el cociente negativo del dímero D y vuelve a probabilidad; repite con cada extremo del intervalo y compara el resultado con la probabilidad por debajo de la cual aceptarías no estudiar más (ese umbral no lo fija la base, lo fija el costo de perder una embolia). Es el mismo principio de umbrales: la prueba solo sirve si su resultado puede cruzar el umbral de prueba."
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Dos horas después",
+        "fase": "discriminacion",
+        "fase_etiqueta": "Discriminación con la evidencia",
+        "informacion": "Mientras esperan la tomografía, la paciente se pone pálida y sudorosa y la presión baja a 82/50 mmHg. Al colocar el transductor sobre el tórax ves un ventrículo derecho dilatado en ecografía, con el tabique desplazado hacia el ventrículo izquierdo.",
+        "datos": [],
+        "hallazgos": [
+          {
+            "id": "HM:3162",
+            "nombre": "Ventrículo derecho dilatado en ecografía",
+            "rol": "Imagen",
+            "estado_lr": "medido",
+            "estado": "LR medido",
+            "poblacion": null,
+            "cifras": [
+              "LR+ 3.12 (IC 95 %: 1.96–4.97)",
+              "LR− 0.57 (IC 95 %: 0.47–0.68)",
+              "sensibilidad 0.53",
+              "especificidad 0.83"
+            ],
+            "decision": "en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable",
+            "motivo": null,
+            "advertencia": "la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico",
+            "graduacion": null,
+            "tramos": [],
+            "referencias": [
+              "pmid:28495379"
+            ]
+          }
+        ],
+        "preguntas": [
+          {
+            "pregunta": "La paciente está inestable y la ecografía muestra el ventrículo derecho dilatado. ¿Cuánto aporta ese hallazgo y qué justifica hacer?",
+            "clave": "El ventrículo derecho dilatado en ecografía tiene LR+ 3.12 (IC 95 %: 1.96–4.97) y especificidad 0.83. Esa capacidad de evitar falsos positivos es útil, pero el cociente es moderado. La ficha lo pone en contexto: en el paciente inestable, un hallazgo inequívoco de sobrecarga del ventrículo derecho apoya fuertemente la embolia pulmonar masiva y justifica considerar la reperfusión de emergencia si la angiotomografía no es viable. El cociente es moderado en términos estadísticos, pero la probabilidad previa en una paciente con shock y factores de riesgo ya es alta, y la urgencia de actuar baja el umbral de tratamiento."
+          },
+          {
+            "pregunta": "Supón que el ventrículo derecho hubiera sido normal. ¿Descartas la tromboembolia pulmonar?",
+            "clave": "No. La sensibilidad 0.53 es limitada y el LR− 0.57 (IC 95 %: 0.47–0.68) apenas reduce la probabilidad. La advertencia de la ficha es explícita: un ventrículo derecho de tamaño y función normales no descarta una embolia submasiva o de bajo riesgo hemodinámico. En un paciente inestable con ventrículo derecho normal, además, hay que buscar otras causas del shock."
+          },
+          {
+            "pregunta": "Compara las dos pruebas: el dímero D descarta pero no confirma; la ecografía confirma de forma moderada pero no descarta. ¿Se pueden usar indistintamente?",
+            "clave": "No: responden preguntas distintas en pacientes distintos. El dímero D se usa en el paciente estable con sospecha baja o intermedia, para evitar una tomografía; la ecografía a pie de cama se usa en el inestable, para orientar una decisión inmediata. Ni una ni otra reemplaza a la imagen de referencia, que esta base no documenta."
+          }
+        ]
+      },
+      {
+        "numero": 5,
+        "titulo": "Qué hacer",
+        "fase": "decision",
+        "fase_etiqueta": "Juicio clínico y decisión",
+        "informacion": null,
+        "datos": [],
+        "hallazgos": [],
+        "preguntas": [
+          {
+            "pregunta": "Con la paciente inestable y sospecha alta, ¿qué pedirías y qué tratarías sin esperar?",
+            "clave": "Con inestabilidad hemodinámica y sospecha alta, la conducta es tratar sin esperar la confirmación si la imagen no puede hacerse de inmediato: anticoagulación urgente y valoración de reperfusión (trombólisis o procedimiento), con soporte hemodinámico. Es la aplicación directa del umbral de tratamiento: cuando la probabilidad es alta y el riesgo de esperar es la muerte, se trata antes de confirmar. Los detalles terapéuticos están fuera de lo que documenta la base."
+          },
+          {
+            "pregunta": "¿Qué no puede responder la evidencia de este artículo?",
+            "clave": "No hay probabilidad basal ni cocientes para la clínica. El dímero D tiene solo cociente negativo, y ese cociente se mide con un ensayo y un corte concretos: otros ensayos tienen cocientes negativos mayores. No se documenta la angiotomografía ni las escalas de probabilidad clínica. La población del cociente de la ecografía es de sospecha clínica con estudio a pie de cama: el rendimiento depende de quién lo hace. Y no hay información sobre tratamiento ni sobre estratificación del riesgo del paciente estable."
+          }
+        ]
+      }
+    ],
+    "cierre": {
+      "sintesis": "En la tromboembolia pulmonar la clínica no se cuantifica y la probabilidad pretest es un juicio que se declara. El dímero D sirve para descartar con sospecha baja o intermedia y no confirma; la dilatación del ventrículo derecho en la ecografía es específica pero poco sensible: apoya la decisión de actuar en el paciente inestable y su ausencia no descarta.",
+      "necesidades_aprendizaje": [
+        "Escalas de probabilidad clínica pretest (por ejemplo Wells o Ginebra) y su efecto sobre el uso del dímero D, no incorporadas en la base.",
+        "Cocientes de los hallazgos clínicos y de la oximetría, marcados como no medidos.",
+        "Rendimiento de la angiotomografía pulmonar y de la gammagrafía de ventilación y perfusión.",
+        "Estratificación de riesgo del paciente estable y manejo anticoagulante, no documentados.",
+        "Cociente positivo del dímero D y su comportamiento en poblaciones especiales (embarazo, cáncer, edad avanzada)."
+      ]
+    },
+    "omitidos": [],
+    "referencias": [
+      {
+        "id": "pmid:16052017",
+        "cita": "Systematic review and meta-analysis of strategies for the diagnosis of suspected pulmonary embolism. BMJ, 2005. DOI: 10.1136/bmj.331.7511.259."
+      },
+      {
+        "id": "pmid:28495379",
+        "cita": "Transthoracic Echocardiography for Diagnosing Pulmonary Embolism: A Systematic Review and Meta-Analysis. J Am Soc Echocardiogr, 2017. DOI: 10.1016/j.echo.2017.03.004."
+      }
+    ]
+  },
+  "body": "# Tromboembolia pulmonar\n\nHallazgos, cocientes documentados y límites de la evidencia.\n\n## Nombre en inglés\n\nPulmonary embolism\n\n## Sinónimos\n\nembolia pulmonar\n\nTEP\n\ntromboembolismo pulmonar\n\n## Códigos\n\nSnomed: 59282003; Cie10: I26.9\n\n## Factores de riesgo\n\n**Trombosis venosa profunda previa o concomitante** (pmid:31340984): tras suspender la anticoagulación de una primera enfermedad tromboembólica no provocada, la recurrencia es de 10.3 por 100 personas-año el primer año (IC95% 8.6-12.1) y la incidencia acumulada del 36% a los 10 años (IC95% 28-45). Metaanálisis de 18 estudios con 7515 pacientes; sin grupo sin antecedente, así que es un riesgo absoluto. La fuente no trata la trombosis concomitante\n\n**Ingreso hospitalario o en residencia** (pmid:10737280): OR 8.0 (IC95% 4.5-14.2), independiente de los demás factores. Casos y controles poblacional anidado de Olmsted County, 625 casos y 625 controles\n\n**Cirugía reciente** (pmid:10737280): OR 21.7 (IC95% 9.4-49.9); el resumen no la desglosa por tipo. Traumatismo, OR 12.7 (IC95% 4.1-39.7)\n\n**Neoplasia maligna activa** (pmid:10737280): OR 4.1 (IC95% 1.9-8.5) sin quimioterapia y 6.5 (IC95% 2.1-20.2) con ella\n\n**Anticonceptivos orales** (pmid:19679614): OR 5.0 (IC95% 4.2-5.8) frente a no usarlos; de 3.6 con levonorgestrel a 7.3 con desogestrel. Casos y controles MEGA: mujeres premenopáusicas menores de 50 años, 1524 casos y 1760 controles\n\n**Terapia hormonal de la menopausia** (pmid:38263123): RR 1.86 (IC95% 1.39-2.50) frente a placebo o ningún tratamiento, sin diferencia entre estrógeno solo y combinado con progestágeno. Metaanálisis de 33 ensayos con 44 639 posmenopáusicas\n\n## Hallazgos clínicos\n\n### Ventrículo derecho dilatado en ecografía (HM:3162)\n\n**Significante:** Ventrículo derecho dilatado (su diámetro se acerca o supera al del ventrículo izquierdo), tabique interventricular aplanado o desplazado hacia el ventrículo izquierdo en sístole (signo de la D), TAPSE reducido y, en algunos casos, acinesia de la pared libre media del VD con el ápex conservado (signo de McConnell).\n\n**Significado:** El ventrículo derecho, de pared delgada y diseñado para bajas presiones, se dilata y falla agudamente ante un aumento súbito de la resistencia vascular pulmonar —típicamente una tromboembolia pulmonar que obstruye una porción significativa del lecho vascular.\n\n**Falsos positivos:** Cor pulmonale crónico (EPOC, hipertensión pulmonar crónica, cardiopatía congénita): dilata el VD de forma crónica; pared libre gruesa (>5 mm) y aurícula derecha mayor que la izquierda orientan a cronicidad, no a un evento agudo / Signo de McConnell descrito también en infarto del ventrículo derecho: no es exclusivo de tromboembolia pulmonar / Ventana subóptima o corte oblicuo del ápex que simula una relación VD:VI aumentada sin serlo / TAPSE reducido por disfunción del ventrículo izquierdo que arrastra secundariamente al derecho / Ausencia de todos estos hallazgos no descarta tromboembolia pulmonar submasiva o de bajo riesgo hemodinámico\n\n**Rol:** Imagen\n\n**Estado del LR:** LR medido\n\n**Población:** pacientes con sospecha clínica de embolia pulmonar evaluados mediante ecocardiografía transtorácica a pie de cama; metaanálisis de estudios de exactitud diagnóstica (Fields 2017)\n\n**Referencia:** pmid:28495379\n\n**Sensibilidad:** 0.53\n\n**Ic95 sensibilidad:** 0.45 / 0.61\n\n**Especificidad:** 0.83\n\n**Ic95 especificidad:** 0.74 / 0.9\n\n**LR positivo:** Valor: 3.12; IC del 95 %: 1.96 / 4.97; Referencia: pmid:28495379\n\n**LR negativo:** Valor: 0.57; IC del 95 %: 0.47 / 0.68; Referencia: pmid:28495379\n\n**Decisión:** en el paciente inestable hemodinámicamente (shock o hipotensión arterial), el hallazgo de sobrecarga del VD (relación VD/VI aumentada, aplanamiento septal o signo de McConnell) apoya la embolia pulmonar masiva y justifica considerar tratamiento de reperfusión de emergencia si la angio-TC es inviable\n\n**Advertencia:** la sensibilidad es limitada; un ventrículo derecho de tamaño y función normales NO descarta TEP submasiva o de bajo riesgo hemodinámico\n\n### Dímero D elevado (HM:3144)\n\n**Rol:** Prueba sensible\n\n**Estado del LR:** LR medido\n\n**Referencia:** pmid:16052017\n\n**LR negativo:** Valor: 0.08; IC del 95 %: 0.04 / 0.18; Referencia: pmid:16052017\n\n**Población:** pacientes con sospecha de TEP; dímero D < 500 µg/L por ELISA cuantitativo (revisión sistemática de estrategias diagnósticas)\n\n**Decisión:** un dímero D por debajo de 500 µg/L por ELISA cuantitativo permite descartar el diagnóstico sin angiotomografía en pacientes con probabilidad previa baja o intermedia\n\n**Nota:** Corregido: el cociente anterior (0.10, sin intervalo) se había copiado de Wells 2006 (pmid:16403932), que mide la trombosis venosa profunda. El valor y el intervalo de esta arista son los de Roy 2005 para el ELISA cuantitativo con corte < 500 µg/L. Otros ensayos (látex cuantitativo, hemaglutinación) tienen cocientes negativos mayores y solo excluyen con probabilidad previa baja. Esta fuente no estudia un corte ajustado por edad.\n\n### Disnea (HM:0401)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Taquicardia (HM:0104)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Dolor torácico pleurítico (HM:3133)\n\n**Rol:** Manifestación\n\n**Estado del LR:** LR no medido\n\n### Hipoxemia (HM:0110)\n\n**Rol:** Apoyo diagnóstico\n\n**Estado del LR:** LR no medido\n\n## Conclusión de la fuente\n\nLa ecocardiografía a pie de cama muestra especificidad útil y sensibilidad baja (53%) para la sospecha de TEP; su mayor utilidad reside en guiar el manejo inmediato del paciente en shock o con contraindicación para tomografía.\n\n## Referencias y procedencia\n\n**pmid:10737280:** Risk factors for deep vein thrombosis and pulmonary embolism: a population-based case-control study. Arch Intern Med, 2000. DOI: 10.1001/archinte.160.6.809.\n\n**pmid:16052017:** Systematic review and meta-analysis of strategies for the diagnosis of suspected pulmonary embolism. BMJ, 2005. DOI: 10.1136/bmj.331.7511.259.\n\n**pmid:16403932:** Does this patient have deep vein thrombosis?. JAMA, 2006. DOI: 10.1001/jama.295.2.199.\n\n**pmid:19679614:** The venous thrombotic risk of oral contraceptives, effects of oestrogen dose and progestogen type: results of the MEGA case-control study. BMJ, 2009. DOI: 10.1136/bmj.b2921.\n\n**pmid:28495379:** Transthoracic Echocardiography for Diagnosing Pulmonary Embolism: A Systematic Review and Meta-Analysis. J Am Soc Echocardiogr, 2017. DOI: 10.1016/j.echo.2017.03.004.\n\n**pmid:31340984:** Long term risk of symptomatic recurrent venous thromboembolism after discontinuation of anticoagulant treatment for first unprovoked venous thromboembolism event: systematic review and meta-analysis. BMJ, 2019. DOI: 10.1136/bmj.l4363.\n\n**pmid:38263123:** The benefits and risks of menopause hormone therapy for the cardiovascular system in postmenopausal women: a systematic review and meta-analysis. BMC Womens Health, 2024. DOI: 10.1186/s12905-023-02788-0.\n\n**pmid:9786377:** The rational clinical examination. Is this patient having a myocardial infarction?. JAMA, 1998. DOI: 10.1001/jama.280.14.1256.\n\nFuente clínica: medsemiotics-db, condición HM:6044."
 }

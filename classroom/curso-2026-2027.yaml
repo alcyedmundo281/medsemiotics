@@ -1,0 +1,63 @@
+# Fuente estructurada del curso Medicina y Ciencia 2026-2027.
+# Deriva de docs/silabo-medicina-y-ciencia-v3.md: si el sílabo cambia, cambia este archivo
+# (y viceversa) y `python -m classroom check` lo verifica. No contiene datos de estudiantes.
+curso:
+  nombre: "Medicina y Ciencia 2026-2027"
+  seccion: "IESS San Francisco y MSP Calderón"
+  descripcion: "Ciencia de datos y estadística biomédica en el razonamiento clínico (sílabo v3)."
+  zona_horaria: "America/Guayaquil"
+  hora_inicio: "20:00"
+  duracion_min: 90
+  base_url: "https://powersemiotics.com/medsemiotics/"
+  classroom_url: "https://classroom.google.com/c/ODgyOTUwMDI5NDc3"
+  silabo_pdf: "medicina_y_datos/Silabo_Medicina_y_Ciencia_UCE_2026-2027.pdf"
+  recesos: ["2026-12-23", "2026-12-30"]
+
+unidades:
+  - {id: U1, titulo: "Unidad 1 · Del hallazgo al número"}
+  - {id: U2, titulo: "Unidad 2 · Razonar con probabilidades"}
+  - {id: U3, titulo: "Unidad 3 · Cuán seguro es el número"}
+  - {id: U4, titulo: "Unidad 4 · Datos, IA y comunicación"}
+
+# Recursos: rutas relativas del sitio. Los artículos del blog entran por `condiciones`.
+sesiones:
+  - {n: 1, fecha: "2026-11-11", unidad: U1, tema: "El razonamiento clínico como inferencia: abducción, deducción, inducción", condiciones: [], recursos: [medicina_y_datos/fundamentos-semioticos.html, medicina_y_datos/razonamiento_clinico/index.html]}
+  - {n: 2, fecha: "2026-11-18", unidad: U1, tema: "Datos clínicos: variables, bases relacionales, ENSANUT, MIMIC-IV, desidentificación y ética", condiciones: [], recursos: [medicina_y_datos/codigo_estadistico/index.html, medicina_y_datos/estadisticos_descubiertos/index.html]}
+  - {n: 3, fecha: "2026-11-25", unidad: U1, tema: "Tabla 2×2: sensibilidad, especificidad, VPP y VPN", condiciones: ["HM:6009"], recursos: [medicina_y_datos/cuantificando_incertidumbre/index.html]}
+  - {n: 4, fecha: "2026-12-02", unidad: U1, tema: "De sens/esp a LR+ y LR−", condiciones: ["HM:6007"], recursos: [medicina_y_datos/cuantificando_incertidumbre/index.html]}
+  - {n: 5, fecha: "2026-12-09", unidad: U2, tema: "Probabilidad pretest, odds y nomograma de Fagan; falacia de la tasa base", condiciones: ["HM:6043"], recursos: [medicina_y_datos/probabilidad_estadistica/index.html]}
+  - {n: 6, fecha: "2026-12-16", unidad: U2, tema: "Combinar hallazgos: producto de LR e independencia condicional", condiciones: ["HM:6040", "HM:6042"], recursos: []}
+  - {n: 7, fecha: "2027-01-06", unidad: U2, tema: "Umbrales de prueba y de tratamiento", condiciones: ["HM:6044", "HM:6035"], recursos: []}
+  - {n: 8, fecha: "2027-01-13", unidad: U2, tema: "Evaluación 1: razonamiento bayesiano sobre casos nuevos", condiciones: [], recursos: [reto.html], evaluacion: sumativa_1}
+  - {n: 9, fecha: "2027-01-20", unidad: U3, tema: "Incertidumbre estadística: IC 95 %, valor p, tamaño de efecto", condiciones: ["HM:6007", "HM:6036"], recursos: [medicina_y_datos/cuantificando_incertidumbre/index.html]}
+  - {n: 10, fecha: "2027-01-27", unidad: U3, tema: "Calidad de los estudios de exactitud: STARD, QUADAS-2, sesgos de espectro y verificación", condiciones: ["HM:6034"], recursos: []}
+  - {n: 11, fecha: "2027-02-03", unidad: U3, tema: "Reglas de decisión clínica, puntos de corte y curvas ROC", condiciones: ["HM:6038"], recursos: []}
+  - {n: 12, fecha: "2027-02-10", unidad: U3, tema: "Sesgos cognitivos y causalidad: confusión, colisionadores, DAG", condiciones: [], recursos: [medicina_y_datos/sesgos_de_la_mente.html, medicina_y_datos/inferencia-causal.html]}
+  - {n: 13, fecha: "2027-02-17", unidad: U4, tema: "Laboratorio de datos: SQL y R/Python; sens/esp/LR desde una base", condiciones: [], recursos: [medicina_y_datos/codigo_estadistico/index.html]}
+  - {n: 14, fecha: "2027-02-24", unidad: U4, tema: "Modelos de predicción e IA clínica: discriminación, calibración, explicabilidad", condiciones: ["HM:6030"], recursos: [medicina_y_datos/razonamiento_clinico/IA_Explicable/index.html]}
+  - {n: 15, fecha: "2027-03-03", unidad: U4, tema: "Comunicar el riesgo: frecuencias naturales y decisión compartida", condiciones: ["HM:6029"], recursos: [medicina_y_datos/razonamiento_clinico/comunicacion_y_visualizacion.html]}
+  - {n: 16, fecha: "2027-03-10", unidad: U4, tema: "Evaluación final / proyecto integrador", condiciones: [], recursos: [], evaluacion: sumativa_final}
+
+# Escala sobre 20. Las ponderaciones no cambian entre versiones del sílabo (40/60).
+componentes:
+  - {id: formativa, titulo: "Formativa", peso: 40}
+  - {id: sumativa_1, titulo: "Sumativa 1 · Razonamiento bayesiano", peso: 25, sesion: 8}
+  - {id: sumativa_final, titulo: "Sumativa final · Proyecto integrador", peso: 35, sesion: 16}
+
+rubricas:
+  - id: informe_caso
+    titulo: "Informe de caso"
+    criterios:
+      - {titulo: "Probabilidad pretest estimada y justificada", puntos: 6}
+      - {titulo: "Cálculo e interpretación (sens/esp, LR, postest)", puntos: 6}
+      - {titulo: "Valoración crítica de la evidencia (IC, calidad, aplicabilidad)", puntos: 4}
+      - {titulo: "Decisión clínica, comunicación y referencias verificables", puntos: 4}
+
+# `propuesta: true` = pendiente de confirmar por el docente. Los tres informes de caso los confirmó
+# el docente el 2026-10-16 (publicación y entrega en las sesiones indicadas).
+tareas:
+  - {id: informe_caso_u1, titulo: "Informe de caso · Unidad 1", componente: formativa, rubrica: informe_caso, sesion_publicacion: 3, sesion_entrega: 5}
+  - {id: informe_caso_u2, titulo: "Informe de caso · Unidad 2", componente: formativa, rubrica: informe_caso, sesion_publicacion: 6, sesion_entrega: 7}
+  - {id: informe_caso_u3, titulo: "Informe de caso · Unidad 3", componente: formativa, rubrica: informe_caso, sesion_publicacion: 10, sesion_entrega: 12}
+  - {id: evaluacion_1, titulo: "Evaluación 1 · Razonamiento bayesiano", componente: sumativa_1, sesion_publicacion: 8, sesion_entrega: 8}
+  - {id: proyecto_integrador, titulo: "Proyecto integrador (parejas)", componente: sumativa_final, sesion_publicacion: 13, sesion_entrega: 16}

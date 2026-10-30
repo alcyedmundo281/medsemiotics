@@ -1,0 +1,282 @@
+{
+  "condicion_id": "HM:6009",
+  "slug": "faringitis-estreptococica-exudado-criterios-centor",
+  "estado": "publicado",
+  "autoria": {
+    "autor": "Dr. Alcy Torres",
+    "revisor": "Dr. Alcy Torres"
+  },
+  "publicacion": {
+    "fecha": "2026-10-16",
+    "version": 1,
+    "ultima_revision": "2026-10-16",
+    "revisiones": []
+  },
+  "fuente_revision": "af44eec90966a41d8052c3605c90a480ad042299",
+  "nivel": "Pregrado",
+  "duracion_min": 45,
+  "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
+  "objetivos": [
+    "Estimar la probabilidad de partida de faringitis estreptocócica en un niño con odinofagia a partir de la probabilidad basal registrada.",
+    "Comparar cuánto desplazan la probabilidad el exudado amigdalino, el exudado faríngeo y la exposición reciente.",
+    "Interpretar el cociente negativo de la adenopatía cervical anterior dolorosa y de la hipertrofia amigdalina, y explicar por qué su ausencia no permite descartar.",
+    "Explicar por qué ningún hallazgo clínico aislado cierra el diagnóstico y qué papel cumple una regla de predicción.",
+    "Decidir si corresponde confirmar con una prueba antes de tratar, reconociendo los límites de la evidencia registrada."
+  ],
+  "vineta": {
+    "titulo": "Un niño que no quiere tragar",
+    "texto": "Niño de 9 años, escolar, llevado por su madre por dolor de garganta desde hace dos días, con fiebre que comenzó ayer y malestar general. Dice que le duele sobre todo al tragar y ha dejado de comer sólidos. No tiene tos, ni rinorrea, ni ronquera. No ha recibido antibióticos ni antiinflamatorios más allá de paracetamol. Sin enfermedades crónicas ni alergias conocidas. En su aula hubo hace unos diez días varios compañeros con «anginas».",
+    "datos": [
+      {
+        "etiqueta": "Temperatura",
+        "valor": "38.6 °C"
+      },
+      {
+        "etiqueta": "Frecuencia cardíaca",
+        "valor": "104 lpm"
+      },
+      {
+        "etiqueta": "Frecuencia respiratoria",
+        "valor": "22 rpm"
+      },
+      {
+        "etiqueta": "Saturación de oxígeno",
+        "valor": "98 % al aire ambiente"
+      }
+    ]
+  },
+  "etapas": [
+    {
+      "numero": 1,
+      "titulo": "Antes de explorar al niño",
+      "fase": "activacion",
+      "fase_etiqueta": "Activación e hipótesis iniciales",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué causas explican odinofagia febril en un escolar y con qué probabilidad de partida de faringitis estreptocócica trabajas antes de explorarlo?",
+          "clave": "La mayoría de las faringitis en esta edad son virales, y entre las bacterianas domina el estreptococo del grupo A; el diferencial incluye también la mononucleosis infecciosa, otras bacterias menos frecuentes y, si hay disfagia marcada o trismo, un absceso periamigdalino. La probabilidad de partida no es una corazonada: el artículo registra la probabilidad basal medida en niños que consultan por odinofagia, con su intervalo, y advierte que no vale para adultos y que cambia en menores de cinco años. Búscala y escríbela antes de seguir, porque ningún cociente sirve sin un punto de partida."
+        },
+        {
+          "pregunta": "La ausencia de tos y de rinorrea, ¿a favor de qué lo interpretas? ¿Es un hallazgo suficiente?",
+          "clave": "Una infección viral de vías respiratorias suele traer tos, rinorrea o ronquera, de modo que su ausencia inclina hacia la causa bacteriana. Es una pista de anamnesis que integra las reglas de predicción como la de Centor, pero por sí sola no confirma: muchos niños sin tos tienen una faringitis viral. Este caso muestra que lo que se suma es un conjunto de datos, no uno solo."
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titulo": "Lo que cuenta la familia",
+      "fase": "exploracion",
+      "fase_etiqueta": "Exploración de hallazgos",
+      "informacion": "El niño refiere odinofagia intensa y la madre confirma que hace unos diez días hubo en su aula varios compañeros con faringitis, es decir exposición reciente a faringitis estreptocócica.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:0211",
+          "nombre": "Odinofagia",
+          "rol": "Manifestación",
+          "estado_lr": "no_medible",
+          "estado": "LR no medible",
+          "poblacion": null,
+          "cifras": [],
+          "decision": null,
+          "motivo": "es el motivo de consulta que define la población estudiada, no una prueba dentro de ella",
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": []
+        },
+        {
+          "id": "HM:3028",
+          "nombre": "Exposición reciente a faringitis estreptocócica",
+          "rol": "Apoyo diagnóstico",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR+ 1.9"
+          ],
+          "decision": "dato de anamnesis con peso escaso",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:11147989"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "La odinofagia es el motivo de consulta. ¿Cuánto aumenta la probabilidad de faringitis estreptocócica?",
+          "clave": "Nada, y por una razón de diseño: en la base la odinofagia figura como hallazgo LR no medible, porque es lo que define a la población en la que se midieron los demás hallazgos. No es una prueba dentro de esa población, es el motivo por el que entró en ella. Por eso el punto de partida es la probabilidad basal de «niños con odinofagia», y la odinofagia no se suma encima."
+        },
+        {
+          "pregunta": "Hubo contacto con casos en el aula. ¿Cuánto pesa ese dato frente a lo que encontrarás en la garganta?",
+          "clave": "Poco. La exposición reciente a faringitis estreptocócica tiene LR+ 1.9, un cociente que desplaza la probabilidad de forma discreta. Es un dato de anamnesis útil para sospechar y explica el contexto epidemiológico, pero no sustituye a la exploración. Fíjate en la nota de la ficha sobre la ventana de tiempo en la que se midió: una exposición fuera de ella no corresponde al cociente que estás aplicando."
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "titulo": "La garganta",
+      "fase": "exploracion",
+      "fase_etiqueta": "Exploración de hallazgos",
+      "informacion": "Con buena luz y abatelenguas, las amígdalas están enrojecidas. Sobre ambas se ve exudado amigdalino blanquecino, y la mucosa de la pared posterior de la faringe también muestra exudado faríngeo.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:3026",
+          "nombre": "Exudado amigdalino",
+          "rol": "Prueba específica",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR+ 3.4"
+          ],
+          "decision": "el hallazgo aislado más útil, y aun así insuficiente por sí solo",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:11147989"
+          ]
+        },
+        {
+          "id": "HM:3027",
+          "nombre": "Exudado faríngeo",
+          "rol": "Prueba específica",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR+ 2.1"
+          ],
+          "decision": "apoya menos que el exudado amigdalino, del que se distingue",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:11147989"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "Describiste exudado en las amígdalas y en la pared de la faringe. ¿Son el mismo hallazgo? ¿Cuál desplaza más la probabilidad?",
+          "clave": "No son el mismo hallazgo, y la base los registra por separado para que no se confundan. El exudado amigdalino tiene LR+ 3.4, el cociente positivo más alto de los hallazgos aislados del artículo, mientras que el exudado faríngeo tiene LR+ 2.1. Dependen de dónde está el exudado: el amigdalino es el que más aporta y el faríngeo apoya menos. Describir el sitio exacto cambia el cociente que aplicas."
+        },
+        {
+          "pregunta": "Con un exudado amigdalino evidente, ¿ya tienes el diagnóstico? ¿Por qué sí o por qué no?",
+          "clave": "No. Un cociente de esa magnitud mueve la probabilidad, pero no la lleva a un nivel en el que se pueda tratar sin más ni, en sentido contrario, la baja hasta descartar. La propia ficha lo resume como «el hallazgo aislado más útil, y aun así insuficiente por sí solo». Una regla de predicción que reúne varios datos rinde mejor que cualquiera de ellos, y aun así termina indicando una prueba de confirmación, no un tratamiento automático."
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Lo que podría faltar",
+      "fase": "discriminacion",
+      "fase_etiqueta": "Discriminación con la evidencia",
+      "informacion": "Al palpar el cuello encuentras adenopatía cervical anterior dolorosa, de tamaño pequeño, por delante del esternocleidomastoideo. Las amígdalas están grandes y casi se tocan en la línea media, es decir hipertrofia amigdalina.",
+      "datos": [],
+      "hallazgos": [
+        {
+          "id": "HM:3029",
+          "nombre": "Adenopatía cervical anterior dolorosa",
+          "rol": "Prueba sensible",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR− 0.6"
+          ],
+          "decision": "su ausencia es lo que más reduce la probabilidad, y aun así la deja en más de la mitad de la previa",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:11147989"
+          ]
+        },
+        {
+          "id": "HM:3030",
+          "nombre": "Hipertrofia amigdalina",
+          "rol": "Prueba sensible",
+          "estado_lr": "medido",
+          "estado": "LR medido",
+          "poblacion": null,
+          "cifras": [
+            "LR− 0.63"
+          ],
+          "decision": "su ausencia reduce poco la probabilidad",
+          "motivo": null,
+          "advertencia": null,
+          "graduacion": null,
+          "tramos": [],
+          "referencias": [
+            "pmid:11147989"
+          ]
+        }
+      ],
+      "preguntas": [
+        {
+          "pregunta": "Imagina el escenario contrario: sin adenopatía cervical anterior dolorosa. ¿Qué harías con la sospecha?",
+          "clave": "Reducirla, pero no apartarla. La ausencia de adenopatía cervical anterior dolorosa da LR− 0.6, que es lo que más reduce la probabilidad entre los hallazgos registrados, y aun así la deja en más de la mitad de la probabilidad previa, como dice la ficha. Un cociente negativo cercano a 1 no descarta: si fueras a tomar la decisión solo con este dato, te equivocarías con frecuencia."
+        },
+        {
+          "pregunta": "La hipertrofia amigdalina también tiene un cociente negativo. ¿Es su ausencia un buen argumento para no tratar?",
+          "clave": "No. La ausencia de hipertrofia amigdalina da LR− 0.63, todavía más cercano a 1 que el de la adenopatía: reduce poco la probabilidad. Ambos hallazgos son «sensibles» por rol, y precisamente por eso su presencia no confirma y su ausencia solo resta un poco. La regla de la base para la ausencia de exudado dice lo mismo: no sirve para descartar."
+        },
+        {
+          "pregunta": "Compara lo que aporta cada hallazgo: ¿cuál es el que más sube la probabilidad y cuál el que más la baja? ¿Se pueden multiplicar sus cocientes?",
+          "clave": "Sube más el exudado amigdalino y baja más la ausencia de adenopatía cervical anterior dolorosa. Multiplicar cocientes de hallazgos distintos supone que son independientes dado el diagnóstico, y aquí no hay motivo para creerlo: el exudado, la hipertrofia y el ganglio son manifestaciones de la misma inflamación orofaríngea. Los cocientes de la base son de hallazgos aislados; combinarlos exige una regla validada para eso, como las escalas de Centor y de McIsaac que el artículo documenta."
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Qué hacer con este niño",
+      "fase": "decision",
+      "fase_etiqueta": "Juicio clínico y decisión",
+      "informacion": null,
+      "datos": [],
+      "hallazgos": [],
+      "preguntas": [
+        {
+          "pregunta": "Con lo reunido, ¿tratas con antibiótico en esta consulta o confirmas primero? Justifica con la lógica de umbrales.",
+          "clave": "Confirmas primero. La probabilidad tras la exploración es alta pero no lo bastante como para tratar sin una prueba, y el costo de tratar sin necesidad es real: efectos adversos, resistencia y medicalizar una infección viral. La conclusión de la fuente va en la misma dirección: ningún elemento clínico aislado excluye ni diagnostica, y una regla bien validada ayuda a decidir a quién se hace una prueba rápida de antígeno o un cultivo. Si la prueba confirma, se trata; si es negativa en un niño, conviene el cultivo según las guías, porque la prueba rápida puede dejar casos sin detectar."
+        },
+        {
+          "pregunta": "¿Por qué importa acertar con el diagnóstico en esta infección y no tratar «por si acaso»?",
+          "clave": "Porque el objetivo del tratamiento antibiótico de la faringitis estreptocócica es acortar el cuadro, limitar el contagio y, sobre todo, prevenir la fiebre reumática, una complicación que ninguna otra causa de odinofagia comparte. Tratar faringitis virales no ofrece ese beneficio y sí los daños del antibiótico. Es una decisión asimétrica que justifica pedir la prueba."
+        },
+        {
+          "pregunta": "¿Qué aspectos de este razonamiento no puede responder la evidencia del artículo?",
+          "clave": "Varios. Los cocientes proceden de una revisión de hallazgos aislados sin intervalo de confianza publicado, así que no se puede cuantificar la incertidumbre de cada número. La probabilidad basal es de niños y no se extrapola a adultos. No hay cocientes registrados para las pruebas de antígeno ni para el cultivo, de modo que la base no permite calcular la probabilidad tras una prueba. Y la evidencia no dice nada sobre qué antibiótico elegir, la duración ni el manejo de los portadores."
+        }
+      ]
+    }
+  ],
+  "cierre": {
+    "sintesis": "En la faringitis estreptocócica del niño, el motivo de consulta no discrimina y los hallazgos aislados mueven poco la probabilidad: el exudado amigdalino es el que más aporta, el faríngeo y la exposición reciente aportan menos, y la ausencia de adenopatía o de hipertrofia amigdalina reduce la probabilidad sin permitir descartar. Por eso el razonamiento termina en una regla de predicción y en una prueba de confirmación, no en una intuición.",
+    "necesidades_aprendizaje": [
+      "Sensibilidad y especificidad de la prueba rápida de antígeno y del cultivo faríngeo, y su efecto sobre la probabilidad posterior; la base registra hallazgos clínicos, no pruebas de laboratorio.",
+      "Probabilidad basal en adultos, que la fuente no estima de forma agrupada.",
+      "Intervalos de confianza de los cocientes de los hallazgos aislados, que el resumen de la fuente no publica.",
+      "Elección y duración del tratamiento antibiótico y manejo de los portadores, que la base no documenta."
+    ]
+  },
+  "omitidos": [],
+  "referencias": [
+    {
+      "id": "pmid:11147989",
+      "cita": "The rational clinical examination. Does this patient have strep throat?. JAMA, 2000. DOI: 10.1001/jama.284.22.2912."
+    }
+  ]
+}

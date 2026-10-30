@@ -1,21 +1,21 @@
 ---
 id: HM6047-01
 slug: esplenomegalia-precision-semiotica
-title: 'Esplenomegalia: hallazgos y evidencia clínica'
+title: 'Síndrome esplenomegálico: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-09-21'
 author: Dr. Alcy Torres
 category: medicina_interna
 category_label: Medicina Interna
 tags:
-- esplenomegalia
 - medicina_interna
 - semiologia
+- sindrome-esplenomegalico
 reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: af44eec90966a41d8052c3605c90a480ad042299
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6047-esplenomegalia.yaml
   archivos:
@@ -25,11 +25,11 @@ fuente:
     conceptos/HM0603-esplenomegalia.yaml: d694a903ae98ee750e432f8b2f95e52b856440a67ebef8ea14396108447626a6
     conceptos/HM3184-matidez-en-espacio-de-traube.yaml: aaedd1334225d41771e89034e12046e6c91d1e07452e9ecaeedfc544cba88af9
     conceptos/HM3185-signo-de-percusion-de-castell.yaml: 493c920a3f6cb1c793b2844448d16198914b6532a8faaf387d34e0cc7421154f
-    condiciones/HM6047-esplenomegalia.yaml: 62abb851775465a9520dccdb108d73114afb5ac5e7c5d516b1b22a7992153955
+    condiciones/HM6047-esplenomegalia.yaml: 101d444603bb27f433b62a785f3ce11930be9b69e13e79633de94012ccff9c03
     referencias/pmid-8411607.yaml: cacb8c8bd67b1f8fe3b0d2d8c35cd177811366fa77deeb28650fe548c42e8efa
 grounding:
   condicion_id: HM:6047
-  condicion_nombre: Esplenomegalia
+  condicion_nombre: Síndrome esplenomegálico
   concepto_id: HM:0603
   concepto_nombre: Esplenomegalia
   estado_lr: medido
@@ -98,7 +98,7 @@ evidencia:
   advertencia: requiere percusión suave y adecuada coordinación respiratoria con el paciente
 autoevaluacion:
 - id: q1
-  pregunta: 'En Esplenomegalia, ¿cuál es el resultado documentado del LR positivo para «Esplenomegalia»? Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607).'
+  pregunta: 'En Síndrome esplenomegálico, ¿cuál es el resultado documentado del LR positivo para «Esplenomegalia»? Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607).'
   concepto_id: HM:0603
   referencia_id: pmid:8411607
   pmid: '8411607'
@@ -125,7 +125,7 @@ autoevaluacion:
     correcta: false
     feedback: 'Sí hay una medición documentada: LR positivo: 8.2. LR positivo: 8.2. Población: adultos evaluados mediante palpación abdominal supina o bimanual frente a ecografía o gammagrafía esplénica como estándar de referencia (pmid:8411607). Interpretación registrada: un polo esplénico palpable por debajo del reborde costal en adultos sin deformidad torácica previa confirma esplenomegalia con alta probabilidad (LR+ 8.2). Advertencia: la ausencia de palpación no descarta agrandamiento esplénico (Se 58%, LR- 0.41); el bazo requiere un aumento de volumen del 40-50% antes de ser palpable.'
 - id: q2
-  pregunta: 'En Esplenomegalia, ¿cuál es el resultado documentado del LR positivo para «Matidez en el espacio de Traube»? Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607).'
+  pregunta: 'En Síndrome esplenomegálico, ¿cuál es el resultado documentado del LR positivo para «Matidez en el espacio de Traube»? Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607).'
   concepto_id: HM:3184
   referencia_id: pmid:8411607
   pmid: '8411607'
@@ -153,21 +153,17 @@ autoevaluacion:
     feedback: 'LR positivo: 2.3. Población: adultos evaluados mediante percusión del espacio semilunar de Traube frente a estándar de referencia por imagen (pmid:8411607). Interpretación registrada: la matidez en el espacio de Traube eleva la sospecha de bazo agrandado e indica proceder a palpación orientada o ecografía. Advertencia: falso positivo común en pacientes sin ayuno previo (estómago ocupado por alimentos sólidos o líquidos).'
 ---
 
-# Esplenomegalia
+# Síndrome esplenomegálico
 
 Hallazgos, cocientes documentados y límites de la evidencia.
 
 ## Nombre en inglés
 
-Splenomegaly
+Splenomegaly syndrome
 
 ## Sinónimos
 
-bazo aumentado de tamaño
-
 hipertrofia esplénica
-
-bazo palpable
 
 ## Códigos
 

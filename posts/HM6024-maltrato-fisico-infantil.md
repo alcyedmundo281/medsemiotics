@@ -15,7 +15,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: 9505ae00ca47576b3cd86bdec1357bc816f9cf91
+  revision: af44eec90966a41d8052c3605c90a480ad042299
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6024-maltrato-fisico-infantil.yaml
   archivos:
