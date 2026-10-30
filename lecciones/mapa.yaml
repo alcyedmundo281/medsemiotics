@@ -1,0 +1,218 @@
+# Mapa del libro: la fuente única del plan editorial (ADR-001).
+#
+#   uv run python -m lecciones mapa          → regenera mapa-maestro-libro.md
+#   uv run python -m lecciones mapa --check  → coherencia mapa ↔ lecciones (en npm run gates)
+#   uv run python -m lecciones nuevo <id>    → crea lecciones/<id>.qmd desde su fila
+#
+# Una fila del mapa es un plan; la lección real es lecciones/<id>.qmd. El estado de cada
+# lección se lee del archivo, nunca se escribe aquí. Todo el texto se reconstruye desde cero:
+# los módulos HTML de clase y la obra de 1993 son fuentes, no texto que se copia.
+#
+# Filas marcadas «propuesta: true» son sugerencias que esperan decisión de los autores.
+
+obra:
+  titulo_provisional: "Neurología Clínica y Semiología Basada en la Evidencia"
+  licencia: "CC BY-NC-SA 4.0"
+  legado: "Torres Catefort A. Neurología Pediátrica. 2.ª ed. Quito: Universidad Central del Ecuador; 1993"
+  fuentes_previas:
+    - "Torres Catefort A. Neuropediatría–Urgencias. Quito: Universidad Central del Ecuador; 1991"
+
+personas:
+  atc:
+    nombre: "Alcy Torres Catefort"
+    rol_obra: autor-fundador
+    fallecido: true
+    credit: [conceptualizacion]
+  artg:
+    nombre: "Alcy Ramiro Torres Guerrero"
+    orcid: "0000-0001-5798-9161"
+    afiliacion: "Boston Medical Center; Boston University Chobanian & Avedisian School of Medicine"
+    credit: [redaccion, revision-edicion]
+  gtg:
+    nombre: "Gladys Torres Guerrero"
+    credit: [redaccion, revision-edicion]
+  aetg:
+    nombre: "Alcy Edmundo Torres Guerrero"
+    orcid: "0000-0002-9742-375X"
+    afiliacion: "Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad Central del Ecuador"
+    rol_obra: coordinacion-editorial
+    credit: [redaccion, revision-edicion]
+
+partes:
+  - clave: fundamentos
+    titulo: "Fundamentos: la semiología basada en la evidencia"
+    autores: [aetg]
+    revisor: aetg
+  - clave: neonato
+    titulo: "El recién nacido"
+    autores: [atc, artg]
+    revisor: artg
+  - clave: lactante-nino
+    titulo: "El lactante y el niño"
+    autores: [atc, artg]
+    revisor: artg
+  - clave: neuroftalmologia
+    titulo: "Neuroftalmología del niño y del adulto"
+    autores: [gtg]
+    revisor: gtg
+    nota: "Temario propuesto para revisión de Gladys Torres Guerrero."
+  - clave: adulto
+    titulo: "El adulto: síndromes y urgencias"
+    autores: [aetg]
+    revisor: aetg
+
+lecciones:
+  # --- Fundamentos ----------------------------------------------------------------------------
+  - id: leccion-examen-neurologico
+    titulo: "El examen neurológico"
+    parte: fundamentos
+    orden: 1
+    fase: 2
+    modulos_html:
+      - neurologia/examen-neurologico-parte-1.html
+      - neurologia/examen-neurologico-parte-2.html
+
+  # --- El recién nacido (obra de 1993) ---------------------------------------------------------
+  - id: leccion-examen-neurologico-recien-nacido
+    titulo: "Examen neurológico del recién nacido"
+    parte: neonato
+    orden: 1
+    fase: 1
+    legado_paginas: "3-18"
+  - id: leccion-sufrimiento-cerebral-neonatal
+    titulo: "Sufrimiento cerebral neonatal por asfixia"
+    parte: neonato
+    orden: 2
+    fase: 3
+    legado_paginas: "24-39"   # provisional: el capítulo sigue tras la p. 39
+
+  # --- El lactante y el niño -------------------------------------------------------------------
+  - id: leccion-examen-neurologico-lactante
+    titulo: "Examen neurológico del lactante"
+    parte: lactante-nino
+    orden: 1
+    fase: 3
+    legado_paginas: "19-23"
+  - id: leccion-conmocion-cerebral-pediatrica
+    titulo: "Conmoción cerebral pediátrica"
+    parte: lactante-nino
+    orden: 2
+    fase: 3
+    condiciones: ["HM:6023"]
+
+  # --- Neuroftalmología (propuesta de temario para Gladys) -------------------------------------
+  - id: leccion-examen-neuroftalmologico
+    titulo: "El examen neuroftalmológico al pie de la cama"
+    parte: neuroftalmologia
+    orden: 1
+    fase: 4
+    propuesta: true
+  - id: leccion-reflejo-rojo-leucocoria
+    titulo: "Reflejo rojo y leucocoria en el recién nacido y el lactante"
+    parte: neuroftalmologia
+    orden: 2
+    fase: 4
+    propuesta: true
+  - id: leccion-estrabismo-ambliopia-nistagmo
+    titulo: "Estrabismo, ambliopía y nistagmo en la infancia"
+    parte: neuroftalmologia
+    orden: 3
+    fase: 4
+    propuesta: true
+  - id: leccion-hemorragias-retinianas-maltrato
+    titulo: "Hemorragias retinianas y traumatismo craneal por maltrato"
+    parte: neuroftalmologia
+    orden: 4
+    fase: 4
+    condiciones: ["HM:6024"]
+    propuesta: true
+  - id: leccion-edema-papila-hipertension-intracraneal
+    titulo: "Edema de papila e hipertensión intracraneal"
+    parte: neuroftalmologia
+    orden: 5
+    fase: 4
+    propuesta: true
+  - id: leccion-perdida-visual-aguda-neuropatias-opticas
+    titulo: "Pérdida visual aguda: neuritis y neuropatías ópticas isquémicas"
+    parte: neuroftalmologia
+    orden: 6
+    fase: 4
+    propuesta: true
+  - id: leccion-diplopia-nervios-oculomotores
+    titulo: "Diplopía y parálisis de los nervios oculomotores"
+    parte: neuroftalmologia
+    orden: 7
+    fase: 4
+    propuesta: true
+  - id: leccion-anisocoria
+    titulo: "Anisocoria: Horner, Adie y la pupila del tercer par"
+    parte: neuroftalmologia
+    orden: 8
+    fase: 4
+    propuesta: true
+
+  # --- El adulto (13 módulos de clase) ---------------------------------------------------------
+  - id: leccion-cefaleas
+    titulo: "Cefaleas primarias y secundarias"
+    parte: adulto
+    orden: 1
+    fase: 2
+    modulos_html: [neurologia/cefaleas/index.html]
+  - id: leccion-epilepsias
+    titulo: "Epilepsias"
+    parte: adulto
+    orden: 2
+    fase: 2
+    modulos_html: [neurologia/epilepsia-ii/index.html]
+  - id: leccion-acv-codigo-ictus
+    titulo: "Ataque cerebrovascular y código ictus"
+    parte: adulto
+    orden: 3
+    fase: 2
+    modulos_html: [neurologia/acv.html, neurologia/acv-isquemico.html]
+  - id: leccion-trastornos-movimiento
+    titulo: "Trastornos del movimiento"
+    parte: adulto
+    orden: 4
+    fase: 2
+    modulos_html:
+      - neurologia/trastornos-movimiento-1.html
+      - neurologia/trastornos-movimiento-2.html
+    condiciones: ["HM:6015"]
+  - id: leccion-enfermedades-desmielinizantes
+    titulo: "Enfermedades desmielinizantes"
+    parte: adulto
+    orden: 5
+    fase: 2
+    modulos_html: [neurologia/enfermedades_desmielinizantes.html]
+  - id: leccion-enfermedades-neuromusculares
+    titulo: "Enfermedades neuromusculares"
+    parte: adulto
+    orden: 6
+    fase: 2
+    modulos_html: [neurologia/neuromusculares.html]
+  - id: leccion-neuropatias
+    titulo: "Neuropatías periféricas"
+    parte: adulto
+    orden: 7
+    fase: 2
+    modulos_html: [neurologia/neuropatias.html]
+  - id: leccion-demencias
+    titulo: "Demencias"
+    parte: adulto
+    orden: 8
+    fase: 2
+    modulos_html: [neurologia/demencias.html]
+  - id: leccion-infecciones-snc
+    titulo: "Infecciones del sistema nervioso central"
+    parte: adulto
+    orden: 9
+    fase: 2
+    modulos_html: [neurologia/infecciones-snc.html]
+    condiciones: ["HM:6004"]
+  - id: leccion-traumatismo-craneal-leve
+    titulo: "Traumatismo craneal leve"
+    parte: adulto
+    orden: 10
+    fase: 2
+    condiciones: ["HM:6038"]
