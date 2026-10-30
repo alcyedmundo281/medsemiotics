@@ -21,7 +21,7 @@ hechos explícitos de la fuente y mantienen sus propias referencias.
 artículos estén publicados antes de actualizar su campo `url`. No hace commits
 ni pushes. Ver el flujo completo en [README.md](../README.md).
 
-### `casos/` e `imagenes/` (Python, con gates)
+### `casos/`, `imagenes/` y `libro/` (Python, con gates)
 
 Paquetes tipados (mypy estricto, Ruff, pytest) que se ejecutan con `uv`:
 
@@ -31,6 +31,10 @@ Paquetes tipados (mypy estricto, Ruff, pytest) que se ejecutan con `uv`:
 - `python -m imagenes` busca en Wikimedia Commons, verifica que la licencia sea dominio
   público o CC0 y registra la imagen en `assets/data/topic-images.json`. Órdenes: `buscar`,
   `asignar`, `check` (`--estricto`, `--online`).
+- `python -m libro` genera el proyecto Quarto (`build/quarto/`) con maqueta de catálogo
+  KDP e IngramSpark (`170 × 244 mm` = `6,69 × 9,61 pulgadas`), compila el PDF con
+  `quarto` + `lualatex` (`build/libro-neurologia.pdf`) y verifica las dimensiones y
+  metadatos con `pdfinfo`. Órdenes: `qmd`, `build`, `check` (`--exigir-pdf`).
 
 El flujo editorial completo está en la skill `.claude/skills/caso-socratico/SKILL.md`.
 
