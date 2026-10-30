@@ -370,3 +370,16 @@ def test_vineta_admite_datos_del_paciente() -> None:
     from lecciones.validacion import problemas_de_frontmatter
 
     assert problemas_de_frontmatter(Leccion.model_validate(BASE)) == []
+
+
+def test_legado_fuera_de_las_partes_pediatricas_lleva_al_fundador(tmp_path: Path) -> None:
+    from lecciones import mapa as m
+
+    mapa = m.cargar()
+    ident = "leccion-perdida-visual-aguda-neuropatias-opticas"
+    texto = m.esqueleto(mapa, ident)
+    assert "Alcy Torres Catefort" in texto
+    ruta = tmp_path / f"{ident}.qmd"
+    ruta.write_text(texto, encoding="utf-8")
+    assert m.coherencia(mapa, m.estados([ruta])) == []
+    assert validar_archivo(ruta, RAIZ, {}).errores == []

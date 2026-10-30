@@ -8,7 +8,7 @@
 
 Cada fila es una lección: una fuente única (`lecciones/<id>.qmd`) de la que salen el artículo del blog y el capítulo del libro. Todo el texto se reconstruye desde cero; los módulos de clase y la obra de 1993 son fuentes, no texto que se copia. El estado se lee de cada lección. Contrato: `docs/adr/ADR-001-arquitectura-libro.md`.
 
-**Estado:** ⬜ pendiente: 23 · ✏️ borrador: 0 · 🔎 revisado: 0 · ✅ publicado: 0 · total 23
+**Estado:** ⬜ pendiente: 41 · ✏️ borrador: 0 · 🔎 revisado: 0 · ✅ publicado: 0 · total 41
 
 **Fases:** 1 piloto · 2 módulos de clase · 3 neuropediatría · 4 neuroftalmología · 5 libro. «(propuesta)» marca una agrupación de módulos pendiente de decisión.
 
@@ -28,6 +28,9 @@ Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alc
 |:-|:-|:-|:-|:-|
 | 1 | Examen neurológico del recién nacido<br>`leccion-examen-neurologico-recien-nacido` | 1 | 1993, pp. 3-18 | ⬜ pendiente |
 | 2 | Sufrimiento cerebral neonatal por asfixia<br>`leccion-sufrimiento-cerebral-neonatal` | 3 | 1993, pp. 24-39 | ⬜ pendiente |
+| 3 | Seguimiento neuromotor del recién nacido de riesgo *(propuesta)*<br>`leccion-examen-neuromotor-recien-nacido-riesgo` | 3 | 1993, pp. 40-59 | ⬜ pendiente |
+| 4 | Lesiones de origen perinatal: caput, cefalohematoma, hemorragias y plexo braquial *(propuesta)*<br>`leccion-lesiones-perinatales` | 3 | 1993, pp. 60-64 | ⬜ pendiente |
+| 5 | Crisis epilépticas del recién nacido *(propuesta)*<br>`leccion-crisis-epilepticas-recien-nacido` | 3 | 1993, pp. 65-74 | ⬜ pendiente |
 
 ## 3. El lactante y el niño
 
@@ -36,7 +39,22 @@ Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alc
 | # | Lección | Fase | Fuentes | Estado |
 |:-|:-|:-|:-|:-|
 | 1 | Examen neurológico del lactante<br>`leccion-examen-neurologico-lactante` | 3 | 1993, pp. 19-23 | ⬜ pendiente |
-| 2 | Conmoción cerebral pediátrica<br>`leccion-conmocion-cerebral-pediatrica` | 3 | db `HM:6023` | ⬜ pendiente |
+| 2 | Traumatismo craneal y conmoción cerebral en el niño *(propuesta)*<br>`leccion-traumatismo-craneal-nino` | 3 | 1993, pp. 75-81 · db `HM:6023` | ⬜ pendiente |
+| 3 | Hemorragias intracraneales en el niño *(propuesta)*<br>`leccion-hemorragias-intracraneales-nino` | 3 | 1993, pp. 82-89 | ⬜ pendiente |
+| 4 | Hipertensión intracraneal no traumática *(propuesta)*<br>`leccion-hipertension-intracraneal-nino` | 3 | 1993, pp. 90-95 | ⬜ pendiente |
+| 5 | Convulsiones y epilepsia en el niño *(propuesta)*<br>`leccion-convulsiones-epilepsia-nino` | 3 | 1993, pp. 96-108 | ⬜ pendiente |
+| 6 | El niño en coma *(propuesta)*<br>`leccion-coma-nino` | 3 | 1993, pp. 109-119 | ⬜ pendiente |
+| 7 | Encefalitis, encefalopatías agudas y absceso cerebral *(propuesta)*<br>`leccion-encefalitis-absceso-cerebral` | 3 | 1993, pp. 120-129 | ⬜ pendiente |
+| 8 | Meningitis en el niño *(propuesta)*<br>`leccion-meningitis-nino` | 3 | 1993, pp. 130-137 · db `HM:6004` | ⬜ pendiente |
+| 9 | Hidrocefalia *(propuesta)*<br>`leccion-hidrocefalia` | 3 | 1993, pp. 138-143 | ⬜ pendiente |
+| 10 | Craneosinostosis *(propuesta)*<br>`leccion-craneosinostosis` | 3 | 1993, pp. 144-148 | ⬜ pendiente |
+| 11 | Síndromes paralíticos agudos *(propuesta)*<br>`leccion-sindromes-paraliticos-agudos` | 3 | 1993, pp. 149-158 | ⬜ pendiente |
+| 12 | Síndrome cerebeloso agudo: ataxias agudas *(propuesta)*<br>`leccion-ataxia-aguda` | 3 | 1993, pp. 159-162 | ⬜ pendiente |
+| 13 | Vértigo, síncope y lipotimias en el niño *(propuesta)*<br>`leccion-vertigo-sincope-nino` | 3 | 1993, pp. 163-164 | ⬜ pendiente |
+| 14 | Migraña en el niño *(propuesta)*<br>`leccion-migrana-nino` | 3 | 1993, pp. 165-166 | ⬜ pendiente |
+| 15 | Movimientos involuntarios y trastornos paroxísticos del tono *(propuesta)*<br>`leccion-movimientos-involuntarios-tono` | 3 | 1993, pp. 167-170 | ⬜ pendiente |
+| 16 | Sordera en la infancia *(propuesta)*<br>`leccion-sordera` | 3 | 1993, pp. 171 | ⬜ pendiente |
+| 17 | Punción lumbar y líquido cefalorraquídeo en el niño *(propuesta)*<br>`leccion-procedimientos-lcr` | 3 | 1993, pp. 175-182 | ⬜ pendiente |
 
 ## 4. Neuroftalmología del niño y del adulto
 
@@ -51,7 +69,7 @@ Autores: Gladys Torres Guerrero · Revisión: Gladys Torres Guerrero
 | 3 | Estrabismo, ambliopía y nistagmo en la infancia *(propuesta)*<br>`leccion-estrabismo-ambliopia-nistagmo` | 4 | nueva | ⬜ pendiente |
 | 4 | Hemorragias retinianas y traumatismo craneal por maltrato *(propuesta)*<br>`leccion-hemorragias-retinianas-maltrato` | 4 | db `HM:6024` | ⬜ pendiente |
 | 5 | Edema de papila e hipertensión intracraneal *(propuesta)*<br>`leccion-edema-papila-hipertension-intracraneal` | 4 | nueva | ⬜ pendiente |
-| 6 | Pérdida visual aguda: neuritis y neuropatías ópticas isquémicas *(propuesta)*<br>`leccion-perdida-visual-aguda-neuropatias-opticas` | 4 | nueva | ⬜ pendiente |
+| 6 | Pérdida visual aguda: neuritis y neuropatías ópticas isquémicas *(propuesta)*<br>`leccion-perdida-visual-aguda-neuropatias-opticas` | 4 | 1993, pp. 172-174 | ⬜ pendiente |
 | 7 | Diplopía y parálisis de los nervios oculomotores *(propuesta)*<br>`leccion-diplopia-nervios-oculomotores` | 4 | nueva | ⬜ pendiente |
 | 8 | Anisocoria: Horner, Adie y la pupila del tercer par *(propuesta)*<br>`leccion-anisocoria` | 4 | nueva | ⬜ pendiente |
 

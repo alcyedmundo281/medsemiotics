@@ -100,6 +100,9 @@ class Mapa(_Base):
     def parte(self, clave: str) -> ParteMapa:
         return next(p for p in self.partes if p.clave == clave)
 
+    def fundador(self) -> str | None:
+        return next((k for k, p in self.personas.items() if p.rol_obra == "autor-fundador"), None)
+
     def fila(self, ident: str) -> FilaMapa | None:
         return next((f for f in self.lecciones if f.id == ident), None)
 
@@ -162,6 +165,13 @@ def coherencia(mapa: Mapa, lecciones: dict[str, dict[str, Any]], raiz: Path = RA
         if (legado.get("paginas") if isinstance(legado, dict) else None) != plan.legado_paginas:
             errores.append(f"{archivo}: legado.paginas no coincide con el mapa")
         nombres = {a.get("nombre") for a in datos.get("autores") or [] if isinstance(a, dict)}
+        fundador = mapa.fundador()
+        if (
+            plan.legado_paginas
+            and fundador is not None
+            and mapa.personas[fundador].nombre not in nombres
+        ):
+            errores.append(f"{archivo}: una lección con legado lleva al autor fundador")
         for alias in mapa.parte(plan.parte).autores:
             if mapa.personas[alias].nombre not in nombres:
                 nombre = mapa.personas[alias].nombre
@@ -253,6 +263,10 @@ def esqueleto(mapa: Mapa, ident: str) -> str:
     if fila is None:
         raise ErrorDeFuente(f"{ident} no figura en lecciones/mapa.yaml")
     parte = mapa.parte(fila.parte)
+    alias = list(parte.autores)
+    fundador = mapa.fundador()
+    if fila.legado_paginas and fundador is not None and fundador not in alias:
+        alias.insert(0, fundador)
     pendiente = "PENDIENTE de redacción."
     datos: dict[str, Any] = {
         "id": fila.id,
@@ -264,8 +278,7 @@ def esqueleto(mapa: Mapa, ident: str) -> str:
         "fecha_revision": None,
         "revisor": None,
         "autores": [
-            mapa.personas[a].model_dump(exclude_defaults=True, exclude_none=True)
-            for a in parte.autores
+            mapa.personas[a].model_dump(exclude_defaults=True, exclude_none=True) for a in alias
         ],
     }
     if fila.legado_paginas:
