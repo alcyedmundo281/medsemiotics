@@ -355,47 +355,53 @@ lecciones:
     fase: 2
     modulos_html:
       - neurologia/neuropatias.html
+  - id: leccion-paralisis-facial-periferica
+    titulo: "Parálisis facial periférica: parálisis de Bell"
+    parte: adulto
+    orden: 10
+    fase: 2
+    propuesta: true
   - id: leccion-demencias
     titulo: "Demencias y enfermedad de Alzheimer"
     parte: adulto
-    orden: 10
+    orden: 11
     fase: 2
     modulos_html:
       - neurologia/demencias.html
   - id: leccion-esclerosis-lateral-amiotrofica
     titulo: "Esclerosis lateral amiotrófica"
     parte: adulto
-    orden: 11
+    orden: 12
     fase: 2
     propuesta: true
   - id: leccion-alteracion-estado-mental
     titulo: "Alteración aguda del estado mental: delirium y coma"
     parte: adulto
-    orden: 12
+    orden: 13
     fase: 2
     propuesta: true
   - id: leccion-hipertension-intracraneal-adulto
     titulo: "Hipertensión intracraneal en el adulto"
     parte: adulto
-    orden: 13
+    orden: 14
     fase: 2
     propuesta: true
   - id: leccion-encefalopatia-hipertensiva
     titulo: "Encefalopatía hipertensiva y crisis hipertensiva neurológica"
     parte: adulto
-    orden: 14
+    orden: 15
     fase: 2
     propuesta: true
   - id: leccion-debilidad-aguda
     titulo: "Debilidad aguda: síndrome de Guillain-Barré y compresión medular"
     parte: adulto
-    orden: 15
+    orden: 16
     fase: 2
     propuesta: true
   - id: leccion-infecciones-snc
     titulo: "Infecciones del sistema nervioso central"
     parte: adulto
-    orden: 16
+    orden: 17
     fase: 2
     modulos_html:
       - neurologia/infecciones-snc.html
@@ -403,7 +409,7 @@ lecciones:
   - id: leccion-traumatismo-craneal-leve
     titulo: "Traumatismo craneal leve"
     parte: adulto
-    orden: 17
+    orden: 18
     fase: 2
     condiciones: ["HM:6038"]
 
@@ -456,7 +462,7 @@ silabo:
     - semana: 11
       unidad: 2
       tema: "Neuropatías periféricas: parálisis de Bell, túnel carpiano, herpes zóster, neuralgia postherpética, neuropatía diabética"
-      lecciones: [leccion-neuropatias]
+      lecciones: [leccion-neuropatias, leccion-paralisis-facial-periferica]
     - semana: 12
       unidad: 2
       tema: "Neurodegenerativas: Alzheimer, esclerosis lateral amiotrófica, parkinsonismos atípicos"
