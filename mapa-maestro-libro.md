@@ -8,7 +8,7 @@
 
 Cada fila es una lección: una fuente única (`lecciones/<id>.qmd`) de la que salen el artículo del blog y el capítulo del libro. Todo el texto se reconstruye desde cero; los módulos de clase y la obra de 1993 son fuentes, no texto que se copia. El estado se lee de cada lección. Contrato: `docs/adr/ADR-001-arquitectura-libro.md`.
 
-**Estado:** ⬜ pendiente: 53 · ✏️ borrador: 0 · 🔎 revisado: 0 · ✅ publicado: 0 · total 53
+**Estado:** ⬜ pendiente: 54 · ✏️ borrador: 0 · 🔎 revisado: 0 · ✅ publicado: 0 · total 54
 
 **Fases:** 1 piloto · 2 módulos de clase · 3 neuropediatría · 4 neuroftalmología · 5 libro. «(propuesta)» marca una agrupación de módulos pendiente de decisión.
 
@@ -91,16 +91,17 @@ Autores: Alcy Edmundo Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 | 6 | Enfermedades desmielinizantes<br>`leccion-enfermedades-desmielinizantes` | 2 | `enfermedades_desmielinizantes.html` | ⬜ pendiente |
 | 7 | Trastornos del movimiento y parkinsonismos<br>`leccion-trastornos-movimiento` | 2 | `trastornos-movimiento-1.html` · `trastornos-movimiento-2.html` · db `HM:6015` | ⬜ pendiente |
 | 8 | Enfermedades neuromusculares: miastenia gravis y miopatías<br>`leccion-enfermedades-neuromusculares` | 2 | `neuromusculares.html` | ⬜ pendiente |
-| 9 | Neuropatías periféricas y mononeuropatías<br>`leccion-neuropatias` | 2 | `neuropatias.html` | ⬜ pendiente |
-| 10 | Parálisis facial periférica: parálisis de Bell *(propuesta)*<br>`leccion-paralisis-facial-periferica` | 2 | nueva | ⬜ pendiente |
-| 11 | Demencias y enfermedad de Alzheimer<br>`leccion-demencias` | 2 | `demencias.html` | ⬜ pendiente |
-| 12 | Esclerosis lateral amiotrófica *(propuesta)*<br>`leccion-esclerosis-lateral-amiotrofica` | 2 | nueva | ⬜ pendiente |
-| 13 | Alteración aguda del estado mental: delirium y coma *(propuesta)*<br>`leccion-alteracion-estado-mental` | 2 | nueva | ⬜ pendiente |
-| 14 | Hipertensión intracraneal en el adulto *(propuesta)*<br>`leccion-hipertension-intracraneal-adulto` | 2 | nueva | ⬜ pendiente |
-| 15 | Encefalopatía hipertensiva y crisis hipertensiva neurológica *(propuesta)*<br>`leccion-encefalopatia-hipertensiva` | 2 | nueva | ⬜ pendiente |
-| 16 | Debilidad aguda: síndrome de Guillain-Barré y compresión medular *(propuesta)*<br>`leccion-debilidad-aguda` | 2 | nueva | ⬜ pendiente |
-| 17 | Infecciones del sistema nervioso central<br>`leccion-infecciones-snc` | 2 | `infecciones-snc.html` · db `HM:6004` | ⬜ pendiente |
-| 18 | Traumatismo craneal leve<br>`leccion-traumatismo-craneal-leve` | 2 | db `HM:6038` | ⬜ pendiente |
+| 9 | Polineuropatías: neuropatía diabética difusa y síndrome de Guillain-Barré<br>`leccion-neuropatias` | 2 | `neuropatias.html` | ⬜ pendiente |
+| 10 | Neuropatías focales: principios generales, túnel carpiano, herpes zóster, neuralgia postherpética y neuropatía diabética proximal *(propuesta)*<br>`leccion-neuropatias-focales` | 2 | nueva | ⬜ pendiente |
+| 11 | Parálisis facial periférica: parálisis de Bell *(propuesta)*<br>`leccion-paralisis-facial-periferica` | 2 | nueva | ⬜ pendiente |
+| 12 | Demencias y enfermedad de Alzheimer<br>`leccion-demencias` | 2 | `demencias.html` | ⬜ pendiente |
+| 13 | Esclerosis lateral amiotrófica *(propuesta)*<br>`leccion-esclerosis-lateral-amiotrofica` | 2 | nueva | ⬜ pendiente |
+| 14 | Alteración aguda del estado mental: delirium y coma *(propuesta)*<br>`leccion-alteracion-estado-mental` | 2 | nueva | ⬜ pendiente |
+| 15 | Hipertensión intracraneal en el adulto *(propuesta)*<br>`leccion-hipertension-intracraneal-adulto` | 2 | nueva | ⬜ pendiente |
+| 16 | Encefalopatía hipertensiva y crisis hipertensiva neurológica *(propuesta)*<br>`leccion-encefalopatia-hipertensiva` | 2 | nueva | ⬜ pendiente |
+| 17 | Debilidad aguda: síndrome de Guillain-Barré y compresión medular *(propuesta)*<br>`leccion-debilidad-aguda` | 2 | nueva | ⬜ pendiente |
+| 18 | Infecciones del sistema nervioso central<br>`leccion-infecciones-snc` | 2 | `infecciones-snc.html` · db `HM:6004` | ⬜ pendiente |
+| 19 | Traumatismo craneal leve<br>`leccion-traumatismo-craneal-leve` | 2 | db `HM:6038` | ⬜ pendiente |
 
 ## Cobertura del sílabo
 
@@ -118,12 +119,12 @@ Medicina Interna 1 – Neurología (MMP06PPP0104), Universidad Central del Ecuad
 | 8 | 2 | Enfermedades desmielinizantes: esclerosis múltiple, encefalomielitis aguda diseminada | Enfermedades desmielinizantes | ⬜ pendiente |
 | 9 | 2 | Sistema extrapiramidal: Parkinson, temblor esencial, Huntington, distonías | Trastornos del movimiento y parkinsonismos | ⬜ pendiente |
 | 10 | 2 | Trastornos neuromusculares: miastenia gravis, miopatías | Enfermedades neuromusculares: miastenia gravis y miopatías | ⬜ pendiente |
-| 11 | 2 | Neuropatías periféricas: parálisis de Bell, túnel carpiano, herpes zóster, neuralgia postherpética, neuropatía diabética | Neuropatías periféricas y mononeuropatías<br>Parálisis facial periférica: parálisis de Bell | ⬜ pendiente<br>⬜ pendiente |
+| 11 | 2 | Neuropatías periféricas: parálisis de Bell, túnel carpiano, herpes zóster, neuralgia postherpética, neuropatía diabética | Neuropatías focales: principios generales, túnel carpiano, herpes zóster, neuralgia postherpética y neuropatía diabética proximal<br>Parálisis facial periférica: parálisis de Bell | ⬜ pendiente<br>⬜ pendiente |
 | 12 | 2 | Neurodegenerativas: Alzheimer, esclerosis lateral amiotrófica, parkinsonismos atípicos | Demencias y enfermedad de Alzheimer<br>Esclerosis lateral amiotrófica<br>Trastornos del movimiento y parkinsonismos | ⬜ pendiente<br>⬜ pendiente<br>⬜ pendiente |
 | 13 | 3 | Estudios diagnósticos: TC, RM, EEG, conducción nerviosa y electromiografía, punción lumbar y LCR | Estudios diagnósticos: neuroimagen, EEG, electromiografía y líquido cefalorraquídeo | ⬜ pendiente |
 | 14 | 3 | Principios terapéuticos iniciales y criterios de derivación | Tratamiento inicial y criterios de derivación | ⬜ pendiente |
 | 15 | 4 | Estado epiléptico, ACV agudo, hipertensión endocraneal, alteración del estado mental | Estado epiléptico<br>Enfermedad cerebrovascular isquémica: AIT, infarto y código ictus<br>Hipertensión intracraneal en el adulto<br>Alteración aguda del estado mental: delirium y coma | ⬜ pendiente<br>⬜ pendiente<br>⬜ pendiente<br>⬜ pendiente |
-| 16 | 4 | Crisis hipertensiva neurológica, Guillain-Barré, compresión medular, meningitis bacteriana aguda | Encefalopatía hipertensiva y crisis hipertensiva neurológica<br>Debilidad aguda: síndrome de Guillain-Barré y compresión medular<br>Infecciones del sistema nervioso central | ⬜ pendiente<br>⬜ pendiente<br>⬜ pendiente |
+| 16 | 4 | Crisis hipertensiva neurológica, Guillain-Barré, compresión medular, meningitis bacteriana aguda | Encefalopatía hipertensiva y crisis hipertensiva neurológica<br>Debilidad aguda: síndrome de Guillain-Barré y compresión medular<br>Polineuropatías: neuropatía diabética difusa y síndrome de Guillain-Barré<br>Infecciones del sistema nervioso central | ⬜ pendiente<br>⬜ pendiente<br>⬜ pendiente<br>⬜ pendiente |
 | 17 | 5 | Guías clínicas nacionales e internacionales en el primer nivel de atención | Razonamiento clínico y semiología basada en la evidencia | ⬜ pendiente |
 | 18 | 5 | Guías clínicas nacionales e internacionales en el primer nivel de atención | Razonamiento clínico y semiología basada en la evidencia | ⬜ pendiente |
 
@@ -143,6 +144,6 @@ Medicina Interna 1 – Neurología (MMP06PPP0104), Universidad Central del Ecuad
 | `neurologia/examen-neurologico-parte-2.html` | El examen neurológico |
 | `neurologia/infecciones-snc.html` | Infecciones del sistema nervioso central |
 | `neurologia/neuromusculares.html` | Enfermedades neuromusculares: miastenia gravis y miopatías |
-| `neurologia/neuropatias.html` | Neuropatías periféricas y mononeuropatías |
+| `neurologia/neuropatias.html` | Polineuropatías: neuropatía diabética difusa y síndrome de Guillain-Barré |
 | `neurologia/trastornos-movimiento-1.html` | Trastornos del movimiento y parkinsonismos |
 | `neurologia/trastornos-movimiento-2.html` | Trastornos del movimiento y parkinsonismos |
