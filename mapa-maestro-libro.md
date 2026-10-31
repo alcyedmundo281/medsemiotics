@@ -64,18 +64,18 @@ Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alc
 
 Autores: Gladys Torres Guerrero · Revisión: Gladys Torres Guerrero
 
-*Temario propuesto para revisión de Gladys Torres Guerrero.*
+*Temario aprobado por Gladys Torres Guerrero (30-oct-2026).*
 
 | # | Lección | Fase | Fuentes | Estado |
 |:-|:-|:-|:-|:-|
-| 1 | El examen neuroftalmológico al pie de la cama *(propuesta)*<br>`leccion-examen-neuroftalmologico` | 4 | nueva | ⬜ pendiente |
-| 2 | Reflejo rojo y leucocoria en el recién nacido y el lactante *(propuesta)*<br>`leccion-reflejo-rojo-leucocoria` | 4 | nueva | ⬜ pendiente |
-| 3 | Estrabismo, ambliopía y nistagmo en la infancia *(propuesta)*<br>`leccion-estrabismo-ambliopia-nistagmo` | 4 | nueva | ⬜ pendiente |
-| 4 | Hemorragias retinianas y traumatismo craneal por maltrato *(propuesta)*<br>`leccion-hemorragias-retinianas-maltrato` | 4 | db `HM:6024` | ⬜ pendiente |
-| 5 | Edema de papila e hipertensión intracraneal *(propuesta)*<br>`leccion-edema-papila-hipertension-intracraneal` | 4 | nueva | ⬜ pendiente |
-| 6 | Pérdida visual aguda: neuritis y neuropatías ópticas isquémicas *(propuesta)*<br>`leccion-perdida-visual-aguda-neuropatias-opticas` | 4 | 1993, pp. 172-174 | ⬜ pendiente |
-| 7 | Diplopía y parálisis de los nervios oculomotores *(propuesta)*<br>`leccion-diplopia-nervios-oculomotores` | 4 | nueva | ⬜ pendiente |
-| 8 | Anisocoria: Horner, Adie y la pupila del tercer par *(propuesta)*<br>`leccion-anisocoria` | 4 | nueva | ⬜ pendiente |
+| 1 | El examen neuroftalmológico al pie de la cama<br>`leccion-examen-neuroftalmologico` | 4 | nueva | ⬜ pendiente |
+| 2 | Reflejo rojo y leucocoria en el recién nacido y el lactante<br>`leccion-reflejo-rojo-leucocoria` | 4 | nueva | ⬜ pendiente |
+| 3 | Estrabismo, ambliopía y nistagmo en la infancia<br>`leccion-estrabismo-ambliopia-nistagmo` | 4 | nueva | ⬜ pendiente |
+| 4 | Hemorragias retinianas y traumatismo craneal por maltrato<br>`leccion-hemorragias-retinianas-maltrato` | 4 | db `HM:6024` | ⬜ pendiente |
+| 5 | Edema de papila e hipertensión intracraneal<br>`leccion-edema-papila-hipertension-intracraneal` | 4 | nueva | ⬜ pendiente |
+| 6 | Pérdida visual aguda: neuritis y neuropatías ópticas isquémicas<br>`leccion-perdida-visual-aguda-neuropatias-opticas` | 4 | 1993, pp. 172-174 | ⬜ pendiente |
+| 7 | Diplopía y parálisis de los nervios oculomotores<br>`leccion-diplopia-nervios-oculomotores` | 4 | nueva | ⬜ pendiente |
+| 8 | Anisocoria: Horner, Adie y la pupila del tercer par<br>`leccion-anisocoria` | 4 | nueva | ⬜ pendiente |
 
 ## 5. El adulto: síndromes y urgencias
 
