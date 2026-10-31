@@ -18,11 +18,11 @@ Autores: Alcy Edmundo Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 
 | # | Lección | Fase | Fuentes | Estado |
 |:-|:-|:-|:-|:-|
-| 1 | Razonamiento clínico y semiología basada en la evidencia *(propuesta)*<br>`leccion-razonamiento-clinico-evidencia` | 2 | nueva | ⬜ pendiente |
+| 1 | Razonamiento clínico y semiología basada en la evidencia<br>`leccion-razonamiento-clinico-evidencia` | 2 | nueva | ⬜ pendiente |
 | 2 | El examen neurológico<br>`leccion-examen-neurologico` | 2 | `examen-neurologico-parte-1.html` · `examen-neurologico-parte-2.html` | ⬜ pendiente |
-| 3 | Escalas neurológicas: Glasgow, NIHSS, EDSS, Hunt y Hess, Fisher, Rankin y ASPECTS *(propuesta)*<br>`leccion-escalas-neurologicas` | 2 | nueva | ⬜ pendiente |
-| 4 | Estudios diagnósticos: neuroimagen, EEG, electromiografía y líquido cefalorraquídeo *(propuesta)*<br>`leccion-estudios-diagnosticos` | 2 | nueva | ⬜ pendiente |
-| 5 | Tratamiento inicial y criterios de derivación *(propuesta)*<br>`leccion-tratamiento-inicial-derivacion` | 2 | nueva | ⬜ pendiente |
+| 3 | Escalas neurológicas: Glasgow, NIHSS, EDSS, Hunt y Hess, Fisher, Rankin y ASPECTS<br>`leccion-escalas-neurologicas` | 2 | nueva | ⬜ pendiente |
+| 4 | Estudios diagnósticos: neuroimagen, EEG, electromiografía y líquido cefalorraquídeo<br>`leccion-estudios-diagnosticos` | 2 | nueva | ⬜ pendiente |
+| 5 | Tratamiento inicial y criterios de derivación<br>`leccion-tratamiento-inicial-derivacion` | 2 | nueva | ⬜ pendiente |
 
 ## 2. El recién nacido
 
@@ -85,21 +85,21 @@ Autores: Alcy Edmundo Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 |:-|:-|:-|:-|:-|
 | 1 | Cefaleas y neuralgia del trigémino<br>`leccion-cefaleas` | 2 | `cefaleas/index.html` | ⬜ pendiente |
 | 2 | Enfermedad cerebrovascular isquémica: AIT, infarto y código ictus<br>`leccion-acv-codigo-ictus` | 2 | `acv.html` · `acv-isquemico.html` | ⬜ pendiente |
-| 3 | Enfermedad cerebrovascular hemorrágica: hemorragia intraparenquimatosa y subaracnoidea *(propuesta)*<br>`leccion-ecv-hemorragica` | 2 | nueva | ⬜ pendiente |
+| 3 | Enfermedad cerebrovascular hemorrágica: hemorragia intraparenquimatosa y subaracnoidea<br>`leccion-ecv-hemorragica` | 2 | nueva | ⬜ pendiente |
 | 4 | Epilepsias y síndromes epilépticos<br>`leccion-epilepsias` | 2 | `epilepsia-ii/index.html` | ⬜ pendiente |
-| 5 | Estado epiléptico *(propuesta)*<br>`leccion-estado-epileptico` | 2 | nueva | ⬜ pendiente |
+| 5 | Estado epiléptico<br>`leccion-estado-epileptico` | 2 | nueva | ⬜ pendiente |
 | 6 | Enfermedades desmielinizantes<br>`leccion-enfermedades-desmielinizantes` | 2 | `enfermedades_desmielinizantes.html` | ⬜ pendiente |
 | 7 | Trastornos del movimiento y parkinsonismos<br>`leccion-trastornos-movimiento` | 2 | `trastornos-movimiento-1.html` · `trastornos-movimiento-2.html` · db `HM:6015` | ⬜ pendiente |
 | 8 | Enfermedades neuromusculares: miastenia gravis y miopatías<br>`leccion-enfermedades-neuromusculares` | 2 | `neuromusculares.html` | ⬜ pendiente |
 | 9 | Polineuropatías: neuropatía diabética difusa y síndrome de Guillain-Barré<br>`leccion-neuropatias` | 2 | `neuropatias.html` | ⬜ pendiente |
-| 10 | Neuropatías focales: principios generales, túnel carpiano, herpes zóster, neuralgia postherpética y neuropatía diabética proximal *(propuesta)*<br>`leccion-neuropatias-focales` | 2 | nueva | ⬜ pendiente |
-| 11 | Parálisis facial periférica: parálisis de Bell *(propuesta)*<br>`leccion-paralisis-facial-periferica` | 2 | nueva | ⬜ pendiente |
+| 10 | Neuropatías focales: principios generales, túnel carpiano, herpes zóster, neuralgia postherpética y neuropatía diabética proximal<br>`leccion-neuropatias-focales` | 2 | nueva | ⬜ pendiente |
+| 11 | Parálisis facial periférica: parálisis de Bell<br>`leccion-paralisis-facial-periferica` | 2 | nueva | ⬜ pendiente |
 | 12 | Demencias y enfermedad de Alzheimer<br>`leccion-demencias` | 2 | `demencias.html` | ⬜ pendiente |
-| 13 | Esclerosis lateral amiotrófica *(propuesta)*<br>`leccion-esclerosis-lateral-amiotrofica` | 2 | nueva | ⬜ pendiente |
-| 14 | Alteración aguda del estado mental: delirium y coma *(propuesta)*<br>`leccion-alteracion-estado-mental` | 2 | nueva | ⬜ pendiente |
-| 15 | Hipertensión intracraneal en el adulto *(propuesta)*<br>`leccion-hipertension-intracraneal-adulto` | 2 | nueva | ⬜ pendiente |
-| 16 | Encefalopatía hipertensiva y crisis hipertensiva neurológica *(propuesta)*<br>`leccion-encefalopatia-hipertensiva` | 2 | nueva | ⬜ pendiente |
-| 17 | Debilidad aguda: síndrome de Guillain-Barré y compresión medular *(propuesta)*<br>`leccion-debilidad-aguda` | 2 | nueva | ⬜ pendiente |
+| 13 | Esclerosis lateral amiotrófica<br>`leccion-esclerosis-lateral-amiotrofica` | 2 | nueva | ⬜ pendiente |
+| 14 | Alteración aguda del estado mental: delirium y coma<br>`leccion-alteracion-estado-mental` | 2 | nueva | ⬜ pendiente |
+| 15 | Hipertensión intracraneal en el adulto<br>`leccion-hipertension-intracraneal-adulto` | 2 | nueva | ⬜ pendiente |
+| 16 | Encefalopatía hipertensiva y crisis hipertensiva neurológica<br>`leccion-encefalopatia-hipertensiva` | 2 | nueva | ⬜ pendiente |
+| 17 | Debilidad aguda: síndrome de Guillain-Barré y compresión medular<br>`leccion-debilidad-aguda` | 2 | nueva | ⬜ pendiente |
 | 18 | Infecciones del sistema nervioso central<br>`leccion-infecciones-snc` | 2 | `infecciones-snc.html` · db `HM:6004` | ⬜ pendiente |
 | 19 | Traumatismo craneal leve<br>`leccion-traumatismo-craneal-leve` | 2 | db `HM:6038` | ⬜ pendiente |
 

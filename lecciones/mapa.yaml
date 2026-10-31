@@ -71,7 +71,6 @@ lecciones:
     parte: fundamentos
     orden: 1
     fase: 2
-    propuesta: true
   - id: leccion-examen-neurologico
     titulo: "El examen neurológico"
     parte: fundamentos
@@ -85,19 +84,16 @@ lecciones:
     parte: fundamentos
     orden: 3
     fase: 2
-    propuesta: true
   - id: leccion-estudios-diagnosticos
     titulo: "Estudios diagnósticos: neuroimagen, EEG, electromiografía y líquido cefalorraquídeo"
     parte: fundamentos
     orden: 4
     fase: 2
-    propuesta: true
   - id: leccion-tratamiento-inicial-derivacion
     titulo: "Tratamiento inicial y criterios de derivación"
     parte: fundamentos
     orden: 5
     fase: 2
-    propuesta: true
 
   # --- El recién nacido (obra de 1993) ---------------------------------------------------------
   - id: leccion-examen-neurologico-recien-nacido
@@ -311,7 +307,6 @@ lecciones:
     parte: adulto
     orden: 3
     fase: 2
-    propuesta: true
   - id: leccion-epilepsias
     titulo: "Epilepsias y síndromes epilépticos"
     parte: adulto
@@ -324,7 +319,6 @@ lecciones:
     parte: adulto
     orden: 5
     fase: 2
-    propuesta: true
   - id: leccion-enfermedades-desmielinizantes
     titulo: "Enfermedades desmielinizantes"
     parte: adulto
@@ -360,13 +354,11 @@ lecciones:
     parte: adulto
     orden: 10
     fase: 2
-    propuesta: true
   - id: leccion-paralisis-facial-periferica
     titulo: "Parálisis facial periférica: parálisis de Bell"
     parte: adulto
     orden: 11
     fase: 2
-    propuesta: true
   - id: leccion-demencias
     titulo: "Demencias y enfermedad de Alzheimer"
     parte: adulto
@@ -379,31 +371,26 @@ lecciones:
     parte: adulto
     orden: 13
     fase: 2
-    propuesta: true
   - id: leccion-alteracion-estado-mental
     titulo: "Alteración aguda del estado mental: delirium y coma"
     parte: adulto
     orden: 14
     fase: 2
-    propuesta: true
   - id: leccion-hipertension-intracraneal-adulto
     titulo: "Hipertensión intracraneal en el adulto"
     parte: adulto
     orden: 15
     fase: 2
-    propuesta: true
   - id: leccion-encefalopatia-hipertensiva
     titulo: "Encefalopatía hipertensiva y crisis hipertensiva neurológica"
     parte: adulto
     orden: 16
     fase: 2
-    propuesta: true
   - id: leccion-debilidad-aguda
     titulo: "Debilidad aguda: síndrome de Guillain-Barré y compresión medular"
     parte: adulto
     orden: 17
     fase: 2
-    propuesta: true
   - id: leccion-infecciones-snc
     titulo: "Infecciones del sistema nervioso central"
     parte: adulto
