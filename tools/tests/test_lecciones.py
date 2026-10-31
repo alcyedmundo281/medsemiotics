@@ -412,3 +412,23 @@ def test_el_esqueleto_declara_la_transcripcion_del_legado() -> None:
 
     texto = m.esqueleto(m.cargar(), "leccion-examen-neurologico-recien-nacido")
     assert "- transcripcion" in texto
+
+
+# --- sílabo -------------------------------------------------------------------------------
+
+
+def test_el_silabo_del_curso_esta_cubierto_por_el_mapa() -> None:
+    from lecciones import mapa as m
+
+    mapa = m.cargar()
+    assert mapa.silabo is not None
+    assert [s.semana for s in mapa.silabo.semanas] == list(range(1, 19))
+
+
+def test_una_semana_sin_leccion_del_mapa_bloquea() -> None:
+    from lecciones import mapa as m
+
+    datos = yaml.safe_load(m.MAPA.read_text(encoding="utf-8"))
+    datos["silabo"]["semanas"][4]["lecciones"] = ["leccion-inexistente"]
+    with pytest.raises(ValidationError, match="fuera del mapa"):
+        m.Mapa.model_validate(datos)

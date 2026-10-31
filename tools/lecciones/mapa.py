@@ -64,11 +64,27 @@ class FilaMapa(_Base):
     propuesta: bool = False
 
 
+class SemanaSilabo(_Base):
+    semana: int = Field(ge=1)
+    unidad: int = Field(ge=1)
+    tema: Texto
+    lecciones: list[str] = Field(min_length=1)
+
+
+class Silabo(_Base):
+    """Sílabo vigente: cada semana del curso tiene que estar desarrollada en el libro."""
+
+    asignatura: Texto
+    periodo: Texto
+    semanas: list[SemanaSilabo] = Field(min_length=1)
+
+
 class Mapa(_Base):
     obra: Obra
     personas: dict[str, Autor]
     partes: list[ParteMapa] = Field(min_length=1)
     lecciones: list[FilaMapa]
+    silabo: Silabo | None = None
 
     @model_validator(mode="after")
     def _integridad(self) -> Self:
@@ -91,6 +107,17 @@ class Mapa(_Base):
         for fila in self.lecciones:
             if fila.parte not in claves:
                 raise ValueError(f"{fila.id}: parte «{fila.parte}» no declarada")
+        if self.silabo is not None:
+            ids = {f.id for f in self.lecciones}
+            numeros = [s.semana for s in self.silabo.semanas]
+            if numeros != sorted(set(numeros)):
+                raise ValueError("silabo: semanas repetidas o fuera de orden")
+            for s in self.silabo.semanas:
+                ajenas = [i for i in s.lecciones if i not in ids]
+                if ajenas:
+                    raise ValueError(
+                        f"silabo: semana {s.semana} cita lecciones fuera del mapa {ajenas}"
+                    )
         modulos = Counter(m for f in self.lecciones for m in f.modulos_html)
         compartidos = [m for m, n in modulos.items() if n > 1]
         if compartidos:
@@ -237,6 +264,26 @@ def renderizar(mapa: Mapa, lecciones: dict[str, dict[str, Any]], raiz: Path = RA
             lineas.append(
                 f"| {f.orden} | {titulo}<br>`{f.id}` | {f.fase} | {_celda_fuente(f)} | {estado} |"
             )
+        lineas.append("")
+
+    if mapa.silabo is not None:
+        titulos = {f.id: f.titulo for f in mapa.lecciones}
+        lineas += [
+            "## Cobertura del sílabo",
+            "",
+            f"{mapa.silabo.asignatura} · período {mapa.silabo.periodo}. Cada semana del curso "
+            "tiene que estar desarrollada en el libro.",
+            "",
+            "| Semana | Unidad | Tema | Lecciones | Estado |",
+            "|:-|:-|:-|:-|:-|",
+        ]
+        for s in mapa.silabo.semanas:
+            nombres = "<br>".join(titulos[i] for i in s.lecciones)
+            estados_semana = "<br>".join(
+                ICONOS.get(str(lecciones.get(i, {}).get("estado", "pendiente")), "?")
+                for i in s.lecciones
+            )
+            lineas.append(f"| {s.semana} | {s.unidad} | {s.tema} | {nombres} | {estados_semana} |")
         lineas.append("")
 
     asignacion = {m: f for f in mapa.lecciones for m in f.modulos_html}

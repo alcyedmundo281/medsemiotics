@@ -66,14 +66,38 @@ partes:
 
 lecciones:
   # --- Fundamentos ----------------------------------------------------------------------------
+  - id: leccion-razonamiento-clinico-evidencia
+    titulo: "Razonamiento clínico y semiología basada en la evidencia"
+    parte: fundamentos
+    orden: 1
+    fase: 2
+    propuesta: true
   - id: leccion-examen-neurologico
     titulo: "El examen neurológico"
     parte: fundamentos
-    orden: 1
+    orden: 2
     fase: 2
     modulos_html:
       - neurologia/examen-neurologico-parte-1.html
       - neurologia/examen-neurologico-parte-2.html
+  - id: leccion-escalas-neurologicas
+    titulo: "Escalas neurológicas: Glasgow, NIHSS, EDSS, Hunt y Hess, Fisher, Rankin y ASPECTS"
+    parte: fundamentos
+    orden: 3
+    fase: 2
+    propuesta: true
+  - id: leccion-estudios-diagnosticos
+    titulo: "Estudios diagnósticos: neuroimagen, EEG, electromiografía y líquido cefalorraquídeo"
+    parte: fundamentos
+    orden: 4
+    fase: 2
+    propuesta: true
+  - id: leccion-tratamiento-inicial-derivacion
+    titulo: "Tratamiento inicial y criterios de derivación"
+    parte: fundamentos
+    orden: 5
+    fase: 2
+    propuesta: true
 
   # --- El recién nacido (obra de 1993) ---------------------------------------------------------
   - id: leccion-examen-neurologico-recien-nacido
@@ -266,68 +290,198 @@ lecciones:
     fase: 4
     propuesta: true
 
-  # --- El adulto (13 módulos de clase) ---------------------------------------------------------
+  # --- El adulto (13 módulos de clase + temas del sílabo UCE 2026-2027) ---------------------
   - id: leccion-cefaleas
-    titulo: "Cefaleas primarias y secundarias"
+    titulo: "Cefaleas y neuralgia del trigémino"
     parte: adulto
     orden: 1
     fase: 2
-    modulos_html: [neurologia/cefaleas/index.html]
-  - id: leccion-epilepsias
-    titulo: "Epilepsias"
+    modulos_html:
+      - neurologia/cefaleas/index.html
+  - id: leccion-acv-codigo-ictus
+    titulo: "Enfermedad cerebrovascular isquémica: AIT, infarto y código ictus"
     parte: adulto
     orden: 2
     fase: 2
-    modulos_html: [neurologia/epilepsia-ii/index.html]
-  - id: leccion-acv-codigo-ictus
-    titulo: "Ataque cerebrovascular y código ictus"
+    modulos_html:
+      - neurologia/acv.html
+      - neurologia/acv-isquemico.html
+  - id: leccion-ecv-hemorragica
+    titulo: "Enfermedad cerebrovascular hemorrágica: hemorragia intraparenquimatosa y subaracnoidea"
     parte: adulto
     orden: 3
     fase: 2
-    modulos_html: [neurologia/acv.html, neurologia/acv-isquemico.html]
-  - id: leccion-trastornos-movimiento
-    titulo: "Trastornos del movimiento"
+    propuesta: true
+  - id: leccion-epilepsias
+    titulo: "Epilepsias y síndromes epilépticos"
     parte: adulto
     orden: 4
+    fase: 2
+    modulos_html:
+      - neurologia/epilepsia-ii/index.html
+  - id: leccion-estado-epileptico
+    titulo: "Estado epiléptico"
+    parte: adulto
+    orden: 5
+    fase: 2
+    propuesta: true
+  - id: leccion-enfermedades-desmielinizantes
+    titulo: "Enfermedades desmielinizantes"
+    parte: adulto
+    orden: 6
+    fase: 2
+    modulos_html:
+      - neurologia/enfermedades_desmielinizantes.html
+  - id: leccion-trastornos-movimiento
+    titulo: "Trastornos del movimiento y parkinsonismos"
+    parte: adulto
+    orden: 7
     fase: 2
     modulos_html:
       - neurologia/trastornos-movimiento-1.html
       - neurologia/trastornos-movimiento-2.html
     condiciones: ["HM:6015"]
-  - id: leccion-enfermedades-desmielinizantes
-    titulo: "Enfermedades desmielinizantes"
-    parte: adulto
-    orden: 5
-    fase: 2
-    modulos_html: [neurologia/enfermedades_desmielinizantes.html]
   - id: leccion-enfermedades-neuromusculares
-    titulo: "Enfermedades neuromusculares"
-    parte: adulto
-    orden: 6
-    fase: 2
-    modulos_html: [neurologia/neuromusculares.html]
-  - id: leccion-neuropatias
-    titulo: "Neuropatías periféricas"
-    parte: adulto
-    orden: 7
-    fase: 2
-    modulos_html: [neurologia/neuropatias.html]
-  - id: leccion-demencias
-    titulo: "Demencias"
+    titulo: "Enfermedades neuromusculares: miastenia gravis y miopatías"
     parte: adulto
     orden: 8
     fase: 2
-    modulos_html: [neurologia/demencias.html]
-  - id: leccion-infecciones-snc
-    titulo: "Infecciones del sistema nervioso central"
+    modulos_html:
+      - neurologia/neuromusculares.html
+  - id: leccion-neuropatias
+    titulo: "Neuropatías periféricas y mononeuropatías"
     parte: adulto
     orden: 9
     fase: 2
-    modulos_html: [neurologia/infecciones-snc.html]
+    modulos_html:
+      - neurologia/neuropatias.html
+  - id: leccion-demencias
+    titulo: "Demencias y enfermedad de Alzheimer"
+    parte: adulto
+    orden: 10
+    fase: 2
+    modulos_html:
+      - neurologia/demencias.html
+  - id: leccion-esclerosis-lateral-amiotrofica
+    titulo: "Esclerosis lateral amiotrófica"
+    parte: adulto
+    orden: 11
+    fase: 2
+    propuesta: true
+  - id: leccion-alteracion-estado-mental
+    titulo: "Alteración aguda del estado mental: delirium y coma"
+    parte: adulto
+    orden: 12
+    fase: 2
+    propuesta: true
+  - id: leccion-hipertension-intracraneal-adulto
+    titulo: "Hipertensión intracraneal en el adulto"
+    parte: adulto
+    orden: 13
+    fase: 2
+    propuesta: true
+  - id: leccion-encefalopatia-hipertensiva
+    titulo: "Encefalopatía hipertensiva y crisis hipertensiva neurológica"
+    parte: adulto
+    orden: 14
+    fase: 2
+    propuesta: true
+  - id: leccion-debilidad-aguda
+    titulo: "Debilidad aguda: síndrome de Guillain-Barré y compresión medular"
+    parte: adulto
+    orden: 15
+    fase: 2
+    propuesta: true
+  - id: leccion-infecciones-snc
+    titulo: "Infecciones del sistema nervioso central"
+    parte: adulto
+    orden: 16
+    fase: 2
+    modulos_html:
+      - neurologia/infecciones-snc.html
     condiciones: ["HM:6004"]
   - id: leccion-traumatismo-craneal-leve
     titulo: "Traumatismo craneal leve"
     parte: adulto
-    orden: 10
+    orden: 17
     fase: 2
     condiciones: ["HM:6038"]
+
+# Sílabo vigente de la asignatura: cada semana debe estar cubierta por lecciones del mapa
+# («lecciones check» lo exige). Fuente: sílabo UCE 2026-2027 entregado por Alcy E. Torres G.
+silabo:
+  asignatura: "Medicina Interna 1 – Neurología (MMP06PPP0104), Universidad Central del Ecuador"
+  periodo: "2026-2027"
+  semanas:
+    - semana: 1
+      unidad: 1
+      tema: "Anamnesis y exploración neurológica: pares craneales, fuerza, sensibilidad, coordinación, reflejos y marcha"
+      lecciones: [leccion-examen-neurologico]
+    - semana: 2
+      unidad: 1
+      tema: "Escalas neurológicas: Glasgow, NIHSS, EDSS, Hunt y Hess, Fisher, Rankin modificada, ASPECTS"
+      lecciones: [leccion-escalas-neurologicas]
+    - semana: 3
+      unidad: 2
+      tema: "Cefaleas primarias y secundarias, signos de alarma, neuralgia del trigémino"
+      lecciones: [leccion-cefaleas]
+    - semana: 4
+      unidad: 2
+      tema: "Enfermedad cerebrovascular isquémica: AIT e infarto cerebral"
+      lecciones: [leccion-acv-codigo-ictus]
+    - semana: 5
+      unidad: 2
+      tema: "Enfermedad cerebrovascular hemorrágica: hemorragia intraencefálica y subaracnoidea"
+      lecciones: [leccion-ecv-hemorragica]
+    - semana: 6
+      unidad: 2
+      tema: "Epilepsias: crisis sintomática aguda, clasificación, imitadores, encefalopatías epilépticas y del desarrollo"
+      lecciones: [leccion-epilepsias]
+    - semana: 7
+      unidad: 2
+      tema: "Síndromes epilépticos selectos: mioclónica juvenil, ausencias, esclerosis hipocampal"
+      lecciones: [leccion-epilepsias]
+    - semana: 8
+      unidad: 2
+      tema: "Enfermedades desmielinizantes: esclerosis múltiple, encefalomielitis aguda diseminada"
+      lecciones: [leccion-enfermedades-desmielinizantes]
+    - semana: 9
+      unidad: 2
+      tema: "Sistema extrapiramidal: Parkinson, temblor esencial, Huntington, distonías"
+      lecciones: [leccion-trastornos-movimiento]
+    - semana: 10
+      unidad: 2
+      tema: "Trastornos neuromusculares: miastenia gravis, miopatías"
+      lecciones: [leccion-enfermedades-neuromusculares]
+    - semana: 11
+      unidad: 2
+      tema: "Neuropatías periféricas: parálisis de Bell, túnel carpiano, herpes zóster, neuralgia postherpética, neuropatía diabética"
+      lecciones: [leccion-neuropatias]
+    - semana: 12
+      unidad: 2
+      tema: "Neurodegenerativas: Alzheimer, esclerosis lateral amiotrófica, parkinsonismos atípicos"
+      lecciones: [leccion-demencias, leccion-esclerosis-lateral-amiotrofica, leccion-trastornos-movimiento]
+    - semana: 13
+      unidad: 3
+      tema: "Estudios diagnósticos: TC, RM, EEG, conducción nerviosa y electromiografía, punción lumbar y LCR"
+      lecciones: [leccion-estudios-diagnosticos]
+    - semana: 14
+      unidad: 3
+      tema: "Principios terapéuticos iniciales y criterios de derivación"
+      lecciones: [leccion-tratamiento-inicial-derivacion]
+    - semana: 15
+      unidad: 4
+      tema: "Estado epiléptico, ACV agudo, hipertensión endocraneal, alteración del estado mental"
+      lecciones: [leccion-estado-epileptico, leccion-acv-codigo-ictus, leccion-hipertension-intracraneal-adulto, leccion-alteracion-estado-mental]
+    - semana: 16
+      unidad: 4
+      tema: "Crisis hipertensiva neurológica, Guillain-Barré, compresión medular, meningitis bacteriana aguda"
+      lecciones: [leccion-encefalopatia-hipertensiva, leccion-debilidad-aguda, leccion-infecciones-snc]
+    - semana: 17
+      unidad: 5
+      tema: "Guías clínicas nacionales e internacionales en el primer nivel de atención"
+      lecciones: [leccion-razonamiento-clinico-evidencia]
+    - semana: 18
+      unidad: 5
+      tema: "Guías clínicas nacionales e internacionales en el primer nivel de atención"
+      lecciones: [leccion-razonamiento-clinico-evidencia]
