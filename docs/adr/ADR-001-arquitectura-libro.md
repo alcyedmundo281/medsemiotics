@@ -62,6 +62,19 @@ escribe en el mapa: se lee de cada lección.
   maestro generado esté al día.
 - En la fase 5, `tools/libro` tomará del mapa el orden de los capítulos.
 
+## Declaración de uso de inteligencia artificial
+
+La ética de biosemiotics se conserva y se hace cumplir:
+
+- `lecciones/AI-USE.md` es la declaración completa y auditable: herramientas, etapas,
+  prohibiciones, decisiones que no se delegan, cómo comprobarlo y **qué ya falló**.
+- `lecciones/paratextos/declaracion-ia.md` es el colofón de cada edición. Lleva el marcador
+  `{N}`, que el compilador del libro sustituirá por el número de citas verificadas (fase 5).
+- Cada lección declara en `uso_ia` las etapas en que intervino la IA (lista vacía si no
+  intervino). Es un campo obligatorio.
+- `lecciones check` rechaza la obra si falta la declaración, si falta la sección «Qué ya
+  falló» o si el colofón no tiene su marcador.
+
 ## Contrato de la lección
 
 - **Frontmatter:** `tools/lecciones/modelo.py`. Incluye identidad y lugar en el libro (`parte`,

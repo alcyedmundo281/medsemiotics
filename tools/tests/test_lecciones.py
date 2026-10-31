@@ -39,6 +39,7 @@ BASE: dict[str, Any] = {
             "credit": ["redaccion", "revision-edicion"],
         },
     ],
+    "uso_ia": ["transcripcion", "redaccion-borrador"],
     "legado": {"obra": "Neurología Pediátrica, 1993", "paginas": "16"},
     "pregunta_clinica": "¿Es normal la prensión plantar de este recién nacido?",
     "abstract": ABSTRACT,
@@ -383,3 +384,31 @@ def test_legado_fuera_de_las_partes_pediatricas_lleva_al_fundador(tmp_path: Path
     ruta.write_text(texto, encoding="utf-8")
     assert m.coherencia(mapa, m.estados([ruta])) == []
     assert validar_archivo(ruta, RAIZ, {}).errores == []
+
+
+# --- declaración de uso de IA ---------------------------------------------------------------
+
+
+def test_cada_leccion_declara_su_uso_de_ia() -> None:
+    datos = {k: v for k, v in BASE.items() if k != "uso_ia"}
+    with pytest.raises(ValidationError, match="uso_ia"):
+        Leccion.model_validate(datos)
+    assert Leccion.model_validate({**BASE, "uso_ia": []}).uso_ia == []
+    with pytest.raises(ValidationError):
+        Leccion.model_validate({**BASE, "uso_ia": ["imagenes"]})
+
+
+def test_la_obra_no_sale_sin_declaracion(tmp_path: Path) -> None:
+    from lecciones.validacion import problemas_de_declaracion
+
+    assert problemas_de_declaracion(RAIZ) == []
+    problemas = problemas_de_declaracion(tmp_path)
+    assert any("AI-USE.md" in p for p in problemas)
+    assert any("colofón" in p for p in problemas)
+
+
+def test_el_esqueleto_declara_la_transcripcion_del_legado() -> None:
+    from lecciones import mapa as m
+
+    texto = m.esqueleto(m.cargar(), "leccion-examen-neurologico-recien-nacido")
+    assert "- transcripcion" in texto

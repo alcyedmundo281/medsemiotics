@@ -21,6 +21,11 @@ autores:
     rol_obra: coordinacion-editorial
     credit: [redaccion, revision-edicion]
 
+uso_ia: [busqueda-bibliografica, redaccion-borrador]
+                          # etapas con IA (lecciones/AI-USE.md): transcripcion,
+                          # busqueda-bibliografica, redaccion-borrador, revision-estilo,
+                          # codigo. [] declara que no intervino. Es obligatorio.
+
 legado:                   # solo si la lección viene de la obra de 1993
   obra: "Neurología Pediátrica, 2.ª ed. Quito: Universidad Central del Ecuador; 1993"
   paginas: "3-18"

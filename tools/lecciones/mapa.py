@@ -281,7 +281,10 @@ def esqueleto(mapa: Mapa, ident: str) -> str:
             mapa.personas[a].model_dump(exclude_defaults=True, exclude_none=True) for a in alias
         ],
     }
+    # Declaración honesta por defecto: así se crean hoy las lecciones. El autor la corrige.
+    datos["uso_ia"] = ["busqueda-bibliografica", "redaccion-borrador"]
     if fila.legado_paginas:
+        datos["uso_ia"].insert(0, "transcripcion")
         datos["legado"] = {"obra": mapa.obra.legado, "paginas": fila.legado_paginas}
     datos |= {
         "pregunta_clinica": pendiente,

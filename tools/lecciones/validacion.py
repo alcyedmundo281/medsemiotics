@@ -239,8 +239,29 @@ def validar_archivo(
     return resultado
 
 
+DECLARACION = ("lecciones", "AI-USE.md")
+COLOFON = ("lecciones", "paratextos", "declaracion-ia.md")
+
+
+def problemas_de_declaracion(raiz: Path) -> list[str]:
+    """La obra no sale sin su declaración de uso de IA ni su colofón (como biosemiotics)."""
+    problemas: list[str] = []
+    declaracion = raiz.joinpath(*DECLARACION)
+    colofon = raiz.joinpath(*COLOFON)
+    if not declaracion.is_file():
+        problemas.append("falta lecciones/AI-USE.md: la obra no sale sin su declaración de IA")
+    elif "## Qué ya falló" not in declaracion.read_text(encoding="utf-8"):
+        problemas.append("lecciones/AI-USE.md debe documentar «## Qué ya falló»")
+    if not colofon.is_file():
+        problemas.append("falta lecciones/paratextos/declaracion-ia.md (colofón de cada edición)")
+    elif "{N}" not in colofon.read_text(encoding="utf-8"):
+        problemas.append("el colofón de IA debe llevar el marcador {N} de citas verificadas")
+    return problemas
+
+
 def validar_todo(rutas: list[Path], raiz: Path = RAIZ) -> Resultado:
     total = Resultado()
+    total.errores.extend(problemas_de_declaracion(raiz))
     try:
         bib = leer_bib()
     except ErrorDeFuente as exc:

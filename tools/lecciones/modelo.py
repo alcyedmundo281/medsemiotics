@@ -16,6 +16,14 @@ ClaveBib = Annotated[str, StringConstraints(pattern=r"^[A-Za-z][A-Za-z0-9_:\-]*$
 Estado = Literal["borrador", "revisado", "publicado"]
 Parte = Literal["fundamentos", "neonato", "lactante-nino", "neuroftalmologia", "adulto"]
 RolObra = Literal["autor-fundador", "autor", "coordinacion-editorial"]
+# Etapas en que intervino la IA en una lección (lecciones/AI-USE.md). Lista vacía: no intervino.
+UsoIA = Literal[
+    "transcripcion",
+    "busqueda-bibliografica",
+    "redaccion-borrador",
+    "revision-estilo",
+    "codigo",
+]
 
 # Taxonomía CRediT (NISO Z39.104-2022), en las claves en español que usa biosemiotics.
 CreditRol = Literal[
@@ -129,6 +137,7 @@ class Leccion(_Base):
     fecha_revision: date | None = None
     revisor: Texto | None = None
     autores: list[Autor] = Field(min_length=1)
+    uso_ia: list[UsoIA]
     legado: Legado | None = None
     pregunta_clinica: TextoLargo
     abstract: TextoLargo
@@ -155,7 +164,7 @@ class Leccion(_Base):
                 raise ValueError(f"estado {self.estado}: requiere fecha_revision")
         if any(a.rol_obra == "autor-fundador" for a in self.autores) and self.legado is None:
             raise ValueError("una lección con autor fundador declara su procedencia en «legado»")
-        for campo in ("condiciones", "conceptos", "refs"):
+        for campo in ("condiciones", "conceptos", "refs", "uso_ia"):
             valores: list[str] = getattr(self, campo)
             if len(set(valores)) != len(valores):
                 raise ValueError(f"{campo}: hay valores repetidos")
