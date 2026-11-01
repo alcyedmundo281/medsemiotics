@@ -36,9 +36,12 @@ personas:
     credit: [redaccion, revision-edicion]
   gtg:
     nombre: "Gladys Torres Guerrero"
+    # Firma de los autores (decisión editorial, 1-nov-2026): la usan el blog y los casos.
+    nombre_bibliografico: "Gladys Torres-Guerrero"
     credit: [redaccion, revision-edicion]
   aetg:
     nombre: "Alcy Edmundo Torres Guerrero"
+    nombre_bibliografico: "Alcy E. Torres-Guerrero"
     orcid: "0000-0002-9742-375X"
     afiliacion: "Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad Central del Ecuador"
     rol_obra: coordinacion-editorial

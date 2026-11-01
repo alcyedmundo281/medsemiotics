@@ -42,7 +42,9 @@ def test_artg_firma_como_alcy_r_torres_pero_la_portada_usa_el_nombre_completo() 
     artg = mapa.personas["artg"]
     assert artg.nombre == "Alcy Ramiro Torres Guerrero"
     assert artg.nombre_bibliografico == "Alcy R. Torres"
-    assert all(p.nombre_bibliografico is None for k, p in mapa.personas.items() if k != "artg")
+    assert mapa.personas["aetg"].nombre_bibliografico == "Alcy E. Torres-Guerrero"
+    assert mapa.personas["gtg"].nombre_bibliografico == "Gladys Torres-Guerrero"
+    assert mapa.personas["atc"].nombre_bibliografico is None
 
 
 def test_la_firma_bibliografica_es_opcional() -> None:

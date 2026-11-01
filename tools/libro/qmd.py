@@ -112,6 +112,12 @@ def _generar_index_qmd(
         "**Autoría:**  ",
         *_lineas_autores(meta),
         "",
+        (
+            f"**Revisión editorial:** {meta.editor.nombre}, editor, revisa todas las partes. "
+            f"Es también autor de {'; '.join(meta.partes_del_editor)}: el editor es también "
+            "autor; su revisión de esas partes no es independiente."
+        ),
+        "",
         "DOI de la obra: pendiente de asignación.  ",
         "ISBN: pendiente (reservado para la edición impresa).  ",
         f"Repositorio fuente: <{meta.url_repositorio}>  ",

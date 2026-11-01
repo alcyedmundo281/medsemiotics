@@ -68,6 +68,8 @@ class MetadatosLibro:
     licencia: str
     licencia_nombre: str
     obras_previas: tuple[str, ...]
+    editor: AutorLibro
+    partes_del_editor: tuple[str, ...]
     url_repositorio: str
     url_sitio: str
 
@@ -149,6 +151,17 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
     if not autores or autores[0].rol != ROLES_LIBRO["autor-fundador"]:
         raise ValueError("lecciones/mapa.yaml: el primer autor debe ser el autor fundador")
 
+    editores = [a for a in autores if a.rol == ROLES_LIBRO["coordinacion-editorial"]]
+    if len(editores) != 1:
+        raise ValueError("lecciones/mapa.yaml: debe haber exactamente un editor (coordinación)")
+    editor_clave = next(
+        k for k, p in mapa.personas.items() if p.rol_obra == "coordinacion-editorial"
+    )
+    # Partes que el editor revisa y también escribe: su revisión no es independiente.
+    propias = tuple(
+        p.titulo for p in mapa.partes if p.revisor == editor_clave and editor_clave in p.autores
+    )
+
     ruta_cff = raiz / "CITATION.cff"
     datos_raw = yaml.safe_load(ruta_cff.read_text(encoding="utf-8"))
     if not isinstance(datos_raw, dict):
@@ -161,6 +174,8 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
         licencia=obra.licencia,
         licencia_nombre=LICENCIAS[obra.licencia],
         obras_previas=(*obra.fuentes_previas, obra.legado),
+        editor=editores[0],
+        partes_del_editor=propias,
         url_repositorio=_requerido(datos_raw, "repository-code", "CITATION.cff"),
         url_sitio=_requerido(datos_raw, "url", "CITATION.cff"),
     )
