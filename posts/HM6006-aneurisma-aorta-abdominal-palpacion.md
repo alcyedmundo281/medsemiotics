@@ -4,7 +4,7 @@ slug: aneurisma-aorta-abdominal-palpacion-semiotica
 title: 'Aneurisma de aorta abdominal: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-21'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: vascular
 category_label: Medicina Vascular y Cirugía
 tags:

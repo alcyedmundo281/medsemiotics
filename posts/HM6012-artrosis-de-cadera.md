@@ -4,7 +4,7 @@ slug: artrosis-de-cadera-precision-semiotica
 title: 'Artrosis de cadera: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-21'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: reumatologia
 category_label: Reumatología y Traumatología
 tags:

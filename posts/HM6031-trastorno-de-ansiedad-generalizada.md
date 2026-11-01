@@ -4,7 +4,7 @@ slug: trastorno-de-ansiedad-generalizada-precision-semiotica
 title: 'Trastorno de ansiedad generalizada: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-09-18'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: medicina_interna
 category_label: Medicina Interna
 tags:

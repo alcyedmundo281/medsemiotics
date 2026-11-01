@@ -3,8 +3,8 @@ id: HM6049-01
 slug: paralisis-cerebral-precision-semiotica
 title: 'Parálisis cerebral: hallazgos y evidencia clínica'
 subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
-date: '2026-10-31'
-author: Dr. Alcy Torres
+date: '2026-11-01'
+author: Alcy E. Torres-Guerrero
 category: medicina_interna
 category_label: Medicina Interna
 tags:

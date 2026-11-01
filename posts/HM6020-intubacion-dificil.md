@@ -4,7 +4,7 @@ slug: intubacion-dificil-mallampati-mordida-labio
 title: 'Intubación difícil: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-22'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: anestesiologia
 category_label: Anestesiología y Cuidados Críticos
 tags:

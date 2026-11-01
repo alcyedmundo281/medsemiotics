@@ -4,7 +4,7 @@ slug: enfermedad-parkinson-criterios-clinicos-mds
 title: 'Enfermedad de Parkinson: hallazgos y evidencia clínica'
 subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
 date: '2026-08-21'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: neurologia
 category_label: Neurología
 tags:

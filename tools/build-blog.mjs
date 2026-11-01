@@ -38,6 +38,7 @@ function parseFrontmatter(fileContent) {
   if (!data?.grounding?.condicion_id || !data?.fuente?.revision) {
     throw new Error('Artículo sin procedencia de medsemiotics-db: ejecutar topics:sync');
   }
+  if (!data.author) throw new Error('Artículo sin autor: ejecutar topics:sync (tools/autores-fichas.yaml)');
   return { data, content: (match[2] || '').trim() };
 }
 // Build index & posts
@@ -102,7 +103,7 @@ function buildBlog() {
       fecha_revision: caso ? caso.publicacion.ultima_revision : null,
       version: caso ? caso.publicacion.version : null,
       has_caso: Boolean(caso),
-      author: data.author || 'Dr. Alcy Torres',
+      author: data.author,
       category: data.category || 'general',
       category_label: data.category_label || data.category || 'General',
       tags: data.tags || [],

@@ -15,6 +15,8 @@ from typing import Annotated, Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
+from lecciones.modelo import AGENTES, Autor
+
 HmId = Annotated[str, StringConstraints(pattern=r"^HM:\d+$")]
 Texto = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
 TextoLargo = Annotated[str, StringConstraints(strip_whitespace=True, min_length=10)]
@@ -86,8 +88,16 @@ class Cierre(_Base):
 
 
 class Autoria(_Base):
-    autor: Texto
+    """Autores como en las lecciones (nombre, ORCID, roles CRediT) y un revisor humano."""
+
+    autores: list[Autor] = Field(min_length=1)
     revisor: Texto | None = None
+
+    @model_validator(mode="after")
+    def _revisor_humano(self) -> Self:
+        if self.revisor is not None and AGENTES.search(self.revisor):
+            raise ValueError("revisor: debe ser una persona; el agente nunca es revisor")
+        return self
 
 
 class Revision(_Base):

@@ -4,7 +4,7 @@ slug: luxacion-cadera-lactante-barlow-ortolani
 title: 'Luxación de cadera en el lactante: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-22'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: pediatria
 category_label: Pediatría y Ortopedia
 tags:

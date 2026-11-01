@@ -14,6 +14,7 @@ import yaml
 from casos.articulo import Articulo, leer_articulo
 from casos.compilar import CasoLeido, Rutas, compilar, leer_casos
 from casos.evidencia import resumen
+from casos.presentacion import autores_texto
 from lecciones.mapa import cargar as cargar_mapa
 from libro import CONDICIONES_NEUROLOGIA
 
@@ -223,7 +224,7 @@ def renderizar_caso_qmd(leido: CasoLeido) -> str:
         (
             f"**Ficha del caso:** Condición `{compilado['condicion_id']}` · "
             f"Nivel: {compilado['nivel']} ({compilado['duracion_min']} min) · "
-            f"Autoría: {autoria.get('autor')}{revisor_txt}."
+            f"Autoría: {autores_texto(autoria)}{revisor_txt}."
         ),
         "",
         f"**Viñeta clínica inicial:** {vineta['texto']}",
