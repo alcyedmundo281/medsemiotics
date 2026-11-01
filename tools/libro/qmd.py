@@ -11,6 +11,7 @@ import yaml
 from lecciones.evidencia import cargar_articulos
 from lecciones.fuente import leer as leer_leccion
 from lecciones.proyectar import lecciones_por_parte, proyectar
+from lecciones.validacion import claves_citadas
 from libro import ALTO_MM, ALTO_PULGADAS, ANCHO_MM, ANCHO_PULGADAS
 from libro.datos import (
     RAIZ,
@@ -75,14 +76,8 @@ def _datos_libro_tex(meta: MetadatosLibro) -> str:
     )
 
 
-def _generar_index_qmd(
-    meta: MetadatosLibro,
-    condiciones: Sequence[CondicionLibro],
-    modulos: Sequence[CapituloModulo],
-) -> str:
-    total_hallazgos = sum(len(c.articulo.evidencia) for c in condiciones)
-    total_casos = sum(1 for c in condiciones if c.caso is not None)
-    total_preguntas = len(obtener_banco_autoevaluacion())
+def _generar_index_qmd(meta: MetadatosLibro) -> str:
+    """Portada, portadilla, créditos, aviso y tabla de contenidos: todo sale de los datos."""
     tamano_str = (
         f"{ANCHO_MM} × {ALTO_MM} mm ({ANCHO_PULGADAS:.2f} × {ALTO_PULGADAS:.2f} pulgadas)".replace(
             ".", ","
@@ -118,10 +113,10 @@ def _generar_index_qmd(
         f"Plataforma interactiva: <{meta.url_sitio}>",
         "",
         (
-            "**Fuente clínica única verificada:** las cifras diagnósticas de sensibilidad, "
-            "especificidad y cocientes de verosimilitud (LR+ y LR−) de la Parte I proceden "
-            "íntegramente de la base estructurada `medsemiotics-db` y sus fuentes primarias "
-            "indexadas en PubMed/DOI."
+            "**Fuente clínica única verificada:** las cifras de sensibilidad, especificidad y "
+            "cocientes de verosimilitud (LR+ y LR−) proceden íntegramente de la base estructurada "
+            "`medsemiotics-db`, a una revisión fijada, y de sus fuentes primarias indexadas en "
+            "PubMed/DOI."
         ),
         "",
         (
@@ -151,6 +146,18 @@ def _generar_index_qmd(
         "\\cleardoublepage",
         "```",
         "",
+    ]
+    return "\n".join(lineas)
+
+
+def _generar_prefacio_previo(
+    condiciones: Sequence[CondicionLibro], modulos: Sequence[CapituloModulo]
+) -> str:
+    """Prefacio del material previo (con cifras de ejemplo escritas a mano: no es la obra)."""
+    total_hallazgos = sum(len(c.articulo.evidencia) for c in condiciones)
+    total_casos = sum(1 for c in condiciones if c.caso is not None)
+    total_preguntas = len(obtener_banco_autoevaluacion())
+    lineas: list[str] = [
         "# Prefacio y arquitectura metodológica {.unnumbered}",
         "",
         (
@@ -436,11 +443,10 @@ def _generar_portada_svg(meta: MetadatosLibro) -> str:
 
 def _configuracion_quarto(
     meta: MetadatosLibro,
-    archivos_parte_1: list[str],
-    archivos_parte_2: list[str],
-    archivos_apendices: list[str],
-    partes_lecciones: list[dict[str, object]] | None = None,
+    capitulos: list[object],
+    con_bibliografia: bool = False,
 ) -> dict[str, object]:
+    """``capitulos``: archivos y partes (``{"part": …, "chapters": […]}``) tras ``index.qmd``."""
     cfg: dict[str, object] = {
         "project": {
             "type": "book",
@@ -451,25 +457,7 @@ def _configuracion_quarto(
             "subtitle": meta.subtitulo,
             "author": [autor.nombre_visible for autor in meta.autores],
             "output-file": "libro",
-            "chapters": [
-                "index.qmd",
-                *(partes_lecciones or []),
-                {
-                    "part": (
-                        "Parte I · Semiología Neurológica Basada en la Evidencia "
-                        "(medsemiotics-db) y Casos Socráticos"
-                    ),
-                    "chapters": archivos_parte_1,
-                },
-                {
-                    "part": "Parte II · Síndromes Clínicos y Protocolos en Neurología",
-                    "chapters": archivos_parte_2,
-                },
-                {
-                    "part": "Apéndices · Autoevaluación y Tablas Maestras",
-                    "chapters": archivos_apendices,
-                },
-            ],
+            "chapters": ["index.qmd", *capitulos],
         },
         "lang": "es",
         "format": {
@@ -502,7 +490,7 @@ def _configuracion_quarto(
             },
         },
     }
-    if partes_lecciones:
+    if con_bibliografia:
         cfg["bibliography"] = "refs.bib"
     return cfg
 
@@ -513,10 +501,11 @@ def _capitulos_de_lecciones(
     generados: list[Path],
     secciones_planas: list[str],
     incluir_borradores: bool = False,
-) -> list[dict[str, object]]:
+) -> tuple[list[dict[str, object]], list[str]]:
     """Lecciones de ``lecciones/`` proyectadas (tokens resueltos) como capítulos por parte."""
     articulos = cargar_articulos(raiz)
     partes: list[dict[str, object]] = []
+    textos: list[str] = []
     for titulo, rutas in lecciones_por_parte(raiz, incluir_borradores):
         nombres: list[str] = []
         for ruta in rutas:
@@ -525,6 +514,7 @@ def _capitulos_de_lecciones(
             (carpeta_salida / nombre).write_text(texto, encoding="utf-8")
             generados.append(carpeta_salida / nombre)
             secciones_planas.append(texto)
+            textos.append(texto)
             nombres.append(nombre)
         partes.append({"part": titulo, "chapters": nombres})
     if not partes:
@@ -536,26 +526,121 @@ def _capitulos_de_lecciones(
     if partes:
         shutil.copyfile(raiz / "lecciones" / "refs.bib", carpeta_salida / "refs.bib")
         generados.append(carpeta_salida / "refs.bib")
-    return partes
+    return partes, textos
+
+
+def titulos_de_lecciones(raiz: Path = RAIZ, incluir_borradores: bool = False) -> list[str]:
+    """Títulos de las lecciones que entran en el libro, en su orden."""
+    return [
+        str(leer_leccion(ruta).datos["titulo"])
+        for _, rutas in lecciones_por_parte(raiz, incluir_borradores)
+        for ruta in rutas
+    ]
+
+
+def _paratextos(
+    carpeta_salida: Path,
+    raiz: Path,
+    textos_lecciones: list[str],
+    generados: list[Path],
+    secciones_planas: list[str],
+) -> list[str]:
+    """Paratextos de ``lecciones/paratextos/`` como capítulos finales sin numerar.
+
+    ``{N}`` es el número de claves distintas citadas en las lecciones incluidas; su verificación
+    contra PubMed y Crossref es ``lecciones citas``.
+    """
+    citadas = {c for texto in textos_lecciones for c in claves_citadas(texto)}
+    nombres: list[str] = []
+    for ruta in sorted((raiz / "lecciones" / "paratextos").glob("*.md")):
+        texto = ruta.read_text(encoding="utf-8").replace("{N}", str(len(citadas)))
+        nombre = f"P-{ruta.stem}.qmd"
+        (carpeta_salida / nombre).write_text(texto, encoding="utf-8")
+        generados.append(carpeta_salida / nombre)
+        secciones_planas.append(texto)
+        nombres.append(nombre)
+    return nombres
+
+
+PORTADA_MATERIAL_PREVIO = (
+    "# Material previo — no forma parte de la obra {.unnumbered}\n\n"
+    "::: {.alerta-ficha}\n"
+    "**Material previo — no forma parte de la obra.** Lo que sigue (fichas de condiciones de "
+    "`medsemiotics-db` y resúmenes de los módulos de clase) es el material con el que se empezó "
+    "este libro. No está reconstruido como lección, no sigue la norma editorial y puede "
+    "contradecirla. Se incluye solo como vista previa de trabajo.\n"
+    ":::\n"
+)
+
+
+def _escribir(
+    carpeta: Path, nombre: str, texto: str, generados: list[Path], planas: list[str]
+) -> str:
+    (carpeta / nombre).write_text(texto, encoding="utf-8")
+    generados.append(carpeta / nombre)
+    planas.append(texto)
+    return nombre
+
+
+def _material_previo(
+    carpeta: Path, raiz: Path, generados: list[Path], planas: list[str]
+) -> dict[str, object]:
+    """Fichas de condiciones, resúmenes de módulos y apéndices anteriores a las lecciones."""
+    condiciones = leer_condiciones_neurologia(raiz)
+    modulos = obtener_capitulos_modulos()
+    archivos = [
+        _escribir(carpeta, "00-material-previo.qmd", PORTADA_MATERIAL_PREVIO, generados, planas),
+        _escribir(
+            carpeta,
+            "00-prefacio-previo.qmd",
+            _generar_prefacio_previo(condiciones, modulos),
+            generados,
+            planas,
+        ),
+    ]
+    for cond in condiciones:
+        nombre = NOMBRES_QMD_CONDICIONES[cond.condicion_id]
+        archivos.append(
+            _escribir(carpeta, nombre, _generar_capitulo_condicion(cond), generados, planas)
+        )
+    for mod in modulos:
+        archivos.append(
+            _escribir(carpeta, mod.archivo_qmd, _generar_capitulo_modulo(mod), generados, planas)
+        )
+    archivos.append(
+        _escribir(
+            carpeta, "14-autoevaluacion.qmd", _generar_apendice_autoevaluacion(), generados, planas
+        )
+    )
+    archivos.append(
+        _escribir(
+            carpeta,
+            "15-indice-evidencia-referencias.qmd",
+            _generar_apendice_evidencia(condiciones),
+            generados,
+            planas,
+        )
+    )
+    return {"part": "Material previo — no forma parte de la obra", "chapters": archivos}
 
 
 def generar_proyecto_quarto(
     carpeta_salida: Path,
     raiz: Path = RAIZ,
-    lecciones: bool = False,
     incluir_borradores: bool = False,
+    material_previo: bool = False,
 ) -> list[Path]:
-    """Genera todos los archivos del proyecto Quarto en ``carpeta_salida``.
+    """Genera el proyecto Quarto del libro en ``carpeta_salida``.
 
-    Con ``lecciones=True`` añade, tras el índice, las lecciones de ``lecciones/`` por parte del
-    mapa, con sus tokens de evidencia resueltos contra ``posts/`` y ``lecciones/evidencia/``
-    (ADR-001, fase 5 en pequeño). Solo las revisadas o publicadas: ``incluir_borradores`` añade
-    también los borradores, cada uno con su aviso «Borrador — sin revisión humana».
+    El libro se compone **solo de lecciones** (``lecciones/``, por parte del mapa, con sus tokens
+    de evidencia resueltos contra ``posts/`` y ``lecciones/evidencia/``) y de sus paratextos
+    (``lecciones/paratextos/``). Entran las lecciones revisadas o publicadas; ``incluir_borradores``
+    añade las demás para una vista previa, cada una con el aviso «Borrador — sin revisión humana».
+    ``material_previo`` añade, tras la obra y bajo una portada «Material previo — no forma parte de
+    la obra», las fichas de condiciones y los resúmenes de módulos con los que se empezó.
     """
     carpeta_salida.mkdir(parents=True, exist_ok=True)
     meta = leer_metadatos(raiz)
-    condiciones = leer_condiciones_neurologia(raiz)
-    modulos = obtener_capitulos_modulos()
 
     shutil.copyfile(RUTA_PREAMBULO, carpeta_salida / "preambulo-libro.tex")
     (carpeta_salida / "datos-libro.tex").write_text(_datos_libro_tex(meta), encoding="utf-8")
@@ -570,76 +655,25 @@ def generar_proyecto_quarto(
         carpeta_salida / "diseno-pdf.lua",
         ruta_portada_svg,
     ]
-    secciones_planas: list[str] = []
+    planas: list[str] = []
+    _escribir(carpeta_salida, "index.qmd", _generar_index_qmd(meta), generados, planas)
 
-    # 1. index.qmd
-    texto_index = _generar_index_qmd(meta, condiciones, modulos)
-    ruta_index = carpeta_salida / "index.qmd"
-    ruta_index.write_text(texto_index, encoding="utf-8")
-    generados.append(ruta_index)
-    secciones_planas.append(texto_index)
-
-    partes_lecciones = (
-        _capitulos_de_lecciones(
-            carpeta_salida, raiz, generados, secciones_planas, incluir_borradores
-        )
-        if lecciones
-        else []
+    partes, textos = _capitulos_de_lecciones(
+        carpeta_salida, raiz, generados, planas, incluir_borradores
     )
+    capitulos: list[object] = [*partes]
+    capitulos += _paratextos(carpeta_salida, raiz, textos, generados, planas)
+    if material_previo:
+        capitulos.append(_material_previo(carpeta_salida, raiz, generados, planas))
 
-    # 2. Parte I: Condiciones de medsemiotics-db + casos socráticos
-    archivos_parte_1: list[str] = []
-    for cond in condiciones:
-        nombre_qmd = NOMBRES_QMD_CONDICIONES[cond.condicion_id]
-        archivos_parte_1.append(nombre_qmd)
-        texto_cap = _generar_capitulo_condicion(cond)
-        ruta_cap = carpeta_salida / nombre_qmd
-        ruta_cap.write_text(texto_cap, encoding="utf-8")
-        generados.append(ruta_cap)
-        secciones_planas.append(texto_cap)
-
-    # 3. Parte II: Módulos clínicos de neurologia/
-    archivos_parte_2: list[str] = []
-    for mod in modulos:
-        archivos_parte_2.append(mod.archivo_qmd)
-        texto_mod = _generar_capitulo_modulo(mod)
-        ruta_mod = carpeta_salida / mod.archivo_qmd
-        ruta_mod.write_text(texto_mod, encoding="utf-8")
-        generados.append(ruta_mod)
-        secciones_planas.append(texto_mod)
-
-    # 4. Apéndices
-    nombre_autoeval = "14-autoevaluacion.qmd"
-    texto_autoeval = _generar_apendice_autoevaluacion()
-    ruta_autoeval = carpeta_salida / nombre_autoeval
-    ruta_autoeval.write_text(texto_autoeval, encoding="utf-8")
-    generados.append(ruta_autoeval)
-    secciones_planas.append(texto_autoeval)
-
-    nombre_evidencia = "15-indice-evidencia-referencias.qmd"
-    texto_evidencia = _generar_apendice_evidencia(condiciones)
-    ruta_evidencia = carpeta_salida / nombre_evidencia
-    ruta_evidencia.write_text(texto_evidencia, encoding="utf-8")
-    generados.append(ruta_evidencia)
-    secciones_planas.append(texto_evidencia)
-
-    archivos_apendices = [nombre_autoeval, nombre_evidencia]
-
-    # 5. _quarto.yml
-    cfg = _configuracion_quarto(
-        meta, archivos_parte_1, archivos_parte_2, archivos_apendices, partes_lecciones
-    )
+    cfg = _configuracion_quarto(meta, capitulos, con_bibliografia=bool(partes))
     ruta_quarto_yml = carpeta_salida / "_quarto.yml"
     ruta_quarto_yml.write_text(
-        yaml.safe_dump(cfg, sort_keys=False, allow_unicode=True),
-        encoding="utf-8",
+        yaml.safe_dump(cfg, sort_keys=False, allow_unicode=True), encoding="utf-8"
     )
     generados.append(ruta_quarto_yml)
 
-    # 6. Manuscrito plano unificado
-    manuscrito = "\n\n---\n\n".join(secciones_planas)
     ruta_plano = carpeta_salida / "libro-plano.md"
-    ruta_plano.write_text(manuscrito, encoding="utf-8")
+    ruta_plano.write_text("\n\n---\n\n".join(planas), encoding="utf-8")
     generados.append(ruta_plano)
-
     return generados

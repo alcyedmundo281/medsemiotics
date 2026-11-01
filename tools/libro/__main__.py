@@ -1,13 +1,17 @@
 """CLI del libro de Neurología: ``uv run python -m libro <orden>``.
 
+El libro se compone solo de lecciones (``lecciones/``) y sus paratextos. Entran las revisadas o
+publicadas; ``--incluir-borradores`` añade los borradores (vista previa) y ``--material-previo``
+las fichas de condiciones y los resúmenes de módulos anteriores, bajo su propia portada.
+
 Órdenes disponibles:
 - ``qmd``: genera el proyecto Quarto (`.qmd`, `_quarto.yml`, preámbulo LaTeX y filtro Lua)
   en ``build/quarto``.
 - ``build``: genera el proyecto Quarto, compila el PDF con ``quarto`` + ``lualatex`` y
   verifica su geometría de catálogo KDP/IngramSpark (170 × 244 mm = 6,69 × 9,61 in) con
   ``pdfinfo``.
-- ``check``: verifica las fuentes del libro y, si existe el PDF compilado, comprueba
-  ``libro.tex`` y ``pdfinfo``.
+- ``check``: verifica autoría y lecciones (y, con ``--material-previo``, sus fuentes) y, si existe
+  el PDF compilado, comprueba ``libro.tex`` y ``pdfinfo``.
 """
 
 from __future__ import annotations
@@ -17,7 +21,7 @@ import sys
 from pathlib import Path
 
 from libro import ALTO_MM, ALTO_PULGADAS, ANCHO_MM, ANCHO_PULGADAS
-from libro.datos import RAIZ, leer_condiciones_neurologia
+from libro.datos import RAIZ, leer_condiciones_neurologia, leer_metadatos
 from libro.modulos import (
     obtener_banco_autoevaluacion,
     obtener_capitulos_modulos,
@@ -26,10 +30,11 @@ from libro.modulos import (
 from libro.pdf import (
     compilar_libro_pdf,
     inspeccionar_pdf_con_pdfinfo,
+    paginas_minimas,
     validar_info_pdf,
     validar_tex_libro,
 )
-from libro.qmd import generar_proyecto_quarto
+from libro.qmd import generar_proyecto_quarto, titulos_de_lecciones
 
 RUTA_PROYECTO_DEFECTO = RAIZ / "build" / "quarto"
 RUTA_PDF_DEFECTO = RAIZ / "build" / "libro-neurologia.pdf"
@@ -38,12 +43,19 @@ RUTA_PDF_DEFECTO = RAIZ / "build" / "libro-neurologia.pdf"
 def _imprimir_resumen_pdf(
     ruta_proyecto: Path,
     ruta_pdf: Path,
+    incluir_borradores: bool = False,
+    material_previo: bool = False,
 ) -> int:
     info = inspeccionar_pdf_con_pdfinfo(ruta_pdf)
-    errores = validar_info_pdf(info)
+    titulos = titulos_de_lecciones(RAIZ, incluir_borradores)
+    errores = validar_info_pdf(info, paginas_minimas(material_previo, len(titulos)))
     ruta_tex = ruta_proyecto / "libro.tex"
     if ruta_tex.is_file():
-        errores.extend(validar_tex_libro(ruta_tex))
+        errores.extend(
+            validar_tex_libro(
+                ruta_tex, material_previo, titulos_de_lecciones(RAIZ, incluir_borradores)
+            )
+        )
 
     for err in errores:
         print(f"ERROR: {err}", file=sys.stderr)
@@ -62,6 +74,25 @@ def _imprimir_resumen_pdf(
     return 1 if errores else 0
 
 
+def _opciones_de_contenido(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--incluir-borradores",
+        action="store_true",
+        help=(
+            "Añade las lecciones en borrador (vista previa), cada una con el aviso "
+            "«Borrador — sin revisión humana». Por defecto solo entran las revisadas o publicadas."
+        ),
+    )
+    parser.add_argument(
+        "--material-previo",
+        action="store_true",
+        help=(
+            "Añade, tras la obra y bajo la portada «Material previo — no forma parte de la "
+            "obra», las fichas de condiciones y los resúmenes de módulos previos a las lecciones."
+        ),
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="libro",
@@ -78,22 +109,7 @@ def main(argv: list[str] | None = None) -> int:
         help="Carpeta donde se escribe el proyecto Quarto (por defecto: build/quarto).",
     )
 
-    p_qmd.add_argument(
-        "--lecciones",
-        action="store_true",
-        help=(
-            "Incluye las lecciones revisadas o publicadas de lecciones/ "
-            "(tokens resueltos contra posts/ y lecciones/evidencia/)."
-        ),
-    )
-    p_qmd.add_argument(
-        "--incluir-borradores",
-        action="store_true",
-        help=(
-            "Con --lecciones, añade también los borradores (vista previa), cada uno con el aviso "
-            "«Borrador — sin revisión humana»."
-        ),
-    )
+    _opciones_de_contenido(p_qmd)
 
     p_build = sub.add_parser(
         "build",
@@ -112,22 +128,7 @@ def main(argv: list[str] | None = None) -> int:
         help="Ruta de salida del PDF compilado (por defecto: build/libro-neurologia.pdf).",
     )
 
-    p_build.add_argument(
-        "--lecciones",
-        action="store_true",
-        help=(
-            "Incluye las lecciones revisadas o publicadas de lecciones/ "
-            "(tokens resueltos contra posts/ y lecciones/evidencia/)."
-        ),
-    )
-    p_build.add_argument(
-        "--incluir-borradores",
-        action="store_true",
-        help=(
-            "Con --lecciones, añade también los borradores (vista previa), cada uno con el aviso "
-            "«Borrador — sin revisión humana»."
-        ),
-    )
+    _opciones_de_contenido(p_build)
 
     p_check = sub.add_parser(
         "check",
@@ -150,17 +151,16 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Falla si el archivo PDF aún no ha sido compilado.",
     )
+    _opciones_de_contenido(p_check)
 
     args = parser.parse_args(argv)
-    if getattr(args, "incluir_borradores", False) and not args.lecciones:
-        parser.error("--incluir-borradores requiere --lecciones")
 
     if args.orden == "qmd":
         archivos = generar_proyecto_quarto(
             args.proyecto,
             raiz=RAIZ,
-            lecciones=args.lecciones,
             incluir_borradores=args.incluir_borradores,
+            material_previo=args.material_previo,
         )
         print(f"Proyecto Quarto generado en {args.proyecto} ({len(archivos)} archivos).")
         return 0
@@ -170,28 +170,39 @@ def main(argv: list[str] | None = None) -> int:
             args.salida,
             args.proyecto,
             raiz=RAIZ,
-            lecciones=args.lecciones,
             incluir_borradores=args.incluir_borradores,
+            material_previo=args.material_previo,
         )
-        return _imprimir_resumen_pdf(args.proyecto, args.salida)
+        return _imprimir_resumen_pdf(
+            args.proyecto, args.salida, args.incluir_borradores, args.material_previo
+        )
 
     # orden == "check"
-    faltantes = verificar_fuentes_neurologia(RAIZ)
-    if faltantes:
-        for f in faltantes:
-            print(f"ERROR: falta fuente de neurología: {f}", file=sys.stderr)
-        return 1
-
-    condiciones = leer_condiciones_neurologia(RAIZ)
-    modulos = obtener_capitulos_modulos()
-    preguntas = obtener_banco_autoevaluacion()
+    titulos = titulos_de_lecciones(RAIZ, args.incluir_borradores)
+    leer_metadatos(RAIZ)
     print(
-        f"Fuentes verificadas: {len(condiciones)} condiciones de medsemiotics-db, "
-        f"{len(modulos)} capítulos de módulos clínicos y {len(preguntas)} casos de autoevaluación."
+        f"Libro solo de lecciones: {len(titulos)} lección(es) entran "
+        + ("(con borradores)." if args.incluir_borradores else "(revisadas o publicadas).")
     )
+    if args.material_previo:
+        faltantes = verificar_fuentes_neurologia(RAIZ)
+        if faltantes:
+            for f in faltantes:
+                print(f"ERROR: falta fuente de neurología: {f}", file=sys.stderr)
+            return 1
+        condiciones = leer_condiciones_neurologia(RAIZ)
+        modulos = obtener_capitulos_modulos()
+        preguntas = obtener_banco_autoevaluacion()
+        print(
+            f"Material previo verificado: {len(condiciones)} condiciones de medsemiotics-db, "
+            f"{len(modulos)} capítulos de módulos clínicos y {len(preguntas)} casos de "
+            "autoevaluación."
+        )
 
     if args.pdf.is_file():
-        return _imprimir_resumen_pdf(args.proyecto, args.pdf)
+        return _imprimir_resumen_pdf(
+            args.proyecto, args.pdf, args.incluir_borradores, args.material_previo
+        )
     if args.exigir_pdf:
         print(f"ERROR: no existe el PDF compilado en {args.pdf}", file=sys.stderr)
         return 1

@@ -229,11 +229,10 @@ def test_el_libro_incluye_las_lecciones_por_parte_del_mapa() -> None:
 
 def test_la_configuracion_del_libro_no_cambia_sin_lecciones() -> None:
     meta = leer_metadatos(RAIZ)
-    sin = _configuracion_quarto(meta, ["a.qmd"], ["b.qmd"], ["c.qmd"])
+    sin = _configuracion_quarto(meta, ["a.qmd"])
     assert "bibliography" not in sin
-    con = _configuracion_quarto(
-        meta, ["a.qmd"], ["b.qmd"], ["c.qmd"], [{"part": "El recién nacido", "chapters": ["l.qmd"]}]
-    )
+    assert sin["book"]["chapters"] == ["index.qmd", "a.qmd"]  # type: ignore[index]
+    parte = {"part": "El recién nacido", "chapters": ["l.qmd"]}
+    con = _configuracion_quarto(meta, [parte], con_bibliografia=True)
     assert con["bibliography"] == "refs.bib"
-    capitulos = con["book"]["chapters"]  # type: ignore[index]
-    assert capitulos[1] == {"part": "El recién nacido", "chapters": ["l.qmd"]}
+    assert con["book"]["chapters"] == ["index.qmd", parte]  # type: ignore[index]
