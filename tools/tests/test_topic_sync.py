@@ -171,6 +171,54 @@ class SynchronizationTests(unittest.TestCase):
         self.assertFalse(errata["verificacion"]["retractado"])
 
 
+class ExclusionTests(unittest.TestCase):
+    PATHS = ["condiciones/HM9999-tema.yaml"]
+
+    def test_excluded_condition_is_not_generated_and_is_reported(self):
+        planned, skipped = sync.plan(Source(), self.PATHS, {}, {"HM:9999": "sin revisión"})
+        self.assertEqual(planned, [])
+        self.assertEqual(skipped, ["HM:9999"])
+
+    def test_condition_not_excluded_is_generated(self):
+        planned, skipped = sync.plan(Source(), self.PATHS, {}, {"HM:1111": "otra"})
+        self.assertEqual([m["grounding"]["condicion_id"] for _, _, m in planned], ["HM:9999"])
+        self.assertEqual(skipped, [])
+
+    def test_exclusion_never_deletes_an_existing_article_silently(self):
+        previous = {"HM:9999": (Path("posts/HM9999.md"), {})}
+        with self.assertRaisesRegex(ValueError, "ya tiene artículo"):
+            sync.plan(Source(), self.PATHS, previous, {"HM:9999": "sin revisión"})
+
+    def test_stale_exclusion_is_an_error_in_a_full_sync(self):
+        with self.assertRaisesRegex(ValueError, "Exclusión sin condición"):
+            sync.plan(Source(), self.PATHS, {}, {"HM:1111": "no existe"}, complete=True)
+
+    def test_exclusion_file_needs_ids_and_reasons(self):
+        import tempfile
+
+        def leer(texto):
+            with tempfile.TemporaryDirectory() as d:
+                ruta = Path(d) / "x.yaml"
+                ruta.write_text(texto, encoding="utf-8")
+                return sync.read_excluded(ruta)
+
+        self.assertEqual(leer("excluidas:\n  'HM:1': motivo\n"), {"HM:1": "motivo"})
+        self.assertEqual(leer("excluidas: {}\n"), {})
+        for malo in (
+            "excluidas:\n  'HM:1': ''\n",
+            "excluidas:\n  tema: motivo\n",
+            "excluidas:\n  'HM:1': null\n",
+        ):
+            with self.assertRaises(ValueError):
+                leer(malo)
+        self.assertEqual(sync.read_excluded(Path("no-existe.yaml")), {})
+
+    def test_hm6049_is_excluded_until_its_own_pr(self):
+        excluded = sync.read_excluded()
+        self.assertIn("HM:6049", excluded)
+        self.assertFalse((sync.POSTS / "HM6049-paralisis-cerebral.md").exists())
+
+
 class ProsaTests(unittest.TestCase):
     """Los IDs HM: incrustados en la prosa de la base se leen como nombres."""
 

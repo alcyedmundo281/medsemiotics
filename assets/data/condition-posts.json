@@ -286,11 +286,5 @@
     "archivo": "condiciones/HM6048-bocio.yaml",
     "slug": "bocio-inspeccion-palpacion-precision",
     "url": "https://powersemiotics.com/medsemiotics/post.html?slug=bocio-inspeccion-palpacion-precision"
-  },
-  {
-    "condicion_id": "HM:6049",
-    "archivo": "condiciones/HM6049-paralisis-cerebral.yaml",
-    "slug": "paralisis-cerebral-precision-semiotica",
-    "url": "https://powersemiotics.com/medsemiotics/post.html?slug=paralisis-cerebral-precision-semiotica"
   }
 ]
