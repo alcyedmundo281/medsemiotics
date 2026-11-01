@@ -169,8 +169,13 @@ extensibilidad (el ángulo que alcanzan las articulaciones) y la pasividad refle
 capacidad del músculo de oponerse al desplazamiento y de frenar los movimientos pendulares que
 provoca el examinador).
 
-Las maniobras de madurez vienen de la escuela de Amiel-Tison [@amieltison1968] y hoy se
-integran en el puntaje New Ballard [@ballard1991]. En el niño a término:
+Las maniobras que siguen vienen de la escuela de Amiel-Tison [@amieltison1968]. Son una guía
+del tono pasivo y de la madurez, pero **no son el puntaje New Ballard**: este instrumento
+puntúa por separado seis criterios neuromusculares (postura, ventana cuadrada de la muñeca,
+retroceso del brazo, ángulo poplíteo, signo de la bufanda y talón a la oreja) y la madurez
+física, y la edad gestacional se estima con el instrumento completo [@ballard1991]. La
+rotación de la cabeza, la dorsiflexión del pie y la oscilación pendular no son criterios del
+New Ballard. En el niño a término:
 
 - la cabeza rota hasta que el mentón llega a la punta del hombro; en el prematuro la sobrepasa;
 - en el **signo de la bufanda** (maniobra de Foulard) llevamos la mano del niño al hombro
@@ -197,10 +202,13 @@ motricidad, la postura y la actividad del recién nacido.
    extiende o se flexiona.
 2. **Succión.** Es un elemento esencial: valoramos la fuerza, la integridad de la succión y de
    la deglución.
-3. **Moro.** Levantamos al niño por los pies, separando del plano de la mesa la cadera y parte
-   del tronco, y lo soltamos de pronto. La respuesta tiene dos tiempos: los brazos se abren en
-   cruz, con antebrazos, manos y pulgar extendidos; después se dirigen al eje del cuerpo, como
-   en un abrazo, tiempo que es inconstante.
+3. **Moro.** Con el niño en decúbito supino sobre una superficie firme, sostenemos con una mano
+   su cabeza y su tronco superior y, sin soltarlo nunca, dejamos que la cabeza descienda un
+   poco hacia atrás de modo controlado, siempre apoyada en nuestra mano. No lo levantamos por
+   los pies ni lo soltamos. La respuesta tiene dos tiempos: los brazos se abren en cruz, con
+   antebrazos, manos y pulgar extendidos; después se dirigen al eje del cuerpo, como en un
+   abrazo, tiempo que es inconstante. Esta técnica sostenida reemplaza a la que describía el
+   texto de 1993, que levantaba al niño por los pies y lo soltaba de pronto.
 4. **Alargamiento cruzado.** Estimulamos la planta de un pie con la rodilla en extensión: el
    miembro opuesto se flexiona, se extiende en actitud de rechazo y por último se aduce hasta
    apoyar el talón sobre el pie estimulado.
@@ -233,8 +241,8 @@ diagnóstico, y lo que alarma es la acumulación y un patrón anormal de distrib
 **La madurez.** El New Ballard se validó en 578 recién nacidos de entre veinte y cuarenta y
 cuatro semanas; su correlación con la edad gestacional confirmada fue de 0,97 y la
 concordancia entre observadores, de 0,95 [@ballard1991]. Es la herramienta que usamos para
-estimar la edad gestacional; las maniobras del tono pasivo son sus componentes, no
-sustitutos aislados.
+estimar la edad gestacional, aplicada completa: ni una sola maniobra del tono pasivo la
+sustituye.
 
 **La fontanela abombada.** En la exploración, una fontanela abombada tiene {{lr+ HM:3240}}
 para meningitis bacteriana en niños. Aumenta la probabilidad, pero ningún signo aislado es
