@@ -16,7 +16,7 @@ reading_time: 8 min
 difficulty: Intermedio
 fuente:
   repositorio: alcyedmundo281/medsemiotics-db
-  revision: af44eec90966a41d8052c3605c90a480ad042299
+  revision: ea2f6e63b8508e6a36a28fd11950bd28c0900a49
   doi: 10.5281/zenodo.22064424
   condicion: condiciones/HM6004-meningitis-aguda.yaml
   archivos:
@@ -34,9 +34,11 @@ fuente:
     conceptos/HM3006-acentuacion-cefalea-sacudida.yaml: b7e237eb2e3f5ead09a07aff8832f8b79afc05a258a7649cc778aba725441a12
     conceptos/HM3238-signo-de-kernig.yaml: 97a5f88234b70ede1cfe5c8adb4c99c64c38397f63af19a502c9fcc41acfa529
     conceptos/HM3239-signo-de-brudzinski.yaml: 8550100892b0b06d7f506a534f89c5266e9fbd7d65a416ebb7e99807a25195b8
-    condiciones/HM6004-meningitis-aguda.yaml: 75f24c5863a0e807a47f41927ea1e36cb60684368c277d1a5c2a3dd59e787893
+    conceptos/HM3240-fontanela-abombada.yaml: 73b922db809138632d714f8d73b419f42b7b04174a6cdc285b7f83e8508a75b8
+    condiciones/HM6004-meningitis-aguda.yaml: 28214ecff71d433fa1e1711beeb79efba5a7cf303059b9dc4b5bb6d5cf2f90f3
     referencias/pmid-10411200.yaml: 8b029e69cf573d005a0416d103199e091dfd7156895fad9de3768aebf43a5eab
     referencias/pmid-12060874.yaml: d3b3a5af84554f3adb5d3e92fa97d6422410beaa5173f8b29388b47cec1e99bf
+    referencias/pmid-20974781.yaml: 45ab43b70e8f77a5c15c43d807610f7300cd78a6780de423402428cd4badc338
     referencias/pmid-32524581.yaml: 5678973f38f01ba507942f774c9e5017c7f05fb3673b8de2be79063ca172571b
 grounding:
   condicion_id: HM:6004
@@ -134,6 +136,19 @@ evidencia:
     ref: pmid:12060874
     poblacion: 297 adultos con sospecha de meningitis explorados antes de la punción lumbar; meningitis definida como ≥ 6 leucocitos en el LCR
   ref: pmid:12060874
+- concepto: HM:3240
+  rol: apoyo
+  estado_lr: medido
+  lr_positivo:
+    valor: 3.5
+    ic95:
+    - 2.0
+    - 6.0
+    ref: pmid:20974781
+    poblacion: niños (revisión sistemática de 10 estudios prospectivos) con meningitis bacteriana confirmada en laboratorio frente a niños sin ella; hallazgo en la exploración
+  ref: pmid:20974781
+  nota: Curtis 2010 publica además un LR 8.00 (IC95% 2.4-26) cuando el abombamiento se obtiene por la historia (referido por quien cuida al niño), distinto del hallazgo explorado. La fuente no publica LR− para este signo, y concluye que ningún signo aislado es diagnóstico
+  decision: aumenta la probabilidad de meningitis bacteriana en el niño; no la confirma y su ausencia no la descarta
 - concepto: HM:0501
   rol: prueba_sensible
   estado_lr: no_medido
@@ -321,6 +336,20 @@ Snomed: 822031000000101; Cie10: G03.9
 
 **Referencia:** pmid:12060874
 
+### Fontanela anterior abombada (HM:3240)
+
+**Rol:** Apoyo diagnóstico
+
+**Estado del LR:** LR medido
+
+**LR positivo:** Valor: 3.5; IC del 95 %: 2.0 / 6.0; Referencia: pmid:20974781; Población: niños (revisión sistemática de 10 estudios prospectivos) con meningitis bacteriana confirmada en laboratorio frente a niños sin ella; hallazgo en la exploración
+
+**Referencia:** pmid:20974781
+
+**Nota:** Curtis 2010 publica además un LR 8.00 (IC95% 2.4-26) cuando el abombamiento se obtiene por la historia (referido por quien cuida al niño), distinto del hallazgo explorado. La fuente no publica LR− para este signo, y concluye que ningún signo aislado es diagnóstico
+
+**Decisión:** aumenta la probabilidad de meningitis bacteriana en el niño; no la confirma y su ausencia no la descarta
+
 ### Alteración del nivel de conciencia (HM:0501)
 
 **Rol:** Prueba sensible
@@ -335,6 +364,8 @@ Nombre: Ausencia de la tríada clásica; Componentes: Fiebre / Rigidez de nuca /
 
 ## Aspectos pendientes de documentación
 
+Decisión clínica (2026-10-31): la arista de la fontanela abombada (pmid:20974781) es pediátrica y su patrón de referencia es la meningitis bacteriana; las demás se midieron en adultos con «meningitis aguda». Si el responsable clínico prefiere no mezclar poblaciones en una condición, la alternativa es acuñar una condición propia («Meningitis bacteriana en el niño») y mover esa arista.
+
 Sin probabilidad_base: Attia 1999 no publica prevalencia, y los resúmenes de Thomas 2002 y de Iguchi 2020 tampoco.
 
 ## Referencias y procedencia
@@ -342,6 +373,8 @@ Sin probabilidad_base: Attia 1999 no publica prevalencia, y los resúmenes de Th
 **pmid:10411200:** The rational clinical examination. Does this adult patient have acute meningitis?. JAMA, 1999. DOI: 10.1001/jama.282.2.175.
 
 **pmid:12060874:** The diagnostic accuracy of Kernig's sign, Brudzinski's sign, and nuchal rigidity in adults with suspected meningitis. Clin Infect Dis, 2002. DOI: 10.1086/340979.
+
+**pmid:20974781:** Clinical features suggestive of meningitis in children: a systematic review of prospective data. Pediatrics, 2010. DOI: 10.1542/peds.2010-0277.
 
 **pmid:32524581:** Diagnostic test accuracy of jolt accentuation for headache in acute meningitis in the emergency setting. Cochrane Database Syst Rev, 2020. DOI: 10.1002/14651858.CD012824.pub2.
 
