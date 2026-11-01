@@ -70,6 +70,24 @@ def test_el_preambulo_no_escribe_ningun_nombre_de_autor() -> None:
     assert not any(nombre.removesuffix(" †") in preambulo for nombre in AUTORES)
 
 
+def test_los_creditos_declaran_que_la_revision_del_editor_no_es_independiente(
+    tmp_path: Path,
+) -> None:
+    meta = leer_metadatos(RAIZ)
+    assert meta.editor.nombre == "Alcy Edmundo Torres Guerrero"
+    assert meta.partes_del_editor == (
+        "Fundamentos: la semiología basada en la evidencia",
+        "El adulto: síndromes y urgencias",
+    )
+    generar_proyecto_quarto(tmp_path, RAIZ)
+    creditos = (tmp_path / "index.qmd").read_text(encoding="utf-8").split("{.creditos-pdf}")[1]
+    assert "el editor es también autor; su revisión de esas partes no es independiente" in creditos
+    assert "Fundamentos: la semiología basada en la evidencia" in creditos
+    assert "El adulto: síndromes y urgencias" in creditos
+    # En neonato, lactante-niño y neuroftalmología el autor es otro: ahí sí revisa un tercero.
+    assert "El recién nacido" not in creditos.split("Revisión editorial:")[1].split("DOI")[0]
+
+
 def test_creditos_nueva_edicion_sin_doi_de_la_plataforma(tmp_path: Path) -> None:
     generar_proyecto_quarto(tmp_path, RAIZ)
     index = (tmp_path / "index.qmd").read_text(encoding="utf-8")

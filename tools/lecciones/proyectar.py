@@ -58,7 +58,7 @@ def _firmas() -> dict[str, str]:
 
 
 def linea_revision(datos: Mapping[str, object], firmas: Mapping[str, str]) -> str | None:
-    """Línea «Revisión clínica: …; corevisión: …»; solo de lecciones revisadas o publicadas."""
+    """Línea «Revisión clínica: …»; solo de lecciones revisadas o publicadas."""
     if datos.get("estado") not in ESTADOS_PUBLICABLES or not datos.get("revisor"):
         return None
 
@@ -67,8 +67,6 @@ def linea_revision(datos: Mapping[str, object], firmas: Mapping[str, str]) -> st
         return f"{texto} ({fecha})" if fecha else texto
 
     partes = [f"Revisión clínica: {persona(datos['revisor'], datos.get('fecha_revision'))}"]
-    if datos.get("corevisor"):
-        partes.append(f"corevisión: {persona(datos['corevisor'], datos.get('fecha_corevision'))}")
     return "*" + "; ".join(partes) + "*"
 
 

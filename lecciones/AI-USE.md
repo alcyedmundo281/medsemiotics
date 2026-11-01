@@ -83,9 +83,9 @@ Quedan a cargo de los autores humanos:
 - El **juicio clínico** de cada lección: qué se enseña, con qué límites y qué decisión se
   recomienda.
 - La sección de **límites** («dónde no confiar») de cada lección, que es obligatoria.
-- La **revisión de cada lección** por su revisor nominado: neuropediatría, Alcy Ramiro
-  Torres Guerrero; neuroftalmología, Gladys Torres Guerrero; fundamentos y adulto, Alcy
-  Edmundo Torres Guerrero.
+- La **revisión de cada lección**, que hace el editor, Alcy Edmundo Torres Guerrero, como
+  revisor humano nominado de toda la obra. El especialista de cada área (neuropediatría,
+  Alcy Ramiro Torres Guerrero; neuroftalmología, Gladys Torres Guerrero) es su autor.
 - El **cotejo de la transcripción de 1993** contra el impreso.
 - La **verificación final de cada cita** y la responsabilidad por el plagio.
 - La **decisión de publicar**, en cualquier edición y canal de venta.
