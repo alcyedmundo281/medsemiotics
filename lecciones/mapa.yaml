@@ -44,6 +44,8 @@ personas:
     rol_obra: coordinacion-editorial
     credit: [redaccion, revision-edicion]
 
+# Decisión editorial (Alcy Edmundo Torres Guerrero): el especialista es autor de su área y el
+# editor, aetg, es el revisor de todo; no hay corevisores.
 partes:
   - clave: fundamentos
     titulo: "Fundamentos: la semiología basada en la evidencia"
@@ -52,15 +54,15 @@ partes:
   - clave: neonato
     titulo: "El recién nacido"
     autores: [atc, artg]
-    revisor: artg
+    revisor: aetg
   - clave: lactante-nino
     titulo: "El lactante y el niño"
     autores: [atc, artg]
-    revisor: artg
+    revisor: aetg
   - clave: neuroftalmologia
     titulo: "Neuroftalmología del niño y del adulto"
     autores: [gtg]
-    revisor: gtg
+    revisor: aetg
     nota: "Temario aprobado por Gladys Torres Guerrero (30-oct-2026)."
   - clave: adulto
     titulo: "El adulto: síndromes y urgencias"
@@ -307,7 +309,6 @@ lecciones:
     parte: adulto
     orden: 4
     fase: 2
-    corevisor: artg
     modulos_html:
       - neurologia/epilepsia-ii/index.html
   - id: leccion-estado-epileptico
@@ -315,7 +316,6 @@ lecciones:
     parte: adulto
     orden: 5
     fase: 2
-    corevisor: artg
   - id: leccion-enfermedades-desmielinizantes
     titulo: "Enfermedades desmielinizantes"
     parte: adulto
@@ -393,7 +393,6 @@ lecciones:
     parte: adulto
     orden: 18
     fase: 2
-    corevisor: artg
     modulos_html:
       - neurologia/infecciones-snc.html
     condiciones: ["HM:6004"]
@@ -402,7 +401,6 @@ lecciones:
     parte: adulto
     orden: 19
     fase: 2
-    corevisor: artg
     condiciones: ["HM:6038"]
 
 # Sílabo vigente de la asignatura: cada semana debe estar cubierta por lecciones del mapa

@@ -63,8 +63,6 @@ class FilaMapa(_Base):
     legado_paginas: Annotated[str, StringConstraints(pattern=r"^\d+(-\d+)?$")] | None = None
     condiciones: list[HmId] = Field(default_factory=list)
     propuesta: bool = False
-    # Persona (clave de `personas`) que revisa además de la de la parte; «revisado» exige ambas.
-    corevisor: str | None = None
 
 
 class SemanaSilabo(_Base):
@@ -110,13 +108,6 @@ class Mapa(_Base):
         for fila in self.lecciones:
             if fila.parte not in claves:
                 raise ValueError(f"{fila.id}: parte «{fila.parte}» no declarada")
-            if fila.corevisor is not None:
-                if fila.corevisor not in self.personas:
-                    raise ValueError(f"{fila.id}: corevisor desconocido «{fila.corevisor}»")
-                if self.personas[fila.corevisor].fallecido:
-                    raise ValueError(f"{fila.id}: el corevisor no puede ser el autor fallecido")
-                if fila.corevisor == self.parte(fila.parte).revisor:
-                    raise ValueError(f"{fila.id}: el corevisor debe ser distinto del revisor")
         if self.silabo is not None:
             ids = {f.id for f in self.lecciones}
             numeros = [s.semana for s in self.silabo.semanas]
@@ -209,9 +200,6 @@ def coherencia(mapa: Mapa, lecciones: dict[str, dict[str, Any]], raiz: Path = RA
             and mapa.personas[fundador].nombre not in nombres
         ):
             errores.append(f"{archivo}: una lección con legado lleva al autor fundador")
-        coreviso = mapa.personas[plan.corevisor].nombre if plan.corevisor else None
-        if datos.get("corevisor") != coreviso:
-            errores.append(f"{archivo}: corevisor «{datos.get('corevisor')}» ≠ mapa «{coreviso}»")
         for alias in mapa.parte(plan.parte).autores:
             if mapa.personas[alias].nombre not in nombres:
                 nombre = mapa.personas[alias].nombre
@@ -274,8 +262,6 @@ def renderizar(mapa: Mapa, lecciones: dict[str, dict[str, Any]], raiz: Path = RA
         for f in filas:
             estado = ICONOS.get(str(lecciones.get(f.id, {}).get("estado", "pendiente")), "?")
             titulo = f.titulo + (" *(propuesta)*" if f.propuesta else "")
-            if f.corevisor:
-                titulo += f"<br>corevisión: {mapa.personas[f.corevisor].nombre}"
             lineas.append(
                 f"| {f.orden} | {titulo}<br>`{f.id}` | {f.fase} | {_celda_fuente(f)} | {estado} |"
             )
@@ -339,11 +325,6 @@ def esqueleto(mapa: Mapa, ident: str) -> str:
         "estado": "borrador",
         "fecha_revision": None,
         "revisor": None,
-        **(
-            {"corevisor": mapa.personas[fila.corevisor].nombre, "fecha_corevision": None}
-            if fila.corevisor
-            else {}
-        ),
         "autores": [
             mapa.personas[a].model_dump(exclude_defaults=True, exclude_none=True) for a in alias
         ],
