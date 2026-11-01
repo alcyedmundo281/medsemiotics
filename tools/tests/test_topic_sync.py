@@ -227,10 +227,10 @@ class ExclusionTests(unittest.TestCase):
                 leer(malo)
         self.assertEqual(sync.read_excluded(Path("no-existe.yaml")), {})
 
-    def test_hm6049_is_excluded_until_its_own_pr(self):
-        excluded = sync.read_excluded()
-        self.assertIn("HM:6049", excluded)
-        self.assertFalse((sync.POSTS / "HM6049-paralisis-cerebral.md").exists())
+    def test_hm6049_is_published_and_no_longer_excluded_or_reserved(self):
+        self.assertNotIn("HM:6049", sync.read_excluded())
+        self.assertTrue((sync.POSTS / "HM6049-paralisis-cerebral.md").is_file())
+        self.assertFalse((sync.EVIDENCE / "HM6049-paralisis-cerebral.md").exists())
 
 
 class ProsaTests(unittest.TestCase):

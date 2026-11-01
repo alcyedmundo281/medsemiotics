@@ -5,10 +5,10 @@ title: 'Parálisis cerebral: hallazgos y evidencia clínica'
 subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
 date: '2026-10-31'
 author: Dr. Alcy Torres
-category: medicina_interna
-category_label: Medicina Interna
+category: neurologia_pediatrica
+category_label: Neurología pediátrica
 tags:
-- medicina_interna
+- neurologia_pediatrica
 - paralisis-cerebral
 - semiologia
 reading_time: 8 min

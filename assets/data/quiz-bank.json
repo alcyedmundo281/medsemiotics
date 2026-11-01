@@ -4897,5 +4897,54 @@
         "feedback": "Ese número corresponde al LR positivo, no al LR negativo. LR positivo: 3.0. IC del 95 %: 2.5 a 3.5. Población: niños en edad escolar evaluados según el criterio de falange distal del pulgar de la OMS frente a ecografía tiroidea. Interpretación registrada: en cribado pediátrico, un lóbulo que supera la falange distal del pulgar triplica la probabilidad de bocio confirmado por ultrasonido."
       }
     ]
+  },
+  {
+    "id": "paralisis-cerebral-precision-semiotica-q1",
+    "post_slug": "paralisis-cerebral-precision-semiotica",
+    "post_title": "Parálisis cerebral: hallazgos y evidencia clínica",
+    "category": "neurologia_pediatrica",
+    "category_label": "Neurología pediátrica",
+    "condicion_id": "HM:6049",
+    "condicion_nombre": "Parálisis cerebral",
+    "concepto_id": "HM:3246",
+    "evidencia": {
+      "condicion_id": "HM:6049",
+      "concepto_id": "HM:3246",
+      "estado_lr": "no_medido",
+      "campo": null,
+      "dato": null,
+      "poblacion": null,
+      "motivo": "el resumen declara «sensibilidad y especificidad del 95% cada una» para la valoración de los movimientos generales, pero no publica el cociente, la población ni el diseño; no se calcula aquí",
+      "decision": null,
+      "advertencia": null
+    },
+    "fuente_doi": "10.5281/zenodo.22064424",
+    "referencia_id": null,
+    "pmid": null,
+    "doi": null,
+    "referencia_cita": null,
+    "triada": {
+      "significante": "Ausencia de movimientos generales de tipo fidgety (3-5 meses)",
+      "significado": "El mecanismo fisiopatológico no está documentado en esta fuente.",
+      "decision": "La fuente no documenta una decisión específica para este hallazgo."
+    },
+    "pregunta": "En Parálisis cerebral, ¿qué estado de la evidencia corresponde a «Ausencia de movimientos generales de tipo fidgety (3-5 meses)» según la fuente?",
+    "opciones": [
+      {
+        "texto": "Sin efecto discriminativo",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: el resumen declara «sensibilidad y especificidad del 95% cada una» para la valoración de los movimientos generales, pero no publica el cociente, la población ni el diseño; no se calcula aquí."
+      },
+      {
+        "texto": "LR no medido",
+        "correcta": true,
+        "feedback": "LR no medido Motivo: el resumen declara «sensibilidad y especificidad del 95% cada una» para la valoración de los movimientos generales, pero no publica el cociente, la población ni el diseño; no se calcula aquí."
+      },
+      {
+        "texto": "LR no medible",
+        "correcta": false,
+        "feedback": "La fuente clasifica este hallazgo como «LR no medido». LR no medido Motivo: el resumen declara «sensibilidad y especificidad del 95% cada una» para la valoración de los movimientos generales, pero no publica el cociente, la población ni el diseño; no se calcula aquí."
+      }
+    ]
   }
 ]

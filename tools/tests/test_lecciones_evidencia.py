@@ -110,6 +110,6 @@ def test_el_repositorio_lee_una_sola_revision_y_cita_hm6049() -> None:
     articulos = cargar_articulos(RAIZ)
     assert {"HM:6004", "HM:6049"} <= set(articulos)
     assert len({a.revision_fuente for a in articulos.values()}) == 1
-    # La exclusión del blog no quita la evidencia de las lecciones.
-    assert not (RAIZ / "posts" / "HM6049-paralisis-cerebral.md").exists()
-    assert (RAIZ / "lecciones" / "evidencia" / "HM6049-paralisis-cerebral.md").is_file()
+    # HM:6049 ya se publicó: su evidencia vive en posts/ y no queda reservada.
+    assert (RAIZ / "posts" / "HM6049-paralisis-cerebral.md").is_file()
+    assert not (RAIZ / "lecciones" / "evidencia" / "HM6049-paralisis-cerebral.md").exists()

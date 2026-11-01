@@ -46,6 +46,7 @@ CATEGORIES = {
     "meningitis": ("neurologia", "Neurología"),
     "parkinson": ("neurologia", "Neurología"),
     "alcohol": ("psiquiatria", "Psiquiatría"),
+    "parálisis cerebral": ("neurologia_pediatrica", "Neurología pediátrica"),
 }
 LABELS = {
     "termino_en": "Nombre en inglés", "sinonimos": "Sinónimos",
