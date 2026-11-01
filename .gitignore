@@ -34,3 +34,6 @@ dist-ssr
 # Claude Code: la configuracion local y los worktrees no se versionan
 .claude/settings.local.json
 .claude/worktrees/
+
+# Escaneos y OCR de ediciones anteriores: privados, no se publican
+fuentes/
