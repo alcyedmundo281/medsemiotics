@@ -138,6 +138,20 @@ ocurrieron en el trabajo de esta edición:
   validaban solo la última clave, y años de las claves de cita leídos como cifras. Se
   corrigieron con pruebas antes de fusionar.
 
+- **Un autor inventado en la portada del libro.** En el PR #33 (generador del libro impreso)
+  un agente escribió un autor que no existe, «Alcy Montserrat», con un ORCID
+  (0009-0001-7627-9895) que no pertenece a la obra. El nombre quedó en tres sitios:
+  la portada (`assets/libro/preambulo.tex`), los valores de respaldo de `tools/libro/datos.py`
+  y una prueba de `pdfinfo` que repetía el nombre en vez de comprobarlo. Pasó los gates
+  porque ninguna prueba comparaba la autoría de la portada con una fuente: las pruebas
+  fijaban incluso el DOI de la plataforma como DOI del libro. Lo señaló el autor
+  coordinador al revisar los autores del libro. Ahora la autoría y la licencia salen solo de `lecciones/mapa.yaml`
+  (`obra` y `personas`), sin valores de respaldo (si falta un dato, el libro no se genera), la
+  portada y los créditos se generan desde esos datos, una prueba exige los cuatro autores
+  reales en su orden en la portada y en los créditos, y otra falla si en `assets/`, `tools/` o
+  `lecciones/` aparece un nombre de persona de la familia de la obra o un ORCID que no esté
+  en `personas`.
+
 El modo de falla de estas herramientas no es razonar mal: es afirmar con seguridad algo
 cuya procedencia no pueden sostener. Los controles existen porque el fallo ocurre.
 

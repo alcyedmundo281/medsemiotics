@@ -41,6 +41,40 @@ NOMBRES_QMD_CONDICIONES: dict[str, str] = {
 }
 
 
+def _lineas_autores(meta: MetadatosLibro) -> list[str]:
+    """Una línea por autor, en el orden del mapa: nombre, función, afiliación y ORCID si existe."""
+    lineas: list[str] = []
+    for autor in meta.autores:
+        detalle = [autor.rol] + ([autor.afiliacion] if autor.afiliacion else [])
+        linea = f"**{autor.nombre_visible}** — {'; '.join(detalle)}"
+        if autor.orcid:
+            linea += f" · ORCID: <https://orcid.org/{autor.orcid}>"
+        lineas.append(linea + "  ")
+    return lineas
+
+
+def _escapar_tex(texto: str) -> str:
+    barra = chr(92)
+    for caracter in "&%$#_{}":
+        texto = texto.replace(caracter, barra + caracter)
+    return texto
+
+
+def _datos_libro_tex(meta: MetadatosLibro) -> str:
+    """Macros de LaTeX con la autoría y el sello de la portada, generadas desde los datos."""
+    barra = chr(92)
+    nombres = (barra * 2 + " ").join(_escapar_tex(a.nombre_visible) for a in meta.autores)
+    sello = (
+        f"PowerSemiotics {barra}enspace·{barra}enspace Nueva edición "
+        f"{barra}enspace·{barra}enspace {_escapar_tex(meta.licencia)}"
+    )
+    return (
+        "% GENERADO por tools/libro/qmd.py desde lecciones/mapa.yaml. No editar a mano.\n"
+        f"{barra}newcommand{{{barra}libroautoresportada}}{{{nombres}}}\n"
+        f"{barra}newcommand{{{barra}librosellopie}}{{{sello}}}\n"
+    )
+
+
 def _generar_index_qmd(
     meta: MetadatosLibro,
     condiciones: Sequence[CondicionLibro],
@@ -65,18 +99,21 @@ def _generar_index_qmd(
         "",
         f"*{meta.subtitulo}*",
         "",
-        f"**{meta.autor}**  ",
-        f"{meta.afiliacion} · ORCID: `{meta.orcid}`",
+        *[f"**{autor.nombre_visible}**  " for autor in meta.autores],
         ":::",
         "",
         "::: {.creditos-pdf}",
         f"**{meta.titulo}**  ",
         f"*{meta.subtitulo}*",
         "",
-        f"Primera edición · Versión `{meta.version}` ({meta.fecha_publicacion}).  ",
-        f"Autoría y dirección académica: **{meta.autor}** ({meta.afiliacion}).  ",
-        f"ORCID: <{meta.orcid}>  ",
-        f"DOI de la obra: `https://doi.org/{meta.doi}`  ",
+        f"Nueva edición, que continúa la obra de {meta.autores[0].nombre}:  ",
+        *[f"· {obra}  " for obra in meta.obras_previas],
+        "",
+        "**Autoría:**  ",
+        *_lineas_autores(meta),
+        "",
+        "DOI de la obra: pendiente de asignación.  ",
+        "ISBN: pendiente (reservado para la edición impresa).  ",
         f"Repositorio fuente: <{meta.url_repositorio}>  ",
         f"Plataforma interactiva: <{meta.url_sitio}>",
         "",
@@ -94,8 +131,9 @@ def _generar_index_qmd(
         ),
         "",
         (
-            f"**Licencia de publicación:** obra distribuida bajo licencia abierta "
-            f"**Creative Commons Atribución-CompartirIgual 4.0 Internacional ({meta.licencia})**. "
+            f"**Licencia de publicación:** obra distribuida bajo licencia "
+            f"**{meta.licencia_nombre} ({meta.licencia})**: uso, copia y adaptación libres con "
+            "fines no comerciales; la explotación comercial queda reservada a los autores. "
             "Las imágenes clínicas registradas proceden de Wikimedia Commons en dominio público "
             "(PD) o dedicación CC0."
         ),
@@ -379,13 +417,16 @@ def _generar_portada_svg(meta: MetadatosLibro) -> str:
         '-45,150 5,-45 55,30 380,30" '
         'fill="none" stroke="#C69C6D" stroke-width="6" />',
         "  </g>",
-        '  <text x="164" y="2165" fill="#F8F6F1" '
-        'font-family="Libertinus Sans, sans-serif" font-size="38" font-weight="bold">',
-        f"    {meta.autor}",
+        '  <text x="164" y="2095" fill="#F8F6F1" '
+        'font-family="Libertinus Sans, sans-serif" font-size="32" font-weight="bold">',
+        *[
+            f'    <tspan x="164" dy="{0 if i == 0 else 44}">{autor.nombre_visible}</tspan>'
+            for i, autor in enumerate(meta.autores)
+        ],
         "  </text>",
-        '  <text x="164" y="2225" fill="#C69C6D" '
+        '  <text x="164" y="2300" fill="#C69C6D" '
         'font-family="Libertinus Sans, sans-serif" font-size="24">',
-        f"    PowerSemiotics · Licencia {meta.licencia} · DOI {meta.doi}",
+        f"    PowerSemiotics · Nueva edición · {meta.licencia}",
         "  </text>",
         "</svg>",
         "",
@@ -408,8 +449,7 @@ def _configuracion_quarto(
         "book": {
             "title": meta.titulo,
             "subtitle": meta.subtitulo,
-            "author": meta.autor,
-            "date": meta.fecha_publicacion,
+            "author": [autor.nombre_visible for autor in meta.autores],
             "output-file": "libro",
             "chapters": [
                 "index.qmd",
@@ -457,7 +497,7 @@ def _configuracion_quarto(
                     "headsep=7mm",
                     "footskip=11mm",
                 ],
-                "include-in-header": "preambulo-libro.tex",
+                "include-in-header": ["datos-libro.tex", "preambulo-libro.tex"],
                 "filters": ["diseno-pdf.lua"],
             },
         },
@@ -518,6 +558,7 @@ def generar_proyecto_quarto(
     modulos = obtener_capitulos_modulos()
 
     shutil.copyfile(RUTA_PREAMBULO, carpeta_salida / "preambulo-libro.tex")
+    (carpeta_salida / "datos-libro.tex").write_text(_datos_libro_tex(meta), encoding="utf-8")
     shutil.copyfile(RUTA_FILTRO_LUA, carpeta_salida / "diseno-pdf.lua")
 
     ruta_portada_svg = carpeta_salida / "portada.svg"
@@ -525,6 +566,7 @@ def generar_proyecto_quarto(
 
     generados: list[Path] = [
         carpeta_salida / "preambulo-libro.tex",
+        carpeta_salida / "datos-libro.tex",
         carpeta_salida / "diseno-pdf.lua",
         ruta_portada_svg,
     ]
