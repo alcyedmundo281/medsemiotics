@@ -4,7 +4,7 @@ slug: pancreatitis-aguda-precision-semiotica
 title: 'Pancreatitis aguda: hallazgos y evidencia clínica'
 subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
 date: '2026-09-18'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: medicina_interna
 category_label: Medicina Interna
 tags:

@@ -262,7 +262,7 @@ def _relativa(ruta: Path, raiz: Path) -> str:
     return ruta.relative_to(raiz).as_posix()
 
 
-def esqueleto(articulo: Articulo, autor: str) -> str:
+def esqueleto(articulo: Articulo, autor: dict[str, Any]) -> str:
     """Borrador inicial con todos los hallazgos de la base listados para asignarlos a etapas."""
     lineas = [
         f"# Caso socrático para {articulo.condicion_nombre} ({articulo.condicion_id}).",
@@ -280,7 +280,7 @@ def esqueleto(articulo: Articulo, autor: str) -> str:
     plantilla = {
         "condicion_id": articulo.condicion_id,
         "estado": "borrador",
-        "autoria": {"autor": autor, "revisor": None},
+        "autoria": {"autores": [autor], "revisor": None},
         "nivel": "Pregrado",
         "duracion_min": 45,
         "objetivos": ["PENDIENTE"],

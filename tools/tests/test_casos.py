@@ -142,11 +142,17 @@ def test_secuencia_abp(raiz: Path, fases: list[str], mensaje: str) -> None:
         compilado(raiz, datos)
 
 
+AUTORIA_REVISADA = {
+    "autores": [{"nombre": "Alcy Edmundo Torres Guerrero", "credit": ["redaccion"]}],
+    "revisor": "Alcy Edmundo Torres Guerrero",
+}
+
+
 def test_publicar_exige_revisor_humano_y_fecha(raiz: Path) -> None:
     with pytest.raises(ErrorDeCaso, match="revisor humano"):
         compilado(raiz, caso(estado="publicado", publicacion={"fecha": date(2026, 9, 20)}))
     datos = caso(estado="publicado")
-    datos["autoria"] = {"autor": "Dr. Alcy Torres", "revisor": "Dr. Alcy Torres"}
+    datos["autoria"] = AUTORIA_REVISADA
     with pytest.raises(ErrorDeCaso, match=r"publicacion\.fecha"):
         compilado(raiz, datos)
     with pytest.raises(ErrorDeCaso, match="no puede tener fecha"):
@@ -155,7 +161,7 @@ def test_publicar_exige_revisor_humano_y_fecha(raiz: Path) -> None:
 
 def publicado(**publicacion: Any) -> dict[str, Any]:
     datos = caso(estado="publicado", publicacion=publicacion)
-    datos["autoria"] = {"autor": "Dr. Alcy Torres", "revisor": "Dr. Alcy Torres"}
+    datos["autoria"] = AUTORIA_REVISADA
     return datos
 
 

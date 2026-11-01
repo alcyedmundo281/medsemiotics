@@ -1,0 +1,8 @@
+# Autor real de cada ficha del blog (artículo derivado de medsemiotics-db): claves de `personas`
+# en lecciones/mapa.yaml. No hay autor por omisión en el sitio: si una ficha no tiene autor,
+# la construcción del blog falla. `topics:sync` escribe la firma (nombre_bibliográfico) en `author`.
+#
+# Decisión editorial (1-nov-2026): neuropediatría, Alcy R. Torres (artg); neuroftalmología, Gladys
+# Torres-Guerrero (gtg); adulto y fundamentos, Alcy E. Torres-Guerrero (aetg). Hay tres Alcy Torres.
+por_defecto: aetg
+condiciones: {}

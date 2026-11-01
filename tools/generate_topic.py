@@ -25,6 +25,9 @@ ROOT = Path(__file__).resolve().parent.parent
 REPO = "alcyedmundo281/medsemiotics-db"
 SITE = "https://powersemiotics.com/medsemiotics/"
 POSTS = ROOT / "posts"
+# Autor real de cada ficha: claves de `personas` de lecciones/mapa.yaml (ver el archivo).
+AUTHORS = ROOT / "tools" / "autores-fichas.yaml"
+MAPA = ROOT / "lecciones" / "mapa.yaml"
 # Condiciones de la db que existen pero aún no se publican (sin revisión editorial).
 EXCLUDED = ROOT / "tools" / "topics-excluidos.yaml"
 # Su evidencia, a la misma revisión de la db, no se publica pero las lecciones sí la pueden citar.
@@ -372,6 +375,35 @@ def make_question(condition, sign, concept, references, number, dataset_doi):
     }
 
 
+def read_authors(config=AUTHORS, mapa=MAPA):
+    """(autor por omisión, {condición: autor}) con la firma bibliográfica de cada persona."""
+    datos = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
+    personas = (yaml.safe_load(mapa.read_text(encoding="utf-8")) or {}).get("personas") or {}
+
+    def firma(clave):
+        persona = personas.get(clave)
+        if not persona:
+            raise ValueError(f"{config.name}: «{clave}» no es una persona de {mapa.name}.")
+        if persona.get("fallecido"):
+            raise ValueError(f"{config.name}: «{clave}» es un autor fallecido; no firma fichas.")
+        return persona.get("nombre_bibliografico") or persona["nombre"]
+
+    if not datos.get("por_defecto"):
+        raise ValueError(f"{config.name}: falta «por_defecto»; no hay autor por omisión.")
+    por_condicion = {cid: firma(clave) for cid, clave in (datos.get("condiciones") or {}).items()}
+    return firma(datos["por_defecto"]), por_condicion
+
+
+_AUTHORS_CACHE = {}
+
+
+def post_author(cid):
+    if not _AUTHORS_CACHE:
+        _AUTHORS_CACHE["v"] = read_authors()
+    default, por_condicion = _AUTHORS_CACHE["v"]
+    return por_condicion.get(cid, default)
+
+
 def make_post(source, condition_path, previous=None):
     c = source.read(condition_path)
     if not re.fullmatch(r"HM:\d+", c.get("id", "")):
@@ -476,7 +508,7 @@ def make_post(source, condition_path, previous=None):
         "subtitle": ("Hallazgos, cocientes documentados y límites de la evidencia." if measured else
                      "Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos."),
         "date": str(old.get("date") or date.today().isoformat()),
-        "author": old.get("author", "Dr. Alcy Torres"),
+        "author": post_author(cid),
         "category": old.get("category", category),
         "category_label": old.get("category_label", label),
         "tags": sorted(set([category, slugify(c["termino"]), "semiologia"] +

@@ -4,7 +4,7 @@ slug: embarazo-ectopico-precision-semiotica
 title: 'Embarazo ectópico: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-21'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: medicina_interna
 category_label: Medicina Interna
 tags:

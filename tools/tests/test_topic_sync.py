@@ -233,6 +233,44 @@ class ExclusionTests(unittest.TestCase):
         self.assertFalse((sync.POSTS / "HM6049-paralisis-cerebral.md").exists())
 
 
+class AuthorTests(unittest.TestCase):
+    PERSONAS = (
+        "personas:\n"
+        "  a: {nombre: Persona Uno, nombre_bibliografico: P. Uno}\n"
+        "  b: {nombre: Persona Dos}\n"
+        "  c: {nombre: Persona Tres, fallecido: true}\n"
+    )
+
+    def read(self, config):
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as d:
+            raiz = Path(d)
+            (raiz / "autores.yaml").write_text(config, encoding="utf-8")
+            (raiz / "mapa.yaml").write_text(self.PERSONAS, encoding="utf-8")
+            return sync.read_authors(raiz / "autores.yaml", raiz / "mapa.yaml")
+
+    def test_author_is_the_bibliographic_signature_of_the_person(self):
+        default, por_condicion = self.read("por_defecto: a\ncondiciones:\n  'HM:9': b\n")
+        self.assertEqual(default, "P. Uno")
+        self.assertEqual(por_condicion, {"HM:9": "Persona Dos"})
+
+    def test_no_default_author_means_failure(self):
+        with self.assertRaisesRegex(ValueError, "por_defecto"):
+            self.read("condiciones: {}\n")
+
+    def test_unknown_or_deceased_person_cannot_sign(self):
+        with self.assertRaisesRegex(ValueError, "no es una persona"):
+            self.read("por_defecto: zz\n")
+        with self.assertRaisesRegex(ValueError, "fallecido"):
+            self.read("por_defecto: a\ncondiciones:\n  'HM:9': c\n")
+
+    def test_real_config_never_uses_the_generic_name(self):
+        default, por_condicion = sync.read_authors()
+        for nombre in (default, *por_condicion.values()):
+            self.assertNotEqual(nombre, "Dr. Alcy Torres")
+
+
 class ProsaTests(unittest.TestCase):
     """Los IDs HM: incrustados en la prosa de la base se leen como nombres."""
 
