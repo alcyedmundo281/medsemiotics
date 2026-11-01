@@ -110,6 +110,16 @@ def test_ningun_caso_lleva_el_nombre_generico() -> None:
         assert NOMBRE_GENERICO not in ruta.read_text(encoding="utf-8"), ruta.name
 
 
+def test_el_libro_muestra_los_autores_del_caso_no_none() -> None:
+    from libro.datos import leer_condiciones_neurologia, renderizar_caso_qmd
+
+    caso = next(c.caso for c in leer_condiciones_neurologia(RAIZ) if c.caso is not None)
+    texto = renderizar_caso_qmd(caso)
+    assert "Autoría: Alcy E. Torres-Guerrero" in texto
+    ficha = texto.split("**Ficha del caso:**")[1].splitlines()[0]
+    assert "None" not in ficha
+
+
 # --- las fichas del blog ------------------------------------------------------------------
 
 
