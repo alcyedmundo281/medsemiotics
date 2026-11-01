@@ -78,6 +78,12 @@ def main(argv: list[str] | None = None) -> int:
         help="Carpeta donde se escribe el proyecto Quarto (por defecto: build/quarto).",
     )
 
+    p_qmd.add_argument(
+        "--lecciones",
+        action="store_true",
+        help="Incluye las lecciones de lecciones/ (tokens resueltos contra posts/).",
+    )
+
     p_build = sub.add_parser(
         "build",
         help="Genera el proyecto Quarto, compila con lualatex y verifica con pdfinfo.",
@@ -93,6 +99,12 @@ def main(argv: list[str] | None = None) -> int:
         type=Path,
         default=RUTA_PDF_DEFECTO,
         help="Ruta de salida del PDF compilado (por defecto: build/libro-neurologia.pdf).",
+    )
+
+    p_build.add_argument(
+        "--lecciones",
+        action="store_true",
+        help="Incluye las lecciones de lecciones/ (tokens resueltos contra posts/).",
     )
 
     p_check = sub.add_parser(
@@ -120,12 +132,12 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.orden == "qmd":
-        archivos = generar_proyecto_quarto(args.proyecto, raiz=RAIZ)
+        archivos = generar_proyecto_quarto(args.proyecto, raiz=RAIZ, lecciones=args.lecciones)
         print(f"Proyecto Quarto generado en {args.proyecto} ({len(archivos)} archivos).")
         return 0
 
     if args.orden == "build":
-        compilar_libro_pdf(args.salida, args.proyecto, raiz=RAIZ)
+        compilar_libro_pdf(args.salida, args.proyecto, raiz=RAIZ, lecciones=args.lecciones)
         return _imprimir_resumen_pdf(args.proyecto, args.salida)
 
     # orden == "check"

@@ -180,6 +180,7 @@ def compilar_libro_pdf(
     ruta_salida: Path,
     carpeta_proyecto: Path,
     raiz: Path = RAIZ,
+    lecciones: bool = False,
 ) -> InfoPDF:
     """Genera el proyecto Quarto, lo compila con LuaLaTeX y lo verifica con pdfinfo."""
     faltantes = verificar_fuentes_neurologia(raiz)
@@ -192,7 +193,7 @@ def compilar_libro_pdf(
         if shutil.which(herramienta) is None:
             raise RuntimeError(f"No se encontró '{herramienta}' en el PATH del sistema.")
 
-    generar_proyecto_quarto(carpeta_proyecto, raiz=raiz)
+    generar_proyecto_quarto(carpeta_proyecto, raiz=raiz, lecciones=lecciones)
 
     ejecutable_quarto = shutil.which("quarto")
     assert ejecutable_quarto is not None

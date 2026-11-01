@@ -12,9 +12,10 @@ from typing import TYPE_CHECKING
 
 from pydantic import ValidationError
 
-from casos.evidencia import LLAVES, PROHIBIDOS, TIPOS, TOKEN
+from casos.evidencia import LLAVES, PROHIBIDOS, TIPOS
 from lecciones.fuente import RAIZ, ErrorDeFuente, leer, leer_bib
 from lecciones.modelo import Leccion
+from lecciones.tokens import TOKEN
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -133,6 +134,8 @@ def problemas_de_evidencia(
             problemas.append(f"token de tipo desconocido: {m[0]}")
         elif leccion is not None and m["id"] not in declarados:
             problemas.append(f"token {m[0]}: {m['id']} no figura en «conceptos»")
+        if leccion is not None and m["cond"] and m["cond"] not in leccion.condiciones:
+            problemas.append(f"token {m[0]}: {m['cond']} no figura en «condiciones»")
 
     refs = set(leccion.refs) if leccion is not None else set()
     for parrafo in re.split(r"\n\s*\n", sin_tokens):

@@ -10,6 +10,7 @@ local MapaEntornos = {
   ["caso-socratico"] = "casosocratico",
   ["perlas-clinicas"] = "perlasclinicas",
   ["enlace-ficha"] = "enlaceficha",
+  ["legado"] = "legadoobra",
 }
 
 local function envolver_entorno(bloques, nombre_entorno)
