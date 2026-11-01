@@ -4,7 +4,7 @@ slug: paralisis-cerebral-precision-semiotica
 title: 'Parálisis cerebral: hallazgos y evidencia clínica'
 subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
 date: '2026-10-31'
-author: Dr. Alcy Torres
+author: Alcy R. Torres
 category: neurologia_pediatrica
 category_label: Neurología pediátrica
 tags:

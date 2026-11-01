@@ -7,8 +7,15 @@
 condicion_id: HM:6049
 estado: borrador
 autoria:
-  autor: Dr. Alcy Torres
-  revisor: null
+  autores:
+    - nombre: Alcy Ramiro Torres Guerrero
+      nombre_bibliografico: Alcy R. Torres
+      orcid: 0000-0001-5798-9161
+      afiliacion: Boston Medical Center; Boston University Chobanian & Avedisian School of Medicine
+      credit: [redaccion]
+  # Revisor: el editor. Sigue siendo borrador: nada de esta autoría se publica hasta que el
+  # autor apruebe el texto, y `estado: publicado` exige además la fecha de publicación.
+  revisor: Alcy Edmundo Torres Guerrero
 nivel: Pregrado
 duracion_min: 45
 objetivos:
