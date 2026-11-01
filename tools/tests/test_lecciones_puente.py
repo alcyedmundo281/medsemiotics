@@ -103,7 +103,7 @@ def test_condicion_sin_el_concepto_falla() -> None:
 
 
 def test_condicion_declarada_sin_articulo_falla() -> None:
-    with pytest.raises(ErrorDeToken, match="no hay artículo sincronizado"):
+    with pytest.raises(ErrorDeToken, match="sin artículo en posts/ ni en lecciones/evidencia/"):
         resolver_texto("{{lr+ HM:3240>HM:6049}}", DECLARADAS, SOLO_A)
 
 
@@ -221,7 +221,7 @@ def test_proyeccion_aborta_si_un_token_no_resuelve() -> None:
 
 
 def test_el_libro_incluye_las_lecciones_por_parte_del_mapa() -> None:
-    partes = lecciones_por_parte(RAIZ)
+    partes = lecciones_por_parte(RAIZ, incluir_borradores=True)
     titulos = [t for t, _ in partes]
     assert "El recién nacido" in titulos
     assert any(r.stem == "leccion-examen-neurologico-recien-nacido" for _, rs in partes for r in rs)

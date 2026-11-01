@@ -71,8 +71,35 @@ class Resultado:
     alertas: list[str] = field(default_factory=list)
 
 
+MARCA = chr(0)
+CENTINELA = re.compile(re.escape(MARCA) + "([0-9]+)" + re.escape(MARCA))
+
+
+def proteger(texto: str) -> tuple[str, list[str]]:
+    """Sustituye el código y los comentarios por marcas; lo que queda es el texto que se escanea.
+
+    Es la única definición de «texto escaneable»: ``lecciones check`` y la proyección la usan,
+    así que un token dentro de código o de un comentario ni se comprueba ni se resuelve.
+    """
+    guardados: list[str] = []
+
+    def guardar(m: re.Match[str]) -> str:
+        guardados.append(m[0])
+        return f"{MARCA}{len(guardados) - 1}{MARCA}"
+
+    for patron in (CODIGO, COMENTARIO, CODIGO_EN_LINEA):
+        texto = patron.sub(guardar, texto)
+    return texto, guardados
+
+
+def restaurar(texto: str, guardados: list[str]) -> str:
+    while CENTINELA.search(texto):
+        texto = CENTINELA.sub(lambda m: guardados[int(m[1])], texto)
+    return texto
+
+
 def _limpio(cuerpo: str) -> str:
-    return CODIGO_EN_LINEA.sub("", COMENTARIO.sub("", CODIGO.sub("", cuerpo)))
+    return CENTINELA.sub("", proteger(cuerpo)[0])
 
 
 def problemas_de_cuerpo(cuerpo: str, leccion: Leccion | None) -> list[str]:

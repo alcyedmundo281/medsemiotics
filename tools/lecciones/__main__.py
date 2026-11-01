@@ -40,7 +40,7 @@ SALIDA_PROYECCION = RAIZ / "build" / "lecciones"
 
 
 def _problemas_de_tokens(rutas: list[Path]) -> list[str]:
-    """Todo token de evidencia debe resolver contra los artículos versionados en ``posts/``."""
+    """Todo token debe resolver contra los artículos de ``posts/`` y ``lecciones/evidencia/``."""
     try:
         articulos = cargar_articulos()
     except ErrorDeCaso as exc:

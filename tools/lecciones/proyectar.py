@@ -18,7 +18,7 @@ import yaml
 from lecciones import mapa as mapa_libro
 from lecciones.fuente import BIB, CARPETA, RAIZ, archivos, leer
 from lecciones.tokens import problemas_de_tokens, resolver_texto
-from lecciones.validacion import CAMPOS_CLINICOS, _limpio
+from lecciones.validacion import CAMPOS_CLINICOS, _limpio, proteger, restaurar
 
 if TYPE_CHECKING:
     from collections.abc import Mapping
@@ -28,13 +28,16 @@ if TYPE_CHECKING:
     from lecciones.fuente import Archivo
 
 Modo = Literal["autonomo", "capitulo"]
+ESTADOS_PUBLICABLES = ("revisado", "publicado")
+AVISO_BORRADOR = "::: {.alerta-ficha}\n**Borrador — sin revisión humana.**\n:::"
 
 
 def problemas_de_resolucion(archivo: Archivo, articulos: Mapping[str, Articulo]) -> list[str]:
     """Tokens que no resuelven y condiciones declaradas sin artículo sincronizado (sin red)."""
     declaradas = archivo.datos.get("condiciones") or []
     problemas = [
-        f"condición {c} declarada pero sin artículo en posts/: ejecute topics:sync"
+        f"condición {c} declarada pero sin artículo en posts/ ni en lecciones/evidencia/: "
+        "ejecute topics:sync"
         for c in declaradas
         if c not in articulos
     ]
@@ -65,13 +68,17 @@ def proyectar(archivo: Archivo, articulos: Mapping[str, Articulo], modo: Modo = 
         partes.append("---\n" + yaml.safe_dump(cabecera, allow_unicode=True) + "---")
     else:
         partes.append(f"# {titulo} {{#sec-{datos['id']}}}")
+    if datos.get("estado") == "borrador":
+        partes.append(AVISO_BORRADOR)
     partes.append(f"*{resolver(datos['abstract'])}*")
     partes.append(
         "::: {.caso-socratico}\n**Diálogo clínico.** "
         + resolver(datos["dialogo_clinico"])
         + "\n:::"
     )
-    partes.append(resolver(archivo.cuerpo))
+    # Solo se resuelve lo que ``lecciones check`` escanea: no el código ni los comentarios.
+    protegido, guardados = proteger(archivo.cuerpo)
+    partes.append(restaurar(resolver(protegido), guardados))
     limites = "\n".join(f"- {resolver(x)}" for x in datos["limites"])
     partes.append("## Dónde no confiar\n\n" + limites)
     perlas = "\n".join(f"- {resolver(x)}" for x in datos["indispensable"])
@@ -92,13 +99,21 @@ def escribir_proyeccion(
     return destino
 
 
-def lecciones_por_parte(raiz: Path = RAIZ) -> list[tuple[str, list[Path]]]:
-    """Lecciones existentes agrupadas por parte del mapa, en el orden del mapa."""
+def lecciones_por_parte(
+    raiz: Path = RAIZ, incluir_borradores: bool = False
+) -> list[tuple[str, list[Path]]]:
+    """Lecciones agrupadas por parte del mapa, en su orden.
+
+    Por defecto solo las revisadas o publicadas por una persona; ``incluir_borradores`` es para
+    vistas previas y cada borrador lleva su aviso en el capítulo.
+    """
     carpeta = raiz / CARPETA.relative_to(RAIZ)
     mapa = mapa_libro.cargar(carpeta / "mapa.yaml")
     existentes: dict[str, tuple[str, int, Path]] = {}
     for ruta in archivos(carpeta):
         datos = leer(ruta).datos
+        if not incluir_borradores and datos.get("estado") not in ESTADOS_PUBLICABLES:
+            continue
         existentes[ruta.stem] = (str(datos.get("parte")), int(datos.get("orden", 0)), ruta)
     salida: list[tuple[str, list[Path]]] = []
     for parte in mapa.partes:
