@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import shutil
+import sys
 from typing import TYPE_CHECKING
 
 import yaml
@@ -467,12 +468,16 @@ def _configuracion_quarto(
 
 
 def _capitulos_de_lecciones(
-    carpeta_salida: Path, raiz: Path, generados: list[Path], secciones_planas: list[str]
+    carpeta_salida: Path,
+    raiz: Path,
+    generados: list[Path],
+    secciones_planas: list[str],
+    incluir_borradores: bool = False,
 ) -> list[dict[str, object]]:
     """Lecciones de ``lecciones/`` proyectadas (tokens resueltos) como capítulos por parte."""
     articulos = cargar_articulos(raiz)
     partes: list[dict[str, object]] = []
-    for titulo, rutas in lecciones_por_parte(raiz):
+    for titulo, rutas in lecciones_por_parte(raiz, incluir_borradores):
         nombres: list[str] = []
         for ruta in rutas:
             nombre = f"L-{ruta.stem}.qmd"
@@ -482,6 +487,12 @@ def _capitulos_de_lecciones(
             secciones_planas.append(texto)
             nombres.append(nombre)
         partes.append({"part": titulo, "chapters": nombres})
+    if not partes:
+        print(
+            "AVISO: ninguna lección está revisada o publicada; el libro sale sin ellas "
+            "(--incluir-borradores las añade para una vista previa).",
+            file=sys.stderr,
+        )
     if partes:
         shutil.copyfile(raiz / "lecciones" / "refs.bib", carpeta_salida / "refs.bib")
         generados.append(carpeta_salida / "refs.bib")
@@ -492,11 +503,14 @@ def generar_proyecto_quarto(
     carpeta_salida: Path,
     raiz: Path = RAIZ,
     lecciones: bool = False,
+    incluir_borradores: bool = False,
 ) -> list[Path]:
     """Genera todos los archivos del proyecto Quarto en ``carpeta_salida``.
 
     Con ``lecciones=True`` añade, tras el índice, las lecciones de ``lecciones/`` por parte del
-    mapa, con sus tokens de evidencia resueltos contra ``posts/`` (ADR-001, fase 5 en pequeño).
+    mapa, con sus tokens de evidencia resueltos contra ``posts/`` y ``lecciones/evidencia/``
+    (ADR-001, fase 5 en pequeño). Solo las revisadas o publicadas: ``incluir_borradores`` añade
+    también los borradores, cada uno con su aviso «Borrador — sin revisión humana».
     """
     carpeta_salida.mkdir(parents=True, exist_ok=True)
     meta = leer_metadatos(raiz)
@@ -524,7 +538,9 @@ def generar_proyecto_quarto(
     secciones_planas.append(texto_index)
 
     partes_lecciones = (
-        _capitulos_de_lecciones(carpeta_salida, raiz, generados, secciones_planas)
+        _capitulos_de_lecciones(
+            carpeta_salida, raiz, generados, secciones_planas, incluir_borradores
+        )
         if lecciones
         else []
     )

@@ -42,7 +42,9 @@ def condicion_de(
             raise ErrorDeToken(f"{concepto}>{explicita}: la lección no declara esa condición.")
         articulo = articulos.get(explicita)
         if articulo is None:
-            raise ErrorDeToken(f"{concepto}>{explicita}: no hay artículo sincronizado en posts/.")
+            raise ErrorDeToken(
+                f"{concepto}>{explicita}: sin artículo en posts/ ni en lecciones/evidencia/."
+            )
         if concepto not in articulo.evidencia:
             raise ErrorDeToken(f"{concepto} no está en la evidencia de {explicita}.")
         return articulo
@@ -50,7 +52,7 @@ def condicion_de(
     if not candidatas:
         raise ErrorDeToken(
             f"{concepto} no está en la evidencia de ninguna condición declarada "
-            f"({', '.join(sorted(declaradas)) or 'ninguna'}); ¿falta sincronizar posts/?"
+            f"({', '.join(sorted(declaradas)) or 'ninguna'}); ¿falta ejecutar topics:sync?"
         )
     if len(candidatas) > 1:
         opciones = ", ".join(f"{{{{lr+ {concepto}>{c}}}}}" for c in sorted(candidatas))

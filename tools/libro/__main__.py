@@ -81,7 +81,18 @@ def main(argv: list[str] | None = None) -> int:
     p_qmd.add_argument(
         "--lecciones",
         action="store_true",
-        help="Incluye las lecciones de lecciones/ (tokens resueltos contra posts/).",
+        help=(
+            "Incluye las lecciones revisadas o publicadas de lecciones/ "
+            "(tokens resueltos contra posts/ y lecciones/evidencia/)."
+        ),
+    )
+    p_qmd.add_argument(
+        "--incluir-borradores",
+        action="store_true",
+        help=(
+            "Con --lecciones, añade también los borradores (vista previa), cada uno con el aviso "
+            "«Borrador — sin revisión humana»."
+        ),
     )
 
     p_build = sub.add_parser(
@@ -104,7 +115,18 @@ def main(argv: list[str] | None = None) -> int:
     p_build.add_argument(
         "--lecciones",
         action="store_true",
-        help="Incluye las lecciones de lecciones/ (tokens resueltos contra posts/).",
+        help=(
+            "Incluye las lecciones revisadas o publicadas de lecciones/ "
+            "(tokens resueltos contra posts/ y lecciones/evidencia/)."
+        ),
+    )
+    p_build.add_argument(
+        "--incluir-borradores",
+        action="store_true",
+        help=(
+            "Con --lecciones, añade también los borradores (vista previa), cada uno con el aviso "
+            "«Borrador — sin revisión humana»."
+        ),
     )
 
     p_check = sub.add_parser(
@@ -130,14 +152,27 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     args = parser.parse_args(argv)
+    if getattr(args, "incluir_borradores", False) and not args.lecciones:
+        parser.error("--incluir-borradores requiere --lecciones")
 
     if args.orden == "qmd":
-        archivos = generar_proyecto_quarto(args.proyecto, raiz=RAIZ, lecciones=args.lecciones)
+        archivos = generar_proyecto_quarto(
+            args.proyecto,
+            raiz=RAIZ,
+            lecciones=args.lecciones,
+            incluir_borradores=args.incluir_borradores,
+        )
         print(f"Proyecto Quarto generado en {args.proyecto} ({len(archivos)} archivos).")
         return 0
 
     if args.orden == "build":
-        compilar_libro_pdf(args.salida, args.proyecto, raiz=RAIZ, lecciones=args.lecciones)
+        compilar_libro_pdf(
+            args.salida,
+            args.proyecto,
+            raiz=RAIZ,
+            lecciones=args.lecciones,
+            incluir_borradores=args.incluir_borradores,
+        )
         return _imprimir_resumen_pdf(args.proyecto, args.salida)
 
     # orden == "check"
