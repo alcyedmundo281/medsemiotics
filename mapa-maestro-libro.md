@@ -8,7 +8,7 @@
 
 Cada fila es una lección: una fuente única (`lecciones/<id>.qmd`) de la que salen el artículo del blog y el capítulo del libro. Todo el texto se reconstruye desde cero; los módulos de clase y la obra de 1993 son fuentes, no texto que se copia. El estado se lee de cada lección. Contrato: `docs/adr/ADR-001-arquitectura-libro.md`.
 
-**Estado:** ⬜ pendiente: 54 · ✏️ borrador: 0 · 🔎 revisado: 0 · ✅ publicado: 0 · total 54
+**Estado:** ⬜ pendiente: 53 · ✏️ borrador: 1 · 🔎 revisado: 0 · ✅ publicado: 0 · total 54
 
 **Fases:** 1 piloto · 2 módulos de clase · 3 neuropediatría · 4 neuroftalmología · 5 libro. «(propuesta)» marca una agrupación de módulos pendiente de decisión.
 
@@ -30,7 +30,7 @@ Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alc
 
 | # | Lección | Fase | Fuentes | Estado |
 |:-|:-|:-|:-|:-|
-| 1 | Examen neurológico del recién nacido<br>`leccion-examen-neurologico-recien-nacido` | 1 | 1993, pp. 3-18 | ⬜ pendiente |
+| 1 | Examen neurológico del recién nacido<br>`leccion-examen-neurologico-recien-nacido` | 1 | 1993, pp. 3-18 | ✏️ borrador |
 | 2 | Sufrimiento cerebral neonatal por asfixia<br>`leccion-sufrimiento-cerebral-neonatal` | 3 | 1993, pp. 24-39 | ⬜ pendiente |
 | 3 | Seguimiento neuromotor del recién nacido de riesgo<br>`leccion-examen-neuromotor-recien-nacido-riesgo` | 3 | 1993, pp. 40-59 | ⬜ pendiente |
 | 4 | Lesiones de origen perinatal: caput, cefalohematoma, hemorragias y plexo braquial<br>`leccion-lesiones-perinatales` | 3 | 1993, pp. 60-64 | ⬜ pendiente |
