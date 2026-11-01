@@ -4,7 +4,7 @@ slug: enfermedad-del-manguito-rotador-precision-semiotica
 title: 'Enfermedad del manguito rotador: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-21'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: traumatologia
 category_label: Traumatología y Medicina Deportiva
 tags:

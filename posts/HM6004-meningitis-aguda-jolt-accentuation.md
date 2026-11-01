@@ -4,7 +4,7 @@ slug: meningitis-aguda-sacudida-cefalica
 title: 'Meningitis aguda: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-20'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: neurologia
 category_label: Neurología
 tags:

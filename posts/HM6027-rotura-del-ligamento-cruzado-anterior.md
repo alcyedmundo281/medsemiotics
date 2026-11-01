@@ -4,7 +4,7 @@ slug: rotura-del-ligamento-cruzado-anterior-precision-semiotica
 title: 'Rotura del ligamento cruzado anterior: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-09-18'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: medicina_interna
 category_label: Medicina Interna
 tags:

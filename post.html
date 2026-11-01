@@ -152,7 +152,7 @@
           </p>
           <div class="flex items-center justify-between text-sm text-stone-500 py-4 border-y border-stone-200">
             <div class="flex items-center gap-2">
-              <span class="font-medium text-stone-900" id="postAuthor">Dr. Alcy Torres</span>
+              <span class="font-medium text-stone-900" id="postAuthor"></span>
               <span>•</span>
               <span>Publicado <time id="postDate" class="text-stone-500">Fecha</time></span>
               <span id="postRevisedWrap" class="hidden">• Revisado <time id="postRevised"></time> · versión <span id="postVersion"></span></span>
@@ -405,7 +405,7 @@
         // Titles & Metas
         document.getElementById('postTitle').textContent = currentPost.title;
         document.getElementById('postSubtitle').textContent = currentPost.subtitle || '';
-        document.getElementById('postAuthor').textContent = currentPost.author || 'Dr. Alcy Torres';
+        document.getElementById('postAuthor').textContent = currentPost.author || '';
         const published = currentPost.fecha_publicacion || currentPost.date || '';
         document.getElementById('postDate').textContent = published;
         document.getElementById('postDate').dateTime = published;
@@ -570,7 +570,7 @@
 
       function renderCitationMeta(published, revised) {
         const url = `https://powersemiotics.com/medsemiotics/post.html?slug=${encodeURIComponent(currentPost.slug)}`;
-        const author = currentPost.author || 'Dr. Alcy Torres';
+        const author = currentPost.author || '';
         document.getElementById('metaCitationTitle').content = currentPost.title || '';
         document.getElementById('metaCitationAuthor').content = author;
         document.getElementById('metaCitationDate').content = (published || '').replace(/-/g, '/');

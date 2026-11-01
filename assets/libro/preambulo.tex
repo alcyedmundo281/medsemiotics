@@ -253,11 +253,12 @@
     \node[anchor=west, text=portadapapel, opacity=0.82, font=\sffamily\scriptsize]
       at (205,1992) {Parte II: Examen neurológico, cefaleas, epilepsia, ictus, movimiento, mielina, nervio, músculo y demencias};
 
-    % Pie de autoría y sello editorial.
-    \node[anchor=west, text=portadapapel, font=\sffamily\normalsize\bfseries]
-      at (164,2165) {Alcy Montserrat};
+    % Pie de autoría y sello editorial. El texto sale de datos-libro.tex, que genera
+    % tools/libro/qmd.py desde lecciones/mapa.yaml: aquí no se escribe ningún nombre.
+    \node[anchor=north west, align=left, text=portadapapel, font=\sffamily\small\bfseries]
+      at (164,2075) {\libroautoresportada};
     \node[anchor=west, text=portadaoro, font=\sffamily\scriptsize]
-      at (164,2222) {PowerSemiotics \enspace·\enspace Edición académica abierta (CC BY-SA 4.0) \enspace·\enspace DOI 10.5281/zenodo.22069641};
+      at (164,2300) {\librosellopie};
   \end{tikzpicture}%
   \null\vfill
   \end{titlepage}%

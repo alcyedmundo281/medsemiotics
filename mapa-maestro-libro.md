@@ -26,7 +26,7 @@ Autores: Alcy Edmundo Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 
 ## 2. El recién nacido
 
-Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alcy Ramiro Torres Guerrero
+Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 
 | # | Lección | Fase | Fuentes | Estado |
 |:-|:-|:-|:-|:-|
@@ -38,7 +38,7 @@ Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alc
 
 ## 3. El lactante y el niño
 
-Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alcy Ramiro Torres Guerrero
+Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 
 | # | Lección | Fase | Fuentes | Estado |
 |:-|:-|:-|:-|:-|
@@ -62,7 +62,7 @@ Autores: Alcy Torres Catefort †, Alcy Ramiro Torres Guerrero · Revisión: Alc
 
 ## 4. Neuroftalmología del niño y del adulto
 
-Autores: Gladys Torres Guerrero · Revisión: Gladys Torres Guerrero
+Autores: Gladys Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 
 *Temario aprobado por Gladys Torres Guerrero (30-oct-2026).*
 

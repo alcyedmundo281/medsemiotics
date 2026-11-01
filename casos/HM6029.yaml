@@ -7,8 +7,14 @@
 condicion_id: HM:6029
 estado: publicado
 autoria:
-  autor: Dr. Alcy Torres
-  revisor: Dr. Alcy Torres
+  autores:
+    - nombre: Alcy Edmundo Torres Guerrero
+      nombre_bibliografico: Alcy E. Torres-Guerrero
+      orcid: 0000-0002-9742-375X
+      afiliacion: Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad Central del Ecuador
+      rol_obra: coordinacion-editorial
+      credit: [redaccion]
+  revisor: Alcy Edmundo Torres Guerrero
 publicacion:
   fecha: 2026-10-16
 nivel: Pregrado

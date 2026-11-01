@@ -90,11 +90,40 @@ La ética de biosemiotics se conserva y se hace cumplir:
   legado queda exenta.
 - **Autoría:** un autor fallecido no ejerce revisión, supervisión ni validación de la
   edición nueva. El agente nunca es revisor.
+- **Revisión:** decisión editorial de Alcy Edmundo Torres Guerrero: el especialista es autor
+  de su área (neuropediatría, Alcy Ramiro Torres Guerrero; neuroftalmología, Gladys Torres
+  Guerrero) y el editor, Alcy Edmundo Torres Guerrero, es el revisor de todas las partes. No hay
+  corevisores. La portada usa el nombre completo de las personas; la línea de revisión y las
+  citas usan su `nombre_bibliografico` (p. ej. «Alcy R. Torres», PubMed: Torres AR).
 - **Imágenes:** Wikimedia Commons (página `File:`) o ilustración original con autor humano.
   Nunca fotografías de pacientes de las ediciones anteriores ni imágenes generadas con IA.
 - **Estados:** en un `borrador` las faltas son alertas; desde `revisado` bloquean.
 - **Verificación con red:** `uv run python -m lecciones citas`, fuera de los gates (como
   `topics:check`).
+
+## Evidencia a una sola revisión fijada
+
+Libro y blog tienen que citar exactamente los mismos números. Por eso las lecciones **nunca
+leen la rama viva** de medsemiotics-db: leen archivos versionados, todos de la misma revisión.
+
+- **Dos orígenes, una revisión.** `posts/` (artículos publicados en el blog) y
+  `lecciones/evidencia/` (la evidencia de las condiciones que `tools/topics-excluidos.yaml`
+  excluye de la publicación). Ambos los escribe `topics:sync` desde la misma revisión de la db.
+  La exclusión solo afecta al blog: las lecciones siguen pudiendo citar esas condiciones.
+- **`lecciones check` (sin red, dentro de `npm run gates`)** comprueba que todo token resuelva
+  contra esos archivos y rechaza mezclar revisiones o una condición en los dos orígenes.
+  Un token falla si el concepto no existe en esa revisión, si es ambiguo (varias condiciones
+  declaradas: se exige `{{lr+ HM:concepto>HM:condición}}`) o si la arista no tiene la métrica
+  pedida. El código y los comentarios no se escanean ni se resuelven, ni en la comprobación ni
+  en la proyección.
+- **`topics:sync` de una sola condición rompe `lecciones:check`, por diseño.**
+  `topics:sync --condition HM:xxxx` deja ese artículo en la revisión nueva y los demás en la
+  anterior; el check lo rechaza («varias revisiones») para que blog y libro no citen números de
+  momentos distintos. La revisión se actualiza siempre con la sincronización completa
+  (`--sync-all`), en un PR de sincronización aparte.
+- **Libro.** `libro qmd|build --lecciones` incluye solo lecciones `revisado` o `publicado`;
+  `--incluir-borradores` es para vistas previas y cada borrador lleva el aviso «Borrador — sin
+  revisión humana».
 
 ## Plan
 

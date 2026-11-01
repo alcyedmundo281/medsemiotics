@@ -13,12 +13,17 @@ def _tabla(datos: list[dict[str, str]]) -> list[str]:
     return ["\n".join(filas)]
 
 
+def _autores(autoria: dict[str, Any]) -> str:
+    """Los autores con su firma bibliográfica (la persona real, no un nombre genérico)."""
+    return ", ".join(a.get("nombre_bibliografico") or a["nombre"] for a in autoria["autores"])
+
+
 def markdown(caso: dict[str, Any]) -> str:
     pub = caso["publicacion"]
     lineas = [
         f"# Caso socrático · {caso['condicion_id']} · {caso['slug']}",
         f"Estado: **{caso['estado']}** · Versión {pub['version']} · "
-        f"Publicado: {pub['fecha'] or '—'} · Autor: {caso['autoria']['autor']} · "
+        f"Publicado: {pub['fecha'] or '—'} · Autoría: {_autores(caso['autoria'])} · "
         f"Revisor: {caso['autoria']['revisor'] or 'pendiente'}",
         f"> {caso['aviso']}",
         "## Objetivos",

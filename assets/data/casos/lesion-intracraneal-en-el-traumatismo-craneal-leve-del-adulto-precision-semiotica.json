@@ -3,8 +3,20 @@
   "slug": "lesion-intracraneal-en-el-traumatismo-craneal-leve-del-adulto-precision-semiotica",
   "estado": "publicado",
   "autoria": {
-    "autor": "Dr. Alcy Torres",
-    "revisor": "Dr. Alcy Torres"
+    "autores": [
+      {
+        "nombre": "Alcy Edmundo Torres Guerrero",
+        "orcid": "0000-0002-9742-375X",
+        "afiliacion": "Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad Central del Ecuador",
+        "nombre_bibliografico": "Alcy E. Torres-Guerrero",
+        "rol_obra": "coordinacion-editorial",
+        "fallecido": false,
+        "credit": [
+          "redaccion"
+        ]
+      }
+    ],
+    "revisor": "Alcy Edmundo Torres Guerrero"
   },
   "publicacion": {
     "fecha": "2026-10-16",

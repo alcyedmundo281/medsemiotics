@@ -18,7 +18,7 @@ FRONTMATTER: dict[str, Any] = {
     "slug": "tema-de-prueba",
     "title": "Tema de prueba: hallazgos y evidencia clínica",
     "date": "2026-08-21",
-    "author": "Dr. Alcy Torres",
+    "author": "Alcy E. Torres-Guerrero",
     "fuente": {"repositorio": "alcyedmundo281/medsemiotics-db", "revision": "abc123"},
     "grounding": {
         "condicion_id": "HM:9999",
@@ -70,7 +70,10 @@ CUERPO = """
 CASO: dict[str, Any] = {
     "condicion_id": "HM:9999",
     "estado": "borrador",
-    "autoria": {"autor": "Dr. Alcy Torres", "revisor": None},
+    "autoria": {
+        "autores": [{"nombre": "Alcy Edmundo Torres Guerrero", "credit": ["redaccion"]}],
+        "revisor": None,
+    },
     "duracion_min": 45,
     "objetivos": ["Interpretar la adenopatía en un adolescente con odinofagia"],
     "vineta": {

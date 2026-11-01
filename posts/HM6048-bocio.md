@@ -4,7 +4,7 @@ slug: bocio-inspeccion-palpacion-precision
 title: 'Bocio: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-09-21'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: medicina_interna
 category_label: Medicina Interna
 tags:

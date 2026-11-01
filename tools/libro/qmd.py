@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import shutil
+import sys
 from typing import TYPE_CHECKING
 
 import yaml
@@ -40,6 +41,40 @@ NOMBRES_QMD_CONDICIONES: dict[str, str] = {
 }
 
 
+def _lineas_autores(meta: MetadatosLibro) -> list[str]:
+    """Una línea por autor, en el orden del mapa: nombre, función, afiliación y ORCID si existe."""
+    lineas: list[str] = []
+    for autor in meta.autores:
+        detalle = [autor.rol] + ([autor.afiliacion] if autor.afiliacion else [])
+        linea = f"**{autor.nombre_visible}** — {'; '.join(detalle)}"
+        if autor.orcid:
+            linea += f" · ORCID: <https://orcid.org/{autor.orcid}>"
+        lineas.append(linea + "  ")
+    return lineas
+
+
+def _escapar_tex(texto: str) -> str:
+    barra = chr(92)
+    for caracter in "&%$#_{}":
+        texto = texto.replace(caracter, barra + caracter)
+    return texto
+
+
+def _datos_libro_tex(meta: MetadatosLibro) -> str:
+    """Macros de LaTeX con la autoría y el sello de la portada, generadas desde los datos."""
+    barra = chr(92)
+    nombres = (barra * 2 + " ").join(_escapar_tex(a.nombre_visible) for a in meta.autores)
+    sello = (
+        f"PowerSemiotics {barra}enspace·{barra}enspace Nueva edición "
+        f"{barra}enspace·{barra}enspace {_escapar_tex(meta.licencia)}"
+    )
+    return (
+        "% GENERADO por tools/libro/qmd.py desde lecciones/mapa.yaml. No editar a mano.\n"
+        f"{barra}newcommand{{{barra}libroautoresportada}}{{{nombres}}}\n"
+        f"{barra}newcommand{{{barra}librosellopie}}{{{sello}}}\n"
+    )
+
+
 def _generar_index_qmd(
     meta: MetadatosLibro,
     condiciones: Sequence[CondicionLibro],
@@ -64,18 +99,27 @@ def _generar_index_qmd(
         "",
         f"*{meta.subtitulo}*",
         "",
-        f"**{meta.autor}**  ",
-        f"{meta.afiliacion} · ORCID: `{meta.orcid}`",
+        *[f"**{autor.nombre_visible}**  " for autor in meta.autores],
         ":::",
         "",
         "::: {.creditos-pdf}",
         f"**{meta.titulo}**  ",
         f"*{meta.subtitulo}*",
         "",
-        f"Primera edición · Versión `{meta.version}` ({meta.fecha_publicacion}).  ",
-        f"Autoría y dirección académica: **{meta.autor}** ({meta.afiliacion}).  ",
-        f"ORCID: <{meta.orcid}>  ",
-        f"DOI de la obra: `https://doi.org/{meta.doi}`  ",
+        f"Nueva edición, que continúa la obra de {meta.autores[0].nombre}:  ",
+        *[f"· {obra}  " for obra in meta.obras_previas],
+        "",
+        "**Autoría:**  ",
+        *_lineas_autores(meta),
+        "",
+        (
+            f"**Revisión editorial:** {meta.editor.nombre}, editor, revisa todas las partes. "
+            f"Es también autor de {'; '.join(meta.partes_del_editor)}: el editor es también "
+            "autor; su revisión de esas partes no es independiente."
+        ),
+        "",
+        "DOI de la obra: pendiente de asignación.  ",
+        "ISBN: pendiente (reservado para la edición impresa).  ",
         f"Repositorio fuente: <{meta.url_repositorio}>  ",
         f"Plataforma interactiva: <{meta.url_sitio}>",
         "",
@@ -93,8 +137,9 @@ def _generar_index_qmd(
         ),
         "",
         (
-            f"**Licencia de publicación:** obra distribuida bajo licencia abierta "
-            f"**Creative Commons Atribución-CompartirIgual 4.0 Internacional ({meta.licencia})**. "
+            f"**Licencia de publicación:** obra distribuida bajo licencia "
+            f"**{meta.licencia_nombre} ({meta.licencia})**: uso, copia y adaptación libres con "
+            "fines no comerciales; la explotación comercial queda reservada a los autores. "
             "Las imágenes clínicas registradas proceden de Wikimedia Commons en dominio público "
             "(PD) o dedicación CC0."
         ),
@@ -378,13 +423,16 @@ def _generar_portada_svg(meta: MetadatosLibro) -> str:
         '-45,150 5,-45 55,30 380,30" '
         'fill="none" stroke="#C69C6D" stroke-width="6" />',
         "  </g>",
-        '  <text x="164" y="2165" fill="#F8F6F1" '
-        'font-family="Libertinus Sans, sans-serif" font-size="38" font-weight="bold">',
-        f"    {meta.autor}",
+        '  <text x="164" y="2095" fill="#F8F6F1" '
+        'font-family="Libertinus Sans, sans-serif" font-size="32" font-weight="bold">',
+        *[
+            f'    <tspan x="164" dy="{0 if i == 0 else 44}">{autor.nombre_visible}</tspan>'
+            for i, autor in enumerate(meta.autores)
+        ],
         "  </text>",
-        '  <text x="164" y="2225" fill="#C69C6D" '
+        '  <text x="164" y="2300" fill="#C69C6D" '
         'font-family="Libertinus Sans, sans-serif" font-size="24">',
-        f"    PowerSemiotics · Licencia {meta.licencia} · DOI {meta.doi}",
+        f"    PowerSemiotics · Nueva edición · {meta.licencia}",
         "  </text>",
         "</svg>",
         "",
@@ -407,8 +455,7 @@ def _configuracion_quarto(
         "book": {
             "title": meta.titulo,
             "subtitle": meta.subtitulo,
-            "author": meta.autor,
-            "date": meta.fecha_publicacion,
+            "author": [autor.nombre_visible for autor in meta.autores],
             "output-file": "libro",
             "chapters": [
                 "index.qmd",
@@ -456,7 +503,7 @@ def _configuracion_quarto(
                     "headsep=7mm",
                     "footskip=11mm",
                 ],
-                "include-in-header": "preambulo-libro.tex",
+                "include-in-header": ["datos-libro.tex", "preambulo-libro.tex"],
                 "filters": ["diseno-pdf.lua"],
             },
         },
@@ -467,12 +514,16 @@ def _configuracion_quarto(
 
 
 def _capitulos_de_lecciones(
-    carpeta_salida: Path, raiz: Path, generados: list[Path], secciones_planas: list[str]
+    carpeta_salida: Path,
+    raiz: Path,
+    generados: list[Path],
+    secciones_planas: list[str],
+    incluir_borradores: bool = False,
 ) -> list[dict[str, object]]:
     """Lecciones de ``lecciones/`` proyectadas (tokens resueltos) como capítulos por parte."""
     articulos = cargar_articulos(raiz)
     partes: list[dict[str, object]] = []
-    for titulo, rutas in lecciones_por_parte(raiz):
+    for titulo, rutas in lecciones_por_parte(raiz, incluir_borradores):
         nombres: list[str] = []
         for ruta in rutas:
             nombre = f"L-{ruta.stem}.qmd"
@@ -482,6 +533,12 @@ def _capitulos_de_lecciones(
             secciones_planas.append(texto)
             nombres.append(nombre)
         partes.append({"part": titulo, "chapters": nombres})
+    if not partes:
+        print(
+            "AVISO: ninguna lección está revisada o publicada; el libro sale sin ellas "
+            "(--incluir-borradores las añade para una vista previa).",
+            file=sys.stderr,
+        )
     if partes:
         shutil.copyfile(raiz / "lecciones" / "refs.bib", carpeta_salida / "refs.bib")
         generados.append(carpeta_salida / "refs.bib")
@@ -492,11 +549,14 @@ def generar_proyecto_quarto(
     carpeta_salida: Path,
     raiz: Path = RAIZ,
     lecciones: bool = False,
+    incluir_borradores: bool = False,
 ) -> list[Path]:
     """Genera todos los archivos del proyecto Quarto en ``carpeta_salida``.
 
     Con ``lecciones=True`` añade, tras el índice, las lecciones de ``lecciones/`` por parte del
-    mapa, con sus tokens de evidencia resueltos contra ``posts/`` (ADR-001, fase 5 en pequeño).
+    mapa, con sus tokens de evidencia resueltos contra ``posts/`` y ``lecciones/evidencia/``
+    (ADR-001, fase 5 en pequeño). Solo las revisadas o publicadas: ``incluir_borradores`` añade
+    también los borradores, cada uno con su aviso «Borrador — sin revisión humana».
     """
     carpeta_salida.mkdir(parents=True, exist_ok=True)
     meta = leer_metadatos(raiz)
@@ -504,6 +564,7 @@ def generar_proyecto_quarto(
     modulos = obtener_capitulos_modulos()
 
     shutil.copyfile(RUTA_PREAMBULO, carpeta_salida / "preambulo-libro.tex")
+    (carpeta_salida / "datos-libro.tex").write_text(_datos_libro_tex(meta), encoding="utf-8")
     shutil.copyfile(RUTA_FILTRO_LUA, carpeta_salida / "diseno-pdf.lua")
 
     ruta_portada_svg = carpeta_salida / "portada.svg"
@@ -511,6 +572,7 @@ def generar_proyecto_quarto(
 
     generados: list[Path] = [
         carpeta_salida / "preambulo-libro.tex",
+        carpeta_salida / "datos-libro.tex",
         carpeta_salida / "diseno-pdf.lua",
         ruta_portada_svg,
     ]
@@ -524,7 +586,9 @@ def generar_proyecto_quarto(
     secciones_planas.append(texto_index)
 
     partes_lecciones = (
-        _capitulos_de_lecciones(carpeta_salida, raiz, generados, secciones_planas)
+        _capitulos_de_lecciones(
+            carpeta_salida, raiz, generados, secciones_planas, incluir_borradores
+        )
         if lecciones
         else []
     )

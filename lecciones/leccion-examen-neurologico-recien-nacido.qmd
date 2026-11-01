@@ -263,8 +263,8 @@ cerebral, rápida y aplicable donde el tiempo y los recursos son limitados [@zaf
 
 **Los movimientos generales.** Hacia los tres a cinco meses de edad corregida, la ausencia de
 movimientos generales de tipo *fidgety* predice la parálisis cerebral posterior
-[@einspieler2005]. La sensibilidad registrada es {{sens HM:3246}} y la especificidad,
-{{esp HM:3246}}, como declaran los autores del método.
+[@einspieler2005]. La base registra {{sens HM:3246}} y {{esp HM:3246}}, como declaran
+los autores del método.
 
 **El grasping de manos que falta.** Cuando falta en una sola mano, buscamos lesión del plexo
 braquial y fractura de clavícula, como enseñaba el maestro:

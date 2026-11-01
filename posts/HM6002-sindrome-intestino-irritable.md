@@ -4,7 +4,7 @@ slug: sindrome-de-intestino-irritable-precision-semiotica
 title: 'Síndrome de intestino irritable: hallazgos y evidencia clínica'
 subtitle: Hallazgos y criterios clínicos sin cocientes de verosimilitud medidos.
 date: '2026-09-02'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: gastroenterologia
 category_label: Gastroenterología
 tags:

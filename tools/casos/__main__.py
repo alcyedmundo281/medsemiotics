@@ -3,7 +3,8 @@
 - ``check``: valida todos los casos y falla si el JSON publicado está desactualizado.
 - ``build``: valida y escribe ``assets/data/casos/*.json`` de los casos publicados.
 - ``preview HM6003``: imprime el caso compilado en Markdown para revisión humana.
-- ``nuevo HM6003``: crea el borrador ``casos/HM6003.yaml`` con los hallazgos de la base.
+- ``nuevo HM6003 --autor artg``: crea el borrador ``casos/HM6003.yaml`` con los hallazgos de la
+  base; el autor es una persona de ``lecciones/mapa.yaml`` (aetg, artg, gtg), no un nombre libre.
 - ``estado``: tabla de artículos con y sin caso.
 """
 
@@ -17,6 +18,7 @@ from casos.articulo import leer_articulos
 from casos.compilar import RAIZ, Rutas, compilar, construir, esqueleto, leer_casos, nombre_archivo
 from casos.errores import ErrorDeCaso
 from casos.presentacion import markdown
+from lecciones import mapa as mapa_libro
 
 
 def _condicion(valor: str) -> str:
@@ -24,6 +26,15 @@ def _condicion(valor: str) -> str:
     if not valor.startswith("HM") or not valor[2:].isdigit():
         raise ErrorDeCaso(f"Condición no válida: {valor} (ejemplo: HM6003)")
     return "HM:" + valor[2:]
+
+
+def _autor(clave: str) -> dict[str, object]:
+    """La persona del mapa, tal cual: nunca un nombre inventado en un caso."""
+    personas = mapa_libro.cargar().personas
+    if clave not in personas or personas[clave].fallecido:
+        vivas = ", ".join(k for k, p in personas.items() if not p.fallecido)
+        raise ErrorDeCaso(f"Autor «{clave}» no es una persona viva del mapa ({vivas}).")
+    return personas[clave].model_dump(exclude_defaults=True, exclude_none=True)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -38,7 +49,7 @@ def main(argv: list[str] | None = None) -> int:
     vista.add_argument("condicion")
     nuevo = ordenes.add_parser("nuevo")
     nuevo.add_argument("condicion")
-    nuevo.add_argument("--autor", default="Dr. Alcy Torres")
+    nuevo.add_argument("--autor", required=True, help="clave de la persona en lecciones/mapa.yaml")
     args = parser.parse_args(argv)
     rutas = Rutas(RAIZ)
     hoy = date.today()
@@ -75,7 +86,9 @@ def main(argv: list[str] | None = None) -> int:
                 f"Ya existe {destino.relative_to(RAIZ).as_posix()}; no se sobrescribe."
             )
         rutas.casos.mkdir(exist_ok=True)
-        destino.write_text(esqueleto(encontrado, args.autor), encoding="utf-8", newline="\n")
+        destino.write_text(
+            esqueleto(encontrado, _autor(args.autor)), encoding="utf-8", newline="\n"
+        )
         print(f"Borrador creado: {destino.relative_to(RAIZ).as_posix()}")
         return 0
 

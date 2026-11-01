@@ -4,7 +4,7 @@ slug: trastorno-consumo-alcohol-audit-audit-c
 title: 'Trastorno por consumo de alcohol: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-08-22'
-author: Dr. Alcy Torres
+author: Alcy E. Torres-Guerrero
 category: psiquiatria
 category_label: Psiquiatría y Atención Primaria
 tags:
