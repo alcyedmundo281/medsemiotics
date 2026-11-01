@@ -20,9 +20,10 @@ from libro import (
 )
 from libro.datos import RAIZ
 from libro.modulos import obtener_capitulos_modulos, verificar_fuentes_neurologia
-from libro.qmd import generar_proyecto_quarto
+from libro.qmd import generar_proyecto_quarto, titulos_de_lecciones
 
 if TYPE_CHECKING:
+    from collections.abc import Sequence
     from pathlib import Path
 
 _PAGE_SIZE_RE = re.compile(r"([0-9]+(?:\.[0-9]+)?)\s*x\s*([0-9]+(?:\.[0-9]+)?)\s*pts")
@@ -110,11 +111,18 @@ def inspeccionar_pdf_con_pdfinfo(ruta_pdf: Path) -> InfoPDF:
     return parsear_salida_pdfinfo(ruta_pdf, resultado.stdout, tamano_bytes=tamano)
 
 
-def validar_info_pdf(info: InfoPDF) -> list[str]:
+def paginas_minimas(material_previo: bool, lecciones: int) -> int:
+    """Un libro sin lecciones ni material previo es solo portada, créditos y paratextos."""
+    return 20 if material_previo or lecciones else 4
+
+
+def validar_info_pdf(info: InfoPDF, paginas_minimas: int = 20) -> list[str]:
     """Verifica que las dimensiones y propiedades del PDF cumplan el catálogo 170 × 244 mm."""
     errores: list[str] = []
-    if info.paginas < 20:
-        errores.append(f"El PDF tiene muy pocas páginas ({info.paginas}); se esperaban >= 20.")
+    if info.paginas < paginas_minimas:
+        errores.append(
+            f"El PDF tiene muy pocas páginas ({info.paginas}); se esperaban >= {paginas_minimas}."
+        )
     if abs(info.ancho_pt - ANCHO_PT) > TOLERANCIA_PT:
         errores.append(
             f"Ancho de página incorrecto: {info.ancho_pt:.2f} pt ({info.ancho_mm:.1f} mm / "
@@ -136,8 +144,16 @@ def validar_info_pdf(info: InfoPDF) -> list[str]:
     return errores
 
 
-def validar_tex_libro(ruta_tex: Path) -> list[str]:
-    """Verifica la integridad estructural y tipográfica de ``libro.tex``."""
+def validar_tex_libro(
+    ruta_tex: Path,
+    material_previo: bool = False,
+    titulos_lecciones: Sequence[str] = (),
+) -> list[str]:
+    """Verifica la integridad estructural y tipográfica de ``libro.tex``.
+
+    Exige los títulos de las lecciones incluidas; las condiciones y los capítulos de módulos del
+    material previo solo se exigen si ``material_previo``.
+    """
     if not ruta_tex.is_file():
         return [f"No se encontró el archivo LaTeX compilado: {ruta_tex}"]
 
@@ -150,23 +166,31 @@ def validar_tex_libro(ruta_tex: Path) -> list[str]:
         (r"\portadalibro", "portada vectorial \\portadalibro"),
         (r"\begin{portadillapdf}", "entorno portadillapdf"),
         (r"\begin{creditospdf}", "entorno creditospdf"),
-        (r"\begin{casosocratico}", "entorno casosocratico"),
         (r"\begin{alertaficha}", "entorno alertaficha"),
-        (r"\begin{perlasclinicas}", "entorno perlasclinicas"),
         ("Libertinus Serif", "tipografía principal Libertinus Serif"),
     )
+    if titulos_lecciones:
+        patrones_obligatorios += (
+            (r"\begin{casosocratico}", "entorno casosocratico"),
+            (r"\begin{perlasclinicas}", "entorno perlasclinicas"),
+        )
     for patron, descripcion in patrones_obligatorios:
         if patron not in tex:
             errores.append(f"libro.tex: falta {descripcion} ({patron!r}).")
 
-    for cid in CONDICIONES_NEUROLOGIA:
-        if cid not in tex:
-            errores.append(f"libro.tex: falta la condición clínica {cid}.")
-
     tex_normalizado = re.sub(r"\s+", " ", tex)
-    for cap in obtener_capitulos_modulos():
-        if cap.titulo not in tex_normalizado:
-            errores.append(f"libro.tex: falta el capítulo {cap.titulo!r}.")
+    for titulo in titulos_lecciones:
+        if titulo not in tex_normalizado:
+            errores.append(f"libro.tex: falta la lección {titulo!r}.")
+    if material_previo:
+        for cid in CONDICIONES_NEUROLOGIA:
+            if cid not in tex:
+                errores.append(f"libro.tex: falta la condición clínica {cid}.")
+        for cap in obtener_capitulos_modulos():
+            if cap.titulo not in tex_normalizado:
+                errores.append(f"libro.tex: falta el capítulo {cap.titulo!r}.")
+        if r"\part{Material previo --- no forma parte de la obra}" not in tex_normalizado:
+            errores.append("libro.tex: falta la portada del material previo.")
 
     marcadores_rotos = ("[?]", "TODO", "FIXME")
     for marcador in marcadores_rotos:
@@ -180,11 +204,11 @@ def compilar_libro_pdf(
     ruta_salida: Path,
     carpeta_proyecto: Path,
     raiz: Path = RAIZ,
-    lecciones: bool = False,
     incluir_borradores: bool = False,
+    material_previo: bool = False,
 ) -> InfoPDF:
     """Genera el proyecto Quarto, lo compila con LuaLaTeX y lo verifica con pdfinfo."""
-    faltantes = verificar_fuentes_neurologia(raiz)
+    faltantes = verificar_fuentes_neurologia(raiz) if material_previo else []
     if faltantes:
         raise FileNotFoundError(
             f"Faltan archivos fuente de neurología en el repositorio: {', '.join(faltantes)}"
@@ -195,7 +219,10 @@ def compilar_libro_pdf(
             raise RuntimeError(f"No se encontró '{herramienta}' en el PATH del sistema.")
 
     generar_proyecto_quarto(
-        carpeta_proyecto, raiz=raiz, lecciones=lecciones, incluir_borradores=incluir_borradores
+        carpeta_proyecto,
+        raiz=raiz,
+        incluir_borradores=incluir_borradores,
+        material_previo=material_previo,
     )
 
     ejecutable_quarto = shutil.which("quarto")
@@ -221,12 +248,15 @@ def compilar_libro_pdf(
     shutil.copyfile(pdf_generado, ruta_salida)
 
     ruta_tex = carpeta_proyecto / "libro.tex"
-    errores_tex = validar_tex_libro(ruta_tex)
+    errores_tex = validar_tex_libro(
+        ruta_tex, material_previo, titulos_de_lecciones(raiz, incluir_borradores)
+    )
     if errores_tex:
         raise ValueError("\n".join(errores_tex))
 
     info = inspeccionar_pdf_con_pdfinfo(ruta_salida)
-    errores_pdf = validar_info_pdf(info)
+    titulos = titulos_de_lecciones(raiz, incluir_borradores)
+    errores_pdf = validar_info_pdf(info, paginas_minimas(material_previo, len(titulos)))
     if errores_pdf:
         raise ValueError("\n".join(errores_pdf))
 

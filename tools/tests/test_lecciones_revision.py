@@ -18,7 +18,6 @@ from lecciones.proyectar import (
     proyectar,
 )
 from lecciones.tokens import ErrorDeToken, resolver_texto
-from libro import __main__ as cli_libro
 from libro.qmd import generar_proyecto_quarto
 
 MEDIDO: dict[str, Any] = {
@@ -121,12 +120,12 @@ def test_una_leccion_revisada_no_lleva_aviso(estado: str) -> None:
 
 def test_el_libro_excluye_los_borradores_salvo_vista_previa(tmp_path: Path) -> None:
     sin = tmp_path / "sin"
-    generar_proyecto_quarto(sin, RAIZ, lecciones=True)
+    generar_proyecto_quarto(sin, RAIZ)
     assert not list(sin.glob("L-*.qmd"))
     assert "bibliography" not in (sin / "_quarto.yml").read_text(encoding="utf-8")
 
     con = tmp_path / "con"
-    generar_proyecto_quarto(con, RAIZ, lecciones=True, incluir_borradores=True)
+    generar_proyecto_quarto(con, RAIZ, incluir_borradores=True)
     capitulos = list(con.glob("L-*.qmd"))
     assert capitulos
     for capitulo in capitulos:
@@ -136,14 +135,8 @@ def test_el_libro_excluye_los_borradores_salvo_vista_previa(tmp_path: Path) -> N
 def test_el_libro_avisa_si_no_hay_lecciones_publicables(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
-    generar_proyecto_quarto(tmp_path, RAIZ, lecciones=True)
+    generar_proyecto_quarto(tmp_path, RAIZ)
     assert "--incluir-borradores" in capsys.readouterr().err
-
-
-def test_incluir_borradores_exige_lecciones() -> None:
-    with pytest.raises(SystemExit) as salida:
-        cli_libro.main(["qmd", "--incluir-borradores"])
-    assert salida.value.code == 2
 
 
 # --- 2. un único texto escaneado ------------------------------------------------------------

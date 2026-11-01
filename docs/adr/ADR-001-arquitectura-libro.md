@@ -121,9 +121,24 @@ leen la rama viva** de medsemiotics-db: leen archivos versionados, todos de la m
   anterior; el check lo rechaza («varias revisiones») para que blog y libro no citen números de
   momentos distintos. La revisión se actualiza siempre con la sincronización completa
   (`--sync-all`), en un PR de sincronización aparte.
-- **Libro.** `libro qmd|build --lecciones` incluye solo lecciones `revisado` o `publicado`;
-  `--incluir-borradores` es para vistas previas y cada borrador lleva el aviso «Borrador — sin
-  revisión humana».
+- **Libro.** `libro qmd|build` lee estos mismos archivos (ver la sección siguiente).
+
+## El libro se compone solo de lecciones
+
+Decisión editorial (Alcy Edmundo Torres Guerrero): el libro se reconstruye desde cero solo con
+`lecciones/` y sus paratextos (`lecciones/paratextos/`, p. ej. la declaración de uso de IA, con
+`{N}` sustituido por el número de claves citadas en las lecciones incluidas).
+
+- `libro qmd|build` genera portada, créditos, tabla de contenidos, las lecciones por parte del
+  mapa y los paratextos. Entran las lecciones `revisado` o `publicado`;
+  `--incluir-borradores` añade las demás para una vista previa, cada una con el aviso «Borrador —
+  sin revisión humana».
+- Las partes de fichas de condiciones de medsemiotics-db y de resúmenes de módulos de clase
+  **salen de la obra**. Solo se generan con `--material-previo`, tras la obra y bajo la portada
+  «Material previo — no forma parte de la obra»: son material con el que se empezó, sin
+  reconstruir como lección ni sujeto a la norma editorial.
+- `libro check` verifica autoría y lecciones; las fuentes del material previo, solo con
+  `--material-previo`.
 
 ## Plan
 
@@ -131,15 +146,15 @@ leen la rama viva** de medsemiotics-db: leen archivos versionados, todos de la m
 |:-|:-|
 | 0 | Este contrato: plantilla, validador, verificador de citas, tests y gates. |
 | 1 | Piloto vertical: «Examen neurológico del recién nacido» (cap. I, 1993), con sus conceptos y condiciones en la db; la misma lección compila como artículo y como capítulo. |
-| 2 | Los 13 módulos de neurología reconstruidos como lecciones (agrupación por decidir módulo a módulo), con su evidencia. Los HTML no se tocan. |
+| 2 | Los 13 módulos de neurología reconstruidos como lecciones del adulto, **una lección por PR, en el orden de las semanas del sílabo** (agrupación por decidir módulo a módulo), con su evidencia. Los módulos HTML y el sílabo son fuentes, no texto que se copia; los HTML no se tocan. Mientras tanto el libro ya se compone solo de lecciones (ver «El libro se compone solo de lecciones»). |
 | 3 | Neuropediatría (resto de la obra de 1993). Revisor: Alcy Ramiro Torres Guerrero. |
 | 4 | Neuroftalmología. Revisora: Gladys Torres Guerrero. |
-| 5 | `tools/libro` lee el manifiesto; se retira `modulos.yaml`; créditos, licencia, DOI e ISBN. |
+| 5 | `tools/libro` lee el orden del mapa (ya lo hace); la proyección incluye legado con su atribución, autores y declaración de IA por lección (#38); se retiran `modulos.yaml` y el material previo (`--material-previo`) cuando ya no quede nada que migrar; créditos, licencia, DOI e ISBN. |
 
 ## Consecuencias
 
 - Hay un solo lugar donde corregir un texto y un solo lugar donde corregir una cifra (la db).
 - El libro hereda el rigor de biosemiotics: ninguna lección pasa de borrador sin revisor
   humano ni con cifras sin fuente.
-- Durante la migración conviven el libro actual (PR #33) y las lecciones. El libro no cambia
-  hasta la fase 5.
+- Durante la migración el libro ya se compone solo de lecciones; lo anterior (PR #33) queda
+  como material previo, fuera de la obra, hasta que se retire en la fase 5.

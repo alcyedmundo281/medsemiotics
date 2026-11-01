@@ -82,16 +82,44 @@ def test_fuentes_y_condiciones_neurologia() -> None:
         assert cid in imagenes
 
 
-def test_generar_proyecto_quarto(tmp_path: Path) -> None:
+def test_el_libro_por_defecto_solo_lleva_lecciones(tmp_path: Path) -> None:
     carpeta = tmp_path / "quarto"
     archivos = generar_proyecto_quarto(carpeta, raiz=RAIZ)
-    assert (carpeta / "_quarto.yml").is_file()
-    assert (carpeta / "index.qmd").is_file()
-    assert (carpeta / "preambulo-libro.tex").is_file()
-    assert (carpeta / "diseno-pdf.lua").is_file()
+    for nombre in ("_quarto.yml", "index.qmd", "preambulo-libro.tex", "diseno-pdf.lua"):
+        assert (carpeta / nombre).is_file()
     assert (carpeta / "portada.svg").is_file()
     assert (carpeta / "libro-plano.md").is_file()
+    # Sin fichas de condiciones, resúmenes de módulos ni apéndices anteriores.
+    for nombre_qmd in NOMBRES_QMD_CONDICIONES.values():
+        assert not (carpeta / nombre_qmd).exists()
+    for cap in obtener_capitulos_modulos():
+        assert not (carpeta / cap.archivo_qmd).exists()
+    assert not (carpeta / "14-autoevaluacion.qmd").exists()
+    assert not (carpeta / "00-material-previo.qmd").exists()
+    cfg = yaml.safe_load((carpeta / "_quarto.yml").read_text(encoding="utf-8"))
+    assert "Material previo" not in str(cfg["book"]["chapters"])
+    assert "Parte I" not in (carpeta / "libro-plano.md").read_text(encoding="utf-8")
+    # El colofón de IA es un paratexto de lecciones/paratextos/, con {N} ya sustituido.
+    colofon = (carpeta / "P-declaracion-ia.qmd").read_text(encoding="utf-8")
+    assert "{N}" not in colofon
+    assert "P-declaracion-ia.qmd" in cfg["book"]["chapters"]
+    assert len(archivos) >= 6
+
+
+def test_el_material_previo_va_aparte_con_su_portada(tmp_path: Path) -> None:
+    carpeta = tmp_path / "quarto"
+    archivos = generar_proyecto_quarto(carpeta, raiz=RAIZ, material_previo=True)
     assert len(archivos) >= 18
+    assert (carpeta / "libro-plano.md").is_file()
+
+    portada = (carpeta / "00-material-previo.qmd").read_text(encoding="utf-8")
+    assert "Material previo — no forma parte de la obra" in portada
+    cfg = yaml.safe_load((carpeta / "_quarto.yml").read_text(encoding="utf-8"))
+    ultima = cfg["book"]["chapters"][-1]
+    assert ultima["part"] == "Material previo — no forma parte de la obra"
+    assert ultima["chapters"][0] == "00-material-previo.qmd"
+    # Las lecciones y los paratextos van antes del material previo.
+    assert "P-declaracion-ia.qmd" in cfg["book"]["chapters"][:-1]
 
     cfg = yaml.safe_load((carpeta / "_quarto.yml").read_text(encoding="utf-8"))
     geometria = cfg["format"]["pdf"]["geometry"]
@@ -160,3 +188,25 @@ def test_cli_qmd_y_check(tmp_path: Path) -> None:
         ["check", "--proyecto", str(carpeta), "--pdf", str(tmp_path / "no-existe.pdf")]
     )
     assert rc_check == 0
+    # Las fuentes del material previo solo se verifican si se pide.
+    rc_previo = cli_libro.main(
+        [
+            "check",
+            "--material-previo",
+            "--proyecto",
+            str(carpeta),
+            "--pdf",
+            str(tmp_path / "no-existe.pdf"),
+        ]
+    )
+    assert rc_previo == 0
+    rc_vista = cli_libro.main(
+        ["qmd", "--proyecto", str(tmp_path / "vista"), "--incluir-borradores", "--material-previo"]
+    )
+    assert rc_vista == 0
+
+
+def test_la_opcion_lecciones_ya_no_existe() -> None:
+    with pytest.raises(SystemExit) as salida:
+        cli_libro.main(["qmd", "--lecciones"])
+    assert salida.value.code == 2
