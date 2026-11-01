@@ -7,7 +7,8 @@ abstract: >-
   medicina basada en datos, farmacoterapia racional, gastroenterología,
   neurología, inmunología clínica y ciencia de la implementación.
   Publicada como sitio estático autosuficiente, sin dependencias de
-  servicios externos.
+  servicios externos. El directorio lecciones/ y el libro de neurología se
+  publican bajo CC BY-NC-SA 4.0.
 type: software
 authors:
   - family-names: "Torres Guerrero"
@@ -15,8 +16,8 @@ authors:
     orcid: "https://orcid.org/0000-0002-9742-375X"
 repository-code: "https://github.com/alcyedmundo281/medsemiotics"
 url: "https://powersemiotics.com/medsemiotics/"
-version: 1.0.0
-date-released: '2026-08-23'
+version: 1.1.0
+date-released: '2026-11-01'
 
 # DOI de concepto: resuelve siempre a la última versión publicada.
 doi: 10.5281/zenodo.22069641
