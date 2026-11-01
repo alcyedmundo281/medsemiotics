@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 import yaml
 
-from casos.articulo import leer_articulos
+from lecciones.evidencia import cargar_articulos
 from lecciones.fuente import leer as leer_leccion
 from lecciones.proyectar import lecciones_por_parte, proyectar
 from libro import ALTO_MM, ALTO_PULGADAS, ANCHO_MM, ANCHO_PULGADAS
@@ -470,7 +470,7 @@ def _capitulos_de_lecciones(
     carpeta_salida: Path, raiz: Path, generados: list[Path], secciones_planas: list[str]
 ) -> list[dict[str, object]]:
     """Lecciones de ``lecciones/`` proyectadas (tokens resueltos) como capítulos por parte."""
-    articulos = leer_articulos(raiz / "posts")
+    articulos = cargar_articulos(raiz)
     partes: list[dict[str, object]] = []
     for titulo, rutas in lecciones_por_parte(raiz):
         nombres: list[str] = []

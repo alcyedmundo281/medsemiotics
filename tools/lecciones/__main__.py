@@ -1,8 +1,9 @@
 """CLI: ``uv run python -m lecciones <orden>``.
 
 - ``check``: contrato de todas las lecciones, coherencia con ``lecciones/mapa.yaml`` y
-  ``mapa-maestro-libro.md`` al día, y que todo token de evidencia resuelva contra ``posts/``
-  (sin red; forma parte de ``npm run gates``).
+  ``mapa-maestro-libro.md`` al día, y que todo token de evidencia resuelva contra ``posts/`` y
+  ``lecciones/evidencia/``, de una sola revisión de la db (sin red; forma parte de
+  ``npm run gates``).
 - ``mapa``: regenera ``mapa-maestro-libro.md`` desde el mapa y el estado de las lecciones.
 - ``nuevo <id>``: crea ``lecciones/<id>.qmd`` en borrador desde su fila del mapa.
 - ``proyectar <id>``: escribe la lección con sus tokens resueltos (``build/lecciones/<id>.qmd``
@@ -18,10 +19,10 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
-from casos.articulo import leer_articulos
 from casos.errores import ErrorDeCaso
 from lecciones import mapa as mapa_libro
 from lecciones.citas import verificar
+from lecciones.evidencia import cargar_articulos
 from lecciones.fuente import CARPETA, RAIZ, ErrorDeFuente, archivos, leer, leer_bib
 from lecciones.proyectar import escribir_proyeccion, problemas_de_resolucion
 from lecciones.validacion import validar_todo
@@ -35,16 +36,15 @@ def _cargar_mapa() -> mapa_libro.Mapa | None:
         return None
 
 
-POSTS = RAIZ / "posts"
 SALIDA_PROYECCION = RAIZ / "build" / "lecciones"
 
 
 def _problemas_de_tokens(rutas: list[Path]) -> list[str]:
     """Todo token de evidencia debe resolver contra los artículos versionados en ``posts/``."""
     try:
-        articulos = leer_articulos(POSTS)
+        articulos = cargar_articulos()
     except ErrorDeCaso as exc:
-        return [f"posts/: {exc}"]
+        return [f"evidencia: {exc}"]
     problemas: list[str] = []
     for ruta in rutas:
         try:
@@ -118,7 +118,7 @@ def _proyectar(ident: str, salida: Path) -> int:
         print(f"✗ no existe {ruta.relative_to(RAIZ)}")
         return 1
     try:
-        destino = escribir_proyeccion(ruta, salida, leer_articulos(POSTS))
+        destino = escribir_proyeccion(ruta, salida, cargar_articulos())
     except ErrorDeCaso as exc:
         print(f"✗ {ident}: {exc}")
         return 1
