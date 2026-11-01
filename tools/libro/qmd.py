@@ -7,6 +7,9 @@ from typing import TYPE_CHECKING
 
 import yaml
 
+from lecciones.evidencia import cargar_articulos
+from lecciones.fuente import leer as leer_leccion
+from lecciones.proyectar import lecciones_por_parte, proyectar
 from libro import ALTO_MM, ALTO_PULGADAS, ANCHO_MM, ANCHO_PULGADAS
 from libro.datos import (
     RAIZ,
@@ -394,8 +397,9 @@ def _configuracion_quarto(
     archivos_parte_1: list[str],
     archivos_parte_2: list[str],
     archivos_apendices: list[str],
+    partes_lecciones: list[dict[str, object]] | None = None,
 ) -> dict[str, object]:
-    return {
+    cfg: dict[str, object] = {
         "project": {
             "type": "book",
             "output-dir": "_book",
@@ -408,6 +412,7 @@ def _configuracion_quarto(
             "output-file": "libro",
             "chapters": [
                 "index.qmd",
+                *(partes_lecciones or []),
                 {
                     "part": (
                         "Parte I · Semiología Neurológica Basada en la Evidencia "
@@ -456,13 +461,43 @@ def _configuracion_quarto(
             },
         },
     }
+    if partes_lecciones:
+        cfg["bibliography"] = "refs.bib"
+    return cfg
+
+
+def _capitulos_de_lecciones(
+    carpeta_salida: Path, raiz: Path, generados: list[Path], secciones_planas: list[str]
+) -> list[dict[str, object]]:
+    """Lecciones de ``lecciones/`` proyectadas (tokens resueltos) como capítulos por parte."""
+    articulos = cargar_articulos(raiz)
+    partes: list[dict[str, object]] = []
+    for titulo, rutas in lecciones_por_parte(raiz):
+        nombres: list[str] = []
+        for ruta in rutas:
+            nombre = f"L-{ruta.stem}.qmd"
+            texto = proyectar(leer_leccion(ruta), articulos, "capitulo")
+            (carpeta_salida / nombre).write_text(texto, encoding="utf-8")
+            generados.append(carpeta_salida / nombre)
+            secciones_planas.append(texto)
+            nombres.append(nombre)
+        partes.append({"part": titulo, "chapters": nombres})
+    if partes:
+        shutil.copyfile(raiz / "lecciones" / "refs.bib", carpeta_salida / "refs.bib")
+        generados.append(carpeta_salida / "refs.bib")
+    return partes
 
 
 def generar_proyecto_quarto(
     carpeta_salida: Path,
     raiz: Path = RAIZ,
+    lecciones: bool = False,
 ) -> list[Path]:
-    """Genera todos los archivos del proyecto Quarto en ``carpeta_salida``."""
+    """Genera todos los archivos del proyecto Quarto en ``carpeta_salida``.
+
+    Con ``lecciones=True`` añade, tras el índice, las lecciones de ``lecciones/`` por parte del
+    mapa, con sus tokens de evidencia resueltos contra ``posts/`` (ADR-001, fase 5 en pequeño).
+    """
     carpeta_salida.mkdir(parents=True, exist_ok=True)
     meta = leer_metadatos(raiz)
     condiciones = leer_condiciones_neurologia(raiz)
@@ -487,6 +522,12 @@ def generar_proyecto_quarto(
     ruta_index.write_text(texto_index, encoding="utf-8")
     generados.append(ruta_index)
     secciones_planas.append(texto_index)
+
+    partes_lecciones = (
+        _capitulos_de_lecciones(carpeta_salida, raiz, generados, secciones_planas)
+        if lecciones
+        else []
+    )
 
     # 2. Parte I: Condiciones de medsemiotics-db + casos socráticos
     archivos_parte_1: list[str] = []
@@ -527,7 +568,9 @@ def generar_proyecto_quarto(
     archivos_apendices = [nombre_autoeval, nombre_evidencia]
 
     # 5. _quarto.yml
-    cfg = _configuracion_quarto(meta, archivos_parte_1, archivos_parte_2, archivos_apendices)
+    cfg = _configuracion_quarto(
+        meta, archivos_parte_1, archivos_parte_2, archivos_apendices, partes_lecciones
+    )
     ruta_quarto_yml = carpeta_salida / "_quarto.yml"
     ruta_quarto_yml.write_text(
         yaml.safe_dump(cfg, sort_keys=False, allow_unicode=True),

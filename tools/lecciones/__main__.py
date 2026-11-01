@@ -1,9 +1,13 @@
 """CLI: ``uv run python -m lecciones <orden>``.
 
 - ``check``: contrato de todas las lecciones, coherencia con ``lecciones/mapa.yaml`` y
-  ``mapa-maestro-libro.md`` al día (sin red; forma parte de ``npm run gates``).
+  ``mapa-maestro-libro.md`` al día, y que todo token de evidencia resuelva contra ``posts/`` y
+  ``lecciones/evidencia/``, de una sola revisión de la db (sin red; forma parte de
+  ``npm run gates``).
 - ``mapa``: regenera ``mapa-maestro-libro.md`` desde el mapa y el estado de las lecciones.
 - ``nuevo <id>``: crea ``lecciones/<id>.qmd`` en borrador desde su fila del mapa.
+- ``proyectar <id>``: escribe la lección con sus tokens resueltos (``build/lecciones/<id>.qmd``
+  y ``refs.bib``), lista para ``quarto render``; aborta si un token no resuelve.
 - ``citas``: verifica ``lecciones/refs.bib`` contra PubMed y Crossref (requiere red).
 """
 
@@ -11,12 +15,16 @@ from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 from pydantic import ValidationError
 
+from casos.errores import ErrorDeCaso
 from lecciones import mapa as mapa_libro
 from lecciones.citas import verificar
-from lecciones.fuente import CARPETA, RAIZ, ErrorDeFuente, archivos, leer_bib
+from lecciones.evidencia import cargar_articulos
+from lecciones.fuente import CARPETA, RAIZ, ErrorDeFuente, archivos, leer, leer_bib
+from lecciones.proyectar import escribir_proyeccion, problemas_de_resolucion
 from lecciones.validacion import validar_todo
 
 
@@ -28,10 +36,30 @@ def _cargar_mapa() -> mapa_libro.Mapa | None:
         return None
 
 
+SALIDA_PROYECCION = RAIZ / "build" / "lecciones"
+
+
+def _problemas_de_tokens(rutas: list[Path]) -> list[str]:
+    """Todo token de evidencia debe resolver contra los artículos versionados en ``posts/``."""
+    try:
+        articulos = cargar_articulos()
+    except ErrorDeCaso as exc:
+        return [f"evidencia: {exc}"]
+    problemas: list[str] = []
+    for ruta in rutas:
+        try:
+            archivo = leer(ruta)
+        except ErrorDeFuente:
+            continue  # ya lo informa validar_todo
+        problemas += [f"{ruta.name}: {p}" for p in problemas_de_resolucion(archivo, articulos)]
+    return problemas
+
+
 def _check() -> int:
     rutas = archivos()
     resultado = validar_todo(rutas)
     errores = list(resultado.errores)
+    errores += _problemas_de_tokens(rutas)
     mapa = _cargar_mapa()
     if mapa is None:
         return 1
@@ -84,6 +112,20 @@ def _nuevo(ident: str) -> int:
     return 0
 
 
+def _proyectar(ident: str, salida: Path) -> int:
+    ruta = CARPETA / f"{ident}.qmd"
+    if not ruta.is_file():
+        print(f"✗ no existe {ruta.relative_to(RAIZ)}")
+        return 1
+    try:
+        destino = escribir_proyeccion(ruta, salida, cargar_articulos())
+    except ErrorDeCaso as exc:
+        print(f"✗ {ident}: {exc}")
+        return 1
+    print(f"escrito {destino}; compile con: quarto render {destino.name}")
+    return 0
+
+
 def _citas() -> int:
     try:
         bib = leer_bib()
@@ -114,6 +156,9 @@ def main(argv: list[str] | None = None) -> int:
     ordenes.add_parser("citas")
     nuevo = ordenes.add_parser("nuevo")
     nuevo.add_argument("id")
+    proyectar = ordenes.add_parser("proyectar")
+    proyectar.add_argument("id")
+    proyectar.add_argument("--salida", type=Path, default=SALIDA_PROYECCION)
     args = parser.parse_args(argv)
     if args.orden == "check":
         return _check()
@@ -121,6 +166,8 @@ def main(argv: list[str] | None = None) -> int:
         return _mapa()
     if args.orden == "nuevo":
         return _nuevo(args.id)
+    if args.orden == "proyectar":
+        return _proyectar(args.id, args.salida)
     return _citas()
 
 
