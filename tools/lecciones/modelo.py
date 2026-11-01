@@ -76,6 +76,9 @@ class Autor(_Base):
     nombre: Texto
     orcid: str | None = None
     afiliacion: Texto | None = None
+    # Forma con la que la persona firma en la bibliografía (p. ej. «Alcy R. Torres», PubMed:
+    # «Torres AR»): se usa en la línea de revisión y en las citas. La portada usa `nombre`.
+    nombre_bibliografico: Texto | None = None
     rol_obra: RolObra = "autor"
     fallecido: bool = False
     credit: list[CreditRol] = Field(min_length=1)
@@ -136,6 +139,9 @@ class Leccion(_Base):
     estado: Estado
     fecha_revision: date | None = None
     revisor: Texto | None = None
+    # Segunda revisión humana, opcional: si la lección la declara, «revisado» exige ambas.
+    corevisor: Texto | None = None
+    fecha_corevision: date | None = None
     autores: list[Autor] = Field(min_length=1)
     uso_ia: list[UsoIA]
     legado: Legado | None = None
@@ -162,6 +168,15 @@ class Leccion(_Base):
                 raise ValueError("revisor: debe ser una persona; el agente nunca es revisor")
             if self.fecha_revision is None:
                 raise ValueError(f"estado {self.estado}: requiere fecha_revision")
+            if self.corevisor is not None:
+                if AGENTES.search(self.corevisor):
+                    raise ValueError("corevisor: debe ser una persona; el agente nunca revisa")
+                if self.corevisor == self.revisor:
+                    raise ValueError("corevisor: debe ser una persona distinta del revisor")
+                if self.fecha_corevision is None:
+                    raise ValueError(f"estado {self.estado}: requiere fecha_corevision")
+        if self.corevisor is None and self.fecha_corevision is not None:
+            raise ValueError("fecha_corevision sin corevisor")
         if any(a.rol_obra == "autor-fundador" for a in self.autores) and self.legado is None:
             raise ValueError("una lección con autor fundador declara su procedencia en «legado»")
         for campo in ("condiciones", "conceptos", "refs", "uso_ia"):

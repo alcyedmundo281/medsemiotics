@@ -46,6 +46,7 @@ class AutorLibro:
     orcid: str | None
     afiliacion: str | None
     fallecido: bool
+    nombre_bibliografico: str | None = None
 
     @property
     def nombre_visible(self) -> str:
@@ -141,6 +142,7 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
             orcid=p.orcid,
             afiliacion=p.afiliacion,
             fallecido=p.fallecido,
+            nombre_bibliografico=p.nombre_bibliografico,
         )
         for p in mapa.personas.values()
     )

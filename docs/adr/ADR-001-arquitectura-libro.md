@@ -90,6 +90,14 @@ La ética de biosemiotics se conserva y se hace cumplir:
   legado queda exenta.
 - **Autoría:** un autor fallecido no ejerce revisión, supervisión ni validación de la
   edición nueva. El agente nunca es revisor.
+- **Revisión y corevisión:** el revisor de cada lección es el de su parte. Una lección puede
+  tener además un `corevisor` (campo opcional de la fila del mapa y de la lección, con su
+  `fecha_corevision`): `artg` corevisa las lecciones de adulto que tocan al niño
+  (infecciones del SNC, traumatismo craneal leve, epilepsias y estado epiléptico). Si la
+  lección lo declara, el estado `revisado` exige la revisión de ambos, y el corevisor es otra
+  persona nominada, no el agente. La portada usa el nombre completo de las personas; la
+  línea de revisión y las citas usan su `nombre_bibliografico` (p. ej. «Alcy R. Torres»,
+  PubMed: Torres AR).
 - **Imágenes:** Wikimedia Commons (página `File:`) o ilustración original con autor humano.
   Nunca fotografías de pacientes de las ediciones anteriores ni imágenes generadas con IA.
 - **Estados:** en un `borrador` las faltas son alertas; desde `revisado` bloquean.

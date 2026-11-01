@@ -51,7 +51,33 @@ def problemas_de_resolucion(archivo: Archivo, articulos: Mapping[str, Articulo])
     return problemas
 
 
-def proyectar(archivo: Archivo, articulos: Mapping[str, Articulo], modo: Modo = "capitulo") -> str:
+def _firmas() -> dict[str, str]:
+    """Nombre completo → firma bibliográfica («Alcy R. Torres»), según ``mapa.yaml``."""
+    mapa = mapa_libro.cargar()
+    return {p.nombre: p.nombre_bibliografico or p.nombre for p in mapa.personas.values()}
+
+
+def linea_revision(datos: Mapping[str, object], firmas: Mapping[str, str]) -> str | None:
+    """Línea «Revisión clínica: …; corevisión: …»; solo de lecciones revisadas o publicadas."""
+    if datos.get("estado") not in ESTADOS_PUBLICABLES or not datos.get("revisor"):
+        return None
+
+    def persona(nombre: object, fecha: object) -> str:
+        texto = firmas.get(str(nombre), str(nombre))
+        return f"{texto} ({fecha})" if fecha else texto
+
+    partes = [f"Revisión clínica: {persona(datos['revisor'], datos.get('fecha_revision'))}"]
+    if datos.get("corevisor"):
+        partes.append(f"corevisión: {persona(datos['corevisor'], datos.get('fecha_corevision'))}")
+    return "*" + "; ".join(partes) + "*"
+
+
+def proyectar(
+    archivo: Archivo,
+    articulos: Mapping[str, Articulo],
+    modo: Modo = "capitulo",
+    firmas: Mapping[str, str] | None = None,
+) -> str:
     """El ``.qmd`` proyectado de una lección, con todos sus tokens resueltos."""
     datos = archivo.datos
     declaradas = datos.get("condiciones") or []
@@ -70,6 +96,9 @@ def proyectar(archivo: Archivo, articulos: Mapping[str, Articulo], modo: Modo = 
         partes.append(f"# {titulo} {{#sec-{datos['id']}}}")
     if datos.get("estado") == "borrador":
         partes.append(AVISO_BORRADOR)
+    revision = linea_revision(datos, _firmas() if firmas is None else firmas)
+    if revision:
+        partes.append(revision)
     partes.append(f"*{resolver(datos['abstract'])}*")
     partes.append(
         "::: {.caso-socratico}\n**Diálogo clínico.** "
