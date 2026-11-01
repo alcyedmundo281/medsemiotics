@@ -12,6 +12,7 @@
 
 obra:
   titulo_provisional: "Neurología Clínica y Semiología Basada en la Evidencia"
+  subtitulo: "Cocientes de verosimilitud, reglas de decisión clínica, aprendizaje basado en problemas y síndromes neurológicos de urgencia y consulta"
   licencia: "CC BY-NC-SA 4.0"
   legado: "Torres Catefort A. Neurología Pediátrica. 2.ª ed. Quito: Universidad Central del Ecuador; 1993"
   # Fuera del plan por decisión de los autores (30-oct-2026): cap. XXVI «Reanimación
@@ -28,19 +29,26 @@ personas:
     credit: [conceptualizacion]
   artg:
     nombre: "Alcy Ramiro Torres Guerrero"
+    # Firma bibliográfica (PubMed: Torres AR): línea de revisión y citas. La portada usa `nombre`.
+    nombre_bibliografico: "Alcy R. Torres"
     orcid: "0000-0001-5798-9161"
     afiliacion: "Boston Medical Center; Boston University Chobanian & Avedisian School of Medicine"
     credit: [redaccion, revision-edicion]
   gtg:
     nombre: "Gladys Torres Guerrero"
+    # Firma de los autores (decisión editorial, 1-nov-2026): la usan el blog y los casos.
+    nombre_bibliografico: "Gladys Torres-Guerrero"
     credit: [redaccion, revision-edicion]
   aetg:
     nombre: "Alcy Edmundo Torres Guerrero"
+    nombre_bibliografico: "Alcy E. Torres-Guerrero"
     orcid: "0000-0002-9742-375X"
     afiliacion: "Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad Central del Ecuador"
     rol_obra: coordinacion-editorial
     credit: [redaccion, revision-edicion]
 
+# Decisión editorial (Alcy Edmundo Torres Guerrero): el especialista es autor de su área y el
+# editor, aetg, es el revisor de todo; no hay corevisores.
 partes:
   - clave: fundamentos
     titulo: "Fundamentos: la semiología basada en la evidencia"
@@ -49,15 +57,15 @@ partes:
   - clave: neonato
     titulo: "El recién nacido"
     autores: [atc, artg]
-    revisor: artg
+    revisor: aetg
   - clave: lactante-nino
     titulo: "El lactante y el niño"
     autores: [atc, artg]
-    revisor: artg
+    revisor: aetg
   - clave: neuroftalmologia
     titulo: "Neuroftalmología del niño y del adulto"
     autores: [gtg]
-    revisor: gtg
+    revisor: aetg
     nota: "Temario aprobado por Gladys Torres Guerrero (30-oct-2026)."
   - clave: adulto
     titulo: "El adulto: síndromes y urgencias"

@@ -39,6 +39,7 @@ class _Base(BaseModel):
 
 class Obra(_Base):
     titulo_provisional: Texto
+    subtitulo: Texto | None = None
     licencia: Literal["CC BY-NC-SA 4.0"]
     legado: Texto
     fuentes_previas: list[Texto] = Field(default_factory=list)

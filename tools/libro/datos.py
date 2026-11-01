@@ -14,6 +14,7 @@ import yaml
 from casos.articulo import Articulo, leer_articulo
 from casos.compilar import CasoLeido, Rutas, compilar, leer_casos
 from casos.evidencia import resumen
+from lecciones.mapa import cargar as cargar_mapa
 from libro import CONDICIONES_NEUROLOGIA
 
 RAIZ = Path(__file__).resolve().parents[2]
@@ -28,19 +29,53 @@ _SPAN_REF_RE = re.compile(r'<span\s+id="ref-\d+"\s*></span>\s*')
 _LINK_REF_RE = re.compile(r"\[(\[\d+\])\]\(#ref-\d+\)")
 
 
+ROLES_LIBRO: dict[str, str] = {
+    "autor-fundador": "autor fundador",
+    "autor": "autor",
+    "coordinacion-editorial": "coordinación editorial",
+}
+LICENCIAS: dict[str, str] = {
+    "CC BY-NC-SA 4.0": "Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional",
+}
+
+
+@dataclass(frozen=True)
+class AutorLibro:
+    nombre: str
+    rol: str
+    orcid: str | None
+    afiliacion: str | None
+    fallecido: bool
+    nombre_bibliografico: str | None = None
+
+    @property
+    def nombre_visible(self) -> str:
+        """El nombre tal como va en portada y créditos; † marca al autor fallecido."""
+        return f"{self.nombre} †" if self.fallecido else self.nombre
+
+
 @dataclass(frozen=True)
 class MetadatosLibro:
+    """Autoría y licencia del libro: salen de ``lecciones/mapa.yaml``, nunca de valores de respaldo.
+
+    ``CITATION.cff`` describe la plataforma (``medsemiotics``), no el libro: de él solo se leen los
+    enlaces del repositorio y del sitio. El libro no tiene DOI ni ISBN asignados todavía.
+    """
+
     titulo: str
     subtitulo: str
-    autor: str
-    orcid: str
-    afiliacion: str
-    version: str
-    doi: str
-    fecha_publicacion: str
+    autores: tuple[AutorLibro, ...]
     licencia: str
+    licencia_nombre: str
+    obras_previas: tuple[str, ...]
+    editor: AutorLibro
+    partes_del_editor: tuple[str, ...]
     url_repositorio: str
     url_sitio: str
+
+    @property
+    def nombres_autores(self) -> list[str]:
+        return [a.nombre_visible for a in self.autores]
 
 
 @dataclass(frozen=True)
@@ -83,36 +118,66 @@ class CondicionLibro:
     imagen: ImagenCondicion | None
 
 
+def _requerido(datos: dict[str, Any], clave: str, origen: str) -> str:
+    valor = datos.get(clave)
+    if not isinstance(valor, str) or not valor.strip():
+        raise ValueError(
+            f"{origen}: falta el dato obligatorio «{clave}»; el libro no inventa valores"
+        )
+    return valor.strip()
+
+
 def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
+    ruta_mapa = raiz / "lecciones" / "mapa.yaml"
+    if not ruta_mapa.is_file():
+        raise ValueError(f"{ruta_mapa}: falta el mapa del libro (autoría y licencia)")
+    mapa = cargar_mapa(ruta_mapa)
+    obra = mapa.obra
+    if not obra.subtitulo:
+        raise ValueError("lecciones/mapa.yaml: falta el dato obligatorio «obra.subtitulo»")
+    if obra.licencia not in LICENCIAS:
+        raise ValueError(f"lecciones/mapa.yaml: licencia sin nombre conocido: {obra.licencia}")
+    autores = tuple(
+        AutorLibro(
+            nombre=p.nombre,
+            rol=ROLES_LIBRO[p.rol_obra],
+            orcid=p.orcid,
+            afiliacion=p.afiliacion,
+            fallecido=p.fallecido,
+            nombre_bibliografico=p.nombre_bibliografico,
+        )
+        for p in mapa.personas.values()
+    )
+    if not autores or autores[0].rol != ROLES_LIBRO["autor-fundador"]:
+        raise ValueError("lecciones/mapa.yaml: el primer autor debe ser el autor fundador")
+
+    editores = [a for a in autores if a.rol == ROLES_LIBRO["coordinacion-editorial"]]
+    if len(editores) != 1:
+        raise ValueError("lecciones/mapa.yaml: debe haber exactamente un editor (coordinación)")
+    editor_clave = next(
+        k for k, p in mapa.personas.items() if p.rol_obra == "coordinacion-editorial"
+    )
+    # Partes que el editor revisa y también escribe: su revisión no es independiente.
+    propias = tuple(
+        p.titulo for p in mapa.partes if p.revisor == editor_clave and editor_clave in p.autores
+    )
+
     ruta_cff = raiz / "CITATION.cff"
     datos_raw = yaml.safe_load(ruta_cff.read_text(encoding="utf-8"))
     if not isinstance(datos_raw, dict):
         raise ValueError(f"{ruta_cff}: CITATION.cff no contiene un mapa YAML válido")
 
-    autores = datos_raw.get("authors", [])
-    autor_principal = autores[0] if isinstance(autores, list) and autores else {}
-    given = str(autor_principal.get("given-names", "Alcy")).strip()
-    family = str(autor_principal.get("family-names", "Montserrat")).strip()
-    orcid = str(autor_principal.get("orcid", "https://orcid.org/0009-0001-7627-9895")).strip()
-    afiliacion = str(autor_principal.get("affiliation", "PowerSemiotics")).strip()
-
     return MetadatosLibro(
-        titulo="Neurología Clínica y Semiología Basada en la Evidencia",
-        subtitulo=(
-            "Cocientes de verosimilitud, reglas de decisión clínica, aprendizaje basado en "
-            "problemas y síndromes neurológicos de urgencia y consulta"
-        ),
-        autor=f"{given} {family}".strip(),
-        orcid=orcid,
-        afiliacion=afiliacion,
-        version=str(datos_raw.get("version", "0.2.0")),
-        doi=str(datos_raw.get("doi", "10.5281/zenodo.22069641")),
-        fecha_publicacion=str(datos_raw.get("date-released", "2026-04-20")),
-        licencia=str(datos_raw.get("license", "CC-BY-SA-4.0")),
-        url_repositorio=str(
-            datos_raw.get("repository-code", "https://github.com/alcyedmundo281/medsemiotics")
-        ),
-        url_sitio=str(datos_raw.get("url", "https://powersemiotics.com/medsemiotics/")),
+        titulo=obra.titulo_provisional,
+        subtitulo=obra.subtitulo,
+        autores=autores,
+        licencia=obra.licencia,
+        licencia_nombre=LICENCIAS[obra.licencia],
+        obras_previas=(*obra.fuentes_previas, obra.legado),
+        editor=editores[0],
+        partes_del_editor=propias,
+        url_repositorio=_requerido(datos_raw, "repository-code", "CITATION.cff"),
+        url_sitio=_requerido(datos_raw, "url", "CITATION.cff"),
     )
 
 

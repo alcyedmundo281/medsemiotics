@@ -76,6 +76,9 @@ class Autor(_Base):
     nombre: Texto
     orcid: str | None = None
     afiliacion: Texto | None = None
+    # Forma con la que la persona firma en la bibliografía (p. ej. «Alcy R. Torres», PubMed:
+    # «Torres AR»): se usa en la línea de revisión y en las citas. La portada usa `nombre`.
+    nombre_bibliografico: Texto | None = None
     rol_obra: RolObra = "autor"
     fallecido: bool = False
     credit: list[CreditRol] = Field(min_length=1)

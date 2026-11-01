@@ -48,11 +48,22 @@ def test_dimensiones_catalogo_kdp_ingramspark() -> None:
     assert pytest.approx(244 * 72.0 / 25.4, abs=0.05) == ALTO_PT
 
 
+AUTORES_DEL_LIBRO = [
+    "Alcy Torres Catefort †",
+    "Alcy Ramiro Torres Guerrero",
+    "Gladys Torres Guerrero",
+    "Alcy Edmundo Torres Guerrero",
+]
+
+
 def test_fuentes_y_condiciones_neurologia() -> None:
     assert verificar_fuentes_neurologia(RAIZ) == []
     meta = leer_metadatos(RAIZ)
     assert "Neurología" in meta.titulo
-    assert meta.doi.startswith("10.5281/zenodo.")
+    # Autoría y licencia salen de lecciones/mapa.yaml, en este orden; el libro aún no tiene DOI.
+    assert meta.nombres_autores == AUTORES_DEL_LIBRO
+    assert meta.licencia == "CC BY-NC-SA 4.0"
+    assert not hasattr(meta, "doi")
 
     condiciones = leer_condiciones_neurologia(RAIZ)
     assert tuple(c.condicion_id for c in condiciones) == CONDICIONES_NEUROLOGIA
@@ -102,7 +113,7 @@ def test_parsear_y_validar_pdfinfo_170x244(tmp_path: Path) -> None:
     ruta_pdf = tmp_path / "libro.pdf"
     salida_simulada = (
         "Title:          Neurología Clínica y Semiología Basada en la Evidencia\n"
-        "Author:         Alcy Montserrat\n"
+        "Author:         Autor de prueba\n"
         "Producer:       LuaHBTeX-1.24.0\n"
         "Pages:          64\n"
         "Encrypted:      no\n"

@@ -90,6 +90,11 @@ La ética de biosemiotics se conserva y se hace cumplir:
   legado queda exenta.
 - **Autoría:** un autor fallecido no ejerce revisión, supervisión ni validación de la
   edición nueva. El agente nunca es revisor.
+- **Revisión:** decisión editorial de Alcy Edmundo Torres Guerrero: el especialista es autor
+  de su área (neuropediatría, Alcy Ramiro Torres Guerrero; neuroftalmología, Gladys Torres
+  Guerrero) y el editor, Alcy Edmundo Torres Guerrero, es el revisor de todas las partes. No hay
+  corevisores. La portada usa el nombre completo de las personas; la línea de revisión y las
+  citas usan su `nombre_bibliografico` (p. ej. «Alcy R. Torres», PubMed: Torres AR).
 - **Imágenes:** Wikimedia Commons (página `File:`) o ilustración original con autor humano.
   Nunca fotografías de pacientes de las ediciones anteriores ni imágenes generadas con IA.
 - **Estados:** en un `borrador` las faltas son alertas; desde `revisado` bloquean.

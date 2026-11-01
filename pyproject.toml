@@ -72,6 +72,6 @@ pretty = true
 [tool.pytest.ini_options]
 minversion = "8.0"
 testpaths = ["tools/tests"]
-python_files = ["test_casos*.py", "test_imagenes*.py", "test_classroom.py", "test_libro*.py", "test_lecciones*.py"]
+python_files = ["test_casos*.py", "test_imagenes*.py", "test_classroom.py", "test_libro*.py", "test_lecciones*.py", "test_autoria*.py"]
 pythonpath = ["tools"]
 addopts = "-q -p no:cacheprovider"
