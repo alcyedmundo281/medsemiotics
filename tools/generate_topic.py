@@ -25,6 +25,8 @@ ROOT = Path(__file__).resolve().parent.parent
 REPO = "alcyedmundo281/medsemiotics-db"
 SITE = "https://powersemiotics.com/medsemiotics/"
 POSTS = ROOT / "posts"
+# Condiciones de la db que existen pero aún no se publican (sin revisión editorial).
+EXCLUDED = ROOT / "tools" / "topics-excluidos.yaml"
 STATES = {
     "medido": "LR medido",
     "no_medido": "LR no medido",
@@ -519,20 +521,49 @@ def make_post(source, condition_path, previous=None):
     return text, meta
 
 
-def sync(source, check=False, condition=None, write_backlinks=False):
+def read_excluded(path=EXCLUDED):
+    """Condiciones que no se publican todavía: {id: motivo}. Excluir es explícito y con motivo."""
+    if not path.exists():
+        return {}
+    excluded = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("excluidas") or {}
+    for cid, reason in excluded.items():
+        if not re.fullmatch(r"HM:\d+", str(cid)) or not isinstance(reason, str) or not reason.strip():
+            raise ValueError(f"Exclusión inválida en {path.name}: {cid!r} necesita un id HM y un motivo.")
+    return excluded
+
+
+def plan(source, paths, previous, excluded, complete=False):
+    """Artículos a generar y condiciones excluidas. Una exclusión nunca borra un artículo en silencio."""
+    planned, skipped = [], []
+    for path in paths:
+        cid = source.read(path)["id"]
+        if cid in excluded:
+            if cid in previous:
+                raise ValueError(
+                    f"{cid} está excluida ({excluded[cid]}) pero ya tiene artículo en posts/: "
+                    "retírelo en un cambio revisado o quite la exclusión.")
+            skipped.append(cid)
+            continue
+        oldpath, old = previous.get(cid, (POSTS / (Path(path).stem + ".md"), None))
+        text, meta = make_post(source, path, old)
+        planned.append((oldpath, text, meta))
+    if complete and set(excluded) - set(skipped):
+        raise ValueError(f"Exclusión sin condición en la fuente: {sorted(set(excluded) - set(skipped))}")
+    return planned, skipped
+
+
+def sync(source, check=False, condition=None, write_backlinks=False, excluded=None):
     previous = read_posts()
+    excluded = read_excluded() if excluded is None else excluded
     paths = [p for p in source.paths if p.startswith("condiciones/")]
     if condition:
         key = condition.replace(":", "")
         paths = [p for p in paths if Path(p).name == condition or Path(p).name.split("-")[0] == key]
         if len(paths) != 1:
             raise ValueError(f"Condición no encontrada o ambigua: {condition}")
-    planned = []
-    for path in paths:
-        cid = source.read(path)["id"]
-        oldpath, old = previous.get(cid, (POSTS / (Path(path).stem + ".md"), None))
-        text, meta = make_post(source, path, old)
-        planned.append((oldpath, text, meta))
+    planned, skipped = plan(source, paths, previous, excluded, complete=not condition)
+    if condition and skipped:
+        raise ValueError(f"{condition} está excluida de la sincronización: {excluded[condition]}")
     if not condition:
         orphaned = set(previous) - {m["grounding"]["condicion_id"] for _, _, m in planned}
         if orphaned:
@@ -581,6 +612,8 @@ def sync(source, check=False, condition=None, write_backlinks=False):
         print(f"Publicación verificada: {len(links)} artículos; URLs actualizadas: {len(different_urls)}.")
         if different_urls:
             sync(Source(source.directory), condition=condition)
+    if skipped:
+        print("Excluidas (sin publicar): " + ", ".join(f"{c} ({excluded[c]})" for c in skipped))
     print(f"Condiciones: {len(paths)}. Artículos: {len(planned)}. Cambios: {len(changed)}.")
 
 

@@ -259,4 +259,6 @@ cierre:
     - >-
       Presentación de la meningitis en el lactante y en el anciano, poblaciones a las que
       no se aplican las mediciones de este artículo.
-omitidos: []
+omitidos:
+  - hallazgo: HM:3240
+    motivo: población pediátrica; el caso es de un adulto

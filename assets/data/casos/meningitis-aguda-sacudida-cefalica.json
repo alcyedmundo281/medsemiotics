@@ -12,7 +12,7 @@
     "ultima_revision": "2026-09-24",
     "revisiones": []
   },
-  "fuente_revision": "af44eec90966a41d8052c3605c90a480ad042299",
+  "fuente_revision": "ea2f6e63b8508e6a36a28fd11950bd28c0900a49",
   "nivel": "Pregrado",
   "duracion_min": 45,
   "aviso": "Caso clínico ficticio con fines docentes. Las cifras de evidencia provienen de medsemiotics-db y se actualizan con la base; el relato clínico no describe a un paciente real.",
@@ -344,7 +344,13 @@
       "Presentación de la meningitis en el lactante y en el anciano, poblaciones a las que no se aplican las mediciones de este artículo."
     ]
   },
-  "omitidos": [],
+  "omitidos": [
+    {
+      "id": "HM:3240",
+      "nombre": "Fontanela anterior abombada",
+      "motivo": "población pediátrica; el caso es de un adulto"
+    }
+  ],
   "referencias": [
     {
       "id": "pmid:12060874",
