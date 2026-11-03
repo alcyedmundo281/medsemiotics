@@ -1,0 +1,177 @@
+# Autoevaluación de la lección «Examen neurológico del recién nacido».
+#
+# Fuente única de esta autoevaluación. Autora: Daniela Torres Tobar (dtt); revisor: el editor
+# (aetg), como fija lecciones/mapa.yaml → autoevaluaciones.
+#
+# Estado: BORRADOR. El primer borrador lo redactó un asistente de IA (Claude) a partir del texto
+# de la lección, y así se declara en `uso_ia`. La autora lo revisa, reescribe o descarta en el
+# documento de trabajo compartido con ella; lo que apruebe se vuelve a escribir aquí, y este
+# archivo pasa a `revisado` solo cuando la revise el editor. Hasta entonces no se publica.
+#
+# Reglas: cuatro opciones, una correcta; ninguna cifra que no esté en la lección; las cifras de
+# rendimiento diagnóstico van como token de medsemiotics-db (`{{lr+ HM:…}}`), nunca a mano.
+leccion: leccion-examen-neurologico-recien-nacido
+estado: borrador
+autores: [dtt]
+revisor: null
+fecha_revision: null
+uso_ia: [redaccion-borrador]
+documento_de_trabajo: "https://claude.ai/artifact/D6NNQehos5aM7fn99C7p9r"
+
+preguntas:
+  - id: p01
+    nivel: recordar
+    seccion: "Cómo se explora · Qué buscamos y cuándo examinamos"
+    enunciado: >-
+      ¿En qué estado de conducta examinamos al recién nacido para que lo observado sea fiable?
+    opciones:
+      A: En sueño con respiración regular, porque está relajado.
+      B: En vigilia tranquila o activa, sin llanto.
+      C: Durante el llanto, porque los reflejos son más vivos.
+      D: En cualquier estado, siempre que se repita el examen.
+    correcta: B
+    explicacion: >-
+      Los estados de Prechtl son una condición del examen, no un pronóstico; examinamos en
+      vigilia sin llanto y, si el niño está cansado o molesto, aplazamos.
+
+  - id: p02
+    nivel: recordar
+    seccion: "Tono pasivo y madurez · Qué significa"
+    enunciado: Un recién nacido tiene una edad gestacional dudosa. ¿Qué usamos para estimarla?
+    opciones:
+      A: El signo de la bufanda.
+      B: El ángulo poplíteo.
+      C: El puntaje New Ballard aplicado completo.
+      D: El perímetro cefálico.
+    correcta: C
+    explicacion: >-
+      El New Ballard puntúa seis criterios neuromusculares y la madurez física; ninguna
+      maniobra aislada del tono pasivo lo sustituye.
+
+  - id: p03
+    nivel: recordar
+    seccion: "Cómo se explora · Mirar antes de tocar"
+    enunciado: ¿Cómo se interpreta el perímetro cefálico del recién nacido?
+    opciones:
+      A: Contra un promedio fijo para todos los recién nacidos a término.
+      B: En centiles según la edad gestacional y el sexo, con los estándares INTERGROWTH-21st.
+      C: En proporción con la talla al nacer.
+      D: Solo si la fontanela está abombada.
+    correcta: B
+    explicacion: Se lee en centiles por edad gestacional y sexo, no contra un promedio fijo.
+
+  - id: p04
+    nivel: aplicar
+    seccion: "Tono pasivo y madurez"
+    enunciado: >-
+      Al llevar la mano del niño hacia el hombro contrario (signo de la bufanda), ¿qué esperamos
+      en un prematuro?
+    opciones:
+      A: El codo no llega a la línea media.
+      B: El codo sobrepasa la línea media con holgura.
+      C: Más resistencia que en el niño a término.
+      D: Lo mismo que en el niño a término.
+    correcta: B
+    explicacion: >-
+      En el niño a término el codo no pasa de la línea media; el prematuro es más hipotónico.
+
+  - id: p05
+    nivel: aplicar
+    seccion: "Tono activo · Moro"
+    enunciado: ¿Cómo provocamos el reflejo de Moro en esta edición?
+    opciones:
+      A: Levantando al niño por los pies y soltándolo de pronto.
+      B: >-
+        Sosteniendo cabeza y tronco superior y dejando que la cabeza descienda un poco, de modo
+        controlado, sin soltarlo nunca.
+      C: Golpeando la mesa junto a la cabeza.
+      D: Traccionando de ambos brazos hasta sentarlo.
+    correcta: B
+    explicacion: >-
+      Esta técnica sostenida reemplaza a la del texto de 1993, que levantaba al niño por los pies.
+
+  - id: p06
+    nivel: evidencia
+    seccion: "Qué significa · Qué hacer"
+    enunciado: >-
+      Un lactante con fiebre e irritabilidad tiene la fontanela abombada. ¿Qué interpretación es
+      correcta?
+    opciones:
+      A: Confirma la meningitis bacteriana.
+      B: >-
+        Aumenta la probabilidad de meningitis bacteriana ({{lr+ HM:3240}}), pero no la confirma:
+        se actúa como ante una posible meningitis.
+      C: Sin fiebre alta no tiene valor.
+      D: Si la fontanela fuera blanda, la meningitis quedaría descartada.
+    correcta: B
+    explicacion: Ningún signo aislado confirma ni descarta la meningitis.
+
+  - id: p07
+    nivel: aplicar
+    seccion: "Qué significa · Qué hacer"
+    enunciado: >-
+      Un recién nacido de 38 semanas, con tres días de vida, tiene prensión plantar fuerte en el
+      pie derecho y débil en el izquierdo. ¿Qué hacemos?
+    opciones:
+      A: "Tranquilizamos a la familia: desaparecerá con la maduración."
+      B: Lo reevaluamos solo al año de vida.
+      C: Seguimiento neurológico seriado, sin tranquilizar.
+      D: Resonancia magnética urgente en todos los casos.
+    correcta: C
+    explicacion: >-
+      La asimetría apunta a disfunción cerebral; el niño necesita seguimiento y no tranquilidad.
+
+  - id: p08
+    nivel: evidencia
+    seccion: "Qué significa · Pesan los patrones, no los signos"
+    enunciado: >-
+      En recién nacidos a término de bajo riesgo, ¿qué vale una o dos desviaciones aisladas del
+      examen?
+    opciones:
+      A: Indican una lesión probable.
+      B: >-
+        Son frecuentes (un tercio de los niños) y valen poco; alarma la acumulación y un patrón
+        anormal del tono.
+      C: Obligan a una resonancia.
+      D: Permiten descartar una lesión.
+    correcta: B
+    explicacion: Lo que alarma es la acumulación de desviaciones y un patrón anormal del tono.
+
+  - id: p09
+    nivel: evidencia
+    seccion: "Qué significa · Dónde no confiar"
+    enunciado: ¿Qué afirmación respeta lo que muestran las series sobre la prensión plantar?
+    opciones:
+      A: Dan la sensibilidad y la especificidad del signo.
+      B: >-
+        Siguen a lactantes ya seleccionados por tener el reflejo alterado: indican a quién
+        seguir, no la exactitud del signo.
+      C: Demuestran que una prensión plantar normal descarta la parálisis cerebral.
+      D: No hay ningún dato publicado sobre este reflejo.
+    correcta: B
+    explicacion: Son series de lactantes seleccionados, no estudios de exactitud diagnóstica.
+
+  - id: p10
+    nivel: evidencia
+    seccion: "Qué significa · Dónde no confiar"
+    enunciado: >-
+      La base registra {{sens HM:3246}} y {{esp HM:3246}} para la ausencia de movimientos
+      generales de tipo fidgety a los tres a cinco meses de edad corregida. ¿Cuál es su límite?
+    opciones:
+      A: "Ninguno: son cifras definitivas."
+      B: >-
+        Provienen de una revisión narrativa de los propios autores del método, sin población
+        declarada.
+      C: Solo valen para prematuros extremos.
+      D: Se miden al nacer.
+    correcta: B
+    explicacion: Por eso la base no las convierte en un cociente de verosimilitud.
+
+# Pendientes señalados para la autora (también en el documento de trabajo):
+pendientes:
+  - "Repartir la posición de la respuesta correcta: hoy es la B en 8 de 10 preguntas."
+  - "Preguntas con imagen de posturas y maniobras, cuando haya ilustraciones de la lección."
+  - "Una pregunta bayesiana con probabilidad previa dada y la fontanela abombada."
+  - "La prensión palmar que falta en una sola mano y su conducta."
+  - "Predictores del riesgo de parálisis cerebral antes de los cinco meses."
+  - "Por qué este examen sirve donde los recursos son limitados."
