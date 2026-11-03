@@ -368,6 +368,20 @@
   \clearpage
 }
 
+% Dedicatoria: página propia tras los créditos, centrada en la caja de texto y sin título.
+\newenvironment{dedicatoriapdf}{%
+  \thispagestyle{empty}%
+  \vspace*{\fill}%
+  \begingroup
+  \centering\itshape\color{libroprimario}%
+  \setlength{\parindent}{0pt}%
+  \linespread{1.35}\selectfont
+}{%
+  \par\endgroup
+  \vspace*{\fill}\vspace*{\fill}%
+  \clearpage
+}
+
 \newenvironment{creditospdf}{%
   \thispagestyle{empty}%
   \vspace*{\fill}%
