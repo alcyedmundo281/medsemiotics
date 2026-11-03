@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import shutil
 import sys
+import textwrap
+from html import escape
 from typing import TYPE_CHECKING
 
 import yaml
@@ -86,6 +88,8 @@ def _datos_libro_tex(meta: MetadatosLibro) -> str:
     )
     return (
         "% GENERADO por tools/libro/qmd.py desde lecciones/mapa.yaml. No editar a mano.\n"
+        f"{barra}newcommand{{{barra}librotitulo}}{{{_escapar_tex(meta.titulo)}}}\n"
+        f"{barra}newcommand{{{barra}librosubtitulo}}{{{_escapar_tex(meta.subtitulo)}}}\n"
         f"{barra}newcommand{{{barra}libroautoresportada}}{{{nombres}}}\n"
         f"{barra}newcommand{{{barra}librosellopie}}{{{sello}}}\n"
     )
@@ -411,6 +415,14 @@ def _generar_apendice_evidencia(condiciones: Sequence[CondicionLibro]) -> str:
     return "\n".join(lineas)
 
 
+def _tspans(texto: str, ancho: int, salto: int) -> list[str]:
+    """Líneas de un texto de la portada SVG, partido entre palabras."""
+    return [
+        f'    <tspan x="164" dy="{0 if i == 0 else salto}">{escape(linea)}</tspan>'
+        for i, linea in enumerate(textwrap.wrap(texto, ancho))
+    ]
+
+
 def _generar_portada_svg(meta: MetadatosLibro) -> str:
     """Genera portada vectorial SVG 1700 × 2440 (proporción exacta 170 × 244 mm)."""
     lineas = [
@@ -429,16 +441,11 @@ def _generar_portada_svg(meta: MetadatosLibro) -> str:
         '  <line x1="164" y1="238" x2="820" y2="238" stroke="#C69C6D" stroke-width="3" />',
         '  <text x="164" y="345" fill="#F8F6F1" '
         'font-family="Libertinus Serif Display, serif" font-size="68" font-weight="bold">',
-        '    <tspan x="164" dy="0">Neurología Clínica y</tspan>',
-        '    <tspan x="164" dy="82">Semiología Basada</tspan>',
-        '    <tspan x="164" dy="82">en la Evidencia</tspan>',
+        *_tspans(meta.titulo, 26, 82),
         "  </text>",
         '  <text x="164" y="610" fill="#F8F6F1" fill-opacity="0.88" '
         'font-family="Libertinus Serif, serif" font-size="30" font-style="italic">',
-        '    <tspan x="164" dy="0">Cocientes de verosimilitud, reglas de decisión clínica, '
-        "casos socráticos</tspan>",
-        '    <tspan x="164" dy="42">y síndromes neurológicos de urgencia y consulta '
-        "(170 × 244 mm)</tspan>",
+        *_tspans(meta.subtitulo, 60, 42),
         "  </text>",
         '  <line x1="164" y1="705" x2="1536" y2="705" '
         'stroke="#C69C6D" stroke-opacity="0.65" stroke-width="2" />',

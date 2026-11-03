@@ -192,7 +192,7 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
             tuple(mapa.personas[a].nombre for a in banco.autores) if banco else ()
         ),
         revisor_autoevaluaciones=mapa.personas[banco.revisor].nombre if banco else None,
-        titulo=obra.titulo_provisional,
+        titulo=obra.titulo,
         subtitulo=obra.subtitulo,
         autores=autores,
         licencia=obra.licencia,

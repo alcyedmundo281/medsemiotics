@@ -2,7 +2,7 @@
 
 <!-- GENERADO desde lecciones/mapa.yaml y lecciones/*.qmd con `uv run python -m lecciones mapa`. No editar a mano. -->
 
-**Obra:** Neurología Clínica y Semiología Basada en la Evidencia  
+**Obra:** Neurología clínica para el médico general  
 **Legado:** Torres Catefort A. Neurología Pediátrica. 2.ª ed. Quito: Universidad Central del Ecuador; 1993  
 **Licencia:** CC BY-NC-SA 4.0 (lecciones y libro)
 
