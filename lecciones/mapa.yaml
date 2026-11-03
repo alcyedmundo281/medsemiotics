@@ -16,6 +16,9 @@ obra:
   titulo: "Neurología clínica para el médico general"
   subtitulo: "Semiología basada en la evidencia, del recién nacido al adulto"
   licencia: "CC BY-NC-SA 4.0"
+  # Contacto editorial de la obra (créditos): comentarios, erratas y permisos. Ningún autor
+  # publica aquí su correo personal.
+  contacto: "alcy.torres@powersemiotics.com"
   legado: "Torres Catefort A. Neurología Pediátrica. 2.ª ed. Quito: Universidad Central del Ecuador; 1993"
   # Fuera del plan por decisión de los autores (30-oct-2026): cap. XXVI «Reanimación
   # cardiopulmonar» (pp. 185-190), que no es neurología y sigue guías que se actualizan aparte,

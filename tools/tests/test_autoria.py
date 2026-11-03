@@ -99,7 +99,7 @@ def test_los_creditos_declaran_que_la_revision_del_editor_no_es_independiente(
     assert "El recién nacido" not in creditos.split("Revisión editorial:")[1].split("DOI")[0]
 
 
-def test_creditos_nueva_edicion_sin_doi_de_la_plataforma(tmp_path: Path) -> None:
+def test_creditos_nueva_edicion_sin_doi_de_la_obra(tmp_path: Path) -> None:
     generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
     index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
     creditos = index.split("{.creditos-pdf}")[1]
@@ -109,7 +109,8 @@ def test_creditos_nueva_edicion_sin_doi_de_la_plataforma(tmp_path: Path) -> None
     assert "Neurología Pediátrica. 2.ª ed." in creditos
     assert "DOI de la obra: pendiente" in creditos
     assert "ISBN: pendiente" in creditos
-    assert "zenodo" not in index.lower()
+    # El DOI de Zenodo es el de la plataforma y solo figura en su línea (ver abajo).
+    assert index.lower().count("zenodo") == 1
     assert "Atribución-NoComercial-CompartirIgual 4.0" in creditos
     assert "CC BY-NC-SA 4.0" in creditos
 
@@ -265,3 +266,32 @@ def test_ningun_nombre_ni_orcid_fuera_del_mapa_en_assets_tools_o_lecciones() -> 
     assert not problemas, "personas u ORCID que no están en lecciones/mapa.yaml:\n" + "\n".join(
         problemas
     )
+
+
+def _creditos(tmp_path: Path) -> str:
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
+    index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
+    return index.split("{.creditos-pdf}")[1]
+
+
+def test_los_creditos_traen_el_contacto_editorial(tmp_path: Path) -> None:
+    creditos = _creditos(tmp_path)
+    assert "Comentarios, erratas y permisos: <alcy.torres@powersemiotics.com>" in creditos
+
+
+def test_los_creditos_no_traen_el_correo_de_ningun_autor(tmp_path: Path) -> None:
+    creditos = _creditos(tmp_path)
+    assert re.findall(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", creditos) == ["alcy.torres@powersemiotics.com"]
+    meta = leer_metadatos(RAIZ)
+    assert meta.contacto == "alcy.torres@powersemiotics.com"
+
+
+def test_el_doi_de_zenodo_es_el_de_la_plataforma_no_el_del_libro(tmp_path: Path) -> None:
+    creditos = _creditos(tmp_path)
+    assert "DOI de la obra: pendiente de asignación." in creditos
+    doi = "10.5281/zenodo.22069641"
+    lineas = [ln for ln in creditos.splitlines() if doi in ln]
+    assert len(lineas) == 1
+    assert lineas[0].startswith("Plataforma complementaria: *medsemiotics*")
+    assert "DOI de la obra" not in lineas[0]
+    assert "Plataforma interactiva" not in creditos

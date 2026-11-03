@@ -66,7 +66,8 @@ class MetadatosLibro:
     """Autoría y licencia del libro: salen de ``lecciones/mapa.yaml``, nunca de valores de respaldo.
 
     ``CITATION.cff`` describe la plataforma (``medsemiotics``), no el libro: de él solo se leen los
-    enlaces del repositorio y del sitio. El libro no tiene DOI ni ISBN asignados todavía.
+    enlaces del repositorio y del sitio y el DOI de la plataforma (nunca el del libro, que no tiene
+    DOI ni ISBN asignados todavía).
     """
 
     titulo: str
@@ -79,6 +80,8 @@ class MetadatosLibro:
     partes_del_editor: tuple[str, ...]
     url_repositorio: str
     url_sitio: str
+    doi_plataforma: str
+    contacto: str
     autores_autoevaluaciones: tuple[str, ...] = ()
     revisor_autoevaluaciones: str | None = None
 
@@ -154,6 +157,8 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
     obra = mapa.obra
     if not obra.subtitulo:
         raise ValueError("lecciones/mapa.yaml: falta el dato obligatorio «obra.subtitulo»")
+    if not obra.contacto:
+        raise ValueError("lecciones/mapa.yaml: falta el dato obligatorio «obra.contacto»")
     if obra.licencia not in LICENCIAS:
         raise ValueError(f"lecciones/mapa.yaml: licencia sin nombre conocido: {obra.licencia}")
     autores = tuple(
@@ -202,6 +207,8 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
         partes_del_editor=propias,
         url_repositorio=_requerido(datos_raw, "repository-code", "CITATION.cff"),
         url_sitio=_requerido(datos_raw, "url", "CITATION.cff"),
+        doi_plataforma=_requerido(datos_raw, "doi", "CITATION.cff"),
+        contacto=obra.contacto,
     )
 
 

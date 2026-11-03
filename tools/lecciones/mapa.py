@@ -43,6 +43,10 @@ class Obra(_Base):
     licencia: Literal["CC BY-NC-SA 4.0"]
     legado: Texto
     fuentes_previas: list[Texto] = Field(default_factory=list)
+    # Único correo de contacto editorial de la obra (créditos). Nunca el de una persona autora.
+    contacto: (
+        Annotated[str, StringConstraints(pattern=r"^[\w.+-]+@powersemiotics\.com$")] | None
+    ) = None
 
 
 class ParteMapa(_Base):
