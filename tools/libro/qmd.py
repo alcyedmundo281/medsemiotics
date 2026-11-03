@@ -131,7 +131,9 @@ def _generar_index_qmd(meta: MetadatosLibro) -> str:
         "DOI de la obra: pendiente de asignación.  ",
         "ISBN: pendiente (reservado para la edición impresa).  ",
         f"Repositorio fuente: <{meta.url_repositorio}>  ",
-        f"Plataforma interactiva: <{meta.url_sitio}>",
+        f"Plataforma complementaria: *medsemiotics*, <{meta.url_sitio}> · "
+        f"DOI de la plataforma: <https://doi.org/{meta.doi_plataforma}>  ",
+        f"Comentarios, erratas y permisos: <{meta.contacto}>",
         "",
         (
             "**Fuente clínica única verificada:** las cifras de sensibilidad, especificidad y "

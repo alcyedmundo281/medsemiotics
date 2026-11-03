@@ -14,6 +14,9 @@ obra:
   titulo_provisional: "Neurología Clínica y Semiología Basada en la Evidencia"
   subtitulo: "Cocientes de verosimilitud, reglas de decisión clínica, aprendizaje basado en problemas y síndromes neurológicos de urgencia y consulta"
   licencia: "CC BY-NC-SA 4.0"
+  # Contacto editorial de la obra (créditos): comentarios, erratas y permisos. Ningún autor
+  # publica aquí su correo personal.
+  contacto: "alcy.torres@powersemiotics.com"
   legado: "Torres Catefort A. Neurología Pediátrica. 2.ª ed. Quito: Universidad Central del Ecuador; 1993"
   # Fuera del plan por decisión de los autores (30-oct-2026): cap. XXVI «Reanimación
   # cardiopulmonar» (pp. 185-190), que no es neurología y sigue guías que se actualizan aparte,
