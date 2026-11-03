@@ -369,6 +369,14 @@
   \clearpage
 }
 
+\newenvironment{portadillatitulo}{%
+  \begingroup
+  \displayfont\fontsize{25}{29}\selectfont\bfseries\color{libroprimario}%
+  \hyphenpenalty=10000 \exhyphenpenalty=10000 \raggedright\noindent
+}{%
+  \par\endgroup
+}
+
 \newenvironment{creditospdf}{%
   \thispagestyle{empty}%
   \vspace*{\fill}%

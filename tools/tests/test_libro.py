@@ -272,3 +272,40 @@ def test_la_pagina_1_del_pdf_es_la_cubierta(tmp_path: Path) -> None:
     assert "COLECCIÓN POWERSEMIOTICS" in pagina_1
     assert "NUEVA EDICIÓN DE UNA OBRA FUNDADA EN 1991" in pagina_1
     assert "Neuroftalmología del niño y del adulto" in pagina_1
+
+
+def test_la_portadilla_lleva_el_titulo_en_un_bloque_propio(tmp_path: Path) -> None:
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
+    index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
+    titulo = leer_metadatos(RAIZ).titulo
+    portadilla = index.split("{.portadilla-pdf}")[1].split("{.creditos-pdf}")[0]
+    assert f"::: {{.portadilla-titulo}}\n{titulo}\n:::" in portadilla
+    # La cabecera que Quarto convierte en \chapter* se marca para quitarla; es otra cosa.
+    assert "{.unnumbered .unlisted .titulo-de-obra}" in portadilla
+
+
+@pytest.mark.skipif(
+    any(shutil.which(h) is None for h in ("quarto", "lualatex", "pdfinfo", "pdftotext")),
+    reason="requiere quarto, lualatex y poppler",
+)
+def test_la_portadilla_del_pdf_tiene_el_titulo_completo(tmp_path: Path) -> None:
+    pdf = tmp_path / "libro.pdf"
+    compilar_libro_pdf(pdf, tmp_path / "quarto", incluir_borradores=True, exigir_semblanzas=False)
+    pdftotext = shutil.which("pdftotext")
+    assert pdftotext is not None
+    paginas = [
+        " ".join(
+            subprocess.run(
+                [pdftotext, "-f", str(n), "-l", str(n), "-enc", "UTF-8", str(pdf), "-"],
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            ).stdout.split()
+        )
+        for n in (1, 2, 3)
+    ]
+    # Página 1 cubierta, 2 reverso en blanco, 3 portadilla con el título completo.
+    assert "COLECCIÓN POWERSEMIOTICS" in paginas[0]
+    assert paginas[1] == ""
+    assert paginas[2].startswith(leer_metadatos(RAIZ).titulo)

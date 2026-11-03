@@ -105,7 +105,14 @@ def _generar_index_qmd(meta: MetadatosLibro) -> str:
         "```",
         "",
         "::: {.portadilla-pdf}",
-        f"# {meta.titulo} {{.unnumbered .unlisted}}",
+        # Quarto abre el libro con la primera cabecera: la hace `\chapter*` y la pone antes de la
+        # portada. `.titulo-de-obra` la marca para que quitar-titulo.lua la quite; el título que
+        # se imprime en la portadilla es el bloque siguiente.
+        f"# {meta.titulo} {{.unnumbered .unlisted .titulo-de-obra}}",
+        "",
+        "::: {.portadilla-titulo}",
+        meta.titulo,
+        ":::",
         "",
         f"*{meta.subtitulo}*",
         "",

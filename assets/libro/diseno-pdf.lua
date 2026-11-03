@@ -4,6 +4,7 @@
 
 local MapaEntornos = {
   ["portadilla-pdf"] = "portadillapdf",
+  ["portadilla-titulo"] = "portadillatitulo",
   ["creditos-pdf"] = "creditospdf",
   ["triada-signo"] = "triadasigno",
   ["alerta-ficha"] = "alertaficha",
