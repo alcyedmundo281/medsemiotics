@@ -53,6 +53,13 @@ class ParteMapa(_Base):
     nota: Texto | None = None
 
 
+class Autoevaluaciones(_Base):
+    """Bancos de preguntas de toda la obra: quién los escribe y quién los revisa."""
+
+    autores: list[str] = Field(min_length=1)
+    revisor: str
+
+
 class FilaMapa(_Base):
     id: Annotated[str, StringConstraints(pattern=r"^leccion-[a-z0-9]+(-[a-z0-9]+)*$")]
     titulo: Texto
@@ -85,6 +92,7 @@ class Mapa(_Base):
     personas: dict[str, Autor]
     partes: list[ParteMapa] = Field(min_length=1)
     lecciones: list[FilaMapa]
+    autoevaluaciones: Autoevaluaciones | None = None
     silabo: Silabo | None = None
 
     @model_validator(mode="after")
@@ -98,6 +106,13 @@ class Mapa(_Base):
                     raise ValueError(f"parte {parte.clave}: persona desconocida «{alias}»")
             if self.personas[parte.revisor].fallecido:
                 raise ValueError(f"parte {parte.clave}: el revisor no puede ser el autor fallecido")
+        if self.autoevaluaciones is not None:
+            banco = self.autoevaluaciones
+            for alias in [*banco.autores, banco.revisor]:
+                if alias not in self.personas:
+                    raise ValueError(f"autoevaluaciones: persona desconocida «{alias}»")
+            if self.personas[banco.revisor].fallecido:
+                raise ValueError("autoevaluaciones: el revisor no puede ser el autor fallecido")
         repetidos = [i for i, n in Counter(f.id for f in self.lecciones).items() if n > 1]
         if repetidos:
             raise ValueError(f"lecciones: id repetido {repetidos}")
@@ -266,6 +281,17 @@ def renderizar(mapa: Mapa, lecciones: dict[str, dict[str, Any]], raiz: Path = RA
                 f"| {f.orden} | {titulo}<br>`{f.id}` | {f.fase} | {_celda_fuente(f)} | {estado} |"
             )
         lineas.append("")
+
+    if mapa.autoevaluaciones is not None:
+        banco = mapa.autoevaluaciones
+        lineas += [
+            "## Autoevaluaciones de toda la obra",
+            "",
+            "Autores: "
+            + ", ".join(mapa.personas[a].nombre for a in banco.autores)
+            + f" · Revisión: {mapa.personas[banco.revisor].nombre}",
+            "",
+        ]
 
     if mapa.silabo is not None:
         titulos = {f.id: f.titulo for f in mapa.lecciones}

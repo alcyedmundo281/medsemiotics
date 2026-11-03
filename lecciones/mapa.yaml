@@ -46,6 +46,17 @@ personas:
     afiliacion: "Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad Central del Ecuador"
     rol_obra: coordinacion-editorial
     credit: [redaccion, revision-edicion]
+  dtt:
+    nombre: "Daniela Torres Tobar"
+    afiliacion: "B.A. en Neurobiología, Boston University College of Arts & Sciences (2022); estudiante de medicina, Boston University Chobanian & Avedisian School of Medicine"
+    rol_obra: autor-autoevaluaciones
+    credit: [redaccion, curacion-de-datos]
+
+# Autoevaluaciones de toda la obra: el banco de preguntas de cada lección y el del libro.
+# Su autora no escribe una parte; el editor, aetg, las revisa como el resto de la obra.
+autoevaluaciones:
+  autores: [dtt]
+  revisor: aetg
 
 # Decisión editorial (Alcy Edmundo Torres Guerrero): el especialista es autor de su área y el
 # editor, aetg, es el revisor de todo; no hay corevisores.

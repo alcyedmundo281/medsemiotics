@@ -1,7 +1,7 @@
 # Licencia de las lecciones y del libro
 
-© Alcy Torres Catefort (†) y sus herederos, Alcy Ramiro Torres Guerrero, Gladys Torres Guerrero
-y Alcy Edmundo Torres Guerrero.
+© Alcy Torres Catefort (†) y sus herederos, Alcy Ramiro Torres Guerrero, Gladys Torres Guerrero,
+Alcy Edmundo Torres Guerrero y Daniela Torres Tobar.
 
 El contenido de esta carpeta (`lecciones/`) y el libro que se compila a partir de ella se
 publican bajo la licencia **Creative Commons Atribución-NoComercial-CompartirIgual 4.0

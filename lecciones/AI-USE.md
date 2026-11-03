@@ -5,7 +5,8 @@ Alcy Torres Catefort (*Neuropediatría–Urgencias*, 1991; *Neurología Pediátr
 **Autores responsables:** Alcy Ramiro Torres Guerrero
 ([ORCID 0000-0001-5798-9161](https://orcid.org/0000-0001-5798-9161)) ·
 Gladys Torres Guerrero · Alcy Edmundo Torres Guerrero
-([ORCID 0000-0002-9742-375X](https://orcid.org/0000-0002-9742-375X)), coordinación editorial
+([ORCID 0000-0002-9742-375X](https://orcid.org/0000-0002-9742-375X)), coordinación editorial ·
+Daniela Torres Tobar, autoevaluaciones de toda la obra
 **Autor fundador:** Alcy Torres Catefort (†), cuya obra se cita, no se reescribe en su nombre
 **Editor:** Powersemiotics, Wellesley, Massachusetts, Estados Unidos
 **Alcance:** las lecciones de `lecciones/`, los artículos del blog que salen de ellas y las

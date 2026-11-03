@@ -34,6 +34,7 @@ ROLES_LIBRO: dict[str, str] = {
     "autor-fundador": "autor fundador",
     "autor": "autor",
     "coordinacion-editorial": "coordinación editorial",
+    "autor-autoevaluaciones": "autora de las autoevaluaciones",
 }
 LICENCIAS: dict[str, str] = {
     "CC BY-NC-SA 4.0": "Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional",
@@ -73,6 +74,8 @@ class MetadatosLibro:
     partes_del_editor: tuple[str, ...]
     url_repositorio: str
     url_sitio: str
+    autores_autoevaluaciones: tuple[str, ...] = ()
+    revisor_autoevaluaciones: str | None = None
 
     @property
     def nombres_autores(self) -> list[str]:
@@ -168,7 +171,12 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
     if not isinstance(datos_raw, dict):
         raise ValueError(f"{ruta_cff}: CITATION.cff no contiene un mapa YAML válido")
 
+    banco = mapa.autoevaluaciones
     return MetadatosLibro(
+        autores_autoevaluaciones=(
+            tuple(mapa.personas[a].nombre for a in banco.autores) if banco else ()
+        ),
+        revisor_autoevaluaciones=mapa.personas[banco.revisor].nombre if banco else None,
         titulo=obra.titulo_provisional,
         subtitulo=obra.subtitulo,
         autores=autores,
