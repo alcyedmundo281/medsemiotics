@@ -24,7 +24,8 @@ RUTA = ("lecciones", "paratextos", "autores.md")
 NOMBRE_ARCHIVO = "lecciones/paratextos/autores.md"
 
 _FRONTMATTER = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n", re.DOTALL)
-_SECCION = re.compile(r"^###[^\n{]*\{#sobre-([a-z]+)[^}\n]*\}[ \t]*$", re.MULTILINE)
+# Cada semblanza es un div con el id de su persona; el título no se escribe: sale del mapa.
+_SECCION = re.compile(r"^::: \{#sobre-([a-z]+)\}[ \t]*\n(.*?)^:::[ \t]*$", re.MULTILINE | re.DOTALL)
 
 
 def separar(texto: str) -> tuple[dict[str, Any], str]:
@@ -38,12 +39,25 @@ def separar(texto: str) -> tuple[dict[str, Any], str]:
 
 def _cuerpos(cuerpo: str) -> dict[str, str]:
     """Texto de cada semblanza por clave, en el orden en que aparece."""
-    marcas = list(_SECCION.finditer(cuerpo))
-    salida: dict[str, str] = {}
-    for i, marca in enumerate(marcas):
-        fin = marcas[i + 1].start() if i + 1 < len(marcas) else len(cuerpo)
-        salida[marca.group(1)] = cuerpo[marca.end() : fin].strip()
-    return salida
+    return {marca.group(1): marca.group(2).strip() for marca in _SECCION.finditer(cuerpo)}
+
+
+def titulo_de(mapa: Mapa, clave: str) -> str:
+    """Título de la semblanza: el nombre del mapa, con † si la persona falleció."""
+    persona = mapa.personas[clave]
+    return f"{persona.nombre} †" if persona.fallecido else persona.nombre
+
+
+def renderizar(texto: str, mapa: Mapa) -> str:
+    """El paratexto tal como se imprime: sin frontmatter y con cada título sacado del mapa."""
+    cuerpo = separar(texto)[1]
+
+    def seccion(marca: re.Match[str]) -> str:
+        clave = marca.group(1)
+        titulo = f"### {titulo_de(mapa, clave)} {{#sobre-{clave} .unnumbered}}"
+        return f"{titulo}\n\n{marca.group(2).strip()}\n"
+
+    return _SECCION.sub(seccion, cuerpo)
 
 
 def _aprobadores(mapa: Mapa, clave: str) -> set[str]:
@@ -68,7 +82,7 @@ def problemas_de_semblanzas(texto: str, mapa: Mapa) -> list[str]:
     cuerpos = _cuerpos(cuerpo)
     if list(cuerpos) != esperadas:
         problemas.append(
-            f"{NOMBRE_ARCHIVO}: una sección «### … {{#sobre-<clave>}}» por persona, en el orden "
+            f"{NOMBRE_ARCHIVO}: un bloque «::: {{#sobre-<clave>}}» por persona, en el orden "
             f"de autoría ({', '.join(esperadas)})"
         )
     for clave in esperadas:
@@ -78,6 +92,10 @@ def problemas_de_semblanzas(texto: str, mapa: Mapa) -> list[str]:
             continue
         if not cuerpos.get(clave):
             problemas.append(f"semblanza de {nombre}: sin texto")
+        elif nombre not in cuerpos[clave]:
+            problemas.append(
+                f"semblanza de {nombre}: el texto debe nombrar a la persona como el mapa"
+            )
         aprobada = ficha.get("aprobada_por") or []
         aprobada = {aprobada} if isinstance(aprobada, str) else set(aprobada)
         desconocidos = aprobada - set(mapa.personas)

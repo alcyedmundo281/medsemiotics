@@ -8,7 +8,13 @@ from typing import TYPE_CHECKING
 import pytest
 
 from lecciones import mapa as m
-from lecciones.semblanzas import problemas_de_semblanzas, separar, verificar
+from lecciones.semblanzas import (
+    problemas_de_semblanzas,
+    renderizar,
+    separar,
+    titulo_de,
+    verificar,
+)
 from libro.datos import RAIZ
 from libro.qmd import generar_proyecto_quarto
 
@@ -17,6 +23,8 @@ if TYPE_CHECKING:
 
 CLAVES = ["atc", "artg", "gtg", "aetg", "dtt"]
 VIVOS = ["artg", "gtg", "aetg", "dtt"]
+FECHA = "2026-11-03"
+PARATEXTO = RAIZ / "lecciones" / "paratextos" / "autores.md"
 
 
 def _texto(aprobaciones: dict[str, tuple[list[str], str]], cuerpos: dict[str, str]) -> str:
@@ -25,15 +33,16 @@ def _texto(aprobaciones: dict[str, tuple[list[str], str]], cuerpos: dict[str, st
         f"fecha: {aprobaciones.get(k, ([], 'null'))[1]}}}"
         for k in CLAVES
     )
-    secciones = "\n\n".join(
-        f"### Nombre {k} {{#sobre-{k} .unnumbered}}\n\n{cuerpos.get(k, '')}" for k in CLAVES
-    )
-    return f"---\nsemblanzas:\n{registro}\n---\n\n## SOBRE LOS AUTORES {{.unnumbered}}\n\n{secciones}\n"
+    bloques = "\n\n".join(f"::: {{#sobre-{k}}}\n{cuerpos.get(k, '')}\n:::" for k in CLAVES)
+    encabezado = "## SOBRE LOS AUTORES {.unnumbered}"
+    return f"---\nsemblanzas:\n{registro}\n---\n\n{encabezado}\n\n{bloques}\n"
 
 
 def _completo() -> str:
-    aprobaciones = {k: ([k], "2026-11-03") for k in VIVOS} | {"atc": (VIVOS, "2026-11-03")}
-    return _texto(aprobaciones, {k: f"Semblanza de {k}." for k in CLAVES})
+    mapa = m.cargar()
+    aprobaciones = {k: ([k], FECHA) for k in VIVOS} | {"atc": (VIVOS, FECHA)}
+    cuerpos = {k: f"{mapa.personas[k].nombre} es una persona de prueba." for k in CLAVES}
+    return _texto(aprobaciones, cuerpos)
 
 
 def test_el_orden_del_paratexto_es_el_de_autoria() -> None:
@@ -41,13 +50,33 @@ def test_el_orden_del_paratexto_es_el_de_autoria() -> None:
 
 
 def test_la_semblanza_de_gtg_esta_pendiente_de_su_aprobacion() -> None:
-    texto = (RAIZ / "lecciones" / "paratextos" / "autores.md").read_text(encoding="utf-8")
-    datos, cuerpo = separar(texto)
+    datos, cuerpo = separar(PARATEXTO.read_text(encoding="utf-8"))
     assert datos["semblanzas"]["gtg"] == {"aprobada_por": [], "fecha": None}
     assert "directora ejecutiva de VisionUno, en Quito" in cuerpo
     assert "Bascom Palmer" in cuerpo
     # Las demás siguen vacías hasta que las envíen sus titulares.
-    assert all(f"{{#sobre-{k} .unnumbered}}\n\n###" in cuerpo or k == "dtt" for k in CLAVES if k != "gtg")
+    for clave in ("atc", "artg", "aetg", "dtt"):
+        assert f"::: {{#sobre-{clave}}}\n:::" in cuerpo
+
+
+def test_el_nombre_de_la_semblanza_coincide_con_el_del_mapa() -> None:
+    mapa = m.cargar()
+    texto = PARATEXTO.read_text(encoding="utf-8")
+    impreso = renderizar(texto, mapa)
+    for clave in CLAVES:
+        assert f"### {titulo_de(mapa, clave)} {{#sobre-{clave} .unnumbered}}" in impreso
+    assert titulo_de(mapa, "atc") == "Alcy Torres Catefort †"
+    # El texto de gtg usa el nombre del mapa, sin guion; la forma con guion es solo para citas.
+    assert "Gladys Torres Guerrero es oftalmóloga" in impreso
+    assert "Torres-Guerrero" not in impreso
+    assert "aprobada_por" not in impreso
+
+
+def test_el_texto_debe_nombrar_a_la_persona_como_el_mapa() -> None:
+    texto = _completo().replace("Gladys Torres Guerrero es", "Gladys Torres-Guerrero es")
+    assert problemas_de_semblanzas(texto, m.cargar()) == [
+        "semblanza de Gladys Torres Guerrero: el texto debe nombrar a la persona como el mapa"
+    ]
 
 
 def test_afiliacion_de_gtg_en_el_mapa() -> None:
@@ -66,8 +95,9 @@ def test_un_paratexto_completo_y_aprobado_no_da_problemas() -> None:
 
 def test_la_de_un_autor_vivo_la_aprueba_su_titular_y_no_otro() -> None:
     texto = _completo().replace("gtg: {aprobada_por: ['gtg']", "gtg: {aprobada_por: ['aetg']")
-    problemas = problemas_de_semblanzas(texto, m.cargar())
-    assert problemas == ["semblanza de Gladys Torres Guerrero: sin aprobar por Gladys Torres Guerrero"]
+    assert problemas_de_semblanzas(texto, m.cargar()) == [
+        "semblanza de Gladys Torres Guerrero: sin aprobar por Gladys Torres Guerrero"
+    ]
 
 
 def test_la_de_atc_la_aprueban_todos_los_autores_vivos() -> None:
@@ -81,13 +111,14 @@ def test_la_de_atc_la_aprueban_todos_los_autores_vivos() -> None:
 
 
 def test_aprobar_sin_fecha_no_basta() -> None:
-    texto = _completo().replace("dtt: {aprobada_por: ['dtt'], fecha: 2026-11-03}", "dtt: {aprobada_por: ['dtt'], fecha: null}")
+    antes = f"dtt: {{aprobada_por: ['dtt'], fecha: {FECHA}}}"
+    texto = _completo().replace(antes, "dtt: {aprobada_por: ['dtt'], fecha: null}")
     assert problemas_de_semblanzas(texto, m.cargar()) == [
         "semblanza de Daniela Torres Tobar: falta la fecha de aprobación"
     ]
 
 
-def test_el_orden_de_las_secciones_se_comprueba() -> None:
+def test_el_orden_de_los_bloques_se_comprueba() -> None:
     texto = _completo().replace("#sobre-artg", "#sobre-tmp").replace("#sobre-gtg", "#sobre-artg")
     texto = texto.replace("#sobre-tmp", "#sobre-gtg")
     assert any("en el orden de autoría" in p for p in problemas_de_semblanzas(texto, m.cargar()))
@@ -110,5 +141,6 @@ def test_aprobado_el_paratexto_se_imprime_sin_su_frontmatter(tmp_path: Path) -> 
     generar_proyecto_quarto(salida, raiz)
     qmd = (salida / "P-autores.qmd").read_text(encoding="utf-8")
     assert "aprobada_por" not in qmd
-    assert qmd.startswith("\n## SOBRE LOS AUTORES") or qmd.startswith("## SOBRE LOS AUTORES")
-    assert "Semblanza de dtt." in qmd
+    assert qmd.lstrip().startswith("## SOBRE LOS AUTORES")
+    assert "### Daniela Torres Tobar {#sobre-dtt .unnumbered}" in qmd
+    assert "Daniela Torres Tobar es una persona de prueba." in qmd

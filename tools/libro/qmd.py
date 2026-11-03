@@ -10,8 +10,9 @@ import yaml
 
 from lecciones.evidencia import cargar_articulos
 from lecciones.fuente import leer as leer_leccion
+from lecciones.mapa import cargar as cargar_mapa
 from lecciones.proyectar import lecciones_por_parte, proyectar
-from lecciones.semblanzas import separar as separar_semblanzas
+from lecciones.semblanzas import renderizar as renderizar_semblanzas
 from lecciones.semblanzas import verificar as verificar_semblanzas
 from lecciones.validacion import claves_citadas
 from libro import ALTO_MM, ALTO_PULGADAS, ANCHO_MM, ANCHO_PULGADAS
@@ -574,8 +575,8 @@ def _paratextos(
     nombres: list[str] = []
     for ruta in sorted((raiz / "lecciones" / "paratextos").glob("*.md")):
         texto = ruta.read_text(encoding="utf-8")
-        if ruta.name == "autores.md":
-            texto = separar_semblanzas(texto)[1]  # la aprobación no se imprime
+        if ruta.name == "autores.md":  # sin la aprobación y con los títulos del mapa
+            texto = renderizar_semblanzas(texto, cargar_mapa(raiz / "lecciones" / "mapa.yaml"))
         texto = texto.replace("{N}", str(len(citadas)))
         nombre = f"P-{ruta.stem}.qmd"
         (carpeta_salida / nombre).write_text(texto, encoding="utf-8")
