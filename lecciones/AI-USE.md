@@ -1,6 +1,6 @@
 # Declaración de uso de inteligencia artificial
 
-**Obra:** *Neurología Clínica y Semiología Basada en la Evidencia*, sobre la obra de
+**Obra:** *Neurología clínica para el médico general*, sobre la obra de
 Alcy Torres Catefort (*Neuropediatría–Urgencias*, 1991; *Neurología Pediátrica*, 1993)
 **Autores responsables:** Alcy Ramiro Torres Guerrero
 ([ORCID 0000-0001-5798-9161](https://orcid.org/0000-0001-5798-9161)) ·

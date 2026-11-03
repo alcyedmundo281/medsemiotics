@@ -38,7 +38,7 @@ class _Base(BaseModel):
 
 
 class Obra(_Base):
-    titulo_provisional: Texto
+    titulo: Texto
     subtitulo: Texto | None = None
     licencia: Literal["CC BY-NC-SA 4.0"]
     legado: Texto
@@ -239,7 +239,7 @@ def renderizar(mapa: Mapa, lecciones: dict[str, dict[str, Any]], raiz: Path = RA
         "<!-- GENERADO desde lecciones/mapa.yaml y lecciones/*.qmd con "
         "`uv run python -m lecciones mapa`. No editar a mano. -->",
         "",
-        f"**Obra:** {mapa.obra.titulo_provisional}  ",
+        f"**Obra:** {mapa.obra.titulo}  ",
         f"**Legado:** {mapa.obra.legado}  ",
         f"**Licencia:** {mapa.obra.licencia} (lecciones y libro)",
         "",

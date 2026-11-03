@@ -295,6 +295,18 @@ def test_la_portadilla_del_pdf_tiene_el_titulo_completo(tmp_path: Path) -> None:
     assert pdftotext is not None
     paginas = [
         " ".join(
+# --- título y subtítulo: salen del mapa, en la cubierta y en la portadilla ---------------------
+
+
+def _normal(texto: str) -> str:
+    return " ".join(texto.split())
+
+
+def _paginas_pdf(pdf: Path, hasta: int = 8) -> list[str]:
+    pdftotext = shutil.which("pdftotext")
+    assert pdftotext is not None
+    return [
+        _normal(
             subprocess.run(
                 [pdftotext, "-f", str(n), "-l", str(n), "-enc", "UTF-8", str(pdf), "-"],
                 check=True,
@@ -309,3 +321,79 @@ def test_la_portadilla_del_pdf_tiene_el_titulo_completo(tmp_path: Path) -> None:
     assert "COLECCIÓN POWERSEMIOTICS" in paginas[0]
     assert paginas[1] == ""
     assert paginas[2].startswith(leer_metadatos(RAIZ).titulo)
+            ).stdout
+        )
+        for n in range(1, hasta + 1)
+    ]
+
+
+def test_el_titulo_de_la_obra_es_el_del_mapa() -> None:
+    meta = leer_metadatos(RAIZ)
+    assert meta.titulo == "Neurología clínica para el médico general"
+    assert meta.subtitulo == "Semiología basada en la evidencia, del recién nacido al adulto"
+
+
+def test_las_macros_de_cubierta_y_portadilla_salen_del_mapa(tmp_path: Path) -> None:
+    meta = leer_metadatos(RAIZ)
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
+    datos = (tmp_path / "datos-libro.tex").read_text(encoding="utf-8")
+    assert r"\newcommand{\librotitulo}{" + meta.titulo + "}" in datos
+    assert r"\newcommand{\librosubtitulo}{" + meta.subtitulo + "}" in datos
+    index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
+    portadilla = index.split("{.portadilla-pdf}")[1].split("{.creditos-pdf}")[0]
+    assert f"# {meta.titulo} " in portadilla
+    assert f"*{meta.subtitulo}*" in portadilla
+    creditos = index.split("{.creditos-pdf}")[1]
+    assert f"**{meta.titulo}**" in creditos
+    assert f"*{meta.subtitulo}*" in creditos
+    cfg = yaml.safe_load((tmp_path / "_quarto.yml").read_text(encoding="utf-8"))
+    assert cfg["book"]["title"] == meta.titulo
+    assert cfg["book"]["subtitle"] == meta.subtitulo
+    svg = _normal((tmp_path / "portada.svg").read_text(encoding="utf-8"))
+    assert all(palabra in svg for palabra in meta.titulo.split())
+
+
+def test_ningun_titulo_escrito_a_mano() -> None:
+    meta = leer_metadatos(RAIZ)
+    antiguos = (
+        "Semiología Basada en la Evidencia",
+        "Cocientes de verosimilitud, reglas de decisión clínica",
+        "Neurología Clínica y",
+    )
+    fuentes = [
+        *(RAIZ / "tools" / "libro").glob("*.py"),
+        *(RAIZ / "assets" / "libro").glob("*.tex"),
+        *(RAIZ / "assets" / "libro").glob("*.lua"),
+    ]
+    for ruta in fuentes:
+        texto = _normal(ruta.read_text(encoding="utf-8"))
+        for cadena in (meta.titulo, meta.subtitulo, *antiguos):
+            assert cadena not in texto, f"{ruta.name} escribe a mano «{cadena}»"
+
+
+def test_la_declaracion_de_ia_nombra_la_obra_como_el_mapa() -> None:
+    texto = (RAIZ / "lecciones" / "AI-USE.md").read_text(encoding="utf-8")
+    assert f"*{leer_metadatos(RAIZ).titulo}*" in texto
+
+
+@pytest.mark.skipif(
+    any(shutil.which(h) is None for h in ("quarto", "lualatex", "pdfinfo", "pdftotext")),
+    reason="requiere quarto, lualatex y poppler",
+)
+def test_cubierta_portadilla_y_metadatos_del_pdf_coinciden_con_el_mapa(tmp_path: Path) -> None:
+    meta = leer_metadatos(RAIZ)
+    pdf = tmp_path / "libro.pdf"
+    info = compilar_libro_pdf(
+        pdf, tmp_path / "quarto", incluir_borradores=True, exigir_semblanzas=False
+    )
+    paginas = _paginas_pdf(pdf)
+    cubierta = next(p for p in paginas if "COLECCIÓN POWERSEMIOTICS" in p)
+    assert meta.titulo in cubierta
+    assert meta.subtitulo in cubierta
+    # La portadilla abre con el título y trae los autores; los créditos añaden «Autoría:».
+    portadilla = next(
+        p for p in paginas if p.startswith(meta.titulo) and "Daniela" in p and "Autoría:" not in p
+    )
+    assert meta.subtitulo in portadilla
+    titulo_pdf = next(ln for ln in info.salida_bruta.splitlines() if ln.startswith("Title:"))
+    assert _normal(titulo_pdf.removeprefix("Title:")) == meta.titulo

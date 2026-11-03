@@ -1,4 +1,4 @@
-"""Generador del libro impreso de Neurología Clínica y Semiología (Quarto + LuaLaTeX).
+"""Generador del libro impreso de neurología (Quarto + LuaLaTeX).
 
 Construye el proyecto Quarto en ``build/quarto/`` con formato de catálogo KDP e IngramSpark
 (6,69 × 9,61 pulgadas = 170 × 244 mm), compila el PDF con ``quarto render`` + ``lualatex`` y

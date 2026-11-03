@@ -1,4 +1,4 @@
-% Preámbulo tipográfico del libro de Neurología Clínica y Semiología Basada en la Evidencia.
+% Preámbulo tipográfico del libro de neurología (título y autoría: datos-libro.tex).
 % Maqueta de catálogo KDP / IngramSpark: 6,69 × 9,61 pulgadas = 170 × 244 mm (scrbook, dos caras).
 % Compilado con LuaLaTeX a través de Quarto.
 
@@ -193,14 +193,13 @@
       at (164,205) {COLECCIÓN POWERSEMIOTICS \enspace·\enspace MEDICINA BASADA EN LA EVIDENCIA};
     \draw[portadaoro, line width=0.8pt] (164,235) -- (780,235);
 
-    % Título principal en tipografía de cartel. Sin guiones: una palabra nunca se parte y los
-    % saltos de línea van entre palabras.
-    \node[anchor=north west, text=portadapapel, font=\displayfont\fontsize{25}{29}\selectfont\bfseries, text width=137mm, align=left]
-      at (164,295) {\hyphenpenalty=10000 \exhyphenpenalty=10000 Neurología Clínica y Semiología\\Basada en la Evidencia};
+    % Título principal en tipografía de cartel, sin guiones. El texto sale de datos-libro.tex.
+    \node[anchor=north west, text=portadapapel, font=\displayfont\fontsize{25}{29}\selectfont\bfseries, text width=116mm, align=left]
+      at (164,295) {\hyphenpenalty=10000 \exhyphenpenalty=10000 \librotitulo};
 
     % Subtítulo.
     \node[anchor=north west, text=portadapapel, opacity=0.90, font=\normalfont\fontsize{10.8}{14.5}\selectfont\itshape, text width=114mm, align=left]
-      at (164,535) {Cocientes de verosimilitud, reglas de decisión clínica, aprendizaje basado en problemas y síndromes neurológicos de urgencia y consulta};
+      at (164,535) {\librosubtitulo};
 
     \draw[portadaoro, opacity=0.65, line width=0.7pt] (164,695) -- (1536,695);
 
@@ -365,7 +364,7 @@
   \vfill
   {\color{libroacento}\rule{0.42\linewidth}{0.8pt}\par}%
   \vspace{0.35\baselineskip}%
-  {\sffamily\footnotesize\scshape\color{librogris}Colección PowerSemiotics · Neurología Clínica y Semiología\par}%
+  {\sffamily\footnotesize\scshape\color{librogris}Colección PowerSemiotics · \librotitulo\par}%
   \clearpage
 }
 
