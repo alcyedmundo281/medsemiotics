@@ -113,7 +113,7 @@ def inspeccionar_pdf_con_pdfinfo(ruta_pdf: Path) -> InfoPDF:
 
 def paginas_minimas(material_previo: bool, lecciones: int) -> int:
     """Un libro sin lecciones ni material previo es solo portada, créditos y paratextos."""
-    return 20 if material_previo or lecciones else 4
+    return 16 if material_previo or lecciones else 4
 
 
 def validar_info_pdf(info: InfoPDF, paginas_minimas: int = 20) -> list[str]:

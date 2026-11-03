@@ -85,6 +85,9 @@ class Autor(_Base):
     # JSON derivados de los casos.
     nacimiento: date | None = Field(default=None, exclude=True)
     fallecimiento: date | None = Field(default=None, exclude=True)
+    # Concordancia de género de su función en créditos («autora»): lo dice el mapa, no se deduce
+    # del nombre.
+    femenino: bool = Field(default=False, exclude=True)
     credit: list[CreditRol] = Field(min_length=1)
 
     @model_validator(mode="after")

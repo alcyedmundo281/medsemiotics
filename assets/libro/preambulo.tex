@@ -193,9 +193,10 @@
       at (164,205) {COLECCIÓN POWERSEMIOTICS \enspace·\enspace MEDICINA BASADA EN LA EVIDENCIA};
     \draw[portadaoro, line width=0.8pt] (164,235) -- (780,235);
 
-    % Título principal en tipografía de cartel.
-    \node[anchor=north west, text=portadapapel, font=\displayfont\fontsize{25}{29}\selectfont\bfseries, text width=116mm, align=left]
-      at (164,295) {Neurología Clínica y Semiología Basada en la Evidencia};
+    % Título principal en tipografía de cartel. Sin guiones: una palabra nunca se parte y los
+    % saltos de línea van entre palabras.
+    \node[anchor=north west, text=portadapapel, font=\displayfont\fontsize{25}{29}\selectfont\bfseries, text width=137mm, align=left]
+      at (164,295) {\hyphenpenalty=10000 \exhyphenpenalty=10000 Neurología Clínica y Semiología\\Basada en la Evidencia};
 
     % Subtítulo.
     \node[anchor=north west, text=portadapapel, opacity=0.90, font=\normalfont\fontsize{10.8}{14.5}\selectfont\itshape, text width=114mm, align=left]
@@ -243,15 +244,15 @@
       \node[text=portadapapel, opacity=0.55, font=\sffamily\tiny] at (0,335) {LOCALIZACIÓN TOPOGRÁFICA \enspace·\enspace RAZONAMIENTO BAYESIANO};
     \end{scope}
 
-    % Tarjeta inferior con metadatos de edición.
-    \fill[portadapapel, opacity=0.06] (164,1830) rectangle (1536,2045);
-    \draw[portadaoro, opacity=0.45, line width=0.6pt] (164,1830) rectangle (1536,2045);
+    % Tarjeta de la edición, subida para dejar aire sobre el bloque de autores.
+    \fill[portadapapel, opacity=0.06] (164,1700) rectangle (1536,1915);
+    \draw[portadaoro, opacity=0.45, line width=0.6pt] (164,1700) rectangle (1536,1915);
     \node[anchor=west, text=portadaoro, font=\sffamily\scriptsize\bfseries]
-      at (205,1885) {CONTENIDO CLÍNICO Y ESTRUCTURA DE LA OBRA};
-    \node[anchor=west, text=portadapapel, opacity=0.92, font=\sffamily\footnotesize]
-      at (205,1938) {Parte I: Evidencia diagnóstica (medsemiotics-db) y casos socráticos ABP};
+      at (205,1755) {NUEVA EDICIÓN DE UNA OBRA FUNDADA EN 1991};
+    \node[anchor=west, text=portadapapel, opacity=0.92, font=\sffamily\scriptsize]
+      at (205,1808) {Continúa Neuropediatría–Urgencias (UCE, 1991) y Neurología Pediátrica, 2.ª ed. (UCE, 1993)};
     \node[anchor=west, text=portadapapel, opacity=0.82, font=\sffamily\scriptsize]
-      at (205,1992) {Parte II: Examen neurológico, cefaleas, epilepsia, ictus, movimiento, mielina, nervio, músculo y demencias};
+      at (205,1862) {Del recién nacido al adulto \enspace·\enspace Neuroftalmología del niño y del adulto};
 
     % Pie de autoría y sello editorial. El texto sale de datos-libro.tex, que genera
     % tools/libro/qmd.py desde lecciones/mapa.yaml: aquí no se escribe ningún nombre.
@@ -380,6 +381,14 @@
   \par\endgroup
   \vspace*{\fill}\vspace*{\fill}%
   \clearpage
+}
+
+\newenvironment{portadillatitulo}{%
+  \begingroup
+  \displayfont\fontsize{25}{29}\selectfont\bfseries\color{libroprimario}%
+  \hyphenpenalty=10000 \exhyphenpenalty=10000 \raggedright\noindent
+}{%
+  \par\endgroup
 }
 
 \newenvironment{creditospdf}{%
