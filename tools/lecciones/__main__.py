@@ -1,9 +1,9 @@
 """CLI: ``uv run python -m lecciones <orden>``.
 
-- ``check``: contrato de todas las lecciones, coherencia con ``lecciones/mapa.yaml`` y
-  ``mapa-maestro-libro.md`` al día, y que todo token de evidencia resuelva contra ``posts/`` y
-  ``lecciones/evidencia/``, de una sola revisión de la db (sin red; forma parte de
-  ``npm run gates``).
+- ``check``: contrato de todas las lecciones y de sus autoevaluaciones, coherencia con
+  ``lecciones/mapa.yaml`` y ``mapa-maestro-libro.md`` al día, y que todo token de evidencia
+  resuelva contra ``posts/`` y ``lecciones/evidencia/``, de una sola revisión de la db (sin red;
+  forma parte de ``npm run gates``).
 - ``mapa``: regenera ``mapa-maestro-libro.md`` desde el mapa y el estado de las lecciones.
 - ``nuevo <id>``: crea ``lecciones/<id>.qmd`` en borrador desde su fila del mapa.
 - ``proyectar <id>``: escribe la lección con sus tokens resueltos (``build/lecciones/<id>.qmd``
@@ -20,6 +20,7 @@ from pathlib import Path
 from pydantic import ValidationError
 
 from casos.errores import ErrorDeCaso
+from lecciones import autoevaluacion
 from lecciones import mapa as mapa_libro
 from lecciones.citas import verificar
 from lecciones.evidencia import cargar_articulos
@@ -65,6 +66,13 @@ def _check() -> int:
         return 1
     estados = mapa_libro.estados(rutas)
     errores += mapa_libro.coherencia(mapa, estados)
+    try:
+        articulos = cargar_articulos()
+    except ErrorDeCaso:
+        articulos = {}  # ya lo informa _problemas_de_tokens
+    errores += autoevaluacion.problemas_de_autoevaluaciones(
+        RAIZ, mapa, autoevaluacion.lecciones_por_id(rutas), articulos
+    )
     esperado = mapa_libro.renderizar(mapa, estados)
     actual = mapa_libro.SALIDA.read_text(encoding="utf-8") if mapa_libro.SALIDA.is_file() else ""
     if actual != esperado:
