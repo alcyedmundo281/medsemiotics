@@ -34,6 +34,11 @@ ROLES_LIBRO: dict[str, str] = {
     "autor-fundador": "autor fundador",
     "autor": "autor",
     "coordinacion-editorial": "coordinación editorial",
+    "autor-autoevaluaciones": "autor de las autoevaluaciones",
+}
+# Función en femenino, solo para quien el mapa marca `femenino: true`.
+ROLES_LIBRO_FEMENINO: dict[str, str] = {
+    "autor": "autora",
     "autor-autoevaluaciones": "autora de las autoevaluaciones",
 }
 LICENCIAS: dict[str, str] = {
@@ -131,6 +136,16 @@ def _requerido(datos: dict[str, Any], clave: str, origen: str) -> str:
     return valor.strip()
 
 
+def _rol_de(rol_obra: str, femenino: bool, nombre: str) -> str:
+    if not femenino:
+        return ROLES_LIBRO[rol_obra]
+    if rol_obra not in ROLES_LIBRO_FEMENINO:
+        raise ValueError(
+            f"lecciones/mapa.yaml: {nombre} es «femenino» pero «{rol_obra}» no lo admite"
+        )
+    return ROLES_LIBRO_FEMENINO[rol_obra]
+
+
 def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
     ruta_mapa = raiz / "lecciones" / "mapa.yaml"
     if not ruta_mapa.is_file():
@@ -144,7 +159,7 @@ def leer_metadatos(raiz: Path = RAIZ) -> MetadatosLibro:
     autores = tuple(
         AutorLibro(
             nombre=p.nombre,
-            rol=ROLES_LIBRO[p.rol_obra],
+            rol=_rol_de(p.rol_obra, p.femenino, p.nombre),
             orcid=p.orcid,
             afiliacion=p.afiliacion,
             fallecido=p.fallecido,

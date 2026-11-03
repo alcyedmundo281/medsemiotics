@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import shutil
+import subprocess
 from typing import TYPE_CHECKING
 
 import pytest
@@ -31,7 +33,12 @@ from libro.modulos import (
     obtener_capitulos_modulos,
     verificar_fuentes_neurologia,
 )
-from libro.pdf import parsear_salida_pdfinfo, validar_info_pdf, validar_tex_libro
+from libro.pdf import (
+    compilar_libro_pdf,
+    parsear_salida_pdfinfo,
+    validar_info_pdf,
+    validar_tex_libro,
+)
 from libro.qmd import NOMBRES_QMD_CONDICIONES, generar_proyecto_quarto
 
 if TYPE_CHECKING:
@@ -222,3 +229,46 @@ def test_la_opcion_lecciones_ya_no_existe() -> None:
     with pytest.raises(SystemExit) as salida:
         cli_libro.main(["qmd", "--lecciones"])
     assert salida.value.code == 2
+
+
+def test_los_roles_en_femenino_los_dice_el_mapa() -> None:
+    roles = {a.nombre: a.rol for a in leer_metadatos(RAIZ).autores}
+    assert roles["Gladys Torres Guerrero"] == "autora"
+    assert roles["Daniela Torres Tobar"] == "autora de las autoevaluaciones"
+    assert roles["Alcy Ramiro Torres Guerrero"] == "autor"
+
+
+def test_los_creditos_dicen_autora_para_gtg_y_dtt(tmp_path: Path) -> None:
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
+    index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
+    assert "Gladys Torres Guerrero** — autora;" in index
+    assert "Daniela Torres Tobar** — autora de las autoevaluaciones;" in index
+    assert "Alcy Ramiro Torres Guerrero** — autor;" in index
+
+
+def test_el_filtro_que_quita_el_titulo_de_capitulo_va_tras_los_de_quarto(tmp_path: Path) -> None:
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
+    cfg = yaml.safe_load((tmp_path / "_quarto.yml").read_text(encoding="utf-8"))
+    assert {"path": "quitar-titulo.lua", "at": "post-quarto"} in cfg["format"]["pdf"]["filters"]
+    assert (tmp_path / "quitar-titulo.lua").is_file()
+
+
+@pytest.mark.skipif(
+    any(shutil.which(h) is None for h in ("quarto", "lualatex", "pdfinfo", "pdftotext")),
+    reason="requiere quarto, lualatex y poppler",
+)
+def test_la_pagina_1_del_pdf_es_la_cubierta(tmp_path: Path) -> None:
+    pdf = tmp_path / "libro.pdf"
+    compilar_libro_pdf(pdf, tmp_path / "quarto", incluir_borradores=True, exigir_semblanzas=False)
+    pdftotext = shutil.which("pdftotext")
+    assert pdftotext is not None
+    pagina_1 = subprocess.run(
+        [pdftotext, "-f", "1", "-l", "1", "-enc", "UTF-8", str(pdf), "-"],
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    ).stdout
+    assert "COLECCIÓN POWERSEMIOTICS" in pagina_1
+    assert "NUEVA EDICIÓN DE UNA OBRA FUNDADA EN 1991" in pagina_1
+    assert "Neuroftalmología del niño y del adulto" in pagina_1

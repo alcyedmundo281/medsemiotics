@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 
 RUTA_PREAMBULO = RAIZ / "assets" / "libro" / "preambulo.tex"
 RUTA_FILTRO_LUA = RAIZ / "assets" / "libro" / "diseno-pdf.lua"
+RUTA_FILTRO_TITULO = RAIZ / "assets" / "libro" / "quitar-titulo.lua"
 
 NOMBRES_QMD_CONDICIONES: dict[str, str] = {
     "HM:6004": "01-hm6004-meningitis-aguda.qmd",
@@ -507,7 +508,7 @@ def _configuracion_quarto(
                     "footskip=11mm",
                 ],
                 "include-in-header": ["datos-libro.tex", "preambulo-libro.tex"],
-                "filters": ["diseno-pdf.lua"],
+                "filters": ["diseno-pdf.lua", {"path": "quitar-titulo.lua", "at": "post-quarto"}],
             },
         },
     }
@@ -675,6 +676,7 @@ def generar_proyecto_quarto(
     shutil.copyfile(RUTA_PREAMBULO, carpeta_salida / "preambulo-libro.tex")
     (carpeta_salida / "datos-libro.tex").write_text(_datos_libro_tex(meta), encoding="utf-8")
     shutil.copyfile(RUTA_FILTRO_LUA, carpeta_salida / "diseno-pdf.lua")
+    shutil.copyfile(RUTA_FILTRO_TITULO, carpeta_salida / "quitar-titulo.lua")
 
     ruta_portada_svg = carpeta_salida / "portada.svg"
     ruta_portada_svg.write_text(_generar_portada_svg(meta), encoding="utf-8")
@@ -683,6 +685,7 @@ def generar_proyecto_quarto(
         carpeta_salida / "preambulo-libro.tex",
         carpeta_salida / "datos-libro.tex",
         carpeta_salida / "diseno-pdf.lua",
+        carpeta_salida / "quitar-titulo.lua",
         ruta_portada_svg,
     ]
     planas: list[str] = []
