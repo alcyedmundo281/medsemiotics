@@ -295,6 +295,22 @@ def test_la_portadilla_del_pdf_tiene_el_titulo_completo(tmp_path: Path) -> None:
     assert pdftotext is not None
     paginas = [
         " ".join(
+            subprocess.run(
+                [pdftotext, "-f", str(n), "-l", str(n), "-enc", "UTF-8", str(pdf), "-"],
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            ).stdout.split()
+        )
+        for n in (1, 2, 3)
+    ]
+    # Página 1 cubierta, 2 reverso en blanco, 3 portadilla con el título completo.
+    assert "COLECCIÓN POWERSEMIOTICS" in paginas[0]
+    assert paginas[1] == ""
+    assert paginas[2].startswith(leer_metadatos(RAIZ).titulo)
+
+
 # --- título y subtítulo: salen del mapa, en la cubierta y en la portadilla ---------------------
 
 
@@ -313,14 +329,6 @@ def _paginas_pdf(pdf: Path, hasta: int = 8) -> list[str]:
                 capture_output=True,
                 text=True,
                 encoding="utf-8",
-            ).stdout.split()
-        )
-        for n in (1, 2, 3)
-    ]
-    # Página 1 cubierta, 2 reverso en blanco, 3 portadilla con el título completo.
-    assert "COLECCIÓN POWERSEMIOTICS" in paginas[0]
-    assert paginas[1] == ""
-    assert paginas[2].startswith(leer_metadatos(RAIZ).titulo)
             ).stdout
         )
         for n in range(1, hasta + 1)
