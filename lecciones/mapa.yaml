@@ -31,6 +31,8 @@ personas:
     nombre: "Alcy Torres Catefort"
     rol_obra: autor-fundador
     fallecido: true
+    nacimiento: 1937-12-19
+    fallecimiento: 2022-01-09
     credit: [conceptualizacion]
   artg:
     nombre: "Alcy Ramiro Torres Guerrero"

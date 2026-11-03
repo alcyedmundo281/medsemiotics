@@ -80,7 +80,8 @@ def _opciones_de_contenido(parser: argparse.ArgumentParser) -> None:
         action="store_true",
         help=(
             "Vista previa: permite compilar aunque «Sobre los autores» tenga semblanzas sin "
-            "texto o sin aprobar por su titular (por defecto la compilación falla)."
+            "texto o sin aprobar por su titular, o la dedicatoria siga en propuesta (por defecto "
+            "la compilación falla)."
         ),
     )
     parser.add_argument(

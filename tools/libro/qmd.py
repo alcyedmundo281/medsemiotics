@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 
 import yaml
 
+from lecciones import dedicatoria
 from lecciones.evidencia import cargar_articulos
 from lecciones.fuente import leer as leer_leccion
 from lecciones.mapa import cargar as cargar_mapa
@@ -95,8 +96,8 @@ def _datos_libro_tex(meta: MetadatosLibro) -> str:
     )
 
 
-def _generar_index_qmd(meta: MetadatosLibro) -> str:
-    """Portada, portadilla, créditos, aviso y tabla de contenidos: todo sale de los datos."""
+def _generar_index_qmd(meta: MetadatosLibro, texto_dedicatoria: str) -> str:
+    """Portada, portadilla, créditos, dedicatoria y tabla de contenidos: todo sale de los datos."""
     tamano_str = (
         f"{ANCHO_MM} × {ALTO_MM} mm ({ANCHO_PULGADAS:.2f} × {ALTO_PULGADAS:.2f} pulgadas)".replace(
             ".", ","
@@ -174,6 +175,10 @@ def _generar_index_qmd(meta: MetadatosLibro) -> str:
         "algoritmo, cociente de verosimilitud o protocolo sustituye el juicio clínico individual "
         "frente al paciente ni las guías oficiales de cada institución sanitaria.",
         ":::",
+        ":::",
+        "",
+        "::: {.dedicatoria-pdf}",
+        texto_dedicatoria.strip(),
         ":::",
         "",
         "```{=latex}",
@@ -592,6 +597,8 @@ def _paratextos(
     nombres: list[str] = []
     for ruta in sorted((raiz / "lecciones" / "paratextos").glob("*.md")):
         texto = ruta.read_text(encoding="utf-8")
+        if ruta.name == "dedicatoria.md":  # va en el índice, tras los créditos, no al final
+            continue
         if ruta.name == "autores.md":  # sin la aprobación y con los títulos del mapa
             texto = renderizar_semblanzas(texto, cargar_mapa(raiz / "lecciones" / "mapa.yaml"))
         texto = texto.replace("{N}", str(len(citadas)))
@@ -681,11 +688,17 @@ def generar_proyecto_quarto(
     ``material_previo`` añade, tras la obra y bajo una portada «Material previo — no forma parte de
     la obra», las fichas de condiciones y los resúmenes de módulos con los que se empezó.
     ``exigir_semblanzas`` (por defecto) detiene la compilación mientras «Sobre los autores» tenga
-    una semblanza sin texto o sin aprobar por su titular; solo la vista previa y las pruebas la
-    desactivan.
+    una semblanza sin texto o sin aprobar por su titular, o la dedicatoria siga en propuesta; solo
+    la vista previa y las pruebas la desactivan.
     """
-    if exigir_semblanzas and (pendientes := verificar_semblanzas(raiz)):
-        raise ValueError("«Sobre los autores» no está listo:\n- " + "\n- ".join(pendientes))
+    if exigir_semblanzas:
+        avisos: list[str] = []
+        if pendientes := verificar_semblanzas(raiz):
+            avisos.append("«Sobre los autores» no está listo:\n- " + "\n- ".join(pendientes))
+        if pendientes := dedicatoria.verificar(raiz):
+            avisos.append("La dedicatoria no está lista:\n- " + "\n- ".join(pendientes))
+        if avisos:
+            raise ValueError("\n".join(avisos))
     carpeta_salida.mkdir(parents=True, exist_ok=True)
     meta = leer_metadatos(raiz)
 
@@ -705,7 +718,16 @@ def generar_proyecto_quarto(
         ruta_portada_svg,
     ]
     planas: list[str] = []
-    _escribir(carpeta_salida, "index.qmd", _generar_index_qmd(meta), generados, planas)
+    ruta_dedicatoria = raiz.joinpath(*dedicatoria.RUTA)
+    if not ruta_dedicatoria.is_file():
+        raise FileNotFoundError(f"falta {dedicatoria.NOMBRE_ARCHIVO} (dedicatoria)")
+    texto_dedicatoria = dedicatoria.renderizar(
+        ruta_dedicatoria.read_text(encoding="utf-8"),
+        cargar_mapa(raiz / "lecciones" / "mapa.yaml"),
+    )
+    _escribir(
+        carpeta_salida, "index.qmd", _generar_index_qmd(meta, texto_dedicatoria), generados, planas
+    )
 
     partes, textos = _capitulos_de_lecciones(
         carpeta_salida, raiz, generados, planas, incluir_borradores

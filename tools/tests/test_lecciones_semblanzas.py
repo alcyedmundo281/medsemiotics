@@ -137,6 +137,14 @@ def test_aprobado_el_paratexto_se_imprime_sin_su_frontmatter(tmp_path: Path) -> 
             shutil.copytree(RAIZ / carpeta, raiz / carpeta)
     shutil.copyfile(RAIZ / "CITATION.cff", raiz / "CITATION.cff")
     (raiz / "lecciones" / "paratextos" / "autores.md").write_text(_completo(), encoding="utf-8")
+    dedicatoria = raiz / "lecciones" / "paratextos" / "dedicatoria.md"
+    dedicatoria.write_text(
+        dedicatoria.read_text(encoding="utf-8")
+        .replace("estado: propuesta", "estado: aprobada")
+        .replace("aprobada_por: []", f"aprobada_por: [{', '.join(VIVOS)}]")
+        .replace("fecha: null", f"fecha: {FECHA}"),
+        encoding="utf-8",
+    )
     salida = tmp_path / "quarto"
     generar_proyecto_quarto(salida, raiz)
     qmd = (salida / "P-autores.qmd").read_text(encoding="utf-8")

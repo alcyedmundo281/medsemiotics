@@ -81,6 +81,10 @@ class Autor(_Base):
     nombre_bibliografico: Texto | None = None
     rol_obra: RolObra = "autor"
     fallecido: bool = False
+    # Fechas de vida (ISO) de quien las lleva en un paratexto (la dedicatoria). No viajan a los
+    # JSON derivados de los casos.
+    nacimiento: date | None = Field(default=None, exclude=True)
+    fallecimiento: date | None = Field(default=None, exclude=True)
     # Concordancia de género de su función en créditos («autora»): lo dice el mapa, no se deduce
     # del nombre.
     femenino: bool = Field(default=False, exclude=True)
@@ -90,6 +94,11 @@ class Autor(_Base):
     def _coherencia(self) -> Self:
         if self.orcid is not None and not orcid_valido(self.orcid):
             raise ValueError(f"ORCID inválido para {self.nombre}: {self.orcid}")
+        if self.fallecimiento is not None:
+            if not self.fallecido:
+                raise ValueError(f"{self.nombre}: tiene fecha de fallecimiento pero no fallecido")
+            if self.nacimiento is not None and self.nacimiento >= self.fallecimiento:
+                raise ValueError(f"{self.nombre}: nace después de fallecer")
         if self.fallecido:
             prohibidos = sorted(ROLES_SOLO_VIVOS.intersection(self.credit))
             if prohibidos:
