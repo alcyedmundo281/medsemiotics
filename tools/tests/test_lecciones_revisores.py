@@ -31,6 +31,20 @@ def test_el_especialista_es_autor_de_su_area() -> None:
     assert mapa.parte("neuroftalmologia").autores == ["gtg"]
 
 
+def test_dtt_escribe_las_autoevaluaciones_y_las_revisa_el_editor() -> None:
+    mapa = m.cargar()
+    dtt = mapa.personas["dtt"]
+    assert dtt.nombre == "Daniela Torres Tobar"
+    assert dtt.orcid is None
+    assert dtt.credit == ["redaccion", "curacion-de-datos"]
+    assert list(mapa.personas)[-1] == "dtt"
+    assert mapa.autoevaluaciones is not None
+    assert mapa.autoevaluaciones.autores == ["dtt"]
+    assert mapa.autoevaluaciones.revisor == "aetg"
+    # No es autora de ninguna parte: las lecciones no la llevan en su frontmatter.
+    assert all("dtt" not in p.autores for p in mapa.partes)
+
+
 def test_no_hay_corevisores() -> None:
     assert "corevisor" not in m.FilaMapa.model_fields
     assert "corevisor" not in Leccion.model_fields

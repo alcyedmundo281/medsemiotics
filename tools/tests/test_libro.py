@@ -53,6 +53,7 @@ AUTORES_DEL_LIBRO = [
     "Alcy Ramiro Torres Guerrero",
     "Gladys Torres Guerrero",
     "Alcy Edmundo Torres Guerrero",
+    "Daniela Torres Tobar",
 ]
 
 

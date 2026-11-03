@@ -20,6 +20,7 @@ AUTORES = [
     "Alcy Ramiro Torres Guerrero",
     "Gladys Torres Guerrero",
     "Alcy Edmundo Torres Guerrero",
+    "Daniela Torres Tobar",
 ]
 
 
@@ -43,25 +44,35 @@ def test_el_orden_de_los_autores_se_comprueba() -> None:
     assert not en_orden(" ".join(AUTORES[:3]), AUTORES)
 
 
-def test_los_metadatos_traen_los_cuatro_autores_en_su_orden() -> None:
+def test_los_metadatos_traen_los_cinco_autores_en_su_orden() -> None:
     meta = leer_metadatos(RAIZ)
     assert meta.nombres_autores == AUTORES
     assert meta.autores[0].fallecido
-    assert [a.orcid for a in meta.autores] == [None, "0000-0001-5798-9161", None, "0000-0002-9742-375X"]
+    assert [a.orcid for a in meta.autores] == [
+        None,
+        "0000-0001-5798-9161",
+        None,
+        "0000-0002-9742-375X",
+        None,
+    ]
+    assert meta.autores[-1].rol == "autora de las autoevaluaciones"
+    assert meta.autores_autoevaluaciones == ("Daniela Torres Tobar",)
+    assert meta.revisor_autoevaluaciones == "Alcy Edmundo Torres Guerrero"
     assert meta.licencia == "CC BY-NC-SA 4.0"
 
 
-def test_portada_y_creditos_llevan_los_cuatro_autores_en_ese_orden(tmp_path: Path) -> None:
+def test_portada_y_creditos_llevan_los_cinco_autores_en_ese_orden(tmp_path: Path) -> None:
     generar_proyecto_quarto(tmp_path, RAIZ)
     index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
     portadilla = index.split("{.portadilla-pdf}")[1].split("{.creditos-pdf}")[0]
     creditos = index.split("{.creditos-pdf}")[1].split("{.alerta-ficha}")[0]
-    assert en_orden(portadilla, AUTORES), "la portadilla no lleva los cuatro autores en orden"
-    assert en_orden(creditos, AUTORES), "los créditos no llevan los cuatro autores en orden"
+    assert en_orden(portadilla, AUTORES), "la portadilla no lleva los cinco autores en orden"
+    assert en_orden(creditos, AUTORES), "los créditos no llevan los cinco autores en orden"
+    assert "**Autoevaluaciones:** Daniela Torres Tobar, de toda la obra." in creditos
     portada_tex = (tmp_path / "datos-libro.tex").read_text(encoding="utf-8")
-    assert en_orden(portada_tex, AUTORES), "la portada impresa no lleva los cuatro autores"
+    assert en_orden(portada_tex, AUTORES), "la portada impresa no lleva los cinco autores"
     portada_svg = (tmp_path / "portada.svg").read_text(encoding="utf-8")
-    assert en_orden(portada_svg, AUTORES), "la portada (SVG) no lleva los cuatro autores"
+    assert en_orden(portada_svg, AUTORES), "la portada (SVG) no lleva los cinco autores"
 
 
 def test_el_preambulo_no_escribe_ningun_nombre_de_autor() -> None:
@@ -211,6 +222,7 @@ def test_el_detector_de_intrusos_funciona() -> None:
     assert intrusos("Torres Catefort A.", nombres, orcids) == []
     assert intrusos(NOMBRE_INVENTADO, nombres, orcids) == [NOMBRE_INVENTADO]
     assert intrusos(f"ORCID {ORCID_INVENTADO}", nombres, orcids) == [ORCID_INVENTADO]
+    assert intrusos("Daniela Torres Tobar", nombres, orcids) == []
     assert intrusos("Juan Torres", nombres, orcids) == ["Juan Torres"]
     assert intrusos("Gladys Montserrat", nombres, orcids) == ["Gladys Montserrat"]
 

@@ -54,6 +54,17 @@ def _lineas_autores(meta: MetadatosLibro) -> list[str]:
     return lineas
 
 
+def _linea_autoevaluaciones(meta: MetadatosLibro) -> list[str]:
+    """Quién escribe y quién revisa los bancos de preguntas de toda la obra (si el mapa lo dice)."""
+    if not meta.autores_autoevaluaciones or meta.revisor_autoevaluaciones is None:
+        return []
+    return [
+        f"**Autoevaluaciones:** {'; '.join(meta.autores_autoevaluaciones)}, de toda la obra. "
+        f"Revisión: {meta.revisor_autoevaluaciones}.",
+        "",
+    ]
+
+
 def _escapar_tex(texto: str) -> str:
     barra = chr(92)
     for caracter in "&%$#_{}":
@@ -113,6 +124,7 @@ def _generar_index_qmd(meta: MetadatosLibro) -> str:
             "autor; su revisión de esas partes no es independiente."
         ),
         "",
+        *_linea_autoevaluaciones(meta),
         "DOI de la obra: pendiente de asignación.  ",
         "ISBN: pendiente (reservado para la edición impresa).  ",
         f"Repositorio fuente: <{meta.url_repositorio}>  ",
@@ -430,7 +442,7 @@ def _generar_portada_svg(meta: MetadatosLibro) -> str:
         '-45,150 5,-45 55,30 380,30" '
         'fill="none" stroke="#C69C6D" stroke-width="6" />',
         "  </g>",
-        '  <text x="164" y="2095" fill="#F8F6F1" '
+        '  <text x="164" y="2051" fill="#F8F6F1" '
         'font-family="Libertinus Sans, sans-serif" font-size="32" font-weight="bold">',
         *[
             f'    <tspan x="164" dy="{0 if i == 0 else 44}">{autor.nombre_visible}</tspan>'

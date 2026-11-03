@@ -15,7 +15,7 @@ ClaveBib = Annotated[str, StringConstraints(pattern=r"^[A-Za-z][A-Za-z0-9_:\-]*$
 
 Estado = Literal["borrador", "revisado", "publicado"]
 Parte = Literal["fundamentos", "neonato", "lactante-nino", "neuroftalmologia", "adulto"]
-RolObra = Literal["autor-fundador", "autor", "coordinacion-editorial"]
+RolObra = Literal["autor-fundador", "autor", "coordinacion-editorial", "autor-autoevaluaciones"]
 # Etapas en que intervino la IA en una lección (lecciones/AI-USE.md). Lista vacía: no intervino.
 UsoIA = Literal[
     "transcripcion",

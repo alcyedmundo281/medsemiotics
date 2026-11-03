@@ -103,6 +103,10 @@ Autores: Alcy Edmundo Torres Guerrero · Revisión: Alcy Edmundo Torres Guerrero
 | 18 | Infecciones del sistema nervioso central<br>`leccion-infecciones-snc` | 2 | `infecciones-snc.html` · db `HM:6004` | ⬜ pendiente |
 | 19 | Traumatismo craneal leve<br>`leccion-traumatismo-craneal-leve` | 2 | db `HM:6038` | ⬜ pendiente |
 
+## Autoevaluaciones de toda la obra
+
+Autores: Daniela Torres Tobar · Revisión: Alcy Edmundo Torres Guerrero
+
 ## Cobertura del sílabo
 
 Medicina Interna 1 – Neurología (MMP06PPP0104), Universidad Central del Ecuador · período 2026-2027. Cada semana del curso tiene que estar desarrollada en el libro.
