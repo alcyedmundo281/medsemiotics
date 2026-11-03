@@ -11,6 +11,8 @@ import yaml
 from lecciones.evidencia import cargar_articulos
 from lecciones.fuente import leer as leer_leccion
 from lecciones.proyectar import lecciones_por_parte, proyectar
+from lecciones.semblanzas import separar as separar_semblanzas
+from lecciones.semblanzas import verificar as verificar_semblanzas
 from lecciones.validacion import claves_citadas
 from libro import ALTO_MM, ALTO_PULGADAS, ANCHO_MM, ANCHO_PULGADAS
 from libro.datos import (
@@ -571,7 +573,10 @@ def _paratextos(
     citadas = {c for texto in textos_lecciones for c in claves_citadas(texto)}
     nombres: list[str] = []
     for ruta in sorted((raiz / "lecciones" / "paratextos").glob("*.md")):
-        texto = ruta.read_text(encoding="utf-8").replace("{N}", str(len(citadas)))
+        texto = ruta.read_text(encoding="utf-8")
+        if ruta.name == "autores.md":
+            texto = separar_semblanzas(texto)[1]  # la aprobación no se imprime
+        texto = texto.replace("{N}", str(len(citadas)))
         nombre = f"P-{ruta.stem}.qmd"
         (carpeta_salida / nombre).write_text(texto, encoding="utf-8")
         generados.append(carpeta_salida / nombre)
@@ -647,6 +652,7 @@ def generar_proyecto_quarto(
     raiz: Path = RAIZ,
     incluir_borradores: bool = False,
     material_previo: bool = False,
+    exigir_semblanzas: bool = True,
 ) -> list[Path]:
     """Genera el proyecto Quarto del libro en ``carpeta_salida``.
 
@@ -656,7 +662,12 @@ def generar_proyecto_quarto(
     añade las demás para una vista previa, cada una con el aviso «Borrador — sin revisión humana».
     ``material_previo`` añade, tras la obra y bajo una portada «Material previo — no forma parte de
     la obra», las fichas de condiciones y los resúmenes de módulos con los que se empezó.
+    ``exigir_semblanzas`` (por defecto) detiene la compilación mientras «Sobre los autores» tenga
+    una semblanza sin texto o sin aprobar por su titular; solo la vista previa y las pruebas la
+    desactivan.
     """
+    if exigir_semblanzas and (pendientes := verificar_semblanzas(raiz)):
+        raise ValueError("«Sobre los autores» no está listo:\n- " + "\n- ".join(pendientes))
     carpeta_salida.mkdir(parents=True, exist_ok=True)
     meta = leer_metadatos(raiz)
 

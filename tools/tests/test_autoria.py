@@ -62,7 +62,7 @@ def test_los_metadatos_traen_los_cinco_autores_en_su_orden() -> None:
 
 
 def test_portada_y_creditos_llevan_los_cinco_autores_en_ese_orden(tmp_path: Path) -> None:
-    generar_proyecto_quarto(tmp_path, RAIZ)
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
     index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
     portadilla = index.split("{.portadilla-pdf}")[1].split("{.creditos-pdf}")[0]
     creditos = index.split("{.creditos-pdf}")[1].split("{.alerta-ficha}")[0]
@@ -90,7 +90,7 @@ def test_los_creditos_declaran_que_la_revision_del_editor_no_es_independiente(
         "Fundamentos: la semiología basada en la evidencia",
         "El adulto: síndromes y urgencias",
     )
-    generar_proyecto_quarto(tmp_path, RAIZ)
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
     creditos = (tmp_path / "index.qmd").read_text(encoding="utf-8").split("{.creditos-pdf}")[1]
     assert "el editor es también autor; su revisión de esas partes no es independiente" in creditos
     assert "Fundamentos: la semiología basada en la evidencia" in creditos
@@ -100,7 +100,7 @@ def test_los_creditos_declaran_que_la_revision_del_editor_no_es_independiente(
 
 
 def test_creditos_nueva_edicion_sin_doi_de_la_plataforma(tmp_path: Path) -> None:
-    generar_proyecto_quarto(tmp_path, RAIZ)
+    generar_proyecto_quarto(tmp_path, RAIZ, exigir_semblanzas=False)
     index = (tmp_path / "index.qmd").read_text(encoding="utf-8")
     creditos = index.split("{.creditos-pdf}")[1]
     assert "Primera edición" not in index

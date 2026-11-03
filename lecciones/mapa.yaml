@@ -38,6 +38,7 @@ personas:
     nombre: "Gladys Torres Guerrero"
     # Firma de los autores (decisión editorial, 1-nov-2026): la usan el blog y los casos.
     nombre_bibliografico: "Gladys Torres-Guerrero"
+    afiliacion: "VisionUno, Quito"
     credit: [redaccion, revision-edicion]
   aetg:
     nombre: "Alcy Edmundo Torres Guerrero"

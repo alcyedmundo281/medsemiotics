@@ -206,6 +206,7 @@ def compilar_libro_pdf(
     raiz: Path = RAIZ,
     incluir_borradores: bool = False,
     material_previo: bool = False,
+    exigir_semblanzas: bool = True,
 ) -> InfoPDF:
     """Genera el proyecto Quarto, lo compila con LuaLaTeX y lo verifica con pdfinfo."""
     faltantes = verificar_fuentes_neurologia(raiz) if material_previo else []
@@ -223,6 +224,7 @@ def compilar_libro_pdf(
         raiz=raiz,
         incluir_borradores=incluir_borradores,
         material_previo=material_previo,
+        exigir_semblanzas=exigir_semblanzas,
     )
 
     ejecutable_quarto = shutil.which("quarto")
