@@ -81,6 +81,9 @@ class Autor(_Base):
     nombre_bibliografico: Texto | None = None
     rol_obra: RolObra = "autor"
     fallecido: bool = False
+    # Concordancia de género de su función en créditos («autora»): lo dice el mapa, no se deduce
+    # del nombre.
+    femenino: bool = Field(default=False, exclude=True)
     credit: list[CreditRol] = Field(min_length=1)
 
     @model_validator(mode="after")

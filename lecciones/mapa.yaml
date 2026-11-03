@@ -39,6 +39,7 @@ personas:
     # Firma de los autores (decisión editorial, 1-nov-2026): la usan el blog y los casos.
     nombre_bibliografico: "Gladys Torres-Guerrero"
     afiliacion: "VisionUno, Quito"
+    femenino: true
     credit: [redaccion, revision-edicion]
   aetg:
     nombre: "Alcy Edmundo Torres Guerrero"
@@ -51,6 +52,7 @@ personas:
     nombre: "Daniela Torres Tobar"
     afiliacion: "B.A. en Neurobiología, Boston University College of Arts & Sciences (2022); estudiante de medicina, Boston University Chobanian & Avedisian School of Medicine"
     rol_obra: autor-autoevaluaciones
+    femenino: true
     credit: [redaccion, curacion-de-datos]
 
 # Autoevaluaciones de toda la obra: el banco de preguntas de cada lección y el del libro.
