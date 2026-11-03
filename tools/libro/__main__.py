@@ -76,6 +76,14 @@ def _imprimir_resumen_pdf(
 
 def _opciones_de_contenido(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
+        "--semblanzas-pendientes",
+        action="store_true",
+        help=(
+            "Vista previa: permite compilar aunque «Sobre los autores» tenga semblanzas sin "
+            "texto o sin aprobar por su titular (por defecto la compilación falla)."
+        ),
+    )
+    parser.add_argument(
         "--incluir-borradores",
         action="store_true",
         help=(
@@ -161,6 +169,7 @@ def main(argv: list[str] | None = None) -> int:
             raiz=RAIZ,
             incluir_borradores=args.incluir_borradores,
             material_previo=args.material_previo,
+            exigir_semblanzas=not args.semblanzas_pendientes,
         )
         print(f"Proyecto Quarto generado en {args.proyecto} ({len(archivos)} archivos).")
         return 0
@@ -172,6 +181,7 @@ def main(argv: list[str] | None = None) -> int:
             raiz=RAIZ,
             incluir_borradores=args.incluir_borradores,
             material_previo=args.material_previo,
+            exigir_semblanzas=not args.semblanzas_pendientes,
         )
         return _imprimir_resumen_pdf(
             args.proyecto, args.salida, args.incluir_borradores, args.material_previo

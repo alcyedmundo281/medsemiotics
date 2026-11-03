@@ -85,7 +85,7 @@ def test_fuentes_y_condiciones_neurologia() -> None:
 
 def test_el_libro_por_defecto_solo_lleva_lecciones(tmp_path: Path) -> None:
     carpeta = tmp_path / "quarto"
-    archivos = generar_proyecto_quarto(carpeta, raiz=RAIZ)
+    archivos = generar_proyecto_quarto(carpeta, raiz=RAIZ, exigir_semblanzas=False)
     for nombre in ("_quarto.yml", "index.qmd", "preambulo-libro.tex", "diseno-pdf.lua"):
         assert (carpeta / nombre).is_file()
     assert (carpeta / "portada.svg").is_file()
@@ -109,7 +109,9 @@ def test_el_libro_por_defecto_solo_lleva_lecciones(tmp_path: Path) -> None:
 
 def test_el_material_previo_va_aparte_con_su_portada(tmp_path: Path) -> None:
     carpeta = tmp_path / "quarto"
-    archivos = generar_proyecto_quarto(carpeta, raiz=RAIZ, material_previo=True)
+    archivos = generar_proyecto_quarto(
+        carpeta, raiz=RAIZ, material_previo=True, exigir_semblanzas=False
+    )
     assert len(archivos) >= 18
     assert (carpeta / "libro-plano.md").is_file()
 
@@ -183,7 +185,9 @@ def test_validar_tex_detecta_faltantes(tmp_path: Path) -> None:
 
 def test_cli_qmd_y_check(tmp_path: Path) -> None:
     carpeta = tmp_path / "quarto_cli"
-    rc_qmd = cli_libro.main(["qmd", "--proyecto", str(carpeta)])
+    with pytest.raises(ValueError, match="Sobre los autores"):
+        cli_libro.main(["qmd", "--proyecto", str(carpeta)])
+    rc_qmd = cli_libro.main(["qmd", "--proyecto", str(carpeta), "--semblanzas-pendientes"])
     assert rc_qmd == 0
     rc_check = cli_libro.main(
         ["check", "--proyecto", str(carpeta), "--pdf", str(tmp_path / "no-existe.pdf")]
@@ -202,7 +206,14 @@ def test_cli_qmd_y_check(tmp_path: Path) -> None:
     )
     assert rc_previo == 0
     rc_vista = cli_libro.main(
-        ["qmd", "--proyecto", str(tmp_path / "vista"), "--incluir-borradores", "--material-previo"]
+        [
+            "qmd",
+            "--proyecto",
+            str(tmp_path / "vista"),
+            "--incluir-borradores",
+            "--material-previo",
+            "--semblanzas-pendientes",
+        ]
     )
     assert rc_vista == 0
 
