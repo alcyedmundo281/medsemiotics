@@ -4,7 +4,7 @@ slug: conmocion-cerebral-pediatrica-precision-semiotica
 title: 'Conmoción cerebral pediátrica: hallazgos y evidencia clínica'
 subtitle: Hallazgos, cocientes documentados y límites de la evidencia.
 date: '2026-09-18'
-author: Alcy E. Torres-Guerrero
+author: Alcy R. Torres
 category: medicina_interna
 category_label: Medicina Interna
 tags:
