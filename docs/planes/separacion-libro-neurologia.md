@@ -134,9 +134,20 @@ conservar adicionalmente commit y hash de origen. No usar `isVersionOf` ni
 No hay releases transitorios. El congelamiento se levanta solo después de
 comprobar la salida de `lecciones/` y la coherencia del paquete final.
 
-## Estimación de trabajo
+## Estimación de trabajo — PENDIENTE DE REVISIÓN
 
-Estimación de ingeniería, basada en el inventario y acoplamientos anteriores,
+**PENDIENTE DE REVISIÓN.** Las cifras de **24–40 horas** y su desglose se
+conservan como antecedente cuestionado, no como estimación aprobada ni base
+para planificar trabajo. Alcy aporta el precedente de una mudanza comparable
+de farmacosemiotics que tomó diez minutos. La comparación y los supuestos
+se revisarán con él; no se recalculan en este PR.
+
+La actualización debe expresar el trabajo en **ciclos de revisión y riesgo**,
+no en horas de ingeniería. Se hará después del 13/11/2026, con las decisiones
+nuevas de arquitectura editorial que todavía no están en el repositorio.
+Una sesión posterior no debe dar por válido el rango conservado aquí.
+
+Estimación previa de ingeniería, basada en el inventario y acoplamientos anteriores,
 no un plazo de entrega comprometido. Para una persona con revisión de Alcy:
 
 | Trabajo | Horas estimadas |
@@ -147,7 +158,7 @@ no un plazo de entrega comprometido. Para una persona con revisión de Alcy:
 | Migración y ajustes de plataforma/documentación/enlaces | 4–6 |
 | Pruebas en ambos lados y verificación de artefactos | 5–8 |
 | Preparación del depósito y verificación del linaje | 1–2 |
-| **Total orientativo** | **24–37 horas; reservar 24–40 (3–5 jornadas)** |
+| **Total previo — PENDIENTE DE REVISIÓN** | **24–37 horas; reservar 24–40 (3–5 jornadas)** |
 
 No incluye escribir/revisar las 54 lecciones, conseguir ORCID/ISBN, tiempos de
 respuesta de terceros ni aprobación editorial de una edición. El alcance EPUB,

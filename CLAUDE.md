@@ -13,6 +13,8 @@ archivó 622 archivos, incluido `lecciones/` con CC BY-NC-SA 4.0, pero el
 registro se publicó con CC BY-SA 4.0 y un solo creador. Fue un **error de
 hecho desde el origen**, no una decisión correcta superada después.
 No se lo documenta como «cicatriz»: se documentan el error y su corrección.
+Un error de hecho se corrige y se documenta como error; una decisión válida
+superada se conserva como antecedente.
 
 Por decisión explícita de Alcy, el 04/11/2026 se corrigió el registro
 publicado: licencia global CC BY-NC-SA 4.0 (la más restrictiva presente en
