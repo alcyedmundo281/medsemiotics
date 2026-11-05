@@ -1,0 +1,49 @@
+[
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Torres Catefort",
+      "given_name": "Alcy (†)"
+    }
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Torres Guerrero",
+      "given_name": "Alcy Ramiro",
+      "identifiers": [
+        {
+          "scheme": "orcid",
+          "identifier": "0000-0001-5798-9161"
+        }
+      ]
+    }
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Torres Guerrero",
+      "given_name": "Gladys"
+    }
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Torres Guerrero",
+      "given_name": "Alcy Edmundo",
+      "identifiers": [
+        {
+          "scheme": "orcid",
+          "identifier": "0000-0002-9742-375X"
+        }
+      ]
+    }
+  },
+  {
+    "person_or_org": {
+      "type": "personal",
+      "family_name": "Torres Tobar",
+      "given_name": "Daniela"
+    }
+  }
+]

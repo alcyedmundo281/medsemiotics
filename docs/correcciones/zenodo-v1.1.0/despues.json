@@ -1,0 +1,43 @@
+{
+  "record": 23862211,
+  "doi": "10.5281/zenodo.23862211",
+  "metadata": {
+    "version": "1.1.0",
+    "publication_date": "2026-11-01",
+    "license": {
+      "id": "cc-by-nc-sa-4.0"
+    },
+    "creators": [
+      {
+        "name": "Torres Catefort, Alcy (†)",
+        "affiliation": null
+      },
+      {
+        "name": "Torres Guerrero, Alcy Ramiro",
+        "affiliation": null,
+        "orcid": "0000-0001-5798-9161"
+      },
+      {
+        "name": "Torres Guerrero, Gladys",
+        "affiliation": null
+      },
+      {
+        "name": "Torres Guerrero, Alcy Edmundo",
+        "affiliation": null,
+        "orcid": "0000-0002-9742-375X"
+      },
+      {
+        "name": "Torres Tobar, Daniela",
+        "affiliation": null
+      }
+    ],
+    "description": "<p>Plataforma de educaci&oacute;n m&eacute;dica en espa&ntilde;ol: m&oacute;dulos interactivos, casos cl&iacute;nicos y material de autoevaluaci&oacute;n sobre razonamiento cl&iacute;nico, medicina basada en datos, farmacoterapia racional, gastroenterolog&iacute;a, neurolog&iacute;a, inmunolog&iacute;a cl&iacute;nica y ciencia de la implementaci&oacute;n.</p>\n<p>Re&uacute;ne 101 p&aacute;ginas publicadas en seis &aacute;reas tem&aacute;ticas, con simuladores cl&iacute;nicos, autoevaluaciones corregidas en el navegador y documentos descargables. Est&aacute; construida como sitio est&aacute;tico autosuficiente: sin base de datos, sin autenticaci&oacute;n, sin claves de API y sin dependencias de CDN, de modo que su funcionamiento no depende de ning&uacute;n servicio externo que pueda desaparecer.</p>\n<p>Publicada en <a href=\"https://powersemiotics.com/medsemiotics/\">powersemiotics.com/medsemiotics</a>.</p>\n<p>El directorio lecciones/ y el libro de neurolog&iacute;a se publican bajo CC BY-NC-SA 4.0.</p>\n<h3>Correcci&oacute;n de metadatos &mdash; 04/11/2026</h3>\n<p>En la publicaci&oacute;n original de v1.1.0 (10.5281/zenodo.23862211), el registro declaraba globalmente CC BY-SA 4.0 y un &uacute;nico creador, Alcy Edmundo Torres Guerrero. Esa declaraci&oacute;n no reflejaba la licencia m&aacute;s restrictiva ni la atribuci&oacute;n colectiva del contenido mixto incluido en el ZIP. Se corrigen los metadatos del registro: licencia global CC BY-NC-SA 4.0 y cinco autores/titulares.</p>\n<p><strong>Alcance por contenido:</strong> el directorio lecciones/ y el libro de neurolog&iacute;a derivado se publican bajo CC BY-NC-SA 4.0; el resto de la plataforma conserva CC BY-SA 4.0, sin perjuicio de las licencias de terceros identificadas en sus archivos. La etiqueta NC-SA del agregado no sustituye ni a&ntilde;ade restricciones a las partes que ya se ofrecen bajo BY-SA. Ante contenidos mixtos en este &uacute;nico registro se declara la licencia m&aacute;s restrictiva presente.</p>\n<p><strong>Atribuci&oacute;n:</strong> Alcy Torres Catefort (&dagger;), Alcy Ramiro Torres Guerrero, Gladys Torres Guerrero, Alcy Edmundo Torres Guerrero y Daniela Torres Tobar. Alcy Torres Catefort es autor fundador fallecido; no se le atribuye revisi&oacute;n actual ni se le asigna ORCID. Los identificadores ORCID de Gladys Torres Guerrero y Daniela Torres Tobar quedan pendientes de verificaci&oacute;n; omitirlos no afirma que sean inexistentes. La autor&iacute;a colectiva de lecciones y libro no atribuye a cada titular la creaci&oacute;n de todos los m&oacute;dulos de la plataforma.</p>\n<p>El ZIP archivado conserva su contenido y su checksum. Su lecciones/LICENSE.md hist&oacute;rico nombra a cuatro titulares y todav&iacute;a no menciona a Daniela Torres Tobar; no se altera ni se atribuye al archivo un texto que no contiene. Esta correcci&oacute;n de metadatos no cambia el DOI, la versi&oacute;n ni la fecha de publicaci&oacute;n original, ni pretende revocar permisos ya otorgados. La versi&oacute;n v1.0.0 (10.5281/zenodo.22069642) no conten&iacute;a lecciones/ y no se modifica.</p>"
+  },
+  "files": [
+    {
+      "key": "alcyedmundo281/medsemiotics-v1.1.0.zip",
+      "size": 17024234,
+      "checksum": "md5:24f8101a68b0417b32c79dd00ccc0b8b"
+    }
+  ]
+}
