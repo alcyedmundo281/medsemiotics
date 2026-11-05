@@ -1,0 +1,48 @@
+{
+  "title": "medsemiotics",
+  "version": "1.2.0",
+  "description": "<p>Plataforma medsemiotics sin lecciones/ ni el libro de neurología, que se identifica y cita por separado. Otros autores de módulos se conservan según sus contribuciones verificadas.</p>",
+  "upload_type": "software",
+  "language": "spa",
+  "access_right": "open",
+  "license": "cc-by-sa-4.0",
+  "creators": [
+    {
+      "name": "Torres Guerrero, Alcy Edmundo",
+      "orcid": "0000-0002-9742-375X"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "powersemiotics"
+    }
+  ],
+  "keywords": [
+    "educación médica",
+    "medical education",
+    "POCUS",
+    "point-of-care ultrasound",
+    "semiótica clínica",
+    "clinical semiotics",
+    "razonamiento clínico",
+    "clinical reasoning",
+    "farmacoterapia racional",
+    "rational pharmacotherapy",
+    "recursos educativos abiertos",
+    "open educational resources"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://powersemiotics.com/medsemiotics/",
+      "relation": "isIdenticalTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/alcyedmundo281/medsemiotics",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Condicionado a separar efectivamente los archivos del libro antes de empaquetar. Cambiar metadatos no los excluye. No modifica el archivo histórico v1.1.0."
+}

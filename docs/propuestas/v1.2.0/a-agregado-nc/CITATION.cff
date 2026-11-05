@@ -1,0 +1,54 @@
+# PROPUESTA NO ACTIVA. No copiar a la raíz ni publicar sin decisión de Alcy.
+cff-version: 1.2.0
+message: Si utiliza este material, por favor cítelo como se indica.
+title: medsemiotics
+abstract: 'Plataforma de educación médica en español: módulos interactivos, casos clínicos y
+  material de autoevaluación sobre razonamiento clínico, medicina basada en datos, farmacoterapia
+  racional, gastroenterología, neurología, inmunología clínica y ciencia de la implementación.
+  Publicada como sitio estático autosuficiente, sin dependencias de servicios externos. El directorio
+  lecciones/ y el libro de neurología se publican bajo CC BY-NC-SA 4.0. lecciones/ y el libro
+  de neurología están bajo CC BY-NC-SA 4.0; el resto de la plataforma conserva CC BY-SA 4.0
+  y las licencias de terceros identificadas en sus archivos. Son ámbitos por contenido, no licencias
+  alternativas. La autoría colectiva de cinco personas corresponde al bloque de lecciones y
+  libro, no atribuye a todos la creación de cada módulo de la plataforma. Alcy Torres Catefort
+  (†) es autor fundador fallecido y no realiza revisión actual. Gladys y Daniela no tienen ORCID;
+  no se asigna uno al autor fallecido.'
+type: software
+authors:
+- family-names: Torres Catefort
+  given-names: Alcy
+  name-suffix: (†)
+- family-names: Torres Guerrero
+  given-names: Alcy Ramiro
+  orcid: https://orcid.org/0000-0001-5798-9161
+- family-names: Torres Guerrero
+  given-names: Gladys
+  # Añadir orcid solo cuando la autora comunique su identificador real.
+- family-names: Torres Guerrero
+  given-names: Alcy Edmundo
+  orcid: https://orcid.org/0000-0002-9742-375X
+- family-names: Torres Tobar
+  given-names: Daniela
+  # Añadir orcid solo cuando la autora comunique su identificador real.
+repository-code: https://github.com/alcyedmundo281/medsemiotics
+url: https://powersemiotics.com/medsemiotics/
+version: 1.2.0
+doi: 10.5281/zenodo.22069641
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.22069641
+  description: DOI de concepto de la plataforma; el DOI específico de v1.2.0 no está asignado
+license: CC-BY-NC-SA-4.0
+keywords:
+- educación médica
+- medical education
+- POCUS
+- point-of-care ultrasound
+- semiótica clínica
+- clinical semiotics
+- razonamiento clínico
+- clinical reasoning
+- farmacoterapia racional
+- rational pharmacotherapy
+- recursos educativos abiertos
+- open educational resources

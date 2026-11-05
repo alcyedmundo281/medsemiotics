@@ -1,0 +1,33 @@
+# PROPUESTA NO ACTIVA. No copiar a la raíz ni publicar sin decisión de Alcy.
+cff-version: 1.2.0
+message: Si utiliza este material, por favor cítelo como se indica.
+title: medsemiotics
+abstract: Plataforma medsemiotics sin lecciones/ ni el libro de neurología, que se identifica
+  y cita por separado. Otros autores de módulos se conservan según sus contribuciones verificadas.
+type: software
+authors:
+- family-names: Torres Guerrero
+  given-names: Alcy Edmundo
+  orcid: https://orcid.org/0000-0002-9742-375X
+repository-code: https://github.com/alcyedmundo281/medsemiotics
+url: https://powersemiotics.com/medsemiotics/
+version: 1.2.0
+doi: 10.5281/zenodo.22069641
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.22069641
+  description: DOI de concepto de la plataforma; el DOI específico de v1.2.0 no está asignado
+license: CC-BY-SA-4.0
+keywords:
+- educación médica
+- medical education
+- POCUS
+- point-of-care ultrasound
+- semiótica clínica
+- clinical semiotics
+- razonamiento clínico
+- clinical reasoning
+- farmacoterapia racional
+- rational pharmacotherapy
+- recursos educativos abiertos
+- open educational resources
