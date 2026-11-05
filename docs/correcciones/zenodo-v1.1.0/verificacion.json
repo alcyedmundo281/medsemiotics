@@ -1,0 +1,20 @@
+{
+  "fecha_correccion": "2026-11-04",
+  "registro_corregido": "23862211",
+  "resultado": "NC-SA, cinco autores, nota única y pendientes ORCID; archivo e identidad preservados",
+  "registro_22069642": "No modificado: CC BY-SA 4.0, un creador, MD5 98eed60208641d1a9faf991eed534794",
+  "archivos_activos_verificados_sin_cambios": [
+    "CITATION.cff",
+    ".zenodo.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "fuentes_protegidas_sin_cambios": [
+    "lecciones/",
+    "tools/libro/",
+    "tools/lecciones/",
+    "assets/libro/"
+  ],
+  "releases": "Prohibidos hasta que lecciones/ salga de medsemiotics",
+  "plan": "Sin ejecutar; decisión no antes de 2026-11-13"
+}

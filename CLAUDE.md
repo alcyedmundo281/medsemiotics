@@ -6,36 +6,54 @@ Para editar un artículo del blog (caso socrático e imagen destacada), usar la 
 `caso-socratico` en `.claude/skills/caso-socratico/SKILL.md`: un artículo por vez, con
 revisión humana antes de publicar y `npm run gates` en verde antes de cada commit.
 
-## Cicatriz de Zenodo v1.1.0 — conservar el archivo histórico
+## Error de metadatos de Zenodo v1.1.0 y corrección — 04/11/2026
 
-El DOI de concepto `10.5281/zenodo.22069641` resolvía, en la comprobación del
-04/11/2026, a v1.1.0 (`10.5281/zenodo.23862211`). Su ZIP de 622 archivos incluye
-`lecciones/` y su `LICENSE.md` bajo CC BY-NC-SA 4.0; los metadatos globales
-indican CC BY-SA 4.0 y un solo creador. Ese LICENSE archivado nombra cuatro
-titulares: Alcy Torres Catefort (†) y sus herederos, Alcy Ramiro Torres Guerrero,
-Gladys Torres Guerrero y Alcy Edmundo Torres Guerrero. Daniela Torres Tobar
-figura en la fuente actual, no en ese texto histórico.
+v1.1.0 (`10.5281/zenodo.23862211`, concepto `10.5281/zenodo.22069641`)
+archivó 622 archivos, incluido `lecciones/` con CC BY-NC-SA 4.0, pero el
+registro se publicó con CC BY-SA 4.0 y un solo creador. Fue un **error de
+hecho desde el origen**, no una decisión correcta superada después.
+No se lo documenta como «cicatriz»: se documentan el error y su corrección.
 
-v1.0.0 (`10.5281/zenodo.22069642`) tiene 459 archivos y no incluye `lecciones/`
-ni el libro compilado. No atribuirle automáticamente la misma incoherencia.
-Se inspeccionaron ambos ZIP y se verificaron sus MD5 publicados; evidencia
-en `docs/propuestas/v1.2.0/alcance-zenodo.json`.
+Por decisión explícita de Alcy, el 04/11/2026 se corrigió el registro
+publicado: licencia global CC BY-NC-SA 4.0 (la más restrictiva presente en
+este ZIP mixto), cinco autores/titulares y nota fechada que conserva el
+estado anterior y explica los ámbitos. La plataforma fuera de `lecciones/`
+conserva CC BY-SA 4.0 y los terceros conservan sus propias licencias; la
+etiqueta NC del agregado no les añade restricciones. No se pretende revocar
+permisos previamente concedidos mediante un cambio de metadatos.
 
-**Lo archivado, archivado queda.** Por decisión de Alcy no se sustituyen los
-archivos ni se editan los registros publicados para hacerlos parecer
-corregidos. Editar técnicamente metadatos no borra el historial ni revoca
-permisos previos. v1.1.0 se supera con una versión nueva, no se reescribe.
-Cualquier nota sobre el registro antiguo es solo una propuesta local y
-requiere una decisión nueva para publicarse.
+Los cinco nombres son Alcy Torres Catefort (†), Alcy Ramiro Torres Guerrero,
+Gladys Torres Guerrero, Alcy Edmundo Torres Guerrero y Daniela Torres Tobar.
+Gladys y Daniela quedan sin ORCID, **pendientes de verificación**; omitir un
+identificador no afirma que sea inexistente. No se crea ni asigna ORCID al
+autor fallecido ni se le atribuye revisión actual.
 
-Las tres vías para v1.2.0 están en `docs/propuestas/v1.2.0/README.md`.
-**Ninguna está elegida ni ejecutada.** No crear etiqueta, release, depósito o
-DOI desde estos borradores antes de que Alcy decida objeto, alcance y licencia.
-Los `CITATION.cff` y `.zenodo.json` de esa carpeta son propuestas no activas:
-no sustituyen a los de la raíz. No trasladar ni editar lecciones o el libro
-en este PR. No usar una lista CFF de licencias para repartir ámbitos: el
-esquema la interpreta como alternativas OR.
+El ZIP sigue idéntico (MD5 `24f8101a68b0417b32c79dd00ccc0b8b`); DOI, versión
+y fecha original también. Su LICENSE histórico enumera cuatro titulares y
+no menciona a Daniela: no atribuirle un texto que no contiene. La corrección
+se hace en los metadatos del registro, no dentro del archivo preservado.
+v1.0.0 (`10.5281/zenodo.22069642`) no contenía `lecciones/` y no se modifica.
+La evidencia anterior/posterior y la nota están en
+`docs/correcciones/zenodo-v1.1.0/`.
 
-Gladys Torres Guerrero y Daniela Torres Tobar no tienen ORCID todavía: se
-omiten y solo se añadirán cuando lo comuniquen. Alcy Torres Catefort (†) es
-autor fallecido; no se crea ni asigna ORCID en su nombre.
+## Congelamiento de releases hasta separar el libro
+
+**Ningún release nuevo de medsemiotics mientras `lecciones/` siga en este
+repositorio.** No crear etiquetas de publicación ni un depósito/versión nueva
+que pueda heredar los metadatos globales incorrectos del agregado.
+Los `CITATION.cff` y `.zenodo.json` activos describen depósitos futuros: quedan
+sin cambios durante esta corrección. Se revisarán una sola vez, al concluir
+la migración y verificar el paquete final. No ponerles ahora NC-SA y cinco
+autores para una plataforma de la que ese trabajo va a salir. Los borradores
+de metadatos futuros se retiraron del PR #55.
+
+El plan independiente está en `docs/planes/separacion-libro-neurologia.md`.
+No ejecutar la migración ni crear el repositorio o el depósito del libro.
+La decisión se tomará con Alcy **no antes del 13/11/2026**; se respeta la semana
+de congelamiento de biosemiotics. Este PR no se fusiona sin autorización.
+
+El futuro libro es otra obra: tendrá un **DOI de concepto nuevo**. Debe declarar
+como procedencia el DOI de versión `10.5281/zenodo.23862211` mediante un
+identificador relacionado (`isDerivedFrom`), porque ese snapshot de v1.1.0
+seguirá siendo el archivo de las lecciones tempranas. No usar solo el DOI de
+concepto de medsemiotics, que puede pasar a resolver a una plataforma sin ellas.
