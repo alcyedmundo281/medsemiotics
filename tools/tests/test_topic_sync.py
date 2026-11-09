@@ -175,26 +175,12 @@ class ExclusionTests(unittest.TestCase):
     PATHS = ["condiciones/HM9999-tema.yaml"]
 
     def test_excluded_condition_is_not_generated_and_is_reported(self):
-        planned, skipped, _ = sync.plan(Source(), self.PATHS, {}, {"HM:9999": "sin revisión"})
+        planned, skipped = sync.plan(Source(), self.PATHS, {}, {"HM:9999": "sin revisión"})
         self.assertEqual(planned, [])
         self.assertEqual(skipped, ["HM:9999"])
 
-    def test_excluded_condition_keeps_its_evidence_for_the_lessons(self):
-        source = Source("medido", {"valor": 6.5, "ref": "pmid:123"})
-        _, _, reserved = sync.plan(source, self.PATHS, {}, {"HM:9999": "sin revisión"})
-        (ruta, texto, meta), = reserved
-        self.assertEqual(ruta, sync.EVIDENCE / "HM9999-tema.md")
-        self.assertNotEqual(ruta.parent, sync.POSTS)
-        self.assertEqual(meta["grounding"]["condicion_id"], "HM:9999")
-        self.assertEqual(meta["fuente"]["revision"], source.revision)
-        self.assertIn("lr_positivo", texto)
-
-    def test_published_condition_reserves_nothing(self):
-        _, _, reserved = sync.plan(Source(), self.PATHS, {}, {})
-        self.assertEqual(reserved, [])
-
     def test_condition_not_excluded_is_generated(self):
-        planned, skipped, _ = sync.plan(Source(), self.PATHS, {}, {"HM:1111": "otra"})
+        planned, skipped = sync.plan(Source(), self.PATHS, {}, {"HM:1111": "otra"})
         self.assertEqual([m["grounding"]["condicion_id"] for _, _, m in planned], ["HM:9999"])
         self.assertEqual(skipped, [])
 

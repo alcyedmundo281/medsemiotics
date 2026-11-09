@@ -38,24 +38,9 @@ v1.0.0 (`10.5281/zenodo.22069642`) no contenía `lecciones/` y no se modifica.
 La evidencia anterior/posterior y la nota están en
 `docs/correcciones/zenodo-v1.1.0/`.
 
-## Congelamiento de releases hasta separar el libro
+## Repositorio de la obra
 
-**Ningún release nuevo de medsemiotics mientras `lecciones/` siga en este
-repositorio.** No crear etiquetas de publicación ni un depósito/versión nueva
-que pueda heredar los metadatos globales incorrectos del agregado.
-Los `CITATION.cff` y `.zenodo.json` activos describen depósitos futuros: quedan
-sin cambios durante esta corrección. Se revisarán una sola vez, al concluir
-la migración y verificar el paquete final. No ponerles ahora NC-SA y cinco
-autores para una plataforma de la que ese trabajo va a salir. Los borradores
-de metadatos futuros se retiraron del PR #55.
-
-El plan independiente está en `docs/planes/separacion-libro-neurologia.md`.
-No ejecutar la migración ni crear el repositorio o el depósito del libro.
-La decisión se tomará con Alcy **no antes del 13/11/2026**; se respeta la semana
-de congelamiento de biosemiotics. Este PR no se fusiona sin autorización.
-
-El futuro libro es otra obra: tendrá un **DOI de concepto nuevo**. Debe declarar
-como procedencia el DOI de versión `10.5281/zenodo.23862211` mediante un
-identificador relacionado (`isDerivedFrom`), porque ese snapshot de v1.1.0
-seguirá siendo el archivo de las lecciones tempranas. No usar solo el DOI de
-concepto de medsemiotics, que puede pasar a resolver a una plataforma sin ellas.
+El libro se mantiene en [neurology](https://github.com/alcyedmundo281/neurology).
+Para cada futura release de Medsemiotics, revisar que el paquete y los metadatos
+describan únicamente la plataforma. El archivo histórico de la versión 1.1.0
+conserva su DOI de versión y su corrección documentada.

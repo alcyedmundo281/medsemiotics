@@ -15,7 +15,7 @@ from typing import Annotated, Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
-from lecciones.modelo import AGENTES, Autor
+from casos.autoria import AGENTES, Autor
 
 HmId = Annotated[str, StringConstraints(pattern=r"^HM:\d+$")]
 Texto = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]

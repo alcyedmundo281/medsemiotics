@@ -1,0 +1,40 @@
+# Firmas y créditos de los casos y fichas de Medsemiotics.
+personas:
+  atc:
+    nombre: Alcy Torres Catefort
+    fallecido: true
+    credit:
+    - conceptualizacion
+  artg:
+    nombre: Alcy Ramiro Torres Guerrero
+    nombre_bibliografico: Alcy R. Torres
+    orcid: 0000-0001-5798-9161
+    afiliacion: Boston Medical Center; Boston University Chobanian & Avedisian School
+      of Medicine
+    credit:
+    - redaccion
+    - revision-edicion
+  gtg:
+    nombre: Gladys Torres Guerrero
+    nombre_bibliografico: Gladys Torres-Guerrero
+    afiliacion: VisionUno, Quito
+    credit:
+    - redaccion
+    - revision-edicion
+  aetg:
+    nombre: Alcy Edmundo Torres Guerrero
+    nombre_bibliografico: Alcy E. Torres-Guerrero
+    orcid: 0000-0002-9742-375X
+    afiliacion: Hospital de Especialidades Carlos Andrade Marín (IESS); Universidad
+      Central del Ecuador
+    credit:
+    - redaccion
+    - revision-edicion
+  dtt:
+    nombre: Daniela Torres Tobar
+    afiliacion: B.A. en Neurobiología, Boston University College of Arts & Sciences
+      (2022); estudiante de medicina, Boston University Chobanian & Avedisian School
+      of Medicine
+    credit:
+    - redaccion
+    - curacion-de-datos
