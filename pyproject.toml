@@ -24,7 +24,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["tools/casos", "tools/imagenes", "tools/classroom", "tools/libro", "tools/lecciones"]
+packages = ["tools/casos", "tools/imagenes", "tools/classroom"]
 
 [tool.ruff]
 target-version = "py312"
@@ -34,13 +34,9 @@ include = [
     "tools/casos/**/*.py",
     "tools/imagenes/**/*.py",
     "tools/classroom/**/*.py",
-    "tools/libro/**/*.py",
-    "tools/lecciones/**/*.py",
     "tools/tests/test_classroom.py",
     "tools/tests/test_casos*.py",
     "tools/tests/test_imagenes*.py",
-    "tools/tests/test_libro*.py",
-    "tools/tests/test_lecciones*.py",
     "tools/tests/conftest.py",
 ]
 
@@ -57,12 +53,12 @@ runtime-evaluated-base-classes = ["pydantic.BaseModel", "casos.modelo._Base"]
 "tools/classroom/portal.py" = ["E501"]  # plantilla HTML
 
 [tool.ruff.lint.isort]
-known-first-party = ["casos", "imagenes", "classroom", "libro", "lecciones"]
+known-first-party = ["casos", "imagenes", "classroom"]
 
 [tool.mypy]
 python_version = "3.12"
 mypy_path = "tools:tools/tests"
-files = ["tools/casos", "tools/imagenes", "tools/classroom", "tools/libro", "tools/lecciones", "tools/tests/test_classroom.py", "tools/tests/conftest.py", "tools/tests/test_casos.py", "tools/tests/test_imagenes.py", "tools/tests/test_libro.py", "tools/tests/test_lecciones.py"]
+files = ["tools/casos", "tools/imagenes", "tools/classroom", "tools/tests/test_classroom.py", "tools/tests/conftest.py", "tools/tests/test_casos.py", "tools/tests/test_imagenes.py"]
 plugins = ["pydantic.mypy"]
 strict = true
 warn_unreachable = true
@@ -72,6 +68,6 @@ pretty = true
 [tool.pytest.ini_options]
 minversion = "8.0"
 testpaths = ["tools/tests"]
-python_files = ["test_casos*.py", "test_imagenes*.py", "test_classroom.py", "test_libro*.py", "test_lecciones*.py", "test_autoria*.py"]
+python_files = ["test_casos*.py", "test_imagenes*.py", "test_classroom.py"]
 pythonpath = ["tools"]
 addopts = "-q -p no:cacheprovider"

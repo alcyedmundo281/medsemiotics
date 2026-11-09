@@ -1,0 +1,56 @@
+{
+  "comprobado": "2026-11-04",
+  "conceptdoi": "10.5281/zenodo.22069641",
+  "resuelve_a": "10.5281/zenodo.23862211",
+  "metodo": "API pública y ZIP en memoria; MD5 verificado, sin extraer ni modificar el contenido.",
+  "registros": [
+    {
+      "doi": "10.5281/zenodo.22069642",
+      "version": "v1.0.0",
+      "fecha_publicacion": "2026-08-23",
+      "archivo": "alcyedmundo281/medsemiotics-v1.0.0.zip",
+      "bytes": 16729897,
+      "md5": "98eed60208641d1a9faf991eed534794",
+      "raiz_zip": "alcyedmundo281-medsemiotics-08437f8/",
+      "archivos": 459,
+      "licencia_global": "cc-by-sa-4.0",
+      "creadores": [
+        "Torres Guerrero, Alcy Edmundo"
+      ],
+      "lecciones": []
+    },
+    {
+      "doi": "10.5281/zenodo.23862211",
+      "version": "1.1.0",
+      "fecha_publicacion": "2026-11-01",
+      "archivo": "alcyedmundo281/medsemiotics-v1.1.0.zip",
+      "bytes": 17024234,
+      "md5": "24f8101a68b0417b32c79dd00ccc0b8b",
+      "raiz_zip": "alcyedmundo281-medsemiotics-6fe36ff/",
+      "archivos": 622,
+      "licencia_global": "cc-by-sa-4.0",
+      "creadores": [
+        "Torres Guerrero, Alcy Edmundo"
+      ],
+      "lecciones": [
+        "AI-USE.md",
+        "LICENSE.md",
+        "README.md",
+        "_ilustraciones-leccion-examen-neurologico-recien-nacido.md",
+        "evidencia/HM6049-paralisis-cerebral.md",
+        "leccion-examen-neurologico-recien-nacido.qmd",
+        "mapa.yaml",
+        "paratextos/declaracion-ia.md",
+        "refs.bib"
+      ],
+      "titulares_license_archivado": [
+        "Alcy Torres Catefort (†) y sus herederos",
+        "Alcy Ramiro Torres Guerrero",
+        "Gladys Torres Guerrero",
+        "Alcy Edmundo Torres Guerrero"
+      ]
+    }
+  ],
+  "epub_pdf_del_libro_compilado_en_ambos": false,
+  "estado": "Inspección anterior a la corrección de metadatos del 04/11/2026; no describe los metadatos actuales."
+}

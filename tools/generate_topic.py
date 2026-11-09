@@ -25,13 +25,11 @@ ROOT = Path(__file__).resolve().parent.parent
 REPO = "alcyedmundo281/medsemiotics-db"
 SITE = "https://powersemiotics.com/medsemiotics/"
 POSTS = ROOT / "posts"
-# Autor real de cada ficha: claves de `personas` de lecciones/mapa.yaml (ver el archivo).
+# Autor real de cada ficha: claves de `personas` de tools/autores-plataforma.yaml (ver el archivo).
 AUTHORS = ROOT / "tools" / "autores-fichas.yaml"
-MAPA = ROOT / "lecciones" / "mapa.yaml"
+MAPA = ROOT / "tools" / "autores-plataforma.yaml"
 # Condiciones de la db que existen pero aún no se publican (sin revisión editorial).
 EXCLUDED = ROOT / "tools" / "topics-excluidos.yaml"
-# Su evidencia, a la misma revisión de la db, no se publica pero las lecciones sí la pueden citar.
-EVIDENCE = ROOT / "lecciones" / "evidencia"
 STATES = {
     "medido": "LR medido",
     "no_medido": "LR no medido",
@@ -568,13 +566,11 @@ def read_excluded(path=EXCLUDED):
 
 
 def plan(source, paths, previous, excluded, complete=False):
-    """Artículos a publicar, condiciones excluidas y su evidencia reservada para las lecciones.
+    """Artículos a publicar y condiciones excluidas.
 
-    Una exclusión solo afecta a la publicación en el blog: la evidencia de la condición, a la misma
-    revisión fijada, se escribe en lecciones/evidencia/ para que las lecciones puedan citarla.
     Una exclusión nunca borra un artículo en silencio.
     """
-    planned, skipped, reserved = [], [], []
+    planned, skipped = [], []
     for path in paths:
         cid = source.read(path)["id"]
         if cid in excluded:
@@ -582,8 +578,6 @@ def plan(source, paths, previous, excluded, complete=False):
                 raise ValueError(
                     f"{cid} está excluida ({excluded[cid]}) pero ya tiene artículo en posts/: "
                     "retírelo en un cambio revisado o quite la exclusión.")
-            text, meta = make_post(source, path, None)
-            reserved.append((EVIDENCE / (Path(path).stem + ".md"), text, meta))
             skipped.append(cid)
             continue
         oldpath, old = previous.get(cid, (POSTS / (Path(path).stem + ".md"), None))
@@ -591,7 +585,7 @@ def plan(source, paths, previous, excluded, complete=False):
         planned.append((oldpath, text, meta))
     if complete and set(excluded) - set(skipped):
         raise ValueError(f"Exclusión sin condición en la fuente: {sorted(set(excluded) - set(skipped))}")
-    return planned, skipped, reserved
+    return planned, skipped
 
 
 def sync(source, check=False, condition=None, write_backlinks=False, excluded=None):
@@ -603,15 +597,10 @@ def sync(source, check=False, condition=None, write_backlinks=False, excluded=No
         paths = [p for p in paths if Path(p).name == condition or Path(p).name.split("-")[0] == key]
         if len(paths) != 1:
             raise ValueError(f"Condición no encontrada o ambigua: {condition}")
-    planned, skipped, reserved = plan(source, paths, previous, excluded, complete=not condition)
+    planned, skipped = plan(source, paths, previous, excluded, complete=not condition)
     if condition and skipped:
-        raise ValueError(f"{condition} está excluida de la sincronización: {excluded[condition]}")
+        raise ValueError(f"{condition} está excluida de la sincronización: {excluded[skipped[0]]}")
     if not condition:
-        stale = [p for p in sorted(EVIDENCE.glob("*.md")) if p not in {r[0] for r in reserved}]
-        if stale:
-            raise ValueError(
-                "Evidencia reservada de condiciones que ya no están excluidas: "
-                + ", ".join(p.name for p in stale) + " (se publican: bórrela en ese cambio).")
         orphaned = set(previous) - {m["grounding"]["condicion_id"] for _, _, m in planned}
         if orphaned:
             raise ValueError(f"Artículos sin condición en la fuente: {sorted(orphaned)}")
@@ -619,7 +608,6 @@ def sync(source, check=False, condition=None, write_backlinks=False, excluded=No
     if len(slugs) != len(set(slugs)):
         raise ValueError("La fuente propone URLs duplicadas.")
     changed = [p for p, text, _ in planned if not p.exists() or p.read_text(encoding="utf-8") != text]
-    changed += [p for p, text, _ in reserved if not p.exists() or p.read_text(encoding="utf-8") != text]
     links = [{"condicion_id": m["grounding"]["condicion_id"],
               "archivo": m["fuente"]["condicion"], "slug": m["slug"],
               "url": SITE + "post.html?slug=" + m["slug"]} for _, _, m in planned]
@@ -634,9 +622,7 @@ def sync(source, check=False, condition=None, write_backlinks=False, excluded=No
         subprocess.run(["node", str(ROOT / "tools/build-blog.mjs"), "--check"], cwd=ROOT, check=True)
     else:
         POSTS.mkdir(exist_ok=True)
-        if reserved:
-            EVIDENCE.mkdir(parents=True, exist_ok=True)
-        for p, text, _ in [*planned, *reserved]:
+        for p, text, _ in planned:
             if p in changed:
                 p.write_text(text, encoding="utf-8", newline="\n")
         subprocess.run(["node", str(ROOT / "tools/build-blog.mjs")], cwd=ROOT, check=True)

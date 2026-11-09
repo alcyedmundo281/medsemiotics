@@ -2,9 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22069641.svg)](https://doi.org/10.5281/zenodo.22069641)
 
-DOI de concepto: cita siempre la última versión. La v1.0.0 quedó fija en
-[10.5281/zenodo.22069642](https://doi.org/10.5281/zenodo.22069642).
-
 Contenido escrito de **Powersemiotics**: los módulos educativos, autoevaluaciones,
 presentaciones e infografías de medicina, separados del sitio corporativo.
 
@@ -25,6 +22,22 @@ El contenido clínico de POCUS evolucionó a un proyecto independiente:
 repositorio [biosemiotics](https://github.com/alcyedmundo281/biosemiotics). En
 Medsemiotics permanece únicamente el análisis de implementación de POCUS en el
 sistema sanitario.
+
+## Libro de neurología
+
+Las fuentes de [Neurología clínica para el médico general](https://github.com/alcyedmundo281/neurology)
+viven en su repositorio propio.
+
+## Cómo citar
+
+Cita el **DOI de concepto**, [10.5281/zenodo.22069641](https://doi.org/10.5281/zenodo.22069641):
+resuelve siempre a la última versión publicada. Para reproducir una versión concreta, cita el DOI
+de esa versión.
+
+| Versión | DOI |
+|:-|:-|
+| 1.0.0 | [10.5281/zenodo.22069642](https://doi.org/10.5281/zenodo.22069642) |
+| 1.1.0 | [10.5281/zenodo.23862211](https://doi.org/10.5281/zenodo.23862211) |
 
 ## Publicación
 
