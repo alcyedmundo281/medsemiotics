@@ -1,0 +1,147 @@
+# Caso socrático para Parálisis cerebral (HM:6049).
+# La base registra UN solo hallazgo para esta condición, y sin cociente: la ausencia de
+# movimientos generales de tipo fidgety trae sensibilidad y especificidad declaradas por los
+# autores del método, pero la fuente es una revisión narrativa sin población ni diseño, así
+# que el LR queda «no medido». El caso enseña a leer esa honestidad: un hallazgo con cifras
+# que suenan altas y, aun así, sin cociente ni probabilidad basal con los que hacer Bayes.
+condicion_id: HM:6049
+estado: borrador
+autoria:
+  autores:
+    - nombre: Alcy Ramiro Torres Guerrero
+      nombre_bibliografico: Alcy R. Torres
+      orcid: 0000-0001-5798-9161
+      afiliacion: Boston Medical Center; Boston University Chobanian & Avedisian School of Medicine
+      credit: [redaccion]
+  # Revisor: el editor. Sigue siendo borrador: nada de esta autoría se publica hasta que el
+  # autor apruebe el texto, y `estado: publicado` exige además la fecha de publicación.
+  revisor: Alcy Edmundo Torres Guerrero
+nivel: Pregrado
+duracion_min: 45
+objetivos:
+  - Reconocer en qué ventana de edad se valora la presencia de los movimientos generales de tipo fidgety y por qué la edad se corrige en un prematuro.
+  - Distinguir un hallazgo con sensibilidad y especificidad declaradas de un hallazgo con cociente de verosimilitud calculable.
+  - Explicar por qué la base no convierte esas dos cifras en un cociente y qué le falta a la fuente para que se pueda.
+  - Decidir qué hacer con un lactante en riesgo cuando el hallazgo está presente, sin esperar a una confirmación que la evidencia del artículo no ofrece.
+  - Identificar las necesidades de aprendizaje que este artículo deja abiertas.
+vineta:
+  titulo: Un lactante que se mueve poco
+  texto: >-
+    Lactante varón de cuatro meses de edad corregida: nació a las 30 semanas de gestación,
+    con ventilación mecánica los primeros días y una hemorragia periventricular leve en la
+    ecografía transfontanelar. Es el segundo control en la consulta de seguimiento del
+    prematuro. La madre cuenta que come bien, sonríe y sigue con la mirada, pero que «se
+    mueve muy poco, no es inquieto como su prima de la misma edad». No ha tenido
+    convulsiones. El peso y el perímetro cefálico siguen su curva corregida. En la consulta
+    está despierto, tranquilo y sin llanto.
+etapas:
+  - titulo: Hipótesis iniciales
+    fase: activacion
+    preguntas:
+      - pregunta: >-
+          Un prematuro con antecedentes neonatales de riesgo y una madre que nota poca
+          actividad. ¿Qué te preocupa y qué quieres averiguar antes de tocar al niño?
+        clave: >-
+          Te preocupa el riesgo de una alteración del neurodesarrollo, entre ellas la
+          parálisis cerebral, y quieres separar tres cosas: lo que dice la historia (el
+          riesgo perinatal), lo que se observa en el niño despierto y tranquilo (cuánto se
+          mueve, con qué calidad) y lo que ya se hizo (neuroimagen, controles previos). La
+          queja materna es una observación valiosa, pero «se mueve poco» no es un hallazgo
+          clínico estandarizado: hay que traducirla a algo que se pueda observar y repetir.
+      - pregunta: >-
+          ¿Por qué la edad que importa aquí es la corregida y no la cronológica?
+        clave: >-
+          Porque el sistema nervioso de un prematuro madura según el tiempo desde la
+          concepción, no desde el nacimiento. Comparar su repertorio de movimientos con el
+          de un lactante a término de la misma edad cronológica lo haría parecer retrasado
+          cuando puede no estarlo. La ventana en la que se valora el hallazgo de este caso
+          se cuenta en edad corregida.
+  - titulo: Lo que se observa y lo que dicen las cifras
+    fase: discriminacion
+    hallazgos: [HM:3246]
+    informacion: >-
+      Con el niño en decúbito supino, despierto y sin llanto, grabas varios minutos de vídeo
+      y los revisas con la fisioterapeuta entrenada en valorar los movimientos generales.
+      Anota: {{hallazgo HM:3246}}. Los brazos y las piernas se mueven, pero el repertorio es
+      pobre y monótono, sin esos movimientos pequeños, continuos y de velocidad moderada del
+      cuello, el tronco y las extremidades que se esperan a esta edad. Un compañero que ya
+      calculó mentalmente un cociente a partir de la sensibilidad y la especificidad te lo
+      anuncia con seguridad. La base, en cambio, no lo escribe.
+    preguntas:
+      - pregunta: >-
+          Abre la ficha del hallazgo. ¿Qué cifras registra la base y qué no registra?
+        clave: >-
+          Registra una {{sens HM:3246}} y una {{esp HM:3246}}, y declara el hallazgo como
+          {{estado HM:3246}}. No registra cociente de verosimilitud. Esa diferencia es la
+          lección del caso: dos cifras que suenan muy altas no equivalen a un cociente
+          publicado, y la ficha te dice por qué en su campo de motivo.
+      - pregunta: >-
+          ¿Hace falta ser un experto para obtener este hallazgo? ¿Qué implica eso para lo que
+          sabes del niño?
+        clave: >-
+          Sí hace falta entrenamiento: la valoración es observacional, se hace sobre vídeo y
+          depende de la calidad de la grabación y del observador. Un hallazgo con esas
+          características rinde en manos entrenadas y con las condiciones adecuadas; no se
+          debe extrapolar a una impresión rápida en la consulta.
+      - pregunta: >-
+          Con la {{sens HM:3246}} y la {{esp HM:3246}} de la ficha, tu compañero puede
+          calcular un cociente en la cabeza. ¿Por qué la base no lo escribe?
+        clave: >-
+          Porque la regla del índice es transcribir y no calcular. La fuente declara
+          sensibilidad y especificidad pero no publica el cociente, y la población y el
+          diseño en que se midieron no constan: es una revisión narrativa de los propios
+          autores del método. Un cociente construido a partir de dos cifras sin población
+          conocida sería un número con aspecto de dato y sin procedencia, que es
+          justamente lo que el índice evita.
+      - pregunta: >-
+          Aun con un cociente publicado, ¿qué más necesitarías para decir cuál es la
+          probabilidad de parálisis cerebral en este niño?
+        clave: >-
+          Una probabilidad previa razonable. La base no registra una probabilidad basal
+          para esta condición: la fuente no publica prevalencia en la población evaluada. Sin
+          probabilidad previa, ningún cociente, ni siquiera uno bien medido, se convierte en
+          una probabilidad posterior. Y la probabilidad previa de un prematuro con
+          hemorragia periventricular no es la de la población general.
+      - pregunta: >-
+          En este niño se anotó la {{hallazgo HM:3246}}. ¿Qué significa eso y qué no?
+        clave: >-
+          Significa que su repertorio de movimientos se aparta de lo esperado en la ventana
+          de edad en la que esta valoración tiene sentido, y que merece un estudio
+          dirigido. No significa que el niño tenga parálisis cerebral: es un hallazgo de
+          apoyo, no un diagnóstico, y los autores del método lo presentan junto a otras
+          herramientas, no en lugar de ellas.
+  - titulo: Qué haces con este niño
+    fase: decision
+    preguntas:
+      - pregunta: >-
+          El hallazgo está presente y la base no te da una probabilidad. ¿Esperas a tener
+          más certeza o actúas ya?
+        clave: >-
+          Actúas ya, con proporcionalidad. El valor de una valoración temprana es que
+          permite iniciar el seguimiento y la intervención sin esperar al diagnóstico
+          clínico tradicional, cuando hay más tiempo para aprovechar la plasticidad del
+          sistema nervioso. Planificas una evaluación neurológica estandarizada, revisas la
+          neuroimagen disponible, derivas a un equipo de rehabilitación y repites la
+          valoración. Hablas con la familia de lo que se sabe y de lo que aún no se puede
+          afirmar.
+      - pregunta: >-
+          ¿Qué le dirías a la madre hoy?
+        clave: >-
+          Que su observación fue acertada y útil, que se ha encontrado una diferencia en cómo
+          se mueve su hijo que hay que estudiar, que eso no es todavía un diagnóstico, y que
+          el siguiente paso es un estudio completo y un seguimiento cercano. Se evita tanto
+          la falsa tranquilidad como el anuncio de un diagnóstico que la evidencia disponible
+          no permite hacer con esta sola observación.
+cierre:
+  sintesis: >-
+    La base registra para esta condición un solo hallazgo, con sensibilidad y especificidad
+    declaradas pero sin cociente de verosimilitud ni probabilidad basal. El valor docente
+    está en leer ese vacío: un hallazgo con cifras que suenan altas, de una fuente narrativa
+    sin población declarada, orienta la conducta (estudiar, seguir, derivar) pero no permite
+    estimar una probabilidad ni afirmar un diagnóstico por sí solo.
+  necesidades_aprendizaje:
+    - El rendimiento de los movimientos generales en una población y un diseño declarados, con cociente de verosimilitud, que la fuente actual no publica.
+    - La prevalencia de la condición en la población de prematuros evaluada, para tener una probabilidad previa.
+    - Cómo se combina esta valoración con la neuroimagen y con el examen neurológico estandarizado en el diagnóstico temprano, con cifras que la base aún no registra.
+    - El patrón de movimientos generales que se valora antes de la ventana de los tres a cinco meses de edad corregida, que la base no registra.
+omitidos: []

@@ -5,4 +5,6 @@
 # Decisión editorial (1-nov-2026): neuropediatría, Alcy R. Torres (artg); neuroftalmología, Gladys
 # Torres-Guerrero (gtg); adulto y fundamentos, Alcy E. Torres-Guerrero (aetg). Hay tres Alcy Torres.
 por_defecto: aetg
-condiciones: {}
+condiciones:
+  # Parálisis cerebral: neuropediatría. El caso sigue en borrador hasta que su autor lo apruebe.
+  "HM:6049": artg

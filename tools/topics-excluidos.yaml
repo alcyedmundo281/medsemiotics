@@ -1,8 +1,7 @@
 # Condiciones de medsemiotics-db que se sincronizan con la db pero NO se publican en el blog
 # todavía. Excluir es explícito y lleva motivo; no se borra a mano ningún artículo de posts/.
 # `python tools/generate_topic.py --sync-all|--check` las omite y lo informa. Para publicar una,
-# quítela de aquí en el PR que la publica (revisión, imagen y caso socrático incluidos).
-excluidas:
-  "HM:6049": >-
-    Parálisis cerebral: pendiente de caso socrático (skill caso-socratico), categoría de
-    neurología pediátrica, imagen de Wikimedia Commons y revisión humana de Alcy Edmundo Torres Guerrero.
+# quítela de aquí en el PR que la publica (revisión, imagen y caso socrático incluidos) y borre
+# su evidencia reservada de lecciones/evidencia/ en ese mismo PR.
+# Hoy no hay ninguna: HM:6049 (parálisis cerebral) se publica con su caso socrático.
+excluidas: {}
