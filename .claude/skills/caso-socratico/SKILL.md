@@ -51,7 +51,7 @@ Se trabaja **un artículo por vez**, en una rama de trabajo, y con un commit por
    `generate_topic.py`. Un error clínico de la fuente se corrige en medsemiotics-db.
 3. **Crear el borrador.** `uv run python -m casos nuevo HM#### --autor <clave>` crea
    `casos/HM####.yaml` con todos los hallazgos de la base listados en comentarios. `--autor` es la
-   clave de una persona viva de `lecciones/mapa.yaml` (`artg`, `gtg`, `aetg`): la autoría de un caso
+   clave de una persona viva de `tools/autores-plataforma.yaml` (`artg`, `gtg`, `aetg`): la autoría de un caso
    es una lista de personas reales con ORCID y roles CRediT, y el revisor es una persona humana.
    Nunca sobrescribe.
 4. **Redactar el caso** (ver «Diseño docente»). Validar a menudo con

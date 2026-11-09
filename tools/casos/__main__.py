@@ -4,7 +4,7 @@
 - ``build``: valida y escribe ``assets/data/casos/*.json`` de los casos publicados.
 - ``preview HM6003``: imprime el caso compilado en Markdown para revisión humana.
 - ``nuevo HM6003 --autor artg``: crea el borrador ``casos/HM6003.yaml`` con los hallazgos de la
-  base; el autor es una persona de ``lecciones/mapa.yaml`` (aetg, artg, gtg), no un nombre libre.
+  base; el autor es una persona del registro de autoría (aetg, artg, gtg).
 - ``estado``: tabla de artículos con y sin caso.
 """
 
@@ -14,11 +14,13 @@ import argparse
 import sys
 from datetime import date
 
+import yaml
+
 from casos.articulo import leer_articulos
+from casos.autoria import Autor
 from casos.compilar import RAIZ, Rutas, compilar, construir, esqueleto, leer_casos, nombre_archivo
 from casos.errores import ErrorDeCaso
 from casos.presentacion import markdown
-from lecciones import mapa as mapa_libro
 
 
 def _condicion(valor: str) -> str:
@@ -28,12 +30,18 @@ def _condicion(valor: str) -> str:
     return "HM:" + valor[2:]
 
 
+def personas_plataforma() -> dict[str, Autor]:
+    ruta = RAIZ / "tools" / "autores-plataforma.yaml"
+    datos = yaml.safe_load(ruta.read_text(encoding="utf-8"))
+    return {clave: Autor.model_validate(persona) for clave, persona in datos["personas"].items()}
+
+
 def _autor(clave: str) -> dict[str, object]:
-    """La persona del mapa, tal cual: nunca un nombre inventado en un caso."""
-    personas = mapa_libro.cargar().personas
+    """La persona del registro, tal cual: nunca un nombre inventado en un caso."""
+    personas = personas_plataforma()
     if clave not in personas or personas[clave].fallecido:
         vivas = ", ".join(k for k, p in personas.items() if not p.fallecido)
-        raise ErrorDeCaso(f"Autor «{clave}» no es una persona viva del mapa ({vivas}).")
+        raise ErrorDeCaso(f"Autor «{clave}» no es una persona viva del registro ({vivas}).")
     return personas[clave].model_dump(exclude_defaults=True, exclude_none=True)
 
 
@@ -49,7 +57,9 @@ def main(argv: list[str] | None = None) -> int:
     vista.add_argument("condicion")
     nuevo = ordenes.add_parser("nuevo")
     nuevo.add_argument("condicion")
-    nuevo.add_argument("--autor", required=True, help="clave de la persona en lecciones/mapa.yaml")
+    nuevo.add_argument(
+        "--autor", required=True, help="clave de la persona en el registro de autoría"
+    )
     args = parser.parse_args(argv)
     rutas = Rutas(RAIZ)
     hoy = date.today()

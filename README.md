@@ -23,6 +23,11 @@ repositorio [biosemiotics](https://github.com/alcyedmundo281/biosemiotics). En
 Medsemiotics permanece únicamente el análisis de implementación de POCUS en el
 sistema sanitario.
 
+## Libro de neurología
+
+Las fuentes de [Neurología clínica para el médico general](https://github.com/alcyedmundo281/neurology)
+viven en su repositorio propio.
+
 ## Cómo citar
 
 Cita el **DOI de concepto**, [10.5281/zenodo.22069641](https://doi.org/10.5281/zenodo.22069641):
